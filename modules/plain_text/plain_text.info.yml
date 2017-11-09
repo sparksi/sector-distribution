@@ -1,0 +1,5 @@
+name: Plain Text
+type: module
+description: 'Plain text plugin for ckeditor'
+package: Sector
+core: 8.x

@@ -1,0 +1,68 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/6?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 31
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3aa78e0e-4475-480d-9cb5-e2bdbafb2b43"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 31
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "Sector Sample Block - Search help",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1473916469,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<ul class=\"list-unstyled list--basic-links\">\n\t<li><a href=\"\/\">Sitewide search<\/a><\/li>\n\t<li><a href=\"\/\">News archive<\/a><\/li>\n\t<li><a href=\"\/\">Resource archive<\/a><\/li>\n\t<li><a href=\"\/\">Other links<\/a><\/li>\n<\/ul>\n",
+            "format": "filtered_html",
+            "summary": null,
+            "lang": "en"
+        }
+    ]
+}

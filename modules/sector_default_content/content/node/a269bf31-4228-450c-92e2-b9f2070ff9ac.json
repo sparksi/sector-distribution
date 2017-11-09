@@ -1,0 +1,170 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/section\/sector-wysiwyg-content-elements?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 4
+        }
+    ],
+    "uuid": [
+        {
+            "value": "a269bf31-4228-450c-92e2-b9f2070ff9ac"
+        }
+    ],
+    "vid": [
+        {
+            "value": 75
+        }
+    ],
+    "langcode": [
+        {
+            "value": "und",
+            "lang": "und"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "page"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "title": [
+        {
+            "value": "Sector WYSIWYG - Content elements ",
+            "lang": "und"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ],
+                "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/page_variants"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fd9a1a20-c2a0-454b-8b57-b2981e3affc2"
+                    }
+                ]
+            }
+        ]
+    },
+    "created": [
+        {
+            "value": 1455241598,
+            "lang": "und"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1509493340,
+            "lang": "und"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "und"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": 1509493340
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p class=\"lead\">WYSIWYG stands for What-You-See-Is-What-You-Get and&nbsp;implies a user interface that allows the user to view something very similar to the end result while the document is being created.<\/p>\r\n\r\n<p>In general WYSIWYG implies the ability to directly manipulate the layout of a document without coding in HTML. Sector uses the CK WYSIWYG Editor for easy WYSIWYG editing, but also allows advanced editing via WYSIWYG templates and code for advanced Content Administrators.&nbsp;<\/p>\r\n\r\n<p>This page lists your content elements per editing category.&nbsp;<\/p>\r\n\r\n<h2>Styles via the WYSIWYG<\/h2>\r\n\r\n<p>The&nbsp;WYSIWYG includes ...<\/p>\r\n\r\n<p>Headings<\/p>\r\n\r\n<ul>\r\n\t<li>use sentence case for headings<\/li>\r\n\t<li>use headings consistently to create a clear hierarchy<\/li>\r\n<\/ul>\r\n\r\n<h2>Heading 1 - rendered as <code>&lt;h2&gt;<\/code><\/h2>\r\n\r\n<h3>Heading 2 - rendered as <code>&lt;h3&gt;<\/code><\/h3>\r\n\r\n<h4>Heading 3 - rendered as <code>&lt;h4&gt;<\/code><\/h4>\r\n\r\n<h5>Heading 4 - rendered as <code>&lt;h5&gt;<\/code><\/h5>\r\n\r\n<h5>Normal &nbsp;text<\/h5>\r\n\r\n<p>A body copy paragraph. Start your paragraphs with a topic sentence and end with a conclusion or a bridge to the next paragraph.<\/p>\r\n\r\n<h5>Leading text<\/h5>\r\n\r\n<p class=\"lead\">The opening paragraph on every page should contain a concise introduction to the contents of the page. This way your reader&nbsp;can instantly gain an understanding of what the page is about and decide whether they want to read the page or not.<\/p>\r\n\r\n<h5>Inline text elements WYSIWYG&nbsp;<\/h5>\r\n\r\n<p><strong>rendered as bold text<\/strong><\/p>\r\n\r\n<p><em>rendered as italicised text<\/em><\/p>\r\n\r\n<p>You can use <sup>super<\/sup>script and <sub>sub<\/sub>script.<\/p>\r\n\r\n<h5>Bulleted list<\/h5>\r\n\r\n<ul>\r\n\t<li>here is a bulleted list<\/li>\r\n\t<li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor<\/li>\r\n\t<li>vestibulum id ligula porta felis euismod semper<\/li>\r\n\t<li>integer posuere erat a ante venenatis dapibus posuere velit aliquet<\/li>\r\n<\/ul>\r\n\r\n<h5>Numbered list<\/h5>\r\n\r\n<ol>\r\n\t<li>here is a numbered list<\/li>\r\n\t<li>vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor<\/li>\r\n\t<li>vestibulum id ligula porta felis euismod semper<\/li>\r\n\t<li>integer posuere erat a ante venenatis dapibus posuere velit aliquet<\/li>\r\n<\/ol>\r\n\r\n<h5>Legal list (using decrease and increase indent)<\/h5>\r\n\r\n<ol>\r\n\t<li>here is a legal list<\/li>\r\n\t<li>Donec sed odio dui\r\n\t<ol>\r\n\t\t<li>Donec sed odio dui<\/li>\r\n\t\t<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et<\/li>\r\n\t\t<li>Donec sed odio dui\r\n\t\t<ol>\r\n\t\t\t<li>Donec sed odio dui<\/li>\r\n\t\t<\/ol>\r\n\t\t<\/li>\r\n\t<\/ol>\r\n\t<\/li>\r\n\t<li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis.<\/li>\r\n<\/ol>\r\n\r\n<h5>Hr<\/h5>\r\n\r\n<p>The hr&nbsp;tag defines a thematic break in a page (e.g. a shift of topic).<\/p>\r\n\r\n<hr \/>\r\n<p>The hr&nbsp;element is used to separate content (or define a change) in a&nbsp;page.<\/p>\r\n\r\n<h5>Blockquote default<\/h5>\r\n\r\n<blockquote>\r\n<p>Quotes are used to emphasise excerpts of text. Since users almost never read but scan we need to provide them with some focus anchors to fix their attention to the most important parts of our content.<\/p>\r\n<\/blockquote>\r\n\r\n<h5>Tools to improve your workflow<\/h5>\r\n\r\n<p>The WYSIWYG editor also allows you to&nbsp;<\/p>\r\n\r\n<ul>\r\n\t<li>undo (or redo) your changes,<\/li>\r\n\t<li>remove unwanted formats,<\/li>\r\n\t<li>use special character and M\u0101ori macrons,&nbsp;<\/li>\r\n\t<li>copy form word,<\/li>\r\n\t<li>copy as plain text,&nbsp;<\/li>\r\n\t<li>use \u2018Show Block\u2019 top&nbsp;displays the HTML block element containers as dotted lines,&nbsp;<\/li>\r\n\t<li>maximise you editor,&nbsp;<\/li>\r\n\t<li>link&nbsp;to content via Linkit,&nbsp;an&nbsp;easy interface for internal and external reffernces,&nbsp;<\/li>\r\n\t<li>switch to HTML source view.&nbsp;<\/li>\r\n<\/ul>\r\n\r\n<h3>Adding media via the media browser&nbsp;<\/h3>\r\n\r\n<p>Sector incudes the media file manager, preconfigured file types and&nbsp;WYSIWYG&nbsp;view modes. Use the 'Add media' to upload you images, documents, or embed video and audio from the web. Add your meta data and submit it to the WYSIWYG.<\/p>\r\n\r\n<h5>Image - Full. Default caption&nbsp;(via media browser)<\/h5>\r\n\r\n<p>KNOWN ISSUE - WORK IN PROGRESS<\/p>\r\n\r\n<h5>Image - Half. Default caption.&nbsp;(via media browser)<\/h5>\r\n\r\n<p>KNOWN ISSUE - WORK IN PROGRESS<\/p>\r\n\r\n<h5>Video (via media browser)<\/h5>\r\n\r\n<p>KNOWN ISSUE - WORK IN PROGRESS<\/p>\r\n\r\n<h5>Audio (via media browser)<\/h5>\r\n\r\n<p>KNOWN ISSUE - WORK IN PROGRESS<\/p>\r\n\r\n<h5>Document (via media browser)<\/h5>\r\n\r\n<p>KNOWN ISSUE - WORK IN PROGRESS<\/p>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<h3>Advanced editing via WYSIWYG templates<\/h3>\r\n\r\n<h5>Blockquote - Full. Text align left with cite&nbsp;(advanced editing via templates)<\/h5>\r\n\r\n<blockquote>\r\n<p>The content of a blockquote element must include block-level elements such as headings, lists, or paragraphs. They can also have an optional attribute&nbsp;cite.<\/p>\r\n\r\n<p><cite>A cite defines an in-line citation or reference to another source<\/cite><\/p>\r\n<\/blockquote>\r\n\r\n<h5>Blockquote - Full. Text align right with cite (advanced editing via templates)<\/h5>\r\n\r\n<blockquote>\r\n<p>The content of a blockquote element must include block-level elements such as headings, lists, or paragraphs. They can also have an optional attribute&nbsp;cite.<\/p>\r\n\r\n<p><cite>A cite defines an in-line citation or reference to another source<\/cite><\/p>\r\n<\/blockquote>\r\n\r\n<h5>Blockquote - Half. Featured. Float left&nbsp;(advanced editing via templates)<\/h5>\r\n\r\n<div class=\"element pull-left\">\r\n<blockquote>\r\n<p>\"Quotes are used to emphasise excerpts of text.\"<\/p>\r\n\r\n<p><cite>A cite defines an in-line citation or reference to another source<\/cite><\/p>\r\n<\/blockquote>\r\n<\/div>\r\n\r\n<p>A body copy paragraph. Penatibus montes bibendum repudiandae sit malesuada sem assumenda. Aliquet nostrud pellentesque, at autem praesentium inventore phasellus malesuada tempor numquam elementum! Excepturi, ipsam aliqua gravida? Justo vestibulum sunt numquam, quidem viverra! Lorem incididunt. Tempus hic ante ante? Quae, quaerat temporibus nunc! Magna! Eligendi sollicitudin explicabo. Pariatur quibusdam montes ultricies magni quia.<\/p>\r\n\r\n<p>A body copy paragraph. Penatibus montes bibendum repudiandae sit malesuada sem assumenda. Aliquet nostrud pellentesque, at autem praesentium inventore phasellus malesuada tempor numquam elementum! Excepturi, ipsam aliqua gravida? Justo vestibulum sunt numquam, quidem viverra! Lorem incididunt. Tempus hic ante ante? Quae, quaerat temporibus nunc! Magna! Eligendi sollicitudin explicabo. Pariatur quibusdam montes ultricies magni quia.<\/p>\r\n\r\n<h5>Blockquote - Half. Featured. Float right&nbsp;(advanced editing via templates)<\/h5>\r\n\r\n<div class=\"element has-offset-right pull-right\">\r\n<blockquote>\r\n<p>\"Quotes are used to emphasise excerpts of text.\"<\/p>\r\n\r\n<p><cite>A cite defines an in-line citation or reference to another source<\/cite><\/p>\r\n<\/blockquote>\r\n<\/div>\r\n\r\n<p>A body copy paragraph. Penatibus montes bibendum repudiandae sit malesuada sem assumenda. Aliquet nostrud pellentesque, at autem praesentium inventore phasellus malesuada tempor numquam elementum! Excepturi, ipsam aliqua gravida? Justo vestibulum sunt numquam, quidem viverra! Lorem incididunt. Tempus hic ante ante? Quae, quaerat temporibus nunc! Magna! Eligendi sollicitudin explicabo. Pariatur quibusdam montes ultricies magni quia.<\/p>\r\n\r\n<p>A body copy paragraph. Penatibus montes bibendum repudiandae sit malesuada sem assumenda. Aliquet nostrud pellentesque, at autem praesentium inventore phasellus malesuada tempor numquam elementum! Excepturi, ipsam aliqua gravida? Justo vestibulum sunt numquam, quidem viverra! Lorem incididunt. Tempus hic ante ante? Quae, quaerat temporibus nunc! Magna! Eligendi sollicitudin explicabo. Pariatur quibusdam montes ultricies magni quia.<\/p>\r\n\r\n<h5>Note (advanced editing via templates)<\/h5>\r\n\r\n<p>A body copy paragraph. Penatibus montes bibendum repudiandae sit malesuada sem assumenda. Aliquet nostrud pellentesque, at autem praesentium .<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<h4>Callout note title<\/h4>\r\n\r\n<p>Use a callout note to draw attention to important content on the page.<\/p>\r\n<\/div>\r\n\r\n<p>For other styles add extra classes. e.g: class=\"note note--primary\u201d. Or: note--success, note--info, note--warning, note--danger.<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--warning\" role=\"note\">\r\n<h4>Callout note title (warning)&nbsp;<\/h4>\r\n\r\n<p>Callout sample using class=\"note note--warning\".&nbsp;<\/p>\r\n<\/div>\r\n\r\n<h5>Definition list&nbsp;(advanced editing via templates)<\/h5>\r\n\r\n<dl>\r\n\t<dt>Definition list title<\/dt>\r\n\t<dd>Here is a definition list description<\/dd>\r\n\t<dt>Tip<\/dt>\r\n\t<dd>Add the class <code>dl-horizontal<\/code> to the\r\n\t<dl>\r\n\t\t<dd>element via source to create a horizontal list. A horizontal list makes terms and descriptions line up side-by-side.<\/dd>\r\n\t<\/dl>\r\n\t<\/dd>\r\n<\/dl>\r\n\r\n<h5>Grid - 2x (advanced editing via templates)<\/h5>\r\n\r\n<div class=\"row\">\r\n<div class=\"col-md-6\">Layout your content in a 2 column grid.<\/div>\r\n\r\n<div class=\"col-md-6\">Layout your content in a 2 column grid.<\/div>\r\n<\/div>\r\n\r\n<h5>Table - with header cells in the top row only&nbsp;(advanced editing via templates)<\/h5>\r\n\r\n<div class=\"table-responsive\">Captions provide information that can help users find, navigate, and understand tables.\r\n<p>DateEventVenue<\/p>\r\n\r\n<p>12 FebruaryWaltz with StraussMain Hall<\/p>\r\n<\/div>\r\n\r\n<h5>Table - with header cells in the first column only&nbsp;(advanced editing via templates)<\/h5>\r\n\r\n<div class=\"table-responsive\">Captions provide information that can help users find, navigate, and understand tables.\r\n<p>Date12 February24 March14 April<\/p>\r\n\r\n<p>EventWaltz with StraussThe ObelisksThe What<\/p>\r\n\r\n<p>VenueMain HallWest WingMain Hall<\/p>\r\n<\/div>\r\n\r\n<h5>Table - with header cells in the top row and first column&nbsp;(advanced editing via templates)<\/h5>\r\n\r\n<div class=\"table-responsive\">Captions provide information that can help users find, navigate, and understand tables.\r\n<p>&nbsp;MondayTuesdayWednesdayThursdayFriday<\/p>\r\n\r\n<p>09:00 - 11:00ClosedOpenOpenClosedClosed<\/p>\r\n\r\n<p>11:00 - 13:00OpenOpenClosedClosedClosed<\/p>\r\n\r\n<p>13:00 - 15:00OpenOpenOpenClosedClosed<\/p>\r\n\r\n<p>15:00 - 17:00ClosedClosedClosedOpenOpen<\/p>\r\n<\/div>\r\n\r\n<h3>&nbsp;<\/h3>\r\n\r\n<h2>Advanced editing via classes&nbsp;<\/h2>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<h5>Inline text elements advanced editing via classes&nbsp;<\/h5>\r\n\r\n<p>We inherit <a href=\"http:\/\/getbootstrap.com\/css\/#type-inline-text\">Bootstrap classes from the Bootstrap framework<\/a>.&nbsp;The following classes can be used in Filtered HTML.<\/p>\r\n\r\n<p>You can use the mark tag to highlight text.<\/p>\r\n\r\n<p>This line of text is meant to be treated as deleted text.<\/p>\r\n\r\n<p>This line of text is meant to be treated as fine print.<\/p>\r\n\r\n<h5>Horizontal definition list&nbsp;(advanced editing via source)<\/h5>\r\n\r\n<dl>\r\n\t<dt>Definition&nbsp;list title<\/dt>\r\n\t<dd>Here is a definition list description<\/dd>\r\n\t<dt>Euismod<\/dt>\r\n\t<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<\/dd>\r\n\t<dd>Donec id elit non mi porta gravida at eget metus.<\/dd>\r\n\t<dt>Malesuada porta<\/dt>\r\n\t<dd>Etiam porta sem malesuada magna mollis euismod.<\/dd>\r\n\t<dt>Felis euismod semper eget lacinia<\/dt>\r\n\t<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<\/dd>\r\n<\/dl>\r\n\r\n<h5>Blockquote default reverse&nbsp;(advanced editing via source)<\/h5>\r\n\r\n<blockquote>\r\n<p>Quotes are used to emphasise excerpts of text. Since users almost never read but scan we need to provide them with some focus anchors to fix their attention to the most important parts of our content.<\/p>\r\n<\/blockquote>\r\n\r\n<h5>Buttons default&nbsp;(advanced editing via source)<\/h5>\r\n\r\n<ul>\r\n\t<li>use buttons to move though a transaction, aim to use only one button per page.<\/li>\r\n\t<li>button text should be short and describe the action the button performs.<\/li>\r\n<\/ul>\r\n\r\n<ul>\r\n\t<li><a href=\"#\">Start now<\/a><\/li>\r\n\t<li><a href=\"#\">Save and continue<\/a><\/li>\r\n<\/ul>\r\n\r\n<h5>Buttons block level&nbsp;(advanced editing via source)<\/h5>\r\n\r\n<p><a href=\"#\">Start now<\/a><a href=\"#\">Save and continue<\/a><\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "format": "basic_html",
+            "summary": null
+        }
+    ],
+    "field_last_updated": [
+        {
+            "value": "2017-10-24"
+        }
+    ]
+}

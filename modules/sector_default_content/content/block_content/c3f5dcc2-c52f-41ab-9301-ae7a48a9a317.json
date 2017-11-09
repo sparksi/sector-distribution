@@ -1,0 +1,68 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/5?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 39
+        }
+    ],
+    "uuid": [
+        {
+            "value": "c3f5dcc2-c52f-41ab-9301-ae7a48a9a317"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 39
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "Sector Sample Block - Related resources",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1473916469,
+            "lang": "en"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<ul class=\"list-unstyled list--basic-links\">\n\t<li><a href=\"\/\">Link to internal content<\/a><\/li>\n\t<li><a href=\"\/\">Link to internal content<\/a><\/li>\n\t<li><a href=\"http:\/\/www.drupal.org\/\">Link to external content<\/a><\/li>\n\t<li><a href=\"http:\/\/www.drupal.org\/\">Link to external content<\/a><\/li>\n<\/ul>\n",
+            "format": "filtered_html",
+            "summary": null,
+            "lang": "en"
+        }
+    ]
+}

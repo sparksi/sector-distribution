@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/block\/6?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/block_content\/basic"
+        }
+    },
+    "id": [
+        {
+            "value": 40
+        }
+    ],
+    "uuid": [
+        {
+            "value": "cf6a24fd-dda3-47e7-88c7-b29ed1f2782d"
+        }
+    ],
+    "revision_id": [
+        {
+            "value": 40
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "basic"
+        }
+    ],
+    "info": [
+        {
+            "value": "Sector Sample Block (demo only) - Copyright",
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1509580336,
+            "lang": "en"
+        }
+    ],
+    "revision_created": [
+        {
+            "value": 1509580336
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p>&copy; 2017 - Sector is brought to you by <a href=\"https:\/\/www.sparksinteractive.co.nz\/\">Sparks Interactive<\/a><\/p>",
+            "format": "basic_html",
+            "summary": "",
+            "lang": "en"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+name: Sector default content
+description: Provides the default content
+package: Sector
+
+type: module
+core: 8.x

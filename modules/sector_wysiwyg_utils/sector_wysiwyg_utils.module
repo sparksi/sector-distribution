@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Module for adding classes to blocks.
+ */
+
+/**
+ * Implements hook_editor_js_settings_alter().
+ *
+ *Adds the Maori macrons to the special characters list.
+ *
+ */
+function sector_wysiwyg_utils_editor_js_settings_alter(array &$settings) {
+
+  // Loads the default special characters. These have to be loaded, when trying
+  // to just append the new characters to the end of the existing list it acted
+  // as an override and wiped this list.
+  $default_special_chars = array(
+    '!','"','#','$','%','&',"'",'(',')','*','+','-','.','/',
+    '0','1','2','3','4','5','6','7','8','9',':',';',
+    '<','=','>','?','@',
+    'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O',
+    'P','Q','R','S','T','U','V','W','X','Y','Z',
+    '[',']','^','_','`',
+    'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
+    'q','r','s','t','u','v','w','x','y','z',
+    '{','|','}','~',
+    "€", "‘", "’", "“", "”", "–", "—", "¡", "¢", "£", "¤", "¥", "¦", "§", "¨", "©", "ª", "«", "¬", "®", "¯", "°", "²", "³", "´", "µ", "¶", "·", "¸", "¹", "º", "»", "¼", "½", "¾", "¿", "À", "Á", "Â", "Ã", "Ä", "Å", "Æ", "Ç", "È", "É", "Ê", "Ë", "Ì", "Í", "Î", "Ï", "Ð", "Ñ", "Ò", "Ó", "Ô", "Õ", "Ö", "×", "Ø", "Ù", "Ú", "Û", "Ü", "Ý", "Þ", "ß", "à", "á", "â", "ã", "ä", "å", "æ", "ç", "è", "é", "ê", "ë", "ì", "í", "î", "ï", "ð", "ñ", "ò", "ó", "ô", "õ", "ö", "÷", "ø", "ù", "ú", "û", "ü", "ý", "þ", "ÿ", "Œ", "œ", "Ŵ", "Ŷ", "ŵ", "ŷ", "‚", "‛", "„", "…", "™", "►", "•", "→", "⇒", "⇔", "♦", "≈",
+  );
+
+  // The new Maroi macrons list
+  $added_special_chars = array("&#256;", "&#257;", "&#274;", "&#275;", "&#298;", "&#299;", "&#332;", "&#333;", "&#362;", "&#363;");
+
+  // Merge the two lists to get the final character list.
+  $new_special_chars_list = array_merge($default_special_chars, $added_special_chars);
+
+  // Loads all formats, and applies the new list to each.
+  foreach (array_keys($settings['editor']['formats']) as $text_format_id) {
+    $settings['editor']['formats'][$text_format_id]['editorSettings']['specialChars'] = $new_special_chars_list;
+  }
+}
+

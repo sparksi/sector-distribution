@@ -1,0 +1,39 @@
+uuid: 54f6db70-8a9f-45bf-8a94-dddc0432d017
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.short_teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_event_date
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_location
+    - field.field.node.event.field_related_external_url
+    - field.field.node.event.field_related_internal_url
+    - node.type.event
+  module:
+    - text
+    - user
+id: node.event.short_teaser
+targetEntityType: node
+bundle: event
+mode: short_teaser
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_event_date: true
+  field_event_type: true
+  field_location: true
+  field_related_external_url: true
+  field_related_internal_url: true

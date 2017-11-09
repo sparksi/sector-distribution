@@ -1,0 +1,54 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/13?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/copyright_licensing"
+        }
+    },
+    "tid": [
+        {
+            "value": 13
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b7fc80d7-e11d-458e-b5e8-51518b157002"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "copyright_licensing"
+        }
+    ],
+    "name": [
+        {
+            "value": "Public Domain Dedication",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 6
+        }
+    ],
+    "changed": [
+        {
+            "value": 1473916467,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ]
+}

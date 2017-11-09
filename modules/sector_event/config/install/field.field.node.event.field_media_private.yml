@@ -1,0 +1,27 @@
+uuid: 1e768f1a-cef7-4a81-b351-fbd6d2c6c706
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_private
+    - node.type.event
+  module:
+    - file
+id: node.event.field_media_private
+field_name: field_media_private
+entity_type: node
+bundle: event
+label: 'Embargoed files'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  description_field: false
+  file_directory: '[current-date:custom:Y]-[current-date:custom:m]'
+  file_extensions: 'jpg jpeg png gif pdf doc docx txt rtf ppt pptx pps ppsx xls xlsx csv zip'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

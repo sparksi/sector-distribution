@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/17?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/copyright_licensing"
+        }
+    },
+    "tid": [
+        {
+            "value": 17
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3e279a22-ce1c-4525-ac47-a968c8efefad"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "copyright_licensing"
+        }
+    ],
+    "name": [
+        {
+            "value": "Attribution",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 1
+        }
+    ],
+    "changed": [
+        {
+            "value": 1477361622,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_cc_code": [
+        {
+            "value": "CC BY",
+            "format": "teaser_display_text"
+        }
+    ],
+    "field_cc_licence_long": [
+        {
+            "value": "Creative Commons Attribution 4.0 International Licence",
+            "format": "teaser_display_text"
+        }
+    ],
+    "field_copyright_link": [
+        {
+            "uri": "https:\/\/creativecommons.org\/licenses\/by\/3.0\/nz",
+            "title": "Some right reserved (CC BY)",
+            "options": []
+        }
+    ]
+}

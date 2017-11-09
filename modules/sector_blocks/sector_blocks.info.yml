@@ -1,0 +1,6 @@
+name: Sector blocks
+description: Provides custom blocks for Sector
+package: Sector
+
+type: module
+core: 8.x

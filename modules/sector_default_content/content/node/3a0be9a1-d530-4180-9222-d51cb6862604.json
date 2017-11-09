@@ -1,0 +1,171 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/node\/20?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/article"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_article_type": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/8?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 20
+        }
+    ],
+    "uuid": [
+        {
+            "value": "3a0be9a1-d530-4180-9222-d51cb6862604"
+        }
+    ],
+    "vid": [
+        {
+            "value": 93
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "article"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "News content sample with a long descriptive title",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_article_type": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/8?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/article_types"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c4fcdd7d-b313-4aef-94d0-abd36273b170"
+                    }
+                ]
+            }
+        ]
+    },
+    "created": [
+        {
+            "value": 1509574075,
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1509574104,
+            "lang": "en"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": 1509574104
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p class=\"lead\">Regular news keep your site alive.&nbsp;Most website content strategies emphasis the need to publish news and updates regularly and to share new content across all channels. &nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n\t<p>This&nbsp;sample page is a node of the content type <em>News<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>Break up long news stories with subheadings. But remember that subheadings add to the text, they&rsquo;re not part of it: the text should still make sense with the subheadings removed.<\/p>\r\n\r\n<p>How to write effective body copy:<\/p>\r\n\r\n<ul>\r\n\t<li>the first paragraph should lead on from the summary paragraph, not repeat the information<\/li>\r\n\t<li>use the &lsquo;inverted pyramid&rsquo; approach with the most important information at the top tapering down to lesser detail<\/li>\r\n\t<li>paragraphs should have no more than 5 sentences each<\/li>\r\n\t<li>ensure copy includes keywords to boost natural search rankings<\/li>\r\n\t<li>use video and images<\/li>\r\n<\/ul>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "format": "basic_html",
+            "summary": ""
+        }
+    ],
+    "field_issue_date": [
+        {
+            "value": "2016-08-01"
+        }
+    ]
+}

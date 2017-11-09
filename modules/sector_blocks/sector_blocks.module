@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function sector_blocks_theme($existing, $type, $theme, $path) {
+  return [
+    'responsive_menu_control_block' => [
+    ],
+    'search_desktop_fly_out_control_block' => [
+    ],
+    'search_api_box' => [
+    ],
+    'search_api_box_mobile' => [
+    ],
+  ];
+}

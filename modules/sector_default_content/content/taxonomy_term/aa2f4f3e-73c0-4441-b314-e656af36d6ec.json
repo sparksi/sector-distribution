@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/19?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/copyright_licensing"
+        }
+    },
+    "tid": [
+        {
+            "value": 19
+        }
+    ],
+    "uuid": [
+        {
+            "value": "aa2f4f3e-73c0-4441-b314-e656af36d6ec"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "copyright_licensing"
+        }
+    ],
+    "name": [
+        {
+            "value": "Attribution-ShareAlike",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 5
+        }
+    ],
+    "changed": [
+        {
+            "value": 1477361738,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_cc_code": [
+        {
+            "value": "CC BY-SA",
+            "format": "teaser_display_text"
+        }
+    ],
+    "field_cc_licence_long": [
+        {
+            "value": "Creative Commons Attribution-Share Alike 4.0 International Licence",
+            "format": "teaser_display_text"
+        }
+    ],
+    "field_copyright_link": [
+        {
+            "uri": "https:\/\/creativecommons.org\/licenses\/by-sa\/3.0\/nz",
+            "title": "Some right reserved (CC BY-SA)",
+            "options": []
+        }
+    ]
+}

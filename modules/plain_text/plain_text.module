@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements hook_page_attachments().
+ */
+function plain_text_page_attachments(array &$attachments) {
+  // Attach the library.
+  $attachments['#attached']['library'][] = 'plain_text/plain-text';
+}
+
+//TODO: MAKE THIS AND THE JS NICER
+
+function plain_text_editor_js_settings_alter(array &$settings) {
+  // Get all active formats.
+  $filters_list = filter_formats();
+
+  // For every text format, check if the Enable plain text filter is enabled,
+  // if it is, set the variable so it can be used later in the JS.
+  foreach (array_keys($settings['editor']['formats']) as $text_format_id) {
+    $format_filter = $filters_list[$text_format_id]->filters()->getAll();
+    $format_filter_config = $format_filter['plain_text_filter']->getConfiguration();
+    if($format_filter_config['status']) {
+      $settings['editor']['formats'][$text_format_id]['editorSettings']['PlainText'] = TRUE;
+    }
+  }
+}

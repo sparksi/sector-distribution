@@ -1,0 +1,73 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/20?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/copyright_licensing"
+        }
+    },
+    "tid": [
+        {
+            "value": 20
+        }
+    ],
+    "uuid": [
+        {
+            "value": "b6a49c22-3e7e-4736-86b2-c75bee231f6c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "copyright_licensing"
+        }
+    ],
+    "name": [
+        {
+            "value": "Public Domain Work",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 8
+        }
+    ],
+    "changed": [
+        {
+            "value": 1477361876,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "field_cc_code": [
+        {
+            "value": "PD",
+            "format": "teaser_display_text"
+        }
+    ],
+    "field_cc_licence_long": [
+        {
+            "value": "Public Domain",
+            "format": "teaser_display_text"
+        }
+    ],
+    "field_copyright_link": [
+        {
+            "uri": "https:\/\/creativecommons.org\/publicdomain\/mark\/1.0\/",
+            "title": "Public domain",
+            "options": []
+        }
+    ]
+}

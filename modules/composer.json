@@ -1,0 +1,13 @@
+{
+  "name": "sparksi/sector_modules",
+  "description": "Project-specific modules for the Sector D8 project",
+  "type": "drupal-custom-module",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Sparks Interactive",
+      "role": "Development"
+    }
+  ]
+}

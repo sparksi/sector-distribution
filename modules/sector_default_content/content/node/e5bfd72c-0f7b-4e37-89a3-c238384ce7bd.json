@@ -1,0 +1,178 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/access-denied-error-403?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 14
+        }
+    ],
+    "uuid": [
+        {
+            "value": "e5bfd72c-0f7b-4e37-89a3-c238384ce7bd"
+        }
+    ],
+    "vid": [
+        {
+            "value": 87
+        }
+    ],
+    "langcode": [
+        {
+            "value": "und",
+            "lang": "und"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "page"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "title": [
+        {
+            "value": "Access Denied (error 403)",
+            "lang": "und"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ],
+                "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/page_variants"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fd9a1a20-c2a0-454b-8b57-b2981e3affc2"
+                    }
+                ]
+            }
+        ]
+    },
+    "created": [
+        {
+            "value": 1337833175,
+            "lang": "und"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1509501277,
+            "lang": "und"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "und"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": 1509501277
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "body": [
+        {
+            "value": "<h2>Sorry, you are not authorized to access this page or you might be lost.&nbsp;<\/h2>\r\n\r\n<h3>Most likely causes<\/h3>\r\n\r\n<p>You might be looking for another page!<\/p>\r\n\r\n<h2>Most likely causes<\/h2>\r\n\r\n<ul>\r\n\t<li>The page no longer exists or has moved<\/li>\r\n\t<li>The website has recently had a major upgrade so some pages have been moved and a few old ones were deleted.<\/li>\r\n\t<li>It's also possible the page may have been temporary.<\/li>\r\n\t<li>If you have linked to this page from another site we will ask them to update their link please <a href=\"\/contact-us\">contact us<\/a> and let us&nbsp;where you linked from.<\/li>\r\n\t<li>You may have typed in the incorrect page name.&nbsp;<\/li>\r\n<\/ul>\r\n\r\n<h4>What you can try<\/h4>\r\n\r\n<p>Make sure the requested URL is correct.<\/p>\r\n\r\n<p>Or try:&nbsp;<\/p>\r\n\r\n<ul>\r\n\t<li>Using the Search &lt;insert link&gt;<\/li>\r\n\t<li>Using the Sitemap &lt;insert link&gt;<\/li>\r\n\t<li><a href=\"\/contact-us\">Contact us<\/a>&nbsp;to let us know about the error.<\/li>\r\n\t<li>Update your favourites or Bookmark list and links to our site<\/li>\r\n<\/ul>\r\n\r\n<p>{Sample content page}<\/p>\r\n",
+            "format": "basic_html",
+            "summary": ""
+        }
+    ],
+    "field_auto_contextual_content": [
+        {
+            "target_id": 3
+        },
+        {
+            "target_id": 1
+        }
+    ],
+    "field_last_updated": [
+        {
+            "value": "2017-10-24"
+        }
+    ]
+}

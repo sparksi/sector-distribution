@@ -1,0 +1,171 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/node\/21?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/resource"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/resource\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/resource\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/resource\/field_resource_type": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/21?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 21
+        }
+    ],
+    "uuid": [
+        {
+            "value": "6f702ecb-301b-4313-b54b-08de94f92606"
+        }
+    ],
+    "vid": [
+        {
+            "value": 94
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "resource"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "title": [
+        {
+            "value": "Resource content sample",
+            "lang": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/resource\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/resource\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/resource\/field_resource_type": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/21?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/resource_types"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "f4530b9d-7d76-48bd-841d-878b27727002"
+                    }
+                ]
+            }
+        ]
+    },
+    "created": [
+        {
+            "value": 1510021239,
+            "lang": "en"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1510021312,
+            "lang": "en"
+        }
+    ],
+    "promote": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "en"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": 1510021312
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p class=\"lead\">The Resource&nbsp;Content type is another example for taxonomy (or data) driven content. Resources&nbsp;and News items have similar fieldsets and displays; however their data type and audiences is different. Resources&nbsp;are non transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).<\/p>\r\n\r\n<p>The Sector Resource content type&nbsp;is prepared for information&nbsp;or knowledge database style content. The Resource type taxonomy allows to sort and filter Resource pages&nbsp;into groups for example training material&nbsp;or&nbsp;manuals. The Resource archive allows the user to filter by issue date or type.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "format": "basic_html",
+            "summary": "Resource\/Topic pages and news items have similar fieldsets and displays; however their data type and audiences is different."
+        }
+    ],
+    "field_issue_date": [
+        {
+            "value": "2017-01-08"
+        }
+    ]
+}

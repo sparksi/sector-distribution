@@ -1,0 +1,7 @@
+plain-text:
+  version: VERSION
+  js:
+    js/plain_text.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

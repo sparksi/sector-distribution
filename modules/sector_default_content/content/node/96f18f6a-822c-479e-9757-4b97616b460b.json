@@ -1,0 +1,180 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/level-2-page?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json",
+                "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
+            }
+        ]
+    },
+    "nid": [
+        {
+            "value": 13
+        }
+    ],
+    "uuid": [
+        {
+            "value": "96f18f6a-822c-479e-9757-4b97616b460b"
+        }
+    ],
+    "vid": [
+        {
+            "value": 13
+        }
+    ],
+    "langcode": [
+        {
+            "value": "und",
+            "lang": "und"
+        }
+    ],
+    "type": [
+        {
+            "target_id": "page"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "title": [
+        {
+            "value": "Level 2 page",
+            "lang": "und"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ],
+                "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                    }
+                ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/page_variants"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fd9a1a20-c2a0-454b-8b57-b2981e3affc2"
+                    }
+                ]
+            }
+        ]
+    },
+    "created": [
+        {
+            "value": 1418180055,
+            "lang": "und"
+        }
+    ],
+    "changed": [
+        {
+            "value": 1473901550,
+            "lang": "und"
+        }
+    ],
+    "promote": [
+        {
+            "value": false
+        }
+    ],
+    "sticky": [
+        {
+            "value": false,
+            "lang": "und"
+        }
+    ],
+    "revision_timestamp": [
+        {
+            "value": 1473901550
+        }
+    ],
+    "revision_log": [
+        {
+            "value": "Edited by UID1."
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "body": [
+        {
+            "value": "<p class=\"lead\">As part of this distribution we have preconfigure one branch of your menu, to showcase how your readers can move through your&nbsp;hierarchical content. This is your Level 2 page.&nbsp;<\/p>\n\n<p>Make sure the content of the page is relevant to the title and that the structure is clear and logical to the reader. All building blocks on your sites - the page content as a whole, paragraphs and sentences - should be <a href=\"http:\/\/www.webcredible.com\/blog\/content-usability-writing-web\/\">front-loaded<\/a>, with the important information at the beginning.<\/p>\n\n<p>{Sample content}<\/p>\n",
+            "format": "basic_html",
+            "summary": null
+        }
+    ],
+    "field_auto_contextual_content": [
+        {
+            "target_id": 3
+        }
+    ],
+    "field_last_updated": [
+        {
+            "value": "2017-10-24"
+        }
+    ]
+}

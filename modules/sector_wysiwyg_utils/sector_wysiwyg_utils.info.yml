@@ -1,0 +1,6 @@
+name: Sector WYSIWYG utils
+description: Provides the WYSIWYG settings for Sector
+package: Sector
+
+type: module
+core: 8.x

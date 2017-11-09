@@ -1,0 +1,6 @@
+sector:
+  version: VERSION
+  js:
+    js/sector_wysiwyg_utils.js: {}
+  dependencies:
+    - core/drupal

@@ -1,0 +1,40 @@
+body.admin-ui-hide {padding-top:0px!important;}
+.admin-ui-hide #toolbar-bar {display:none!important;}
+.admin-ui-hide .contextual-links-wrapper {display:none!important;}
+.admin-ui-hide .tabs--primary {display:none!important;}
+.admin-ui-hide .alert {display:none!important;}
+html body.admin-ui-hide.toolbar-bar {margin-top: 0!important;}
+.admin-ui-toggle p {
+    margin:0;padding:0;
+}
+.block-admin-ui-toggle {
+  display: flex;
+}
+.admin-ui-toggle button {
+    position: fixed;
+    top:0;
+    right:150px;
+    border: none;
+    outline:none;
+    z-index: 9999;
+}
+.admin-ui-toggle button:before {
+    content: 'Hide menu';
+    font-size: 12px;
+    line-height: 1;
+}
+.admin-ui-toggle.ui-is-hidden button:before {
+    content: 'Show menu';
+}
+.admin-ui-toggle button .fa-toggle-off {
+    display: none;
+}
+.admin-ui-toggle button .fa-toggle-on {
+    display: block;
+}
+.admin-ui-hide .admin-ui-toggle button .fa-toggle-off {
+    display: block;
+}
+.admin-ui-hide .admin-ui-toggle button .fa-toggle-on {
+    display: none;
+}
