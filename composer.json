@@ -1,5 +1,5 @@
 {
-  "name": "sparksi/sector_profile",
+  "name": "sparksinteractive/sector-distribution",
   "description": "Profile for the Sector D8",
   "license": "GPL-2.0+",
   "type" : "drupal-profile",
@@ -13,17 +13,9 @@
       "type": "composer",
       "url": "https://packages.drupal.org/8"
     },
-    "sector_modules": {
-      "url": "git@gitlab.com:sparksi/sector-d8.modules.git",
-      "type": "git"
-    },
-    "sector_starter": {
-      "url": "git@gitlab.com:sparksi/sector-d8.theme.git",
-      "type": "git"
-    },
-    "sector_profile": {
-      "url": "git@gitlab.com:sparksi/sector-d8.profile.git",
-      "type": "git"
+    "asset.packagist": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
     },
     "mmenu/main": {
       "extra": {
@@ -80,8 +72,6 @@
     "drupal/core": "^8.4",
     "drupal/console": "~1.0",
     "drupal/bootstrap": "^3.0",
-    "sparksi/sector_starter": "dev-master as 8.1.0",
-    "sparksi/sector_modules": "dev-master as 8.1.0",
     "drupal/block_class": "^1.0",
     "drupal/devel": "^1.0",
     "drupal/ds": "^3.0",
@@ -141,19 +131,6 @@
     ]
   },
   "scripts": {
-    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-    "pre-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "pre-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-    ],
-    "post-install-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ],
-    "post-update-cmd": [
-      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
-    ]
   },
   "extra": {
     "installer-paths": {
