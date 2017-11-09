@@ -1,0 +1,61 @@
+/**
+ * @file
+ * BEM block for Note.
+ *
+ * Use a callout note to draw attention to important content on the page.
+ */
+.note {
+  background-color: #EBEBEB;
+  padding: $spacing-base;
+  margin: $line-height-computed 0;
+  border-left: 5px solid $brand-gray-light;
+  h4 {
+    .prose & {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    + p {
+      margin-top: ($line-height-computed/2);
+    }
+  }
+  p {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.note--primary {
+  border-left: 5px solid $brand-primary;
+  h4 {
+    color: $brand-primary;
+  }
+}
+
+.note--success {
+  border-left: 5px solid $brand-success;
+  h4 {
+    color: $brand-success;
+  }
+}
+
+.note--info {
+  border-left: 5px solid $brand-info;
+  h4 {
+    color: darken($brand-info,15%);
+  }
+}
+
+.note--warning {
+  border-left: 5px solid $brand-warning;
+  h4 {
+    color: $brand-warning;
+  }
+}
+
+.note--danger {
+  border-left: 5px solid $brand-danger;
+  h4 {
+    color: $brand-danger;
+  }
+}

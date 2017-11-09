@@ -1,0 +1,33 @@
+/**
+ * @file
+ * BEM block for icon.
+ */
+
+.icon--close {
+  &:before {
+    content: '';
+    @include sprite('icon--close-blue');
+  }
+}
+
+.icon--close-small {
+  &:before {
+    content: '';
+    @include sprite('icon--close-small-blue');
+  }
+}
+
+.icon--menu {
+  &:before {
+    content: '';
+    @include sprite('icon--menu-white');
+  }
+}
+
+.icon--search {
+  &:before {
+    content: '';
+    font-size: 20px;
+    @include sprite('icon--search-white');
+  }
+}

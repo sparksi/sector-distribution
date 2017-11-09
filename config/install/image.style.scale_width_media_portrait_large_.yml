@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: scale_width_media_portrait_large_
+label: 'Scale width media portrait (Large)'
+effects:
+  a8481ec7-2b10-4c07-8c2a-48b78412f1c9:
+    id: image_scale
+    weight: 1
+    data:
+      width: 804
+      height: null
+      upscale: false

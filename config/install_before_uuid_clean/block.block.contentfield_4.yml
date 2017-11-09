@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_updated
+  module:
+    - block_class
+    - block_visibility_groups
+    - datetime
+    - fieldblock
+    - term_condition
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'promotion promotion--last-updated'
+id: contentfield_4
+theme: sector_starter
+region: post_content
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Last updated:'
+  provider: fieldblock
+  label_display: visible
+  label_from_field: 0
+  field_name: field_last_updated
+  formatter_id: datetime_default
+  formatter_settings:
+    timezone_override: ''
+    format_type: medium_plus_date
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: '5'
+    context_mapping:
+      node: '@node.node_route_context:node'

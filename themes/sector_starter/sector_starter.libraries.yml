@@ -1,0 +1,36 @@
+global:
+  version: "1.0.x"
+  css:
+    theme:
+      css/global.styles.css: {}
+      css/global.print.css: { media: print }
+  js:
+    js/global.behaviors.js: {}
+  dependencies:
+      - core/jquery
+
+scottjehl.Respond:
+  remote: https://github.com/scottjehl/Respond
+  version: 1.4.2
+  license:
+    name: MIT
+    url: https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js: { type: external, minified: true }
+
+twbs.bootstrap:
+  remote: http://getbootstrap.com/
+  version: 3.3.4
+  license:
+    name: MIT
+    url: https://github.com/twbs/bootstrap/blob/master/LICENSE
+  js:
+    https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js: { type: external, minified: true }
+
+fonts:
+  license:
+    name: Apache License
+    url: https://github.com/google/roboto/blob/master/LICENSE
+  css:
+    theme:
+      https://fonts.googleapis.com/css?family=Roboto:700: { type: external }

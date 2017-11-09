@@ -1,0 +1,22 @@
+uuid: c0704bb6-0c18-4858-82f3-1c449aa9b234
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sector_starter
+_core:
+  default_config_hash: VeQobwgk1yM_j63SSfL-67Jo_3hjR5afa4Pd1uGSPOo
+id: sector_starter_sector_starter_system_main
+theme: sector_starter
+region: content
+weight: -16
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

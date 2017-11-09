@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Publisher Tag'
+vid: publisher_tag
+description: ''
+hierarchy: 0
+weight: 0

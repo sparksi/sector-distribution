@@ -1,0 +1,69 @@
+disabled: false
+field_template: true
+ft-default: default
+ft-show-colon: false
+classes:
+  region:
+    - slat
+    - slat--has-background-colour
+    - slat--sometimes-has-left-aligned-media
+    - slat--sometimes-has-right-aligned-media
+    - slat--always-has-left-aligned-media
+    - slat--always-has-right-aligned-media
+    - slat--has-rollover
+    - slat--tile
+    - has-margin-top-base
+    - has-margin-top-half
+    - has-margin-top-double
+    - has-margin-top-and-half
+    - has-padding-top-base
+    - has-padding-top-half
+    - has-border-top
+    - has-border-top-large
+    - has-border-top-alternate
+    - media--has-background-icon
+  field:
+    - slat__body
+    - slat__media
+    - slat__title
+    - slat__title--link
+    - slat__date
+    - slat__read-more
+    - slat__term
+    - slat__location
+    - responsive-ratio
+    - responsive-ratio--3-2
+    - responsive-ratio--5-3
+    - responsive-ratio--16-9
+    - media
+    - media--featured
+    - node__date
+    - node__subtitle
+    - node__term
+    - btn
+    - btn-sm
+    - btn-lg
+    - btn-default
+    - btn-primary
+    - btn-success
+    - btn-link
+    - pull-left
+    - pull-right
+    - inline-block
+    - h2
+    - h3
+    - h4
+    - has-margin-top-half
+    - has-margin-top-base
+    - has-no-margin-top
+    - prose
+    - caption
+    - small
+    - text-right
+    - text-center
+    - text-center-wide-and-up
+    - has-padding-left-one-col
+    - has-padding-right-one-col
+use_field_names: true
+_core:
+  default_config_hash: thqeBfRg9yezfQqIlfLsbk5LWFmf7bVaUiyH_5ZKjc4

@@ -1,0 +1,14 @@
+/**
+ * @file
+ * BEM block for pre-content.
+ */
+.pre-content {
+  .node-type-resource-multipage-paged & {
+    @extend %has-margin-top-base;
+  }
+  .region {
+    .node-type-resource-multipage-paged & {
+      @extend %cover--success;
+    }
+  }
+}

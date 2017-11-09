@@ -1,0 +1,11 @@
+/**
+ * @file
+ * BEM block for pre-content.
+ */
+.pre-content {
+  @extend %has-margin-top-and-half;
+  .region-pre-content {
+    @include make-md-column(12);
+  }
+  
+}

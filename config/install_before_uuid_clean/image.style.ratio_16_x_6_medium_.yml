@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: ratio_16_x_6_medium_
+label: 'Ratio 16 x 6 (Medium)'
+effects:
+  c1190c6f-9fe3-4be7-b858-b277b8aed127:
+    uuid: ''
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 992
+      height: 372

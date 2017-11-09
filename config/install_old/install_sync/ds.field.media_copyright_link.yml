@@ -1,0 +1,13 @@
+id: media_copyright_link
+label: 'Media copyright link'
+ui_limit: ''
+properties:
+  content:
+    value: '[media:field_copyright_license:entity:field_copyright_link:title]'
+    format: plain_text
+type: token
+type_label: 'Token field'
+entities:
+  media: media
+_core:
+  default_config_hash: _Kz7luO4088S6oD0JKAiIMWhrhJ0M_Nlt5o27G_s4Kc

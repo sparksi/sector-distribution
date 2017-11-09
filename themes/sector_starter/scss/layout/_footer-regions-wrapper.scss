@@ -1,0 +1,18 @@
+/**
+ * @file
+ * BEM block for wrapping the footer regions
+ */
+.footer-regions-wrapper {
+  width: 100%;
+  background-color: $gray-darker;
+  @extend %has-margin-top-double;
+  color: $white;
+  @include respond-to(desktop-and-up) {
+    /* https://css-tricks.com/forums/topic/viewport-height-for-full-screen-div/ */
+    min-height: 100vh;
+  }
+}
+
+.footer-regions-wrapper__anchor {
+  color: $white;
+}

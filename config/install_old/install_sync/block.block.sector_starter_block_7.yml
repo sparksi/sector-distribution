@@ -1,0 +1,29 @@
+uuid: 7c090941-c97b-4263-97be-09f483e68e3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik
+_core:
+  default_config_hash: Vt-G7yAidDi5KAV72H_k5ZJpqWqltaNDd1IRIq0Vhxc
+id: sector_starter_block_7
+theme: bartik
+region: content
+weight: -37
+provider: null
+plugin: 'block_content:0ec32025-9e59-47d7-a6bb-911254a8a617'
+settings:
+  id: 'block_content:0ec32025-9e59-47d7-a6bb-911254a8a617'
+  label: 'Section promotion'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/section-a\n/section-a/*"

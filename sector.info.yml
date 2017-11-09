@@ -1,0 +1,99 @@
+name: Sector
+type: profile
+description: Sector D8 Profile
+core: 8.x
+
+distribution:
+  name: Sector
+
+dependencies:
+ - help
+ - link
+ - linkit
+ - media_entity
+ - media_entity_document
+ - media_entity_image
+ - menu_block
+ - menu_link_content
+ - menu_ui
+ - path
+ - contact
+ - pathauto
+ - responsive_image
+ - sector_blocks
+ - shortcut
+ - taxonomy
+ - term_condition
+ - views_ui
+ - admin_toolbar
+ - admin_toolbar_tools
+ - autologout
+ - automated_cron
+ - better_formats
+ - block
+ - block_class
+ - block_content
+ - block_visibility_groups
+ - breakpoint
+ - ckeditor
+ - color
+ - config
+ - config_update
+ - contextual
+ - ctools
+ - datetime
+ - dblog
+ - better_normalizers
+ - default_content
+ - ds
+ - ds_extras
+ - ds_switch_view_mode
+ - dynamic_page_cache
+ - editor
+ - embed
+ - entity
+ - entity_browser
+ - entity_embed
+ - entityqueue
+ - field
+ - field_formatter_filter
+ - field_group
+ - field_group_link
+ - field_ui
+ - fieldblock
+ - file
+ - filter
+ - hal
+ - history
+ - image
+ - layout_discovery
+ - libraries
+ - migrate
+ - migrate_drupal
+ - migrate_drupal_ui
+ - node
+ - options
+ - page_cache
+ - search
+ - sector_wysiwyg_utils
+ - serialization
+ - system
+ - text
+ - token
+ - toolbar
+ - update
+ - user
+ - views
+ - admin_ui_toggle
+ - password_policy
+ - password_policy_character_types
+ - password_policy_history
+ - password_policy_length
+ - metatag
+ - mmenu
+
+themes:
+ - bootstrap
+ - bartik
+ - seven
+ - sector_starter

@@ -1,0 +1,188 @@
+
+/**
+ * @file
+ * Overide the mmenu module mm-basic theme.
+ */
+
+/* Correct the off canvas slide behaviour */
+html.mm-slide.mm-right.mm-opened .mm-menu {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+html.mm-slide.mm-right.mm-opening .mm-menu {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+/* Style the toggles. Elaborate CSS selectors used in favor of more javascript */
+/* Target both */
+nav.mm-opened + .mm-menu + div + .mm-page .toggle--search,
+.mm-menu + .mm-opened + div + .mm-page .toggle--navigation {
+  color: white;
+  background-color: black;
+  padding: 8px 13px 5px 13px;
+  .icon--close {
+    display: inline-block;
+  }
+}
+
+/* Target search */
+nav.mm-opened + .mm-menu + div + .mm-page .toggle--search {
+  padding: 8px 13px 5px 13px;
+  .icon--search {
+    display: none;
+  }
+}
+
+/* Target navigation */
+.mm-menu + .mm-opened + div + .mm-page .toggle--navigation {
+  .icon--menu {
+    display: none;
+  }
+}
+
+
+/* Hide the mmenu if javascript is turned off or if you're in a legacy browser */
+.mmenu-nav {
+  .no-js &,
+  .lt-ie9 & {
+    display: none;
+  }
+}
+
+#mmenu_top {
+  > ul {
+    padding: 10px 0;
+    > li {
+      display: block;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+  }
+}
+
+#mmenu_right {
+  > ul{
+    > li {
+      &:after {
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+.mm-menu {
+  .mm-list {
+    padding: 10px 0;
+    > li {
+      &.mm-selected {
+        > a:not(.mm-subopen) {
+          background-color: black;
+          color: #FFF;
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: #3facff;
+          }
+        }
+      }
+      > a.mm-subclose {
+        background: rgba(0, 0, 0, 0.2);
+        color: rgba(255, 255, 255, 0.6);
+      }
+    }
+    + .mm-list {
+      &.mm-panel {
+        padding: 5px 0;
+      }
+    }
+    > li.mm-opened {
+      &:after {
+        border-color: transparent;
+      }
+    }
+  }
+  &.mm-vertical {
+    .mm-list {
+      > li {
+        > a.mm-subopen {
+          height: 52px;
+          &:after {
+            top: 22px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mm-menu.mm-vertical .mm-list .mm-panel {
+  padding: 0;
+}
+
+.mm-list {
+  &.nav {
+    > li {
+      &:not(.mm-subtitle):not(.mm-label):not(.mm-search):not(.mm-noresults):after {
+        margin-left: 0;
+      }
+      > a {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 16px;
+        padding: 16px;
+        &:focus {
+          outline-offset: 0;
+          outline: none;
+          background-color: black;
+        }
+        &:hover,
+        &.active {
+          background-color: black;
+          color: #FFF;
+        }
+        &.mm-subopen:after,
+        &.mm-subclose:before {
+          border-color: #FFF!important;
+        }
+        &.mm-subopen {
+          + a,
+          + span {
+            margin-right: 52px;
+          }
+        }
+      }
+      > span {
+        padding: 0;
+      }
+    }
+    a {
+      &.mm-subopen {
+        width: 52px;
+        &:after {
+          right: 22px;
+        }
+        &:before {
+          margin-bottom: -11px;
+        }
+      }
+      &.mm-subclose {
+        &:before {
+          margin-bottom: -11px;
+        }
+      }
+    }
+  }
+}

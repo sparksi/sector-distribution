@@ -1,0 +1,17 @@
+uuid: 42756aa9-24fa-43eb-b3b4-52e6b87cb28f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7_Ajh7rIhfB-y6cf3K3KGAF_C-aQmSq5qXJjCwDCvzI
+name: scale_width_full_column
+label: 'Scale width full column'
+effects:
+  d0ab1667-baa0-450d-81c0-ad2fecc5a0df:
+    uuid: ''
+    id: image_scale
+    weight: 1
+    data:
+      width: 804
+      height: null
+      upscale: false

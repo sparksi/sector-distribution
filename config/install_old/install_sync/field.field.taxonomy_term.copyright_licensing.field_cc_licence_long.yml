@@ -1,0 +1,49 @@
+uuid: a1959594-a003-41cb-a386-b2498b8e5511
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cc_licence_long
+    - taxonomy.vocabulary.copyright_licensing
+  module:
+    - better_formats
+    - text
+third_party_settings:
+  better_formats:
+    allowed_formats_toggle: 1
+    allowed_formats:
+      teaser_display_text: teaser_display_text
+      basic_html: 0
+      restricted_basic_html: 0
+      full_html: 0
+      restricted_html: 0
+      ds_code: 0
+    default_order_toggle: 0
+    default_order_wrapper:
+      formats:
+        basic_html:
+          weight: '-10'
+        restricted_basic_html:
+          weight: '-9'
+        full_html:
+          weight: '-8'
+        restricted_html:
+          weight: '-7'
+        teaser_display_text:
+          weight: '-6'
+        ds_code:
+          weight: '-4'
+_core:
+  default_config_hash: Kp58polB97urCjYMnK-LGDcXIl_JGbNMDjApNsY_HXk
+id: taxonomy_term.copyright_licensing.field_cc_licence_long
+field_name: field_cc_licence_long
+entity_type: taxonomy_term
+bundle: copyright_licensing
+label: 'CC Licence Long'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

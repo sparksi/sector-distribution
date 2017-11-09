@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Accessibility skip link
+ */
+.skip-link {
+  background-color: $gray-darker;
+  text-align: center;
+  > a {
+    display: inline-block;
+    outline-offset: 0;
+    padding: $spacing-quarter;
+    &:focus {
+      color: $white;
+      @include font-smoothing;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+uuid: 3b9750a6-3c88-4209-b33b-db8ac9072bd7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1540dQ2eBzyIO4n8ahsTTvEVSwfiuurkdQCqZPWlQj8
+id: administrator
+label: 'Drupal site builder (site architects and developers)'
+weight: 2
+is_admin: true
+permissions: {  }

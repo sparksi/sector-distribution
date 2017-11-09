@@ -1,0 +1,66 @@
+/**
+ * @file
+ * Responsive media (images, videos...)
+ */
+
+/**
+ * 1. Give the block an initial ratio of 3/2 to prevent reflow:
+ * http://andmag.se/2012/10/responsive-images-how-to-prevent-reflow/
+ *
+ * 2. Stretch the contained media to the dimensions of its container
+ */
+.responsive-ratio {
+  @include fix-aspect-ratio(3, 2); /* [1] */
+  /* [2] */
+  img,
+  object,
+  embed,
+  iframe,
+  video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.responsive-ratio--2-1 {
+  padding-bottom: aspect-ratio-height(2, 1);
+}
+
+.responsive-ratio--1-2 {
+  padding-bottom: aspect-ratio-height(1, 2);
+}
+
+.responsive-ratio--2-3 {
+  padding-bottom: aspect-ratio-height(2, 3);
+}
+
+.responsive-ratio--3-2 {
+  padding-bottom: aspect-ratio-height(3, 2);
+}
+
+.responsive-ratio--4-3 {
+  padding-bottom: aspect-ratio-height(4, 3);
+}
+
+.responsive-ratio--3-4 {
+  padding-bottom: aspect-ratio-height(3, 4);
+}
+
+.responsive-ratio--5-3 {
+  padding-bottom: aspect-ratio-height(5, 3);
+}
+
+.responsive-ratio--16-6 {
+  padding-bottom: aspect-ratio-height(16, 6);
+}
+
+.responsive-ratio--16-9 {
+  padding-bottom: aspect-ratio-height(16, 9);
+}
+
+.responsive-ratio--7-1 {
+  padding-bottom: aspect-ratio-height(7, 1);
+}

@@ -1,0 +1,108 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document.field_copyright_license
+    - field.field.media.document.field_credit_or_caption
+    - field.field.media.document.field_description
+    - field.field.media.document.field_document
+    - field.field.media.document.field_document_size
+    - field.field.media.document.field_mime_type
+    - field.field.media.document.field_tags
+    - field.field.media.document.field_title
+    - media_entity.bundle.document
+  module:
+    - field_group
+    - file
+    - text
+third_party_settings:
+  field_group:
+    group_copyright:
+      children:
+        - field_credit_or_caption
+        - field_copyright_license
+      parent_name: ''
+      weight: 4
+      label: Copyright
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+    group_additional_fields:
+      children:
+        - field_tags
+      parent_name: ''
+      weight: 5
+      label: 'Additional meta data'
+      format_type: details
+      format_settings:
+        open: false
+        required_fields: true
+        classes: ''
+        id: ''
+id: media.document.default
+targetEntityType: media
+bundle: document
+mode: default
+content:
+  field_copyright_license:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_credit_or_caption:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_description:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_document:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_tags:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete_tags
+    region: content
+  field_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  name:
+    type: string_textfield
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_document_size: true
+  field_mime_type: true
+  uid: true

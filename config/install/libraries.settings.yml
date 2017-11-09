@@ -1,0 +1,6 @@
+definition:
+  local:
+    path: 'public://library-definitions'
+  remote:
+    enable: true
+    url: 'http://cgit.drupalcode.org/sandbox-rjacobs-2761167/plain/registry'

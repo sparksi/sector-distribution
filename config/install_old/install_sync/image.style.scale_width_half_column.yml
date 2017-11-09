@@ -1,0 +1,17 @@
+uuid: 8332d00f-ce58-4c2e-b42d-64e7ae430fbf
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: XwR4pXxHOhRlzRyE8vmejCsDpfG-pGnl0SEKyO8SZP0
+name: scale_width_half_column
+label: 'Scale width half column'
+effects:
+  535990f6-bbc8-4eaf-b56f-4d460683c9b7:
+    uuid: ''
+    id: image_scale
+    weight: 1
+    data:
+      width: 402
+      height: null
+      upscale: false

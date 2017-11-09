@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies: {  }
+name: News
+type: article
+description: 'Use <em>News</em> for time-sensitive content like news or press releases.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,6 @@
+langcode: en
+status: true
+dependencies: {  }
+name: scale_width_media
+label: 'Scale width media'
+effects: {  }

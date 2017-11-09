@@ -1,0 +1,29 @@
+/**
+ * @file
+ * BEM block for Promotion.
+ */
+.promotion--multipage-actions {
+  .site__sidebar-inner & {
+    border-top: none;
+    &:first-child {
+      @include respond-to(desktop-and-down) {
+        margin-top: $spacing-base;
+      }
+    }
+  }
+  .action,
+  .action--multipage-print {
+    margin-top: $spacing-half;
+    display: block;
+    @include respond-to(tablet-and-up) {
+      margin-top: 0;
+      display: inline;
+    }
+  }
+  .action--multipage-print {
+    @include respond-to(desktop-and-up) {
+      margin-top: $spacing-half;
+      display: inline-block;
+    }
+  }
+}

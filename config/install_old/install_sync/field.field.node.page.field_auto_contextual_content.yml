@@ -1,0 +1,30 @@
+uuid: 7d6274ab-cb8c-4b8d-b073-f28046377576
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_auto_contextual_content
+    - node.type.page
+    - taxonomy.vocabulary.automated_contextual_content
+_core:
+  default_config_hash: TV-T6C-xiMtrEQyFDzf6PDXXyPw5jXsxrDEea-I6PEI
+id: node.page.field_auto_contextual_content
+field_name: field_auto_contextual_content
+entity_type: node
+bundle: page
+label: 'Page content settings'
+description: 'Shows / hides special content blocks.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      automated_contextual_content: automated_contextual_content
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

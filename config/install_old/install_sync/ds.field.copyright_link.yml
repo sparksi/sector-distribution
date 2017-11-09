@@ -1,0 +1,13 @@
+id: copyright_link
+label: 'Copyright link'
+ui_limit: ''
+properties:
+  content:
+    value: '[node:field_copyright_license:field_copyright_link:title]'
+    format: ds_code
+type: token
+type_label: 'Token field'
+entities:
+  node: node
+_core:
+  default_config_hash: ZbT639QGuPjcHuAEbN7gvXn9mdb6fO4ACZdZDnuQzhs

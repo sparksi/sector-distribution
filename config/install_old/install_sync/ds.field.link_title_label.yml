@@ -1,0 +1,13 @@
+id: link_title_label
+label: 'Link title label'
+ui_limit: ''
+properties:
+  content:
+    value: '[block_content:field_featured_content:title]'
+    format: teaser_display_text
+type: token
+type_label: 'Token field'
+entities:
+  block_content: block_content
+_core:
+  default_config_hash: LuOoHPxZE8vLv6LPeRxUnmlpovTDhj4HpM657P6OlMM

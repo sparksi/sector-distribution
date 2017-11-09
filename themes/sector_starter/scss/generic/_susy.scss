@@ -1,0 +1,25 @@
+/**
+ * @file
+ * This theme utilises Susy - a powerful/flexible utility grid.
+ *
+ * Susy is not used as the sites main frame as Bootstrap handles this.
+ * Bootstrap is chosen as the mainframe to provide the option to site builders
+ * to apply Bootstrap classes such as col-md-* to custom blocks/elements etc.
+ * Susy is useful when we need close control of elements such as _slat layout
+ * or when we need gallery style layouts of variable items. (Bootstrap requires
+ * an empty clearing div to achieve gallery style layouts).
+ *
+ * 1. Here we establish our Susy defaults
+ *    http://www.zell-weekeat.com/susy2-tutorial/
+ *    http://susy.readthedocs.org/en/latest/toolkit/
+ *
+ * 2. Uses Bootstrap gutter variable for consistent gutters
+ */
+
+/* [1] */
+$susy: (
+  columns: 12,
+  gutter-position: inside-static,
+  /* [2] */
+  gutters: $grid-gutter-width/80px,
+);

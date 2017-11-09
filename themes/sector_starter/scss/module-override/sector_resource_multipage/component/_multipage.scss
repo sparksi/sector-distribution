@@ -1,0 +1,16 @@
+/**
+ * @file
+ * BEM block for Multipage.
+ */
+
+@keyframes highlight {
+  from { background: rgba(255, 255, 0, 0.1); }
+  to { background: rgba(255, 255, 0, 0.3); }
+}
+
+.multipage__section {
+  > h2 {
+    /* Animate to illustrate arrival at section when interacting via the pager */
+    animation: highlight 1s ease;
+  }
+}

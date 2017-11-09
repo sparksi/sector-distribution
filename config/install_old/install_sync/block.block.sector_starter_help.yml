@@ -1,0 +1,22 @@
+uuid: bc570e4c-77c0-4f0e-a1ad-121355711b80
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - sector_starter
+_core:
+  default_config_hash: DAtcMzhZ1r6u3YKDBUCvvxN39kO_Ml_tUZYZfEeae1k
+id: sector_starter_help
+theme: sector_starter
+region: content
+weight: -17
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

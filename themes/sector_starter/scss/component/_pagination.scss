@@ -1,0 +1,252 @@
+/**
+ * @file
+ * Override Drupal / Bootstrap pagination
+ */
+
+/* Drupal default full pager */
+.pagination {
+  @extend %has-margin-top-double;
+  > li {
+    > a {
+      position: relative;
+      @include border-radius(0);
+      border: none;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      padding: 10px 15px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &.active {
+      > span {
+        padding: 9px 14px;
+      }
+    }
+    &:first-child {
+      > a,
+      > span {
+        @include border-radius(0);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        @include border-radius(0);
+      }
+    }
+    &.pager__item--first {
+      display: none;
+      @include respond-to(tablet-and-up) {
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+      > a {
+        padding: 10px 10px 10px 35px;
+        &:after {
+          content: '';
+          position: absolute;
+          @include sprite(arrow--medium-left-thin-blue);
+          top: 33%;
+          left: 17%;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          @include sprite(arrow--medium-left-thin-blue);
+          top: 33%;
+          left: 9%;
+        }
+      }
+    }
+    // &.prev {
+    //   @include respond-to(tablet-and-up) {
+    //     position: absolute;
+    //     left: 12%;
+    //   }
+    // }
+    //&.prev,
+    &.pager__item--previous { // Custom
+      > a {
+        padding: 10px 10px 10px 25px;
+        &:after {
+          content: '';
+          position: absolute;
+          @include sprite(arrow--medium-left-thin-blue);
+          top: 33%;
+          left: 9%;
+        }
+      }
+    }
+    // &.next {
+    //   @include respond-to(tablet-and-up) {
+    //     position: absolute;
+    //     right: 12%;
+    //   }
+    // }
+    //&.next,
+    &.pager__item--next {
+      > a {
+        padding: 10px 25px 10px 10px;
+        &:after {
+          content: '';
+          position: absolute;
+          @include sprite(arrow--medium-right-thin-blue);
+          top: 33%;
+          right: 10%;
+        }
+      }
+    }
+    &.pager__item--last {
+      display: none;
+      @include respond-to(tablet-and-up) {
+        display: block;
+        position: absolute;
+        right: 0;
+      }
+      > a {
+        padding: 10px 35px 10px 10px;
+        &:after {
+          content: '';
+          position: absolute;
+          @include sprite(arrow--medium-right-thin-blue);
+          top: 33%;
+          right: 17%;
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          @include sprite(arrow--medium-right-thin-blue);
+          top: 33%;
+          right: 9%;
+        }
+      }
+    }
+  }
+}
+
+.pagination--large-arrows,
+%pagination--large-arrows {
+  width: 100%;
+  @include respond-to(tablet-and-up) {
+    font-size: $font-size-h4;
+  }
+  > li {
+    > a {
+      position: relative;
+      @include border-radius(0);
+      border: none;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    &.previous,
+    &.pager__item--previous {
+      > a {
+        padding: 10px 10px 10px 40px;
+        @include respond-to(tablet-and-up) {
+          padding: 10px 20px 10px 40px;
+        }
+        @extend .pull-left;
+        &:after {
+          content: '';
+          position: absolute;
+          @include sprite(arrow--large-left-blue);
+          top: 2px;
+          left: 6px;
+          font-size: 16px;
+          @include respond-to(tablet-and-up) {
+            top: 7px;
+          }
+        }
+        &:visited {
+          color: $link-color;
+          &:hover {
+            color: $link-hover-color;
+          }
+        }
+        &:hover {
+          &:after {
+            @include sprite(arrow--large-left-dark-blue);
+          }
+        }
+      }
+    }
+    &.next,
+    &.pager__item--next {
+      > a {
+        padding: 10px 40px 10px 10px;
+        @include respond-to(tablet-and-up) {
+          padding: 10px 40px 10px 20px;
+        }
+        @extend .pull-right;
+        &:after {
+          content: '';
+          position: absolute;
+          @include sprite(arrow--large-right-blue);
+          top: 2px;
+          right: 6px;
+          font-size: 16px;
+          @include respond-to(tablet-and-up) {
+            top: 7px;
+          }
+        }
+        &:visited {
+          color: $link-color;
+          &:hover {
+            color: $link-hover-color;
+          }
+        }
+        &:hover {
+          &:after {
+            @include sprite(arrow--large-right-dark-blue);
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagination--text-hide,
+%pagination--text-hide {
+  > li {
+    > a {
+      @extend .text-hide;
+      height: 48px;
+    }
+    &.previous {
+      > a {
+        padding: 10px 20px 10px 10px;
+      }
+    }
+    &.next {
+      > a {
+        padding: 10px 10px 10px 20px;
+        float: none;
+      }
+    }
+  }
+}
+
+/* Drupal's default mini pager */
+.pager {
+  position: relative;
+  @extend %has-margin-top-double;
+  /* Extend variant large-arrows as declared above */
+  @extend %pagination--large-arrows;
+  .pager-current {
+    position: absolute;
+    top: 11px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: $font-size-base;
+    z-index: -1;
+    @include respond-to(tablet-and-up) {
+      top: 14px;
+    }
+  }
+}

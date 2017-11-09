@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_copyright_license
+    - node.type.resource
+    - taxonomy.vocabulary.copyright_licensing
+id: node.resource.field_copyright_license
+field_name: field_copyright_license
+entity_type: node
+bundle: resource
+label: 'Copyright license'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      copyright_licensing: copyright_licensing
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

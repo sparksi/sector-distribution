@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.entity_teaser
+label: 'Entity teaser'
+targetEntityType: node
+cache: true

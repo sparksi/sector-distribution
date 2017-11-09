@@ -1,0 +1,10 @@
+/**
+ * @file
+ * BEM block for post-header.
+ */
+.post-hero {
+  .region-post-hero {
+    @include make-md-column(12);
+    @extend %has-margin-top-base;
+  }
+}

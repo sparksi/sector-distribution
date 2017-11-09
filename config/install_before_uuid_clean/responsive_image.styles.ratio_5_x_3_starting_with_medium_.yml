@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.ratio_5_x_3_2x_medium_
+    - image.style.ratio_5_x_3_2x_small_
+    - image.style.ratio_5_x_3_medium_
+    - image.style.ratio_5_x_3_small_
+    - image.style.ratio_5_x_3_xsmall_
+  theme:
+    - sector_starter
+id: ratio_5_x_3_starting_with_medium_
+label: 'Ratio 5 x 3 (starting with Medium)'
+image_style_mappings:
+  -
+    breakpoint_id: sector_starter.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: ratio_5_x_3_medium_
+  -
+    breakpoint_id: sector_starter.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: ratio_5_x_3_2x_medium_
+  -
+    breakpoint_id: sector_starter.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: ratio_5_x_3_small_
+  -
+    breakpoint_id: sector_starter.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: ratio_5_x_3_2x_small_
+  -
+    breakpoint_id: sector_starter.xsmall
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: ratio_5_x_3_xsmall_
+  -
+    breakpoint_id: sector_starter.xsmall
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: ratio_5_x_3_small_
+breakpoint_group: sector_starter
+fallback_image_style: ratio_5_x_3_xsmall_

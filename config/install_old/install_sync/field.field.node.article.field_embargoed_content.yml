@@ -1,0 +1,23 @@
+uuid: fdd5cd65-64c5-4d10-b946-d130472bddd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_embargoed_content
+    - node.type.article
+_core:
+  default_config_hash: JHBlZ-UaZuxAgBJgLpXx6W6hkAATqP5ykALBc4nYYCM
+id: node.article.field_embargoed_content
+field_name: field_embargoed_content
+entity_type: node
+bundle: article
+label: 'Embargoed content'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

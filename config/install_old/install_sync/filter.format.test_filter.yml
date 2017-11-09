@@ -1,0 +1,10 @@
+uuid: 4ef98c51-e192-427e-862e-63dcc0624223
+langcode: en
+status: false
+dependencies: {  }
+_core:
+  default_config_hash: MvVMzZaSMTjlN0v-sJJTNClFMWbRKoS3LbOq7TEPt6c
+name: 'Test filter'
+format: test_filter
+weight: -3
+filters: {  }

@@ -1,0 +1,21 @@
+/* 
+ * the module takes care of the toggle's basic attributes, 
+ * this just utilises bootstrap to make it appear visually engaging.
+ */ 
+.admin-ui-toggle button {
+  @extend .btn;
+  @extend .btn-primary;
+  font-family: $font-family-sans-serif;
+  @include font-smoothing;
+  font-weight: bold;
+  line-height: 1;
+  outline: none;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.admin-ui-toggle.ui-is-hidden button {
+  @extend .btn-info;
+}

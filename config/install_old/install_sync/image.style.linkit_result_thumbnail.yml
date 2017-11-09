@@ -1,0 +1,16 @@
+uuid: ea701425-3db7-4a31-b368-1f83bb0d5fd1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 7-G7V7B23iIxcpYLHaObPl7lbBAUOXEDZipkYrtCv10
+name: linkit_result_thumbnail
+label: 'Linkit result thumbnail'
+effects:
+  2943df29-38ea-459c-ba1d-290489bb1807:
+    uuid: ''
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 50
+      height: 50

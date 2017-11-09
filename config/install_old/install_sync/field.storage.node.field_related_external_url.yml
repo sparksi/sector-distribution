@@ -1,0 +1,21 @@
+uuid: d9530238-2648-4667-b352-03b6d65f26c1
+langcode: und
+status: true
+dependencies:
+  module:
+    - link
+    - node
+_core:
+  default_config_hash: 2TeV5lPamGJzBF6No6533dQuu6lMVqd61-nI1CF9yf8
+id: node.field_related_external_url
+field_name: field_related_external_url
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

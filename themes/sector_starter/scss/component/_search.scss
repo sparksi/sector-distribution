@@ -1,0 +1,209 @@
+/**
+ * @file
+ * BEM block for Search
+ */
+
+.search--primary {
+  position: relative; /* Create a positioning context for the submit button */
+  &.views-exposed-form {
+    @include respond-to(mobile) {
+      padding: $spacing-half;
+    }
+  }
+  .btn-primary {
+    position: absolute;
+    top: 26px;
+    right: 26px;
+    padding: 12px 21px 13px;
+    font-size: 16px;
+    margin-top: 0;
+    
+    @include respond-to(mobile) {
+      top: 13px;
+      right: 13px;
+    }
+    .icon {
+      display: none;
+    }
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .form-control {
+    padding-right: 106px;
+  }
+}
+
+.search--small {
+  padding: $spacing-half $spacing-base;
+  .btn {
+    position: relative;
+    height: 43px;
+    width: 43px;
+    background-color: $white;
+    @include border-radius(0);
+    border: 1px solid $brand-gray-light;
+    .icon {
+      color: $gray-dark;
+    }
+  }
+  .form-control {
+    &.form-text,
+    &.form-search {
+      height: 43px;
+    }
+  }
+  .description {
+    color: $gray-lighter;
+    @include font-smoothing;
+  }
+  // .mm-menu & {
+  //   padding: $spacing-half $spacing-base;
+  //   .description {
+  //     color: $gray-lighter;
+  //     @include font-smoothing;
+  //   }
+  // }
+}
+
+
+.search--flyout,
+.search-page-form {
+  .form-control {
+    &.form-text,
+    &.form-search {
+      height: 43px;
+      @include font-smoothing;
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 0;
+  }
+  
+  .btn {
+    background-color: $gray-darker;
+    border: 1px solid $black;
+    height: 43px;
+    width: 43px;
+    padding: 0;
+    position: relative;
+    
+    .icon {
+      display: none;
+    }
+    
+    &:after {
+      content:'';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%) scale(1.5);
+      @include sprite(icon--search-white);
+    }
+    
+    &:hover {
+      background-color: $brand-primary;
+    }
+    &:focus {
+      @include box-shadow(none);
+      background-color: $black;
+      outline: 1px solid $black;
+      outline-offset: 0;
+    }
+  }
+  
+  .description {
+    @include font-smoothing;
+    margin-bottom: 0;
+  }
+}
+
+.search--flyout {
+  background-color: $gray-dark;
+  padding: 15px;
+  clear: both;
+  display: none;
+  
+  .mm-menu & {
+    display: block;
+  }
+  
+  // only hide for desktop
+  @include respond-to(desktop-and-up){
+    width: 85%;
+    display: block;
+    
+    .js & {
+      display: none;
+      position: absolute;
+      top: -12px;
+      right: 60px;
+      clear: none;
+    }
+  }
+  
+  .js &.search-is-active {
+    @include respond-to(desktop-and-up) {
+      display: block;
+    }
+  }
+  @include respond-to(wide-and-up) {
+    width: 66%;
+  }
+  @include respond-to(wide-large-and-up) {
+    width: 70%;
+  }
+  .form-control {
+    &.form-text,
+    &.form-search {
+      background-color: $gray;
+      border: 1px solid $black;
+      color: $gray-lighter;
+      &:focus {
+        outline: none;
+        outline-offset: 0;
+        @include box-shadow(none);
+      }
+    }
+  }
+  .description {
+    color: $gray-lighter;
+  }
+}
+
+/* /search/node for core search */
+.search-page-form {
+  border: 1px solid $brand-border;
+  background-color: lighten($gray-lighter,5%);
+  padding: $spacing-base;
+  margin: 0;
+  
+  * + .description,
+  * + .search-help-link {
+    margin-top: $spacing-base / 3;
+  }
+  
+  .search-help-link {
+    @include font-smoothing;
+    display: inline-block;
+  }
+  
+  & + * {
+    margin-top: $spacing-base;
+  }
+}
+
+.search-advanced {
+  @include font-smoothing;
+  .search-help-link + & {
+    display: inline-block;
+    margin-top: .3em;
+    
+    @include respond-to(tablet-large-and-up){
+      margin-left: 1em;
+      margin-top: 0;
+    }
+  }
+  
+}

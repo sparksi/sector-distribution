@@ -1,0 +1,14 @@
+/**
+ * @file
+ * BEM block for pre-footer.
+ */
+.pre-footer {
+  background-color: $white;
+  padding-bottom: $spacing-base;
+  @include respond-to(desktop-and-up) {
+    padding-bottom: $spacing-double;
+  }
+  .region-pre-footer {
+    @include make-md-column(12);
+  }
+}

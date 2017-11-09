@@ -1,0 +1,25 @@
+uuid: 2c6261d7-3be7-4512-b931-31addb3d7e09
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: OxB4oVPTFCmqy2xXu_A_ki6L_JpRPd4A3IkpA0LnvKo
+id: promotional_links
+label: 'Promotional links'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 6
+  max_size: 9
+  act_as_queue: false

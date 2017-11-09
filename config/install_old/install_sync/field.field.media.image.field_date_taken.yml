@@ -1,0 +1,23 @@
+uuid: 58aa0e89-b82d-4455-8811-e83c0fd3b4ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_date_taken
+    - media_entity.bundle.image
+  module:
+    - datetime
+_core:
+  default_config_hash: VFKQS4CaaFbvFTloYk4o5nETKhPd02kCew7XRkfM0-I
+id: media.image.field_date_taken
+field_name: field_date_taken
+entity_type: media
+bundle: image
+label: 'Date taken'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

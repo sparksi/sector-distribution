@@ -1,0 +1,23 @@
+uuid: a16b4793-a2ef-4b02-a91e-209f82d36bbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issue_date
+    - node.type.article
+  module:
+    - datetime
+_core:
+  default_config_hash: gZGpIBBep4qUyqVGS0vxnWPsdvq23SK1vOL14TFY67Y
+id: node.article.field_issue_date
+field_name: field_issue_date
+entity_type: node
+bundle: article
+label: 'Issue date'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

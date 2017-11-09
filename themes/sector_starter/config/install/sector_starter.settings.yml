@@ -1,0 +1,17 @@
+# Settings
+# Sector is opinionated here. Note: in your subtheme these settings can be
+# overridden by the database via /admin/appearance/settings/{PROJECTTHEMENAME}.
+# See: https://drupal-bootstrap.org/api/bootstrap/docs%21Theme-Settings.md/group/theme_settings/8
+
+cdn_provider: None
+# button_colorize: 0
+# button_iconize: 0
+forms_smart_descriptions: 0
+# forms_required_has_error: 1
+popover_enabled: 0
+tooltip_enabled: 0
+table_hover: 0
+table_striped: 0
+# table_responsive: 0
+breadcrumb_home: 1
+# breadcrumb_title: 1

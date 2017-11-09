@@ -1,0 +1,37 @@
+/**
+ * @file
+ * BEM block for Transcript.
+ */
+.transcript {
+  > div {
+    a {
+      font-weight: 700;
+      line-height: 1.1;
+      display: block;
+      margin-top: 13px;
+      margin-bottom: 13px;
+      &:after {
+        content: '';
+        @include sprite(arrow--micro-down-blue);
+        position: absolute;
+        margin: 8px 0 0 6px;
+      }
+      &:hover {
+        &:after {
+          @include sprite(arrow--micro-down-dark-blue);
+        }
+      }
+    }
+    a[aria-expanded="true"] {
+      &:after {
+        @include sprite(arrow--micro-up-blue);
+        margin: 7px 0 0 6px;
+      }
+      &:hover {
+        &:after {
+          @include sprite(arrow--micro-up-dark-blue);
+        }
+      }
+    }
+  }
+}

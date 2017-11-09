@@ -1,0 +1,10 @@
+uuid: a60c404a-d6e1-485c-a266-54d24ccfe380
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: PD0jnq7ARpgIKbbaCAGJN-1bAEepT2wEYa4tuivyeCA
+id: main-menu
+label: 'Main menu'
+description: 'Part of Sector Starter Kit. Menu for <em>hierarchical structured content</em> based on main site sections. '
+locked: false

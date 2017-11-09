@@ -1,0 +1,34 @@
+/**
+ * @file
+ * BEM block for Toggle.
+ */
+.toggle {
+  float: right;
+  clear: both;
+  color: $white;
+  position: relative;
+  padding: 8px 12px 5px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
+  .icon--close {
+    display: none;
+    &:before {
+      @include sprite(icon--close-white);
+    }
+  }
+  .lt-ie10 & {
+    background-color: $gray;
+  }
+}
+
+.toggle--search {
+  margin: 0;
+  padding: 10px 11px 2px 12px;
+  display: none;
+  
+  .js & {
+    display: block;
+  }
+}

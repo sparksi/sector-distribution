@@ -1,0 +1,114 @@
+<?php
+
+use Drupal\entityqueue\Entity\EntityQueue;
+
+/**
+ * @file
+ * Install, update and uninstall functions for the profilename install profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function sector_install() {
+  // First, do everything in standard profile.
+  include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
+  standard_install();
+  
+//sector_starter
+  \Drupal::service('theme_installer')->install(['sector_starter']);
+  \Drupal::service('theme_installer')->install(['seven']);
+  \Drupal::service('module_installer')->install(['sector_default_content'], FALSE);
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'sector_starter')
+    ->set('admin', 'seven')
+    ->save();
+
+  // Set default pages.
+  \Drupal::configFactory()->getEditable('system.site')
+    ->set('page.403', '/node/14')
+    ->set('page.404', '/node/5')
+    ->set('page.front', '/node/10')
+    ->save(TRUE);
+
+  _create_entityqueues();
+  _create_users();
+}
+
+function _create_entityqueues() {
+  // Load entityqueue. Need to load items next.
+  $queue_storage = \Drupal::entityManager()->getStorage('entity_subqueue');
+  $informationalQueue = $queue_storage->load('information_tiles');
+  $promotionalLinksQueue = $queue_storage->load('promotional_links');
+  $InformationTileEntityIds = array(
+    '8',
+    '11',
+    '4',
+  );
+  $promotionalLinksEntityIds = array(
+    '8',
+    '6',
+    '4',
+    '7',
+    '11',
+    '19',
+  );
+  $items = array();
+
+  foreach ($InformationTileEntityIds as $id) {
+    $node_storage = \Drupal::entityManager()->getStorage('node');
+    $node = $node_storage->load($id);
+    $items[] = $node;
+  }
+  $informationalQueue->set('items', $items);
+  $informationalQueue->save();
+  $items = array();
+  foreach ($promotionalLinksEntityIds as $id) {
+    $node_storage = \Drupal::entityManager()->getStorage('node');
+    $node = $node_storage->load($id);
+    $items[] = $node;
+  }
+  $promotionalLinksQueue->set('items', $items);
+  $promotionalLinksQueue->save();
+}
+
+function _create_users() {
+
+  $users = array(
+    'Content Editor' => 'content_editor',
+    'Content Administrator' => 'content_administrator',
+    'Support Agent' => 'administrator',
+    'Robot',
+  );
+  $count = 0;
+  foreach ($users as $username => $role) {
+    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $user = \Drupal\user\Entity\User::create();
+
+    //Mandatory settings
+    $randomPassword = user_password(10);
+    $user->setPassword($randomPassword);
+    $user->enforceIsNew();
+    $user->setEmail('noreply+' . $count . '@sparksinteractive.co.nz');
+    $user->setUsername($username);
+    if(isset($role)) {
+      $user->addRole($role);
+    }
+
+    //Optional settings
+    $user->set("init", 'email');
+    $user->set("langcode", $language);
+    $user->set("preferred_langcode", $language);
+    $user->set("preferred_admin_langcode", $language);
+    $user->block();
+
+    //Save user
+    $res = $user->save();
+    $count++;
+  }
+}

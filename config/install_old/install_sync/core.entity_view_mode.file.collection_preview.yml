@@ -1,0 +1,12 @@
+uuid: 99f1ed40-759e-4998-b80b-a150f75def0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+_core:
+  default_config_hash: UezwJ3FWk04s05iNtUlQNb8IZzza27V64_bIOEaIGng
+id: file.collection_preview
+label: collection_preview
+targetEntityType: file
+cache: true

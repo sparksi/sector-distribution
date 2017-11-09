@@ -1,0 +1,25 @@
+uuid: 2b1d3f17-4707-4fb6-bc61-a7c830b89e99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_external_url
+    - node.type.page
+  module:
+    - link
+_core:
+  default_config_hash: TQTSDwRG2YjPod4-llqWFbqb1qRXbtqHMGeCKDoGezo
+id: node.page.field_related_external_url
+field_name: field_related_external_url
+entity_type: node
+bundle: page
+label: 'Related external URL'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

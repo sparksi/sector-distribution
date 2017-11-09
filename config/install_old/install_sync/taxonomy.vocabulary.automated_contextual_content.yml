@@ -1,0 +1,11 @@
+uuid: 88e789e3-47eb-4720-9b22-fc712ff3af9b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Hrhv_yt1eSt81DiBWfvBmYyf5pa9qnPGDDWQoUzLGvY
+name: 'Automated contextual content'
+vid: automated_contextual_content
+description: 'Content which is shown based on the context of the current node'
+hierarchy: 0
+weight: -4

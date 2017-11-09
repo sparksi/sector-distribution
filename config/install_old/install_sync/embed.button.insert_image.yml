@@ -1,0 +1,25 @@
+uuid: a186b6cf-6577-40a1-942b-acf198c180a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+  module:
+    - entity_embed
+    - media_entity
+_core:
+  default_config_hash: IYAAME07iU9pIh9z-HAPcYPBcDAthRdQ1Q_VyHD13f8
+label: 'Insert image'
+id: insert_image
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins:
+    - 'view_mode:media.embedded_full_column'
+    - 'view_mode:media.embedded_half_column'
+  entity_browser: ''
+  entity_browser_settings:
+    display_review: false
+icon_uuid: null

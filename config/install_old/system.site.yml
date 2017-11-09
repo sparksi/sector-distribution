@@ -1,0 +1,12 @@
+name: UID1
+mail: daniel@sparksinteractive.co.nz
+slogan: ''
+page:
+  403: /node/14
+  404: /node/4
+  front: /node/10
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+mail_notification: ''

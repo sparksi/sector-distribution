@@ -1,0 +1,10 @@
+/**
+ * @file
+ * BEM block for Action.
+ */
+.action--multipage-print {
+  /* Hide if JS is turned off */
+  .no-js & {
+    display: none;
+  }
+}

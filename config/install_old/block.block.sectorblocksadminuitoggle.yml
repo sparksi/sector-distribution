@@ -1,0 +1,46 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - admin_ui_toggle
+    - block_class
+    - block_visibility_groups
+    - term_condition
+    - user
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: ''
+id: sectorblocksadminuitoggle
+theme: sector_starter
+region: header
+weight: 0
+provider: null
+plugin: admin_ui_toggle
+settings:
+  id: admin_ui_toggle
+  label: 'Sector blocks - Admin UI toggle'
+  provider: admin_ui_toggle
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      authenticated: authenticated
+      content_administrator: content_administrator
+      administrator: administrator
+      content_editor: content_editor
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

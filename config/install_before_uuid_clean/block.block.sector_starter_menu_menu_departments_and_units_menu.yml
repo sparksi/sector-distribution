@@ -1,0 +1,27 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.menu-departments-and-units-menu
+  module:
+    - system
+  theme:
+    - bartik
+id: sector_starter_menu_menu_departments_and_units_menu
+theme: bartik
+region: header
+weight: -44
+provider: null
+plugin: 'system_menu_block:menu-departments-and-units-menu'
+settings:
+  id: broken
+  label: ''
+  provider: core
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

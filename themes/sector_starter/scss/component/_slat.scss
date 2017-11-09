@@ -1,0 +1,316 @@
+/**
+ * @file
+ * BEM block for Slats.
+ *
+ * A common design pattern is a list of repeating content blocks typically
+ * containing a headline, a short text blurb and an image.
+ * This is commonly called a slat.
+ *
+ * A slat is kind of like a Drupal 'teaser' (view mode) but the ambiguous name
+ * means it is more versatile and can be used outside of the view mode context.
+ *
+ * Here we establish some base level BEM-style slat behaviour
+ * Use these classes to theme elements like teasers eg: via Display Suite.
+ * or apply to Drupal views.
+ */
+$slat-border: $brand-border;
+$slat-background-color: $gray-lighter;
+$slat-text-color: $text-color;
+
+.slat {  
+  &.toggle-carousel {
+    cursor: pointer;
+    .slat__title {
+      color: $link-color;
+    }
+    &:hover,
+    &:focus {
+      .slat__title {
+        color: $link-hover-color;
+        text-decoration: underline;
+      }
+    }
+    &:focus,
+    &:active {
+      outline: 3px solid $brand-focused;
+      outline-offset: -3px;
+    }
+  }
+  
+  &.has-border-top,
+  &.has-border-top-large {
+    padding-top: $spacing-base;
+  }
+}
+
+.slat__media {
+  > a {
+    display: block;
+  }
+  @include single-transition(all, 0.05s, ease-in);
+  border: 1px solid darken($gray-lighter, 10%);
+}
+
+.slat__title {
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+      @include single-transition(all, 0.05s, ease-in);
+    }
+    &:visited {
+      color: $brand-visited;
+    }
+  }
+  
+  + * {
+    margin-top: $spacing-quarter;
+  }
+  
+  ~ .inline-block {
+    vertical-align: bottom;
+  }
+}
+
+.slat__body {
+  .lead {
+    color: $text-color;
+    font-size: $font-size-base;
+  }
+  @include respond-to(tablet-and-up) {
+    line-height: $line-height-base-prose;
+    
+    p + * {
+      margin-top: ($line-height-prose-computed/2);
+    }
+  }
+  
+  * + & {
+    margin-top: $spacing-half;
+  }
+}
+
+.slat__title--link {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.slat__read-more {
+  margin-top: $spacing-half;
+  > a {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  &.btn-default {
+    > a {
+      color: $gray-dark;
+    }
+  }
+}
+
+
+.slat__date {
+  @extend %date;
+  font-size: 14px;
+}
+
+.slat__term {
+  font-size: 14px;
+  color: $gray-light;
+}
+
+.slat__location {
+  font-size: 14px;
+  color: $gray-light;
+}
+
+.slat--tile {
+  border: 1px solid $brand-border;
+  padding: $spacing-half $spacing-half $spacing-base $spacing-half;
+  .slat__media {
+    border-bottom: none;
+  }
+}
+
+.slat__link {
+  position: relative;
+  float: left;
+  width: 100%;
+  display: block;
+  .slat__title {
+    color: $brand-primary;
+    @include single-transition(none);
+  }
+  .slat__body {
+    color: $slat-text-color;
+  }
+  .slat__date {
+    color: lighten($gray-light,10%);
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    .slat__title {
+      color: lighten($brand-primary,15%);
+      text-decoration: underline;
+      @include single-transition(all, 0.05s, ease-in);
+    }
+    .slat__body {
+      color: $slat-text-color;
+    }
+    .slat__date {
+      color: lighten($gray-light,10%);
+    }
+    .slat__media {
+      border: 1px solid darken($gray-lighter, 30%);
+    }
+  }
+  &:visited {
+    .slat__title {
+      color: $brand-visited;
+    }
+  }
+  /* Add external link icon to links within the main content areas */
+  &[href^="http://"],
+  &[href^="https://"],
+  &[rel*='external'] {
+    .slat__read-more {
+      &:after {
+        font-size: 16px;
+        content: '';
+        @include sprite(icon--external-dark-grey);
+        margin-left: 6px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+// .slat--has-border-top {
+//   @extend %has-border-top;
+// }
+
+// .slat--has-border-top-large {
+//   @extend %has-border-top-large;
+// }
+
+// .slat--has-border-top-alternate {
+//   @extend %has-border-top-alternate;
+// }
+
+// .slat--has-top-margin {
+//   @extend %has-margin-top-and-half;
+// }
+
+// .slat--has-top-margin-half {
+//   @extend %has-margin-top-base;
+// }
+
+.slat--has-background-colour {
+  background-color: $slat-background-color;
+  .slat__content {
+    padding: 0 $spacing-base $spacing-base;
+  }
+}
+
+.slat--sometimes-has-left-aligned-media,
+.slat--sometimes-has-right-aligned-media {
+  .slat__media {
+    margin-bottom: $spacing-base;
+  }
+  .slat__content {
+    padding: 0 0 $spacing-half 0;
+  }
+  &.slat--has-background-colour {
+    .slat__content {
+      padding: 0 $spacing-half $spacing-half;
+      @include respond-to(tablet-and-up) {
+        padding: 0 $spacing-three-quarters $spacing-half 0;
+      }
+    }
+  }
+}
+
+.slat--sometimes-has-left-aligned-media {
+  .slat__media {
+    @include respond-to(tablet) {
+      @include span(3 of 6 before first);
+      margin-right: $spacing-and-half;
+    }
+    @include respond-to(desktop-and-up) {
+      @include span(5 of 12 before first);
+      margin-right: $spacing-and-half;
+    }
+  }
+}
+
+.slat--sometimes-has-right-aligned-media {
+  .slat__media {
+    @include respond-to(tablet) {
+      @include span(3 of 6 before first);
+      margin-left: $spacing-and-half;
+    }
+    @include respond-to(desktop-and-up) {
+      @include span(5 of 12 before first);
+      margin-left: $spacing-and-half;
+    }
+  }
+}
+
+.slat--always-has-left-aligned-media,
+.slat--always-has-right-aligned-media {
+  &.slat--has-background-colour {
+    @include clearfix;
+    .slat__content {
+      padding: 0 $spacing-half $spacing-half;
+      @include respond-to(tablet-and-up) {
+        padding: 0 $spacing-three-quarters $spacing-half 0;
+      }
+    }
+  }
+}
+
+.slat--always-has-left-aligned-media {
+  .slat__media {
+    @include respond-to(tablet) {
+      @include span(3 of 6 before first);
+    }
+    @include respond-to(desktop-and-up) {
+      @include span(5 of 12 before first);
+    }
+  }
+  .slat__content {
+    @include respond-to(tablet) {
+      @include span(3 of 6 before last);
+    }
+    @include respond-to(desktop-and-up) {
+      @include span(7 of 12 before last);
+    }
+  }
+}
+
+.slat--always-has-right-aligned-media {
+  .slat__media {
+    @include respond-to(tablet) {
+      @include span(3 of 6 before last);
+    }
+    @include respond-to(desktop-and-up) {
+      @include span(5 of 12 before last);
+    }
+  }
+  .slat__content {
+    @include respond-to(tablet) {
+      @include span(3 of 6 before first);
+    }
+    @include respond-to(desktop-and-up) {
+      @include span(7 of 12 before first);
+    }
+  }
+  &.slat--has-background-colour {
+    .slat__content {
+      padding: 0 0 $spacing-half $spacing-base;
+    }
+  }
+}

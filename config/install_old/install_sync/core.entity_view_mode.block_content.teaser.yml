@@ -1,0 +1,12 @@
+uuid: 015b6e60-092b-4f50-b674-113ed10b409b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: H7hJ0ifuEeGzTroU1y30FQaLUawMH0KZHb7AcKKGA3k
+id: block_content.teaser
+label: Teaser
+targetEntityType: block_content
+cache: true

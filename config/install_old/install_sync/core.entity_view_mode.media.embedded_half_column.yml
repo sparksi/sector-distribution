@@ -1,0 +1,12 @@
+uuid: ae5b41f1-7566-4a6e-9963-d28082998afa
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+_core:
+  default_config_hash: bHMm0DEQLMxPH2y36KgGZ-4FtdDdJ6HnuwPqc-Dpmp0
+id: media.embedded_half_column
+label: 'Embedded half column'
+targetEntityType: media
+cache: true

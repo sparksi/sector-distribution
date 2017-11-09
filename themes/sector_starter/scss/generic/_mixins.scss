@@ -1,0 +1,55 @@
+/**
+ * @file
+ * Custom mixins
+ */
+
+/* Intrinsic ratios (eg: Used by _responsive-ratio) */
+@function aspect-ratio-height($x, $y, $startingWidth: 100%) {
+  @return ($y / $x) * $startingWidth;
+}
+
+@mixin fix-aspect-ratio($x, $y, $startingWidth: 100%) {
+  width: $startingWidth;
+  padding-bottom: aspect-ratio-height($x, $y, $startingWidth);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cross browser opacity */
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+/* Font smoothing */
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+$browser-context: 16;
+
+/* Px to Em https://web-design-weekly.com/snippets/converts-pixels-to-ems-with-sass/ */
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em
+}
+
+/* WebKit-style focus */
+@mixin tab-focus() {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+/* To handle long words and URLs */
+@mixin word-wrap() {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}

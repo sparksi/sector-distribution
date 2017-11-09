@@ -1,0 +1,109 @@
+/**
+ * @file
+ * Optimized typographic spacing in roughly 700px wide setting.
+ *
+ * (Classic node body area - Add .prose via display suite as required)
+ * http://www.pearsonified.com/typography/
+ */
+ 
+
+
+
+
+.prose {  
+  a {
+    text-decoration: underline;
+    &.btn {
+      text-decoration: none;
+    }
+  }
+  .lead {
+    //margin-bottom: $line-height-prose-computed;
+    font-size: floor(($font-size-base * 1.15));
+    @include respond-to(tablet-and-up) {
+      font-size: ($font-size-base * 1.5);
+    }
+  }
+  @include respond-to(tablet-and-up) {
+    line-height: $line-height-base-prose;
+    ul,
+    ol,
+    dt,
+    dd {
+      line-height: $line-height-base-prose;
+    }
+    ul, ol {
+      margin: 0;
+      
+      > li ~ li {
+        margin-top: ($line-height-prose-computed/4);
+      }
+  
+      + * {
+        margin-top: ($line-height-prose-computed/2);
+      }
+    }
+    
+    * + ul,
+    * + ol {
+      margin-top: ($line-height-prose-computed/2);
+    }
+    
+    dl {
+      margin-bottom: $line-height-prose-computed;
+      &.dl-horizontal {
+        dt {
+          margin-top: 0;
+        }
+      }
+    }
+    dt {
+      margin-top: ($line-height-prose-computed / 2);
+    }
+    blockquote {
+      padding: ($line-height-prose-computed / 2) $line-height-prose-computed;
+      margin: 0;
+      &.featured {
+        padding: $line-height-prose-computed $line-height-prose-computed;
+      }
+    }
+    address {
+      margin-bottom: $line-height-prose-computed;
+    }    
+  }
+}
+
+// define paragraph margin first so headings override
+p {
+  .prose * + &,
+  .prose + * {
+    margin-top: ($line-height-prose-computed/2);
+  }
+}
+
+// h1, h2, h3
+@for $i from 1 through 3 {
+  h#{$i}, .h#{$i} {    
+    .prose * + & {
+      margin-top: $line-height-computed * 2;
+    }
+  }
+}
+    
+    
+// h4, h5, h6
+@for $i from 4 through 6 {
+  h#{$i}, .h#{$i} {
+    .prose * + & {
+      margin-top: $line-height-computed;
+    }
+  }
+}
+
+
+blockquote {
+  .prose * + &,
+  .prose + * {
+    margin-top: $line-height-prose-computed;
+  }
+}

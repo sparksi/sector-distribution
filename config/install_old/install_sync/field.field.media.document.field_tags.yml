@@ -1,0 +1,30 @@
+uuid: 85cd7964-822a-4e38-bdd0-0654992654db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_tags
+    - media_entity.bundle.document
+    - taxonomy.vocabulary.tags
+_core:
+  default_config_hash: EHQg5lMah9O96rIInfdMhc0m-JwaxMvOk8GaFwvBeRs
+id: media.document.field_tags
+field_name: field_tags
+entity_type: media
+bundle: document
+label: Tags
+description: 'Enter a comma-separated list of words to describe your file.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

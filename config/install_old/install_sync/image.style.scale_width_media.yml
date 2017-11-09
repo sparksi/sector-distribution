@@ -1,0 +1,9 @@
+uuid: fa322dbd-32fe-4560-ab25-ea9d3f1beca1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ahkNDP9NyszeCpx_WJV0KEfPbSx8CIzmnauR3jpDoOM
+name: scale_width_media
+label: 'Scale width media'
+effects: {  }

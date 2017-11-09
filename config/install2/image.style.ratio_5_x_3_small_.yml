@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+name: ratio_5_x_3_small_
+label: 'Ratio 5 x 3 (Small)'
+effects:
+  3f373612-f855-4dd4-b551-dece7453ed01:
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 730
+      height: 438

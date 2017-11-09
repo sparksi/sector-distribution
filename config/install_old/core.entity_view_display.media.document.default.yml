@@ -1,0 +1,225 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.document.field_copyright_license
+    - field.field.media.document.field_credit_or_caption
+    - field.field.media.document.field_description
+    - field.field.media.document.field_document
+    - field.field.media.document.field_document_size
+    - field.field.media.document.field_mime_type
+    - field.field.media.document.field_tags
+    - field.field.media.document.field_title
+    - media_entity.bundle.document
+  module:
+    - ds
+    - field_group
+    - file
+    - text
+third_party_settings:
+  field_group:
+    group_meta:
+      children:
+        - group_link
+        - field_copyright_license
+        - field_tags
+      parent_name: ''
+      weight: 5
+      label: Meta
+      format_type: html_element
+      format_settings:
+        label: Meta
+        open: true
+        id: ''
+        classes: 'meta call-to-action has-margin-top-base'
+        element: div
+        show_label: false
+        label_element: h3
+        effect: none
+        speed: fast
+        attributes: ''
+    group_media_meta:
+      children:
+        - 'dynamic_token_field:media-media_extension'
+        - 'dynamic_token_field:media-media_size'
+      parent_name: ''
+      weight: 1
+      label: 'Media meta'
+      format_type: html_element
+      format_settings:
+        label: 'Media meta'
+        open: true
+        id: ''
+        classes: media__meta
+        element: div
+        show_label: false
+        label_element: h3
+        effect: none
+        speed: fast
+        attributes: ''
+    group_link:
+      children:
+        - 'dynamic_token_field:media-media_copyright_link'
+      parent_name: group_meta
+      weight: 9
+      label: Link
+      format_type: link
+      format_settings:
+        label: Link
+        target: custom_uri
+        custom_uri: '[media:field_copyright_license:entity:field_copyright_link:uri]'
+        target_attribute: default
+        id: ''
+        classes: ''
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class:
+            slat: slat
+            has-margin-top-half: has-margin-top-half
+            has-padding-top-base: has-padding-top-base
+            has-border-top-large: has-border-top-large
+            media--has-background-icon: media--has-background-icon
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_document
+        - 'dynamic_token_field:media-media_extension'
+        - 'dynamic_token_field:media-media_copyright_link'
+        - group_media_meta
+        - 'dynamic_token_field:media-media_size'
+        - field_credit_or_caption
+        - field_description
+        - group_meta
+        - group_link
+        - field_copyright_license
+        - field_tags
+    fields:
+      'dynamic_token_field:media-media_copyright_link':
+        plugin_id: 'dynamic_token_field:media-media_copyright_link'
+        weight: 0
+        label: inline
+        formatter: default
+        ft:
+          id: default
+          settings:
+            lb: Copyright
+            lb-col: false
+            classes: {  }
+      'dynamic_token_field:media-media_extension':
+        plugin_id: 'dynamic_token_field:media-media_extension'
+        weight: 0
+        label: hidden
+        formatter: default
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            classes:
+              - inline-block
+            lb-col: false
+      'dynamic_token_field:media-media_size':
+        plugin_id: 'dynamic_token_field:media-media_size'
+        weight: 1
+        label: hidden
+        formatter: default
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            classes:
+              - inline-block
+            lb-col: false
+id: media.document.default
+targetEntityType: media
+bundle: document
+mode: default
+content:
+  field_copyright_license:
+    weight: 10
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
+    type: entity_reference_label
+    region: ds_content
+  field_credit_or_caption:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            classes:
+              - small
+            lb-col: false
+    type: string
+    region: ds_content
+  field_description:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_document:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - inline-block
+            lb-col: false
+    type: file_default
+    region: ds_content
+  field_tags:
+    weight: 11
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
+    type: entity_reference_label
+    region: ds_content
+hidden:
+  created: true
+  field_document_size: true
+  field_mime_type: true
+  field_title: true
+  name: true
+  thumbnail: true
+  uid: true

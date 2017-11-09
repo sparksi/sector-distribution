@@ -1,0 +1,106 @@
+/**
+ * @file
+ * Overide the Sector admin toggle module css
+ */
+
+/* BOOTSTRAP CUSTOM VARIABLES
+------------------------------------------------------------------------*/
+@import "../scss/generic/variables-bootstrap-custom";
+
+
+/* VARIABLES
+------------------------------------------------------------------------*/
+@import "../scss/generic/variables";
+
+
+/* COMPASS
+------------------------------------------------------------------------*/
+@import "compass";
+
+
+/* BOOTSTRAP (Just the components we need)
+------------------------------------------------------------------------*/
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/vendor-prefixes";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/tab-focus";
+@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+
+/* BREAKPOINT
+------------------------------------------------------------------------*/
+@import "breakpoint";
+
+
+/* GENERIC
+------------------------------------------------------------------------*/
+@import "../scss/generic/mixins",
+        "../scss/generic/breakpoints";
+
+
+/* COMPONENT
+------------------------------------------------------------------------*/
+@import "../scss/component/btn";
+
+
+html body.admin-ui-hide.admin-menu {margin-top: 0!important;}
+.admin-ui-hide #admin-menu,
+.admin-ui-hide .contextual-links-wrapper,
+.not-logged-in .admin-ui-toggle {
+  display: none!important;
+}
+
+.admin-ui-toggle button:before {
+  content: 'Hide menu';
+  font-size: 12px;
+  line-height: 1;
+}
+
+.admin-ui-toggle.ui-is-hidden button:before {
+  content: 'Show menu';
+}
+
+#admin-menu-wrapper {
+  margin-right: 74px;
+}
+
+.admin-ui-hide {
+  #block-delta-blocks-tabs,
+  #block-workbench-block,
+  .tabs--primary,
+  .alert {
+    display: none!important;
+  }
+}
+
+.admin-ui-toggle {
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .not-logged-in & {
+    display: none;
+  }
+  @include respond-to(mobile) {
+    display: none;
+  }
+  button {
+    @extend .btn;
+    @extend .btn-sm;
+    @extend .btn-info;
+    font: normal small "Lucida Grande", Verdana, sans-serif;
+    background-color: #ab3131;
+    padding: 9px 10px 7px;
+    font-size: 9px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    border: none;
+    outline: none;
+    z-index: 9999;
+    &:hover,
+    &:focus {
+      background-color: darken(#ab3131,10%);
+    }
+  }
+}

@@ -1,0 +1,21 @@
+uuid: 633668c2-7dd8-4ff8-85c1-533fd7dcf635
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_credit_or_caption
+    - media_entity.bundle.document
+_core:
+  default_config_hash: SfGUYbyyNAKkaQ7rsiGsgSjCnPeqsEi1M-Sm4NOghB8
+id: media.document.field_credit_or_caption
+field_name: field_credit_or_caption
+entity_type: media
+bundle: document
+label: 'Credit or caption'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

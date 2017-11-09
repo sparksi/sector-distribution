@@ -1,0 +1,6 @@
+allow_insecure_uploads: false
+default_scheme: public
+path:
+  temporary: sites/base.sectord8.caper.sparksi.co/private/temp
+  private: sites/base.sectord8.caper.sparksi.co/private/files
+temporary_maximum_age: 21600

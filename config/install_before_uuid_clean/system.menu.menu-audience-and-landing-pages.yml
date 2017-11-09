@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: menu-audience-and-landing-pages
+label: 'Audience and Landing pages'
+description: 'Part of Sector Starter Kit. Menu for <em>Audience landing pages</em>.'
+locked: false

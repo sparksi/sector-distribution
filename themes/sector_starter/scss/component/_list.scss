@@ -1,0 +1,52 @@
+/**
+ * @file
+ * BEM block for Custom list styles
+ */
+ /* Note: This list style requires a nested <a> */
+.list--has-arrows {
+  > li {
+    > a {
+      position: relative;
+      font-size: 18px;
+      display: block;
+      padding: 14px $spacing-base 14px 18px;
+      border-top: 1px solid $brand-border;
+      &:before {
+        content: '';
+        position: absolute;
+        @include sprite(arrow--mini-right-grey);
+        top: 21px;
+        left: 0;
+      }
+    }
+  }
+}
+
+.list--basic-links {
+  > li {
+    position: relative;
+    padding: 4px 0;
+    > a {
+      display: block;
+      text-decoration: underline;
+      &:focus {
+        outline: none;
+        outline-offset: 0;
+      }
+    }
+  }
+}
+
+.list--fridge-magnets {
+  > li {
+    float: left;
+    display: block;
+    > a {
+      @extend .btn;
+      @extend .btn-default;
+      float: left;
+      display: block;
+      margin: 0 2px 2px 0;
+    }
+  }
+}

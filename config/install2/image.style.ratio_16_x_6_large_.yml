@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+name: ratio_16_x_6_large_
+label: 'Ratio 16 x 6 (Large)'
+effects:
+  5fd38238-7f03-4deb-87ec-42b8b0628606:
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 450

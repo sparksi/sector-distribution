@@ -1,0 +1,22 @@
+uuid: 4a9ea171-fa85-48f3-b5d3-497e8e20bbcd
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+    - taxonomy
+_core:
+  default_config_hash: GZTdw6escLX87rCF2EBh5i-cy7bS7q1OpX9oYLj2ZWw
+id: media.field_tags
+field_name: field_tags
+entity_type: media
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

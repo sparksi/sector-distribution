@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Promotion type'
+vid: promotion_type
+description: 'Used to define different types of promotional boxes across one site using one promotion content type. '
+hierarchy: 0
+weight: -9

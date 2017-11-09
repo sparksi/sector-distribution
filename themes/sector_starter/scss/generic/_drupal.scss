@@ -1,0 +1,171 @@
+/**
+ * @file
+ * Custom tweaks to admin elements
+ */
+.alert {
+  margin-top: $spacing-base;
+  margin-bottom: 0;
+  @include border-radius(0);
+  .close {
+    line-height: 0.8em;
+  }
+}
+
+.tabs--primary {
+  margin-top: $spacing-base;
+  font-family: $font-family-monospace;
+  font-weight: 700;
+  @include font-smoothing;
+  > li {
+    > a {
+      @include border-radius(0);
+      color: $brand-warning;
+      &:focus {
+        color: $white;
+        background-color: $brand-warning;
+        outline: 3px solid $brand-warning;
+      }
+    }
+    &.active {
+      > a {
+        background-color: $brand-warning;
+        &:hover {
+          background-color: $brand-warning;
+        }
+        &:focus {
+          color: $white;
+          background-color: $brand-warning;
+          outline: 3px solid $brand-warning;
+        }
+      }
+    }
+  }
+}
+
+.block-title {
+  @extend .h3;
+}
+
+.contextual-links {
+  font-family: $font-family-monospace;
+}
+
+// #user-login,
+// #user-pass,
+// #user-register-form {
+//   margin-top: $spacing-base;
+//   .form-item {
+//     &.error {
+//       margin-left: -15px;
+//       margin-right: -15px;
+//       padding: 10px 15px;
+//       border-left-color: #df3034;
+//       border-left-width: 5px;
+//       border-left-style: solid;
+//       background-color: #fef7f7;
+//       @include respond-to(desktop-and-up) {
+//         margin-left: -20px;
+//         margin-right: -20px;
+//         padding: 10px 20px;
+//         border-left-width: 3px;
+//       }
+//     }
+//   }
+//   .form-control {
+//     width: auto;
+//   }
+//   .form-submit {
+//     @extend %has-margin-top-half;
+//   }
+// }
+
+// #user-register-form {
+//   .help-block {
+//     @extend %has-margin-top-half;
+//   }
+// }
+
+// .view-media-collection-single-item {
+//   .file {
+//     div.contextual-links-wrapper {
+//       @include respond-to(desktop-and-up) {
+//         right: 100px;
+//       }
+//     }
+//   }
+// }
+
+// div.workbench-info-block {
+//   @extend .alert;
+//   @extend .alert-warning;
+//   @extend %has-margin-top-base;
+//   margin-bottom: $spacing-base;
+//   color: lighten($state-warning-text,10%);
+//   @include border-radius(0);
+//   font-size: inherit;
+//   em {
+//     font-style: normal;
+//     color: darken($state-warning-text,10%);
+//   }
+//   a {
+//     color: darken($state-warning-text,10%);
+//     text-decoration: underline;
+//   }
+// }
+
+// form.workbench-moderation-moderate-form {
+//   display: block;
+//   @extend %has-margin-top-half;
+//   .form-submit {
+//     margin: 0 0 0 10px;
+//     vertical-align: top;
+//     @extend .btn-warning;
+//     padding: 8px 14px;
+//   }
+//   select {
+//     height: 40px;
+//   }
+//   div {
+//     display: inline-block;
+//   }
+//   .form-type-select {
+//     &:after {
+//       bottom: 17px;
+//     }
+//   }
+// }
+
+/* Override Bootstrap collapsed classes for Drupal default advanced search fieldset */
+html.js #search-form fieldset.collapsed {
+  height: auto;
+  margin-top: 40px;
+  .panel-collapse {
+    @include opacity(1);
+    display: block;
+  }
+}
+
+/* Override Bootstrap */
+.page-header {
+  border-bottom: none;
+  margin-top: 0;
+  .path-frontpage & {
+    margin-top: 0;
+  }
+}
+
+/* Override Drupal date.css */
+.container-inline-date {
+  .date-padding {
+    float: none;
+  }
+  > .form-item {
+    display: block;
+    margin-right: 0;
+  }
+  .form-item {
+    .form-item {
+      float: none;
+    }
+  }
+}

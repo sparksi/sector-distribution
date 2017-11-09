@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Copyright and Licensing'
+vid: copyright_licensing
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,22 @@
+uuid: c53c42e5-83dd-43f1-b40e-77795c1af9bc
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - seven
+_core:
+  default_config_hash: iCqrAhR1A6qGtemsJ1Cbtg5E4Dq5TiSTTLaBIQAXdzs
+id: shiny_system_main
+theme: seven
+region: content
+weight: -40
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  provider: system
+  label_display: '0'
+visibility: {  }

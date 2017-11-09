@@ -1,0 +1,70 @@
+/**
+ * @file
+ * BEM block for site.
+ */
+.site__inner {
+  @extend .container;
+  @media (min-width: 1360px) {
+    width: 1240px;
+  }
+}
+
+.site__row {
+  @extend .row;
+}
+
+.site__content {
+  @include make-md-column(12);
+  &.has-sidebar {
+    @include make-md-column(8);
+    @include make-lg-column(9);
+    @include respond-to(wide-and-up) {
+      padding: 0 em(80) 0 ($grid-gutter-width/2);
+    }
+    @media (min-width: 1360px) {
+      padding: 0 em(140) 0 ($grid-gutter-width/2);
+    }
+  }
+  
+  + .site__sidebar {
+    margin-top: $spacing-base;
+    
+    @include respond-to(desktop-and-up){
+      margin-top: 0;
+    }
+  }
+}
+
+.site__sidebar {
+  @include make-md-column(4);
+  @include make-lg-column(3);
+}
+
+.site__sidebar-inner {
+  font-size: 16px;
+  line-height: (26/16);
+  .block {
+
+    @extend %has-border-top-large;
+    padding-top: $spacing-base;
+    @extend %apply-external-link-icon;
+    @include respond-to(desktop-and-up) {
+      margin-top: $spacing-double;
+    }
+    &.has-no-border-top {
+      @extend %has-no-border-top;
+    }
+    .block-title {
+      font-size: $font-size-h4;
+    }
+    &:first-child {
+      @include respond-to(desktop-and-up) {
+        margin-top: 0;
+      }
+    }
+    
+    ~ .block {
+      margin-top: $spacing-base;
+    }
+  }
+}

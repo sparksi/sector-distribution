@@ -1,0 +1,11 @@
+id: media_extension
+label: 'Media extension'
+ui_limit: ''
+properties:
+  content:
+    value: "[media:field_document:entity:extension]\r\n[media:image:entity:extension]"
+    format: teaser_display_text
+type: token
+type_label: 'Token field'
+entities:
+  media: media

@@ -1,0 +1,203 @@
+{
+  "name": "sparksi/sector_profile",
+  "description": "Profile for the Sector D8",
+  "license": "GPL-2.0+",
+  "type" : "drupal-profile",
+  "authors": [
+    {
+      "name": "Sparks Interactive"
+    }
+  ],
+  "repositories": {
+    "packagist.drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "sector_modules": {
+      "url": "git@gitlab.com:sparksi/sector-d8.modules.git",
+      "type": "git"
+    },
+    "sector_starter": {
+      "url": "git@gitlab.com:sparksi/sector-d8.theme.git",
+      "type": "git"
+    },
+    "sector_profile": {
+      "url": "git@gitlab.com:sparksi/sector-d8.profile.git",
+      "type": "git"
+    },
+    "mmenu/main": {
+      "extra": {
+        "installer-name": "main"
+      },
+      "type": "package",
+      "package": {
+        "name": "mmenu/main",
+        "version": "4.7.5",
+        "type": "drupal-library",
+        "dist": {
+          "url": "https://github.com/FrDH/jQuery.mmenu/archive/v4.7.5.zip",
+          "type": "zip"
+        }
+      }
+    },
+    "mmenu/hammer": {
+      "extra": {
+        "installer-name": "hammer"
+      },
+      "type": "package",
+      "package": {
+        "name": "mmenu/hammer",
+        "version": "2.0.8",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/hammerjs/hammer.js.git",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    },
+    "mmenu/jquery.hammer": {
+      "extra": {
+        "installer-name": "jquery.hammer"
+      },
+      "type": "package",
+      "package": {
+        "name": "mmenu/jquery.hammer",
+        "version": "2.0.0",
+        "type": "drupal-library",
+        "source": {
+          "url": "https://github.com/hammerjs/jquery.hammer.js.git",
+          "type": "git",
+          "reference": "origin/master"
+        }
+      }
+    }
+  },
+  "require": {
+    "composer/installers": "^1.0.20",
+    "drupal-composer/drupal-scaffold": "^2.0.1",
+    "cweagans/composer-patches": "~1.0",
+    "drupal/core": "^8.4",
+    "drupal/console": "~1.0",
+    "drupal/bootstrap": "^3.0",
+    "sparksi/sector_starter": "dev-master as 8.1.0",
+    "sparksi/sector_modules": "dev-master as 8.1.0",
+    "drupal/block_class": "^1.0",
+    "drupal/devel": "^1.0",
+    "drupal/ds": "^3.0",
+    "drupal/context": "^1.0",
+    "drupal/linkit": "^5.0",
+    "drupal/media_entity": "^1.0",
+    "drupal/media_entity_image": "^1.0",
+    "drupal/media_entity_document": "^1.0",
+    "drupal/video_embed_field": "^1.0",
+    "drupal/media_entity_audio": "^1.0",
+    "drupal/pathauto": "^1.0",
+    "drupal/admin_toolbar": "^1.0",
+    "drupal/field_formatter_filter": "^1.0",
+    "drupal/menu_block": "^1.0",
+    "drupal/block_visibility_groups": "^1.0",
+    "drupal/term_condition": "^1.0",
+    "drupal/anchor_link": "^1.0",
+    "drupal/field_group": "^1.0",
+    "drupal/better_formats": "^1.0",
+    "drupal/google_analytics": "^2.0",
+    "drupal/autologout": "^1.0",
+    "drupal/mmenu": "1.x-dev",
+    "mmenu/main": "4.7.5",
+    "mmenu/hammer": "2.0.8",
+    "mmenu/jquery.hammer": "2.0.0",
+    "drupal/metatag": "^1.0",
+    "drupal/entityqueue": "^1.0",
+    "drupal/fieldblock": "^2.0",
+    "drupal/entity_browser": "^1.0",
+    "drupal/field_group_link": "^1.0",
+    "drupal/features": "^3.0",
+    "drupal/default_content": "^1.0",
+    "drupal/search_api_solr": "^1.0",
+    "drupal/facets": "^1.0",
+    "drupal/entity_embed": "^1.0",
+    "drupal/password_policy": "^3.0@alpha",
+    "drupal/better_normalizers": "^1.0@beta",
+    "drupal/recreate_block_content": "^1.0"
+  },
+  "require-dev": {
+    "behat/mink": "~1.7",
+    "behat/mink-goutte-driver": "~1.2",
+    "jcalderonzumba/gastonjs": "~1.0.2",
+    "jcalderonzumba/mink-phantomjs-driver": "~0.3.1",
+    "mikey179/vfsStream": "~1.2",
+    "phpunit/phpunit": "~4.8",
+    "symfony/css-selector": "~2.8"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "classmap": [
+      "scripts/composer/ScriptHandler.php"
+    ]
+  },
+  "scripts": {
+    "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+    "pre-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "pre-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "post-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ],
+    "post-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+    ]
+  },
+  "extra": {
+    "installer-paths": {
+      "web/core": [
+        "type:drupal-core"
+      ],
+      "web/libraries/{$name}": [
+        "type:drupal-library"
+      ],
+      "web/modules/contrib/{$name}": [
+        "type:drupal-module"
+      ],
+      "web/profiles/{$name}": [
+        "type:drupal-profile"
+      ],
+      "web/themes/contrib/{$name}": [
+        "type:drupal-theme"
+      ],
+      "web/themes/custom/{$name}": [
+        "type:drupal-custom-theme"
+      ],
+      "web/modules/custom/{$name}": [
+        "type:drupal-custom-module"
+      ],
+      "drush/contrib/{$name}": [
+        "type:drupal-drush"
+      ]
+    },
+    "patches": {
+      "drupal/mmenu": {
+        "Allow changing of offCanvas position (D8)": "https://www.drupal.org/files/issues/mmenu_allow_change_of_position-2816231.patch",
+        "Place libraries outside the mmenu dir": "https://www.drupal.org/files/issues/libraries_outside_mmenu-2884248-4.patch",
+        "Config export patch": "https://www.drupal.org/files/issues/config-export-fix-2922062-1.patch"
+      },
+      "drupal/fieldblock": {
+        "PHP exception when placing block": "https://www.drupal.org/files/issues/fieldblock_get_complete_form_state_2810783_1.patch"
+      },
+      "drupal/term_condition": {
+        "Blocks hidden on non-node pages": "https://www.drupal.org/files/issues/term_condition-block_hidden_not_node-2797205-7.patch",
+        "Autocomplete error when editing": "https://www.drupal.org/files/issues/term_condition-2777337-1.patch"
+      },
+      "drupal/entityqueue": {
+        "Subqueue views relation: Doubled/redundant entries": "https://www.drupal.org/files/issues/subqueue_relation_query-2837841-11.patch"
+      }
+    }
+  }
+}

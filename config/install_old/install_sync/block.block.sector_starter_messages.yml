@@ -1,0 +1,22 @@
+uuid: cd9a7fe2-be25-43ad-b0cf-9c408854fc86
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sector_starter
+_core:
+  default_config_hash: JNRjCrttKLuGG2ehwxP01nOxSSrxst-1GMSNaq4fvX8
+id: sector_starter_messages
+theme: sector_starter
+region: pre_header
+weight: -15
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: b13f043e-cdcb-4f7b-889b-6dc80ae182d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_featured_content
+    - node.type.promotion
+  module:
+    - link
+_core:
+  default_config_hash: pIcHoiQqxHhs-jt3yUHZwF1dgOU9qQHFYMMbq9MPpdw
+id: node.promotion.field_featured_content
+field_name: field_featured_content
+entity_type: node
+bundle: promotion
+label: 'Featured content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -1,0 +1,38 @@
+uuid: 0e826a87-60aa-4ebf-ac33-f2cb233c9ffe
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - block_visibility_groups
+    - term_condition
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: ''
+_core:
+  default_config_hash: '-dPislP3mmgnxJMYsNLcD_Lh-vNl6wVYF1TB9tq9I2I'
+id: pagetitle_3
+theme: sector_starter
+region: hero
+weight: -16
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title (Homepage)'
+  provider: core
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: '4'
+    context_mapping:
+      node: '@node.node_route_context:node'

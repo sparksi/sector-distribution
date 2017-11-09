@@ -1,0 +1,22 @@
+uuid: f34e838b-6885-49c0-bc2d-92e03e6a0fe4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: y8ZUv1jAOEh4M2xJa0w6GW5rlY7hH2y_4YZ-vG0prHg
+id: linkit_wysiwyg
+label: 'Linkit WYSIWYG'
+description: 'Profile used by the Linkit button in the WYSIWYG'
+matchers:
+  6cd345c6-4771-47db-884a-10e35534abc3:
+    uuid: ''
+    id: 'entity:node'
+    weight: 0
+    settings:
+      bundles: {  }
+      group_by_bundle: true
+      include_unpublished: true
+      substitution_type: canonical
+      metadata: ''

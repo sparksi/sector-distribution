@@ -1,0 +1,78 @@
+/**
+ * @file
+ * BEM block for Cover.
+ */
+
+.cover--success,
+%cover--success {
+  background-color: $brand-success;
+  padding: $spacing-base $spacing-half $spacing-base $spacing-half;
+  @include respond-to(tablet-and-up) {
+    padding: $spacing-base $spacing-base $spacing-double $spacing-base;
+  }
+  @include respond-to(wide-and-up) {
+    padding: ($spacing-base*3) $spacing-and-half $spacing-double $spacing-and-half;
+  }
+  p,
+  h1,
+  h5,
+  .node__date,
+  .node__term,
+  .field,
+  .field-label,
+  .link-down {
+    color: $white;
+    @include font-smoothing;
+  }
+  .field {
+    @include respond-to(tablet-and-up) {
+      line-height: $line-height-base-prose;
+    }
+    a {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+  .node__title {
+    margin-bottom: $spacing-base;
+    @include respond-to(desktop-and-up) {
+      margin-bottom: $spacing-double;
+    }
+    @include respond-to(wide-and-up) {
+      padding-right: ($spacing-double*4);
+    }
+  }
+  .node__date {
+    @extend %has-no-margin-top;
+  }
+  .node__term {
+    margin-bottom: 5px;
+  }
+  .field-name-field-issue-date,
+  .field-name-field-version-statement,
+  .field-name-field-copyright-license,
+  .field-name-copyright-link{
+    .field-label {
+      @include text-overflow;
+      margin-top: $spacing-half;
+      @include respond-to(tablet-and-up) {
+        width: 25%;
+        margin-right: 2%;
+        margin-top: 0;
+      }
+      @include respond-to(desktop-and-up) {
+        width: 18%;
+      }
+    }
+    .field-items {
+      clear: both;
+      @include respond-to(tablet-and-up) {
+        clear: none;
+        width: 73%;
+      }
+      @include respond-to(desktop-and-up) {
+        width: 80%;
+      }
+    }
+  }
+}

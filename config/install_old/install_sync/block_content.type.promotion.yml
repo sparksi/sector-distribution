@@ -1,0 +1,10 @@
+uuid: fe240a46-c1e8-48f3-8715-1f05f2ceb3e0
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 0fLc9vt0_qXMOhc3n9WCxWxCn2Ixff2jc4lXcIFsSTE
+id: promotion
+label: Promotion
+revision: 0
+description: 'A promotional content block'

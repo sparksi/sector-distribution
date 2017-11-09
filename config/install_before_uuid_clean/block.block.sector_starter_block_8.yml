@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik
+id: sector_starter_block_8
+theme: bartik
+region: content
+weight: -38
+provider: null
+plugin: 'block_content:b1f454fc-2957-4006-a154-f962b7a1b1f8'
+settings:
+  id: 'block_content:b1f454fc-2957-4006-a154-f962b7a1b1f8'
+  label: 'Sitewide promotion'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - block_visibility_groups
+    - node
+    - term_condition
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: ''
+id: pagetitle_6
+theme: sector_starter
+region: pre_content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title (Article)'
+  provider: core
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      article: article
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping: {  }

@@ -1,0 +1,18 @@
+/**
+ * @file
+ * BEM block for post-footer.
+ */
+.post-footer {
+  padding: $spacing-base 0;
+  @include respond-to(tablet-and-up) {
+    padding: $spacing-double 0;
+  }
+  @include respond-to(wide-and-up) {
+    padding: ($spacing-base*3) 0;
+  }
+  .site__row {
+    @include respond-to(wide-and-up) {
+      position: relative; // Create a positioning context
+    }
+  }
+}

@@ -1,0 +1,196 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.comment
+    - field.field.node.article.field_article_type
+    - field.field.node.article.field_embargoed_content
+    - field.field.node.article.field_image
+    - field.field.node.article.field_issue_date
+    - field.field.node.article.field_last_updated
+    - field.field.node.article.field_media_private
+    - field.field.node.article.field_related_documents
+    - field.field.node.article.field_related_external_url
+    - field.field.node.article.field_related_internal_url
+    - field.field.node.article.field_tags
+    - image.style.large
+    - node.type.article
+  module:
+    - datetime
+    - ds
+    - field_formatter_filter
+    - field_group
+    - image
+    - link
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_meta:
+      children:
+        - field_issue_date
+      parent_name: ''
+      weight: 0
+      label: Meta
+      format_type: html_element
+      format_settings:
+        label: Meta
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'meta call-to-action'
+    group_related_content:
+      children:
+        - field_related_documents
+        - field_related_internal_url
+        - field_related_external_url
+      parent_name: ''
+      weight: 3
+      label: 'Related content'
+      format_type: html_element
+      format_settings:
+        label: 'Related content'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'related has-margin-top-double'
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_meta
+        - field_issue_date
+        - body
+        - field_image
+        - group_related_content
+        - field_last_updated
+        - field_related_documents
+        - field_related_internal_url
+        - field_related_external_url
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - prose
+            lb-col: false
+      field_formatter_filter:
+        format: '0'
+    label: hidden
+    region: ds_content
+  field_image:
+    type: image
+    weight: 2
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    label: hidden
+    region: ds_content
+  field_issue_date:
+    type: datetime_plain
+    weight: 0
+    label: inline
+    settings:
+      timezone_override: ''
+    third_party_settings: {  }
+    region: ds_content
+  field_last_updated:
+    weight: 13
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: long
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - has-margin-top-base
+            lb-col: false
+    type: datetime_default
+    region: ds_content
+  field_related_documents:
+    weight: 14
+    label: above
+    settings:
+      view_mode: short_teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
+    region: ds_content
+  field_related_external_url:
+    type: link
+    weight: 16
+    label: above
+    settings:
+      trim_length: 80
+      rel: ''
+      target: ''
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    region: ds_content
+  field_related_internal_url:
+    type: link
+    weight: 15
+    label: above
+    settings:
+      trim_length: 80
+      rel: ''
+      target: ''
+      url_only: false
+      url_plain: false
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  comment: true
+  field_article_type: true
+  field_embargoed_content: true
+  field_media_private: true
+  field_tags: true
+  links: true

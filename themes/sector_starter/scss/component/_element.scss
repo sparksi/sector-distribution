@@ -1,0 +1,44 @@
+/**
+ * @file
+ * BEM block for Element.
+ *
+ * Used by WYSIWYG templates to position blockquotes etc
+ */
+.element {
+  margin: 0 0 $spacing-base 0;
+  @include respond-to(tablet-and-up) {
+    margin: 0 0 $spacing-prose-base 0;
+  }
+  &.pull-left,
+  &.pull-right {
+    width: 100%;
+    @include respond-to(tablet-large-and-up) {
+      width: 50%;
+    }
+    @include respond-to(wide-and-up) {
+      width: auto;
+    }
+  }
+  &.pull-left {
+    margin: em(4) 0 $spacing-base 0;
+    @include respond-to(tablet-and-up) {
+      margin: em(8) $spacing-prose-double $spacing-prose-base 0;
+    }
+  }
+  &.pull-right {
+    margin: em(4) 0 $spacing-base 0;
+    @include respond-to(tablet-and-up) {
+      margin: em(8) 0 $spacing-prose-base $spacing-prose-double;
+    }
+  }
+  blockquote {
+    margin: 0;
+  }
+}
+
+.element--featured {
+  margin: $spacing-half 0 $spacing-base;
+  @include respond-to(tablet-and-up) {
+    margin: $spacing-prose-base 0 $spacing-prose-base;
+  }
+}

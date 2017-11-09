@@ -1,0 +1,18 @@
+/**
+ * @file
+ * BEM block for header.
+ */
+.header {
+  padding-top: $spacing-half;
+  padding-bottom: $spacing-half;
+  @include respond-to(desktop-and-up) {
+    padding-top: $spacing-base;
+    padding-bottom: $spacing-base;
+    position: relative;
+  }
+  .site__row {
+    @include respond-to(desktop-and-up) {
+      position: relative; // Create a positioning context
+    }
+  }
+}

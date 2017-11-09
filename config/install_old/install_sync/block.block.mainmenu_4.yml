@@ -1,0 +1,45 @@
+uuid: 35095b00-a0ad-4698-807f-5bdec9f588ee
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main-menu
+  module:
+    - block_class
+    - block_visibility_groups
+    - menu_block
+    - term_condition
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: ''
+_core:
+  default_config_hash: WjWUqudczr0lVVk9OzKS4JP937Gi9VcgOQ8HCr30k7w
+id: mainmenu_4
+theme: sector_starter
+region: header
+weight: 0
+provider: null
+plugin: 'menu_block:main-menu'
+settings:
+  id: 'menu_block:main-menu'
+  label: 'Main menu (Mobile menu)'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 1
+  parent: 'main-menu:'
+  suggestion: main_menu
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping: {  }

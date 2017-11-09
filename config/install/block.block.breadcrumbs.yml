@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - block_visibility_groups
+    - system
+    - term_condition
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: hidden-print
+id: breadcrumbs
+theme: sector_starter
+region: hero
+weight: -18
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping: {  }

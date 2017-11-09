@@ -1,0 +1,16 @@
+uuid: ef47d24e-652d-4244-8585-bf12b25f2fea
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lo6x34Teiu1r0IP9HI1vEFpq7JgqwBZKDLgfMsUWQhU
+name: 'Display Suite code'
+format: ds_code
+weight: -4
+filters:
+  filter_null:
+    id: filter_null
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

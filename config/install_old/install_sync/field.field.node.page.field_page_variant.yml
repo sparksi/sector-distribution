@@ -1,0 +1,31 @@
+uuid: e3c12078-a2eb-4171-a27d-0ff249344d21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_variant
+    - node.type.page
+    - taxonomy.vocabulary.page_variants
+_core:
+  default_config_hash: rLDONOJ6p-TVhToE-i3FQWLVNvpglx3y7lV5zF831Hg
+id: node.page.field_page_variant
+field_name: field_page_variant
+entity_type: node
+bundle: page
+label: 'Page layout variant'
+description: 'Defines the general layout of the page.'
+required: true
+translatable: true
+default_value:
+  - null
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      page_variants: page_variants
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

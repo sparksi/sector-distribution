@@ -1,0 +1,11 @@
+uuid: 3a6c73ba-a1ed-466a-b0fa-91ae86c423d4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 8cMi8rr7mV8hA-VjFJrveHEzqql79Dpa_UNRQJAZqfs
+name: 'Promotion type'
+vid: promotion_type
+description: 'Used to define different types of promotional boxes across one site using one promotion content type. '
+hierarchy: 0
+weight: -9

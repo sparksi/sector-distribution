@@ -1,0 +1,12 @@
+uuid: bd357868-3d44-4566-a961-7afd9ad882aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+_core:
+  default_config_hash: vO262nJSWK0oCssnY4QAGrm1W5lHqYuFUUmtyftlMAk
+id: file.wysiwyg_preview
+label: wysiwyg_preview
+targetEntityType: file
+cache: true

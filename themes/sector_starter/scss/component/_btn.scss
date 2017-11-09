@@ -1,0 +1,20 @@
+/**
+ * @file
+ * Override Bootstrap button styles
+ */
+.btn {
+  font-size: 16px;
+  text-decoration: none;
+  @include border-radius(0);
+}
+.btn-sm {
+  font-size: 14px;
+}
+.btn-lg {
+  font-size: 24px;
+}
+.btn-primary {
+  &:visited {
+    color: $white;
+  }
+}

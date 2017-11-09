@@ -1,0 +1,48 @@
+uuid: e400385a-a411-48a4-8475-f6856e1b77e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_view_promotional_links
+  module:
+    - block_class
+    - block_visibility_groups
+    - system
+    - term_condition
+    - views
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: has-margin-top-double
+_core:
+  default_config_hash: w3XIVNd4mqpQsyxsqUfmoeciTGjhlU0uZdnQESu5kTM
+id: sector_view_promotional_links_block
+theme: sector_starter
+region: content
+weight: -14
+provider: null
+plugin: 'views_block:sector_view_promotional_links-block_1'
+settings:
+  id: 'views_block:sector_view_promotional_links-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping: {  }

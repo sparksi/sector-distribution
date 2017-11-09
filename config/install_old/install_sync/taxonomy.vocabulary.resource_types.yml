@@ -1,0 +1,11 @@
+uuid: 08ae35d2-4b41-4d3b-96d5-212f7e557139
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: XLbUhpCLw7FmDvM1gKIg55PpLMuXf3-LO0qYRLIP7go
+name: 'Resource types'
+vid: resource_types
+description: 'Used to sort views and searches by type and to target CSS rules to a specific group of resources.'
+hierarchy: 0
+weight: -7

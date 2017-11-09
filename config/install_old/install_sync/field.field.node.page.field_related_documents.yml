@@ -1,0 +1,30 @@
+uuid: cd0b03f6-35a4-4562-9989-64f601a834f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_documents
+    - media_entity.bundle.document
+    - node.type.page
+_core:
+  default_config_hash: jxq_EFJ6_Eysk78KLS4V2OATNFvsVowI0wZ6rJYhzzg
+id: node.page.field_related_documents
+field_name: field_related_documents
+entity_type: node
+bundle: page
+label: 'Related documents'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

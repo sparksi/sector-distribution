@@ -1,0 +1,43 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+  module:
+    - block_class
+    - block_visibility_groups
+    - fieldblock
+    - term_condition
+    - text
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: node__subtitle
+id: contentfield
+theme: sector_starter
+region: hero
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Subtitle (Section entry)'
+  provider: fieldblock
+  label_display: '0'
+  label_from_field: 1
+  field_name: field_subtitle
+  formatter_id: text_default
+  formatter_settings: {  }
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: '7'
+    context_mapping:
+      node: '@node.node_route_context:node'

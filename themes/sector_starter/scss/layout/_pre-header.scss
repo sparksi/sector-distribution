@@ -1,0 +1,9 @@
+/**
+ * @file
+ * BEM block for pre-header.
+ */
+.pre-header {
+  .region-pre-header {
+    @include make-md-column(12);
+  }
+}

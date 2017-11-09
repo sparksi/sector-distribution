@@ -1,0 +1,11 @@
+uuid: 182c037e-f89d-4edc-8366-1160f666ab6d
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: jASuVj7luZ3J2i3AkoxAXqqzB_jFs7KzBF0RpPGy5lw
+name: 'Copyright and Licensing'
+vid: copyright_licensing
+description: ''
+hierarchy: 0
+weight: 0

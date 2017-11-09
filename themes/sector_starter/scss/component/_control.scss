@@ -1,0 +1,28 @@
+/**
+ * @file
+ * BEM block for Control.
+ */
+.control--responsive-menu {
+  @include make-xs-column(2);
+  @include respond-to(desktop-and-up) {
+    display: none;
+  }
+}
+
+.control--fly-out-search {
+  @include make-xs-column(1);
+  margin-top: 4px;
+  @include respond-to(tablet-large-and-down) {
+    display: none;
+  }
+  .toggle--search {
+    &.active {
+      .icon--search {
+        display: none;
+      }
+      .icon--close {
+        display: block;
+      }
+    }
+  }
+}

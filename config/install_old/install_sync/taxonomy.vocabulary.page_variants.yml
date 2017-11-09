@@ -1,0 +1,11 @@
+uuid: 449aee04-e14c-4a71-9141-10f32b2fd049
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 6ip2wJcE5EHXHmrCqDyIfeAUaGWCu3RGxGbfkIdz-CU
+name: 'Page variants'
+vid: page_variants
+description: 'Used to target CSS rules to a specific group of pages. '
+hierarchy: 0
+weight: -8

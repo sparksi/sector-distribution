@@ -1,0 +1,245 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a single page.
+ *
+ * Overrides bootstrap theme implementation.
+ *
+ */
+#}
+
+<div class="site-wrapper" role="main">
+  <div class="site-wrapper__row">
+    <!--[if IE 8 ]>
+    <div class="site">
+      <div class="site__inner alert alert-warning text-center" role="alert" aria-hidden="true">
+        <p>This website may not work correctly because your browser is out of date. <a href="https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support" target="_blank">Please update your browser</a>.</p>
+      </div>
+    </div>
+    <![endif]-->
+    <!--[if IE 9 ]>
+    <div class="site">
+      <div class="site__inner alert alert-warning text-center" role="alert" aria-hidden="true">
+        <p>This website may not work correctly because your browser is out of date. <a href="https://www.microsoft.com/en-us/WindowsForBusiness/End-of-IE-support" target="_blank">Please update your browser</a>.</p>
+      </div>
+    </div>
+    <![endif]-->
+    <span class="sr-only" id="back-to-top-anchor">Back to top anchor</span>
+
+    <div class="header-regions-wrapper">
+
+      {# Pre-Header #}
+      {% if page.pre_header %}
+        {% block pre_header %}
+          <div class="site pre-header">
+            <div class="site__inner">
+              <div class="site__row">
+                {{ page.pre_header }}
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+      {% endif %}
+
+      {# Header #}
+      {% if page.header %}
+        {% block header %}
+          <div class="site header" role="heading">
+            <div class="site__inner">
+              <div class="site__row">
+                {{ page.header }}
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+      {% endif %}
+
+      {# Post-Header #}
+      {% if page.post_header %}
+        {% block post_header %}
+          <div class="site post-header">
+            <div class="site__inner">
+              <div class="site__row">
+                {{ page.post_header }}
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+      {% endif %}
+
+      {# Pre-Hero #}
+      {% if page.pre_hero %}
+        {% block pre_hero %}
+          <div class="site pre-hero">
+            <div class="site__inner">
+              <div class="site__row">
+                {{ page.pre_hero }}
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+      {% endif %}
+
+      {# Hero #}
+      {% if page.hero %}
+        {% block hero %}
+          <div class="site hero">
+            <div class="hero__inner">
+              <div class="site__inner">
+                <div class="site__row">
+                  {{ page.hero }}
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+      {% endif %}
+
+      {# Post-Hero #}
+      {% if page.post_hero %}
+        {% block post_hero %}
+          <div class="site post-hero">
+            <div class="site__inner">
+              <div class="site__row">
+                {{ page.post_hero }}
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+      {% endif %}
+
+    </div>
+
+    {# Help #}
+    {% if page.help %}
+      {% block help %}
+        <div class="site help">
+          <div class="site__inner">
+            <div class="site__row">
+              {{ page.help }}
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+    {% endif %}
+
+    {# Pre-Content #}
+    {% if page.pre_content %}
+      {% block pre_content %}
+        <div class="site pre-content">
+          <div class="site__inner">
+            <div class="site__row">
+              {{ page.pre_content }}
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+    {% endif %}
+
+    {%
+      set content_classes = [
+      'site__content',
+        page.sidebar ? 'has-sidebar'
+      ]
+    %}
+    <div class="site content">
+      <div class="site__inner">
+        <div class="site__row">
+          <div {{ content_attributes.addClass(content_classes) }} id="content" role="main">
+
+            {# Action Links #}
+            {% if action_links %}
+              {% block action_links %}
+                <ul class="action-links">{{ action_links }}</ul>
+              {% endblock %}
+            {% endif %}
+
+            {# Commented out for now as in d7 we add breadcrumbs via a block #}
+            {# Breadcrumbs #}
+            {#{% if breadcrumb %}
+              {% block breadcrumb %}
+                {{ breadcrumb }}
+              {% endblock %}
+            {% endif %}#}
+
+            {# Content #}
+            {% block content %}
+              {{ page.content }}
+            {% endblock %}
+          </div>
+
+          {# Sidebar #}
+          {% if page.sidebar %}
+            {% block sidebar %}
+              <aside class="site__sidebar">
+                <span class="sr-only" id="sidebar-anchor">Sidebar anchor</span>
+                <div class="site__sidebar-inner">
+                  {{ page.sidebar }}
+                </div>
+              </aside>
+            {% endblock %}
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+
+    {# Post-Content #}
+    {% if page.post_content %}
+      {% block post_content %}
+        <div class="site post-content">
+          <div class="site__inner">
+            <div class="site__row">
+              {{ page.post_content }}
+            </div>
+          </div>
+        </div>
+      {% endblock %}
+    {% endif %}
+
+    {% if (page.pre_footer) or (page.footer) or page.post_footer %}
+    <div class="footer-regions-wrapper">
+      <span class="footer-regions-wrapper__anchor sr-only" id="footer-anchor">More menu anchor</span>
+      {# Pre-Footer #}
+      {% if page.pre_footer %}
+        {% block pre_footer %}
+          <div class="site pre-footer">
+            <div class="site__inner">
+              <div class="site__row">
+                {{ page.pre_footer }}
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+      {% endif %}
+
+      {# Footer #}
+      {% if page.footer %}
+        {% block footer %}
+          <footer class="site footer" role="contentinfo">
+            <div class="site__inner">
+              <div class="site__row">
+                {{ page.footer }}
+              </div>
+            </div>
+          </footer>
+        {% endblock %}
+      {% endif %}
+
+      {# Post-Footer #}
+      {% if page.post_footer %}
+        {% block post_footer %}
+          <div class="site post-footer">
+            <div class="site__inner">
+              <div class="site__row">
+                {{ page.post_footer }}
+              </div>
+            </div>
+          </div>
+        {% endblock %}
+      {% endif %}
+    </div>
+    {% endif %}
+
+  </div>
+</div>

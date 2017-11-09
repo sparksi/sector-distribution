@@ -1,0 +1,41 @@
+uuid: d507ef26-ecda-44e1-9b0d-ec844f88f506
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - block_visibility_groups
+    - term_condition
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'promotion promotion--copyright'
+_core:
+  default_config_hash: cUTcax0GrZtJx3Zd0I9xWFrYuUm4PRXPRjqRRyuBwM0
+id: sectorsampleblockdemoonlycopyright
+theme: sector_starter
+region: post_footer
+weight: -14
+provider: null
+plugin: 'block_content:cf6a24fd-dda3-47e7-88c7-b29ed1f2782d'
+settings:
+  id: 'block_content:cf6a24fd-dda3-47e7-88c7-b29ed1f2782d'
+  label: 'Sector Sample Block (demo only) - Copyright'
+  provider: core
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping:
+      node: '@node.node_route_context:node'

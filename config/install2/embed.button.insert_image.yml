@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media_entity.bundle.image
+  content:
+    - 'file:file:cd38fb7c-5207-4a0d-a476-70709da9b4e3'
+  module:
+    - entity_embed
+    - media_entity
+label: 'Insert image'
+id: insert_image
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - image
+  display_plugins:
+    - 'view_mode:media.embedded_full_column'
+    - 'view_mode:media.embedded_half_column'
+  entity_browser: ''
+  entity_browser_settings:
+    display_review: false

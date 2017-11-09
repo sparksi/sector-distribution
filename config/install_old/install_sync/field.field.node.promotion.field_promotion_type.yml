@@ -1,0 +1,30 @@
+uuid: 982b6b19-4869-4313-90bc-f1152d86b5c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_promotion_type
+    - node.type.promotion
+    - taxonomy.vocabulary.promotion_type
+_core:
+  default_config_hash: XKbshM2aHeoN-zV9d28007kRsjpy1qQkqGZBN535XPg
+id: node.promotion.field_promotion_type
+field_name: field_promotion_type
+entity_type: node
+bundle: promotion
+label: 'Promotion type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      promotion_type: promotion_type
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

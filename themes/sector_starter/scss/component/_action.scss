@@ -1,0 +1,115 @@
+/**
+ * @file
+ * BEM block for Action.
+ */
+.action--back-to-top {
+  position: relative;
+  padding: 6px 12px 6px 17px;
+  opacity: 0;
+  visibility: hidden;
+  transition:opacity 0.2s ease-out;
+  @extend .pull-right;
+  @extend .btn;
+    
+  &:before {
+    content: '\2191';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    white-space: nowrap;
+  }
+  
+  .you-are-going-down &,
+  .no-js & {
+    visibility: visible;
+    opacity:1;
+  }
+  &:hover,
+  &:active {
+    box-shadow: none;
+  }
+}
+
+.action--back-to-contents {
+  position: relative;
+  opacity: 0;
+  transition:opacity 0.2s ease-out;
+  margin-bottom: 10px;
+  padding: 6px 12px 6px 32px;
+  &:before {
+    content: '';
+    position: absolute;
+    @include sprite(arrow--medium-up-blue);
+    top: 35%;
+    left: 8%;
+  }
+  @include respond-to(wide-and-up) {
+    position: fixed;
+    bottom: 0;
+  }
+  &:hover,
+  &:active {
+    &:before {
+      @include sprite(arrow--medium-up-dark-blue);
+    }
+  }
+  .you-are-going-down & {
+    @include respond-to(wide-and-up) {
+      opacity: 1;
+    }
+  }
+  /* Hide if JS is turned off */
+  .no-js & {
+    display: none;
+  }
+  .you-are-near-the-bottom & {
+    @include respond-to(wide-and-up) {
+      opacity: 0;
+    }
+  }
+}
+
+.action--back {
+  padding-left: 10px;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 0;
+    font-size: 16px;
+    @include sprite(arrow--mini-left-blue);
+  }
+  &:hover,
+  &:focus {
+    &:before {
+      @include sprite(arrow--mini-left-dark-blue);
+    }
+  }
+  &:focus {
+    outline-offset: 0;
+  }
+  &:hover {
+    color: $link-color;
+  }
+  &:visited {
+    color: $link-color;
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+}
+
+.action--close {
+  @extend .text-hide;
+  &:before {
+    content: '';
+    position: absolute;
+    font-size: 27px;
+    @include sprite(icon--close-small-blue);
+    top: 0;
+    left: 0;
+  }
+  &:focus {
+    outline-offset: 0;
+  }
+}

@@ -1,0 +1,23 @@
+/**
+ * @file
+ * BEM block for Site.
+ */
+.site__sidebar-inner {
+  .you-are-going-down-on-a-multipage & {
+    @include respond-to(wide-and-up) {
+      position: fixed;
+      top: 0;
+      width: 280px;
+      background-color: $white;
+      padding-top: 50px;
+      margin-top: -30px;
+      overflow: auto;
+      max-height: 100%;
+    }
+  }
+  .you-are-near-the-bottom-on-a-multipage & {
+    @include respond-to(wide-and-up) {
+      display: none;
+    }
+  }
+}

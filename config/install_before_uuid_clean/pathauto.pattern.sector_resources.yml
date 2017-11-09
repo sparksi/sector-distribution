@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sector_resources
+label: 'Sector Resources'
+type: 'canonical_entities:node'
+pattern: 'resources/[node:title]'
+selection_criteria:
+  3a9cb26e-eb86-42f8-8e4f-71481238ece2:
+    id: node_type
+    bundles:
+      resource: resource
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 3a9cb26e-eb86-42f8-8e4f-71481238ece2
+selection_logic: and
+weight: -5
+relationships: {  }

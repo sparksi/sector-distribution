@@ -1,0 +1,29 @@
+uuid: fb1c59f3-b015-428c-9095-411200883d2b
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik
+_core:
+  default_config_hash: s1TVW-0qcp9w9vtPtLz-lu_78mpYD4VDNUBdem5ihSw
+id: sector_starter_block_9
+theme: bartik
+region: content
+weight: -42
+provider: null
+plugin: 'block_content:e45eaec2-a0a4-4144-b589-f38f255934df'
+settings:
+  id: 'block_content:e45eaec2-a0a4-4144-b589-f38f255934df'
+  label: '<none>'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/file/*'

@@ -1,0 +1,55 @@
+/**
+ * @file
+ * Global Variables
+ */
+
+$line-height-base-em: 1.444em;
+
+/* Custom typography settings for prose (See _prose.scss for explanation). */
+$line-height-base-prose: 1.611; // 29/18
+$line-height-base-prose-em: 1.611em;
+$line-height-prose-computed: floor(($font-size-base * $line-height-base-prose)); // ~29px
+
+/* Establish custom spacing variables based on line height to facilitate vertical rhythm */
+$spacing-base:                  $line-height-base-em;
+$spacing-and-half:              $spacing-base + ($spacing-base/2);
+$spacing-double:                $spacing-base * 2;
+$spacing-three-quarters:        $spacing-base - ($spacing-base/4);
+$spacing-half:                  $spacing-base / 2;
+$spacing-quarter:               $spacing-base / 4;
+
+$spacing-prose-base:            $line-height-prose-computed;
+$spacing-prose-and-half:        $spacing-prose-base + ($spacing-prose-base/2);
+$spacing-prose-double:          $spacing-prose-base * 2;
+$spacing-prose-three-quarters:  $spacing-prose-base - ($spacing-prose-base/4);
+$spacing-prose-half:            $spacing-prose-base / 2;
+$spacing-prose-quarter:         $spacing-prose-base / 4;
+
+/* Black/white colour variables */
+$white: #ffffff;
+$black: #000000;
+
+/* Brand visited & focused styles */
+$brand-visited: #4c2c92;
+$brand-focused: rgba(255, 255, 0, 0.5);
+
+/* Brand border */
+$brand-border: #e2e2e2;
+
+$brand-gray-light: #CCCCCC;
+$brand-gray-lighter: #DDDDDD;
+$brand-blue-gray: #111212;
+
+@import 'sprite';
+
+$ieSprite: '.lt-ie9' !default;
+$sprite: map-get($icons, sprite) !default;
+$baseFontSize: 16px !default;
+$mq-base-font-size: 16px !default;
+
+/**
+ * Specify your site domain here. Used to override detection of off-site links
+ * if a link has been created that uses the sites full absolute href. Removes the external
+ * link icon.
+*/
+$site-domain: '<yourdomain>';

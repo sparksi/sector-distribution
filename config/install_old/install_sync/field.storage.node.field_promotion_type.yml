@@ -1,0 +1,22 @@
+uuid: 4b1eb751-1852-4daa-953c-aa56f07f8af6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: VkA5M-PtOTyCewnBv2H29lsbToYMtShQsh5SLVMv82k
+id: node.field_promotion_type
+field_name: field_promotion_type
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

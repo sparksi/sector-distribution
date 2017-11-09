@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_media
+    - views.view.media
+  module:
+    - media_entity_document
+    - views
+name: sector_document_browser
+label: 'Sector document browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: 'Select documents'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  2655f2d5-da82-4375-a50e-245ed809f362:
+    settings:
+      view: sector_media
+      view_display: entity_browser_1
+      submit_text: 'Select documents'
+      auto_select: false
+    weight: 1
+    label: Library
+    id: view
+  32d2471b-7740-45c3-996d-da26d3e817c4:
+    settings:
+      extensions: 'pdf doc docx txt rtf ppt pptx pps ppsx xls xlsx csv zip'
+      media_bundle: document
+      upload_location: 'public://'
+      multiple: '1'
+      submit_text: 'Select files'
+    weight: 2
+    label: 'Upload document'
+    id: media_entity_document_upload

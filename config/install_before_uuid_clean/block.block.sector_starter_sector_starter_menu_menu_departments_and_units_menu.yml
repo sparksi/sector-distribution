@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.menu-departments-and-units-menu
+  module:
+    - block_class
+    - block_visibility_groups
+    - system
+    - term_condition
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'promotion promotion--post-it col-md-4'
+id: sector_starter_sector_starter_menu_menu_departments_and_units_menu
+theme: sector_starter
+region: footer
+weight: -11
+provider: null
+plugin: 'system_menu_block:menu-departments-and-units-menu'
+settings:
+  id: broken
+  label: 'Departments and units menu'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 1
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
+    context_mapping: {  }
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping:
+      node: '@node.node_route_context:node'

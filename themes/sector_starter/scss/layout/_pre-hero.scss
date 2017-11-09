@@ -1,0 +1,9 @@
+/**
+ * @file
+ * BEM block for post-header.
+ */
+.pre-hero {
+  .region-pre-hero {
+    @include make-md-column(12);
+  }
+}

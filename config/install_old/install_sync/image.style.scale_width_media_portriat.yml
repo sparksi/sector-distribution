@@ -1,0 +1,17 @@
+uuid: b265db8a-ca89-4a8d-b508-81588b5eb150
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: S_YkMDI63lD6xqO3qAzvYbFbMBqNSX5TOXWqhtnS5Sc
+name: scale_width_media_portriat
+label: 'Scale width media portriat'
+effects:
+  16d6a8e0-6e7e-4241-9598-5d30e8e1ba4b:
+    uuid: ''
+    id: image_scale
+    weight: 1
+    data:
+      width: 400
+      height: null
+      upscale: false

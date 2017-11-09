@@ -1,0 +1,25 @@
+uuid: b72bcb73-19e3-4dd1-8e2c-e91fbadc7a87
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: l1LUmpMRpOtlI6Iq-oSmAJv2WkOjqlxwBQhoHyV1i2s
+id: information_tiles
+label: 'Information tiles'
+handler: simple
+handler_configuration: {  }
+entity_settings:
+  target_type: node
+  handler: 'default:node'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+queue_settings:
+  min_size: 3
+  max_size: 12
+  act_as_queue: false

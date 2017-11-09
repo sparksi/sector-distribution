@@ -1,0 +1,19 @@
+uuid: 7be5ebac-d237-4dac-9a0b-fa046ceed01d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+_core:
+  default_config_hash: sMKjZW6B8PpbtrC9q8PePPzCgCu2_pHGzNmvf8Lwzt8
+name: Promotion
+type: promotion
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

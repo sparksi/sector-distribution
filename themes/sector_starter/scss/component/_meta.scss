@@ -1,0 +1,88 @@
+/**
+ * @file
+ * BEM block for Meta.
+ */
+
+.meta {
+  .field {
+    @include respond-to(tablet-and-up) {
+      @include clearfix;
+    }
+    &:first-child {
+      .field--label {
+        margin-top: 0;
+      }
+    }
+    .field--label {
+      font-weight: normal;
+      color: #888888;
+      @include text-overflow;
+      margin-top: $spacing-half;
+      @include respond-to(tablet-and-up) {
+        float: left;
+        width: 25%;
+        margin-right: 2%;
+        margin-top: 0;
+      }
+    }
+    > .field--item,
+    > .field__items {
+      clear: both;
+      @include respond-to(tablet-and-up) {
+        float: left;
+        clear: none;
+        width: 73%;
+      }
+    }
+  }
+  //.date-display-range {
+    //display: inline;
+  //}
+}
+
+.meta__featured {
+  .field {
+    .field--label {
+      @include respond-to(tablet-and-up) {
+        width: auto;
+        margin-right: inherit;
+        margin-top: $spacing-half;
+      }
+    }
+    &:first-child {
+      .field--label {
+        @include respond-to(tablet-and-up) {
+          margin-top: 0;
+        }
+      }
+    }
+    > .field--item {
+      @include respond-to(tablet-and-up) {
+        width: auto;
+        clear: both;
+      }
+    }
+  }
+  // .field--item {
+  //   font-size: 20px;
+  //   line-height: $line-height-base;
+  // }
+  // .field-name-field-event-date {
+  //   .field-items {
+  //     font-weight: 700;
+  //   }
+  // }
+  .link-down {
+    font-size: 16px;
+    text-decoration: underline;
+    margin-left: 5px;
+    white-space: nowrap;
+  }
+  /* Select adjacent sibling (.field) in order to add style to illustrate
+  the visual separation between the content of meta__featured. */
+  + .field {
+    @extend %has-border-top;
+    @extend %has-padding-top-base;
+    @extend %has-margin-top-base;
+  }
+}

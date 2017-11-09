@@ -1,0 +1,29 @@
+uuid: 240df243-b92c-41c9-a54d-4e7c303965d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - bartik
+_core:
+  default_config_hash: QT4UOCQmkSpHQNPG-tDEyAgNNLGhvguZNADTTQmEduc
+id: sector_starter_block_5
+theme: bartik
+region: content
+weight: -36
+provider: null
+plugin: 'block_content:c3f5dcc2-c52f-41ab-9301-ae7a48a9a317'
+settings:
+  id: 'block_content:c3f5dcc2-c52f-41ab-9301-ae7a48a9a317'
+  label: 'You might be interested in'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/sector-news-section-entry-page\n/news/archive\n/resource/archive\n/events/archive\n/events/upcoming"

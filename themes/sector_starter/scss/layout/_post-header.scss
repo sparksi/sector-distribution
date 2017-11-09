@@ -1,0 +1,9 @@
+/**
+ * @file
+ * BEM block for post-header.
+ */
+.post-header {
+  .region-post-header {
+    @include make-md-column(12);
+  }
+}

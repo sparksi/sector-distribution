@@ -1,0 +1,11 @@
+uuid: 71d449cb-498a-4b24-a84a-76961822343c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 4lCia_jP2xc5ZxHCCZlU0wOFF6nkzPHv7_A_7JQEuRE
+name: 'Solr keywords'
+vid: solr_keywords
+description: ''
+hierarchy: 0
+weight: 0

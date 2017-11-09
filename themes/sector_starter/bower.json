@@ -1,0 +1,23 @@
+{
+  "name": "sector_starter",
+  "description": "Sector Starter theme",
+  "main": "gulpfile.js",
+  "authors": [
+    ""
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "3.3.4",
+    "susy": "^2.2.12",
+    "breakpoint-sass": "^2.7.0",
+    "compass-mixins": "^1.0.2"
+  }
+}

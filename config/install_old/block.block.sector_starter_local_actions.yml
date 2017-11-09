@@ -1,0 +1,20 @@
+uuid: c25b9caa-8e80-4bbd-89cc-a98610246897
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sector_starter
+_core:
+  default_config_hash: EK-0wnot4NIHWMObZ1umeEcPaNDTztVerHoCU8o_3ag
+id: sector_starter_local_actions
+theme: sector_starter
+region: content
+weight: -15
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

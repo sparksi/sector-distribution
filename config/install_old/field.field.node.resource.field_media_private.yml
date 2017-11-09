@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_private
+    - node.type.resource
+  module:
+    - file
+id: node.resource.field_media_private
+field_name: field_media_private
+entity_type: node
+bundle: resource
+label: 'Embargoed files'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  description_field: false
+  file_directory: '[current-date:custom:Y]-[current-date:custom:m]'
+  file_extensions: 'jpg jpeg png gif pdf doc docx txt rtf ppt pptx pps ppsx xls xlsx csv zip'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

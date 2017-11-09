@@ -1,0 +1,111 @@
+/**
+ * @file
+ * Override and extend table styles
+ */
+
+.table-responsive {
+  border-top: 1px solid $brand-gray-lighter;
+  border-right: 2px solid $gray-dark;
+  border-bottom: 1px solid $brand-gray-lighter;
+  border-left: 1px solid $brand-gray-lighter;
+  margin-bottom: $spacing-base;
+  margin-top: $spacing-half;
+  @include respond-to(tablet-and-up) {
+    border-right: 1px solid $brand-gray-lighter;
+  }
+  table {
+    border-bottom: 0;
+    border-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+table {
+  font-size: 16px;
+  ul,
+  ol {
+    padding-left: 15px;
+  }
+}
+
+.table > thead > tr > th {
+  border-bottom: 1px solid $brand-gray-lighter;
+  background-color: $gray-lighter;
+  font-weight: 700;
+  color: $brand-blue-gray;
+}
+
+.table > tbody > tr > th {
+  background-color: $gray-lighter;
+}
+
+.table > thead > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > th,
+.table > tbody > tr > td,
+.table > tfoot > tr > th,
+.table > tfoot > tr > td {
+  padding: 15px 20px;
+  .table-responsive & {
+    border-left: 1px solid $brand-gray-lighter;
+  }
+  line-height: $line-height-computed;
+  &:first-child {
+    .table-responsive & {
+      border-left: 0;
+    }
+  }
+}
+
+.table-hover {
+  > tbody > tr:hover {
+    background-color: rgba(255, 255, 0, 0.3);
+  }
+}
+
+.table-bare {
+  caption {
+    padding-left: 0;
+  }
+  &.table {
+    border-top: none;
+  }
+  &.table > thead > tr > th,
+  &.table > thead > tr > td,
+  &.table > tbody > tr > th,
+  &.table > tbody > tr > td,
+  &.table > tfoot > tr > th,
+  &.table > tfoot > tr > td {
+    padding: 15px 20px 15px 0;
+    .table-responsive & {
+      border-left: none;
+    }
+  }
+  &.table > thead > tr > th {
+    border-bottom: none;
+    background-color: transparent;
+  }
+  &.table > tbody > tr > th {
+    background-color: transparent;
+  }
+  &.table > thead > tr > th,
+  &.table > thead > tr > td,
+  &.table > tbody > tr > th,
+  &.table > tbody > tr > td,
+  &.table > tfoot > tr > th,
+  &.table > tfoot > tr > td {
+    border-top: none;
+  }
+}
+
+.table-data {
+  > thead > tr > th,
+  > tbody > tr > th {
+    background-color: transparent;
+  }
+}
+
+caption {
+  padding-left: 8px;
+  padding-right: 8px;
+}

@@ -1,0 +1,30 @@
+/**
+ * @file
+ * BEM block for content.
+ */
+.content {
+  padding-top: $spacing-base;
+  .path-frontpage & {
+    padding-top: 0;
+  }
+  @include respond-to(desktop-and-up) {
+    padding-top: $spacing-and-half;
+    .path-frontpage & {
+      padding-top: 0;
+    }
+  }
+  .region-content {
+    .path-user & {
+      @extend .row;
+    }
+  }
+}
+
+
+.path-frontpage .region-content {
+  @extend .row;
+  
+  > .block:not(.col-md-6) {
+    @include make-xs-column(12);
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "sparksi/sector_starter",
+  "description": "Theme for the Sector D8",
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "type" : "drupal-custom-theme",
+  "authors": [
+    {
+      "name": "Sparks Interactive"
+    }
+  ],
+  "require": {}
+}

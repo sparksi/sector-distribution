@@ -1,0 +1,12 @@
+langcode: en
+status: true
+dependencies: {  }
+name: ratio_3_x_2_medium_
+label: 'Ratio 3 x 2 (Medium)'
+effects:
+  a94cf285-40f3-4853-86dd-b7c5e4145227:
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 993
+      height: 662

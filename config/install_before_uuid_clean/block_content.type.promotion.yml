@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: promotion
+label: Promotion
+revision: 0
+description: 'A promotional content block'

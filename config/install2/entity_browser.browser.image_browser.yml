@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_media
+    - views.view.media
+  module:
+    - media_entity_image
+    - views
+name: image_browser
+label: 'Image Browser'
+display: modal
+display_configuration:
+  width: '650'
+  height: '500'
+  link_text: Select
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  7425becd-2d23-43db-9863-543b16929527:
+    settings:
+      view: media
+      view_display: entity_browser_2
+      submit_text: Select
+    weight: 1
+    label: Library
+    id: view
+  b7c97c10-7b14-4552-8760-94b82bc47a85:
+    settings:
+      extensions: 'jpg jpeg png gif'
+      media_bundle: image
+      upload_location: 'public://'
+      submit_text: Select
+    weight: 2
+    label: Upload
+    id: media_entity_image_upload

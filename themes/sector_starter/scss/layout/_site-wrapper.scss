@@ -1,0 +1,11 @@
+/**
+ * @file
+ * BEM block for site wrapper.
+ */
+.site-wrapper {
+  @extend .container-fluid;
+}
+
+.site-wrapper__row {
+  @extend .row;
+}

@@ -1,0 +1,23 @@
+uuid: 6c812c18-1ad2-4cc2-b586-9d95b2ec8d65
+langcode: en
+status: true
+dependencies:
+  module:
+    - media_entity
+_core:
+  default_config_hash: 4J7ax33bmARbZVdw1W-E3R8UtI9K2u-WXBSRINPaF9c
+id: media.field_credit_or_caption
+field_name: field_credit_or_caption
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

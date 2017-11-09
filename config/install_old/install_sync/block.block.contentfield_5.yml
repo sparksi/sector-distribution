@@ -1,0 +1,53 @@
+uuid: f23f29ca-05fe-4223-803b-30ad2f3717c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_type
+  module:
+    - block_class
+    - block_visibility_groups
+    - fieldblock
+    - node
+    - term_condition
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: node__term
+_core:
+  default_config_hash: cCOK3RpbShhYg1D4MsQ4kF5THQkIEyThyba84rpJPO8
+id: contentfield_5
+theme: sector_starter
+region: pre_content
+weight: -18
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Resource type'
+  provider: fieldblock
+  label_display: '0'
+  label_from_field: 1
+  field_name: field_resource_type
+  formatter_id: entity_reference_label
+  formatter_settings:
+    link: 0
+visibility:
+  condition_group:
+    id: condition_group
+    negate: false
+    block_visibility_group: ''
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      resource: resource
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping: {  }

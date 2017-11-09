@@ -1,0 +1,39 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Sector starter'
+description: 'A Bootstrap Sub-theme.'
+package: 'Sector'
+
+regions:
+  pre_header: 'Pre-header'
+  header: 'Header'
+  post_header: 'Post-Header'
+  pre_hero: 'Pre-Hero'
+  hero: 'Hero'
+  post_hero: 'Post-Hero'
+  help: 'Help'
+  pre_content: 'Pre-Content'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  post_content: 'Post-Content'
+  pre_footer: 'Pre-Footer'
+  footer: 'Footer'
+  post_footer: 'Post-Footer'
+
+libraries:
+  - 'sector_starter/global'
+  - 'sector_starter/scottjehl.Respond'
+  - 'sector_starter/twbs.bootstrap'
+  - 'sector_starter/fonts'
+
+ckeditor_stylesheets:
+  - css/global.styles.css
+
+libraries-override:
+  mmenu/mmenu.basic_theme:
+    css:
+      component:
+        themes/mm-basic/styles/mm-basic.css: css/mm-basic.css
+  mmenu/mmenu.icomoon: false

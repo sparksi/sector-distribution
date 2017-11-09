@@ -1,0 +1,33 @@
+gnore configuration files that may contain sensitive information.
+sites/*/settings*.php
+drushrc.php
+
+# Ignore paths that contain user-generated content.
+sites/*/files
+sites/*/private
+
+# Ignore Eclipse .project file
+.project
+.settings
+
+# Ignore Sublime .project file
+#.sublime-project
+#.sublime-workspace
+
+# Ignore Sass-cache
+.sass-cache
+.sass-cache/*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+.swp
+._*
+
+# Dependencies
+node_modules
+bower_components
+
+# Ignore npm-debug.log
+npm-debug.log
+yarn-error.log

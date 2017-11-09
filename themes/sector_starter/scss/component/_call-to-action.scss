@@ -1,0 +1,32 @@
+/**
+ * @file
+ * BEM block for Call to action.
+ */
+.call-to-action {
+  border: 1px solid $brand-border;
+  background-color: lighten($gray-lighter,5%);
+  padding: $spacing-half;
+  margin-bottom: $line-height-base-prose-em;
+  @include respond-to(tablet-and-up) {
+    padding: $spacing-base;
+    line-height: $line-height-base-prose;
+  }
+}
+
+.call-to-action--success,
+.call-to-action--primary {
+  color: $white;
+  @include font-smoothing;
+  p {
+    color: $white;
+    @include font-smoothing;
+  }
+}
+
+.call-to-action--success {
+  background-color: $brand-success;
+}
+
+.call-to-action--primary {
+  background-color: $brand-primary;
+}

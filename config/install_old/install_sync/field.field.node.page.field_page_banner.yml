@@ -1,0 +1,30 @@
+uuid: ba4ee064-d04b-4b3e-8cd2-fe8f8a8c3035
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_page_banner
+    - media_entity.bundle.image
+    - node.type.page
+_core:
+  default_config_hash: Zvn7vXoBZrcJiJxN1zW6m4aLyiW6XEiGDmc9nKIOF7Q
+id: node.page.field_page_banner
+field_name: field_page_banner
+entity_type: node
+bundle: page
+label: 'Page banner'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

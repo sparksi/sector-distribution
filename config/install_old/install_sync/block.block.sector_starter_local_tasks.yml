@@ -1,0 +1,22 @@
+uuid: 34541e24-0482-473d-8526-65de22f66064
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sector_starter
+_core:
+  default_config_hash: ejCCZeilcMbn862BzfzLNRnddmde12S9c3JGMjQTbYg
+id: sector_starter_local_tasks
+theme: sector_starter
+region: content
+weight: -18
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
