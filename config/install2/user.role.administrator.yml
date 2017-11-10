@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: administrator
-label: 'Drupal site builder (site architects and developers)'
-weight: 2
-is_admin: true
-permissions: {  }

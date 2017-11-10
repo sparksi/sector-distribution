@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: utility-pages
-label: 'Utility pages'
-description: 'Part of Sector Starter Kit. Optional Menu for <em>Utility  pages</em> e.g. <em>Contact us<em>.'
-locked: false

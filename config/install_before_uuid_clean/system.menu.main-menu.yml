@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: main-menu
-label: 'Main menu'
-description: 'Part of Sector Starter Kit. Menu for <em>hierarchical structured content</em> based on main site sections. '
-locked: false

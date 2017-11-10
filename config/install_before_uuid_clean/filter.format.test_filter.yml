@@ -1,7 +1,0 @@
-langcode: en
-status: false
-dependencies: {  }
-name: 'Test filter'
-format: test_filter
-weight: -3
-filters: {  }

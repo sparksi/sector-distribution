@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: menu-departments-and-units-menu
-label: 'Departments and units menu'
-description: 'Part of Sector NZgovt Kit. Menu for <em>Departmental or Unit landing pages</em>.'
-locked: false

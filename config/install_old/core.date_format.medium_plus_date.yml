@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: medium_plus_date
-label: 'Medium plus date'
-locked: false
-pattern: 'l, j M Y'

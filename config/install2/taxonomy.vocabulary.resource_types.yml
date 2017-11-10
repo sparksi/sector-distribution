@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Resource types'
-vid: resource_types
-description: 'Used to sort views and searches by type and to target CSS rules to a specific group of resources.'
-hierarchy: 0
-weight: -7

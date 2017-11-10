@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Page variants'
-vid: page_variants
-description: 'Used to target CSS rules to a specific group of pages. '
-hierarchy: 0
-weight: -8
