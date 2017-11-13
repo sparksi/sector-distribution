@@ -37,18 +37,12 @@ visibility:
     negate: false
     block_visibility_group: ''
     context_mapping: {  }
-  'entity_bundle:node':
-    id: 'entity_bundle:node'
-    bundles:
-      article: article
-    negate: false
-    context_mapping:
-      node: '@node.node_route_context:node'
   term:
     id: term
     negate: false
     tid: null
-    context_mapping: {  }
+    context_mapping:
+          node: '@node.node_route_context:node'
   node_type:
     id: node_type
     bundles:

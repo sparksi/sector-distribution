@@ -14,18 +14,18 @@ dependencies:
 third_party_settings:
   block_class:
     classes: has-margin-top-double
-id: sector_view_promotional_links_block
+id: views_block__sector_view_promotional_links_block_1
 theme: sector_starter
 region: content
-weight: -14
+weight: -13
 provider: null
 plugin: 'views_block:sector_view_promotional_links-block_1'
 settings:
   id: 'views_block:sector_view_promotional_links-block_1'
-  label: ''
+  label: 'Popular links'
   provider: views
   label_display: visible
-  views_label: ''
+  views_label: 'Popular links'
   items_per_page: none
 visibility:
   condition_group:
@@ -42,4 +42,5 @@ visibility:
     id: term
     negate: false
     tid: null
-    context_mapping: {  }
+    context_mapping:
+      node: '@node.node_route_context:node'

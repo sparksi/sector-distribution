@@ -17,15 +17,15 @@ third_party_settings:
 id: views_block__sector_resource_block_2
 theme: sector_starter
 region: content
-weight: -10
+weight: -9
 provider: null
 plugin: 'views_block:sector_resource-block_2'
 settings:
   id: 'views_block:sector_resource-block_2'
-  label: ''
+  label: 'Latest resources'
   provider: views
   label_display: visible
-  views_label: ''
+  views_label: 'Latest resources'
   items_per_page: none
 visibility:
   condition_group:
@@ -33,13 +33,14 @@ visibility:
     negate: false
     block_visibility_group: ''
     context_mapping: {  }
-  term:
-    id: term
-    negate: false
-    tid: null
-    context_mapping: {  }
   request_path:
     id: request_path
     pages: '<front>'
     negate: false
     context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping:
+      node: '@node.node_route_context:node'

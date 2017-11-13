@@ -32,4 +32,5 @@ visibility:
     id: term
     negate: false
     tid: null
-    context_mapping: {  }
+    context_mapping:
+      node: '@node.node_route_context:node'

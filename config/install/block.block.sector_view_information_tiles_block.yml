@@ -14,10 +14,10 @@ dependencies:
 third_party_settings:
   block_class:
     classes: has-margin-top-double
-id: sector_view_information_tiles_block
+id: views_block__sector_view_information_tiles_block_1
 theme: sector_starter
 region: content
-weight: -13
+weight: -12
 provider: null
 plugin: 'views_block:sector_view_information_tiles-block_1'
 settings:
@@ -33,13 +33,14 @@ visibility:
     negate: false
     block_visibility_group: ''
     context_mapping: {  }
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }
   term:
     id: term
     negate: false
     tid: null
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
     context_mapping: {  }

@@ -1,8 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:79af5eed-a1cb-4da7-aeec-56d650fb196d'
   module:
     - block_class
+    - block_content
     - block_visibility_groups
     - term_condition
   theme:
@@ -13,13 +16,13 @@ third_party_settings:
 id: backtotop
 theme: sector_starter
 region: content
-weight: -9
+weight: 0
 provider: null
 plugin: 'block_content:79af5eed-a1cb-4da7-aeec-56d650fb196d'
 settings:
   id: 'block_content:79af5eed-a1cb-4da7-aeec-56d650fb196d'
   label: 'Back to top'
-  provider: core
+  provider: block_content
   label_display: '0'
   status: true
   info: ''

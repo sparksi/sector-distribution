@@ -14,7 +14,7 @@ third_party_settings:
 id: pagetitle_4
 theme: sector_starter
 region: pre_content
-weight: -16
+weight: -15
 provider: null
 plugin: page_title_block
 settings:
@@ -37,4 +37,5 @@ visibility:
     id: term
     negate: false
     tid: null
-    context_mapping: {  }
+    context_mapping:
+      node: '@node.node_route_context:node'
