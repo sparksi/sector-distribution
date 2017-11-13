@@ -88,6 +88,7 @@
     width: 43px;
     padding: 0;
     position: relative;
+    text-indent: -50000px;
     
     .icon {
       display: none;
@@ -173,7 +174,7 @@
 }
 
 /* /search/node for core search */
-.search-page-form {
+.search-form {
   border: 1px solid $brand-border;
   background-color: lighten($gray-lighter,5%);
   padding: $spacing-base;
