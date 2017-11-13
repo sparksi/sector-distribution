@@ -171,9 +171,6 @@
       "drupal/term_condition": {
         "Blocks hidden on non-node pages": "https://www.drupal.org/files/issues/term_condition-block_hidden_not_node-2797205-7.patch",
         "Autocomplete error when editing": "https://www.drupal.org/files/issues/term_condition-2777337-1.patch"
-      },
-      "drupal/entityqueue": {
-        "Subqueue views relation: Doubled/redundant entries": "https://www.drupal.org/files/issues/subqueue_relation_query-2837841-11.patch"
       }
     }
   }
