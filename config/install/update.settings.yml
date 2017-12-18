@@ -7,5 +7,5 @@ fetch:
   timeout: 30
 notification:
   emails:
-    - daniel@sparksinteractive.co.nz
+    - no-reply@sparksinteractive.co.nz
   threshold: all
