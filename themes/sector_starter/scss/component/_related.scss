@@ -5,7 +5,6 @@
 .related {
   border-top: 1px solid $brand-border;
   padding-top: $spacing-base;
-  
   > .field {
     @extend %has-margin-top-and-half;
   }

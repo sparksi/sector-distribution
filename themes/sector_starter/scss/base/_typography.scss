@@ -14,7 +14,6 @@ body {
     color: $brand-blue-gray;
     @include font-smoothing;
     margin: 0;
-    
     > a {
       &:focus {
         outline-offset: 0;
@@ -77,11 +76,9 @@ hr {
   font-weight: 400;
   margin-bottom: 0;
   font-size: floor(($font-size-base * 1.15));
-  
   @include respond-to(tablet-and-up) {
     font-size: ($font-size-base * 1.5);
   }
-  
   // space above next element
   + * {
     margin-top: $line-height-computed;
@@ -148,11 +145,9 @@ ol {
   }
 }
 
-
 .page-header {
   padding-bottom: 0;
   margin: 0;
-  
   // elements after page-header, page header that has element before it
   * + &,
   + * {

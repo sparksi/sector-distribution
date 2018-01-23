@@ -26,7 +26,6 @@
       text-align: center;
       margin-top: 15vw;
       margin-bottom: 15vw;
-      
       @include respond-to(desktop-and-up) {
         margin-top: 15vh;
         margin-bottom: 15vh;
@@ -43,7 +42,6 @@
 
 :not(.path-frontpage) .region-hero {
   margin: 4vw 0;
-  
   @include respond-to(desktop-and-up) {
     margin: 4vh 0;
   }

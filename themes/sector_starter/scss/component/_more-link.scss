@@ -4,11 +4,9 @@
  */
 .more-link {
   @include font-smoothing;
-  
   * + & {
     @extend %has-margin-top-and-half;
   }
-  
   > a {
     @extend .btn;
     @extend .btn-primary;

@@ -76,13 +76,11 @@
     .field--label {
       font-weight: normal;
     }
-    
     > .field--label,
     > .field--item {
       display: inline-block;
       vertical-align: middle;
     }
-    
   }
   &.field--label-above {
     @extend %has-margin-top-half;
@@ -104,19 +102,15 @@
   font-size: 16px;
   @extend %date;
   @include font-smoothing;
-  
   * + & {
     margin-top: $spacing-base;
-  
     @include respond-to(desktop-and-up){
       margin-top: $spacing-double;
     }
   }
-  
   .field--label {
     font-weight: normal;
     display: inline-block;
-    
     + .field--item {
       display: inline-block;
     }

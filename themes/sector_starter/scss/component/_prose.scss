@@ -5,12 +5,8 @@
  * (Classic node body area - Add .prose via display suite as required)
  * http://www.pearsonified.com/typography/
  */
- 
 
-
-
-
-.prose {  
+.prose {
   a {
     text-decoration: underline;
     &.btn {
@@ -34,21 +30,17 @@
     }
     ul, ol {
       margin: 0;
-      
       > li ~ li {
         margin-top: ($line-height-prose-computed/4);
       }
-  
       + * {
         margin-top: ($line-height-prose-computed/2);
       }
     }
-    
     * + ul,
     * + ol {
       margin-top: ($line-height-prose-computed/2);
     }
-    
     dl {
       margin-bottom: $line-height-prose-computed;
       &.dl-horizontal {
@@ -69,7 +61,7 @@
     }
     address {
       margin-bottom: $line-height-prose-computed;
-    }    
+    }
   }
 }
 
@@ -83,14 +75,13 @@ p {
 
 // h1, h2, h3
 @for $i from 1 through 3 {
-  h#{$i}, .h#{$i} {    
+  h#{$i}, .h#{$i} {
     .prose * + & {
       margin-top: $line-height-computed * 2;
     }
   }
 }
-    
-    
+
 // h4, h5, h6
 @for $i from 4 through 6 {
   h#{$i}, .h#{$i} {
@@ -99,7 +90,6 @@ p {
     }
   }
 }
-
 
 blockquote {
   .prose * + &,

@@ -17,7 +17,7 @@ $slat-border: $brand-border;
 $slat-background-color: $gray-lighter;
 $slat-text-color: $text-color;
 
-.slat {  
+.slat {
   &.toggle-carousel {
     cursor: pointer;
     .slat__title {
@@ -36,7 +36,6 @@ $slat-text-color: $text-color;
       outline-offset: -3px;
     }
   }
-  
   &.has-border-top,
   &.has-border-top-large {
     padding-top: $spacing-base;
@@ -62,11 +61,9 @@ $slat-text-color: $text-color;
       color: $brand-visited;
     }
   }
-  
   + * {
     margin-top: $spacing-quarter;
   }
-  
   ~ .inline-block {
     vertical-align: bottom;
   }
@@ -79,12 +76,10 @@ $slat-text-color: $text-color;
   }
   @include respond-to(tablet-and-up) {
     line-height: $line-height-base-prose;
-    
     p + * {
       margin-top: ($line-height-prose-computed/2);
     }
   }
-  
   * + & {
     margin-top: $spacing-half;
   }
@@ -109,7 +104,6 @@ $slat-text-color: $text-color;
     }
   }
 }
-
 
 .slat__date {
   @extend %date;
