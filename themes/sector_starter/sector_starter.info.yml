@@ -30,10 +30,3 @@ libraries:
 
 ckeditor_stylesheets:
   - css/global.styles.css
-
-libraries-override:
-  mmenu/mmenu.basic_theme:
-    css:
-      component:
-        themes/mm-basic/styles/mm-basic.css: css/mm-basic.css
-  mmenu/mmenu.icomoon: false
