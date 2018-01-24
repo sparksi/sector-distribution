@@ -18,11 +18,9 @@
     color: $brand-gray-light;
     @include font-smoothing;
   }
-  
   .field a:after {
     content:none;
   }
-  
   .footer-regions-wrapper & .field a {
     color: $white;
   }
@@ -32,7 +30,6 @@
   .header & {
     @include make-xs-column(10);
     @include make-md-column(3);
-//    @include make-lg-column(3);
     margin-top: 15px;
     @include respond-to(desktop-and-up) {
       margin-top: 0;
@@ -122,18 +119,15 @@
   margin-top: $spacing-base;
   line-height: 1;
   white-space: nowrap;
-  
   @include respond-to(desktop-and-up){
     margin-top: $spacing-double;
   }
-  
   > .block-title {
     font-family: $font-family-sans-serif;
     font-size: $font-size-base;
     font-size: 16px;
     font-weight: normal;
     color: darken(#888888,10%);
-    
     ~ .field {
       margin-left: .25em;
       margin-top: 0;

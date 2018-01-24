@@ -5,6 +5,7 @@
 
 .meta {
   .field {
+    @extend %is-pseudo-dl-item;
     @include respond-to(tablet-and-up) {
       @include clearfix;
     }
@@ -13,31 +14,7 @@
         margin-top: 0;
       }
     }
-    .field--label {
-      font-weight: normal;
-      color: #888888;
-      @include text-overflow;
-      margin-top: $spacing-half;
-      @include respond-to(tablet-and-up) {
-        float: left;
-        width: 25%;
-        margin-right: 2%;
-        margin-top: 0;
-      }
-    }
-    > .field--item,
-    > .field__items {
-      clear: both;
-      @include respond-to(tablet-and-up) {
-        float: left;
-        clear: none;
-        width: 73%;
-      }
-    }
   }
-  //.date-display-range {
-    //display: inline;
-  //}
 }
 
 .meta__featured {
@@ -63,15 +40,6 @@
       }
     }
   }
-  // .field--item {
-  //   font-size: 20px;
-  //   line-height: $line-height-base;
-  // }
-  // .field-name-field-event-date {
-  //   .field-items {
-  //     font-weight: 700;
-  //   }
-  // }
   .link-down {
     font-size: 16px;
     text-decoration: underline;

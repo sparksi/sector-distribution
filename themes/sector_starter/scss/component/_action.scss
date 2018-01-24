@@ -10,7 +10,6 @@
   transition:opacity 0.2s ease-out;
   @extend .pull-right;
   @extend .btn;
-    
   &:before {
     content: '\2191';
     position: absolute;
@@ -18,7 +17,6 @@
     left: 4px;
     white-space: nowrap;
   }
-  
   .you-are-going-down &,
   .no-js & {
     visibility: visible;

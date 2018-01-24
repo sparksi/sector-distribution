@@ -23,9 +23,8 @@
   color: $gray-light;
 }
 
-
 /*
- * unpublished node indicator, attached to full view mode of node 
+ * unpublished node indicator, attached to full view mode of node
  * inside content region.
  */
 .node--view-mode-full {
@@ -35,7 +34,6 @@
     padding-top: 20px;
     position: relative;
     margin-top:20px;
-    
     &:before {
       position: absolute;
       content: 'Unpublished';
@@ -47,13 +45,5 @@
   }
   .page-node-status-unpublished.admin-ui-hide .content & {
     display: none;
-  }
-}
-
-.node-promotion {
-  &.view-mode-teaser {
-    @include respond-to(mobile) {
-      margin-top: $spacing-base;
-    }
   }
 }

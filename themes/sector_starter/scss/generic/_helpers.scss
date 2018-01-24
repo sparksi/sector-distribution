@@ -299,3 +299,68 @@
     }
   }
 }
+
+%pseudo-dl-term {
+  font-weight: normal;
+  @include text-overflow;
+  margin-top: $spacing-half;
+  @include respond-to(tablet-and-up) {
+    float: left;
+    clear: both;
+    width: 25%;
+    margin-right: 2%;
+    margin-top: 0;
+  }
+}
+
+%pseudo-dl-definition {
+  clear: both;
+  @include respond-to(tablet-and-up) {
+    float: left;
+    clear: none;
+    width: 73%;
+  }
+}
+
+.is-pseudo-dl-item,
+%is-pseudo-dl-item {
+  @include respond-to(tablet-and-up) {
+  }
+  .field--label {
+    @extend %pseudo-dl-term;
+  }
+  > .field--item,
+  > .field__items {
+    @extend %pseudo-dl-definition;
+  }
+}
+
+/* Caption */
+.caption,
+%caption {
+  background-color: $black;
+  color: $white;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  @include font-smoothing;
+  &:empty {
+    display: none;
+  }
+}
+
+%inverse {
+  p,
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6,
+  a,
+  ul,
+  ol {
+    color: rgba($white,0.9);
+    @include font-smoothing;
+  }
+}

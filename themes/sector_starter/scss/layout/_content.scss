@@ -19,12 +19,3 @@
     }
   }
 }
-
-
-.path-frontpage .region-content {
-  @extend .row;
-  
-  > .block:not(.col-md-6) {
-    @include make-xs-column(12);
-  }
-}

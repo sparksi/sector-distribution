@@ -4,6 +4,7 @@ global:
     theme:
       css/global.styles.css: {}
       css/global.print.css: { media: print }
+      css/admin-ui-toggle.css: {}
   js:
     js/global.behaviors.js: {}
   dependencies:

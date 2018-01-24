@@ -7,17 +7,6 @@
   .path-frontpage & {
     background-color: transparent;
   }
-  /*> .hero__inner {
-    .path-frontpage & {
-      padding: $spacing-base 0;
-      @include respond-to(tablet-and-up) {
-        padding: $spacing-double 0;
-      }
-      @include respond-to(desktop-and-up) {
-        padding: ($spacing-double*3) 0;
-      }
-    }
-  }*/
   .region-hero {
     @include make-md-column(12);
     .path-frontpage & {
@@ -26,7 +15,6 @@
       text-align: center;
       margin-top: 15vw;
       margin-bottom: 15vw;
-      
       @include respond-to(desktop-and-up) {
         margin-top: 15vh;
         margin-bottom: 15vh;
@@ -34,7 +22,6 @@
     }
   }
   .page-header {
-  //  margin: $spacing-half 0 0 0;
     .path-frontpage & {
       color: $white;
     }
@@ -43,7 +30,6 @@
 
 :not(.path-frontpage) .region-hero {
   margin: 4vw 0;
-  
   @include respond-to(desktop-and-up) {
     margin: 4vh 0;
   }

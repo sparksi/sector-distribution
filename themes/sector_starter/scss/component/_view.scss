@@ -3,30 +3,12 @@
  * BEM block for View.
  */
 
-.view-mode-short_teaser {
-  line-height: 1.1;
-}
-
-/* When Drupal's full pager is selected via view configuration,
- * the pager is wrapped via a <div> with the class of .text-center.
- * Due to the requirements of the pager design we require a positioning
- * context in order to absolutely position various pager elements.
- * See _pagination.scss */
-.view {
-  > .text-center {
-    position: relative;
-  }
-}
-
-
 .view-filters {
   margin: 0;
-  
   * + & {
     margin-top: $spacing-half;
   }
   & + * {
     margin-top: $spacing-base;
   }
-  
 }

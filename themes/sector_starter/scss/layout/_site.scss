@@ -25,10 +25,8 @@
       padding: 0 em(140) 0 ($grid-gutter-width/2);
     }
   }
-  
   + .site__sidebar {
     margin-top: $spacing-base;
-    
     @include respond-to(desktop-and-up){
       margin-top: 0;
     }
@@ -44,7 +42,6 @@
   font-size: 16px;
   line-height: (26/16);
   .block {
-
     @extend %has-border-top-large;
     padding-top: $spacing-base;
     @extend %apply-external-link-icon;
@@ -62,7 +59,6 @@
         margin-top: 0;
       }
     }
-    
     ~ .block {
       margin-top: $spacing-base;
     }

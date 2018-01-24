@@ -17,7 +17,6 @@
     padding: 12px 21px 13px;
     font-size: 16px;
     margin-top: 0;
-    
     @include respond-to(mobile) {
       top: 13px;
       right: 13px;
@@ -57,13 +56,6 @@
     color: $gray-lighter;
     @include font-smoothing;
   }
-  // .mm-menu & {
-  //   padding: $spacing-half $spacing-base;
-  //   .description {
-  //     color: $gray-lighter;
-  //     @include font-smoothing;
-  //   }
-  // }
 }
 
 
@@ -76,11 +68,9 @@
       @include font-smoothing;
     }
   }
-  
   .form-group {
     margin-bottom: 0;
   }
-  
   .btn {
     background-color: $gray-darker;
     border: 1px solid $black;
@@ -89,11 +79,9 @@
     padding: 0;
     position: relative;
     text-indent: -50000px;
-    
     .icon {
       display: none;
     }
-    
     &:after {
       content:'';
       position: absolute;
@@ -102,7 +90,6 @@
       transform: translateY(-50%) translateX(-50%) scale(1.5);
       @include sprite(icon--search-white);
     }
-    
     &:hover {
       background-color: $brand-primary;
     }
@@ -113,7 +100,6 @@
       outline-offset: 0;
     }
   }
-  
   .description {
     @include font-smoothing;
     margin-bottom: 0;
@@ -125,16 +111,13 @@
   padding: 15px;
   clear: both;
   display: none;
-  
   .mm-menu & {
     display: block;
   }
-  
   // only hide for desktop
   @include respond-to(desktop-and-up){
     width: 85%;
     display: block;
-    
     .js & {
       display: none;
       position: absolute;
@@ -143,7 +126,6 @@
       clear: none;
     }
   }
-  
   .js &.search-is-active {
     @include respond-to(desktop-and-up) {
       display: block;
@@ -179,17 +161,14 @@
   background-color: lighten($gray-lighter,5%);
   padding: $spacing-base;
   margin: 0;
-  
   * + .description,
   * + .search-help-link {
     margin-top: $spacing-base / 3;
   }
-  
   .search-help-link {
     @include font-smoothing;
     display: inline-block;
   }
-  
   & + * {
     margin-top: $spacing-base;
   }
@@ -200,11 +179,9 @@
   .search-help-link + & {
     display: inline-block;
     margin-top: .3em;
-    
-    @include respond-to(tablet-large-and-up){
+    @include respond-to(tablet-large-and-up) {
       margin-left: 1em;
       margin-top: 0;
     }
   }
-  
 }
