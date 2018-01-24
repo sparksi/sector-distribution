@@ -8,7 +8,6 @@
   padding: 0;
   margin: 0;
   @include border-radius(0);
-  @extend .hidden-xs;
   > li {
     color: #BBBBBB;
     position: relative;

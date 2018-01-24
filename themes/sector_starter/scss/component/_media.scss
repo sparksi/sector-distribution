@@ -12,18 +12,7 @@
   }
 }
 
-  /* Remove external link icon from custom linked view modes */
-  // .view-mode-wysiwyg_linked,
-  // .view-mode-wysiwyg_half_column_linked {
-  //   > a[href^="http://"],
-  //   > a[href^="https://"],
-  //   > a[rel*='external'] {
-  //     &:after {
-  //       content: '';
-  //     }
-  //   }
-  // }
-  /* Custom half column images are floated right by default (Tablet and up) */
+/* Custom half column images are floated right by default (Tablet and up) */
 .media--view-mode-embedded-half-column {
   @extend %has-offset-right;
   margin: em(4) 0 $spacing-base 0;
@@ -84,7 +73,6 @@ $icon-offset: 56px;
 
     &.file--text-html {&:before {background-position: 0 -583px;}}
   }
-
 
   &.media--view-mode-embedded {
     min-height: 98px;
@@ -228,15 +216,6 @@ $icon-offset: 56px;
   &.media--view-mode-full {
     margin-top: $spacing-base;
   }
-  // &.view-mode-wysiwyg {
-  //   padding-left: $spacing-half;
-  //   padding-right: $spacing-half;
-  //   padding-bottom: $spacing-half;
-  //   @include respond-to(tablet-and-up) {
-  //     padding-left: $spacing-base;
-  //     padding-right: $spacing-base;
-  //   }
-  // }
 }
 
 .media--type-audio {
@@ -258,14 +237,4 @@ $icon-offset: 56px;
       margin-top: $spacing-base;
     }
   }
-  // &.view-mode-wysiwyg {
-  //   > .file {
-  //     > img,
-  //     > .file-size {
-  //       display: none!important;
-  //     }
-  //   }
-  // }
 }
-
-

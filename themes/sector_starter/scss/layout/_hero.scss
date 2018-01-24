@@ -7,17 +7,6 @@
   .path-frontpage & {
     background-color: transparent;
   }
-  /*> .hero__inner {
-    .path-frontpage & {
-      padding: $spacing-base 0;
-      @include respond-to(tablet-and-up) {
-        padding: $spacing-double 0;
-      }
-      @include respond-to(desktop-and-up) {
-        padding: ($spacing-double*3) 0;
-      }
-    }
-  }*/
   .region-hero {
     @include make-md-column(12);
     .path-frontpage & {
@@ -33,7 +22,6 @@
     }
   }
   .page-header {
-  //  margin: $spacing-half 0 0 0;
     .path-frontpage & {
       color: $white;
     }

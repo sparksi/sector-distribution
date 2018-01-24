@@ -23,7 +23,6 @@
   color: $gray-light;
 }
 
-
 /*
  * unpublished node indicator, attached to full view mode of node
  * inside content region.
@@ -46,13 +45,5 @@
   }
   .page-node-status-unpublished.admin-ui-hide .content & {
     display: none;
-  }
-}
-
-.node-promotion {
-  &.view-mode-teaser {
-    @include respond-to(mobile) {
-      margin-top: $spacing-base;
-    }
   }
 }

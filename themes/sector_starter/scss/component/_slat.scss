@@ -17,31 +17,6 @@ $slat-border: $brand-border;
 $slat-background-color: $gray-lighter;
 $slat-text-color: $text-color;
 
-.slat {
-  &.toggle-carousel {
-    cursor: pointer;
-    .slat__title {
-      color: $link-color;
-    }
-    &:hover,
-    &:focus {
-      .slat__title {
-        color: $link-hover-color;
-        text-decoration: underline;
-      }
-    }
-    &:focus,
-    &:active {
-      outline: 3px solid $brand-focused;
-      outline-offset: -3px;
-    }
-  }
-  &.has-border-top,
-  &.has-border-top-large {
-    padding-top: $spacing-base;
-  }
-}
-
 .slat__media {
   > a {
     display: block;
@@ -63,9 +38,6 @@ $slat-text-color: $text-color;
   }
   + * {
     margin-top: $spacing-quarter;
-  }
-  ~ .inline-block {
-    vertical-align: bottom;
   }
 }
 
@@ -181,26 +153,6 @@ $slat-text-color: $text-color;
     }
   }
 }
-
-// .slat--has-border-top {
-//   @extend %has-border-top;
-// }
-
-// .slat--has-border-top-large {
-//   @extend %has-border-top-large;
-// }
-
-// .slat--has-border-top-alternate {
-//   @extend %has-border-top-alternate;
-// }
-
-// .slat--has-top-margin {
-//   @extend %has-margin-top-and-half;
-// }
-
-// .slat--has-top-margin-half {
-//   @extend %has-margin-top-base;
-// }
 
 .slat--has-background-colour {
   background-color: $slat-background-color;

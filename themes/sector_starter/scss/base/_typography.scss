@@ -8,7 +8,7 @@ body {
 }
 
 @for $i from 1 through 6 {
-  h#{$i}, .h#{$i}{
+  h#{$i}, .h#{$i} {
     font-family: $font-family-sans-serif-alt;
     font-weight: 700;
     color: $brand-blue-gray;
@@ -79,7 +79,6 @@ hr {
   @include respond-to(tablet-and-up) {
     font-size: ($font-size-base * 1.5);
   }
-  // space above next element
   + * {
     margin-top: $line-height-computed;
   }
@@ -142,15 +141,5 @@ ol {
     ol {
       list-style-type: lower-roman;
     }
-  }
-}
-
-.page-header {
-  padding-bottom: 0;
-  margin: 0;
-  // elements after page-header, page header that has element before it
-  * + &,
-  + * {
-    margin-top: $spacing-quarter;
   }
 }

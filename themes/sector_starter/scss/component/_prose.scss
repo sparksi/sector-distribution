@@ -7,6 +7,7 @@
  */
 
 .prose {
+  @extend %apply-external-link-icon;
   a {
     text-decoration: underline;
     &.btn {
@@ -14,7 +15,6 @@
     }
   }
   .lead {
-    //margin-bottom: $line-height-prose-computed;
     font-size: floor(($font-size-base * 1.15));
     @include respond-to(tablet-and-up) {
       font-size: ($font-size-base * 1.5);

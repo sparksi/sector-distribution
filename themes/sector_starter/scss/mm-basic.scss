@@ -57,6 +57,14 @@ nav.mm-opened + .mm-menu + div + .mm-page .toggle--search {
   }
 }
 
+.mmenu-nav > * {
+  display: none;
+  margin: 0;
+  .js & {
+    display: block;
+  }
+}
+
 #mmenu_top {
   > ul {
     padding: 10px 0;
