@@ -223,7 +223,7 @@
   @include respond-to(wide) {
     margin-right: -80px!important;
   }
-  @media (min-width: 1360px) {
+  @include respond-to(mega-and-up) {
     margin-right: -120px!important;
   }
 }
@@ -235,7 +235,7 @@
   @include respond-to(wide) {
     margin-left: -80px!important;
   }
-  @media (min-width: 1360px) {
+  @include respond-to(mega-and-up) {
     margin-left: -120px!important;
   }
 }
