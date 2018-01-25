@@ -67,7 +67,6 @@ dependencies:
  - history
  - image
  - layout_discovery
- - libraries
  - migrate
  - migrate_drupal
  - migrate_drupal_ui
