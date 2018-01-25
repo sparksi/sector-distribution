@@ -1,6 +1,6 @@
 {
     "name": "sparksinteractive/sector-distribution",
-    "description": "Profile for the Sector D8",
+    "description": "Sector is a distribution for Drupal 8.",
     "license": "GPL-2.0-or-later",
     "type" : "drupal-profile",
     "authors": [
