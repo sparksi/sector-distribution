@@ -282,13 +282,13 @@
             > .menu {
               > .menu__item {
                 @include respond-to(tablet-and-up) {
-                  @include span(2 of 6 after no-gutters);
+                  // @include span(2 of 6 after no-gutters);
                   &:nth-child(3n+1) {
                     clear: both;
                   }
                 }
                 @include respond-to(desktop-and-up) {
-                  @include span(2 of 12 after no-gutters);
+                  // @include span(2 of 12 after no-gutters);
                   &:nth-child(3n+1) {
                     clear: none;
                   }

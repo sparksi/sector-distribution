@@ -20,50 +20,11 @@
   .you-are-going-down &,
   .no-js & {
     visibility: visible;
-    opacity:1;
+    opacity: 1;
   }
   &:hover,
   &:active {
     box-shadow: none;
-  }
-}
-
-.action--back-to-contents {
-  position: relative;
-  opacity: 0;
-  transition:opacity 0.2s ease-out;
-  margin-bottom: 10px;
-  padding: 6px 12px 6px 32px;
-  &:before {
-    content: '';
-    position: absolute;
-    @include sprite(arrow--medium-up-blue);
-    top: 35%;
-    left: 8%;
-  }
-  @include respond-to(wide-and-up) {
-    position: fixed;
-    bottom: 0;
-  }
-  &:hover,
-  &:active {
-    &:before {
-      @include sprite(arrow--medium-up-dark-blue);
-    }
-  }
-  .you-are-going-down & {
-    @include respond-to(wide-and-up) {
-      opacity: 1;
-    }
-  }
-  /* Hide if JS is turned off */
-  .no-js & {
-    display: none;
-  }
-  .you-are-near-the-bottom & {
-    @include respond-to(wide-and-up) {
-      opacity: 0;
-    }
   }
 }
 

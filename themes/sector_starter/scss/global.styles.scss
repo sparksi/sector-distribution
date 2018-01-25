@@ -18,11 +18,6 @@
 @import "../scss/vendor/bootstrap/bootstrap-custom.scss";
 
 
-/* SUSY
-------------------------------------------------------------------------*/
-@import "susy";
-
-
 /* BREAKPOINT
 ------------------------------------------------------------------------*/
 @import "breakpoint";
@@ -30,11 +25,9 @@
 
 /* GENERIC
 ------------------------------------------------------------------------*/
-@import "../scss/generic/susy",
-        "../scss/generic/mixins",
+@import "../scss/generic/mixins",
         "../scss/generic/breakpoints",
         "../scss/generic/helpers",
-        "../scss/generic/accessibility",
         "../scss/generic/sprite",
         "../scss/generic/sprite-mixins",
         "../scss/generic/drupal";

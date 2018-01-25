@@ -6,6 +6,13 @@
   font-weight: 600;
 }
 
+.field--label-inline {
+  .field--label,
+  .field--item {
+    display: inline-block;
+  }
+}
+
 .field--group-fieldset {
   margin-top: $spacing-half;
   @include respond-to(tablet-and-up) {

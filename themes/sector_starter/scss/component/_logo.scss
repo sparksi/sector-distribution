@@ -53,6 +53,17 @@
       .logo__brand {
         fill: $white;
       }
+      &:focus {
+        .logo__brand {
+          fill: $black;
+        }
+      }
+    }
+    &:focus {
+      outline-offset: 0;
+      .logo__brand {
+        fill: $black;
+      }
     }
   }
 }

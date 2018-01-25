@@ -4,7 +4,7 @@
  */
 .site__inner {
   @extend .container;
-  @media (min-width: 1360px) {
+  @include respond-to(mega-and-up) {
     width: 1240px;
   }
 }
@@ -21,7 +21,7 @@
     @include respond-to(wide-and-up) {
       padding: 0 em(80) 0 ($grid-gutter-width/2);
     }
-    @media (min-width: 1360px) {
+    @include respond-to(mega-and-up) {
       padding: 0 em(140) 0 ($grid-gutter-width/2);
     }
   }

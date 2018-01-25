@@ -155,14 +155,14 @@
 .has-padding-left-one-col,
 %has-padding-left-one-col {
   @include respond-to(wide-and-up) {
-    padding-left: span(1 of 12);
+    // padding-left: span(1 of 12);
   }
 }
 
 .has-padding-right-one-col,
 %has-padding-right-one-col {
   @include respond-to(wide-and-up) {
-    padding-right: span(1 of 12);
+    // padding-right: span(1 of 12);
   }
 }
 
@@ -223,7 +223,7 @@
   @include respond-to(wide) {
     margin-right: -80px!important;
   }
-  @media (min-width: 1360px) {
+  @include respond-to(mega-and-up) {
     margin-right: -120px!important;
   }
 }
@@ -235,7 +235,7 @@
   @include respond-to(wide) {
     margin-left: -80px!important;
   }
-  @media (min-width: 1360px) {
+  @include respond-to(mega-and-up) {
     margin-left: -120px!important;
   }
 }

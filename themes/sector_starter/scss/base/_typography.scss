@@ -7,17 +7,20 @@ body {
   line-height: $line-height-base;
 }
 
-@for $i from 1 through 6 {
-  h#{$i}, .h#{$i} {
-    font-family: $font-family-sans-serif-alt;
-    font-weight: 700;
-    color: $brand-blue-gray;
-    @include font-smoothing;
-    margin: 0;
-    > a {
-      &:focus {
-        outline-offset: 0;
-      }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $font-family-sans-serif-alt;
+  font-weight: 700;
+  color: $brand-blue-gray;
+  @include font-smoothing;
+  margin: 0;
+  > a {
+    &:focus {
+      outline-offset: 0;
     }
   }
 }
@@ -79,13 +82,18 @@ hr {
   @include respond-to(tablet-and-up) {
     font-size: ($font-size-base * 1.5);
   }
-  + * {
-    margin-top: $line-height-computed;
-  }
 }
 
 p {
-  margin: 0;
+  margin: 0 0 ($line-height-computed/2);
+  &:last-child {
+    margin: 0;
+  }
+  a {
+    &:focus {
+      outline-offset: 0;
+    }
+  }
 }
 
 blockquote {
@@ -119,6 +127,11 @@ blockquote {
 a {
   &:visited {
     color: $brand-visited;
+  }
+  &:focus {
+    background-color: $brand-focused;
+    outline: 3px solid $brand-focused;
+    outline-offset: -3px;
   }
 }
 

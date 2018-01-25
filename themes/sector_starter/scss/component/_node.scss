@@ -22,28 +22,3 @@
   font-size: $font-size-h4;
   color: $gray-light;
 }
-
-/*
- * unpublished node indicator, attached to full view mode of node
- * inside content region.
- */
-.node--view-mode-full {
-  .page-node-status-unpublished .content & {
-    background-color: transparent;
-    border-top: 40px solid $brand-warning;
-    padding-top: 20px;
-    position: relative;
-    margin-top:20px;
-    &:before {
-      position: absolute;
-      content: 'Unpublished';
-      font-family: $font-family-monospace;
-      top: -32px;
-      left: 10px;
-      color: $white;
-    }
-  }
-  .page-node-status-unpublished.admin-ui-hide .content & {
-    display: none;
-  }
-}

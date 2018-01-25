@@ -111,13 +111,8 @@
   padding: 15px;
   clear: both;
   display: none;
-  .mm-menu & {
-    display: block;
-  }
-  // only hide for desktop
   @include respond-to(desktop-and-up){
     width: 85%;
-    display: block;
     .js & {
       display: none;
       position: absolute;
@@ -161,27 +156,9 @@
   background-color: lighten($gray-lighter,5%);
   padding: $spacing-base;
   margin: 0;
-  * + .description,
-  * + .search-help-link {
-    margin-top: $spacing-base / 3;
-  }
   .search-help-link {
     @include font-smoothing;
     display: inline-block;
   }
-  & + * {
-    margin-top: $spacing-base;
-  }
 }
 
-.search-advanced {
-  @include font-smoothing;
-  .search-help-link + & {
-    display: inline-block;
-    margin-top: .3em;
-    @include respond-to(tablet-large-and-up) {
-      margin-left: 1em;
-      margin-top: 0;
-    }
-  }
-}

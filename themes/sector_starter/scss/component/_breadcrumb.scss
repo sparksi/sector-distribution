@@ -28,6 +28,10 @@
       &:focus {
         text-decoration: underline;
       }
+      &:focus {
+        color: $black;
+        outline-offset: 0;
+      }
     }
     + li {
       &:before {
