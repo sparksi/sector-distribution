@@ -11,43 +11,21 @@
  *    tablet breakpoint ('t' for tablet) and 3 columns for desktop and up
  *    ('d' for desktop).
  *
- * 2. We add an additional class (responsive-layout--item) because
- *    views converts the correct class (responsive-layout__slat).
- *    See https://www.drupal.org/node/1371118
  */
 .responsive-layout--t2-d3,
 %responsive-layout--t2-d3 { /* [1] */
-  @include container(content-box);
-  .responsive-layout--item, /* [2] */
   .responsive-layout__item,
   %responsive-layout__item {
     @include respond-to(tablet) {
       &:nth-child(odd) {
-        @include span(3 of 6 before first);
-        clear: both;
       }
       &:nth-child(even) {
-        @include span(3 of 6 before last);
-      }
-      .lt-ie9 & {
-        float: left;
-        width: 48%;
-        margin-right: 2%;
       }
     }
     @include respond-to(desktop-and-up) {
-      @include span(4 of 12 before);
       &:nth-child(3n+1) {
-        @include span(4 of 12 before first);
-        clear: both;
       }
       &:nth-child(3n+3) {
-        @include span(4 of 12 before last);
-      }
-      .lt-ie9 & {
-        width: 30%;
-        margin-right: 3.3%;
-        margin-left: 0;
       }
     }
   }
@@ -56,21 +34,12 @@
 /* d2 */
 .responsive-layout--d2,
 %responsive-layout--d2 {
-  .responsive-layout--item,
   .responsive-layout__item,
   %responsive-layout__item  {
     @include respond-to(tablet-large-and-up) {
       &:nth-child(odd) {
-        @include span(3 of 6 before first);
-        clear: both;
       }
       &:nth-child(even) {
-        @include span(3 of 6 before last);
-      }
-      .lt-ie9 & {
-        float: left;
-        width: 48%;
-        margin-right: 2%;
       }
     }
   }
@@ -79,23 +48,12 @@
 /* d3 */
 .responsive-layout--d3,
 %responsive-layout--d3 {
-  .responsive-layout--item,
   .responsive-layout__item,
   %responsive-layout__item {
     @include respond-to(tablet-large-and-up) {
-      @include span(4 of 12 before);
       &:nth-child(3n+1) {
-        @include span(4 of 12 before first);
-        clear: both;
       }
       &:nth-child(3n+3) {
-        @include span(4 of 12 before last);
-      }
-      .lt-ie9 & {
-        float: left;
-        width: 30%;
-        margin-right: 3.3%;
-        margin-left: 0;
       }
     }
   }

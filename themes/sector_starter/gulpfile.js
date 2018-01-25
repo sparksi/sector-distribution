@@ -63,7 +63,6 @@ let sassConfig = {
   // includePaths: array of directories from which to load 3rd party @imports.
   includePaths: [
     './bower_components/breakpoint-sass/stylesheets',
-    './bower_components/susy/sass',
     './bower_components/compass-mixins/lib'
   ]
 };
