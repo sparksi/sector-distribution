@@ -23,7 +23,6 @@
         "drupal-composer/drupal-scaffold": "^2.0.1",
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "^8.0@stable",
-        "drupal/console": "~1.0",
         "drupal/bootstrap": "^3.0",
         "drupal/block_class": "^1.0",
         "drupal/devel": "^1.0",
