@@ -16,53 +16,6 @@
     "asset.packagist": {
       "type": "composer",
       "url": "https://asset-packagist.org"
-    },
-    "mmenu/main": {
-      "extra": {
-        "installer-name": "main"
-      },
-      "type": "package",
-      "package": {
-        "name": "mmenu/main",
-        "version": "4.7.5",
-        "type": "drupal-library",
-        "dist": {
-          "url": "https://github.com/FrDH/jQuery.mmenu/archive/v4.7.5.zip",
-          "type": "zip"
-        }
-      }
-    },
-    "mmenu/hammer": {
-      "extra": {
-        "installer-name": "hammer"
-      },
-      "type": "package",
-      "package": {
-        "name": "mmenu/hammer",
-        "version": "2.0.8",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/hammerjs/hammer.js.git",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
-    },
-    "mmenu/jquery.hammer": {
-      "extra": {
-        "installer-name": "jquery.hammer"
-      },
-      "type": "package",
-      "package": {
-        "name": "mmenu/jquery.hammer",
-        "version": "2.0.0",
-        "type": "drupal-library",
-        "source": {
-          "url": "https://github.com/hammerjs/jquery.hammer.js.git",
-          "type": "git",
-          "reference": "origin/master"
-        }
-      }
     }
   },
   "require": {
@@ -93,10 +46,6 @@
     "drupal/better_formats": "^1.0",
     "drupal/google_analytics": "^2.0",
     "drupal/autologout": "^1.0",
-    "drupal/mmenu": "1.x-dev",
-    "mmenu/main": "4.7.5",
-    "mmenu/hammer": "2.0.8",
-    "mmenu/jquery.hammer": "2.0.0",
     "drupal/metatag": "^1.0",
     "drupal/entityqueue": "^1.0",
     "drupal/fieldblock": "^2.0",
@@ -160,11 +109,6 @@
       ]
     },
     "patches": {
-      "drupal/mmenu": {
-        "Allow changing of offCanvas position (D8)": "https://www.drupal.org/files/issues/mmenu_allow_change_of_position-2816231.patch",
-        "Place libraries outside the mmenu dir": "https://www.drupal.org/files/issues/libraries_outside_mmenu-2884248-4.patch",
-        "Config export patch": "https://www.drupal.org/files/issues/config-export-fix-2922062-1.patch"
-      },
       "drupal/fieldblock": {
         "PHP exception when placing block": "https://www.drupal.org/files/issues/fieldblock_get_complete_form_state_2810783_1.patch"
       },

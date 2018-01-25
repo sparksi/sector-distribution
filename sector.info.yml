@@ -90,7 +90,6 @@ dependencies:
  - password_policy_history
  - password_policy_length
  - metatag
- - mmenu
 
 themes:
  - bootstrap

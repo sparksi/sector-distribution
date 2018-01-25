@@ -79,7 +79,7 @@
     attach: (context, settings) => {
       
       let flyout = $('.search--flyout', context);
-      let toggle = $('.js-toggle-flyout-search', context);
+      let toggle = $('.js-toggle-search, .js-toggle-flyout-search', context);
 
       // Functions for tidyness
       function toggleFlyoutSearch() {
@@ -108,7 +108,90 @@
           hideFlyoutSearch();
         }
       });
+ 
+    }
+  };
 
+  Drupal.behaviors.navigationHelpers = {
+    attach: function attach(context, settings) {
+
+      var _navigation = $(".header .navigation", context);
+      var _navigation_toggle = $(".js-toggle-navigation", context);
+
+      _navigation_toggle.on('click', function () {
+        _navigation.toggleClass('navigation-is-open');
+        $(this).toggleClass('toggle--active');
+      });
+
+      $(".is-expanded", _navigation).each(function () {
+        var _link = $(this).find('> .menu__link');
+        $('<span />', {
+          'text': 'Expand',
+          'class': 'btn btn-expand'
+        }).insertAfter(_link).on('click', function (evt) {
+          $(this).parent('.menu__item').toggleClass('is-open');
+        });
+        var _parent_title = _link.text();
+
+        //$(this).find('> .menu__container > .menu__wrapper').attr('data-parent', _parent_title);
+
+        var submenu = $(this).find('> .menu__container > .menu__wrapper');
+
+        $('<a />', {
+          'href': _link.attr('href'),
+          'text': _link.text(),
+          'class': 'menu__leading-link'
+        }).prependTo(submenu);
+      });
+
+      // touch dropdown navigation
+      var desktop_breakpoint = 992;
+
+      if ($(window).width() >= desktop_breakpoint && Modernizr.touchevents) {
+        var links = $('.expanded .menu__link', '.touchevents .header .navigation').not('.menu .menu .menu__link', '.touchevents .header .navigation');
+        links.on('touchend', function (evt) {
+          if (!$(this).hasClass('js-opened')) {
+            $(".js-opened", _navigation).removeClass('js-opened');
+            $(this).addClass('js-opened');
+            evt.preventDefault();
+          }
+        });
+      }
+    }
+  };
+
+
+
+  Drupal.behaviors.flyoutMenu = {
+    attach: function attach(context, settings) {
+      var flyout = $('.navigation--primary', context);
+      var toggle = $('.js-toggle-navigation .icon--menu', context);
+
+      // Functions for tidyness
+      function toggleFlyoutMenu() {
+        flyout.toggleClass('menu-is-active');
+      }
+
+      function hideFlyoutMenu() {
+        flyout.removeClass('menu-is-active');
+        toggle.removeClass('active');
+      }
+
+      toggle.on({
+        click: function click() {
+          $(this).toggleClass('active');
+          toggleFlyoutMenu();
+          return false;
+        }
+      }); 
+
+      // Detect a click outside the element and hide.
+      // https://css-tricks.com/dangers-stopping-event-propagation/
+      $(document).on('click', function (event) {
+        if (!$(event.target).closest('.navigation--primary').length) {
+          hideFlyoutMenu();
+        }
+      });
     }
   };
 })(jQuery);

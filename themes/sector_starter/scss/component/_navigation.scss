@@ -11,13 +11,39 @@
     @include make-md-column(7);
    // @include make-lg-column(7);
     @include make-lg-column-offset(1);
+
     @include respond-to(tablet-large-and-down) {
       display: none;
+      margin-top: $spacing-base;
+      > .menu {
+        border-bottom: 1px solid $white;
+      }
+      &.menu-is-active {
+        display: block;
+      }
     }
     > .menu {
-      display: flex;
-      align-items: center;
-      overflow: hidden;
+      @include respond-to(desktop-and-up) {
+        display: flex;
+        align-items: center;
+        > .menu__item {
+          ~ .menu__item {
+            margin-left: 0.5em;
+          }
+        }
+      }
+      .menu {
+        .menu {
+          left: 100%;
+          top: 0;
+        }
+      }
+      .menu {
+        @include respond-to(desktop-and-up) {
+          background-color: rgba(255,255,255,0.6);
+          position: absolute;
+        }
+      }
     }
     .menu {
       padding: 0;
@@ -25,16 +51,52 @@
         display: none;
       }
       @include respond-to(tablet) {
-        padding: 0 0 $spacing-base;
+        // padding: 0 0 $spacing-base;
       }
     }
     .menu__item {
-      ~ .menu__item {
-        margin-left: 0.5em;
+      @include respond-to(tablet-large-and-down) {
+        border-top: 1px solid $white;
+        position: relative;
+      }
+      @include respond-to(desktop-and-up) {
+        &:hover {
+          > .menu {
+            display: block;
+          }
+        }
+      }
+      @include respond-to(tablet-large-and-down) {
+        .menu__item {
+          .menu__link {
+            padding-left: 18px;
+          }
+          .menu__item {
+            .menu__link {
+              padding-left: 28px;
+            }
+            .menu__item {
+              .menu__link {
+                padding-left: 38px;
+              }
+            }
+          }
+        }
       }
       &.active-trail {
         .menu__link {
           text-decoration: underline;
+        }
+      }
+      @include respond-to(tablet-large-and-down) {
+        &.is-open {
+          > .menu {
+            display: block;
+          }
+          > .btn-expand:after {
+            -webkit-transform: translateX(-50%) translateY(-50%) rotate(-180deg);
+            transform: translateX(-50%) translateY(-50%) rotate(-180deg);
+          }
         }
       }
     }
@@ -57,7 +119,6 @@
     }
   }
 }
-
 .navigation--secondary {
   @include respond-to(tablet-large-and-down) {
     display: none;

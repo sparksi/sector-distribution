@@ -111,6 +111,20 @@
   padding: 15px;
   clear: both;
   display: none;
+
+  @include respond-to(tablet-and-down){
+    margin-top: $spacing-base;
+  }
+
+  &.search-is-active {
+    display: block;
+  }
+
+
+  .mm-menu & {
+    display: block;
+  }
+  // only hide for desktop
   @include respond-to(desktop-and-up){
     width: 85%;
     .js & {
@@ -161,4 +175,3 @@
     display: inline-block;
   }
 }
-
