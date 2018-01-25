@@ -110,32 +110,3 @@
     }
   }
 }
-
-.promotion--last-updated {
-  @include make-xs-column(12);
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  margin-top: $spacing-base;
-  line-height: 1;
-  white-space: nowrap;
-  @include respond-to(desktop-and-up){
-    margin-top: $spacing-double;
-  }
-  > .block-title {
-    font-family: $font-family-sans-serif;
-    font-size: $font-size-base;
-    font-size: 16px;
-    font-weight: normal;
-    color: darken(#888888,10%);
-    ~ .field {
-      margin-left: .25em;
-      margin-top: 0;
-      @include font-smoothing;
-    }
-  }
-  .field--name-field-last-updated {
-    @extend %date;
-    font-size: 16px;
-  }
-}

@@ -13,16 +13,13 @@
  * Use these classes to theme elements like teasers eg: via Display Suite.
  * or apply to Drupal views.
  */
-$slat-border: $brand-border;
-$slat-background-color: $gray-lighter;
-$slat-text-color: $text-color;
 
 .slat__media {
+  @include single-transition(all, 0.05s, ease-in);
+  border: 1px solid darken($gray-lighter, 10%);
   > a {
     display: block;
   }
-  @include single-transition(all, 0.05s, ease-in);
-  border: 1px solid darken($gray-lighter, 10%);
 }
 
 .slat__title {
@@ -36,9 +33,6 @@ $slat-text-color: $text-color;
       color: $brand-visited;
     }
   }
-  + * {
-    margin-top: $spacing-quarter;
-  }
 }
 
 .slat__body {
@@ -48,12 +42,6 @@ $slat-text-color: $text-color;
   }
   @include respond-to(tablet-and-up) {
     line-height: $line-height-base-prose;
-    p + * {
-      margin-top: ($line-height-prose-computed/2);
-    }
-  }
-  * + & {
-    margin-top: $spacing-half;
   }
 }
 
@@ -85,6 +73,11 @@ $slat-text-color: $text-color;
 .slat__term {
   font-size: 14px;
   color: $gray-light;
+  > a {
+    &:focus {
+      outline-offset: 0;
+    }
+  }
 }
 
 .slat__location {
@@ -110,7 +103,7 @@ $slat-text-color: $text-color;
     @include single-transition(none);
   }
   .slat__body {
-    color: $slat-text-color;
+    color: $text-color;
   }
   .slat__date {
     color: lighten($gray-light,10%);
@@ -124,7 +117,7 @@ $slat-text-color: $text-color;
       @include single-transition(all, 0.05s, ease-in);
     }
     .slat__body {
-      color: $slat-text-color;
+      color: $text-color;
     }
     .slat__date {
       color: lighten($gray-light,10%);
@@ -132,6 +125,10 @@ $slat-text-color: $text-color;
     .slat__media {
       border: 1px solid darken($gray-lighter, 30%);
     }
+  }
+  &:focus {
+    background-color: transparent;
+    outline-offset: 0;
   }
   &:visited {
     .slat__title {
@@ -150,113 +147,6 @@ $slat-text-color: $text-color;
         margin-left: 6px;
         vertical-align: middle;
       }
-    }
-  }
-}
-
-.slat--has-background-colour {
-  background-color: $slat-background-color;
-  .slat__content {
-    padding: 0 $spacing-base $spacing-base;
-  }
-}
-
-.slat--sometimes-has-left-aligned-media,
-.slat--sometimes-has-right-aligned-media {
-  .slat__media {
-    margin-bottom: $spacing-base;
-  }
-  .slat__content {
-    padding: 0 0 $spacing-half 0;
-  }
-  &.slat--has-background-colour {
-    .slat__content {
-      padding: 0 $spacing-half $spacing-half;
-      @include respond-to(tablet-and-up) {
-        padding: 0 $spacing-three-quarters $spacing-half 0;
-      }
-    }
-  }
-}
-
-.slat--sometimes-has-left-aligned-media {
-  .slat__media {
-    @include respond-to(tablet) {
-      @include span(3 of 6 before first);
-      margin-right: $spacing-and-half;
-    }
-    @include respond-to(desktop-and-up) {
-      @include span(5 of 12 before first);
-      margin-right: $spacing-and-half;
-    }
-  }
-}
-
-.slat--sometimes-has-right-aligned-media {
-  .slat__media {
-    @include respond-to(tablet) {
-      @include span(3 of 6 before first);
-      margin-left: $spacing-and-half;
-    }
-    @include respond-to(desktop-and-up) {
-      @include span(5 of 12 before first);
-      margin-left: $spacing-and-half;
-    }
-  }
-}
-
-.slat--always-has-left-aligned-media,
-.slat--always-has-right-aligned-media {
-  &.slat--has-background-colour {
-    @include clearfix;
-    .slat__content {
-      padding: 0 $spacing-half $spacing-half;
-      @include respond-to(tablet-and-up) {
-        padding: 0 $spacing-three-quarters $spacing-half 0;
-      }
-    }
-  }
-}
-
-.slat--always-has-left-aligned-media {
-  .slat__media {
-    @include respond-to(tablet) {
-      @include span(3 of 6 before first);
-    }
-    @include respond-to(desktop-and-up) {
-      @include span(5 of 12 before first);
-    }
-  }
-  .slat__content {
-    @include respond-to(tablet) {
-      @include span(3 of 6 before last);
-    }
-    @include respond-to(desktop-and-up) {
-      @include span(7 of 12 before last);
-    }
-  }
-}
-
-.slat--always-has-right-aligned-media {
-  .slat__media {
-    @include respond-to(tablet) {
-      @include span(3 of 6 before last);
-    }
-    @include respond-to(desktop-and-up) {
-      @include span(5 of 12 before last);
-    }
-  }
-  .slat__content {
-    @include respond-to(tablet) {
-      @include span(3 of 6 before first);
-    }
-    @include respond-to(desktop-and-up) {
-      @include span(7 of 12 before first);
-    }
-  }
-  &.slat--has-background-colour {
-    .slat__content {
-      padding: 0 0 $spacing-half $spacing-base;
     }
   }
 }

@@ -3,11 +3,11 @@
  * Global Variables
  */
 
-$line-height-base-em: 1.444em;
+$line-height-base-em: 1.555em;
 
 /* Custom typography settings for prose (See _prose.scss for explanation). */
-$line-height-base-prose: 1.611; // 29/18
-$line-height-base-prose-em: 1.611em;
+$line-height-base-prose: 1.722;
+$line-height-base-prose-em: 1.722em;
 $line-height-prose-computed: floor(($font-size-base * $line-height-base-prose)); // ~29px
 
 /* Establish custom spacing variables based on line height to facilitate vertical rhythm */

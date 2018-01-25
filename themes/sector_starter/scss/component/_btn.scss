@@ -8,6 +8,17 @@
   @include border-radius(0);
   white-space: normal;
   @include font-smoothing;
+  &:focus {
+    outline: 3px solid $brand-focused;
+  }
+}
+.btn-default {
+  > a {
+    &:focus {
+      background-color: transparent;
+      @include tab-focus;
+    }
+  }
 }
 .btn-sm {
   font-size: 14px;
