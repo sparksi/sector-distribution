@@ -1,11 +1,5 @@
 "use strict";
 
-/*
- * == SECTOR == 
- * This is a transpiled file, please make changes to src/filename.js
- * and transpile with `yarn run gulp run babel`
- */
-
 /**
  * Custom javascript
  *
