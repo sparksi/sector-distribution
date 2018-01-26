@@ -36,7 +36,12 @@ const config = {
     sprite : {
       src : `./build/sprite/`,
       svg : './images/sprite.svg',
-      css : './scss/generic/_sprite.scss',
+      mixins : {
+        src : './build/sass/_mixins.scss',
+        filename : '_sprite-mixins.scss',
+        dist : './scss/generic'
+      },
+      dist : './scss/generic/_sprite.scss',
       template : './build/tpl/sprite-template.scss'
     },
     styles : {
@@ -58,6 +63,10 @@ const config = {
       './bower_components/compass-mixins/lib'
     ],
     lint : {      
+      files: {
+        include: 'scss/**/*.scss',
+        ignore : 'scss/admin-ui-toggle.scss'
+      },
       options: {
         'formatter': 'stylish',
         'merge-default-rules': false
@@ -66,8 +75,7 @@ const config = {
         'no-ids': 1,
         'no-mergeable-selectors': 0,
         'bem-depth': 1,
-        'trailing-semicolon': 1,
-        'final-newline': 1
+        'trailing-semicolon': 1
       }
     }
   },
@@ -100,6 +108,9 @@ const config = {
   }
 };
 
+
+
+
 /**
  * Gulp svgSprite task.
  */
@@ -119,7 +130,7 @@ gulp.task('svgSprite', () => {
           bust: config.svg.sprite.bust,
           render: {
             scss: {
-              dest: "../../scss/generic/_sprite.scss",
+              dest: config.paths.sprite.dist,
               template: config.paths.sprite.template
             }
           }
@@ -139,11 +150,10 @@ gulp.task('svgSprite', () => {
  * generic than just _mixins.scss
  */
 gulp.task('copySpriteMixins', () => {
-  log(`Copying build/sass/_mixins.scss to scss/generic/sprite-mixins.scss ...`);
-  return gulp
-    .src('./build/sass/_mixins.scss')
-    .pipe(rename("_sprite-mixins.scss"))
-    .pipe(gulp.dest('./scss/generic'));
+  log(`Copying ${config.paths.sprite.mixins.src} to ${config.paths.sprite.dist} ...`);
+  return gulp.src(config.paths.sprite.mixins.src)
+    .pipe(rename(config.paths.sprite.mixins.filename))
+    .pipe(gulp.dest(config.paths.sprite.mixins.dist));
 });
 
 
@@ -152,9 +162,7 @@ gulp.task('copySpriteMixins', () => {
  *
  * Optimise SVG images before sprite is created
  */
-gulp.task('svgo', () => {
-  log(chalk(`${config.paths.sprite.src}*`));
-  
+gulp.task('svgo', () => {  
   return gulp.src(`${config.paths.sprite.src}*`)
     .pipe(debug({title: 'SVGO: Processed',showFiles:false}))
     .pipe(svg.svgo(config.svg.svgo))
@@ -169,23 +177,20 @@ gulp.task('sass', () => {
   let sass_config = config.sass[environment];
   sass_config.includePaths = config.sass.includePaths;
   
-  //gulp.src('scss/**/*.s+(a|c)ss')
-    
-  
   return gulp.src('scss/**/*.s+(a|c)ss')
     // Initialize the source maps.
     .pipe(gulpif(sass_config.sourceMaps, sourcemaps.init()))
     // Enable globbing and configure it to look for SCSS files.
     .pipe(globbing())
     // Compile the SASS
+    .pipe(sassLint(config.sass.lint))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
     .pipe(sass(sass_config).on('error', sass.logError))
     // Run autoprefixer with the default settings.
     .pipe(autoprefixer())
     // Write sourcemaps into the CSS file.
     .pipe(gulpif(sass_config.sourceMaps, sourcemaps.write()))
-    .pipe(sassLint(config.sass.lint))
-    .pipe(sassLint.format())
-    .pipe(sassLint.failOnError())
     // Send output through vinyl-fs to play nice with ownership.
     .pipe(gulp.dest('./css'));
 });
@@ -225,6 +230,7 @@ gulp.task('eslint', () => {
     }))
     .pipe(eslint.format())
     .pipe(eslint.failAfterError()
+    .pipe(debug({title: 'ESLint: Processed',showFiles:false}))
   );
 });
 
@@ -238,7 +244,8 @@ gulp.task('eslint', () => {
  * are detected. Changes are logged to the console with a relative path.
  */
 gulp.task('watch', () => {
-    
+  
+  // Watch scss directory for changes to .scss or .sass files
   gulp.watch(`${config.paths.styles.sass}**/*.{scss,sass}`, runSequence(
     'sass'
   )).on('change', function(event) {
@@ -246,6 +253,7 @@ gulp.task('watch', () => {
     log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type} , recompiling...`);
   });
   
+  // Watch build/sprite directory for changes to .svg files
   gulp.watch(`${config.paths.sprite.src}*.svg`, runSequence(
     'svgSprite',
     'copySpriteMixins'
@@ -254,6 +262,7 @@ gulp.task('watch', () => {
     log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, rebuilding sprite...`); 
   });
   
+  // Watch js/src directory for changes to .js files
   gulp.watch(`${config.js.src}*.js`, runSequence(
     'eslint',
     'babel'
@@ -270,9 +279,9 @@ gulp.task('watch', () => {
 gulp.task('dev', () => {
   log(chalk`{bold.hex('${config.palette.primary}') ########### \nDevelopment pipeline running ... }`);
   
-  environment = 'dev';
+  environment = 'dev';  // set environment variable
   runSequence(
-    'lint',
+    'eslint',
     'babel',
     'svgo',
     'svgSprite',
@@ -303,7 +312,6 @@ gulp.task('default', () => {
   log(chalk`{bold.hex('${config.palette.tertiary}') ########### \nProduction pipeline running ... }`);
   
   runSequence(
-    'eslint',
     'babel',
     'svgo',
     'svgSprite',
