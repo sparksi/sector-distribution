@@ -124,7 +124,7 @@
 %has-padding-top-and-half {
   padding-top: $spacing-base;
   @include respond-to(desktop-and-up) {
-    padding-top: $spacing-and-half
+    padding-top: $spacing-and-half;
   }
 }
 
