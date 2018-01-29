@@ -113,7 +113,7 @@ The second command, `npm run bower install`, executes a script defined in the `p
 
 **NOTE:** If `bower` does not install its packages, just run this instead: `./node_modules/bower/bin/bower install`. *This is because of an issue with the old version of NodeJS and NPM that come from the Ubuntu repositories.*
 
-The last command, `npm run gulp` or `yarn run gulp`, again executes a script defined in the `package.json`. This script runs Gulp, which simply executes the default commands found in the `gulpfile.js` file. The commands we have defined as default are `sass` (compiles) and `watch` (watches).
+The last command, `npm run gulp` or `yarn run gulp`, again executes a script defined in the `package.json`. This script runs Gulp, which simply executes the default commands found in the `gulpfile.js` file.
 
 #### Known error during default Gulp task:
 
