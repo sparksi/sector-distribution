@@ -105,7 +105,7 @@ Now you can run the 3 commands needed to compile and watch the files in the `./s
 
 or if using yarn
 
-`yarn install && npm run bower install && yarn run gulp`
+`yarn install && yarn run bower install && yarn run gulp`
 
 The first command, `npm install` or `yarn install` will download and install all the modules listed in the `package.json` file into the `./node_modules/` directory.
 
