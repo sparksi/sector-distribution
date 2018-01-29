@@ -45,7 +45,7 @@ $responsive-layout-gutter: $grid-gutter-width / 2;
   @include respond-to(tablet-large-and-up) {
     flex-direction: row;
     > .responsive-layout__item {
-      flex:1;
+      flex: 1;
       ~ .responsive-layout__item {
         margin-top: 0;
       }
@@ -63,7 +63,7 @@ $responsive-layout-gutter: $grid-gutter-width / 2;
         flex-wrap: wrap;
         > .responsive-layout__item {
           width: (100% / $col);
-          flex:none;
+          flex: none;
           margin-top: $spacing-base;
           &:nth-child(-n+#{$col}){
             margin-top: 0;
