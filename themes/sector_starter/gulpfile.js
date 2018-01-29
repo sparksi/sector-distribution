@@ -143,8 +143,8 @@ gulp.task('svgSprite', () => {
 /**
  * Gulp copySpriteMixins task.
  *
- * In order to use our generated sprite, we require the sprite() mixin (and it's various mixin dependencies) 
- * available to call in our theme, so we copy it over to scss/generic and rename the file to something less 
+ * In order to use our generated sprite, we require the sprite() mixin (and it's various mixin dependencies)
+ * available to call in our theme, so we copy it over to scss/generic and rename the file to something less
  * generic than just _mixins.scss
  */
 gulp.task('copySpriteMixins', () => {
@@ -154,27 +154,22 @@ gulp.task('copySpriteMixins', () => {
     .pipe(gulp.dest(config.paths.sprite.mixins.dist));
 });
 
-
 /**
  * Gulp svgo task.
  *
  * Optimise SVG images before sprite is created
  */
-gulp.task('svgo', () => {  
+gulp.task('svgo', () => {
   return gulp.src(`${config.paths.sprite.src}*`)
     .pipe(debug({title: 'SVGO: Processed',showFiles:false}))
     .pipe(svg.svgo(config.svg.svgo))
     .pipe(gulp.dest(config.paths.sprite.src));
 });
 
-
-
-
-
 gulp.task('sass', () => {
   let sass_config = config.sass[environment];
   sass_config.includePaths = config.sass.includePaths;
-  
+
   return gulp.src('scss/**/*.s+(a|c)ss')
     // Initialize the source maps.
     .pipe(gulpif(sass_config.sourceMaps, sourcemaps.init()))
@@ -193,15 +188,10 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('./css'));
 });
 
-
-
-
-
-
 /**
   * Gulp babel task.
   *
-  * Transpiles files in ./js/src directory from ES6 to browser compatible 
+  * Transpiles files in ./js/src directory from ES6 to browser compatible
   * javascript (ES5) and outputs it in ./js/dist directory
   */
 gulp.task('babel', () => {
@@ -212,7 +202,6 @@ gulp.task('babel', () => {
     )
     .pipe(gulp.dest(config.js.dist))
 });
-
 
 /**
   * Gulp eslint task.
@@ -232,9 +221,6 @@ gulp.task('eslint', () => {
   );
 });
 
-
-
-
 /**
  * Gulp watch task.
  *
@@ -242,7 +228,7 @@ gulp.task('eslint', () => {
  * are detected. Changes are logged to the console with a relative path.
  */
 gulp.task('watch', () => {
-  
+
   // Watch scss directory for changes to .scss or .sass files
   gulp.watch(`${config.paths.styles.sass}**/*.{scss,sass}`, runSequence(
     'sass'
@@ -250,33 +236,29 @@ gulp.task('watch', () => {
     let path = event.path.replace(process.cwd(), '..');
     log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type} , recompiling...`);
   });
-  
+
   // Watch build/sprite directory for changes to .svg files
   gulp.watch(`${config.paths.sprite.src}*.svg`, runSequence(
     'svgSprite',
     'copySpriteMixins'
   )).on('change', (event) => {
-    let path = event.path.replace(process.cwd(), '..');    
-    log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, rebuilding sprite...`); 
+    let path = event.path.replace(process.cwd(), '..');
+    log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, rebuilding sprite...`);
   });
-  
   // Watch js/src directory for changes to .js files
   gulp.watch(`${config.js.src}*.js`, runSequence(
     'eslint',
     'babel'
   )).on('change', (event) => {
-    let path = event.path.replace(process.cwd(), '..');    
-    log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, transpiling javascripts...`); 
+    let path = event.path.replace(process.cwd(), '..');
+    log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, transpiling javascripts...`);
   });
 });
-
-
-
 
 // development
 gulp.task('dev', () => {
   log(chalk`{bold.hex('${config.palette.primary}') ########### \nDevelopment pipeline running ... }`);
-  
+
   environment = 'dev';  // set environment variable
   runSequence(
     'eslint',
@@ -293,7 +275,7 @@ gulp.task('dev', () => {
 // sprite-only task
 gulp.task('sprite', () => {
   log(chalk`{bold.hex('${config.palette.quaternary}') ########### \Sprite-only pipeline running ... }`);
-  
+
   runSequence(
     'svgo',
     'svgSprite',
@@ -308,7 +290,7 @@ gulp.task('sprite', () => {
 // Run production tasks by default
 gulp.task('default', () => {
   log(chalk`{bold.hex('${config.palette.tertiary}') ########### \nProduction pipeline running ... }`);
-  
+
   runSequence(
     'babel',
     'svgo',
