@@ -31,6 +31,7 @@ const babel = require('gulp-babel'),
 const config = {
   paths : {
     images : {
+      src : '.images/',
       dest : './images/'
     },
     sprite : {
@@ -62,7 +63,7 @@ const config = {
       './bower_components/breakpoint-sass/stylesheets',
       './bower_components/compass-mixins/lib'
     ],
-    lint : {      
+    lint : {
       files: {
         include: 'scss/**/*.scss',
         ignore : 'scss/admin-ui-toggle.scss'
@@ -84,7 +85,7 @@ const config = {
     dist : './js/dist/',
     lint_rules : {
       "comma-dangle": 2,
-      "quotes": 0      
+      "quotes": 0
     }
   },
   svg : {
@@ -107,9 +108,6 @@ const config = {
     quaternary : '#B28A70'
   }
 };
-
-
-
 
 /**
  * Gulp svgSprite task.

@@ -42,10 +42,8 @@ $brand-blue-gray: #111212;
 
 @import 'sprite';
 
-$ieSprite: '.lt-ie9' !default;
 $sprite: map-get($icons, sprite) !default;
 $baseFontSize: 16px !default;
-$mq-base-font-size: 16px !default;
 
 /**
  * Specify your site domain here. Used to override detection of off-site links
