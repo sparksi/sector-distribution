@@ -6,231 +6,297 @@
  * This enables us to group and use paths as variables.
  */
 
-const basePaths = {
-  src: 'build/',
-  dest: 'html/assets/',
-};
-const paths = {
-  images: {
-    dest: './images/'
+const log = console.log;
+let environment = 'prod';   // default to prod
+
+const babel = require('gulp-babel'),
+      chalk = require('chalk'),
+      debug = require('gulp-debug'),
+      eslint = require('gulp-eslint')
+      gulp = require('gulp'),
+      sass = require('gulp-sass'),
+      sourcemaps = require('gulp-sourcemaps'),
+      globbing = require('gulp-sass-glob'),
+      autoprefixer = require('gulp-autoprefixer'),
+      gulpif = require('gulp-if'),
+      runSequence = require('run-sequence'),
+      sassLint = require('gulp-sass-lint'),
+      size = require('gulp-size'),
+      rename = require("gulp-rename"),
+      svg = {
+        svgo : require('gulp-svgo'),
+        sprite : require('gulp-svg-sprite')
+      };
+
+const config = {
+  paths : {
+    images : {
+      src : '.images/',
+      dest : './images/'
+    },
+    sprite : {
+      src : `./build/sprite/`,
+      svg : './images/sprite.svg',
+      mixins : {
+        src : './build/sass/_mixins.scss',
+        filename : '_sprite-mixins.scss',
+        dist : './scss/generic'
+      },
+      dist : './scss/generic/_sprite.scss',
+      template : './build/tpl/sprite-template.scss'
+    },
+    styles : {
+      css : './css/',
+      sass : './scss/'
+    }
   },
-  sprite: {
-    src: `${basePaths.src}sprite/*`,
-    svg: '../../images/sprite.svg',
-    css: '../../scss/generic/_sprite.scss'
+  sass : {
+    dev : {
+      outputStyle : 'expanded',
+      sourceMaps : true,
+    },
+    prod : {
+      outputStyle : 'compressed',
+      sourceMaps : false
+    },
+    includePaths : [
+      './bower_components/breakpoint-sass/stylesheets',
+      './bower_components/compass-mixins/lib'
+    ],
+    lint : {
+      files: {
+        include: 'scss/**/*.scss',
+        ignore : 'scss/admin-ui-toggle.scss'
+      },
+      options: {
+        'formatter': 'stylish',
+        'merge-default-rules': false
+      },
+      rules: {
+        'no-ids': 1,
+        'no-mergeable-selectors': 0,
+        'bem-depth': 1,
+        'trailing-semicolon': 1
+      }
+    }
   },
-  templates: {
-    src: `${basePaths.src}tpl/`
+  js : {
+    src : './js/src/',
+    dist : './js/dist/',
+    lint_rules : {
+      "comma-dangle": 2,
+      "quotes": 0
+    }
+  },
+  svg : {
+    sprite : {
+      padding : 5,
+      layout : 'diagonal',
+      bust : false,
+      mapname : 'icons'
+    },
+    svgo  : {
+      removeTitle : true,
+      removeDesc : true,
+      cleanupIDs : true
+    }
+  },
+  palette : {
+    primary : '#436FFC',
+    secondary : '#02B290',
+    tertiary : '#EF604D',
+    quaternary : '#B28A70'
   }
 };
 
-const gulp = require('gulp');
-const sass = require('gulp-sass');
-const sourcemaps = require('gulp-sourcemaps');
-const globbing = require('gulp-sass-glob');
-const autoprefixer = require('gulp-autoprefixer');
-const gulpif = require('gulp-if');
-const vfs = require('vinyl-fs');
-const rename = require("gulp-rename");
-const babel = require('gulp-babel');
-const header = require('gulp-header');
-
-/* Declared in a $ object to group SVG related var */
-let $ = {
-  gutil: require('gulp-util'),
-  svgSprite: require('gulp-svg-sprite'),
-  svg2png: require('gulp-svg2png'),
-  size: require('gulp-size'),
-};
-
-/**
- * Automated SVG'S with png fallback. Reproduced with permission from Mike Street.
- * https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
- */
-
-/* Pretty colours for the output */
-let changeEvent = (evt) => {
-  $.gutil.log('File', $.gutil.colors.cyan(evt.path.replace(new RegExp(`/.*(?=/${basePaths.src})/`), '')), 'was', $.gutil.colors.magenta(evt.type));
-};
-
-
-/**
- * Default SASS settings.
- */
-let sassConfig = {
-  // outputStyle: nested, compact, expanded, compressed.
-  outputStyle: 'expanded',
-  // includePaths: array of directories from which to load 3rd party @imports.
-  includePaths: [
-    './bower_components/breakpoint-sass/stylesheets',
-    './bower_components/compass-mixins/lib'
-  ]
-};
-
-
-/**
- * Default flags for gulp-if.
- */
-var flags = {
-  sourceMaps: true
-};
-
-
-
 /**
  * Gulp svgSprite task.
- *
  */
 gulp.task('svgSprite', () => {
-  return gulp.src(paths.sprite.src)
-    .pipe($.svgSprite({
+  return gulp.src(`${config.paths.sprite.src}*`)
+    .pipe(svg.sprite({
       shape: {
         spacing: {
-          padding: 5
+          padding: config.svg.sprite.padding
         }
       },
       mode: {
         css: {
           dest: "./",
-          layout: "diagonal",
-          sprite: paths.sprite.svg,
-          bust: false,
+          layout: config.svg.sprite.layout,
+          sprite: `${config.paths.sprite.src}*`,
+          bust: config.svg.sprite.bust,
           render: {
             scss: {
-              dest: "../../scss/generic/_sprite.scss",
-              template: "build/tpl/sprite-template.scss"
+              dest: config.paths.sprite.dist,
+              template: config.paths.sprite.template
             }
           }
         }
       },
       variables: {
-        mapname: "icons"
+        mapname: config.svg.sprite.mapname
       }
-    }))
-    .pipe(gulp.dest(basePaths.dest));
+    }));
 });
-
-/**
- * Gulp pngSprite task.
- *
- */
-gulp.task('pngSprite', ['svgSprite'], () => {
-  return gulp.src(basePaths.dest + paths.sprite.svg)
-    .pipe($.svg2png())
-    .pipe($.size({
-      showFiles: true
-    }))
-    .pipe(gulp.dest(paths.images.dest));
-});
-
-/**
- * Gulp sprite task.
- *
- */
-gulp.task('sprite', ['pngSprite']);
-
 
 /**
  * Gulp copySpriteMixins task.
  *
- * In order to use our generated sprite, we require the sprite() mixin (and it's various mixin dependencies) 
- * available to call in our theme, so we copy it over to scss/generic and rename the file to something less 
+ * In order to use our generated sprite, we require the sprite() mixin (and it's various mixin dependencies)
+ * available to call in our theme, so we copy it over to scss/generic and rename the file to something less
  * generic than just _mixins.scss
  */
 gulp.task('copySpriteMixins', () => {
-  console.log('Copying build/sass/_mixins.scss to scss/generic/sprite-mixins.scss ...');
-  return gulp
-    .src('./build/sass/_mixins.scss')
-    .pipe(rename("_sprite-mixins.scss"))
-    .pipe(gulp.dest('./scss/generic'));
+  log(`Copying ${config.paths.sprite.mixins.src} to ${config.paths.sprite.dist} ...`);
+  return gulp.src(config.paths.sprite.mixins.src)
+    .pipe(rename(config.paths.sprite.mixins.filename))
+    .pipe(gulp.dest(config.paths.sprite.mixins.dist));
 });
 
 /**
- * Gulp compile function.
+ * Gulp svgo task.
  *
- * Runs ./scss through a Gulp pipeline and writes the output to ./css.
+ * Optimise SVG images before sprite is created
  */
-function compilePipeline(sassConfig, flags) {
-  gulp.src('./scss/*.scss')
+gulp.task('svgo', () => {
+  return gulp.src(`${config.paths.sprite.src}*`)
+    .pipe(debug({title: 'SVGO: Processed',showFiles:false}))
+    .pipe(svg.svgo(config.svg.svgo))
+    .pipe(gulp.dest(config.paths.sprite.src));
+});
+
+gulp.task('sass', () => {
+  let sass_config = config.sass[environment];
+  sass_config.includePaths = config.sass.includePaths;
+
+  return gulp.src('scss/**/*.s+(a|c)ss')
     // Initialize the source maps.
-    .pipe(gulpif(flags.sourceMaps, sourcemaps.init()))
+    .pipe(gulpif(sass_config.sourceMaps, sourcemaps.init()))
     // Enable globbing and configure it to look for SCSS files.
     .pipe(globbing())
     // Compile the SASS
-    .pipe(sass(sassConfig).on('error', sass.logError))
+    .pipe(sassLint(config.sass.lint))
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
+    .pipe(sass(sass_config).on('error', sass.logError))
     // Run autoprefixer with the default settings.
     .pipe(autoprefixer())
     // Write sourcemaps into the CSS file.
-    .pipe(gulpif(flags.sourceMaps, sourcemaps.write()))
+    .pipe(gulpif(sass_config.sourceMaps, sourcemaps.write()))
     // Send output through vinyl-fs to play nice with ownership.
-    .pipe(vfs.dest('./css'));
-}
-
-/**
- * Gulp SASS task.
- *
- * Calls compilePipeline() with the default settings.
- */
-gulp.task('sass', () => {
-  compilePipeline(sassConfig, flags);
+    .pipe(gulp.dest('./css'));
 });
 
 /**
- * Gulp production task.
- *
- * Calls compilePipeline() with settings and flags optimised for production.
- *
- * Run this task prior to your project going 'LIVE'. Removing source maps
- * alone reduces the size of your CSS by 60-80%.
- */
-gulp.task('production', ['babel'], () => {
-  sassConfig.outputStyle = 'compressed';
-  flags.sourceMaps = false;
-  compilePipeline(sassConfig, flags);
+  * Gulp babel task.
+  *
+  * Transpiles files in ./js/src directory from ES6 to browser compatible
+  * javascript (ES5) and outputs it in ./js/dist directory
+  */
+gulp.task('babel', () => {
+  return gulp.src(`${config.js.src}*.js`)
+    .pipe(babel({
+      presets: ['env']
+      })
+    )
+    .pipe(gulp.dest(config.js.dist))
+});
+
+/**
+  * Gulp eslint task.
+  *
+  * Inherits rules from .eslintrc, applies to files in js/src
+  */
+gulp.task('eslint', () => {
+  return gulp.src(['./js/src/*.js','!node_modules/**'])
+    .pipe(eslint({
+      "parserOptions": {
+        "ecmaVersion": 6,
+      }
+    }))
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError()
+    .pipe(debug({title: 'ESLint: Processed',showFiles:false}))
+  );
 });
 
 /**
  * Gulp watch task.
  *
- * Watches the ./scss directory for changes and runs the 'sass' task if any
+ * Watches directories for changes and runs some tasks if changes
  * are detected. Changes are logged to the console with a relative path.
  */
 gulp.task('watch', () => {
-  gulp.watch('./scss/**/*.{scss,sass}', ['sass']).on('change', (event) => {
-    const path = event.path.replace(process.cwd(), '..');
-    console.log(`File ${path} was ${event.type}, recompiling...`);
+
+  // Watch scss directory for changes to .scss or .sass files
+  gulp.watch(`${config.paths.styles.sass}**/*.{scss,sass}`, runSequence(
+    'sass'
+  )).on('change', function(event) {
+    let path = event.path.replace(process.cwd(), '..');
+    log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type} , recompiling...`);
   });
-  // Watch when new SVG's are added or modified
-  gulp.watch(paths.sprite.src, ['sprite']).on('change', (evt) => {
-    changeEvent(evt);
+
+  // Watch build/sprite directory for changes to .svg files
+  gulp.watch(`${config.paths.sprite.src}*.svg`, runSequence(
+    'svgSprite',
+    'copySpriteMixins'
+  )).on('change', (event) => {
+    let path = event.path.replace(process.cwd(), '..');
+    log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, rebuilding sprite...`);
+  });
+  // Watch js/src directory for changes to .js files
+  gulp.watch(`${config.js.src}*.js`, runSequence(
+    'eslint',
+    'babel'
+  )).on('change', (event) => {
+    let path = event.path.replace(process.cwd(), '..');
+    log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, transpiling javascripts...`);
   });
 });
 
+// development
+gulp.task('dev', () => {
+  log(chalk`{bold.hex('${config.palette.primary}') ########### \nDevelopment pipeline running ... }`);
 
-/**
- * Gulp babel task.
- *
- * Transpiles files in ./js/src directory from ES6 to browser compatible 
- * javascript (ES5) and outputs it in ./js directory
- */
-gulp.task('babel', () => {
-  return gulp.src('./js/src/*.js')
-    .pipe(header(`/*
- * == SECTOR == 
- * This is a transpiled file, please make changes to src/filename.js
- * and transpile with \`yarn run gulp run babel\`
- */\n\n\n`))
-    .pipe(babel({
-      presets: ['env']
-    }))
-    .pipe(gulp.dest('./js'))
+  environment = 'dev';  // set environment variable
+  runSequence(
+    'eslint',
+    'babel',
+    'svgo',
+    'svgSprite',
+    'copySpriteMixins',
+    'sass',
+    () => log(chalk`{bold.hex('${config.palette.primary}') Development pipeline done\n########### }`)
+  );
+});
+
+
+// sprite-only task
+gulp.task('sprite', () => {
+  log(chalk`{bold.hex('${config.palette.quaternary}') ########### \Sprite-only pipeline running ... }`);
+
+  runSequence(
+    'svgo',
+    'svgSprite',
+    'copySpriteMixins',
+    'sass',
+    () => log(chalk`{bold.hex('${config.palette.quaternary}') Sprite-only pipeline done\n########### }`)
+  );
 });
 
 
 
-/**
- * Gulp default task.
- *
- * Runs 'copySpriteMixins', 'sass', 'sprite' and then 'watch' to compile and continue watching for changes.
- */
-gulp.task('default', ['copySpriteMixins', 'sass', 'babel', 'sprite', 'watch']);
+// Run production tasks by default
+gulp.task('default', () => {
+  log(chalk`{bold.hex('${config.palette.tertiary}') ########### \nProduction pipeline running ... }`);
+
+  runSequence(
+    'babel',
+    'svgo',
+    'svgSprite',
+    'copySpriteMixins',
+    'sass',
+    () => log(chalk`{bold.hex('${config.palette.tertiary}') Production pipeline done\n########### }`)
+  );
+});

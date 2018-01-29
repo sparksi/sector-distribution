@@ -15,8 +15,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "3.3.4",
-    "breakpoint-sass": "^2.7.0",
-    "compass-mixins": "^1.0.2"
+    "bootstrap-sass": "3.3.7",
+    "breakpoint-sass": "^2.7.1",
+    "compass-mixins": "0.12.6"
   }
 }
