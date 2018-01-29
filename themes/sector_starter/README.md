@@ -53,11 +53,11 @@ If you want to modify SCSS/CSS/SVG sprites etc you'll need to install localised 
 
 This project uses a NodeJS LibSaSS compilation pipeline.
 
-This project uses NPM and Bower to provide a completely localised project dependency environment.
+This project uses NPM or Yarn and Bower to provide a completely localised project dependency environment.
 
 ### Installing the localised dependencies requires the following steps:
 
-1. Install Node Version Manager (NVM)
+1. Install Node Version Manager (NVM) and Node
 2. Install dependencies & Run the project
 
 ### 1. Install Node Version Manager (NVM)
@@ -93,19 +93,27 @@ You can replace "6" with the "x.x" version you prefer if required.
 
 ### 2. Install dependencies & Run the project
 
+Install Yarn (Optional)
+
+ `apt-get install yarn`
+
 Then `cd` inside the root of this theme directory.
 
 Now you can run the 3 commands needed to compile and watch the files in the `./scss/` directory as well as watch for new SVG's in the `/build/sprite/` directory. The SCSS files will be compiled into a `./css/` directory. SVG's will be compiled to the `/images/` directory. Read more about svg here: https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
 
 `npm install && npm run bower install && npm run gulp` (**see note about `bower` below**)
 
-The first command, `npm install` will download and install all the modules listed in the `package.json` file into the `./node_modules/` directory.
+or if using yarn
+
+`yarn install && npm run bower install && yarn run gulp`
+
+The first command, `npm install` or `yarn install` will download and install all the modules listed in the `package.json` file into the `./node_modules/` directory.
 
 The second command, `npm run bower install`, executes a script defined in the `package.json` file. This simple script definition looks for the relative copy of the `bower` module, which is a front-end package manager and will install our front-end tools, such as Susy, into a `./bower_components/` directory.
 
 **NOTE:** If `bower` does not install its packages, just run this instead: `./node_modules/bower/bin/bower install`. *This is because of an issue with the old version of NodeJS and NPM that come from the Ubuntu repositories.*
 
-The last command, `npm run gulp`, again executes a script defined in the `package.json`. This script runs Gulp, which simply executes the default commands found in the `gulpfile.js` file. The commands we have defined as default are `sass` (compiles) and `watch` (watches).
+The last command, `npm run gulp` or `yarn run gulp`, again executes a script defined in the `package.json`. This script runs Gulp, which simply executes the default commands found in the `gulpfile.js` file. The commands we have defined as default are `sass` (compiles) and `watch` (watches).
 
 #### Known error during default Gulp task:
 
@@ -119,7 +127,7 @@ Related issue: https://github.com/gulpjs/gulp/issues/1012
 
 In order to allow Gulp to perform the chmod run `sudo chown -R <your-user-name> scss/generic/_sprite-mixins.scss` at the root of the theme.
 
-Rerun the `npm run gulp` command and the error should be resolved.
+Rerun the `npm run gulp` or `yarn run gulp` command and the error should be resolved.
 
 #### Working with Sass and Gulp
 
@@ -127,6 +135,14 @@ To watch for changes to SASS and new SVG's run the following command
 inside the root of this theme directory.
 
 `npm run gulp`
+
+or with yarn
+
+`yarn run gulp` (One off production command complies sprites and compiles and lints SCSS, JS)
+
+`yarn run gulp watch` (Watches Sprites, SCSS and JS and lints SCSS and JS)
+
+`yarn run gulp dev` (+ Source mapping)
 
 ## CSS Coding Standards and Frontend Architecture
 This theme includes Bootstrap so we already have a frontend architecture framework out of the box. The aim of this theme is to use Bootstrap frontend architecture as a baseline framework whilst embracing the consensus of the Drupal community for all new development of frontend related components.
