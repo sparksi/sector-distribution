@@ -6,7 +6,6 @@ dependencies:
   module:
     - block_class
     - block_visibility_groups
-    - ctools
     - fieldblock
     - node
     - term_condition
@@ -42,7 +41,7 @@ visibility:
     negate: false
     tid: null
     context_mapping:
-          node: '@node.node_route_context:node'
+      node: '@node.node_route_context:node'
   node_type:
     id: node_type
     bundles:

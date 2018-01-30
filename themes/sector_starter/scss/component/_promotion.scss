@@ -102,3 +102,13 @@
     }
   }
 }
+
+.promotion--news {
+  @include make-xs-column(12);
+  @include make-md-column(6);
+}
+
+.promotion--resources {
+  @include make-xs-column(12);
+  @include make-md-column(6);
+}

@@ -1,8 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  content:
+    - 'block_content:basic:e45eaec2-a0a4-4144-b589-f38f255934df'
   module:
     - block_class
+    - block_content
     - block_visibility_groups
     - system
     - term_condition

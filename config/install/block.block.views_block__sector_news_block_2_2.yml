@@ -38,7 +38,7 @@ visibility:
     negate: false
     tid: null
     context_mapping:
-          node: '@node.node_route_context:node'
+      node: '@node.node_route_context:node'
   request_path:
     id: request_path
     pages: '/news/*'

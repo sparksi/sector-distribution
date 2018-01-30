@@ -34,7 +34,7 @@ visibility:
     negate: false
     tid: null
     context_mapping:
-          node: '@node.node_route_context:node'
+      node: '@node.node_route_context:node'
   user_role:
     id: user_role
     roles:

@@ -192,8 +192,24 @@ display:
         sorts: false
         css_class: false
         title: false
-      css_class: content-listing
+        style: false
+        row: false
+      css_class: ''
       title: 'Sector news'
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: list-unstyled
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:
@@ -248,11 +264,14 @@ display:
       link_display: page_1
       link_url: ''
       style:
-        type: default
+        type: html_list
         options:
           row_class: ''
-          default_row_class: true
+          default_row_class: false
           uses_fields: false
+          type: ul
+          wrapper_class: has-margin-top-base
+          class: list-unstyled
       row:
         type: 'entity:node'
         options:

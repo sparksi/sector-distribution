@@ -53,15 +53,21 @@ classes:
     - h2
     - h3
     - h4
+    - has-margin-top-quarter
     - has-margin-top-half
     - has-margin-top-base
+    - has-margin-right-quarter
+    - has-margin-left-quarter
+    - has-margin-right-half
+    - has-margin-left-half
     - has-no-margin-top
+    - has-no-margin-bottom
+    - has-no-margin
     - prose
     - caption
     - small
     - text-right
     - text-center
     - text-center-wide-and-up
-    - has-padding-left-one-col
-    - has-padding-right-one-col
+    - has-line-height-prose
 use_field_names: true

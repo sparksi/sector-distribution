@@ -13,11 +13,11 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'promotion promotion--news hidden-print col-xs-12 col-md-6 has-margin-top-triple'
+    classes: 'promotion promotion--news has-margin-top-triple'
 id: views_block__sector_news_block_2
 theme: sector_starter
-region: content
-weight: -10
+region: post_content
+weight: -18
 provider: null
 plugin: 'views_block:sector_news-block_2'
 settings:
@@ -44,4 +44,3 @@ visibility:
     tid: null
     context_mapping:
       node: '@node.node_route_context:node'
-
