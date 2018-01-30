@@ -27,19 +27,11 @@
 }
 
 .promotion--brand {
-  .header & {
-    @include make-xs-column(10);
-    @include make-md-column(3);
-    margin-top: 15px;
-    @include respond-to(desktop-and-up) {
-      margin-top: 0;
-    }
-  }
-  .post-footer & {
-    @include make-xs-column(12);
-    @include respond-to(tablet-and-up) {
-      display: none;
-    }
+  @include make-xs-column(10);
+  @include make-md-column(3);
+  margin-top: 11px;
+  @include respond-to(desktop-and-up) {
+    margin-top: 0;
   }
 }
 

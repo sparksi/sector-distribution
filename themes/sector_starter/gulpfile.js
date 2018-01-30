@@ -35,14 +35,14 @@ const config = {
       dest : './images/'
     },
     sprite : {
-      src : `./build/sprite/`,
-      svg : './images/sprite.svg',
+      src : './build/sprite/',
+      svg : '../../images/sprite.svg',
       mixins : {
         src : './build/sass/_mixins.scss',
         filename : '_sprite-mixins.scss',
         dist : './scss/generic'
       },
-      dist : './scss/generic/_sprite.scss',
+      dist : '_sprite.scss', // contains generated $icons variable
       template : './build/tpl/sprite-template.scss'
     },
     styles : {
@@ -112,7 +112,7 @@ const config = {
 /**
  * Gulp svgSprite task.
  */
-gulp.task('svgSprite', () => {
+gulp.task('svgSprite', () => {  
   return gulp.src(`${config.paths.sprite.src}*`)
     .pipe(svg.sprite({
       shape: {
@@ -124,12 +124,12 @@ gulp.task('svgSprite', () => {
         css: {
           dest: "./",
           layout: config.svg.sprite.layout,
-          sprite: `${config.paths.sprite.src}*`,
+          sprite : config.paths.sprite.svg,
           bust: config.svg.sprite.bust,
           render: {
             scss: {
-              dest: config.paths.sprite.dist,
-              template: config.paths.sprite.template
+              dest: '_sprite.scss',
+              template: config.paths.sprite.template    // ./build/tpl/sprite-template.scss
             }
           }
         }
@@ -137,7 +137,8 @@ gulp.task('svgSprite', () => {
       variables: {
         mapname: config.svg.sprite.mapname
       }
-    }));
+    }))
+    .pipe(gulp.dest(`${config.paths.styles.sass}generic`));
 });
 
 /**
@@ -230,28 +231,34 @@ gulp.task('eslint', () => {
 gulp.task('watch', () => {
 
   // Watch scss directory for changes to .scss or .sass files
-  gulp.watch(`${config.paths.styles.sass}**/*.{scss,sass}`, runSequence(
-    'sass'
-  )).on('change', function(event) {
+  gulp.watch(`${config.paths.styles.sass}**/*.{scss,sass}`).on('change', function(event) {
     let path = event.path.replace(process.cwd(), '..');
     log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type} , recompiling...`);
+    
+    runSequence(
+      'sass'
+    );
   });
 
   // Watch build/sprite directory for changes to .svg files
-  gulp.watch(`${config.paths.sprite.src}*.svg`, runSequence(
-    'svgSprite',
-    'copySpriteMixins'
-  )).on('change', (event) => {
+  gulp.watch(`${config.paths.sprite.src}*.svg`).on('change', (event) => {
     let path = event.path.replace(process.cwd(), '..');
     log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, rebuilding sprite...`);
+    
+    runSequence(
+      'svgSprite',
+      'copySpriteMixins'
+    );
   });
   // Watch js/src directory for changes to .js files
-  gulp.watch(`${config.js.src}*.js`, runSequence(
-    'eslint',
-    'babel'
-  )).on('change', (event) => {
+  gulp.watch(`${config.js.src}*.js`).on('change', (event) => {
     let path = event.path.replace(process.cwd(), '..');
     log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, transpiling javascripts...`);
+    
+    runSequence(
+      'eslint',
+      'babel'
+    );
   });
 });
 

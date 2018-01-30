@@ -112,8 +112,8 @@
     }
   };
 
-  Drupal.behaviors.flyoutMenuMovingParts = {
-    attach: function attach(context, settings) {
+  Drupal.behaviors.flyoutMenu = {
+    attach: function attach(context) {
 
       var _navigation = $(".header .navigation", context);
       var _navigation_toggle = $(".js-toggle-navigation", context);
@@ -121,7 +121,7 @@
       _navigation_toggle.on({
         click: function click() {
           _navigation.toggleClass("navigation-is-open");
-          $(this).toggleClass("toggle--active");
+          $(this).toggleClass("active");
         }
       });
 
@@ -145,9 +145,9 @@
         }).prependTo(submenu);
       });
 
-      // touch dropdown navigation      
+      // touch dropdown navigation
       var breakpoints = settings.responsive.breakpoints;
-      if (window.matchMedia(breakpoints['sector_starter.medium']).matches && Modernizr.touchevents) {
+      if (window.matchMedia(breakpoints["sector_starter.medium"]).matches && Modernizr.touchevents) {
         var links = $(".expanded .menu__link", ".touchevents .header .navigation").not(".menu .menu .menu__link", ".touchevents .header .navigation");
         links.on("touchend", function (evt) {
           if (!$(this).hasClass("js-opened")) {
@@ -157,11 +157,7 @@
           }
         });
       }
-    }
-  };
 
-  Drupal.behaviors.flyoutMenu = {
-    attach: function attach(context) {
       var flyout = $(".navigation--primary", context);
       var toggle = $(".js-toggle-navigation .icon--menu", context);
 
