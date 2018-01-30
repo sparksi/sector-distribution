@@ -40,9 +40,6 @@
     color: $text-color;
     font-size: $font-size-base;
   }
-  @include respond-to(tablet-and-up) {
-    line-height: $line-height-base-prose;
-  }
 }
 
 .slat__title--link {
@@ -67,7 +64,6 @@
 
 .slat__date {
   @extend %date;
-  font-size: 14px;
 }
 
 .slat__term {
@@ -81,7 +77,6 @@
 }
 
 .slat__location {
-  font-size: 14px;
   color: $gray-light;
 }
 

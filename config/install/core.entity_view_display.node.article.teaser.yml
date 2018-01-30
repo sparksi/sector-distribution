@@ -40,6 +40,7 @@ third_party_settings:
           layout_class:
             slat: slat
             has-margin-top-base: has-margin-top-base
+            has-padding-top-base: has-padding-top-base
             has-border-top: has-border-top
           ds_content: {  }
     regions:
@@ -56,8 +57,8 @@ third_party_settings:
         formatter: default
         settings:
           link: true
-          wrapper: h3
-          class: slat__title
+          wrapper: h2
+          class: 'slat__title h4 has-no-margin'
         ft:
           id: reset
           settings:
@@ -84,6 +85,7 @@ content:
             lb: ''
             classes:
               - slat__body
+              - has-margin-top-quarter
             lb-col: false
   field_article_type:
     type: entity_reference_label
@@ -101,6 +103,8 @@ content:
             classes:
               - slat__term
               - inline-block
+              - has-margin-top-half
+              - has-margin-right-half
             lb-col: false
   field_issue_date:
     type: datetime_default
@@ -119,7 +123,9 @@ content:
             lb-col: true
             classes:
               - slat__date
+              - slat__term
               - inline-block
+              - has-margin-top-half
 hidden:
   field_embargoed_content: true
   field_image: true

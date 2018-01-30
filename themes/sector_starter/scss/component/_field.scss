@@ -4,6 +4,9 @@
  */
 .field--label {
   font-weight: 600;
+  .slat__term & {
+    font-weight: 400;
+  }
 }
 
 .field--label-inline {

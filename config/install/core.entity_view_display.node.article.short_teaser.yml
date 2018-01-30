@@ -54,7 +54,7 @@ third_party_settings:
         settings:
           link: true
           wrapper: h2
-          class: 'slat__title h5'
+          class: 'slat__title h5 has-no-margin-bottom'
         ft:
           id: reset
           settings:
@@ -80,6 +80,8 @@ content:
             classes:
               - slat__term
               - inline-block
+              - has-margin-top-quarter
+              - has-margin-right-quarter
             lb-col: false
   field_issue_date:
     type: datetime_default
@@ -97,7 +99,9 @@ content:
             lb: ''
             classes:
               - slat__date
+              - slat__term
               - inline-block
+              - has-margin-top-quarter
             lb-col: false
 hidden:
   body: true

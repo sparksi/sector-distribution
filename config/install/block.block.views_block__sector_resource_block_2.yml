@@ -13,11 +13,11 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'promotion promotion--resources hidden-print col-xs-12 col-md-6 has-margin-top-triple'
+    classes: 'promotion promotion--resources has-margin-top-triple'
 id: views_block__sector_resource_block_2
 theme: sector_starter
-region: content
-weight: -9
+region: post_content
+weight: -17
 provider: null
 plugin: 'views_block:sector_resource-block_2'
 settings:

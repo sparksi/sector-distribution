@@ -9,6 +9,11 @@
   margin-top: 0!important;
 }
 
+.has-no-margin-bottom,
+%has-no-margin-bottom {
+  margin-bottom: 0!important;
+}
+
 .has-no-margin,
 %has-no-margin {
   margin: 0!important;
@@ -108,6 +113,31 @@
   margin-top: $spacing-half;
 }
 
+.has-margin-top-quarter,
+%has-margin-top-quarter {
+  margin-top: $spacing-quarter;
+}
+
+.has-margin-right-quarter,
+%has-margin-right-quarter {
+  margin-right: $spacing-quarter;
+}
+
+.has-margin-left-quarter,
+%has-margin-left-quarter {
+  margin-left: $spacing-quarter;
+}
+
+.has-margin-right-half,
+%has-margin-right-half {
+  margin-right: $spacing-half;
+}
+
+.has-margin-left-half,
+%has-margin-left-half {
+  margin-left: $spacing-half;
+}
+
 /**
  * Responsive padding top OOCSS spacing helpers.
  * If a border is required above your site building block then use padding instead.
@@ -150,20 +180,6 @@
 .has-padding-top-half,
 %has-padding-top-half {
   padding-top: $spacing-half;
-}
-
-.has-padding-left-one-col,
-%has-padding-left-one-col {
-  @include respond-to(wide-and-up) {
-    // padding-left: span(1 of 12);
-  }
-}
-
-.has-padding-right-one-col,
-%has-padding-right-one-col {
-  @include respond-to(wide-and-up) {
-    // padding-right: span(1 of 12);
-  }
 }
 
 .has-border-top,
