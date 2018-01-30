@@ -46,10 +46,5 @@
   }
   > .active {
     color: $gray-light;
-    &:after {
-      .lt-ie9 & {
-        display: none;
-      }
-    }
   }
 }

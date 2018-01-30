@@ -12,11 +12,6 @@
 .logo__link {
   display: block;
   line-height: 0;
-  &:focus {
-    .lt-ie9 & {
-      background-color: transparent;
-    }
-  }
 }
 
 .logo--primary {
