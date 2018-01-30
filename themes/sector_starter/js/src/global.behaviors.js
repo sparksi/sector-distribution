@@ -20,26 +20,26 @@
       };
       $(window).scroll(_addScrollClasses);
       $(window).resize(_addScrollClasses);
-        
+
       function _addScrollClasses(){
         let _scrollTop = $(this).scrollTop();
-        (_scrollTop > threshold) ? attachClassTo.addClass(classes.down) : attachClassTo.removeClass(classes.down);      
+        (_scrollTop > threshold) ? attachClassTo.addClass(classes.down) : attachClassTo.removeClass(classes.down);
         ((_scrollTop + $(window).height()) > ($(document).height() - 800)) ? attachClassTo.addClass(classes.bottom) : attachClassTo.removeClass(classes.bottom);
       }
-      
+
     }
   };
 
   Drupal.behaviors.formEnhancements = {
     attach: (context) => {
-      
+
       /**
       * Radios & Checkboxes
       * Add class="is-checked" to the parent element of checked inputs
       * on page load. The CSS uses this class to exaggerate checked input.
-      * 
+      *
       */
-      
+
       /**
       * Radios
       */
@@ -73,11 +73,10 @@
 
     }
   };
-  
-  
+
   Drupal.behaviors.flyoutSearch = {
     attach: (context) => {
-      
+
       let flyout = $(".search--flyout", context);
       let toggle = $(".js-toggle-search, .js-toggle-flyout-search", context);
 
@@ -110,12 +109,11 @@
           }
         }
       });
- 
     }
   };
 
-  Drupal.behaviors.navigationHelpers = {
-    attach: (context) => {
+  Drupal.behaviors.flyoutMenuMovingParts = {
+    attach: (context, settings) => {
 
       var _navigation = $(".header .navigation", context);
       var _navigation_toggle = $(".js-toggle-navigation", context);
@@ -137,9 +135,6 @@
             $(this).parent(".menu__item").toggleClass("is-open");
           }
         });
-        
-        //var _parent_title = _link.text();
-        //$(this).find('> .menu__container > .menu__wrapper').attr('data-parent', _parent_title);
 
         var submenu = $(this).find("> .menu__container > .menu__wrapper");
 
@@ -150,10 +145,9 @@
         }).prependTo(submenu);
       });
 
-      // touch dropdown navigation
-      var desktop_breakpoint = 992;
-
-      if ($(window).width() >= desktop_breakpoint && Modernizr.touchevents) {
+      // touch dropdown navigation      
+      const breakpoints = settings.responsive.breakpoints;      
+      if (window.matchMedia(breakpoints['sector_starter.medium']).matches && Modernizr.touchevents) {
         var links = $(".expanded .menu__link", ".touchevents .header .navigation").not(".menu .menu .menu__link", ".touchevents .header .navigation");
         links.on("touchend", function (evt) {
           if (!$(this).hasClass("js-opened")) {
@@ -165,8 +159,6 @@
       }
     }
   };
-
-
 
   Drupal.behaviors.flyoutMenu = {
     attach: (context) => {
@@ -189,7 +181,7 @@
           toggleFlyoutMenu();
           evt.preventDefault();
         }
-      }); 
+      });
 
       // Detect a click outside the element and hide.
       // https://css-tricks.com/dangers-stopping-event-propagation/

@@ -185,3 +185,23 @@ function sector_starter_preprocess_html(&$variables) {
     $variables['node_status'] = $node->isPublished() ? 'published' : 'unpublished';
   }
 }
+
+
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function sector_starter_page_attachments_alter(array &$page) {
+
+  $breakpoints = \Drupal::service('breakpoint.manager')->getBreakpointsByGroup('sector_starter');
+    
+  if (!empty($breakpoints)) {
+    $media_queries = array();
+    foreach ($breakpoints as $breakpoint) {
+      foreach ($breakpoints as $id => $breakpoint) {
+        $media_queries[$id] = $breakpoint->getMediaQuery();
+      }
+    }
+    $page['#attached']['drupalSettings']['responsive']['breakpoints'] = $media_queries;
+  }
+}

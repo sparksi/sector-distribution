@@ -38,7 +38,7 @@
       * Radios & Checkboxes
       * Add class="is-checked" to the parent element of checked inputs
       * on page load. The CSS uses this class to exaggerate checked input.
-      * 
+      *
       */
 
       /**
@@ -112,8 +112,8 @@
     }
   };
 
-  Drupal.behaviors.navigationHelpers = {
-    attach: function attach(context) {
+  Drupal.behaviors.flyoutMenuMovingParts = {
+    attach: function attach(context, settings) {
 
       var _navigation = $(".header .navigation", context);
       var _navigation_toggle = $(".js-toggle-navigation", context);
@@ -136,9 +136,6 @@
           }
         });
 
-        //var _parent_title = _link.text();
-        //$(this).find('> .menu__container > .menu__wrapper').attr('data-parent', _parent_title);
-
         var submenu = $(this).find("> .menu__container > .menu__wrapper");
 
         $("<a />", {
@@ -148,10 +145,9 @@
         }).prependTo(submenu);
       });
 
-      // touch dropdown navigation
-      var desktop_breakpoint = 992;
-
-      if ($(window).width() >= desktop_breakpoint && Modernizr.touchevents) {
+      // touch dropdown navigation      
+      var breakpoints = settings.responsive.breakpoints;
+      if (window.matchMedia(breakpoints['sector_starter.medium']).matches && Modernizr.touchevents) {
         var links = $(".expanded .menu__link", ".touchevents .header .navigation").not(".menu .menu .menu__link", ".touchevents .header .navigation");
         links.on("touchend", function (evt) {
           if (!$(this).hasClass("js-opened")) {
