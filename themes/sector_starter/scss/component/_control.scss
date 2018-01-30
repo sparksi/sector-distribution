@@ -4,6 +4,9 @@
  */
 .control--responsive-menu {
   @include make-xs-column(2);
+  @include respond-to(mobile) {
+    padding-right: 3px;
+  }
   @include respond-to(desktop-and-up) {
     display: none;
   }

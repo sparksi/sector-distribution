@@ -2,6 +2,7 @@ sector_starter.xsmall:
   label: xsmall
   mediaQuery:
   weight: 1
+  group: sector_starter
   multipliers:
     - 1x
     - 2x
@@ -9,6 +10,7 @@ sector_starter.small:
   label: small
   mediaQuery: 'all and (min-width: 768px)'
   weight: 1
+  group: sector_starter
   multipliers:
     - 1x
     - 2x
@@ -16,6 +18,7 @@ sector_starter.medium:
   label: medium
   mediaQuery: 'all and (min-width: 992px)'
   weight: 1
+  group: sector_starter
   multipliers:
     - 1x
     - 2x
@@ -23,6 +26,7 @@ sector_starter.large:
   label: large
   mediaQuery: 'all and (min-width: 1200px)'
   weight: 1
+  group: sector_starter
   multipliers:
     - 1x
     - 2x
@@ -30,6 +34,7 @@ sector_starter.xlarge:
   label: xlarge
   mediaQuery: 'all and (min-width: 1400px)'
   weight: 1
+  group: sector_starter
   multipliers:
     - 1x
     - 2x

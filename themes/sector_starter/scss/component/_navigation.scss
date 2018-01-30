@@ -4,121 +4,145 @@
  */
 
 .navigation--primary {
-  /* Only style the desktop and up menu (Not the mmenu)*/
-  .header & {
-    padding: 2px 0 0;
-    @include make-xs-column(12);
-    @include make-md-column(7);
-   // @include make-lg-column(7);
-    @include make-lg-column-offset(1);
-
+  padding-top: 2px;
+  @include make-xs-column(12);
+  @include make-md-column(7);
+  @include make-lg-column-offset(1);
+  @include respond-to(tablet-large-and-down) {
+    display: none;
+    margin-top: $spacing-base;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &.navigation-is-open {
     @include respond-to(tablet-large-and-down) {
-      display: none;
-      margin-top: $spacing-base;
-      > .menu {
-        border-bottom: 1px solid $white;
-      }
-      &.menu-is-active {
-        display: block;
-      }
+      display: block;
     }
-    > .menu {
-      @include respond-to(desktop-and-up) {
-        display: flex;
-        align-items: center;
-        > .menu__item {
-          ~ .menu__item {
-            margin-left: 0.5em;
-          }
-        }
-      }
-      .menu {
-        .menu {
-          left: 100%;
-          top: 0;
-        }
-      }
-      .menu {
-        @include respond-to(desktop-and-up) {
-          background-color: rgba(255,255,255,0.6);
-          position: absolute;
-        }
-      }
+  }
+  > .menu {
+    // @include respond-to(tablet-large-and-down) {
+    //   border-bottom: 1px solid $white;
+    // }
+    @include respond-to(desktop-and-up) {
+      display: flex;
+      align-items: center;
     }
     .menu {
-      padding: 0;
       .menu {
+        left: 100%;
+        top: 0;
+      }
+      @include respond-to(desktop-and-up) {
+        background-color: rgba($white,0.6);
+        position: absolute;
+      }
+    }
+    > .menu__item {
+      ~ .menu__item {
+        @include respond-to(desktop-and-up) {
+          margin-left: 0.5em;
+        }
+      }
+    }
+  }
+  .menu {
+    padding: 0;
+    .menu {
+      display: none;
+    }
+  }
+  .menu__item {
+    .btn-expand {
+      align-content: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      @include respond-to(desktop-and-up) {
         display: none;
       }
-      @include respond-to(tablet) {
-        // padding: 0 0 $spacing-base;
+    }
+    @include respond-to(tablet-large-and-down) {
+      border-top: 1px solid $black;
+      position: relative;
+    }
+    .menu__link {
+      @include respond-to(tablet-large-and-down) {
+        padding-left: 18px;
+        //margin-right: 48px;
       }
     }
     .menu__item {
-      @include respond-to(tablet-large-and-down) {
-        border-top: 1px solid $white;
-        position: relative;
-      }
-      @include respond-to(desktop-and-up) {
-        &:hover {
-          > .menu {
-            display: block;
-          }
+      .menu__link {
+        @include respond-to(tablet-large-and-down) {
+          padding-left: 28px;
         }
       }
-      @include respond-to(tablet-large-and-down) {
-        .menu__item {
-          .menu__link {
-            padding-left: 18px;
-          }
-          .menu__item {
-            .menu__link {
-              padding-left: 28px;
-            }
-            .menu__item {
-              .menu__link {
-                padding-left: 38px;
-              }
-            }
-          }
-        }
-      }
-      &.active-trail {
+      .menu__item {
         .menu__link {
-          text-decoration: underline;
-        }
-      }
-      @include respond-to(tablet-large-and-down) {
-        &.is-open {
-          > .menu {
-            display: block;
-          }
-          > .btn-expand:after {
-            -webkit-transform: translateX(-50%) translateY(-50%) rotate(-180deg);
-            transform: translateX(-50%) translateY(-50%) rotate(-180deg);
+          @include respond-to(tablet-large-and-down) {
+            padding-left: 38px;
           }
         }
       }
     }
-    .menu__link {
-      padding: $spacing-half $spacing-half;
-      color: $white;
-      font-weight: 600;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      &:hover,
-      &:focus {
-        background-color: transparent;
-        color: $white;
-        text-decoration: underline;
+    &.active-trail {
+      .menu__link {
+        @include respond-to(desktop-and-up) {
+          text-decoration: underline;
+        }
       }
-      &.is-active {
+    }
+    &.is-open {
+      > .menu {
+        @include respond-to(tablet-large-and-down) {
+          display: block;
+        }
+      }
+      > .btn-expand {
+        &:after {
+          @include respond-to(tablet-large-and-down) {
+            @include sprite(arrow--micro-up-white);
+          }
+        }
+      }
+    }
+  }
+  .menu__link {
+    padding: $spacing-half $spacing-half;
+    color: $white;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    @include font-smoothing;
+    @include respond-to(desktop-and-up) {
+      font-weight: 600;
+    }
+    &:hover,
+    &:focus {
+      background-color: transparent;
+      color: $white;
+      text-decoration: underline;
+    }
+    &.is-active {
+      @include respond-to(tablet-large-and-down) {
+        background-color: black;
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 5px;
+          height: 100%;
+          background-color: #436FFC;
+        }
+      }
+      @include respond-to(desktop-and-up) {
         text-decoration: underline;
       }
     }
   }
 }
+
 .navigation--secondary {
   @include respond-to(tablet-large-and-down) {
     display: none;
@@ -221,48 +245,6 @@
     }
   }
 }
-/*
-.navigation--tertiary {
-  padding: 9px 0 0;
-  @include make-xs-column(12);
-  @include make-sm-column(3);
-  @include make-md-column(5);
-  @include make-md-column-offset(1);
-  @include make-lg-column(4);
-  @include make-lg-column-offset(2);
-  @include respond-to(tablet-large-and-down) {
-    display: none;
-  }
-  .menu {
-    padding: 0;
-    @include respond-to(tablet) {
-      padding: 0 0 $spacing-base;
-    }
-  }
-  .menu__item {
-    @include respond-to(tablet-and-up) {
-      float: right;
-    }
-  }
-  .menu__link {
-    text-decoration: underline;
-    padding: $spacing-quarter 0;
-    @include respond-to(tablet-and-up) {
-      padding: em(3);
-      margin: 0 $spacing-base 0 0;
-    }
-    &:hover,
-    &:focus {
-      color: $brand-primary;
-    }
-    &.active {
-      text-decoration: underline;
-    }
-    &:hover {
-      background-color: transparent;
-    }
-  }
-}*/
 
 .navigation--quaternary {
   @include make-xs-column(12);

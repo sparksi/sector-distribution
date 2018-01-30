@@ -15,11 +15,17 @@
   .icon--close {
     display: none;
     &:before {
-      @include sprite(icon--close-white);
+      @include sprite(icon--close-small-white);
     }
   }
-  .lt-ie10 & {
-    background-color: $gray;
+  &.active {
+    .icon--close {
+      display: block;
+    }
+    .icon--menu,
+    .icon--search {
+      display: none;
+    }
   }
 }
 
