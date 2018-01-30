@@ -58,12 +58,12 @@ display:
       style:
         type: html_list
         options:
-          grouping: {  }
           row_class: responsive-layout__item
-          default_row_class: true
+          default_row_class: false
+          uses_fields: false
           type: ul
           wrapper_class: ''
-          class: 'list-unstyled responsive-layout--t2-d3'
+          class: 'list-unstyled responsive-layout--d3'
       row:
         type: 'entity:node'
         options:

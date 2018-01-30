@@ -16,7 +16,7 @@ third_party_settings:
 id: backtotop
 theme: sector_starter
 region: content
-weight: 0
+weight: -11
 provider: null
 plugin: 'block_content:79af5eed-a1cb-4da7-aeec-56d650fb196d'
 settings:

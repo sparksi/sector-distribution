@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.short_teaser
+    - core.entity_view_mode.node.teaser
     - node.type.article
     - node.type.resource
     - taxonomy.vocabulary.resource_types
@@ -194,7 +195,9 @@ display:
         title: false
         filters: false
         filter_groups: false
-      css_class: content-listing
+        style: false
+        row: false
+      css_class: ''
       title: 'Sector resource'
       filters:
         status:
@@ -252,6 +255,20 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: list-unstyled
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: short_teaser
     cache_metadata:
       max-age: -1
       contexts:
@@ -278,6 +295,8 @@ display:
         use_more: false
         use_more_always: false
         use_more_text: false
+        style: false
+        row: false
       pager:
         type: some
         options:
@@ -357,6 +376,20 @@ display:
       use_more: true
       use_more_always: false
       use_more_text: 'View all resources'
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          type: ul
+          wrapper_class: has-margin-top-base
+          class: list-unstyled
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: short_teaser
     cache_metadata:
       max-age: -1
       contexts:
@@ -394,6 +427,8 @@ display:
         title: false
         pager: false
         use_ajax: false
+        style: false
+        row: false
       filters:
         status:
           value: '1'
@@ -534,6 +569,20 @@ display:
             offset_label: Offset
           quantity: 9
       use_ajax: true
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: list-unstyled
+      row:
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:
