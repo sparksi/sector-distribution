@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: blockquote_full_text_align_left_with_cite
+label: 'Blockquote - Full. Text align left with cite'
+description: 'Full column blockquote with text aligned left with cite'
+body:
+  value: "<blockquote>\r\n<p>The content of a blockquote element must include block-level elements such as headings, lists, or paragraphs. They can also have an optional attribute cite.</p>\r\n<footer><cite>A cite defines an in-line citation or reference to another source</cite></footer>\r\n</blockquote>"
+  format: full_html
+weight: null
+node_types: {  }
