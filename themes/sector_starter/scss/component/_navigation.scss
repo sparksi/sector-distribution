@@ -16,6 +16,29 @@
   }
   &.navigation-is-open {
     @include respond-to(tablet-large-and-down) {
+      display: none;
+      margin-top: 15px;
+      > .menu {
+        border-bottom: 1px solid #4e4e4e;
+      }
+      &.menu-is-active, &.navigation-is-open {
+        display: block;
+      }
+    }
+    > .menu {
+      @include respond-to(desktop-and-up) {
+        display: flex;
+        align-items: center;
+        > .menu__item {
+          > .menu__link {
+            background-color: transparent;
+            margin: 0;
+          }
+          ~ .menu__item {
+            margin-left: 0.5em;
+          }
+        }
+      }
       display: block;
     }
   }
@@ -35,6 +58,17 @@
       @include respond-to(desktop-and-up) {
         background-color: rgba($white,0.6);
         position: absolute;
+        z-index: 10;
+      }
+    }
+    > .menu__item {
+      > .menu__link {
+        background-color: transparent;
+        margin: 0;
+        &:hover {
+          background-color: transparent;
+          color: rgba(255,255,255,0.8);
+        }
       }
     }
     // > .menu__item {
@@ -52,6 +86,9 @@
     }
   }
   .menu__item {
+    @include respond-to(wide-and-up) {
+      //padding: $spacing-half $spacing-base;
+    }
     .btn-expand {
       align-content: center;
       position: absolute;
@@ -67,20 +104,35 @@
     }
     .menu__link {
       @include respond-to(tablet-large-and-down) {
+        border-top: 1px solid #4e4e4e;
+        position: relative;
         padding-left: 18px;
         //margin-right: 48px;
       }
     }
-    .menu__item {
-      .menu__link {
-        @include respond-to(tablet-large-and-down) {
-          padding-left: 28px;
-        }
+    .menu__link {
+      @include respond-to(tablet-large-and-down) {
+        padding-left: 27px;
       }
+    }
+    @include respond-to(tablet-large-and-down) {
       .menu__item {
         .menu__link {
-          @include respond-to(tablet-large-and-down) {
-            padding-left: 38px;
+          padding-left: 47px;
+        }
+        .menu__item {
+          .menu__link {
+            padding-left: 67px;
+          }
+          .menu__item {
+            .menu__link {
+              padding-left: 87px;
+            }
+            .menu__item {
+              .menu__link {
+                padding-left: 107px;
+              }
+            }
           }
         }
       }
@@ -106,25 +158,19 @@
         }
       }
     }
-  }
-  .menu__link {
-    padding: $spacing-half $spacing-half;
-    color: $white;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    @include font-smoothing;
-    @include respond-to(desktop-and-up) {
-      font-weight: 600;
-    }
-    &:hover,
-    &:focus {
+    .menu__link {
       background-color: transparent;
+      border-right: 1px solid #222;
+      border-bottom: 1px solid #222;
       color: $white;
-      text-decoration: underline;
-    }
-    @include respond-to(wide-and-up) {
-      padding: $spacing-half $spacing-base;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      &:hover,
+      &:focus {
+        background-color: transparent;
+        color: rgba(255,255,255,0.8);
+      }
     }
     &.is-active {
       @include respond-to(tablet-large-and-down) {
@@ -140,8 +186,18 @@
         }
       }
       @include respond-to(desktop-and-up) {
-        text-decoration: underline;
+        background-color: #4e4e4e;
+        &:hover,
+        &:focus {
+          background-color: darken(#4e4e4e, 6%);
+          color: $white;
+          text-decoration: underline;
+        }
+        &.is-active {
+          text-decoration: underline;
+        }
       }
+      
     }
   }
 }
