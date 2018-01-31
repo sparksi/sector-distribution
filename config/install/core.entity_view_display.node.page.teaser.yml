@@ -25,8 +25,7 @@ third_party_settings:
   ds:
     layout:
       id: ds_1col
-      path: modules/contrib/ds
-      library: ''
+      library: null
       disable_css: false
       entity_classes: all_classes
       settings:
@@ -39,7 +38,7 @@ third_party_settings:
         classes:
           layout_class:
             slat: slat
-            has-margin-top-double: has-margin-top-double
+            has-margin-top-base: has-margin-top-base
             has-border-top-large: has-border-top-large
           ds_content: {  }
     regions:

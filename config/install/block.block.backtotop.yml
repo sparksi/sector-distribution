@@ -15,8 +15,8 @@ third_party_settings:
     classes: ''
 id: backtotop
 theme: sector_starter
-region: content
-weight: -11
+region: pre_footer
+weight: -14
 provider: null
 plugin: 'block_content:79af5eed-a1cb-4da7-aeec-56d650fb196d'
 settings:
