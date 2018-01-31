@@ -84,6 +84,7 @@ dependencies:
  - rabbit_hole
  - rh_node
  - rh_taxonomy
+ - wysiwyg_template
 
 themes:
  - bootstrap
