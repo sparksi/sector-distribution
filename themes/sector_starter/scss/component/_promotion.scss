@@ -112,3 +112,15 @@
   @include make-xs-column(12);
   @include make-md-column(6);
 }
+
+.promotion--last-updated {
+  @include make-xs-column(12);
+  h2 {
+    display: inline-block;
+    font-size: $font-size-base;
+    margin: 0;
+  }
+  // .field--name-field-last-updated {
+  //   display: inline-block;
+  // }
+}

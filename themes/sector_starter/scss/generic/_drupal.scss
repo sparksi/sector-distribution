@@ -52,8 +52,7 @@
 
 .page-header {
   border-bottom: none;
-  padding-bottom: 0;
-  margin: 0;
+  @extend .h1;
 }
 
 /* Override Drupal date.css */
@@ -93,7 +92,6 @@
 //   }
 // }
 
-
 /*
  * unpublished node indicator, attached to full view mode of node
  * inside content region.
@@ -116,51 +114,5 @@
 //   }
 //   .page-node-status-unpublished.admin-ui-hide .content & {
 //     display: none;
-//   }
-// }
-
-
-// .nav {
-//   > li {
-//     > a {
-//       &:focus {
-//         background-color: $brand-focused;
-//       }
-//     }
-//   }
-// }
-
-// .navigation--secondary {
-//   .menu__link {
-//     &:focus {
-//       background-color: $brand-focused;
-//       outline-offset: 0;
-//     }
-//   }
-// }
-
-// .navigation--quaternary {
-//   .nav {
-//     > li {
-//       > .menu__link {
-//         &:focus {
-//           background-color: $brand-focused;
-//           color: $black;
-//           outline-offset: 0;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .navigation--site-map {
-//   .menu {
-//     > .menu__item {
-//       > .menu__link {
-//         &:focus {
-//           outline-offset: 0;
-//         }
-//       }
-//     }
 //   }
 // }

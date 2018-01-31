@@ -13,11 +13,11 @@
       @include make-md-column(10);
       @include make-md-column-push(1);
       text-align: center;
-      margin-top: 15vw;
-      margin-bottom: 15vw;
+      margin-top: 3vw;
+      margin-bottom: 16vw;
       @include respond-to(desktop-and-up) {
-        margin-top: 15vh;
-        margin-bottom: 15vh;
+        margin-top: 13vh;
+        margin-bottom: 17vh;
       }
     }
   }

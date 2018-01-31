@@ -2,8 +2,8 @@
  *
  * 1. Naming convention for modifiers. For example:
  *    .responsive-layout--t2 translates to layout of 2 columns for
- *    tablet and up breakpoint ('t' for tablet)
- *    .responsive-layout--t3 translates to layout of 3 columns for desktop and up
+ *    tablet large and up breakpoint ('t' for tablet-large)
+ *    .responsive-layout--d3 translates to layout of 3 columns for desktop and up
  *    ('d' for desktop).
  *    .responsive-layout--w4 translates to layout of 3 columns for wide and up
  *    ('w' for wide).
@@ -20,7 +20,7 @@
 
 // [1]
 $responsive-layout-variants: (
-  tablet : 2 3 4,
+  tablet-large : 2 3,
   desktop :  2 3 4,
   wide :  2 3 4
 );
@@ -41,7 +41,6 @@ $responsive-layout-gutter: $grid-gutter-width / 2;
       margin-top: $spacing-base;
     }
   }
-  // by default, make all elements fit on one line
   @include respond-to(tablet-large-and-up) {
     flex-direction: row;
     > .responsive-layout__item {
