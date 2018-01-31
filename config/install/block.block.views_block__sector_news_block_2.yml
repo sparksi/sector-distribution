@@ -13,11 +13,11 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'promotion promotion--news has-margin-top-triple'
+    classes: 'promotion promotion--news has-margin-top-double'
 id: views_block__sector_news_block_2
 theme: sector_starter
 region: post_content
-weight: -18
+weight: -17
 provider: null
 plugin: 'views_block:sector_news-block_2'
 settings:

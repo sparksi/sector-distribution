@@ -1,59 +1,73 @@
 /**
- * @file
- * BEM block for gallery style lists
- */
-
-/**
- * t2-d3
  *
  * 1. Naming convention for modifiers. For example:
- *    .responsive-layout--t2-d3 translates to layout of 2 columns for
- *    tablet breakpoint ('t' for tablet) and 3 columns for desktop and up
+ *    .responsive-layout--t2 translates to layout of 2 columns for
+ *    tablet large and up breakpoint ('t' for tablet-large)
+ *    .responsive-layout--d3 translates to layout of 3 columns for desktop and up
  *    ('d' for desktop).
+ *    .responsive-layout--w4 translates to layout of 3 columns for wide and up
+ *    ('w' for wide).
  *
+ *    Intention is to use any combination of these modifiers to achieve desired grid configuration.
+ *    Modify $responsive-layout-variants to add support for x column grids by adding a (or many)
+ *    number(s) to the sass map, e.g.
+ *
+ *    wide : 2 3 4 5 6
+ *
+ * 2. By default, without any modifiers, the .responsive-layout componet will squash all child
+ *    .responsive-layout__item elements into the same row, without any wrapping.
  */
-.responsive-layout--t2-d3,
-%responsive-layout--t2-d3 { /* [1] */
-  .responsive-layout__item,
-  %responsive-layout__item {
-    @include respond-to(tablet) {
-      &:nth-child(odd) {
-      }
-      &:nth-child(even) {
-      }
+
+// [1]
+$responsive-layout-variants: (
+  tablet-large : 2 3,
+  desktop :  2 3 4,
+  wide :  2 3 4
+);
+$responsive-layout-gutter: $grid-gutter-width / 2;
+
+// [2]
+.responsive-layout,
+%responsive-layout {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: $responsive-layout-gutter * -1;
+  margin-right: $responsive-layout-gutter * -1;
+  > .responsive-layout__item {
+    padding-left: $responsive-layout-gutter;
+    padding-right: $responsive-layout-gutter;
+    ~ .responsive-layout__item {
+      margin-top: $spacing-base;
     }
-    @include respond-to(desktop-and-up) {
-      &:nth-child(3n+1) {
-      }
-      &:nth-child(3n+3) {
+  }
+  @include respond-to(tablet-large-and-up) {
+    flex-direction: row;
+    > .responsive-layout__item {
+      flex: 1;
+      ~ .responsive-layout__item {
+        margin-top: 0;
       }
     }
   }
 }
 
-/* d2 */
-.responsive-layout--d2,
-%responsive-layout--d2 {
-  .responsive-layout__item,
-  %responsive-layout__item  {
-    @include respond-to(tablet-large-and-up) {
-      &:nth-child(odd) {
-      }
-      &:nth-child(even) {
-      }
-    }
-  }
-}
-
-/* d3 */
-.responsive-layout--d3,
-%responsive-layout--d3 {
-  .responsive-layout__item,
-  %responsive-layout__item {
-    @include respond-to(tablet-large-and-up) {
-      &:nth-child(3n+1) {
-      }
-      &:nth-child(3n+3) {
+@each $breakpoint, $cols in $responsive-layout-variants {
+  $first-character: str-slice($breakpoint, 0, 1);
+  $breakpoint: #{$breakpoint}-and-up;
+  @each $col in $cols {
+    .responsive-layout.responsive-layout--#{$first-character}#{$col},
+    %responsive-layout--#{$first-character}#{$col} {
+      @include respond-to(#{$breakpoint}){
+        flex-wrap: wrap;
+        > .responsive-layout__item {
+          width: (100% / $col);
+          flex: none;
+          margin-top: $spacing-base;
+          &:nth-child(-n+#{$col}){
+            margin-top: 0;
+          }
+        }
       }
     }
   }

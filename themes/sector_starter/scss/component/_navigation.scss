@@ -37,13 +37,13 @@
         position: absolute;
       }
     }
-    > .menu__item {
-      ~ .menu__item {
-        @include respond-to(desktop-and-up) {
-          margin-left: 0.5em;
-        }
-      }
-    }
+    // > .menu__item {
+    //   ~ .menu__item {
+    //     @include respond-to(desktop-and-up) {
+    //       margin-left: 0.5em;
+    //     }
+    //   }
+    // }
   }
   .menu {
     padding: 0;
@@ -122,6 +122,9 @@
       background-color: transparent;
       color: $white;
       text-decoration: underline;
+    }
+    @include respond-to(wide-and-up) {
+      padding: $spacing-half $spacing-base;
     }
     &.is-active {
       @include respond-to(tablet-large-and-down) {
@@ -243,6 +246,10 @@
       color: darken($text-color,10%);
       border-bottom: 1px solid rgba(0, 0, 0, 0.8);
     }
+    &:focus {
+      background-color: $brand-focused;
+      outline-offset: 0;
+    }
   }
 }
 
@@ -277,6 +284,11 @@
     .footer-regions-wrapper & {
       color: $white;
     }
+    &:focus {
+      background-color: $brand-focused;
+      color: $black;
+      outline-offset: 0;
+    }
   }
 }
 
@@ -295,6 +307,9 @@
         &:focus {
           background-color: transparent;
           text-decoration: underline;
+        }
+        &:focus {
+          outline-offset: 0;
         }
       }
       > .menu {
@@ -317,53 +332,51 @@
       }
     }
   }
-  > .menu-block-wrapper {
-    > .menu {
-      > .menu__item {
-        > .menu {
-          > .menu__item {
-            > .menu {
-              > .menu__item {
-                @include respond-to(tablet-and-up) {
-                  // @include span(2 of 6 after no-gutters);
-                  &:nth-child(3n+1) {
-                    clear: both;
-                  }
+  > .menu {
+    > .menu__item {
+      > .menu {
+        > .menu__item {
+          > .menu {
+            > .menu__item {
+              @include respond-to(tablet-and-up) {
+                width: (100%/3);
+                &:nth-child(3n+1) {
+                  clear: both;
                 }
-                @include respond-to(desktop-and-up) {
-                  // @include span(2 of 12 after no-gutters);
-                  &:nth-child(3n+1) {
-                    clear: none;
+              }
+              @include respond-to(desktop-and-up) {
+                width: (100%/6);
+                &:nth-child(3n+1) {
+                  clear: none;
+                }
+                &:nth-child(6n+1) {
+                  clear: both;
+                }
+              }
+              .menu__link {
+                margin-top: 0;
+                color: lighten($gray-dark, 20%);
+              }
+              > .menu {
+                border-top: none;
+                > .menu__item {
+                  &.is-expanded {
+                    width: 100%;
                   }
-                  &:nth-child(6n+1) {
-                    clear: both;
+                  .menu__item {
+                    .menu__link {
+                      padding: $spacing-quarter $spacing-half $spacing-quarter $spacing-base;
+                    }
+                  }
+                  > .menu {
+                    border-top: none;
                   }
                 }
                 .menu__link {
-                  margin-top: 0;
-                  color: lighten($gray-dark, 20%);
-                }
-                > .menu {
-                  border-top: none;
-                  > .menu__item {
-                    &.is-expanded {
-                      width: 100%;
-                    }
-                    .menu__item {
-                      .menu__link {
-                        padding: $spacing-quarter $spacing-half $spacing-quarter $spacing-base;
-                      }
-                    }
-                    > .menu {
-                      border-top: none;
-                    }
-                  }
-                  .menu__link {
-                    font-size: em(14);
-                    margin-left: $spacing-half;
-                    border-left: 1px solid $brand-border;
-                    padding: $spacing-quarter $spacing-half;
-                  }
+                  font-size: em(14);
+                  margin-left: $spacing-half;
+                  border-left: 1px solid $brand-border;
+                  padding: $spacing-quarter $spacing-half;
                 }
               }
             }

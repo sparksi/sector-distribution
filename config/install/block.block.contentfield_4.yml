@@ -13,19 +13,19 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'promotion promotion--last-updated'
+    classes: 'promotion promotion--last-updated has-margin-top-double'
 id: contentfield_4
 theme: sector_starter
 region: post_content
-weight: -16
+weight: -15
 provider: null
 plugin: 'fieldblock:node'
 settings:
   id: 'fieldblock:node'
-  label: 'Last updated:'
+  label: '<none>'
   provider: fieldblock
   label_display: visible
-  label_from_field: 0
+  label_from_field: 1
   field_name: field_last_updated
   formatter_id: datetime_default
   formatter_settings:

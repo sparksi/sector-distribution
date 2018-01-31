@@ -8,7 +8,7 @@ dependencies:
 id: sector_starter_sector_starter_system_main
 theme: sector_starter
 region: content
-weight: -16
+weight: -15
 provider: null
 plugin: system_main_block
 settings:
