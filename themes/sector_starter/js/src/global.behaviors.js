@@ -113,7 +113,7 @@
   };
 
   Drupal.behaviors.flyoutMenu = {
-    attach: (context) => {
+    attach: (context, settings) => {
 
       var _navigation = $(".header .navigation", context);
       var _navigation_toggle = $(".js-toggle-navigation", context);
@@ -147,15 +147,17 @@
 
       // touch dropdown navigation
       const breakpoints = settings.responsive.breakpoints;
-      if (window.matchMedia(breakpoints["sector_starter.medium"]).matches && Modernizr.touchevents) {
-        var links = $(".expanded .menu__link", ".touchevents .header .navigation").not(".menu .menu .menu__link", ".touchevents .header .navigation");
-        links.on("touchend", function (evt) {
-          if (!$(this).hasClass("js-opened")) {
-            $(".js-opened", _navigation).removeClass("js-opened");
-            $(this).addClass("js-opened");
-            evt.preventDefault();
-          }
-        });
+      if(breakpoints) {
+        if (window.matchMedia(breakpoints["sector_starter.medium"]).matches && Modernizr.touchevents) {
+          var links = $(".expanded .menu__link", ".touchevents .header .navigation").not(".menu .menu .menu__link", ".touchevents .header .navigation");
+          links.on("touchend", function (evt) {
+            if (!$(this).hasClass("js-opened")) {
+              $(".js-opened", _navigation).removeClass("js-opened");
+              $(this).addClass("js-opened");
+              evt.preventDefault();
+            }
+          });
+        }
       }
 
       var flyout = $(".navigation--primary", context);
