@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/admin\/structure\/menu\/item\/10\/edit?_format=hal_json"
+            "href": "http:\/\/default\/admin\/structure\/menu\/item\/11\/edit?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/menu_link_content\/menu_link_content"
@@ -9,12 +9,12 @@
     },
     "id": [
         {
-            "value": 10
+            "value": 11
         }
     ],
     "uuid": [
         {
-            "value": "db513a66-a573-4e02-bbe6-984ba03fb3b0"
+            "value": "2b283376-1a4f-4035-b87a-6fd309db4790"
         }
     ],
     "langcode": [
@@ -30,7 +30,7 @@
     ],
     "title": [
         {
-            "value": "More...",
+            "value": "Resources",
             "lang": "en"
         }
     ],
@@ -41,7 +41,7 @@
     ],
     "link": [
         {
-            "uri": "internal:#footer-anchor",
+            "uri": "internal:\/resource\/archive",
             "title": "",
             "options": []
         }
@@ -58,7 +58,7 @@
     ],
     "weight": [
         {
-            "value": -46
+            "value": -47
         }
     ],
     "expanded": [
@@ -73,8 +73,9 @@
     ],
     "changed": [
         {
-            "value": 1508805740,
-            "lang": "en"
+            "value": "2018-02-01T01:39:05+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
