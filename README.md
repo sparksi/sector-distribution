@@ -38,6 +38,16 @@ Read about all the features on Sector's dedicated website: https://www.sector.or
 
 Further documentation is coming soon on Sector's dedicated website: https://www.sector.org.nz/documentation.
 
+## Sector Ecosystem
+
+Sector Distribution aims to be lean and only includes core features that we feel are either very useful or indispensable on every kind of site. Therefore, additional functionality that we consider optional will be placed on [drupal.org](https://www.drupal.org) as a standalone module that can be included on any project.
+
+### Sector Events
+
+This module provides event management capability to Sector. You can download it from the module's [project page](https://www.drupal.org/project/sector_events) or include it with composer in your project directly:
+
+    composer require drupal/sector_events
+
 ## Updating Sector and Drupal
 
 Sector will be updated when you run `composer update`, but you can specifically update Sector and all its dependencies with `composer update sparksinteractive/sector-distribution`.

@@ -1,9 +1,0 @@
-name: Sector event
-description: Provides the event CT for Sector
-package: Sector (Additional)
-
-dependencies:
-  - geolocation:geolocation
-
-type: module
-core: 8.x
