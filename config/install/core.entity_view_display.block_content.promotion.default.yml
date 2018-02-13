@@ -6,7 +6,6 @@ dependencies:
     - field.field.block_content.promotion.body
     - field.field.block_content.promotion.field_featured_content
     - field.field.block_content.promotion.field_promotion_type
-    - field.field.block_content.promotion.field_teaser_image
   module:
     - ds
     - link
@@ -73,13 +72,5 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    region: ds_content
-  field_teaser_image:
-    weight: 3
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
     region: ds_content
 hidden: {  }
