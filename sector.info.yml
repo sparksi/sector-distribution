@@ -48,7 +48,6 @@ dependencies:
  - dynamic_page_cache
  - editor
  - embed
- - entity
  - entity_embed
  - entityqueue
  - field
