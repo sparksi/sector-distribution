@@ -7,7 +7,6 @@ dependencies:
     - field.field.block_content.promotion.body
     - field.field.block_content.promotion.field_featured_content
     - field.field.block_content.promotion.field_promotion_type
-    - field.field.block_content.promotion.field_teaser_image
   module:
     - ds
     - field_formatter_filter
@@ -107,23 +106,6 @@ content:
             lb-col: false
       field_formatter_filter:
         format: teaser_display_text
-    region: ds_content
-  field_teaser_image:
-    type: entity_reference_entity_view
-    weight: 0
-    label: hidden
-    settings:
-      view_mode: ratio_16_x_9_small_
-      link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            classes:
-              - ''
-            lb-col: false
     region: ds_content
 hidden:
   field_featured_content: true

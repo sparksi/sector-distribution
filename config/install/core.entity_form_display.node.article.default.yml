@@ -2,16 +2,12 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.sector_document_browser
     - field.field.node.article.body
     - field.field.node.article.field_article_type
-    - field.field.node.article.field_embargoed_content
     - field.field.node.article.field_image
     - field.field.node.article.field_issue_date
     - field.field.node.article.field_last_updated
-    - field.field.node.article.field_media_private
     - field.field.node.article.field_metatag
-    - field.field.node.article.field_related_documents
     - field.field.node.article.field_related_external_url
     - field.field.node.article.field_related_internal_url
     - field.field.node.article.field_tags
@@ -19,7 +15,6 @@ dependencies:
     - node.type.article
   module:
     - datetime
-    - entity_browser
     - field_group
     - image
     - link
@@ -120,19 +115,6 @@ content:
     third_party_settings: {  }
     type: metatag_firehose
     region: content
-  field_related_documents:
-    weight: 29
-    settings:
-      entity_browser: sector_document_browser
-      field_widget_display: label
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      open: false
-      field_widget_display_settings: {  }
-    third_party_settings: {  }
-    type: entity_browser_entity_reference
-    region: content
   field_related_external_url:
     type: link_default
     weight: 31
@@ -202,6 +184,4 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden:
-  field_embargoed_content: true
-  field_media_private: true
+hidden: {  }

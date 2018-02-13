@@ -5,13 +5,10 @@ dependencies:
     - core.entity_view_mode.node.rss
     - field.field.node.article.body
     - field.field.node.article.field_article_type
-    - field.field.node.article.field_embargoed_content
     - field.field.node.article.field_image
     - field.field.node.article.field_issue_date
     - field.field.node.article.field_last_updated
-    - field.field.node.article.field_media_private
     - field.field.node.article.field_metatag
-    - field.field.node.article.field_related_documents
     - field.field.node.article.field_related_external_url
     - field.field.node.article.field_related_internal_url
     - field.field.node.article.field_tags
@@ -29,13 +26,10 @@ content:
 hidden:
   body: true
   field_article_type: true
-  field_embargoed_content: true
   field_image: true
   field_issue_date: true
   field_last_updated: true
-  field_media_private: true
   field_metatag: true
-  field_related_documents: true
   field_related_external_url: true
   field_related_internal_url: true
   field_tags: true

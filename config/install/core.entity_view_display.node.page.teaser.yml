@@ -5,13 +5,9 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.field_auto_contextual_content
-    - field.field.node.page.field_embargoed_content
     - field.field.node.page.field_last_updated
-    - field.field.node.page.field_media_private
     - field.field.node.page.field_metatag
-    - field.field.node.page.field_page_banner
     - field.field.node.page.field_page_variant
-    - field.field.node.page.field_related_documents
     - field.field.node.page.field_related_external_url
     - field.field.node.page.field_related_internal_url
     - field.field.node.page.field_subtitle
@@ -84,13 +80,9 @@ content:
     region: ds_content
 hidden:
   field_auto_contextual_content: true
-  field_embargoed_content: true
   field_last_updated: true
-  field_media_private: true
   field_metatag: true
-  field_page_banner: true
   field_page_variant: true
-  field_related_documents: true
   field_related_external_url: true
   field_related_internal_url: true
   field_subtitle: true

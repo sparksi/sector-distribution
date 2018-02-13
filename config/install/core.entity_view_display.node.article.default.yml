@@ -4,13 +4,10 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_article_type
-    - field.field.node.article.field_embargoed_content
     - field.field.node.article.field_image
     - field.field.node.article.field_issue_date
     - field.field.node.article.field_last_updated
-    - field.field.node.article.field_media_private
     - field.field.node.article.field_metatag
-    - field.field.node.article.field_related_documents
     - field.field.node.article.field_related_external_url
     - field.field.node.article.field_related_internal_url
     - field.field.node.article.field_tags
@@ -163,23 +160,6 @@ content:
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: ds_content
-  field_related_documents:
-    weight: 14
-    label: above
-    settings:
-      view_mode: short_teaser
-      link: false
-    third_party_settings:
-      ds:
-        ds_limit: ''
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: entity_reference_entity_view
-    region: ds_content
   field_related_external_url:
     type: link
     weight: 16
@@ -206,7 +186,5 @@ content:
     region: ds_content
 hidden:
   field_article_type: true
-  field_embargoed_content: true
-  field_media_private: true
   field_tags: true
   links: true

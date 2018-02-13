@@ -10,9 +10,6 @@ dependencies:
  - help
  - link
  - linkit
- - media_entity
- - media_entity_document
- - media_entity_image
  - menu_block
  - menu_link_content
  - menu_ui
@@ -52,7 +49,6 @@ dependencies:
  - editor
  - embed
  - entity
- - entity_browser
  - entity_embed
  - entityqueue
  - field
