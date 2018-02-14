@@ -9,6 +9,7 @@ global:
     js/dist/global.behaviors.js: {}
   dependencies:
       - core/jquery
+      - core/modernizr
 
 scottjehl.Respond:
   remote: https://github.com/scottjehl/Respond
