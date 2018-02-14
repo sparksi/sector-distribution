@@ -30,7 +30,6 @@ dependencies:
  - block
  - block_class
  - block_content
- - block_visibility_groups
  - breakpoint
  - ckeditor
  - color
