@@ -18,47 +18,53 @@
     @include respond-to(tablet-large-and-down) {
       display: none;
       margin-top: 15px;
-      > .menu {
+    }
+    > .menu {
+      @include respond-to(tablet-large-and-down) {
         border-bottom: 1px solid #4e4e4e;
       }
-      &.menu-is-active, &.navigation-is-open {
+    }
+    &.menu-is-active,
+    &.navigation-is-open {
+      @include respond-to(tablet-large-and-down) {
         display: block;
       }
     }
     > .menu {
+      display: block;
       @include respond-to(desktop-and-up) {
         display: flex;
         align-items: center;
-        > .menu__item {
-          > .menu__link {
+      }
+      > .menu__item {
+        > .menu__link {
+          @include respond-to(desktop-and-up) {
             background-color: transparent;
             margin: 0;
           }
-          ~ .menu__item {
+        }
+        ~ .menu__item {
+          @include respond-to(desktop-and-up) {
             margin-left: 0.5em;
           }
         }
       }
-      display: block;
     }
   }
   > .menu {
-    // @include respond-to(tablet-large-and-down) {
-    //   border-bottom: 1px solid $white;
-    // }
     @include respond-to(desktop-and-up) {
       display: flex;
       align-items: center;
     }
     .menu {
-      .menu {
-        left: 100%;
-        top: 0;
-      }
       @include respond-to(desktop-and-up) {
         background-color: rgba($white,0.6);
         position: absolute;
         z-index: 10;
+      }
+      .menu {
+        left: 100%;
+        top: 0;
       }
     }
     > .menu__item {
@@ -71,13 +77,6 @@
         }
       }
     }
-    // > .menu__item {
-    //   ~ .menu__item {
-    //     @include respond-to(desktop-and-up) {
-    //       margin-left: 0.5em;
-    //     }
-    //   }
-    // }
   }
   .menu {
     padding: 0;
@@ -86,9 +85,6 @@
     }
   }
   .menu__item {
-    @include respond-to(wide-and-up) {
-      //padding: $spacing-half $spacing-base;
-    }
     .btn-expand {
       align-content: center;
       position: absolute;
@@ -107,12 +103,13 @@
         border-top: 1px solid #4e4e4e;
         position: relative;
         padding-left: 18px;
-        //margin-right: 48px;
       }
     }
-    .menu__link {
-      @include respond-to(tablet-large-and-down) {
-        padding-left: 27px;
+    &.is-expanded {
+      .menu__link {
+        @include respond-to(tablet-large-and-down) {
+          padding-right: 60px;
+        }
       }
     }
     @include respond-to(tablet-large-and-down) {
@@ -166,6 +163,12 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
+      @include respond-to(desktop-and-up) {
+        font-weight: 600;
+      }
+      @include respond-to(wide-large-and-up) {
+        padding: 10px $spacing-base;
+      }
       &:hover,
       &:focus {
         background-color: transparent;
@@ -197,7 +200,6 @@
           text-decoration: underline;
         }
       }
-      
     }
   }
 }

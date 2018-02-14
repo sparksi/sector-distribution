@@ -1,0 +1,51 @@
+/**
+ * @file
+ * Forms
+ */
+
+.input-group {
+  .form-control {
+    &:first-child {
+      @include border-radius(0);
+    }
+  }
+}
+
+.form-control {
+  height: 50px;
+  @include border-radius(0);
+  font-size: 16px;
+  &:hover {
+    border: 1px solid $gray;
+  }
+}
+
+ /* Note: This list style requires a nested <a> */
+
+.select-wrapper {
+  position: relative;
+  &:after {
+    position: absolute;
+    bottom: 22px;
+    right: 16px;
+    content: '';
+    display: block;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #3b3a3a;
+    pointer-events: none;
+  }
+}
+.form-select {
+  background-color: transparent;
+  background-color: $white;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 32px;
+  border: 1px solid rgba($black,0.4);
+}
+.form-select::-ms-expand {
+  // Hide default select arrow from IE 10
+  display: none;
+}

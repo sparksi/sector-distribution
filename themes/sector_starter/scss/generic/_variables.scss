@@ -49,5 +49,19 @@ $baseFontSize: 16px !default;
  * Specify your site domain here. Used to override detection of off-site links
  * if a link has been created that uses the sites full absolute href. Removes the external
  * link icon.
-*/
+ */
 $site-domain: '<yourdomain>';
+/**
+ * Responsive layout Sass map (eg: Used by ../components/_responsive-layout.scss)
+ *
+ * Modify $responsive-layout-variants to add support for x column grids by adding a (or many)
+ * number(s) to the Sass map, e.g.
+ *
+ * wide : 2 3 4 5 6
+ */
+$responsive-layout-variants: (
+  tablet-large : 2 3,
+  desktop :  2 3 4,
+  wide :  2 3 4
+);
+$responsive-layout-gutter: $grid-gutter-width / 2;
