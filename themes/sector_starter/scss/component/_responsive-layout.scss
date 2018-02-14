@@ -1,32 +1,30 @@
 /**
- *
- * 1. Naming convention for modifiers. For example:
- *    .responsive-layout--t2 translates to layout of 2 columns for
- *    tablet large and up breakpoint ('t' for tablet-large)
- *    .responsive-layout--d3 translates to layout of 3 columns for desktop and up
- *    ('d' for desktop).
- *    .responsive-layout--w4 translates to layout of 3 columns for wide and up
- *    ('w' for wide).
- *
- *    Intention is to use any combination of these modifiers to achieve desired grid configuration.
- *    Modify $responsive-layout-variants to add support for x column grids by adding a (or many)
- *    number(s) to the sass map, e.g.
- *
- *    wide : 2 3 4 5 6
- *
- * 2. By default, without any modifiers, the .responsive-layout componet will squash all child
- *    .responsive-layout__item elements into the same row, without any wrapping.
+ * @file
+ * Responsive layout (Modular utility grid)
  */
 
-// [1]
-$responsive-layout-variants: (
-  tablet-large : 2 3,
-  desktop :  2 3 4,
-  wide :  2 3 4
-);
-$responsive-layout-gutter: $grid-gutter-width / 2;
+/**
+ * Naming convention for grid modifiers. For example:
+ * .responsive-layout--t2 translates to layout of 2 columns for tablet large and up breakpoint ('t' for tablet-large)
+ * .responsive-layout--d3 translates to layout of 3 columns for desktop and up ('d' for desktop).
+ * .responsive-layout--w4 translates to layout of 3 columns for wide and up ('w' for wide).
+ *
+ * Intention is to use any combination of these modifiers to achieve desired grid configuration.
+ *
+ * For example:
+ *
+ * <div class="responsive-layout responsive-layout--t2 responsive-layout--w4">
+ *    <div class="responsive-layout__item"> ... </div>
+ *    <div class="responsive-layout__item"> ... </div>
+ *    <div class="responsive-layout__item"> ... </div>
+ *    <div class="responsive-layout__item"> ... </div>
+ * </div>
+ *
+ * By default, without any modifiers, the .responsive-layout component will squash all child
+ * .responsive-layout__item elements into the same row, without any wrapping.
+ */
 
-// [2]
+
 .responsive-layout,
 %responsive-layout {
   display: flex;
@@ -34,18 +32,22 @@ $responsive-layout-gutter: $grid-gutter-width / 2;
   flex-wrap: nowrap;
   margin-left: $responsive-layout-gutter * -1;
   margin-right: $responsive-layout-gutter * -1;
-  > .responsive-layout__item {
+  > .responsive-layout__item,
+  > %responsive-layout__item {
     padding-left: $responsive-layout-gutter;
     padding-right: $responsive-layout-gutter;
-    ~ .responsive-layout__item {
+    ~ .responsive-layout__item,
+    ~ %responsive-layout__item {
       margin-top: $spacing-base;
     }
   }
   @include respond-to(tablet-large-and-up) {
     flex-direction: row;
-    > .responsive-layout__item {
+    > .responsive-layout__item,
+    > %responsive-layout__item {
       flex: 1;
-      ~ .responsive-layout__item {
+      ~ .responsive-layout__item,
+      ~ %responsive-layout__item {
         margin-top: 0;
       }
     }

@@ -10,7 +10,6 @@
   text-decoration: none;
   @include border-radius(0);
   white-space: normal;
-  @include font-smoothing;
   &:focus {
     outline: 3px solid $brand-focused;
   }

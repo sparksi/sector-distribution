@@ -1,13 +1,140 @@
-// /**
-//  * @file
-//  * BEM block for Views exposed form.
-//  */
+/**
+ * @file
+ * BEM block for Views exposed form.
+ *
+ * [1]
+ *
+ * We use our responsive layout Sass map (See: ../generic/_variables.scss)
+ * to generate modular classes for views exposed filters.
+ *
+ * eg:
+ *
+ * .has-filters-with-responsive-layout
+ * .has-filters-with-responsive-layout-t2
+ * .has-filters-with-responsive-layout-d3
+ * .has-filters-with-responsive-layout-w4
+ *
+ * The intention is to use any combination of these modifiers to achieve your
+ * desired grid configuration of views exposed filters by applying the classes
+ * to the view via views UI Advanced > CSS class.
+ *
+ * For example:
+ *
+ * <div class="view has-filters-with-responsive-layout has-filters-with-responsive-layout-t2 has-filters-with-responsive-layout-w4">
+ *    <div class="views-exposed-form">
+ *        <div class="form-item ...">     ... </div>
+ *        <div class="form-item ...">     ... </div>
+ *        <div class="form-item ...">     ... </div>
+ *        <div class="form-actions ...">  ... </div>
+ *    </div>
+ * </div>
+ */
+
 .views-exposed-form {
   border: 1px solid $brand-border;
   background-color: lighten($gray-lighter,5%);
   padding: $spacing-half;
-  margin: 0;
+  margin: $spacing-half 0;
   @include respond-to(tablet-and-up) {
-    padding: $spacing-base;
+    margin: $spacing-base 0;
+  }
+  label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    margin-bottom: 0;
+    font-weight: 600;
+  }
+  > .form-item {
+    margin-top: $spacing-half;
+    @include respond-to(tablet-and-up) {
+      margin-top: $spacing-base;
+    }
+    @include respond-to(desktop-and-up) {
+      margin-top: $spacing-and-half;
+    }
+    width: 100%;
+    padding: 0;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  > .form-actions {
+    margin-top: $spacing-half;
+    @include respond-to(tablet-and-up) {
+      margin-top: $spacing-base;
+    }
+    @include respond-to(desktop-and-up) {
+      margin-top: $spacing-and-half;
+    }
+    .button {
+      margin-right: 10px;
+      padding: 12px 10px;
+      font-size: 16px;
+      margin-top: 0;
+    }
+  }
+}
+
+/* [1] */
+.has-filters-with-responsive-layout {
+  .views-exposed-form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    padding-right: 0;
+    > .form-item,
+    > .form-actions {
+      padding-left: $responsive-layout-gutter;
+      padding-right: $responsive-layout-gutter;
+      @include respond-to(tablet-large-and-up) {
+        margin-top: 0;
+      }
+      ~ .form-item,
+      ~ .form-actions {
+        margin-top: $spacing-half;
+      }
+    }
+    > .form-actions {
+      @include respond-to(tablet-large-and-up) {
+        padding-top: 26px;
+      }
+    }
+    @include respond-to(tablet-large-and-up) {
+      flex-direction: row;
+      > .form-item,
+      > .form-actions {
+        flex: 1;
+        ~ .form-item,
+        ~ .form-actions {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@each $breakpoint, $cols in $responsive-layout-variants {
+  $first-character: str-slice($breakpoint, 0, 1);
+  $breakpoint: #{$breakpoint}-and-up;
+  @each $col in $cols {
+    .has-filters-with-responsive-layout-#{$first-character}#{$col} {
+      .views-exposed-form {
+        @include respond-to(#{$breakpoint}){
+          flex-wrap: wrap;
+          > .form-item,
+          > .form-actions {
+            width: (100% / $col);
+            flex: none;
+            margin-top: $spacing-base;
+            &:nth-child(-n+#{$col}){
+              margin-top: 0;
+            }
+          }
+        }
+      }
+    }
   }
 }
