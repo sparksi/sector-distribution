@@ -5,7 +5,6 @@ dependencies:
     - field.storage.node.field_last_updated
   module:
     - block_class
-    - block_visibility_groups
     - datetime
     - fieldblock
     - term_condition
@@ -32,11 +31,6 @@ settings:
     timezone_override: ''
     format_type: medium_plus_date
 visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: ''
-    context_mapping: {  }
   term:
     id: term
     negate: false

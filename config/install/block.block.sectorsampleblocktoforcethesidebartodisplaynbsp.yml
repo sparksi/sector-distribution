@@ -6,7 +6,6 @@ dependencies:
   module:
     - block_class
     - block_content
-    - block_visibility_groups
     - system
     - term_condition
   theme:
@@ -29,11 +28,6 @@ settings:
   info: ''
   view_mode: full
 visibility:
-  condition_group:
-    id: condition_group
-    negate: false
-    block_visibility_group: ''
-    context_mapping: {  }
   request_path:
     id: request_path
     pages: '/media/*'

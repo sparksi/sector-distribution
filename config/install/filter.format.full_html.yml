@@ -2,8 +2,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - editor
-    - entity_embed
     - linkit
 name: 'Full HTML'
 format: full_html
@@ -18,12 +16,6 @@ filters:
       allowed_html: '<a href hreflang data-entity-type data-entity-uuid data-entity-substitution> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-entity-substitution> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class="lead"> <span class="bg-warning">'
       filter_html_help: true
       filter_html_nofollow: false
-  editor_file_reference:
-    id: editor_file_reference
-    provider: editor
-    status: true
-    weight: 0
-    settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
@@ -33,12 +25,6 @@ filters:
   filter_caption:
     id: filter_caption
     provider: filter
-    status: true
-    weight: 0
-    settings: {  }
-  entity_embed:
-    id: entity_embed
-    provider: entity_embed
     status: true
     weight: 0
     settings: {  }
