@@ -46,8 +46,6 @@ dependencies:
  - ds_switch_view_mode
  - dynamic_page_cache
  - editor
- - embed
- - entity_embed
  - entityqueue
  - field
  - field_formatter_filter
