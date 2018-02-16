@@ -29,7 +29,7 @@
         "drupal/block_class": "^1.0",
         "drupal/bootstrap": "^3.0",
         "drupal/context": "^1.0",
-        "drupal/core": "^8.0",
+        "drupal/core": "8.5.0-beta1",
         "drupal/default_content": "^1.0",
         "drupal/devel": "^1.0",
         "drupal/ds": "^3.0",
