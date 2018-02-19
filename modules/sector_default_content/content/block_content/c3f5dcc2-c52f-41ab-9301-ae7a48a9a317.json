@@ -60,7 +60,7 @@
     "body": [
         {
             "value": "<ul class=\"list-unstyled list--basic-links\">\n\t<li><a href=\"\/\">Link to internal content<\/a><\/li>\n\t<li><a href=\"\/\">Link to internal content<\/a><\/li>\n\t<li><a href=\"http:\/\/www.drupal.org\/\">Link to external content<\/a><\/li>\n\t<li><a href=\"http:\/\/www.drupal.org\/\">Link to external content<\/a><\/li>\n<\/ul>\n",
-            "format": "filtered_html",
+            "format": "basic_html",
             "summary": null,
             "lang": "en"
         }

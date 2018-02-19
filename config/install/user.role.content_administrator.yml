@@ -122,8 +122,6 @@ permissions:
   - 'use advancedform'
   - 'use media wysiwyg'
   - 'use text format basic_html'
-  - 'use text format filtered_html'
-  - 'use text format filtered_html_basic'
   - 'use text format full_html'
   - 'use text format restricted_basic_html'
   - 'use workbench_moderation my drafts tab'
