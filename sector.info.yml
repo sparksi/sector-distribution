@@ -59,9 +59,6 @@ dependencies:
  - history
  - image
  - layout_discovery
- - migrate
- - migrate_drupal
- - migrate_drupal_ui
  - node
  - options
  - page_cache
