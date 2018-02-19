@@ -60,7 +60,7 @@
     "body": [
         {
             "value": "<p>This sample block is shared across sidebars of a selection of content types to promote internal or external content.<\/p>\n\n<p><a class=\"btn btn-sm btn-primary\" href=\"\/\">Read more<\/a><\/p>\n",
-            "format": "filtered_html",
+            "format": "basic_html",
             "summary": null,
             "lang": "en"
         }

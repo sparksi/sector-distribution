@@ -16,7 +16,6 @@ third_party_settings:
       restricted_basic_html: 0
       full_html: 0
       restricted_html: 0
-      ds_code: 0
     default_order_toggle: 0
     default_order_wrapper:
       formats:
@@ -30,8 +29,6 @@ third_party_settings:
           weight: '-7'
         teaser_display_text:
           weight: '-6'
-        ds_code:
-          weight: '-4'
 id: taxonomy_term.copyright_licensing.field_cc_licence_long
 field_name: field_cc_licence_long
 entity_type: taxonomy_term

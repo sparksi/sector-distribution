@@ -60,7 +60,7 @@
     "body": [
         {
             "value": "&nbsp;\n",
-            "format": "ds_code",
+            "format": "basic_html",
             "summary": null,
             "lang": "en"
         }

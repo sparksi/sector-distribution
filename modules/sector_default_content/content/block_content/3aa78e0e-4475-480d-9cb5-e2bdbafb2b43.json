@@ -60,7 +60,7 @@
     "body": [
         {
             "value": "<ul class=\"list-unstyled list--basic-links\">\n\t<li><a href=\"\/\">Sitewide search<\/a><\/li>\n\t<li><a href=\"\/\">News archive<\/a><\/li>\n\t<li><a href=\"\/\">Resource archive<\/a><\/li>\n\t<li><a href=\"\/\">Other links<\/a><\/li>\n<\/ul>\n",
-            "format": "filtered_html",
+            "format": "basic_html",
             "summary": null,
             "lang": "en"
         }

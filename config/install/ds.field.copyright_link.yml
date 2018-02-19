@@ -4,7 +4,7 @@ ui_limit: ''
 properties:
   content:
     value: '[node:field_copyright_license:field_copyright_link:title]'
-    format: ds_code
+    format: teaser_display_text
 type: token
 type_label: 'Token field'
 entities:
