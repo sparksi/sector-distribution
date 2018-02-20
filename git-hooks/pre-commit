@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# We want composer changes to be reflected in the makefiles. Output notice on commit to warn developers.
+
+# List of files.
+LIST="$(git diff --name-only --cached composer.json)"
+if grep --quiet composer "$LIST"; then
+echo '======'
+echo 'NOTICE: CHANGE HAS BEEN MADE TO THE COMPOSER.JSON FILE IN THIS COMMIT. PLEASE CHECK RELEVANT CHANGES HAVE BEEN MADE TO THE MAKEFILES'
+echo '======'
+fi
