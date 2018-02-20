@@ -45,6 +45,7 @@ settings:
             - SpecialChar
             - Maximize
             - Source
+            - TemplateSelector
         -
           name: 'Custom styles'
           items:
