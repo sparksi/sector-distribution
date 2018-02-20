@@ -1,5 +1,5 @@
 # Settings
-# Sector is opinionated here. Note: in your subtheme these settings can be
+# The theme is opinionated here. Note: in your subtheme these settings can be
 # overridden by the database via /admin/appearance/settings/{PROJECTTHEMENAME}.
 # See: https://drupal-bootstrap.org/api/bootstrap/docs%21Theme-Settings.md/group/theme_settings/8
 

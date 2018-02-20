@@ -25,15 +25,27 @@ Create a subtheme the [Drupal way](https://www.drupal.org/node/225125) using Sec
 
 Make a copy of the Sector Starter theme
 
-`/web/themes/custom/$ cp -R sector_starter {PROJECTTHEMENAME}`
+`cd {PROJECTNAME}/web/themes/$ mkdir custom`
+`cd custom/`
+
+Make a copy of the Sector Starter theme
+
+`{PROJECTNAME}/web/themes/custom/$ cp -R ../../profiles/contrib/sector-distribution/themes/sector_starter {PROJECTTHEMENAME}`
 
 **Within your _new_ `{PROJECTTHEMENAME}` theme...**
 
-**Rename the .yml files in the root of your theme eg: sector_starter.info.yml becomes:**
+**Rename the .yml and theme files in the root of your theme eg: sector_starter.info.yml becomes:**
 
 `/{PROJECTTHEMENAME}/{PROJECTTHEMENAME}.info.yml`
 
-**Search and replace 'sector_starter' and 'Sector starter' with your theme name within your new theme**
+Shortcuts:
+
+`mv sector_starter.breakpoints.yml {PROJECTTHEMENAME}.breakpoints.yml`
+`mv sector_starter.info.yml {PROJECTTHEMENAME}.info.yml`
+`mv sector_starter.libraries.yml {PROJECTTHEMENAME}.libraries.yml`
+`mv sector_starter.theme {PROJECTTHEMENAME}.theme`
+
+**Search and replace 'sector_starter', 'Sector starter' and 'Sector' with your theme name or similar within your new theme. We recommended to take a granular approach.**
 
 Note: The package.json file also inludes a repository url which should be updated.
 
@@ -96,6 +108,8 @@ You can replace "6" with the "x.x" version you prefer if required.
 Install Yarn (Optional)
 
  `apt-get install yarn`
+
+See more: https://yarnpkg.com/en/docs/install
 
 Then `cd` inside the root of this theme directory.
 
