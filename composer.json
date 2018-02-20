@@ -16,19 +16,6 @@
         "asset.packagist": {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        "ckeditor/templates": {
-            "type": "package",
-            "package": {
-                "name": "ckeditor/templates",
-                "type": "drupal-library",
-                "version": "4.5.7",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://download.ckeditor.com/templates/releases/templates_4.5.7.zip",
-                    "reference": "master"
-                }
-            }
         }
     },
     "require": {
@@ -64,7 +51,8 @@
         "drupal/search_api_solr": "1.2",
         "drupal/term_condition": "1.1",
         "drupal/token": "1.1",
-        "drupal/xmlsitemap": "1.0-alpha2"
+        "drupal/xmlsitemap": "1.0-alpha2",
+        "drupal/wysiwyg_template": "2.0-beta1"
     },
     "conflict": {
         "drupal/drupal": "*"

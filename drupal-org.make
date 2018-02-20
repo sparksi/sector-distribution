@@ -64,3 +64,5 @@ projects[token][type] = module
 projects[token][version] = 1.1
 projects[xmlsitemap][type] = module
 projects[xmlsitemap][version] = 1.0-alpha2
+projects[wysiwyg_template][type] = module
+projects[wysiwyg_template][version] = 2.0-beta1
