@@ -54,6 +54,9 @@
         "drupal/xmlsitemap": "1.0-alpha2",
         "drupal/wysiwyg_template": "2.0-beta1"
     },
+    "replace": {
+      "ckeditor/templates": "*"
+    },
     "conflict": {
         "drupal/drupal": "*"
     },
