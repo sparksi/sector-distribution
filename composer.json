@@ -95,6 +95,7 @@
         },
         "patches": {
             "drupal/fieldblock": {
+                "Add administer permission": "https://www.drupal.org/files/issues/add-administer-permission-2604972-8.patch",
                 "PHP exception when placing block": "https://www.drupal.org/files/issues/php_exception_when-2810783-30.patch"
             },
             "drupal/term_condition": {
