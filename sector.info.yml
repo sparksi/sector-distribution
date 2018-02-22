@@ -14,7 +14,6 @@ dependencies:
  - menu_link_content
  - menu_ui
  - path
- - contact
  - pathauto
  - responsive_image
  - sector_blocks
@@ -78,6 +77,13 @@ dependencies:
  - password_policy_history
  - password_policy_length
  - metatag
+ - xmlsitemap
+ - xmlsitemap_custom
+ - anchor_link
+ - admin_toolbar_links_access_filter
+ - rabbit_hole
+ - rh_node
+ - rh_taxonomy
 
 themes:
  - bootstrap
