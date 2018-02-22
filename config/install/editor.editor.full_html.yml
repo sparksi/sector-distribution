@@ -25,6 +25,7 @@ settings:
           items:
             - DrupalLink
             - DrupalUnlink
+            - Anchor
         -
           name: Lists
           items:
@@ -33,27 +34,22 @@ settings:
             - Outdent
             - Indent
         -
-          name: Media
-          items:
-            - insert_image
-            - insert_document
-            - Blockquote
-        -
           name: Tools
           items:
             - Undo
             - Redo
             - ShowBlocks
-            - HorizontalRule
             - RemoveFormat
-            - Source
             - PasteText
             - PasteFromWord
             - SpecialChar
             - Maximize
+            - Source
         -
           name: 'Custom styles'
           items:
+            - Blockquote
+            - HorizontalRule
             - Styles
   plugins:
     stylescombo:

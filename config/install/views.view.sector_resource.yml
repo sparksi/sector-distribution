@@ -297,6 +297,8 @@ display:
         use_more_text: false
         style: false
         row: false
+        link_display: false
+        link_url: false
       pager:
         type: some
         options:
@@ -390,6 +392,8 @@ display:
         options:
           relationship: none
           view_mode: short_teaser
+      link_display: page_1
+      link_url: ''
     cache_metadata:
       max-age: -1
       contexts:

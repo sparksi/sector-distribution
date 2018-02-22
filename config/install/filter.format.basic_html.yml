@@ -14,7 +14,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <br> <img src alt height width data-entity-type data-entity-uuid data-entity-substitution data-align data-caption> <s> <sup> <sub> <a href hreflang !href accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution> <hr> <p class=" lead"> <span class=" bg-warning"> <drupal-entity data-entity-type data-entity-uuid data-entity-substitution data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button> <div aria-label role class="">'
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <br> <hr> <s> <sup> <sub> <hr> <p class> <span class> <div aria-label role class> <table> <caption> <tbody><thead> <tr> <td> <th> <pre> <address> <code> <cite><em> <b> <u> <i> <strong> <del> <ins> <strike> <footer> <small> <a href hreflang !href accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution name> <img src alt height width data-entity-type data-entity-uuid data-entity-substitution data-align data-caption>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:

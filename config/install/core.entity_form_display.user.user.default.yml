@@ -15,9 +15,6 @@ content:
   account:
     weight: -10
     region: content
-  contact:
-    weight: 5
-    region: content
   field_last_password_reset:
     type: datetime_default
     weight: 4

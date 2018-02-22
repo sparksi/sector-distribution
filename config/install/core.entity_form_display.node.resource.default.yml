@@ -21,26 +21,12 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_meta:
-      children:
-        - field_issue_date
-        - field_copyright_license
-      parent_name: ''
-      weight: 2
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: 'group-meta field-group-fieldset'
-        description: ''
-        required_fields: true
-      label: 'Meta data'
     group_related:
       children:
-        - field_related_documents
         - field_related_internal_url
         - field_related_external_url
       parent_name: ''
-      weight: 4
+      weight: 6
       format_type: fieldset
       format_settings:
         id: ''
@@ -50,10 +36,9 @@ third_party_settings:
       label: 'Related content'
     group_additional_fields:
       children:
-        - field_last_updated
         - field_tags
       parent_name: ''
-      weight: 5
+      weight: 7
       format_type: fieldset
       format_settings:
         id: ''
@@ -61,6 +46,20 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Additional meta data'
+    group_meta:
+      children:
+        - field_copyright_license
+        - field_issue_date
+        - field_last_updated
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: true
+        required_fields: true
+      label: 'Meta data'
 id: node.resource.default
 targetEntityType: node
 bundle: resource
@@ -77,30 +76,30 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
   field_copyright_license:
     type: options_select
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_issue_date:
     type: datetime_default
-    weight: 2
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
   field_last_updated:
-    weight: 6
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
     region: content
   field_metatag:
-    weight: 6
+    weight: 8
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
@@ -138,7 +137,7 @@ content:
     region: content
   path:
     type: path
-    weight: 11
+    weight: 13
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -146,21 +145,21 @@ content:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 9
+    weight: 11
     third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
+    weight: 14
     region: content
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 10
+    weight: 12
     third_party_settings: {  }
     region: content
   title:
@@ -173,7 +172,7 @@ content:
     region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 9
     settings:
       match_operator: CONTAINS
       size: 60
