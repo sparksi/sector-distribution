@@ -50,6 +50,8 @@ projects[password_policy][type] = module
 projects[password_policy][version] = 3.0-alpha4
 projects[pathauto][type] = module
 projects[pathauto][version] = 1.0
+projects[rabbit_hole][type] = module
+projects[rabbit_hole][version] = 1.0-beta4
 projects[recreate_block_content][type] = module
 projects[recreate_block_content][version] = 1.0
 projects[search_api_solr][type] = module
@@ -60,3 +62,6 @@ projects[term_condition][patch][] = https://www.drupal.org/files/issues/term_con
 projects[term_condition][patch][] = https://www.drupal.org/files/issues/term_condition-block_hidden_not_node-2797205-7.patch
 projects[token][type] = module
 projects[token][version] = 1.1
+projects[xmlsitemap][type] = module
+projects[xmlsitemap][version] = 1.0-alpha2
+

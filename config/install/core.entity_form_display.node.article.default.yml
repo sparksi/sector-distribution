@@ -26,18 +26,19 @@ third_party_settings:
     group_meta:
       children:
         - field_issue_date
+        - field_last_updated
       parent_name: ''
       weight: 2
       label: 'Meta data'
       format_type: details
       format_settings:
-        open: false
+        label: 'Meta data'
+        open: true
         required_fields: true
-        classes: ''
         id: ''
+        classes: ''
     group_related:
       children:
-        - field_related_documents
         - field_related_internal_url
         - field_related_external_url
       parent_name: ''
@@ -51,7 +52,6 @@ third_party_settings:
         id: ''
     group_additional_fields:
       children:
-        - field_last_updated
         - field_tags
         - field_image
       parent_name: ''
@@ -104,7 +104,7 @@ content:
     third_party_settings: {  }
     region: content
   field_last_updated:
-    weight: 26
+    weight: 16
     settings: {  }
     third_party_settings: {  }
     type: datetime_default

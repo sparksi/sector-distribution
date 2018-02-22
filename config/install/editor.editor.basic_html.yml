@@ -24,6 +24,7 @@ settings:
           items:
             - DrupalUnlink
             - DrupalLink
+            - Anchor
         -
           name: Lists
           items:
@@ -34,20 +35,20 @@ settings:
         -
           name: Tools
           items:
-            - Blockquote
             - Undo
             - Redo
-            - HorizontalRule
-            - Source
             - ShowBlocks
             - RemoveFormat
             - PasteText
             - PasteFromWord
             - SpecialChar
             - Maximize
+            - Source
         -
           name: Format
           items:
+            - Blockquote
+            - HorizontalRule
             - Styles
   plugins:
     stylescombo:
