@@ -15,9 +15,6 @@ use Drupal\entityqueue\Entity\EntityQueue;
  * @see system_install()
  */
 function sector_install() {
-  // First, do everything in standard profile.
-  include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
-  standard_install();
   
 //sector_starter
   \Drupal::service('theme_installer')->install(['sector_starter']);
