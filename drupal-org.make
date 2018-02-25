@@ -14,7 +14,7 @@ projects[better_normalizers][version] = 1.0-beta3
 projects[block_class][type] = module
 projects[block_class][version] = 1.0-alpha1
 projects[bootstrap][type] = theme
-projects[bootstrap][version] = 3.9
+projects[bootstrap][version] = 3.10
 projects[ctools][type] = module
 projects[ctools][version] = 3.0
 projects[default_content][type] = module
@@ -64,4 +64,3 @@ projects[token][type] = module
 projects[token][version] = 1.1
 projects[xmlsitemap][type] = module
 projects[xmlsitemap][version] = 1.0-alpha2
-
