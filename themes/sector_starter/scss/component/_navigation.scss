@@ -16,18 +16,12 @@
   }
   &.navigation-is-open {
     @include respond-to(tablet-large-and-down) {
-      display: none;
+      display: block;
       margin-top: 15px;
     }
     > .menu {
       @include respond-to(tablet-large-and-down) {
         border-bottom: 1px solid #4e4e4e;
-      }
-    }
-    &.menu-is-active,
-    &.navigation-is-open {
-      @include respond-to(tablet-large-and-down) {
-        display: block;
       }
     }
     > .menu {
@@ -71,6 +65,9 @@
       > .menu__link {
         background-color: transparent;
         margin: 0;
+        @include respond-to(wide-large-and-up) {
+          padding: 10px $spacing-base;
+        }
         &:hover {
           background-color: transparent;
           color: rgba(255,255,255,0.8);
@@ -165,39 +162,38 @@
       overflow: hidden;
       @include respond-to(desktop-and-up) {
         font-weight: 600;
-      }
-      @include respond-to(wide-large-and-up) {
-        padding: 10px $spacing-base;
+        border-right: none;
+        border-bottom: none;
       }
       &:hover,
       &:focus {
         background-color: transparent;
         color: rgba(255,255,255,0.8);
       }
-    }
-    &.is-active {
-      @include respond-to(tablet-large-and-down) {
-        background-color: black;
+      &.is-active {
         &:before {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 5px;
-          height: 100%;
-          background-color: #436FFC;
+          @include respond-to(tablet-large-and-down) {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: #436FFC;
+          }
         }
-      }
-      @include respond-to(desktop-and-up) {
-        background-color: #4e4e4e;
         &:hover,
         &:focus {
-          background-color: darken(#4e4e4e, 6%);
-          color: $white;
-          text-decoration: underline;
+          @include respond-to(tablet-large-and-down) {
+            background-color: transparent;
+            color: $white;
+            text-decoration: underline;
+          }
         }
         &.is-active {
-          text-decoration: underline;
+          @include respond-to(tablet-large-and-down) {
+            text-decoration: underline;
+          }
         }
       }
     }
