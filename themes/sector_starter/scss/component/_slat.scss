@@ -15,7 +15,7 @@
  */
 
 .slat__media {
-  @include single-transition(all, 0.05s, ease-in);
+  transition: all 0.05s ease-in;
   border: 1px solid darken($gray-lighter, 10%);
   > a {
     display: block;
@@ -27,7 +27,7 @@
     &:hover,
     &:focus {
       text-decoration: underline;
-      @include single-transition(all, 0.05s, ease-in);
+      transition:all 0.05s ease-in;
     }
     &:visited {
       color: $brand-visited;
@@ -95,7 +95,7 @@
   display: block;
   .slat__title {
     color: $brand-primary;
-    @include single-transition(none);
+    transition: none;
   }
   .slat__body {
     color: $text-color;
@@ -109,7 +109,7 @@
     .slat__title {
       color: lighten($brand-primary,15%);
       text-decoration: underline;
-      @include single-transition(all, 0.05s, ease-in);
+      transition: all 0.05s ease-in;
     }
     .slat__body {
       color: $text-color;

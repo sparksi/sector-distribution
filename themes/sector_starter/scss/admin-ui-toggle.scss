@@ -13,23 +13,19 @@
 @import "../scss/generic/variables";
 
 
-/* COMPASS
-------------------------------------------------------------------------*/
-@import "compass";
-
-
 /* BOOTSTRAP (Just the components we need)
 ------------------------------------------------------------------------*/
-@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/variables";
-@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
-@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/vendor-prefixes";
-@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/mixins/tab-focus";
-@import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/opacity";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/buttons";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/vendor-prefixes";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/tab-focus";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
 
 
 /* BREAKPOINT
 ------------------------------------------------------------------------*/
-@import "breakpoint";
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 
 /* GENERIC

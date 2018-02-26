@@ -8,11 +8,6 @@
 @import "../scss/generic/variables";
 
 
-/* COMPASS
-------------------------------------------------------------------------*/
-@import "compass";
-
-
 /* BOOTSTRAP
 ------------------------------------------------------------------------*/
 @import "../scss/vendor/bootstrap/bootstrap-custom.scss";
@@ -20,7 +15,7 @@
 
 /* BREAKPOINT
 ------------------------------------------------------------------------*/
-@import "breakpoint";
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
 
 
 /* GENERIC

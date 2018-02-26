@@ -5,7 +5,7 @@
 .alert {
   margin-top: $spacing-base;
   margin-bottom: 0;
-  @include border-radius(0);
+  border-radius:0;
   .close {
     line-height: 0.8em;
   }
@@ -18,7 +18,7 @@
   @include font-smoothing;
   > li {
     > a {
-      @include border-radius(0);
+      border-radius:0;
       color: $brand-warning;
       &:focus {
         color: $white;

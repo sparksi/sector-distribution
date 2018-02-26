@@ -40,7 +40,7 @@
     height: 43px;
     width: 43px;
     background-color: $white;
-    @include border-radius(0);
+    border-radius:0;
     border: 1px solid $brand-gray-light;
     .icon {
       color: $gray-dark;
@@ -94,7 +94,7 @@
       background-color: $brand-primary;
     }
     &:focus {
-      @include box-shadow(none);
+      box-shadow: none;
       background-color: $black;
       outline: 1px solid $black;
       outline-offset: 0;
@@ -155,7 +155,7 @@
       &:focus {
         outline: none;
         outline-offset: 0;
-        @include box-shadow(none);
+        box-shadow: none;
       }
     }
   }

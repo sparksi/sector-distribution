@@ -9,7 +9,7 @@
   > li {
     > a {
       position: relative;
-      @include border-radius(0);
+      border-radius:0;
       border: none;
       background-repeat: no-repeat;
       background-color: transparent;
@@ -26,13 +26,13 @@
     &:first-child {
       > a,
       > span {
-        @include border-radius(0);
+        border-radius:0;
       }
     }
     &:last-child {
       > a,
       > span {
-        @include border-radius(0);
+        border-radius:0;
       }
     }
     &.pager__item--first {
@@ -121,7 +121,7 @@
   > li {
     > a {
       position: relative;
-      @include border-radius(0);
+      border-radius:0;
       border: none;
       background-repeat: no-repeat;
       background-color: transparent;
