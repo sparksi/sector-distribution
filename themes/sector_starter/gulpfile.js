@@ -59,10 +59,7 @@ const config = {
       outputStyle : 'compressed',
       sourceMaps : false
     },
-    includePaths : [
-      './bower_components/breakpoint-sass/stylesheets',
-      './bower_components/compass-mixins/lib'
-    ],
+    includePaths : [],
     lint : {
       files: {
         include: 'scss/**/*.scss',

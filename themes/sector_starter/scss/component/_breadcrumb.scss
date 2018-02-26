@@ -7,7 +7,7 @@
   background-color: transparent;
   padding: 0;
   margin: 0;
-  @include border-radius(0);
+  border-radius:0;
   > li {
     color: #BBBBBB;
     position: relative;

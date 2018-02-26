@@ -23,7 +23,7 @@
   }
   .logo__brand {
     fill: $white;
-    @include single-transition(all, 0.05s, ease-in);
+    transition:all 0.05s ease-in;
     @include respond-to(desktop) {
       .logo__item {
          fill: transparent;

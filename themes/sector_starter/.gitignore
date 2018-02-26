@@ -26,7 +26,6 @@ sites/*/private
 
 # Dependencies
 node_modules
-bower_components
 
 # Ignore npm-debug.log
 npm-debug.log

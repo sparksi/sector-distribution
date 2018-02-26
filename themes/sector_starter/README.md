@@ -65,7 +65,7 @@ If you want to modify SCSS/CSS/SVG sprites etc you'll need to install localised 
 
 This project uses a NodeJS LibSaSS compilation pipeline.
 
-This project uses NPM or Yarn and Bower to provide a completely localised project dependency environment.
+This project uses NPM or Yarn to provide a completely localised project dependency environment.
 
 ### Installing the localised dependencies requires the following steps:
 
@@ -83,9 +83,9 @@ This repository contains an `.nvmrc` that allows us to set the node version we e
 To install NVM, run `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash`.
 When the install finishes it will tell you to log out and back in, but this is not required, just run `source ~/.profile` to refresh your path.
 
-To download versions of NodeJS, run `nvm install x.x` or just `nvm install 6` which is the latest version as of writing this.
+To download versions of NodeJS, run `nvm install x.x` or just `nvm install 9` which is the latest version as of writing this.
 
-Run `nvm install 6`
+Run `nvm install 9`
 
 `nvm ls-remote` will give you a complete list of available versions.
 
@@ -97,7 +97,7 @@ NVM will look for an `.nvmrc` file and use that if it can, so once you `cd` insi
 Note that any NVM commands you run are session only.
 When you log out, next time you come back the system version of NodeJS will be in use again.
 
-Run `nvm alias default 6`
+Run `nvm alias default 9`
 
 This is to save a default that will be used for all future bash sessions.
 
@@ -115,17 +115,13 @@ Then `cd` inside the root of this theme directory.
 
 Now you can run the 3 commands needed to compile and watch the files in the `./scss/` directory as well as watch for new SVG's in the `/build/sprite/` directory. The SCSS files will be compiled into a `./css/` directory. SVG's will be compiled to the `/images/` directory. Read more about svg here: https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
 
-`npm install && npm run bower install && npm run gulp` (**see note about `bower` below**)
+`npm install && npm run gulp`
 
 or if using yarn
 
-`yarn install && yarn run bower install && yarn run gulp`
+`yarn install && yarn run gulp`
 
 The first command, `npm install` or `yarn install` will download and install all the modules listed in the `package.json` file into the `./node_modules/` directory.
-
-The second command, `npm run bower install`, executes a script defined in the `package.json` file. This simple script definition looks for the relative copy of the `bower` module, which is a front-end package manager and will install our front-end tools, such as Susy, into a `./bower_components/` directory.
-
-**NOTE:** If `bower` does not install its packages, just run this instead: `./node_modules/bower/bin/bower install`. *This is because of an issue with the old version of NodeJS and NPM that come from the Ubuntu repositories.*
 
 The last command, `npm run gulp` or `yarn run gulp`, again executes a script defined in the `package.json`. This script runs Gulp, which simply executes the default commands found in the `gulpfile.js` file.
 
@@ -203,7 +199,7 @@ Sector displays are built using Display Suite. Use Sector Starter classes as muc
 
 *SCSS/CSS*
 
-We load Bootstrap Sass via Bower in order to be able to select which partials of Bootstrap we want use. See `/scss/vendor/bootstrap/bootstrap-custom.scss` to select the components you wish to use.
+We load Bootstrap Sass via NPM in order to be able to select which partials of Bootstrap we want use. See `/scss/vendor/bootstrap/bootstrap-custom.scss` to select the components you wish to use.
 
 *Javascript*
 
