@@ -1,10 +1,12 @@
-"use strict";
+'use strict';
 
 /**
  * Custom javascript
  *
  */
 (function ($) {
+
+  var click_trigger = Modernizr.touch ? 'touchstart' : 'click';
 
   Drupal.behaviors.scrollHelpers = {
     attach: function attach() {
@@ -74,58 +76,51 @@
     }
   };
 
+  var _search = {
+    region: $(".site.header"),
+    elem: $(".search--flyout"),
+    toggle: $(".js-toggle-search, .js-toggle-flyout-search")
+  };
+
   Drupal.behaviors.flyoutSearch = {
-    attach: function attach(context) {
+    attach: function attach() {
+      _search.toggle.on(click_trigger, Drupal.behaviors.flyoutSearch.toggle);
+    },
+    toggle: function toggle() {
+      _search.toggle.toggleClass("active");
+      _search.elem.toggleClass('search-is-active');
+      $(".search__input").focus(); // Custom search API
+      $("#edit-keys").focus(); // Core search
 
-      var flyout = $(".search--flyout", context);
-      var toggle = $(".js-toggle-search, .js-toggle-flyout-search", context);
-
-      // Functions for tidyness
-      function toggleFlyoutSearch() {
-        flyout.toggleClass("search-is-active");
-      }
-
-      function hideFlyoutSearch() {
-        flyout.removeClass("search-is-active");
-        toggle.removeClass("active");
-      }
-
-      toggle.on({
-        click: function click() {
-          $(this).toggleClass("active");
-          toggleFlyoutSearch();
-          $(".search__input").focus(); // Custom search API
-          $("#edit-keys").focus(); // Core search
-          return false;
-        }
-      });
-
-      // Detect a click outside the element and hide.
-      // https://css-tricks.com/dangers-stopping-event-propagation/
-      $(document).on({
-        click: function click(event) {
-          if (!$(event.target).closest(".search--flyout").length) {
-            hideFlyoutSearch();
-          }
-        }
-      });
+      Drupal.behaviors.flyoutMenu.close(); // close navigation
+    },
+    close: function close() {
+      _search.toggle.removeClass('active');
+      _search.elem.removeClass('search-is-active');
+      $(".search__input").blur(); // Custom search API
+      $("#edit-keys").blur(); // Core search      
     }
+  };
+
+  var _primary_navigation = {
+    region: $(".site.header"),
+    elem: $(".navigation--primary"),
+    toggle: $(".js-toggle-navigation")
   };
 
   Drupal.behaviors.flyoutMenu = {
     attach: function attach(context, settings) {
 
-      var _navigation = $(".header .navigation", context);
-      var _navigation_toggle = $(".js-toggle-navigation", context);
+      // toggle menu open/close
+      _primary_navigation.toggle.on(click_trigger, Drupal.behaviors.flyoutMenu.toggle);
 
-      _navigation_toggle.on({
-        click: function click() {
-          _navigation.toggleClass("navigation-is-open");
-          $(this).toggleClass("active");
-        }
+      // add is-open to all active-trail menu__items on load
+      $(".menu__item.active-trail", _primary_navigation.elem).each(function () {
+        $(this).addClass('is-open');
       });
 
-      $(".is-expanded", _navigation).each(function () {
+      // for each expandable menu item, add an expander/contractor UI component
+      $(".is-expanded", _primary_navigation.elem).each(function () {
         var _link = $(this).find("> .menu__link");
         $("<span />", {
           "text": "Expand",
@@ -152,42 +147,41 @@
           var links = $(".expanded .menu__link", ".touchevents .header .navigation").not(".menu .menu .menu__link", ".touchevents .header .navigation");
           links.on("touchend", function (evt) {
             if (!$(this).hasClass("js-opened")) {
-              $(".js-opened", _navigation).removeClass("js-opened");
+              $(".js-opened", _primary_navigation.elem).removeClass("js-opened");
               $(this).addClass("js-opened");
               evt.preventDefault();
             }
           });
         }
       }
+    },
+    toggle: function toggle() {
+      _primary_navigation.toggle.toggleClass('active');
+      _primary_navigation.elem.toggleClass("navigation-is-open");
 
-      var flyout = $(".navigation--primary", context);
-      var toggle = $(".js-toggle-navigation .icon--menu", context);
+      // close search
+      Drupal.behaviors.flyoutSearch.close();
+    },
+    close: function close() {
+      _primary_navigation.toggle.removeClass('active');
+      _primary_navigation.elem.removeClass("navigation-is-open");
+    }
+  };
 
-      // Functions for tidyness
-      function toggleFlyoutMenu() {
-        flyout.toggleClass("menu-is-active");
-      }
-
-      function hideFlyoutMenu() {
-        flyout.removeClass("menu-is-active");
-        toggle.removeClass("active");
-      }
-
-      toggle.on({
-        click: function click(evt) {
-          $(this).toggleClass("active");
-          toggleFlyoutMenu();
-          evt.preventDefault();
-        }
-      });
-
+  Drupal.behaviors.offRegionClick = {
+    attach: function attach() {
       // Detect a click outside the element and hide.
       // https://css-tricks.com/dangers-stopping-event-propagation/
-      $(document).on({
-        click: function click(event) {
-          if (!$(event.target).closest(".navigation--primary").length) {
-            hideFlyoutMenu();
-          }
+      $(document).on(click_trigger, function (event) {
+        var region = $(event.target).closest(".site"); // section that was clicked
+
+        if (!region.is(_primary_navigation.region)) {
+          // if you clicked outside the section that the navigation lives
+          Drupal.behaviors.flyoutMenu.close();
+        }
+        if (!region.is(_search.region)) {
+          // if you clicked outside the section that the navigation lives
+          Drupal.behaviors.flyoutSearch.close();
         }
       });
     }
