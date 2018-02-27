@@ -171,6 +171,9 @@
         color: rgba(255,255,255,0.8);
       }
       &.is-active {
+        @include respond-to(tablet-large-and-down) {
+          text-decoration: underline;
+        }
         &:before {
           @include respond-to(tablet-large-and-down) {
             content: '';
@@ -190,9 +193,12 @@
             text-decoration: underline;
           }
         }
-        &.is-active {
+        &[href^="#"] {
+          text-decoration: none;
           @include respond-to(tablet-large-and-down) {
-            text-decoration: underline;
+            &:before {
+              content:none;
+            }
           }
         }
       }
