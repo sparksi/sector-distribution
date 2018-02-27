@@ -8,7 +8,6 @@ third_party_settings:
     available_menus:
       - footer
       - main-menu
-      - utility-pages
     parent: 'main-menu:'
 name: Page
 type: page

@@ -9,37 +9,10 @@ dependencies:
     - image.style.thumbnail
     - node.type.promotion
   module:
-    - field_group
     - image
     - link
     - path
     - text
-third_party_settings:
-  field_group:
-    group_link:
-      children:
-        - field_featured_content
-      parent_name: ''
-      weight: 3
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: 'group-link field-group-fieldset'
-        description: ''
-        required_fields: true
-      label: Link
-    group_media:
-      children:
-        - field_image
-      parent_name: ''
-      weight: 4
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: 'group-media field-group-fieldset'
-        description: ''
-        required_fields: true
-      label: Media
 id: node.promotion.default
 targetEntityType: node
 bundle: promotion
@@ -56,12 +29,12 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_featured_content:
-    weight: 9
+    weight: 3
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -69,7 +42,7 @@ content:
     type: link_default
     region: content
   field_image:
-    weight: 10
+    weight: 4
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -78,12 +51,9 @@ content:
     region: content
   field_promotion_type:
     weight: 1
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: options_select
     region: content
   path:
     type: path
@@ -91,25 +61,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 7
-    region: content
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 120
-    region: content
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 8
+    weight: 10
     region: content
     third_party_settings: {  }
   title:
@@ -122,11 +78,13 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 5
+    weight: 7
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     region: content
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  promote: true
+  sticky: true

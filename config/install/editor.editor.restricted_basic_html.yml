@@ -36,17 +36,16 @@ settings:
             - ShowBlocks
             - RemoveFormat
             - PasteText
-            - PasteFromWord
             - SpecialChar
             - Maximize
   plugins:
     stylescombo:
       styles: ''
-    language:
-      language_list: un
     drupallink:
       linkit_enabled: true
-      linkit_profile: ''
+      linkit_profile: linkit_wysiwyg
+    language:
+      language_list: un
 image_upload:
   status: false
   scheme: public

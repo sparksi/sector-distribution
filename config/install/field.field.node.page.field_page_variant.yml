@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.field_page_variant
     - node.type.page
     - taxonomy.vocabulary.page_variants
-  content:
-    - 'taxonomy_term:page_variants:fd9a1a20-c2a0-454b-8b57-b2981e3affc2'
 id: node.page.field_page_variant
 field_name: field_page_variant
 entity_type: node

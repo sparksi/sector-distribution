@@ -48,7 +48,7 @@ filters:
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
-    status: false
+    status: true
     weight: -42
     settings: {  }
   filter_html:
@@ -57,7 +57,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<a href hreflang data-entity-type data-entity-uuid data-entity-substitution> <em> <strong> <ul type> <ol start type> <li> <dl> <dt> <dd> <p> <br> <div> <del> <ins> <sub> <sup> <strike> <s>'
+      allowed_html: '<p> <br> <strong> <em> <ul> <ol> <li> <a href hreflang data-entity-type data-entity-uuid data-entity-substitution> <s>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_caption:
@@ -70,6 +70,6 @@ filters:
     id: linkit
     provider: linkit
     status: true
-    weight: -51
+    weight: -50
     settings:
       title: false

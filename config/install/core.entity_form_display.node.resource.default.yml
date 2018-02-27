@@ -21,36 +21,12 @@ dependencies:
     - text
 third_party_settings:
   field_group:
-    group_related:
-      children:
-        - field_related_internal_url
-        - field_related_external_url
-      parent_name: ''
-      weight: 6
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: 'group-related field-group-fieldset'
-        description: ''
-        required_fields: true
-      label: 'Related content'
-    group_additional_fields:
-      children:
-        - field_tags
-      parent_name: ''
-      weight: 7
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: 'group-additional-fields field-group-fieldset'
-        description: ''
-        required_fields: true
-      label: 'Additional meta data'
     group_meta:
       children:
         - field_copyright_license
         - field_issue_date
         - field_last_updated
+        - field_tags
       parent_name: ''
       weight: 2
       format_type: details
@@ -60,6 +36,19 @@ third_party_settings:
         open: true
         required_fields: true
       label: 'Meta data'
+    group_related_content:
+      children:
+        - field_related_internal_url
+        - field_related_external_url
+      parent_name: ''
+      weight: 4
+      format_type: details
+      format_settings:
+        id: ''
+        classes: ''
+        open: false
+        required_fields: true
+      label: 'Related content'
 id: node.resource.default
 targetEntityType: node
 bundle: resource
@@ -76,7 +65,7 @@ content:
     region: content
   created:
     type: datetime_timestamp
-    weight: 10
+    weight: 7
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -99,14 +88,14 @@ content:
     type: datetime_default
     region: content
   field_metatag:
-    weight: 8
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: metatag_firehose
     region: content
   field_related_external_url:
     type: link_default
-    weight: 9
+    weight: 8
     region: content
     settings:
       placeholder_url: ''
@@ -114,7 +103,7 @@ content:
     third_party_settings: {  }
   field_related_internal_url:
     type: link_default
-    weight: 8
+    weight: 7
     region: content
     settings:
       placeholder_url: ''
@@ -127,7 +116,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_tags:
-    weight: 7
+    weight: 8
     settings:
       match_operator: CONTAINS
       size: 60
@@ -137,31 +126,17 @@ content:
     region: content
   path:
     type: path
-    weight: 13
+    weight: 8
     settings: {  }
-    third_party_settings: {  }
-    region: content
-  promote:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 11
     third_party_settings: {  }
     region: content
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 14
+    weight: 9
     region: content
     third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    settings:
-      display_label: true
-    weight: 12
-    third_party_settings: {  }
-    region: content
   title:
     type: string_textfield
     weight: 0
@@ -172,11 +147,13 @@ content:
     region: content
   uid:
     type: entity_reference_autocomplete
-    weight: 9
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  promote: true
+  sticky: true

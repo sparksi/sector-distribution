@@ -9,8 +9,8 @@ third_party_settings:
     parent: ''
 name: Promotion
 type: promotion
-description: ''
+description: 'Use <em>Promotion</em> to create rich, promotional, supporting content elements for display on home or landing pages. (No single node display.) '
 help: ''
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

@@ -42,10 +42,11 @@ third_party_settings:
       weight: 4
       format_type: details
       format_settings:
+        label: 'Related content'
+        required_fields: true
         id: ''
         classes: ''
         open: false
-        required_fields: true
       label: 'Related content'
 id: node.page.default
 targetEntityType: node
