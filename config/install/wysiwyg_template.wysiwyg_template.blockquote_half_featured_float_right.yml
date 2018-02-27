@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+id: blockquote_half_featured_float_right
+label: 'Blockquote - Half. Featured. Float right'
+description: 'Half column blockquote with a featured background floated right'
+body:
+  value: "<div class=\"element has-offset-right pull-right\">\r\n<blockquote class=\"featured\">\r\n<p>\"Quotes are used to emphasise excerpts of text.\"</p>\r\n<footer><cite>A cite defines an in-line citation or reference to another source</cite></footer>\r\n</blockquote>\r\n</div>"
+  format: full_html
+weight: null
+node_types: {  }
