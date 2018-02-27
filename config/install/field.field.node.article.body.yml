@@ -9,12 +9,12 @@ dependencies:
     - text
 third_party_settings:
   better_formats:
-    allowed_formats_toggle: 0
+    allowed_formats_toggle: 1
     allowed_formats:
-      restricted_html: restricted_html
-      basic_html: 0
+      basic_html: basic_html
+      full_html: full_html
       restricted_basic_html: 0
-      full_html: 0
+      restricted_html: 0
       teaser_display_text: 0
     default_order_toggle: 0
     default_order_wrapper:
