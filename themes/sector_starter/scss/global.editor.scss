@@ -1,0 +1,37 @@
+/* Some extra customisation for the ck editor */
+
+/* BOOTSTRAP CUSTOM VARIABLES
+------------------------------------------------------------------------*/
+@import "../scss/generic/variables-bootstrap-custom";
+
+
+/* VARIABLES
+------------------------------------------------------------------------*/
+@import "../scss/generic/variables";
+
+
+/* BOOTSTRAP
+------------------------------------------------------------------------*/
+@import "../scss/vendor/bootstrap/bootstrap-custom.scss";
+
+
+/* BREAKPOINT
+------------------------------------------------------------------------*/
+@import "../node_modules/breakpoint-sass/stylesheets/breakpoint";
+
+
+/* GENERIC
+------------------------------------------------------------------------*/
+@import "../scss/generic/mixins",
+        "../scss/generic/breakpoints",
+        "../scss/generic/helpers";
+
+/* Prose
+------------------------------------------------------------------------*/
+@import "../scss/component/_prose.scss";
+
+.cke_editable {
+	padding: 10px;
+	max-width: 800px;
+	@extend %prose;
+}

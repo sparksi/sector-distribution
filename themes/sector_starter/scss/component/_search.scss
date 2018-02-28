@@ -89,9 +89,11 @@
       left: 50%;
       transform: translateY(-50%) translateX(-50%) scale(1.5);
       @include sprite(icon--search-white);
+      @include font-smoothing;
     }
     &:hover {
       background-color: $brand-primary;
+      border: 1px solid $black;
     }
     &:focus {
       box-shadow: none;
@@ -103,6 +105,7 @@
   .description {
     @include font-smoothing;
     margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
@@ -111,22 +114,15 @@
   padding: 15px;
   clear: both;
   display: none;
-
-  @include respond-to(tablet-and-down){
+  @include respond-to(tablet-and-down) {
     margin-top: $spacing-base;
   }
-
   &.search-is-active {
-    display: block;
-  }
-
-
-  .mm-menu & {
     display: block;
   }
   // only hide for desktop
   @include respond-to(desktop-and-up){
-    width: 85%;
+    width: 66%;
     .js & {
       display: none;
       position: absolute;
@@ -139,9 +135,6 @@
     @include respond-to(desktop-and-up) {
       display: block;
     }
-  }
-  @include respond-to(wide-and-up) {
-    width: 66%;
   }
   @include respond-to(wide-large-and-up) {
     width: 70%;
@@ -160,7 +153,8 @@
     }
   }
   .description {
-    color: $gray-lighter;
+    @extend .text-hide;
+    //color: $gray-lighter;
   }
 }
 
