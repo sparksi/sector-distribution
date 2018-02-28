@@ -9,9 +9,5 @@ function sector_blocks_theme($existing, $type, $theme, $path) {
     ],
     'search_desktop_fly_out_control_block' => [
     ],
-    'search_api_box' => [
-    ],
-    'search_api_box_mobile' => [
-    ],
   ];
 }

@@ -3,52 +3,137 @@
  * BEM block for Navigation
  */
 
-.navigation--primary {
-  padding-top: 2px;
-  @include make-xs-column(12);
-  @include make-md-column(7);
-  @include make-md-column-offset(1);
-  @include respond-to(tablet-large-and-down) {
-    display: none;
-    margin-top: $spacing-base;
-    padding-left: 0;
-    padding-right: 0;
+/*
+ * Placeholder selector to make the application of the flyout menu styles
+ * modular and able to be applied to more than one menu
+ */
+%apply-flyout-menu-style {
+  .menu__item {
+    .btn-expand {
+      @include respond-to(desktop-and-up) {
+        display: none;
+      }
+    }
   }
   &.navigation-is-open {
-    @include respond-to(tablet-large-and-down) {
-      display: block;
-      margin-top: 15px;
-    }
+    display: block;
+  }
+  @include respond-to(tablet-large-and-down) {
+    width: 100%;
     > .menu {
-      @include respond-to(tablet-large-and-down) {
-        border-bottom: 1px solid #4e4e4e;
-      }
+      border-bottom: 1px solid #4e4e4e;
     }
     > .menu {
       display: block;
-      @include respond-to(desktop-and-up) {
-        display: flex;
-        align-items: center;
+    }
+    .menu__item {
+      border-top: 1px solid $black;
+      position: relative;
+      .btn-expand {
+        align-content: center;
+        position: absolute;
+        top: 0;
+        right: 0;
       }
-      > .menu__item {
-        > .menu__link {
-          @include respond-to(desktop-and-up) {
-            background-color: transparent;
-            margin: 0;
+      .menu__link {
+        color: #fff;
+        border-top: 1px solid #4e4e4e;
+        position: relative;
+        padding-left: 18px;
+        &[href^="http://"],
+        &[href^="https://"],
+        &[rel*='external'] {
+          &:after {
+            @include sprite(icon--external-white);
           }
         }
-        ~ .menu__item {
-          @include respond-to(desktop-and-up) {
-            margin-left: 0.5em;
+      }
+      &.is-expanded {
+        .menu__link {
+          padding-right: 60px;
+        }
+      }
+      .menu__item {
+        .menu__link {
+          padding-left: 47px;
+        }
+        .menu__item {
+          .menu__link {
+            padding-left: 67px;
+          }
+          .menu__item {
+            .menu__link {
+              padding-left: 87px;
+            }
+            .menu__item {
+              .menu__link {
+                padding-left: 107px;
+              }
+            }
+          }
+        }
+      }
+      &.is-open {
+        > .menu {
+          display: block;
+        }
+        > .btn-expand {
+          &:after {
+            @include sprite(arrow--micro-up-white);
+          }
+        }
+      }
+      .menu__link {
+        &:hover,
+        &:focus {
+          background-color: transparent;
+          color: rgba(255,255,255,0.8);
+        }
+        &.is-active {
+          background-color: $black;
+          &:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background-color: #436FFC;
+          }
+        }
+        &[href^="#"] {
+          text-decoration: none;
+          &:before {
+            content: none;
           }
         }
       }
     }
+  }
+}
+
+.navigation--primary {
+  padding-top: 2px;
+  width: 100%;
+  @include respond-to(desktop-and-up) {
+    width: 60%;
+  }
+  @include respond-to(wide-and-up) {
+    width: 65%;
+  }
+  @include respond-to(mega-large-and-up) {
+    width: 68%;
+  }
+  @extend %apply-flyout-menu-style;
+  @include respond-to(tablet-large-and-down) {
+    display: none;
+    padding-left: 0;
+    padding-right: 0;
   }
   > .menu {
     @include respond-to(desktop-and-up) {
       display: flex;
-      align-items: center;
+      justify-content: center;
     }
     .menu {
       @include respond-to(desktop-and-up) {
@@ -82,55 +167,6 @@
     }
   }
   .menu__item {
-    .btn-expand {
-      align-content: center;
-      position: absolute;
-      top: 0;
-      right: 0;
-      @include respond-to(desktop-and-up) {
-        display: none;
-      }
-    }
-    @include respond-to(tablet-large-and-down) {
-      border-top: 1px solid $black;
-      position: relative;
-    }
-    .menu__link {
-      @include respond-to(tablet-large-and-down) {
-        border-top: 1px solid #4e4e4e;
-        position: relative;
-        padding-left: 18px;
-      }
-    }
-    &.is-expanded {
-      .menu__link {
-        @include respond-to(tablet-large-and-down) {
-          padding-right: 60px;
-        }
-      }
-    }
-    @include respond-to(tablet-large-and-down) {
-      .menu__item {
-        .menu__link {
-          padding-left: 47px;
-        }
-        .menu__item {
-          .menu__link {
-            padding-left: 67px;
-          }
-          .menu__item {
-            .menu__link {
-              padding-left: 87px;
-            }
-            .menu__item {
-              .menu__link {
-                padding-left: 107px;
-              }
-            }
-          }
-        }
-      }
-    }
     &.active-trail {
       .menu__link {
         @include respond-to(desktop-and-up) {
@@ -138,24 +174,10 @@
         }
       }
     }
-    &.is-open {
-      > .menu {
-        @include respond-to(tablet-large-and-down) {
-          display: block;
-        }
-      }
-      > .btn-expand {
-        &:after {
-          @include respond-to(tablet-large-and-down) {
-            @include sprite(arrow--micro-up-white);
-          }
-        }
-      }
-    }
     .menu__link {
       background-color: transparent;
-      border-right: 1px solid #222;
-      border-bottom: 1px solid #222;
+      border-right: 1px solid $gray-darker;
+      border-bottom: 1px solid $gray-darker;
       color: $white;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -169,38 +191,6 @@
       &:focus {
         background-color: transparent;
         color: rgba(255,255,255,0.8);
-      }
-      &.is-active {
-        @include respond-to(tablet-large-and-down) {
-          text-decoration: underline;
-        }
-        &:before {
-          @include respond-to(tablet-large-and-down) {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 5px;
-            height: 100%;
-            background-color: #436FFC;
-          }
-        }
-        &:hover,
-        &:focus {
-          @include respond-to(tablet-large-and-down) {
-            background-color: transparent;
-            color: $white;
-            text-decoration: underline;
-          }
-        }
-        &[href^="#"] {
-          text-decoration: none;
-          @include respond-to(tablet-large-and-down) {
-            &:before {
-              content:none;
-            }
-          }
-        }
       }
     }
   }

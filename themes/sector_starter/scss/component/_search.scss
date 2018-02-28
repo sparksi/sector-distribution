@@ -90,6 +90,7 @@
       transform: translateY(-50%) translateX(-50%) scale(1.5);
       @include sprite(icon--search-white);
       @include font-smoothing;
+      font-size: 14px;
     }
     &:hover {
       background-color: $brand-primary;
@@ -114,20 +115,20 @@
   padding: 15px;
   clear: both;
   display: none;
-  @include respond-to(tablet-and-down) {
-    margin-top: $spacing-base;
+  @include respond-to(tablet-large-and-down) {
+    margin-top: $spacing-quarter;
   }
   &.search-is-active {
     display: block;
   }
   // only hide for desktop
   @include respond-to(desktop-and-up){
-    width: 66%;
+    width: 64%;
     .js & {
       display: none;
       position: absolute;
       top: -12px;
-      right: 60px;
+      right: 45px;
       clear: none;
     }
   }

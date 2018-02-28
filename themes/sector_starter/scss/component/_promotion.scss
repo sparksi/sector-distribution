@@ -27,11 +27,19 @@
 }
 
 .promotion--brand {
-  @include make-xs-column(10);
-  @include make-md-column(3);
-  margin-top: 11px;
+  width: 70%;
+  @include respond-to(tablet-and-up) {
+    width: 60%;
+  }
   @include respond-to(desktop-and-up) {
+    width: 30%;
     margin-top: 0;
+  }
+  @include respond-to(wide-and-up) {
+    width: 25%;
+  }
+  @include respond-to(mega-large-and-up) {
+    width: 22%;
   }
 }
 

@@ -3,24 +3,35 @@
  * BEM block for Toggle.
  */
 .toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   float: right;
   clear: both;
   color: $white;
   position: relative;
-  padding: 8px 12px 5px;
+  padding: 0;
   cursor: pointer;
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
   &:hover {
     text-decoration: none;
   }
+  .icon--menu {
+    margin-top: 3px;
+  }
+  .icon--search {
+    margin-top: 2px;
+    margin-left: 2px;
+  }
   .icon--close {
     display: none;
-    &:before {
-      @include sprite(icon--close-small-white);
-    }
   }
   &.active {
     .icon--close {
-      display: block;
+      display: flex;
     }
     .icon--menu,
     .icon--search {
@@ -30,10 +41,9 @@
 }
 
 .toggle--search {
-  margin: 0;
-  padding: 10px 11px 2px 12px;
   display: none;
+  margin-top: 6px;
   .js & {
-    display: block;
+    display: flex;
   }
 }
