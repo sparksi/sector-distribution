@@ -29,4 +29,5 @@ libraries:
   - 'sector_starter/fonts'
 
 ckeditor_stylesheets:
+  - css/global.editor.css
   - css/global.styles.css

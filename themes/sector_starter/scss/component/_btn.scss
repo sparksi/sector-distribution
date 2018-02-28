@@ -13,6 +13,10 @@
   &:focus {
     outline: 3px solid $brand-focused;
   }
+  &.active,
+  &:active {
+    box-shadow: none;
+  }
 }
 .btn-default {
   > a {

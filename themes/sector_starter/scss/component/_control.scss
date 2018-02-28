@@ -2,7 +2,7 @@
  * @file
  * BEM block for Control.
  */
- 
+
 .control--responsive-menu {
   @include make-xs-column(2);
   @include respond-to(mobile) {

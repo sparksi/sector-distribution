@@ -6,7 +6,8 @@
  * http://www.pearsonified.com/typography/
  */
 
-.prose {
+.prose,
+%prose {
   @extend %apply-external-link-icon;
   a {
     text-decoration: underline;
