@@ -22,3 +22,7 @@
     margin-top: $spacing-base;
   }
 }
+
+.field--type-link {
+  @extend %apply-external-link-icon;
+}

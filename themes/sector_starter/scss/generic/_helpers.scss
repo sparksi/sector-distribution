@@ -300,7 +300,7 @@
     &:after {
       content: '';
       @include sprite(icon--external-blue);
-      margin-left: 4px;
+      margin-left: .25em;
       vertical-align: middle;
     }
   }
