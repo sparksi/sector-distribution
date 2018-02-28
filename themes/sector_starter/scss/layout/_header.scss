@@ -15,4 +15,10 @@
       position: relative; // Create a positioning context
     }
   }
+  .region-header {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+  }
 }

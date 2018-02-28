@@ -15,6 +15,9 @@
 }
 
 .logo--primary {
+  .header & {
+    margin-left: 15px;
+  }
   .logo__link {
     display: block;
     .footer-regions-wrapper & {

@@ -6,20 +6,15 @@
 .icon--close {
   &:before {
     content: '';
-    @include sprite('icon--close-blue');
-  }
-}
-
-.icon--close-small {
-  &:before {
-    content: '';
-    @include sprite('icon--close-small-blue');
+    font-size: 16px;
+    @include sprite('icon--close-white');
   }
 }
 
 .icon--menu {
   &:before {
     content: '';
+    font-size: 16px;
     @include sprite('icon--menu-white');
   }
 }
@@ -27,7 +22,7 @@
 .icon--search {
   &:before {
     content: '';
-    font-size: 20px;
+    font-size: 17px;
     @include sprite('icon--search-white');
   }
 }
