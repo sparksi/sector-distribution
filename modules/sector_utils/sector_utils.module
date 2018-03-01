@@ -5,15 +5,20 @@
  */
 
 /**
- * Implements hook_form_FORM_ID_alter().
+ * Implements hook_form_alter().
  *
  * Improve page node status checkbox by changing the label
  * from "Publishing status" to "Publish" and removing the description.
  *
  * This should bring it in line with all other content types.
  */
-function sector_utils_form_node_page_form_alter(array &$form) {
-  $element = &$form['status']['widget']['value'];
-  $element['#title'] = t('Published');
-  $element['#description'] = t('');
+function sector_utils_form_alter(&$form, $form_state, $form_id) {
+  switch ($form_id) {
+    case 'node_page_form':
+    case 'node_page_edit_form':
+      $element = &$form['status']['widget']['value'];
+      $element['#title'] = t('Published');
+      $element['#description'] = t('');
+      break;
+  }
 }
