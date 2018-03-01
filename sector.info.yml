@@ -62,6 +62,7 @@ dependencies:
  - options
  - page_cache
  - search
+ - sector_utils
  - sector_wysiwyg_utils
  - serialization
  - system
