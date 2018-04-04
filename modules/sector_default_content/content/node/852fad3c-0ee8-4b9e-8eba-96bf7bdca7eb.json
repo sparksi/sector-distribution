@@ -1,20 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/section\/sector-page-content-settings-hide-sidebar?_format=hal_json"
+            "href": "http:\/\/default\/section\/sector-standard-page-wide?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
         },
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
             {
                 "href": "http:\/\/default\/user\/1?_format=hal_json",
                 "lang": "und"
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
-            {
-                "href": "http:\/\/default\/user\/1?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_auto_contextual_content": [
@@ -43,7 +43,7 @@
     ],
     "vid": [
         {
-            "value": 82
+            "value": 11
         }
     ],
     "langcode": [
@@ -57,37 +57,13 @@
             "target_id": "page"
         }
     ],
-    "status": [
+    "revision_timestamp": [
         {
-            "value": true,
-            "lang": "und"
-        }
-    ],
-    "title": [
-        {
-            "value": "Sector Page Content settings - Hide sidebar",
-            "lang": "und"
+            "value": "2017-11-01T01:50:30+00:00",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "_embedded": {
-        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/default\/user\/1?_format=hal_json"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
-                    }
-                ],
-                "lang": "und"
-            }
-        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
             {
                 "_links": {
@@ -100,9 +76,27 @@
                 },
                 "uuid": [
                     {
-                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
                     }
                 ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                    }
+                ],
+                "lang": "und"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_auto_contextual_content": [
@@ -155,16 +149,30 @@
             }
         ]
     },
+    "status": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "title": [
+        {
+            "value": "Sector Page Content settings - Hide sidebar",
+            "lang": "und"
+        }
+    ],
     "created": [
         {
-            "value": 1421720656,
-            "lang": "und"
+            "value": "2015-01-20T02:24:16+00:00",
+            "lang": "und",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": 1509501030,
-            "lang": "und"
+            "value": "2017-11-01T01:50:30+00:00",
+            "lang": "und",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "promote": [
@@ -178,14 +186,31 @@
             "lang": "und"
         }
     ],
-    "revision_timestamp": [
-        {
-            "value": 1509501030
-        }
-    ],
     "default_langcode": [
         {
             "value": true,
+            "lang": "und"
+        }
+    ],
+    "revision_translation_affected": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Sector Page Content settings - Hide sidebar | Base1 sector D8",
+                "description": "Next to the Page variants Sector introduces Page content settings to provide further display options per node.\u00a0As the Page variants,\u00a0Page content settings are defined using\u00a0Drupal taxonomies\u00a0and Drupal\u00a0context condition."
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/section\/sector-standard-page-wide",
+            "pid": 11,
+            "langcode": "und",
             "lang": "und"
         }
     ],
@@ -194,11 +219,6 @@
             "value": "<p class=\"lead\">Next to the Page variants Sector introduces Page content settings to provide further display options per node.&nbsp;As the Page variants,&nbsp;Page content settings are defined using&nbsp;Drupal taxonomies&nbsp;and Drupal&nbsp;context condition.<\/p>\r\n\r\n<p>So while your pages are grouped in Section entry pages and Standard&nbsp;pages, you can hide the sidebar on&nbsp;either variant - like on this sample page.&nbsp;Another usage is as sort citeria in Drupal Views, for example in Drupal Search API Search views via&nbsp;&#39;Hide from search results&#39; (optional extention).&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
             "summary": ""
-        }
-    ],
-    "field_auto_contextual_content": [
-        {
-            "target_id": 3
         }
     ],
     "field_last_updated": [

@@ -8,7 +8,7 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/menu_link_content\/menu_link_content\/menu_link_content_target_entity": [
             {
-                "href": "http:\/\/default\/site-map?_format=hal_json"
+                "href": "http:\/\/default\/sitemap?_format=hal_json"
             }
         ]
     },
@@ -93,7 +93,7 @@
     "metatag": [
         {
             "value": {
-                "title": "| Sector D8 base"
+                "title": "| Base1 sector D8"
             }
         }
     ],
@@ -102,7 +102,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/site-map?_format=hal_json"
+                        "href": "http:\/\/default\/sitemap?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/node\/page"

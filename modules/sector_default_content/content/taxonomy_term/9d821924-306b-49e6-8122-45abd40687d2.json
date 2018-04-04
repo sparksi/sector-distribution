@@ -41,14 +41,22 @@
     ],
     "changed": [
         {
-            "value": 1477361842,
-            "lang": "en"
+            "value": "2016-10-25T02:17:22+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
             "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Attribution-NoDerivs | Base1 sector D8"
+            }
         }
     ],
     "field_cc_code": [

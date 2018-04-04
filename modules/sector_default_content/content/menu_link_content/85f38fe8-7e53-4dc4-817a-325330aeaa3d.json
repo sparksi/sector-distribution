@@ -8,7 +8,7 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/menu_link_content\/menu_link_content\/menu_link_content_target_entity": [
             {
-                "href": "http:\/\/default\/make-your-title-unique-clear-and-descriptive?_format=hal_json"
+                "href": "http:\/\/default\/section-b?_format=hal_json"
             }
         ]
     },
@@ -79,8 +79,9 @@
     ],
     "changed": [
         {
-            "value": 1508805662,
-            "lang": "en"
+            "value": "2017-10-24T00:41:02+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
@@ -89,12 +90,19 @@
             "lang": "en"
         }
     ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Base1 sector D8"
+            }
+        }
+    ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/menu_link_content\/menu_link_content\/menu_link_content_target_entity": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/make-your-title-unique-clear-and-descriptive?_format=hal_json"
+                        "href": "http:\/\/default\/section-b?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/node\/page"

@@ -8,7 +8,7 @@
         },
         "http:\/\/drupal.org\/rest\/relation\/menu_link_content\/menu_link_content\/menu_link_content_target_entity": [
             {
-                "href": "http:\/\/default\/level-2-page?_format=hal_json"
+                "href": "http:\/\/default\/section\/level-2-page?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/menu_link_content\/menu_link_content\/menu_link_content_parent_entity": [
@@ -89,8 +89,9 @@
     ],
     "changed": [
         {
-            "value": 1508818035,
-            "lang": "en"
+            "value": "2017-10-24T04:07:15+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
@@ -99,12 +100,19 @@
             "lang": "en"
         }
     ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Base1 sector D8"
+            }
+        }
+    ],
     "_embedded": {
         "http:\/\/drupal.org\/rest\/relation\/menu_link_content\/menu_link_content\/menu_link_content_target_entity": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/level-2-page?_format=hal_json"
+                        "href": "http:\/\/default\/section\/level-2-page?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
