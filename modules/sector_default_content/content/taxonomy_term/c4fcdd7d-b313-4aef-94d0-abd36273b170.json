@@ -41,14 +41,22 @@
     ],
     "changed": [
         {
-            "value": 1473916467,
-            "lang": "en"
+            "value": "2016-09-15T05:14:27+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
             "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Article type marker | Base1 sector D8"
+            }
         }
     ]
 }

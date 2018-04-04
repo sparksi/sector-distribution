@@ -41,7 +41,7 @@
     ],
     "link": [
         {
-            "uri": "internal:\/resource\/archive",
+            "uri": "internal:\/resources",
             "title": "",
             "options": []
         }
@@ -73,7 +73,7 @@
     ],
     "changed": [
         {
-            "value": "2018-02-01T01:39:05+00:00",
+            "value": "2018-03-14T01:45:41+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -82,6 +82,13 @@
         {
             "value": true,
             "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Base1 sector D8"
+            }
         }
     ]
 }

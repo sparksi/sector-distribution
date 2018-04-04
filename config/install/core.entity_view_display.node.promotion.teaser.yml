@@ -5,15 +5,12 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.promotion.body
     - field.field.node.promotion.field_featured_content
-    - field.field.node.promotion.field_image
     - field.field.node.promotion.field_promotion_type
-    - image.style.ratio_16_x_9_small_
     - node.type.promotion
   module:
     - ds
     - field_formatter_filter
     - field_group
-    - image
     - text
     - user
 third_party_settings:
@@ -83,24 +80,6 @@ content:
               - slat__body
             lb-col: false
     region: content
-  field_image:
-    type: image
-    weight: 1
-    region: content
-    label: hidden
-    settings:
-      image_style: ratio_16_x_9_small_
-      image_link: ''
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            classes:
-              - slat__media
-              - responsive-ratio
-            lb-col: false
 hidden:
   field_featured_content: true
   field_promotion_type: true

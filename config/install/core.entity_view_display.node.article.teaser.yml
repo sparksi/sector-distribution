@@ -5,7 +5,6 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
     - field.field.node.article.field_article_type
-    - field.field.node.article.field_image
     - field.field.node.article.field_issue_date
     - field.field.node.article.field_last_updated
     - field.field.node.article.field_metatag
@@ -124,7 +123,6 @@ content:
               - inline-block
               - has-margin-top-half
 hidden:
-  field_image: true
   field_last_updated: true
   field_metatag: true
   field_related_external_url: true

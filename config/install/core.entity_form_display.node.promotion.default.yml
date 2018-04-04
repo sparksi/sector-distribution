@@ -4,12 +4,9 @@ dependencies:
   config:
     - field.field.node.promotion.body
     - field.field.node.promotion.field_featured_content
-    - field.field.node.promotion.field_image
     - field.field.node.promotion.field_promotion_type
-    - image.style.thumbnail
     - node.type.promotion
   module:
-    - image
     - link
     - path
     - text
@@ -40,14 +37,6 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
-    region: content
-  field_image:
-    weight: 4
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
     region: content
   field_promotion_type:
     weight: 1

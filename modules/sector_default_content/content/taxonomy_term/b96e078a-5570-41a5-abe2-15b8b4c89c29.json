@@ -48,14 +48,23 @@
     ],
     "changed": [
         {
-            "value": 1477361553,
-            "lang": "en"
+            "value": "2016-10-25T02:12:33+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
             "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "All Rights Reserved | Base1 sector D8",
+                "description": "The copyright holder, reserve all rights provided by copyright law, such as the right to make copies, distribute your work, perform your work, license, or otherwise exploit your work; no rights are waived under this license."
+            }
         }
     ],
     "field_copyright_link": [

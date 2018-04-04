@@ -1,20 +1,20 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/level-2-page?_format=hal_json"
+            "href": "http:\/\/default\/section\/level-2-page?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
         },
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
             {
                 "href": "http:\/\/default\/user\/1?_format=hal_json",
                 "lang": "und"
-            }
-        ],
-        "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
-            {
-                "href": "http:\/\/default\/user\/1?_format=hal_json"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
@@ -49,37 +49,13 @@
             "target_id": "page"
         }
     ],
-    "status": [
+    "revision_timestamp": [
         {
-            "value": true,
-            "lang": "und"
-        }
-    ],
-    "title": [
-        {
-            "value": "Level 2 page",
-            "lang": "und"
+            "value": "2016-09-15T01:05:50+00:00",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "_embedded": {
-        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
-            {
-                "_links": {
-                    "self": {
-                        "href": "http:\/\/default\/user\/1?_format=hal_json"
-                    },
-                    "type": {
-                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
-                    }
-                },
-                "uuid": [
-                    {
-                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
-                    }
-                ],
-                "lang": "und"
-            }
-        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/revision_uid": [
             {
                 "_links": {
@@ -92,9 +68,27 @@
                 },
                 "uuid": [
                     {
-                        "value": "7746a3bc-50d7-4844-bd34-e602d93adb27"
+                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
                     }
                 ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                    }
+                ],
+                "lang": "und"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
@@ -115,16 +109,35 @@
             }
         ]
     },
+    "revision_log": [
+        {
+            "value": "Edited by UID1."
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "und"
+        }
+    ],
+    "title": [
+        {
+            "value": "Level 2 page",
+            "lang": "und"
+        }
+    ],
     "created": [
         {
-            "value": 1418180055,
-            "lang": "und"
+            "value": "2014-12-10T02:54:15+00:00",
+            "lang": "und",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": 1473901550,
-            "lang": "und"
+            "value": "2016-09-15T01:05:50+00:00",
+            "lang": "und",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "promote": [
@@ -138,14 +151,10 @@
             "lang": "und"
         }
     ],
-    "revision_timestamp": [
+    "default_langcode": [
         {
-            "value": 1473901550
-        }
-    ],
-    "revision_log": [
-        {
-            "value": "Edited by UID1."
+            "value": true,
+            "lang": "und"
         }
     ],
     "revision_translation_affected": [
@@ -154,9 +163,19 @@
             "lang": "und"
         }
     ],
-    "default_langcode": [
+    "metatag": [
         {
-            "value": true,
+            "value": {
+                "title": "Level 2 page | Base1 sector D8",
+                "description": "As part of this distribution we have preconfigure one branch of your menu, to showcase how your readers can move through your\u00a0hierarchical content. This is your Level 2 page.\u00a0"
+            }
+        }
+    ],
+    "path": [
+        {
+            "alias": "\/section\/level-2-page",
+            "pid": 13,
+            "langcode": "und",
             "lang": "und"
         }
     ],

@@ -73,14 +73,22 @@
     ],
     "changed": [
         {
-            "value": 1508805740,
-            "lang": "en"
+            "value": "2017-10-24T00:42:20+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
             "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "| Base1 sector D8"
+            }
         }
     ]
 }

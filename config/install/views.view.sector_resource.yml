@@ -409,7 +409,7 @@ display:
     position: 2
     display_options:
       display_extenders: {  }
-      path: resource/archive
+      path: resources
       display_description: ''
       header:
         area_text_custom:
@@ -550,7 +550,7 @@ display:
             label: ''
           granularity: year
           plugin_id: datetime
-      title: 'Resource archive'
+      title: 'Resource landing page'
       pager:
         type: full
         options:

@@ -41,14 +41,22 @@
     ],
     "changed": [
         {
-            "value": 1477361706,
-            "lang": "en"
+            "value": "2016-10-25T02:15:06+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "default_langcode": [
         {
             "value": true,
             "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Attribution-NonCommercial-ShareAlike | Base1 sector D8"
+            }
         }
     ],
     "field_cc_code": [

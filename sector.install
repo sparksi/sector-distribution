@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\entityqueue\Entity\EntityQueue;
+use Drupal\node\Entity\Node;
 
 /**
  * @file
@@ -33,10 +34,15 @@ function sector_install() {
     ->set('page.front', '/node/10')
     ->save(TRUE);
 
+  // Cleanup functions.
   _create_entityqueues();
   _create_users();
+  _generate_alias();
 }
 
+/**
+ * Loads the two entityqueues on the front page and adds the content to them.
+ */
 function _create_entityqueues() {
   // Load entityqueue. Need to load items next.
   $queue_storage = \Drupal::entityManager()->getStorage('entity_subqueue');
@@ -74,6 +80,11 @@ function _create_entityqueues() {
   $promotionalLinksQueue->save();
 }
 
+/**
+ * Creates the default users.
+ *
+ * Passwords are randomly generated.
+ */
 function _create_users() {
 
   $users = array(
@@ -87,8 +98,9 @@ function _create_users() {
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
     $user = \Drupal\user\Entity\User::create();
 
-    //Mandatory settings
+    // Randomly generate a 10 character pass.
     $randomPassword = user_password(10);
+    //Mandatory settings
     $user->setPassword($randomPassword);
     $user->enforceIsNew();
     $user->setEmail('noreply+' . $count . '@sparksinteractive.co.nz');
@@ -107,5 +119,15 @@ function _create_users() {
     //Save user
     $res = $user->save();
     $count++;
+  }
+}
+
+/**
+ * Regenerates all node aliases.
+ */
+function _generate_alias() {
+  $nodes = Node::loadMultiple();
+  foreach ($nodes as $node) {
+    \Drupal::service('pathauto.generator')->updateEntityAlias($node, 'insert');
   }
 }
