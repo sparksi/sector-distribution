@@ -29,7 +29,7 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: /sector-news-section-entry-page
+    pages: "/sector-news-section-entry-page\r\n/news"
     negate: false
     context_mapping: {  }
   term:

@@ -4,21 +4,18 @@ dependencies:
   config:
     - field.field.node.article.body
     - field.field.node.article.field_article_type
-    - field.field.node.article.field_image
     - field.field.node.article.field_issue_date
     - field.field.node.article.field_last_updated
     - field.field.node.article.field_metatag
     - field.field.node.article.field_related_external_url
     - field.field.node.article.field_related_internal_url
     - field.field.node.article.field_tags
-    - image.style.large
     - node.type.article
   module:
     - datetime
     - ds
     - field_formatter_filter
     - field_group
-    - image
     - link
     - metatag
     - text
@@ -109,15 +106,6 @@ content:
             classes:
               - prose
             lb-col: false
-    label: hidden
-    region: ds_content
-  field_image:
-    type: image
-    weight: 2
-    settings:
-      image_style: large
-      image_link: ''
-    third_party_settings: {  }
     label: hidden
     region: ds_content
   field_issue_date:

@@ -4,11 +4,9 @@ dependencies:
   config:
     - field.field.node.promotion.body
     - field.field.node.promotion.field_featured_content
-    - field.field.node.promotion.field_image
     - field.field.node.promotion.field_promotion_type
     - node.type.promotion
   module:
-    - image
     - link
     - text
     - user
@@ -35,15 +33,6 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
-  field_image:
-    weight: 104
-    label: above
-    settings:
-      image_style: ''
-      image_link: ''
-    third_party_settings: {  }
-    type: image
     region: content
   field_promotion_type:
     weight: 102

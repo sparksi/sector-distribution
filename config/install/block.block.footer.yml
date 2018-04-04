@@ -20,7 +20,7 @@ provider: null
 plugin: 'menu_block:footer'
 settings:
   id: 'menu_block:footer'
-  label: Footer
+  label: 'Footer menu'
   provider: menu_block
   label_display: '0'
   level: 1

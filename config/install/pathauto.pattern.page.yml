@@ -6,9 +6,9 @@ dependencies:
 id: page
 label: Page
 type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:title]'
+pattern: '[node:menu-link:parents:join-path]/[node:menu-link]'
 selection_criteria:
-  25cb4ee2-d143-4a1b-9638-acf98023feaa:
+  559f0ebb-3773-45c2-b76f-bcf4703db04b:
     id: node_type
     bundles:
       page: page

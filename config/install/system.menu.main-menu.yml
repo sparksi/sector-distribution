@@ -3,5 +3,5 @@ status: true
 dependencies: {  }
 id: main-menu
 label: 'Main menu'
-description: 'Part of Sector Starter Kit. Menu for <em>hierarchical structured content</em> based on main site sections. '
+description: 'Menu for <em>hierarchical content</em> based on main content sections. (Sector Starter Kit.)'
 locked: false
