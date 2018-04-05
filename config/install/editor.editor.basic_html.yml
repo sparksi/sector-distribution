@@ -50,6 +50,7 @@ settings:
             - Blockquote
             - HorizontalRule
             - Styles
+            - TemplateSelector
   plugins:
     stylescombo:
       styles: "p|Normal text\r\np.lead|Leading text\r\nspan.bg-warning|Highlight text\r\nh2|Heading 1\r\nh3|Heading 2\r\nh4|Heading 3\r\nh5|Heading 4\r\n"

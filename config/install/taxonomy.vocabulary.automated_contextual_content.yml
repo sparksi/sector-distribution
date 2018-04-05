@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-name: 'Automated contextual content'
+name: 'Content settings'
 vid: automated_contextual_content
 description: 'Content which is shown based on the context of the current node'
 hierarchy: 0

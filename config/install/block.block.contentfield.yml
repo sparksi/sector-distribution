@@ -21,7 +21,7 @@ provider: null
 plugin: 'fieldblock:node'
 settings:
   id: 'fieldblock:node'
-  label: 'Subtitle (Section entry)'
+  label: 'Subtitle (default)'
   provider: fieldblock
   label_display: '0'
   label_from_field: 1
@@ -32,6 +32,10 @@ visibility:
   term:
     id: term
     negate: false
-    tid: '7'
+    tid:
+      -
+        target_id: '7'
+      -
+        target_id: '4'
     context_mapping:
       node: '@node.node_route_context:node'

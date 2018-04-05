@@ -12,18 +12,22 @@ third_party_settings:
 id: pagetitle
 theme: sector_starter
 region: pre_content
-weight: -18
+weight: -15
 provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Page title (Standard page)'
+  label: 'Page title (default)'
   provider: core
   label_display: '0'
 visibility:
   term:
     id: term
-    negate: false
-    tid: '6'
+    negate: true
+    tid:
+      -
+        target_id: '4'
+      -
+        target_id: '7'
     context_mapping:
       node: '@node.node_route_context:node'

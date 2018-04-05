@@ -11,7 +11,7 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'navigation navigation--primary'
+    classes: 'navigation navigation--primary is-target-for-flyout-menu'
 id: mainmenu_2
 theme: sector_starter
 region: header
