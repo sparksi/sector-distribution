@@ -21,7 +21,7 @@ provider: null
 plugin: 'fieldblock:node'
 settings:
   id: 'fieldblock:node'
-  label: '<none>'
+  label: 'Last updated'
   provider: fieldblock
   label_display: visible
   label_from_field: 1
@@ -34,6 +34,8 @@ visibility:
   term:
     id: term
     negate: false
-    tid: '5'
+    tid:
+      -
+        target_id: '5'
     context_mapping:
       node: '@node.node_route_context:node'

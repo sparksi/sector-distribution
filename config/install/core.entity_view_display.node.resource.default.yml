@@ -46,7 +46,6 @@ third_party_settings:
         - field_issue_date
         - field_last_updated
         - group_link
-        - field_related_documents
         - field_related_internal_url
         - field_related_external_url
     fields:
@@ -94,7 +93,6 @@ third_party_settings:
       label: Link
     group_related_content:
       children:
-        - field_related_documents
         - field_related_internal_url
         - field_related_external_url
       parent_name: ''
@@ -152,7 +150,7 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      format_type: medium_plus_date
+      format_type: medium
     third_party_settings:
       ds:
         ft:

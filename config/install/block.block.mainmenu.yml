@@ -20,7 +20,7 @@ provider: null
 plugin: 'system_menu_block:main-menu'
 settings:
   id: 'system_menu_block:main-menu'
-  label: 'In this section (Standard Page)'
+  label: 'In this section (menu)'
   provider: system
   label_display: visible
   level: 2
@@ -28,7 +28,9 @@ settings:
 visibility:
   term:
     id: term
-    negate: false
-    tid: '6'
+    negate: true
+    tid:
+      -
+        target_id: '4'
     context_mapping:
       node: '@node.node_route_context:node'

@@ -12,18 +12,22 @@ third_party_settings:
 id: pagetitle_2
 theme: sector_starter
 region: hero
-weight: -17
+weight: -16
 provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Page title (Section entry)'
+  label: 'Page title (alternate 1)'
   provider: core
   label_display: '0'
 visibility:
   term:
     id: term
     negate: false
-    tid: '7'
+    tid:
+      -
+        target_id: '7'
+      -
+        target_id: '4'
     context_mapping:
       node: '@node.node_route_context:node'

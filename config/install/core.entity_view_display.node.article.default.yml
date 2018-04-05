@@ -41,7 +41,6 @@ third_party_settings:
         classes: 'meta call-to-action'
     group_related_content:
       children:
-        - field_related_documents
         - field_related_internal_url
         - field_related_external_url
       parent_name: ''
@@ -79,10 +78,8 @@ third_party_settings:
         - group_meta
         - field_issue_date
         - body
-        - field_image
         - group_related_content
         - field_last_updated
-        - field_related_documents
         - field_related_internal_url
         - field_related_external_url
         - field_metatag
@@ -114,7 +111,7 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      format_type: medium_plus_date
+      format_type: medium
     third_party_settings:
       ds:
         ft:
@@ -129,7 +126,7 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      format_type: long
+      format_type: medium
     third_party_settings:
       ds:
         ft:
