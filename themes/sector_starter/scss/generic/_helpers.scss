@@ -256,21 +256,6 @@
   }
 }
 
-/* Caption */
-.caption,
-%caption {
-  color: lighten($gray-dark, 15%);
-  padding: $spacing-base 0 $spacing-quarter;
-  font-size: 85%;
-  border-bottom: 1px solid $brand-border;
-  @include respond-to(tablet-and-up) {
-    padding: $spacing-prose-base 0 $spacing-prose-quarter;
-  }
-  &:empty {
-    display: none;
-  }
-}
-
 .link-down,
 %link-down {
   position: relative;
@@ -354,16 +339,32 @@
 /* Caption */
 .caption,
 %caption {
-  background-color: $black;
-  color: $white;
-  padding: 10px;
-  font-size: 13px;
-  font-weight: 600;
-  @include font-smoothing;
+  font-size: 14px;
+  position: relative;
+  padding: 10px 0;
+  @extend %apply-external-link-icon;
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    content: '';
+    width: 40px;
+    height: 1px;
+    background-color: $brand-blue-gray;
+  }
+  p {
+    &:last-child {
+      .prose & {
+        margin: 0;
+      }
+    }
+  }
   &:empty {
     display: none;
   }
 }
+
 
 %inverse {
   p,

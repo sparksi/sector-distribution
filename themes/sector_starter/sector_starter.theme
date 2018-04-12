@@ -177,8 +177,102 @@ function sector_starter_preprocess_page(&$variables) {
   }
 }
 
+/**
+ * Implements hook_preprocess_field.
+ *
+ * Bootstrap and Display suite don't play together, so the display suite
+ * settings are being lost since Bootstrap overrides field.html.twig.
+ * Unfortunately this means we lost our colons on default fields. So we are
+ * going to override the template for field.html.twig and provide the DS
+ * settings in the variables.
+ *
+ * For media, the output of filesize and mimetype is unsatisfactory. E.G.
+ * filesize is in bytes. So rewrite that.
+ * @param $variables
+ */
+function sector_starter_preprocess_field(&$variables) {
+  // Add DS settings.
+  if(isset($variables['ds-config']['settings'])) {
+    $variables['settings'] = $variables['ds-config']['settings'];
+  }
 
+  switch ($variables['element']['#field_name']) {
+    case 'field_filesize':
 
+      if(!empty($variables['element']['0']['#context']['value'])) {
+        // Get current filesize
+        $filesize = $variables['element']['0']['#context']['value'];
+        // Set new filesize.
+        $variables['items'][0]['content'] = format_size($filesize);
+      }
+      break;
+    case 'field_mimetype':
+
+      if(!empty($variables['element']['0']['#context']['value'])) {
+        // Get current mime.
+        $mimetype = $variables['element']['0']['#context']['value'];
+        // Set new mime.
+        $variables['items'][0]['content'] = _niceMimeType($mimetype);
+      }
+      break;
+    default:
+      break;
+  }
+}
+
+/**
+ * Helper function.
+ *
+ * Gets a nicer version of the mimetype.
+ */
+
+function _niceMimeType($originalMimeType) {
+  $newMimeType = $originalMimeType;
+  switch ($originalMimeType) {
+    case 'application/pdf':
+      $newMimeType = 'PDF';
+      break;
+    case 'application/msword':
+      $newMimeType = 'DOC';
+      break;
+    case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
+      $newMimeType = 'DOCX';
+      break;
+    case 'text/plain':
+      $newMimeType = 'TXT';
+      break;
+    case 'application/rtf':
+      $newMimeType = 'RTF';
+      break;
+    case 'application/vnd.ms-powerpoint':
+      $newMimeType = 'PPT';
+      break;
+    case 'application/vnd.openxmlformats-officedocument.presentationml.presentation':
+      $newMimeType = 'PPTX';
+      break;
+    case 'application/vnd.ms-powerpoint':
+      $newMimeType = 'PPS';
+      break;
+    case 'application/vnd.ms-excel':
+      $newMimeType = 'XLS';
+      break;
+    case 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
+      $newMimeType = 'XLSX';
+      break;
+    case 'application/xml':
+      $newMimeType = 'XML';
+      break;
+    case 'text/csv':
+      $newMimeType = 'CSV';
+      break;
+    case 'application/zip':
+    case 'application/octet-stream':
+      $newMimeType = 'ZIP';
+    default:
+      break;
+  }
+  return $newMimeType;
+}
 
 function sector_starter_preprocess_html(&$variables) {
   if($node = \Drupal::routeMatch()->getParameter('node')) {
@@ -186,15 +280,13 @@ function sector_starter_preprocess_html(&$variables) {
   }
 }
 
-
-
 /**
  * Implements hook_page_attachments_alter().
  */
 function sector_starter_page_attachments_alter(array &$page) {
 
   $breakpoints = \Drupal::service('breakpoint.manager')->getBreakpointsByGroup('sector_starter');
-    
+
   if (!empty($breakpoints)) {
     $media_queries = array();
     foreach ($breakpoints as $breakpoint) {
