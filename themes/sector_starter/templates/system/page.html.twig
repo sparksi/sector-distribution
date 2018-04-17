@@ -154,14 +154,6 @@
               {% endblock %}
             {% endif %}
 
-            {# Commented out for now as in d7 we add breadcrumbs via a block #}
-            {# Breadcrumbs #}
-            {#{% if breadcrumb %}
-              {% block breadcrumb %}
-                {{ breadcrumb }}
-              {% endblock %}
-            {% endif %}#}
-
             {# Content #}
             {% block content %}
               {{ page.content }}
@@ -169,15 +161,19 @@
           </div>
 
           {# Sidebar #}
+          {{kint(page.sidebar)}}
           {% if page.sidebar %}
-            {% block sidebar %}
-              <aside class="site__sidebar">
-                <span class="sr-only" id="sidebar-anchor">Sidebar anchor</span>
-                <div class="site__sidebar-inner">
-                  {{ page.sidebar }}
-                </div>
-              </aside>
-            {% endblock %}
+            <aside class="site__sidebar">
+              <span class="sr-only" id="sidebar-anchor">Sidebar anchor</span>
+              <div class="site__sidebar-inner">
+                {# Sidebar #}
+                {% if page.sidebar %}
+                  {% block sidebar %}
+                    {{ page.sidebar }}
+                  {% endblock %}
+                {% endif %}
+              </div>
+            </aside>
           {% endif %}
 
         </div>

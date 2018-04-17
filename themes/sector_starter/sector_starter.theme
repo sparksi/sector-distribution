@@ -149,8 +149,6 @@ function sector_starter_preprocess_breadcrumb(&$variables){
  * In Sector D7 we were using context to disable the sidebar region based on
  * taxonomy term. In D8 that is not an option, so this proprocess function
  * simulates that exact same functionality.
- * GOAL - Write a plugin to block visibility groups that allows us to do this
- * using sitebuilding
  */
 function sector_starter_preprocess_page(&$variables) {
 

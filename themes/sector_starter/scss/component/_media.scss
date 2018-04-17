@@ -228,6 +228,9 @@ $icon-offset: 54px;
 
 .media--type-file {
   &.media--view-mode-full {
+    @include respond-to(tablet-and-up) {
+      margin-top: $spacing-base;
+    }
     > .meta {
       margin-left: -($icon-offset);
     }
