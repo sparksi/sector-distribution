@@ -13,6 +13,7 @@ dependencies:
  - menu_block
  - menu_link_content
  - menu_ui
+ - media
  - path
  - pathauto
  - responsive_image
