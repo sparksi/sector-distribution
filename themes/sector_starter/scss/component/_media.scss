@@ -34,7 +34,7 @@
   }
 }
 
-$icon-offset: 56px;
+$icon-offset: 54px;
 
 .media--has-background-icon {
   padding-left: $icon-offset;
@@ -159,7 +159,7 @@ $icon-offset: 56px;
 .media__meta {
   position: relative;
   display: inline-block;
-  font-size: 16px;
+  font-size: 13px;
   text-transform: uppercase;
   color: $gray-light;
   margin-left: 6px;
@@ -167,19 +167,19 @@ $icon-offset: 56px;
     margin-left: 0;
   }
   .media--view-mode-embedded & {
-     margin-top: 9px;
+    margin-top: 9px;
   }
   &:before {
     content:'(';
     position: absolute;
     top: -1px;
-    left: -6px;
+    left: -5px;
   }
   &:after {
     content:')';
     position: absolute;
     top: -1px;
-    right: -6px;
+    right: -5px;
   }
   .field {
     position: relative;
@@ -188,7 +188,7 @@ $icon-offset: 56px;
       content:',';
       position: absolute;
       top: 0;
-      right: -5px;
+      right: -4px;
     }
     &:last-child {
       margin-right: 0;
@@ -197,16 +197,16 @@ $icon-offset: 56px;
       }
     }
   }
+  + .field--name-field__credit-or-caption {
+    color: $gray-light;
+    line-height: $line-height-base-prose;
+  }
 }
 
 .media--type-image {
   &.media--view-mode-full {
     @include respond-to(tablet-and-up) {
       margin-top: $spacing-base;
-    }
-    > img {
-      max-width: 100%;
-      height: auto;
     }
   }
 }
@@ -226,15 +226,13 @@ $icon-offset: 56px;
   }
 }
 
-.media--type-document {
+.media--type-file {
   &.media--view-mode-full {
+    @include respond-to(tablet-and-up) {
+      margin-top: $spacing-base;
+    }
     > .meta {
       margin-left: -($icon-offset);
-    }
-    > .field--name-field-description {
-      clear: both;
-      margin-left: -56px;
-      margin-top: $spacing-base;
     }
   }
 }

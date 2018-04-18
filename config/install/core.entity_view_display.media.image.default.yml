@@ -1,0 +1,108 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.image.field_credit_or_caption
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_tags
+    - field.field.media.image.field_title
+    - media.type.image
+  module:
+    - ds
+    - field_formatter_filter
+    - field_group
+    - responsive_image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_media_image
+        - field_credit_or_caption
+        - group_meta
+        - field_tags
+  field_group:
+    group_meta:
+      children:
+        - field_tags
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'meta call-to-action has-margin-top-base'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Meta
+id: media.image.default
+targetEntityType: media
+bundle: image
+mode: default
+content:
+  field_credit_or_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: restricted_basic_html
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            classes:
+              - caption
+            lb-col: false
+    type: text_default
+    region: ds_content
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_link: ''
+      responsive_image_style: ''
+    third_party_settings: {  }
+    type: responsive_image
+    region: ds_content
+  field_tags:
+    weight: 3
+    label: inline
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: true
+            classes: {  }
+    type: entity_reference_label
+    region: ds_content
+hidden:
+  created: true
+  field_title: true
+  name: true
+  thumbnail: true
+  uid: true

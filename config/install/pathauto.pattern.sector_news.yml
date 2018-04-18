@@ -4,11 +4,11 @@ dependencies:
   module:
     - node
 id: sector_news
-label: 'Sector News'
+label: 'Sector news'
 type: 'canonical_entities:node'
 pattern: 'news/[node:title]'
 selection_criteria:
-  3345e395-9c7a-49b8-8c04-0c44eca6b42f:
+  ce4459cc-aaba-4937-821e-4047c8d45147:
     id: node_type
     bundles:
       article: article

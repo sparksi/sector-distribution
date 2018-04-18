@@ -26,3 +26,11 @@
 .field--type-link {
   @extend %apply-external-link-icon;
 }
+
+.field--name-field-media-file {
+  display: block;
+  @include respond-to(tablet-and-up) {
+    display: inline-block;
+    margin-right: 7px;
+  }
+}
