@@ -90,6 +90,7 @@ dependencies:
  - embed
  - entity_embed
  - inline_entity_form
+ - media_entity_browser
 
 themes:
  - bootstrap
