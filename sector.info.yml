@@ -87,6 +87,9 @@ dependencies:
  - rh_node
  - rh_taxonomy
  - wysiwyg_template
+ - embed
+ - entity_embed
+ - inline_entity_form
 
 themes:
  - bootstrap
