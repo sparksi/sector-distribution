@@ -36,17 +36,17 @@
 }
 
 .field--name-field-related-files {
-  .field--label {
-    .page-node-type-resource & {
+  .page-node-type-resource & {
+    .field--label {
       font-size: $font-size-h4;
     }
-  }
-  > .field--items {
-    margin: $spacing-half 0 $spacing-double;
-    > .field--item {
-      @extend %has-margin-top-base;
-      &:first-child {
-        margin-top: 0;
+    > .field--items {
+      margin: $spacing-half 0 $spacing-double;
+      > .field--item {
+        @extend %has-margin-top-base;
+        &:first-child {
+          margin-top: 0;
+        }
       }
     }
   }
