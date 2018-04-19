@@ -7,7 +7,7 @@
   const click_trigger = Modernizr.touch ? 'touchstart' : 'click';
 
   Drupal.behaviors.scrollHelpers = {
-    attach: () => {
+    attach: (context) => {
       /**
       * Add classes to the body when user scolls down and is near the bottom
       * Used in CSS to hide/show the back to top link.
@@ -28,6 +28,14 @@
         (_scrollTop > threshold) ? attachClassTo.addClass(classes.down) : attachClassTo.removeClass(classes.down);
         ((_scrollTop + $(window).height()) > ($(document).height() - 800)) ? attachClassTo.addClass(classes.bottom) : attachClassTo.removeClass(classes.bottom);
       }
+
+      $(".action--back-to-top", context).on('click', function(evt){
+         let href = $(this).attr('href');
+         $('html, body').animate({
+           scrollTop: $(href).offset().top
+         }, 800);
+         evt.preventDefault();
+       });
 
     }
   };

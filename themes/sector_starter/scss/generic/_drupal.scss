@@ -13,6 +13,7 @@
 
 .tabs--primary {
   margin-top: $spacing-base;
+  margin-bottom: $spacing-base;
   font-family: $font-family-monospace;
   font-weight: 700;
   @include font-smoothing;

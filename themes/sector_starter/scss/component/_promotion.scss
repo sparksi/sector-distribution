@@ -126,9 +126,14 @@
   h2 {
     display: inline-block;
     font-size: $font-size-base;
+    font-family: $font-family-sans-serif;
     margin: 0;
+    color: $text-color;
+    &:after {
+      content: ':';
+    }
   }
-  // .field--name-field-last-updated {
-  //   display: inline-block;
-  // }
+  .field--name-field-last-updated {
+    display: inline-block;
+  }
 }
