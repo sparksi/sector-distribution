@@ -22,4 +22,14 @@
       margin: em(8) 0 $spacing-prose-base 5%;
     }
   }
+  &.align-left,
+  &.align-right {
+    .media--view-mode-half-width {
+      margin: 0;
+      @include respond-to(tablet-large-and-up) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
 }

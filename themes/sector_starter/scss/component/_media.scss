@@ -4,13 +4,6 @@
  *
  * Extend Drupal media component
  */
-.media--view-mode-embedded,
-.media--view-mode-embedded-half-column {
-  margin: $spacing-half 0;
-  @include respond-to(desktop-and-up) {
-    margin: $spacing-base 0;
-  }
-}
 
 $icon-offset: 54px;
 
@@ -50,33 +43,6 @@ $icon-offset: 54px;
     &.file--package-x-generic {&:before {background-position: 0 0;}}
 
     &.file--text-html {&:before {background-position: 0 -583px;}}
-  }
-
-  &.media--view-mode-embedded {
-    min-height: 98px;
-    padding-left: 78px;
-    padding-right: $spacing-base;
-    padding-bottom: $spacing-half;
-    @include respond-to(tablet-and-up) {
-      min-height: 104px;
-    }
-    .file {
-      &:before {
-        top: 7px;
-      }
-    }
-    .media__content {
-      > a {
-        font-weight: 600;
-        font-size: $font-size-h5;
-        @include respond-to(tablet-and-up) {
-          font-size: $font-size-h4;
-        }
-      }
-    }
-    .field-name-field-credit-or-caption {
-      margin: 5px 0 8px 0;
-    }
   }
 
   &.media--view-mode-short-teaser {
@@ -127,6 +93,12 @@ $icon-offset: 54px;
   }
 }
 
+.media--view-mode-half-width {
+  @include respond-to(tablet-large-and-up) {
+    width: 45%;
+  }
+}
+
 .media__content {
   display: block;
   @include respond-to(tablet-and-up) {
@@ -152,9 +124,6 @@ $icon-offset: 54px;
   margin-left: 6px;
   @include respond-to(tablet-and-up) {
     margin-left: 0;
-  }
-  .media--view-mode-embedded & {
-    margin-top: 9px;
   }
   &:before {
     content:'(';
