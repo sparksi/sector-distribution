@@ -5,6 +5,7 @@ name: scale_width_full_column
 label: 'Scale width full column'
 effects:
   d0ab1667-baa0-450d-81c0-ad2fecc5a0df:
+    uuid: d0ab1667-baa0-450d-81c0-ad2fecc5a0df
     id: image_scale
     weight: 1
     data:

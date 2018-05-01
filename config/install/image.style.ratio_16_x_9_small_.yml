@@ -5,6 +5,7 @@ name: ratio_16_x_9_small_
 label: 'Ratio 16 x 9 (Small)'
 effects:
   49ce960d-5049-4834-8241-211c839fc0bc:
+    uuid: 49ce960d-5049-4834-8241-211c839fc0bc
     id: image_scale_and_crop
     weight: 1
     data:
