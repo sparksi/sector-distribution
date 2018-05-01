@@ -14,6 +14,9 @@ dependencies:
  - menu_link_content
  - menu_ui
  - media
+ - embed
+ - entity_embed
+ - inline_entity_form
  - path
  - pathauto
  - responsive_image
@@ -40,7 +43,6 @@ dependencies:
  - datetime
  - dblog
  - better_normalizers
- - default_content
  - ds
  - ds_extras
  - ds_switch_view_mode
@@ -73,6 +75,7 @@ dependencies:
  - update
  - user
  - views
+ - media_entity_browser
  - admin_ui_toggle
  - password_policy
  - password_policy_character_types
@@ -87,10 +90,9 @@ dependencies:
  - rh_node
  - rh_taxonomy
  - wysiwyg_template
- - embed
- - entity_embed
- - inline_entity_form
- - media_entity_browser
+ - default_content
+ - entity_browser_entity_form
+
 
 themes:
  - bootstrap
