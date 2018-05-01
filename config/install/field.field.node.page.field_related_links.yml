@@ -2,21 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_related_internal_url
+    - field.storage.node.field_related_links
     - node.type.page
   module:
     - link
-id: node.page.field_related_internal_url
-field_name: field_related_internal_url
+id: node.page.field_related_links
+field_name: field_related_links
 entity_type: node
 bundle: page
-label: 'Related internal URL'
+label: 'Related links'
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
-  link_type: 1
+  link_type: 17
   title: 1
 field_type: link

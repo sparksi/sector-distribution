@@ -1,0 +1,39 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: media_entity_file
+label: 'Media Entity file'
+display: modal
+display_configuration:
+  width: '1000'
+  height: '600'
+  link_text: 'Select files'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  f38945e1-9544-4ebf-ac77-ffec90344de5:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_3
+      submit_text: 'Select files'
+      auto_select: false
+    weight: 1
+    label: Library
+    id: view
+  ed49c124-3005-443f-8c71-d7571924d7b9:
+    settings:
+      entity_type: media
+      bundle: file
+      form_mode: default
+      submit_text: 'Save file'
+    weight: 2
+    label: Upload
+    id: entity_form

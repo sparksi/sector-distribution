@@ -7,8 +7,8 @@ dependencies:
     - field.field.node.article.field_issue_date
     - field.field.node.article.field_last_updated
     - field.field.node.article.field_metatag
-    - field.field.node.article.field_related_external_url
-    - field.field.node.article.field_related_internal_url
+    - field.field.node.article.field_related_files
+    - field.field.node.article.field_related_links
     - field.field.node.article.field_tags
     - node.type.article
   module:
@@ -17,7 +17,6 @@ dependencies:
     - field_formatter_filter
     - field_group
     - link
-    - metatag
     - text
     - user
 third_party_settings:
@@ -41,10 +40,10 @@ third_party_settings:
         classes: 'meta call-to-action'
     group_related_content:
       children:
-        - field_related_internal_url
-        - field_related_external_url
+        - field_related_files
+        - field_related_links
       parent_name: ''
-      weight: 3
+      weight: 2
       label: 'Related content'
       format_type: html_element
       format_settings:
@@ -80,9 +79,8 @@ third_party_settings:
         - body
         - group_related_content
         - field_last_updated
-        - field_related_internal_url
-        - field_related_external_url
-        - field_metatag
+        - field_related_files
+        - field_related_links
 id: node.article.default
 targetEntityType: node
 bundle: article
@@ -118,11 +116,11 @@ content:
           id: default
           settings:
             lb: ''
-            lb-col: false
+            lb-col: true
             classes: {  }
     region: ds_content
   field_last_updated:
-    weight: 13
+    weight: 3
     label: inline
     settings:
       timezone_override: ''
@@ -135,41 +133,48 @@ content:
             lb: ''
             lb-col: true
             classes:
-              - ''
+              - has-margin-top-double
     type: datetime_default
     region: ds_content
-  field_metatag:
-    weight: 17
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: metatag_empty_formatter
-    region: ds_content
-  field_related_external_url:
-    type: link
-    weight: 16
+  field_related_files:
+    weight: 18
     label: above
     settings:
-      trim_length: 80
-      rel: ''
-      target: ''
-      url_only: false
-      url_plain: false
-    third_party_settings: {  }
+      view_mode: short_teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
     region: ds_content
-  field_related_internal_url:
-    type: link
-    weight: 15
+  field_related_links:
+    weight: 19
     label: above
     settings:
-      trim_length: 80
-      rel: ''
-      target: ''
+      trim_length: null
       url_only: false
       url_plain: false
-    third_party_settings: {  }
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
     region: ds_content
 hidden:
   field_article_type: true
+  field_metatag: true
   field_tags: true
   links: true

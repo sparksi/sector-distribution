@@ -7,8 +7,8 @@ dependencies:
     - field.field.node.resource.field_issue_date
     - field.field.node.resource.field_last_updated
     - field.field.node.resource.field_metatag
-    - field.field.node.resource.field_related_external_url
-    - field.field.node.resource.field_related_internal_url
+    - field.field.node.resource.field_related_files
+    - field.field.node.resource.field_related_links
     - field.field.node.resource.field_resource_type
     - field.field.node.resource.field_tags
     - node.type.resource
@@ -40,31 +40,16 @@ third_party_settings:
     regions:
       ds_content:
         - group_meta
-        - 'dynamic_token_field:node-copyright_link'
+        - field_related_files
         - body
-        - group_related_content
         - field_issue_date
+        - group_related_content
         - field_last_updated
-        - group_link
-        - field_related_internal_url
-        - field_related_external_url
-    fields:
-      'dynamic_token_field:node-copyright_link':
-        plugin_id: 'dynamic_token_field:node-copyright_link'
-        weight: 0
-        label: inline
-        formatter: default
-        ft:
-          id: default
-          settings:
-            lb: Copyright
-            lb-col: false
-            classes: {  }
+        - field_related_links
   field_group:
     group_meta:
       children:
         - field_issue_date
-        - group_link
       parent_name: ''
       weight: 0
       format_type: html_element
@@ -78,25 +63,11 @@ third_party_settings:
         effect: none
         speed: fast
       label: Meta
-    group_link:
-      children:
-        - 'dynamic_token_field:node-copyright_link'
-      parent_name: group_meta
-      weight: 4
-      format_type: link
-      format_settings:
-        id: ''
-        classes: 'group-link field-group-link'
-        target: custom_uri
-        custom_uri: '[node:field_copyright_license:entity:field_copyright_link]'
-        target_attribute: default
-      label: Link
     group_related_content:
       children:
-        - field_related_internal_url
-        - field_related_external_url
+        - field_related_links
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: html_element
       format_settings:
         id: ''
@@ -116,7 +87,7 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 1
+    weight: 2
     settings: {  }
     third_party_settings:
       field_formatter_filter:
@@ -126,8 +97,9 @@ content:
           id: default
           settings:
             lb: ''
+            classes:
+              - prose
             lb-col: false
-            classes: {  }
     region: ds_content
   field_issue_date:
     type: datetime_default
@@ -143,10 +115,10 @@ content:
           id: default
           settings:
             lb: ''
-            lb-col: false
+            lb-col: true
             classes: {  }
   field_last_updated:
-    weight: 3
+    weight: 4
     label: inline
     settings:
       timezone_override: ''
@@ -157,35 +129,48 @@ content:
           id: default
           settings:
             lb: ''
+            lb-col: true
             classes:
-              - has-margin-top-base
-            lb-col: false
+              - has-margin-top-double
     type: datetime_default
     region: ds_content
-  field_related_external_url:
-    type: link
-    weight: 9
-    region: ds_content
+  field_related_files:
+    weight: 1
     label: above
     settings:
-      trim_length: 80
-      url_only: false
-      url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
-  field_related_internal_url:
-    type: link
-    weight: 8
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: 'Available formats and related files'
+            lb-col: false
+            classes: {  }
+    type: entity_reference_entity_view
     region: ds_content
+  field_related_links:
+    weight: 5
     label: above
     settings:
-      trim_length: 80
+      trim_length: null
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    type: link
+    region: ds_content
 hidden:
   field_copyright_license: true
   field_metatag: true

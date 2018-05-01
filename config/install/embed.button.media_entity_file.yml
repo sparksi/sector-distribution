@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.file
+  content:
+    - 'file:file:ef8428a5-53d7-4bed-b02a-54d3b6c98c82'
+  module:
+    - entity_embed
+    - media
+label: 'Insert file'
+id: media_entity_file
+type_id: entity
+type_settings:
+  entity_type: media
+  bundles:
+    - file
+  display_plugins:
+    - 'view_mode:media.short_teaser'
+    - 'view_mode:media.teaser'
+  entity_browser: media_entity_file_alternate
+  entity_browser_settings:
+    display_review: true
+icon_uuid: ef8428a5-53d7-4bed-b02a-54d3b6c98c82

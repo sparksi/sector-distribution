@@ -46,6 +46,11 @@ settings:
             - Maximize
             - Source
         -
+          name: Media
+          items:
+            - media_entity_image
+            - media_entity_file
+        -
           name: 'Custom styles'
           items:
             - Blockquote

@@ -8,8 +8,6 @@ dependencies:
     - field.field.node.resource.field_issue_date
     - field.field.node.resource.field_last_updated
     - field.field.node.resource.field_metatag
-    - field.field.node.resource.field_related_external_url
-    - field.field.node.resource.field_related_internal_url
     - field.field.node.resource.field_resource_type
     - field.field.node.resource.field_tags
     - node.type.resource
@@ -127,7 +125,5 @@ hidden:
   field_copyright_license: true
   field_last_updated: true
   field_metatag: true
-  field_related_external_url: true
-  field_related_internal_url: true
   field_tags: true
   links: true

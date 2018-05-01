@@ -29,7 +29,7 @@ settings:
   formatter_id: datetime_default
   formatter_settings:
     timezone_override: ''
-    format_type: medium_plus_date
+    format_type: medium
 visibility:
   term:
     id: term

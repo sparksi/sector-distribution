@@ -27,7 +27,7 @@ settings:
   max_filesize: 30KB
   max_resolution: 85x85
   default_image:
-    uuid: ''
+    uuid: null
     alt: ''
     title: ''
     width: null

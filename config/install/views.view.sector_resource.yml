@@ -421,7 +421,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: "<p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\n<p> For example this text is added via a \"Global view filed using unfiltered text.</p>\n"
+          content: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\n<p> For example this text is added via a 'Global view filed using unfiltered text'.</p></div>\n"
           plugin_id: text_custom
       defaults:
         header: false
@@ -433,6 +433,7 @@ display:
         use_ajax: false
         style: false
         row: false
+        css_class: false
       filters:
         status:
           value: '1'
@@ -587,6 +588,7 @@ display:
         options:
           relationship: none
           view_mode: teaser
+      css_class: 'has-filters-with-responsive-layout has-filters-with-responsive-layout-t2'
     cache_metadata:
       max-age: -1
       contexts:

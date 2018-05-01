@@ -8,8 +8,7 @@ dependencies:
     - field.field.node.article.field_issue_date
     - field.field.node.article.field_last_updated
     - field.field.node.article.field_metatag
-    - field.field.node.article.field_related_external_url
-    - field.field.node.article.field_related_internal_url
+    - field.field.node.article.field_related_files
     - field.field.node.article.field_tags
     - node.type.article
   module:
@@ -103,7 +102,6 @@ hidden:
   body: true
   field_last_updated: true
   field_metatag: true
-  field_related_external_url: true
-  field_related_internal_url: true
+  field_related_files: true
   field_tags: true
   links: true

@@ -9,7 +9,7 @@ label: 'Sector file'
 type: 'canonical_entities:media'
 pattern: 'file/[media:field_title]'
 selection_criteria:
-  25c452cf-e77d-4a1a-9d12-57e979b5e553:
+  840376fb-e76c-4bde-8173-6066a432eb4e:
     id: 'entity_bundle:media'
     bundles:
       file: file
