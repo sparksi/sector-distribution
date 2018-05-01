@@ -21,6 +21,12 @@
             {
                 "href": "http:\/\/default\/taxonomy\/term\/8?_format=hal_json"
             }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_related_files": [
+            {
+                "href": "http:\/\/default\/file\/sample-file-pdf?_format=hal_json",
+                "lang": "en"
+            }
         ]
     },
     "nid": [
@@ -35,7 +41,7 @@
     ],
     "vid": [
         {
-            "value": 5
+            "value": 37
         }
     ],
     "langcode": [
@@ -51,7 +57,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2017-11-01T22:04:16+00:00",
+            "value": "2018-04-24T00:27:46+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -68,7 +74,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -85,7 +91,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ],
                 "lang": "en"
@@ -106,6 +112,24 @@
                         "value": "c4fcdd7d-b313-4aef-94d0-abd36273b170"
                     }
                 ]
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/article\/field_related_files": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/file\/sample-file-pdf?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "84cd5448-d4db-4887-b41c-95838b9a357c"
+                    }
+                ],
+                "lang": "en"
             }
         ]
     },
@@ -130,7 +154,7 @@
     ],
     "changed": [
         {
-            "value": "2017-11-01T22:04:16+00:00",
+            "value": "2018-04-24T00:27:46+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -162,7 +186,7 @@
     "metatag": [
         {
             "value": {
-                "title": "News content sample  | Base1 sector D8",
+                "title": "News content sample  | Base3",
                 "description": "The News Content type is an example for\u00a0taxonomy (or data)\u00a0driven content. Taxonomy driven content\u00a0\u00a0is content organised by sort and filter criteria. In a Drupal context the sort and filter criteria can be either data\u00a0or taxonomy based."
             }
         }
@@ -170,21 +194,46 @@
     "path": [
         {
             "alias": "\/news\/news-content-sample",
-            "pid": 5,
+            "pid": 18,
             "langcode": "en",
             "lang": "en"
         }
     ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
     "body": [
         {
-            "value": "<p class=\"lead\">The News Content type is an example for&nbsp;taxonomy (or data)&nbsp;driven content. Taxonomy driven content&nbsp;&nbsp;is content organised by sort and filter criteria. In a Drupal context the sort and filter criteria can be either data&nbsp;or taxonomy based. &nbsp;<\/p>\r\n\r\n<p>The Sector News content type (based on Drupal&#39;s core Article content type)&nbsp;is prepared for transient content that is most relevant on publication (Issue date). The Article type taxonomy allows to sort and filter News into groups for example media release&nbsp;or&nbsp;newsletter. The News archive allows the user to filter by date.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n\t<p>This&nbsp;sample page is a node of the content type <em>News<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">The News Content type is an example for&nbsp;taxonomy (or data)&nbsp;driven content. Taxonomy driven content&nbsp;&nbsp;is content organised by sort and filter criteria. In a Drupal context the sort and filter criteria can be either data&nbsp;or taxonomy based. &nbsp;<\/p>\r\n\r\n<p>The Sector News content type (based on Drupal's core Article content type)&nbsp;is prepared for transient content that is most relevant on publication (Issue date). The Article type taxonomy allows to sort and filter News into groups for example media release&nbsp;or&nbsp;newsletter. The News archive allows the user to filter by date.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample page is a node of the content type <em>News<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
+            "processed": "<p class=\"lead\">The News Content type is an example for\u00a0taxonomy (or data)\u00a0driven content. Taxonomy driven content\u00a0\u00a0is content organised by sort and filter criteria. In a Drupal context the sort and filter criteria can be either data\u00a0or taxonomy based. \u00a0<\/p>\n\n<p>The Sector News content type (based on Drupal's core Article content type)\u00a0is prepared for transient content that is most relevant on publication (Issue date). The Article type taxonomy allows to sort and filter News into groups for example media release\u00a0or\u00a0newsletter. The News archive allows the user to filter by date.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n<p>This\u00a0sample page is a node of the content type <em>News<\/em>.<\/p>\n<\/div>\n\n<p>{Sample content}<\/p>",
             "summary": ""
         }
     ],
     "field_issue_date": [
         {
             "value": "2016-09-01"
+        }
+    ],
+    "field_last_updated": [
+        {
+            "value": "2018-04-18",
+            "lang": "en"
+        }
+    ],
+    "field_related_links": [
+        {
+            "uri": "https:\/\/www.sector.org.nz\/documentation\/sector-news-content-type",
+            "title": "Sector News content type documentation ",
+            "options": [],
+            "lang": "en"
         }
     ]
 }

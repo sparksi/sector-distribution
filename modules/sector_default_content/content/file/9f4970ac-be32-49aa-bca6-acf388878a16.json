@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-document-pdf.pdf"
+            "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-file.pdf"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -14,12 +14,12 @@
     },
     "fid": [
         {
-            "value": 4
+            "value": 10
         }
     ],
     "uuid": [
         {
-            "value": "f73663d4-f1f1-4fc2-b50b-a32ab995013b"
+            "value": "9f4970ac-be32-49aa-bca6-acf388878a16"
         }
     ],
     "langcode": [
@@ -40,7 +40,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "29a6179f-143b-45a4-8199-2c19b884d102"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -48,13 +48,13 @@
     },
     "filename": [
         {
-            "value": "sample-document-pdf.pdf"
+            "value": "sample-file.pdf"
         }
     ],
     "uri": [
         {
-            "value": "public:\/\/2018-04\/sample-document-pdf.pdf",
-            "url": "\/sites\/default\/files\/2018-04\/sample-document-pdf.pdf"
+            "value": "public:\/\/2018-04\/sample-file.pdf",
+            "url": "\/sites\/default\/files\/2018-04\/sample-file.pdf"
         }
     ],
     "filemime": [
@@ -74,13 +74,13 @@
     ],
     "created": [
         {
-            "value": "2018-04-11T20:55:57+00:00",
+            "value": "2018-04-19T02:04:01+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-04-11T21:02:26+00:00",
+            "value": "2018-04-19T02:04:32+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],

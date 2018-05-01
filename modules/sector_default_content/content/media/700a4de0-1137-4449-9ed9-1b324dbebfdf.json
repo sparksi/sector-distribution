@@ -6,9 +6,14 @@
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
         },
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/revision_user": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/thumbnail": [
             {
-                "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-image-landscape_0.jpg",
+                "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-image-landscape_0_0.jpg",
                 "lang": "en"
             }
         ],
@@ -20,7 +25,7 @@
         ],
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/field_media_image": [
             {
-                "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-image-landscape_0.jpg",
+                "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-image-landscape_0_0.jpg",
                 "lang": "en"
             }
         ],
@@ -47,7 +52,7 @@
     ],
     "vid": [
         {
-            "value": 1
+            "value": 14
         }
     ],
     "langcode": [
@@ -63,28 +68,33 @@
     ],
     "revision_created": [
         {
-            "value": "2018-04-11T20:52:59+00:00",
+            "value": "2018-04-24T02:01:50+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
-    "status": [
-        {
-            "value": true,
-            "lang": "en"
-        }
-    ],
-    "name": [
-        {
-            "value": "sample-image-landscape.jpg",
-            "lang": "en"
-        }
-    ],
     "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/media\/image\/revision_user": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                    }
+                ]
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/media\/image\/thumbnail": [
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-image-landscape_0.jpg"
+                        "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-image-landscape_0_0.jpg"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -114,7 +124,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "29a6179f-143b-45a4-8199-2c19b884d102"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ],
                 "lang": "en"
@@ -124,7 +134,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-image-landscape_0.jpg"
+                        "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-image-landscape_0_0.jpg"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -177,6 +187,18 @@
             }
         ]
     },
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "sample-image-landscape.jpg",
+            "lang": "en"
+        }
+    ],
     "created": [
         {
             "value": "2018-04-11T20:52:08+00:00",
@@ -186,7 +208,7 @@
     ],
     "changed": [
         {
-            "value": "2018-04-11T21:33:04+00:00",
+            "value": "2018-04-24T02:01:50+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -206,23 +228,23 @@
     "metatag": [
         {
             "value": {
-                "title": "| Sector D8 2"
+                "title": "| Base3"
             }
         }
     ],
     "path": [
         {
             "alias": "\/image\/sample-image-landscape",
-            "pid": 19,
+            "pid": 6,
             "langcode": "en",
             "lang": "en"
         }
     ],
     "field_credit_or_caption": [
         {
-            "value": "<p>Add your copyright or credit notice.<\/p>\r\n",
+            "value": "<p>Use the <em>credit or caption<\/em>&nbsp;field to add&nbsp;your copyright or credit notice.<\/p>\r\n",
             "format": "restricted_basic_html",
-            "processed": "<p>Add your copyright or credit notice.<\/p>"
+            "processed": "<p>Use the <em>credit or caption<\/em>\u00a0field to add\u00a0your copyright or credit notice.<\/p>"
         }
     ],
     "field_title": [

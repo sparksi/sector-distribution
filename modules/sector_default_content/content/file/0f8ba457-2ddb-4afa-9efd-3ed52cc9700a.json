@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/sites\/default\/files\/embed_buttons\/media-image.png"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 8
+        }
+    ],
+    "uuid": [
+        {
+            "value": "0f8ba457-2ddb-4afa-9efd-3ed52cc9700a"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "media-image.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/embed_buttons\/media-image.png",
+            "url": "\/sites\/default\/files\/embed_buttons\/media-image.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 319
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-04-19T00:33:07+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-04-19T00:33:13+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "data": [
+        {
+            "value": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAAA8UlEQVQ4y6WTvW3DQAyFPwkeQPVj4z6NJwg8gjeIsoFGyAjaIBohyAJxmS4aIQ17eQKmYQBJkQArInAF7\/geH3+uiAj22AHAzP7F4u7FYexsAf8mLVcez\/cSlQvgDvgws3ozQWZ+SrfdTODuV+AZuAHnBXXtXNlhobMd0JlZNQJWwDXd2szWCTK4A45Z0jHBb+5em9lpRPanByegT\/cb+AS+gMbd61TYT8qLCCSFpFrSIKnJu0qSS3qPCOZHUkTEREELXNy9zUwD8AA8mllzzxSOOYVxQ4eU+7K2F+UseGnfe+ACvGaPJlZExK7PVOz9zj+iVXKsfGp5cQAAAABJRU5ErkJggg=="
+        }
+    ]
+}

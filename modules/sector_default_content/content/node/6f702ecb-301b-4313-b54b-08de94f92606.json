@@ -35,7 +35,7 @@
     ],
     "vid": [
         {
-            "value": 4
+            "value": 36
         }
     ],
     "langcode": [
@@ -51,7 +51,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2017-11-07T02:21:52+00:00",
+            "value": "2018-04-24T00:26:31+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -68,7 +68,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -85,7 +85,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ],
                 "lang": "en"
@@ -130,7 +130,7 @@
     ],
     "changed": [
         {
-            "value": "2017-11-07T02:21:52+00:00",
+            "value": "2018-04-24T00:26:31+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -162,7 +162,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Resource content sample | Base1 sector D8",
+                "title": "Resource content sample | Base3",
                 "description": "Resource\/Topic pages and news items have similar fieldsets and displays; however their data type and audiences is different."
             }
         }
@@ -170,15 +170,26 @@
     "path": [
         {
             "alias": "\/resources\/resource-content-sample",
-            "pid": 4,
+            "pid": 20,
             "langcode": "en",
             "lang": "en"
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
         }
     ],
     "body": [
         {
             "value": "<p class=\"lead\">The Resource&nbsp;Content type is another example for taxonomy (or data) driven content. Resources&nbsp;and News items have similar fieldsets and displays; however their data type and audiences is different. Resources&nbsp;are non transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).<\/p>\r\n\r\n<p>The Sector Resource content type&nbsp;is prepared for information&nbsp;or knowledge database style content. The Resource type taxonomy allows to sort and filter Resource pages&nbsp;into groups for example training material&nbsp;or&nbsp;manuals. The Resource archive allows the user to filter by issue date or type.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
+            "processed": "<p class=\"lead\">The Resource\u00a0Content type is another example for taxonomy (or data) driven content. Resources\u00a0and News items have similar fieldsets and displays; however their data type and audiences is different. Resources\u00a0are non transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).<\/p>\n\n<p>The Sector Resource content type\u00a0is prepared for information\u00a0or knowledge database style content. The Resource type taxonomy allows to sort and filter Resource pages\u00a0into groups for example training material\u00a0or\u00a0manuals. The Resource archive allows the user to filter by issue date or type.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n<p>This\u00a0sample node is a node of the content type\u00a0<em>Resource<\/em>.<\/p>\n<\/div>\n\n<p>\u00a0<\/p>\n\n<p>{Sample content}<\/p>",
             "summary": "Resource\/Topic pages and news items have similar fieldsets and displays; however their data type and audiences is different."
         }
     ],
@@ -190,6 +201,20 @@
     "field_last_updated": [
         {
             "value": "2018-03-08",
+            "lang": "en"
+        }
+    ],
+    "field_related_links": [
+        {
+            "uri": "entity:node\/4",
+            "title": "Sector WYSIWYG - Content elements",
+            "options": [],
+            "lang": "en"
+        },
+        {
+            "uri": "https:\/\/www.sector.org.nz\/documentation\/sector-resource-content-type",
+            "title": "Sector Resource content type documentation",
+            "options": [],
             "lang": "en"
         }
     ]

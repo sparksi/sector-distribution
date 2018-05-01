@@ -76,7 +76,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -93,7 +93,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ],
                 "lang": "und"
@@ -201,7 +201,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Sector Page Content settings - Hide sidebar | Base1 sector D8",
+                "title": "Sector Page Content settings - Hide sidebar | Base3",
                 "description": "Next to the Page variants Sector introduces Page content settings to provide further display options per node.\u00a0As the Page variants,\u00a0Page content settings are defined using\u00a0Drupal taxonomies\u00a0and Drupal\u00a0context condition."
             }
         }
@@ -218,31 +218,13 @@
         {
             "value": "<p class=\"lead\">Next to the Page variants Sector introduces Page content settings to provide further display options per node.&nbsp;As the Page variants,&nbsp;Page content settings are defined using&nbsp;Drupal taxonomies&nbsp;and Drupal&nbsp;context condition.<\/p>\r\n\r\n<p>So while your pages are grouped in Section entry pages and Standard&nbsp;pages, you can hide the sidebar on&nbsp;either variant - like on this sample page.&nbsp;Another usage is as sort citeria in Drupal Views, for example in Drupal Search API Search views via&nbsp;&#39;Hide from search results&#39; (optional extention).&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
+            "processed": "<p class=\"lead\">Next to the Page variants Sector introduces Page content settings to provide further display options per node.\u00a0As the Page variants,\u00a0Page content settings are defined using\u00a0Drupal taxonomies\u00a0and Drupal\u00a0context condition.<\/p>\n\n<p>So while your pages are grouped in Section entry pages and Standard\u00a0pages, you can hide the sidebar on\u00a0either variant - like on this sample page.\u00a0Another usage is as sort citeria in Drupal Views, for example in Drupal Search API Search views via\u00a0'Hide from search results' (optional extention).\u00a0<\/p>\n\n<p>{Sample content}<\/p>",
             "summary": ""
         }
     ],
     "field_last_updated": [
         {
             "value": "2017-10-24"
-        }
-    ],
-    "field_related_external_url": [
-        {
-            "uri": "http:\/\/Drupal.org",
-            "title": "Drupal.org",
-            "options": []
-        }
-    ],
-    "field_related_internal_url": [
-        {
-            "uri": "entity:node\/8",
-            "title": "Internal link 1",
-            "options": []
-        },
-        {
-            "uri": "entity:node\/7",
-            "title": "Internal link 2",
-            "options": []
         }
     ]
 }

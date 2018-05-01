@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/sites\/default\/files\/2018-04\/word-test.docx"
+            "href": "http:\/\/default\/sites\/default\/files\/2018-04\/sample-file.docx"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
@@ -14,12 +14,12 @@
     },
     "fid": [
         {
-            "value": 6
+            "value": 11
         }
     ],
     "uuid": [
         {
-            "value": "63fc85c4-89f5-4bc6-982d-13114e2d0445"
+            "value": "d07e5496-d8f4-4138-9a66-d63198ce7ae9"
         }
     ],
     "langcode": [
@@ -40,7 +40,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "29a6179f-143b-45a4-8199-2c19b884d102"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -48,13 +48,13 @@
     },
     "filename": [
         {
-            "value": "word-test.docx"
+            "value": "sample-file.docx"
         }
     ],
     "uri": [
         {
-            "value": "public:\/\/2018-04\/word-test.docx",
-            "url": "\/sites\/default\/files\/2018-04\/word-test.docx"
+            "value": "public:\/\/2018-04\/sample-file.docx",
+            "url": "\/sites\/default\/files\/2018-04\/sample-file.docx"
         }
     ],
     "filemime": [
@@ -74,13 +74,13 @@
     ],
     "created": [
         {
-            "value": "2018-04-12T00:14:51+00:00",
+            "value": "2018-04-19T02:04:47+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "changed": [
         {
-            "value": "2018-04-12T00:15:55+00:00",
+            "value": "2018-04-19T02:05:10+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
