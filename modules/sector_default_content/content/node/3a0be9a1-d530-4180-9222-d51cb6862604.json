@@ -68,7 +68,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -85,7 +85,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ],
                 "lang": "en"
@@ -162,7 +162,7 @@
     "metatag": [
         {
             "value": {
-                "title": "News content sample with a long descriptive title | Base1 sector D8",
+                "title": "News content sample with a long descriptive title | Base3",
                 "description": "Regular news keep your site alive.\u00a0Most website content strategies emphasis the need to publish news and updates regularly and to share new content across all channels. \u00a0"
             }
         }
@@ -170,7 +170,7 @@
     "path": [
         {
             "alias": "\/news\/news-content-sample-long-descriptive-title",
-            "pid": 1,
+            "pid": 19,
             "langcode": "en",
             "lang": "en"
         }
@@ -179,12 +179,19 @@
         {
             "value": "<p class=\"lead\">Regular news keep your site alive.&nbsp;Most website content strategies emphasis the need to publish news and updates regularly and to share new content across all channels. &nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n\t<p>This&nbsp;sample page is a node of the content type <em>News<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>Break up long news stories with subheadings. But remember that subheadings add to the text, they&rsquo;re not part of it: the text should still make sense with the subheadings removed.<\/p>\r\n\r\n<p>How to write effective body copy:<\/p>\r\n\r\n<ul>\r\n\t<li>the first paragraph should lead on from the summary paragraph, not repeat the information<\/li>\r\n\t<li>use the &lsquo;inverted pyramid&rsquo; approach with the most important information at the top tapering down to lesser detail<\/li>\r\n\t<li>paragraphs should have no more than 5 sentences each<\/li>\r\n\t<li>ensure copy includes keywords to boost natural search rankings<\/li>\r\n\t<li>use video and images<\/li>\r\n<\/ul>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
+            "processed": "<p class=\"lead\">Regular news keep your site alive.\u00a0Most website content strategies emphasis the need to publish news and updates regularly and to share new content across all channels. \u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n\t<p>This\u00a0sample page is a node of the content type <em>News<\/em>.<\/p>\n<\/div>\n\n<p>Break up long news stories with subheadings. But remember that subheadings add to the text, they\u2019re not part of it: the text should still make sense with the subheadings removed.<\/p>\n\n<p>How to write effective body copy:<\/p>\n\n<ul><li>the first paragraph should lead on from the summary paragraph, not repeat the information<\/li>\n\t<li>use the \u2018inverted pyramid\u2019 approach with the most important information at the top tapering down to lesser detail<\/li>\n\t<li>paragraphs should have no more than 5 sentences each<\/li>\n\t<li>ensure copy includes keywords to boost natural search rankings<\/li>\n\t<li>use video and images<\/li>\n<\/ul><p>{Sample content}<\/p>",
             "summary": ""
         }
     ],
     "field_issue_date": [
         {
             "value": "2016-08-01"
+        }
+    ],
+    "field_last_updated": [
+        {
+            "value": "2018-04-18",
+            "lang": "en"
         }
     ]
 }

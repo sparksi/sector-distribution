@@ -4,35 +4,6 @@
  *
  * Extend Drupal media component
  */
-.media--view-mode-embedded,
-.media--view-mode-embedded-half-column {
-  margin: $spacing-half 0;
-  @include respond-to(desktop-and-up) {
-    margin: $spacing-base 0;
-  }
-}
-
-/* Custom half column images are floated right by default (Tablet and up) */
-.media--view-mode-embedded-half-column {
-  @extend %has-offset-right;
-  margin: em(4) 0 $spacing-base 0;
-  @include respond-to(tablet-and-up) {
-    width: 50%;
-    height: auto;
-    float: right;
-    margin: em(8) 0 $spacing-prose-base $spacing-prose-double;
-  }
-  @include respond-to(wide-and-up) {
-    width: auto;
-  }
-  img {
-    width: 100%;
-    @include respond-to(tablet-and-up) {
-      width: auto!important; // Override inline style set by IMCE
-      height: auto!important; // Override inline style set by IMCE
-    }
-  }
-}
 
 $icon-offset: 54px;
 
@@ -74,33 +45,6 @@ $icon-offset: 54px;
     &.file--text-html {&:before {background-position: 0 -583px;}}
   }
 
-  &.media--view-mode-embedded {
-    min-height: 98px;
-    padding-left: 78px;
-    padding-right: $spacing-base;
-    padding-bottom: $spacing-half;
-    @include respond-to(tablet-and-up) {
-      min-height: 104px;
-    }
-    .file {
-      &:before {
-        top: 7px;
-      }
-    }
-    .media__content {
-      > a {
-        font-weight: 600;
-        font-size: $font-size-h5;
-        @include respond-to(tablet-and-up) {
-          font-size: $font-size-h4;
-        }
-      }
-    }
-    .field-name-field-credit-or-caption {
-      margin: 5px 0 8px 0;
-    }
-  }
-
   &.media--view-mode-short-teaser {
     padding-left: 0;
     .file {
@@ -138,6 +82,21 @@ $icon-offset: 54px;
       font-size: 14px;
     }
   }
+  &.media--view-mode-teaser {
+    @extend %has-padding-top-half;
+    @extend %has-border-top;
+    .embedded-entity & {
+      padding: 20px 20px 20px 74px;
+      border: 1px solid $brand-border;
+      background-color: lighten($gray-lighter,5%);
+    }
+  }
+}
+
+.media--view-mode-half-width {
+  @include respond-to(tablet-large-and-up) {
+    width: 45%;
+  }
 }
 
 .media__content {
@@ -165,9 +124,6 @@ $icon-offset: 54px;
   margin-left: 6px;
   @include respond-to(tablet-and-up) {
     margin-left: 0;
-  }
-  .media--view-mode-embedded & {
-    margin-top: 9px;
   }
   &:before {
     content:'(';
@@ -203,36 +159,17 @@ $icon-offset: 54px;
   }
 }
 
-.media--type-image {
-  &.media--view-mode-full {
-    @include respond-to(tablet-and-up) {
-      margin-top: $spacing-base;
-    }
-  }
-}
-
-.media--type-video,
-.media--type-audio {
-  &.media--view-mode-full {
-    margin-top: $spacing-base;
-  }
-}
-
-.media--type-audio {
-  .responsive-ratio {
-    @include respond-to(mobile) {
-      padding-bottom: aspect-ratio-height(16, 6);
-    }
-  }
-}
-
 .media--type-file {
   &.media--view-mode-full {
-    @include respond-to(tablet-and-up) {
-      margin-top: $spacing-base;
-    }
     > .meta {
       margin-left: -($icon-offset);
     }
+  }
+}
+
+.media--featured {
+  margin-bottom: $line-height-prose-computed;
+  @include respond-to(wide-and-up) {
+    margin-bottom: ($line-height-prose-computed*2);
   }
 }

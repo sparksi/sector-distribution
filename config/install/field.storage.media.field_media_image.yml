@@ -11,6 +11,7 @@ entity_type: media
 type: image
 settings:
   default_image:
+    uuid: null
     alt: ''
     title: ''
     width: null

@@ -5,6 +5,7 @@ name: scale_width_media_portriat
 label: 'Scale width media portriat'
 effects:
   16d6a8e0-6e7e-4241-9598-5d30e8e1ba4b:
+    uuid: 16d6a8e0-6e7e-4241-9598-5d30e8e1ba4b
     id: image_scale
     weight: 1
     data:

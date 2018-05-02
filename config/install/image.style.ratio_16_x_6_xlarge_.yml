@@ -5,6 +5,7 @@ name: ratio_16_x_6_xlarge_
 label: 'Ratio 16 x 6 (XLarge)'
 effects:
   738f6e7a-7afa-4317-b217-7748eb237b31:
+    uuid: 738f6e7a-7afa-4317-b217-7748eb237b31
     id: image_scale_and_crop
     weight: 1
     data:

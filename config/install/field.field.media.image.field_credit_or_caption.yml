@@ -33,7 +33,7 @@ id: media.image.field_credit_or_caption
 field_name: field_credit_or_caption
 entity_type: media
 bundle: image
-label: ' Credit or caption'
+label: 'Credit or caption'
 description: ''
 required: false
 translatable: false

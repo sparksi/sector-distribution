@@ -1,7 +1,7 @@
 {
     "_links": {
         "self": {
-            "href": "http:\/\/default\/content-management-made-easy?_format=hal_json"
+            "href": "http:\/\/default\/node\/10?_format=hal_json"
         },
         "type": {
             "href": "http:\/\/drupal.org\/rest\/type\/node\/page"
@@ -68,7 +68,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -85,7 +85,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ],
                 "lang": "und"
@@ -161,16 +161,8 @@
     "metatag": [
         {
             "value": {
-                "title": "Content management made easy. | Base1 sector D8"
+                "title": "Content management made easy. | Base3"
             }
-        }
-    ],
-    "path": [
-        {
-            "alias": "\/content-management-made-easy",
-            "pid": 8,
-            "langcode": "und",
-            "lang": "und"
         }
     ],
     "field_last_updated": [
@@ -181,7 +173,8 @@
     "field_subtitle": [
         {
             "value": "Built on Bootstrap and the Drupal Bootstrap theme, the Sector Starter Theme and Base configuration is ready to go and easy to administer.",
-            "format": "teaser_display_text"
+            "format": "teaser_display_text",
+            "processed": "Built on Bootstrap and the Drupal Bootstrap theme, the Sector Starter Theme and Base configuration is ready to go and easy to administer."
         }
     ]
 }

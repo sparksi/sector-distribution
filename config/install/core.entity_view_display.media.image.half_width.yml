@@ -1,0 +1,84 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.half_width
+    - field.field.media.image.field_credit_or_caption
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_tags
+    - field.field.media.image.field_title
+    - image.style.ratio_5_x_3_small_
+    - media.type.image
+  module:
+    - ds
+    - field_formatter_filter
+    - image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_media_image
+        - field_credit_or_caption
+id: media.image.half_width
+targetEntityType: media
+bundle: image
+mode: half_width
+content:
+  field_credit_or_caption:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: restricted_basic_html
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            classes:
+              - caption
+            lb-col: false
+    type: text_default
+    region: ds_content
+  field_media_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ratio_5_x_3_small_
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - responsive-ratio
+              - responsive-ratio--5-3
+            lb-col: false
+    type: image
+    region: ds_content
+hidden:
+  created: true
+  field_tags: true
+  field_title: true
+  name: true
+  thumbnail: true
+  uid: true

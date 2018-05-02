@@ -10,7 +10,7 @@
   }
   .field--label {
     font-weight: 700;
-    margin: $spacing-double 0 0 0;
+    margin: $spacing-double 0 5px 0;
     @extend %has-border-top-alternate;
     &:before {
       top: -12px;

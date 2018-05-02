@@ -316,6 +316,7 @@
 
 %pseudo-dl-definition {
   clear: both;
+  display: block;
   @include respond-to(tablet-and-up) {
     float: left;
     clear: none;

@@ -17,6 +17,16 @@
                 "lang": "en"
             }
         ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/resource\/field_related_files": [
+            {
+                "href": "http:\/\/default\/file\/sample-file-pdf?_format=hal_json",
+                "lang": "en"
+            },
+            {
+                "href": "http:\/\/default\/file\/sample-file-docx?_format=hal_json",
+                "lang": "en"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/resource\/field_resource_type": [
             {
                 "href": "http:\/\/default\/taxonomy\/term\/21?_format=hal_json"
@@ -35,7 +45,7 @@
     ],
     "vid": [
         {
-            "value": 2
+            "value": 34
         }
     ],
     "langcode": [
@@ -51,7 +61,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2017-11-07T02:23:00+00:00",
+            "value": "2018-04-19T03:42:23+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -68,7 +78,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -85,7 +95,41 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                    }
+                ],
+                "lang": "en"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/resource\/field_related_files": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/file\/sample-file-pdf?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "84cd5448-d4db-4887-b41c-95838b9a357c"
+                    }
+                ],
+                "lang": "en"
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/file\/sample-file-docx?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "d6199420-0506-470a-8084-ddaf32ed7b05"
                     }
                 ],
                 "lang": "en"
@@ -130,7 +174,7 @@
     ],
     "changed": [
         {
-            "value": "2017-11-07T02:23:00+00:00",
+            "value": "2018-04-19T03:42:23+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -162,7 +206,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Resource content sample with a long descriptive title | Base1 sector D8",
+                "title": "Resource content sample with a long descriptive title | Base3",
                 "description": "Current navigation pattern for large-scale websites move away from hierarchical structures towards taxonomy driven systems. The Resource content type can be\u00a0a first step in this direction."
             }
         }
@@ -170,15 +214,26 @@
     "path": [
         {
             "alias": "\/resources\/resource-content-sample-long-descriptive-title",
-            "pid": 2,
+            "pid": 21,
             "langcode": "en",
             "lang": "en"
         }
     ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
     "body": [
         {
-            "value": "<p class=\"lead\">Current navigation pattern for large-scale websites move away from hierarchical structures towards taxonomy driven systems. The Resource content type can be&nbsp;a first step in this direction.<\/p>\r\n\r\n<p>Over time any hierarchical structure tends to grow both horizontally and vertically: the tree turns into a jungle. To avoid this growth we are recommending a content strategy that moves away from a hierarchical structure towards data-driven content. &nbsp;<\/p>\r\n\r\n<p>To move from pages to data you need a clear strategy for what goes where and why. Take time to sort your content into resource types and topics. Think about pre-filling your Tag&nbsp;taxonomy with useful topics that help your users to find content.<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n\t<p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">Current navigation pattern for large-scale websites move away from hierarchical structures towards taxonomy driven systems. The Resource content type can be&nbsp;a first step in this direction.<\/p>\r\n\r\n<p>Over time any hierarchical structure tends to grow both horizontally and vertically: the tree turns into a jungle. To avoid this growth we are recommending a content strategy that moves away from a hierarchical structure towards data-driven content. &nbsp;<\/p>\r\n\r\n<p>To move from pages to data you need a clear strategy for what goes where and why. Take time to sort your content into resource types and topics. Think about pre-filling your Tag&nbsp;taxonomy with useful topics that help your users to find content.<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
+            "processed": "<p class=\"lead\">Current navigation pattern for large-scale websites move away from hierarchical structures towards taxonomy driven systems. The Resource content type can be\u00a0a first step in this direction.<\/p>\n\n<p>Over time any hierarchical structure tends to grow both horizontally and vertically: the tree turns into a jungle. To avoid this growth we are recommending a content strategy that moves away from a hierarchical structure towards data-driven content. \u00a0<\/p>\n\n<p>To move from pages to data you need a clear strategy for what goes where and why. Take time to sort your content into resource types and topics. Think about pre-filling your Tag\u00a0taxonomy with useful topics that help your users to find content.<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n<p>This\u00a0sample node is a node of the content type\u00a0<em>Resource<\/em>.<\/p>\n<\/div>\n\n<p>{Sample content}<\/p>",
             "summary": ""
         }
     ],

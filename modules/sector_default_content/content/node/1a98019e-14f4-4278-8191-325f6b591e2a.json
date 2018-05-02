@@ -17,6 +17,11 @@
                 "lang": "und"
             }
         ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_banner": [
+            {
+                "href": "http:\/\/default\/image\/sample-image-landscape?_format=hal_json"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
             {
                 "href": "http:\/\/default\/taxonomy\/term\/7?_format=hal_json"
@@ -35,7 +40,7 @@
     ],
     "vid": [
         {
-            "value": 21
+            "value": 27
         }
     ],
     "langcode": [
@@ -51,7 +56,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-03-14T02:51:28+00:00",
+            "value": "2018-04-19T02:19:55+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -68,7 +73,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -85,10 +90,27 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ],
                 "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_banner": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/image\/sample-image-landscape?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "700a4de0-1137-4449-9ed9-1b324dbebfdf"
+                    }
+                ]
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
@@ -130,7 +152,7 @@
     ],
     "changed": [
         {
-            "value": "2018-03-14T02:51:28+00:00",
+            "value": "2018-04-19T02:19:55+00:00",
             "lang": "und",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -161,7 +183,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Sector Section entry pages | Base1 sector D8",
+                "title": "Sector Section entry pages | Base3",
                 "description": "Sector's simple\u00a0layout templates use\u00a0sitebuilder tools\u00a0and\u00a0Drupal taxonomies\u00a0to keep displays\u00a0modular and consistent across your site.\u00a0"
             }
         }
@@ -169,7 +191,7 @@
     "path": [
         {
             "alias": "\/section",
-            "pid": 15,
+            "pid": 12,
             "langcode": "und",
             "lang": "und"
         }
@@ -188,6 +210,7 @@
         {
             "value": "<p class=\"lead\">Sector's simple&nbsp;layout templates use&nbsp;sitebuilder tools&nbsp;and&nbsp;Drupal taxonomies&nbsp;to keep displays&nbsp;modular and consistent across your site.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample page is a node of the content type <em>Page<\/em> added to Level 1 in the&nbsp;main menu. It&nbsp;is displayed using&nbsp;the Section entry page <em>Page variant<\/em>.&nbsp;<\/p>\r\n<\/div>\r\n\r\n<p>The flexible Drupal content type architecture allows site builders to create a new content type&nbsp;for each design template. But using content types to distinguish between layouts can lead to a large number of content types with the risk of&nbsp;inconsistent display and&nbsp;hard to maintain sites.&nbsp;<\/p>\r\n\r\n<p>Sector's concept of Page layout variants and Page content settings allows us to built and manage a variety of design templates per content type. This way content types can be used to distinguish between data types, not design requirements, leading to a lean and simple content architecture and grouping.&nbsp;&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
+            "processed": "<p class=\"lead\">Sector's simple\u00a0layout templates use\u00a0sitebuilder tools\u00a0and\u00a0Drupal taxonomies\u00a0to keep displays\u00a0modular and consistent across your site.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n<p>This\u00a0sample page is a node of the content type <em>Page<\/em> added to Level 1 in the\u00a0main menu. It\u00a0is displayed using\u00a0the Section entry page <em>Page variant<\/em>.\u00a0<\/p>\n<\/div>\n\n<p>The flexible Drupal content type architecture allows site builders to create a new content type\u00a0for each design template. But using content types to distinguish between layouts can lead to a large number of content types with the risk of\u00a0inconsistent display and\u00a0hard to maintain sites.\u00a0<\/p>\n\n<p>Sector's concept of Page layout variants and Page content settings allows us to built and manage a variety of design templates per content type. This way content types can be used to distinguish between data types, not design requirements, leading to a lean and simple content architecture and grouping.\u00a0\u00a0<\/p>\n\n<p>{Sample content}<\/p>",
             "summary": ""
         }
     ],
@@ -198,8 +221,9 @@
     ],
     "field_subtitle": [
         {
-            "value": "Introducing sector page display options via page layout variants and page content settings.",
-            "format": "teaser_display_text"
+            "value": "Introducing Sector page display options via page layout variants and page content settings.",
+            "format": "teaser_display_text",
+            "processed": "Introducing Sector page display options via page layout variants and page content settings."
         }
     ]
 }

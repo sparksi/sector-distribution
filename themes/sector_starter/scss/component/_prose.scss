@@ -79,6 +79,9 @@
     }
     p {
       margin: 0 0 $line-height-prose-computed;
+      &:last-child {
+        margin: 0;
+      }
     }
   }
 }

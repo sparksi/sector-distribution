@@ -5,6 +5,7 @@ name: ratio_3_x_2_2x_small_
 label: 'Ratio 3 x 2 (2x Small)'
 effects:
   82e2562d-debc-4250-8600-8e829ea94de6:
+    uuid: 82e2562d-debc-4250-8600-8e829ea94de6
     id: image_scale_and_crop
     weight: 1
     data:

@@ -1,0 +1,35 @@
+/**
+ * @file
+ * BEM block for Embedded entity.
+ *
+ */
+.embedded-entity {
+  margin: $spacing-prose-half 0;
+  @include respond-to(desktop-and-up) {
+    margin: $spacing-prose-base 0;
+  }
+  &.align-left {
+    margin: em(4) 5% $spacing-base 0;
+    @include respond-to(tablet-large-and-up) {
+      width: 45%;
+      margin: em(8) 5% $spacing-prose-base 0;
+    }
+  }
+  &.align-right {
+    margin: em(4) 0 $spacing-base 5%;
+    @include respond-to(tablet-large-and-up) {
+      width: 45%;
+      margin: em(8) 0 $spacing-prose-base 5%;
+    }
+  }
+  &.align-left,
+  &.align-right {
+    .media--view-mode-half-width {
+      margin: 0;
+      @include respond-to(tablet-large-and-up) {
+        width: 100%;
+        margin: 0;
+      }
+    }
+  }
+}

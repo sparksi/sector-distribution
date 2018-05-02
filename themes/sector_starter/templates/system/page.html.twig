@@ -160,17 +160,14 @@
             {% endblock %}
           </div>
 
-          {# Sidebar #}
           {% if page.sidebar %}
             <aside class="site__sidebar">
               <span class="sr-only" id="sidebar-anchor">Sidebar anchor</span>
               <div class="site__sidebar-inner">
                 {# Sidebar #}
-                {% if page.sidebar %}
-                  {% block sidebar %}
-                    {{ page.sidebar }}
-                  {% endblock %}
-                {% endif %}
+                {% block sidebar %}
+                  {{ page.sidebar }}
+                {% endblock %}
               </div>
             </aside>
           {% endif %}

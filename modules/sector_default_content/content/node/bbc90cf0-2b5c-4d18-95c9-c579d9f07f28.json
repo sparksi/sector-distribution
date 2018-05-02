@@ -26,6 +26,14 @@
             {
                 "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
             }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_related_files": [
+            {
+                "href": "http:\/\/default\/file\/sample-file-pdf?_format=hal_json"
+            },
+            {
+                "href": "http:\/\/default\/file\/sample-file-docx?_format=hal_json"
+            }
         ]
     },
     "nid": [
@@ -40,7 +48,7 @@
     ],
     "vid": [
         {
-            "value": 3
+            "value": 35
         }
     ],
     "langcode": [
@@ -56,7 +64,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2017-11-01T00:56:33+00:00",
+            "value": "2018-04-19T04:04:05+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -73,7 +81,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ]
             }
@@ -90,7 +98,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "0749bb3c-3d4b-472f-976e-fc00b2d2264d"
+                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
                     }
                 ],
                 "lang": "und"
@@ -129,6 +137,38 @@
                     }
                 ]
             }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_related_files": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/file\/sample-file-pdf?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "84cd5448-d4db-4887-b41c-95838b9a357c"
+                    }
+                ]
+            },
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/file\/sample-file-docx?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/file"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "d6199420-0506-470a-8084-ddaf32ed7b05"
+                    }
+                ]
+            }
         ]
     },
     "status": [
@@ -152,7 +192,7 @@
     ],
     "changed": [
         {
-            "value": "2017-11-01T00:56:33+00:00",
+            "value": "2018-04-19T04:04:05+00:00",
             "lang": "und",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -183,7 +223,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Sector Standard pages | Base1 sector D8",
+                "title": "Sector Standard pages | Base3",
                 "description": "Sector supports a variety of Information Architecture principles - one is to organise your content hierarchical.\u00a0Hierarchical content is stored in pages.\u00a0The pages are organised in a menu tree.\u00a0"
             }
         }
@@ -191,15 +231,26 @@
     "path": [
         {
             "alias": "\/section\/sector-standard-page-sample",
-            "pid": 3,
+            "pid": 10,
             "langcode": "und",
             "lang": "und"
         }
     ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
     "body": [
         {
-            "value": "<p class=\"lead\">Sector supports a variety of Information Architecture principles - one is to organise your content hierarchical.&nbsp;Hierarchical content is stored in pages.&nbsp;The pages are organised in a menu tree.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample page is a node of the content type <em>Page<\/em> added in&nbsp;Level 2&nbsp;under Section A&nbsp;in the&nbsp;main menu. It&nbsp;is displayed using&nbsp;the Standard&nbsp;page <em>Page variant<\/em>.&nbsp;<\/p>\r\n<\/div>\r\n\r\n<p>Most hierarchical pages in your Sector site will use the Standard page variant and menus.&nbsp;&nbsp;<\/p>\r\n\r\n<p><strong>The concept works well with:<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>linear content structure and user movements (book like content, A to B to C)<\/li>\r\n\t<li>\u201clayered\u201d information architecture (information about information in promotional or introductory top layers).<\/li>\r\n<\/ul>\r\n\r\n<p><strong>Known limitations:<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.<\/li>\r\n\t<li>Hierarchical content assumes the principal of \u201cone page, one position\u201d. This often does not work in web context. But if the principle is broken, context is lost.<\/li>\r\n<\/ul>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">Sector supports a variety of Information Architecture principles - one is to organise your content hierarchical.&nbsp;Hierarchical content is stored in pages.&nbsp;The pages are organised in a menu tree.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample page is a node of the content type <em>Page<\/em> added in&nbsp;Level 2&nbsp;under Section A&nbsp;in the&nbsp;main menu. It&nbsp;is displayed using&nbsp;the Standard&nbsp;page <em>Page variant<\/em>.&nbsp;<\/p>\r\n<\/div>\r\n\r\n<p>Most hierarchical pages in your Sector site will use the Standard page variant and menus.&nbsp;&nbsp;<\/p>\r\n\r\n<p><strong>The concept works well with:<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>linear content structure and user movements (book like content, A to B to C)<\/li>\r\n\t<li>'layered'&nbsp;information architecture (information about information in promotional or introductory top layers).<\/li>\r\n<\/ul>\r\n\r\n<p><strong>Known limitations:<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.<\/li>\r\n\t<li>Hierarchical content assumes the principal of 'one page, one position'. This often does not work in web context. But if the principle is broken, context is lost.<\/li>\r\n<\/ul>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "full_html",
+            "processed": "<p class=\"lead\">Sector supports a variety of Information Architecture principles - one is to organise your content hierarchical.\u00a0Hierarchical content is stored in pages.\u00a0The pages are organised in a menu tree.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n<p>This\u00a0sample page is a node of the content type <em>Page<\/em> added in\u00a0Level 2\u00a0under Section A\u00a0in the\u00a0main menu. It\u00a0is displayed using\u00a0the Standard\u00a0page <em>Page variant<\/em>.\u00a0<\/p>\n<\/div>\n\n<p>Most hierarchical pages in your Sector site will use the Standard page variant and menus.\u00a0\u00a0<\/p>\n\n<p><strong>The concept works well with:<\/strong><\/p>\n\n<ul><li>linear content structure and user movements (book like content, A to B to C)<\/li>\n\t<li>'layered'\u00a0information architecture (information about information in promotional or introductory top layers).<\/li>\n<\/ul><p><strong>Known limitations:<\/strong><\/p>\n\n<ul><li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.<\/li>\n\t<li>Hierarchical content assumes the principal of 'one page, one position'. This often does not work in web context. But if the principle is broken, context is lost.<\/li>\n<\/ul><p>{Sample content}<\/p>\n",
             "summary": ""
         }
     ],
@@ -208,32 +259,20 @@
             "value": "2016-01-01"
         }
     ],
-    "field_related_external_url": [
+    "field_related_links": [
         {
-            "uri": "https:\/\/www.govt.nz\/about\/our-style-guide\/",
-            "title": "The Govt.nz style guide",
+            "uri": "entity:node\/4",
+            "title": "Content elements",
             "options": []
         },
         {
-            "uri": "https:\/\/www.gov.uk\/design-principles#ninth",
-            "title": "GOV.uk Design principles",
+            "uri": "http:\/\/sector.org.nz\/",
+            "title": "Sector.org.nz",
             "options": []
         },
         {
-            "uri": "https:\/\/en.wikipedia.org\/wiki\/Responsive_web_design",
-            "title": "Wikipedia \u2014 Responsive web design",
-            "options": []
-        },
-        {
-            "uri": "https:\/\/ia.net\/blog\/the-web-is-all-about-typography-period",
-            "title": "Web Design Is 95% Typography",
-            "options": []
-        }
-    ],
-    "field_related_internal_url": [
-        {
-            "uri": "internal:\/node\/5",
-            "title": "Content Elements",
+            "uri": "https:\/\/www.sector.org.nz\/documentation\/what-sector",
+            "title": "Sector online documentation",
             "options": []
         }
     ]
