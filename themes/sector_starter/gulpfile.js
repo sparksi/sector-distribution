@@ -59,7 +59,7 @@ const config = {
       outputStyle : 'compressed',
       sourceMaps : false
     },
-    includePaths : [],
+    includePaths : ['node_modules'],
     lint : {
       files: {
         include: 'scss/**/*.scss',
@@ -195,10 +195,20 @@ gulp.task('sass', () => {
 gulp.task('babel', () => {
   return gulp.src(`${config.js.src}*.js`)
     .pipe(babel({
-      presets: ['env']
-      })
-    )
-    .pipe(gulp.dest(config.js.dist))
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": [
+              ">0.25%",
+              "not ie 9",
+              "not op_mini all"
+            ]
+          }
+        }]
+      ]
+    })
+  )
+  .pipe(gulp.dest(config.js.dist))
 });
 
 /**
