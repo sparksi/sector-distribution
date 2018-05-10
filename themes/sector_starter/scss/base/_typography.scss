@@ -116,12 +116,23 @@ blockquote {
     color: $white;
     background-color: $gray-dark;
     border-left: none;
-    @include respond-to(wide-and-up) {
-      width: 400px;
-    }
+    @include font-smoothing;
     cite,
     a {
       color: $white;
+    }
+    a {
+      text-decoration: underline;
+      &:visited {
+        color: rgba($white,0.9);
+      }
+      &[href^="http://"],
+      &[href^="https://"],
+      &[rel*='external'] {
+        &:after {
+          @include sprite(icon--external-white);
+        }
+      }
     }
   }
   footer {
