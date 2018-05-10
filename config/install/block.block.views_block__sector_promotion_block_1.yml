@@ -2,10 +2,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - views.view.sector_view_information_tiles
+    - views.view.sector_promotion
   module:
     - block_class
-    - system
     - term_condition
     - views
   theme:
@@ -13,28 +12,25 @@ dependencies:
 third_party_settings:
   block_class:
     classes: has-margin-top-double
-id: views_block__sector_view_information_tiles_block_1
+id: views_block__sector_promotion_block_1
 theme: sector_starter
 region: content
-weight: -8
+weight: -9
 provider: null
-plugin: 'views_block:sector_view_information_tiles-block_1'
+plugin: 'views_block:sector_promotion-block_1'
 settings:
-  id: 'views_block:sector_view_information_tiles-block_1'
-  label: 'Information tiles'
+  id: 'views_block:sector_promotion-block_1'
+  label: 'Promotion tiles'
   provider: views
   label_display: visible
-  views_label: 'Information tiles'
+  views_label: 'Promotion tiles'
   items_per_page: none
 visibility:
   term:
     id: term
     negate: false
-    tid: null
+    tid:
+      -
+        target_id: '4'
     context_mapping:
       node: '@node.node_route_context:node'
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }

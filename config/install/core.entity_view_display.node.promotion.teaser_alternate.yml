@@ -1,0 +1,135 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser_alternate
+    - field.field.node.promotion.body
+    - field.field.node.promotion.field_featured_content
+    - field.field.node.promotion.field_promotion_type
+    - field.field.node.promotion.field_teaser
+    - image.style.ratio_16_x_9_small_
+    - node.type.promotion
+  module:
+    - ds
+    - field_formatter_filter
+    - field_group
+    - media
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class:
+            slat: slat
+            has-margin-top-base: has-margin-top-base
+          ds_content: {  }
+    regions:
+      ds_content:
+        - group_link
+        - field_teaser
+        - node_title
+        - body
+        - 'dynamic_token_field:node-link_title_label'
+    fields:
+      'dynamic_token_field:node-link_title_label':
+        plugin_id: 'dynamic_token_field:node-link_title_label'
+        weight: 5
+        label: hidden
+        formatter: default
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            classes:
+              - slat__read-more
+              - btn
+              - btn-default
+            lb-col: false
+      node_title:
+        plugin_id: node_title
+        weight: 3
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h3
+          class: 'slat__title h4'
+          link: false
+        ft:
+          id: reset
+          settings:
+            lb: ''
+  field_group:
+    group_link:
+      children:
+        - field_teaser
+        - node_title
+        - body
+        - 'dynamic_token_field:node-link_title_label'
+      parent_name: ''
+      weight: 1
+      format_type: link
+      format_settings:
+        id: ''
+        classes: slat__link
+        target: field_featured_content
+        custom_uri: ''
+        target_attribute: default
+      label: Link
+id: node.promotion.teaser_alternate
+targetEntityType: node
+bundle: promotion
+mode: teaser_alternate
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 4
+    settings:
+      trim_length: 600
+    third_party_settings:
+      field_formatter_filter:
+        format: teaser_display_text
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - slat__body
+            lb-col: false
+    region: ds_content
+  field_teaser:
+    weight: 2
+    label: hidden
+    settings:
+      image_style: ratio_16_x_9_small_
+      image_link: ''
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - slat__media
+              - responsive-ratio
+              - responsive-ratio--16-9
+            lb-col: false
+    type: media_thumbnail
+    region: ds_content
+hidden:
+  field_featured_content: true
+  field_promotion_type: true
+  links: true

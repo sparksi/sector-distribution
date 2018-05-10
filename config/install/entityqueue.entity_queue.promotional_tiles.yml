@@ -4,14 +4,15 @@ dependencies:
   module:
     - node
 id: promotional_tiles
-label: 'Promotional tiles'
+label: 'Promotion tiles'
 handler: simple
 handler_configuration: {  }
 entity_settings:
   target_type: node
   handler: 'default:node'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      promotion: promotion
     sort:
       field: _none
     auto_create: false
@@ -20,3 +21,4 @@ queue_settings:
   min_size: 0
   max_size: 3
   act_as_queue: false
+  reverse_in_admin: false

@@ -10,7 +10,7 @@ id: node.promotion.field_featured_content
 field_name: field_featured_content
 entity_type: node
 bundle: promotion
-label: 'Featured content'
+label: 'Promoted content'
 description: ''
 required: true
 translatable: false

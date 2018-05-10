@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_last_updated
     - field.field.node.article.field_metatag
     - field.field.node.article.field_related_files
+    - field.field.node.article.field_related_links
     - field.field.node.article.field_tags
     - node.type.article
   module:
@@ -125,5 +126,6 @@ hidden:
   field_last_updated: true
   field_metatag: true
   field_related_files: true
+  field_related_links: true
   field_tags: true
   links: true

@@ -4,7 +4,7 @@ dependencies:
   module:
     - node
 id: information_tiles
-label: 'Information tiles2'
+label: 'Information tiles'
 handler: simple
 handler_configuration: {  }
 entity_settings:
@@ -20,3 +20,4 @@ queue_settings:
   min_size: 3
   max_size: 12
   act_as_queue: false
+  reverse_in_admin: false

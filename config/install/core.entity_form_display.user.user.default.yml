@@ -4,8 +4,10 @@ dependencies:
   config:
     - field.field.user.user.field_last_password_reset
     - field.field.user.user.field_password_expiration
+    - field.field.user.user.user_picture
   module:
     - datetime
+    - path
     - user
 id: user.user.default
 targetEntityType: user
@@ -31,7 +33,14 @@ content:
   language:
     weight: 0
     region: content
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   timezone:
     weight: 6
     region: content
-hidden: {  }
+hidden:
+  user_picture: true

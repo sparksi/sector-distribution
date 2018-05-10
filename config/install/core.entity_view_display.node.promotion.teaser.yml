@@ -1,11 +1,12 @@
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.promotion.body
     - field.field.node.promotion.field_featured_content
     - field.field.node.promotion.field_promotion_type
+    - field.field.node.promotion.field_teaser
     - node.type.promotion
   module:
     - ds
@@ -83,4 +84,5 @@ content:
 hidden:
   field_featured_content: true
   field_promotion_type: true
+  field_teaser: true
   links: true

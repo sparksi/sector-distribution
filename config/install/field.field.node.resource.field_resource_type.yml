@@ -9,7 +9,7 @@ id: node.resource.field_resource_type
 field_name: field_resource_type
 entity_type: node
 bundle: resource
-label: 'Resource type'
+label: 'Resource category'
 description: ''
 required: true
 translatable: true
