@@ -8,28 +8,38 @@
   @include respond-to(desktop-and-up) {
     margin: $spacing-prose-base 0;
   }
-  &.align-left {
-    margin: em(4) 5% $spacing-base 0;
-    @include respond-to(tablet-large-and-up) {
-      width: 45%;
-      margin: em(8) 5% $spacing-prose-base 0;
-    }
-  }
-  &.align-right {
-    margin: em(4) 0 $spacing-base 5%;
-    @include respond-to(tablet-large-and-up) {
-      width: 45%;
-      margin: em(8) 0 $spacing-prose-base 5%;
-    }
-  }
   &.align-left,
   &.align-right {
+    width: 100%;
+    @include respond-to(tablet-and-up) {
+      max-width: 210px;
+    }
+    @include respond-to(tablet-large-and-up) {
+      max-width: none;
+    }
     .media--view-mode-half-width {
       margin: 0;
       @include respond-to(tablet-large-and-up) {
         width: 100%;
         margin: 0;
       }
+    }
+  }
+  &.align-left {
+    @include respond-to(tablet-and-up) {
+      margin: em(8) 5% $spacing-prose-base 0;
+    }
+    @include respond-to(tablet-large-and-up) {
+      width: 45%;
+    }
+  }
+  &.align-right {
+    @extend %has-offset-right;
+    @include respond-to(tablet-and-up) {
+      margin: em(8) 0 $spacing-prose-base 5%;
+    }
+    @include respond-to(tablet-large-and-up) {
+      width: 45%;
     }
   }
 }
