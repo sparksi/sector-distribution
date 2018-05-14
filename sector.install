@@ -48,6 +48,7 @@ function _create_entityqueues() {
   $queue_storage = \Drupal::entityManager()->getStorage('entity_subqueue');
   $informationalQueue = $queue_storage->load('information_tiles');
   $promotionalLinksQueue = $queue_storage->load('promotional_links');
+  $promotionalTilesQueue = $queue_storage->load('promotional_tiles');
   $InformationTileEntityIds = array(
     '8',
     '11',
@@ -60,6 +61,11 @@ function _create_entityqueues() {
     '7',
     '11',
     '19',
+  );
+  $promotionalTilesEntityIds = array(
+    '23',
+    '24',
+    '25',
   );
   $items = array();
 
@@ -78,6 +84,14 @@ function _create_entityqueues() {
   }
   $promotionalLinksQueue->set('items', $items);
   $promotionalLinksQueue->save();
+  $items = array();
+  foreach ($promotionalTilesEntityIds as $id) {
+    $node_storage = \Drupal::entityManager()->getStorage('node');
+    $node = $node_storage->load($id);
+    $items[] = $node;
+  }
+  $promotionalTilesQueue->set('items', $items);
+  $promotionalTilesQueue->save();
 }
 
 /**
