@@ -3,14 +3,17 @@ status: true
 dependencies:
   module:
     - menu_ui
+    - wysiwyg_template
 third_party_settings:
   menu_ui:
     available_menus: {  }
     parent: ''
+  wysiwyg_template:
+    default_template: ''
 name: Promotion
 type: promotion
-description: 'Use <em>Promotion</em> to create rich, promotional, supporting content elements for display on home or landing pages. (No single node display.) '
+description: 'Use <em>Promotion</em> to create promotional and supporting content elements for display throughout your site.'
 help: ''
 new_revision: true
-preview_mode: 1
+preview_mode: 0
 display_submitted: false

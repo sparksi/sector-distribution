@@ -16,7 +16,7 @@ third_party_settings:
 id: contentfield_4
 theme: sector_starter
 region: post_content
-weight: -15
+weight: -12
 provider: null
 plugin: 'fieldblock:node'
 settings:

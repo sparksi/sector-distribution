@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.page.field_metatag
     - field.field.node.page.field_page_variant
     - field.field.node.page.field_related_files
+    - field.field.node.page.field_related_links
     - field.field.node.page.field_subtitle
     - field.field.node.page.field_teaser
     - node.type.page
@@ -86,6 +87,7 @@ hidden:
   field_metatag: true
   field_page_variant: true
   field_related_files: true
+  field_related_links: true
   field_subtitle: true
   field_teaser: true
   links: true

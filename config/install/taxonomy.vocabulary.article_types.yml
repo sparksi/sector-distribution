@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-name: 'Article types'
+name: 'Article category'
 vid: article_types
 description: 'Used to sort views and searches by type and to target CSS rules to a specific group of articles.'
 hierarchy: 0

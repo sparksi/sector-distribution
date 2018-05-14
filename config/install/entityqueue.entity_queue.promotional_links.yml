@@ -4,7 +4,7 @@ dependencies:
   module:
     - node
 id: promotional_links
-label: 'Promotional links'
+label: 'Popular links'
 handler: simple
 handler_configuration: {  }
 entity_settings:
@@ -20,3 +20,4 @@ queue_settings:
   min_size: 6
   max_size: 9
   act_as_queue: false
+  reverse_in_admin: false

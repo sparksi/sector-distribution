@@ -13,22 +13,19 @@
   &.pull-right {
     width: 100%;
     @include respond-to(tablet-large-and-up) {
-      width: 50%;
-    }
-    @include respond-to(wide-and-up) {
-      width: auto;
+      width: 45%;
     }
   }
   &.pull-left {
-    margin: em(4) 0 $spacing-base 0;
-    @include respond-to(tablet-and-up) {
-      margin: em(8) $spacing-prose-double $spacing-prose-base 0;
+    margin: em(4) 5% $spacing-base 0;
+    @include respond-to(tablet-large-and-up) {
+      margin: em(8) 5% $spacing-prose-base 0;
     }
   }
   &.pull-right {
-    margin: em(4) 0 $spacing-base 0;
-    @include respond-to(tablet-and-up) {
-      margin: em(8) 0 $spacing-prose-base $spacing-prose-double;
+    margin: em(4) 0 $spacing-base 5%;
+    @include respond-to(tablet-large-and-up) {
+      margin: em(8) 0 $spacing-prose-base 5%;
     }
   }
   blockquote {

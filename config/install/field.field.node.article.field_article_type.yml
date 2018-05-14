@@ -9,7 +9,7 @@ id: node.article.field_article_type
 field_name: field_article_type
 entity_type: node
 bundle: article
-label: 'Article type'
+label: 'Article category'
 description: ''
 required: true
 translatable: true

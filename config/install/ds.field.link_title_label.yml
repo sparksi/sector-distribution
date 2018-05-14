@@ -1,11 +1,11 @@
 id: link_title_label
 label: 'Link title label'
-ui_limit: ''
+ui_limit: 'promotion|*'
 properties:
   content:
-    value: '[block_content:field_featured_content:title]'
-    format: teaser_display_text
+    value: "[node:field_featured_content:title]\r\n"
+    format: full_html
 type: token
 type_label: 'Token field'
 entities:
-  block_content: block_content
+  node: node

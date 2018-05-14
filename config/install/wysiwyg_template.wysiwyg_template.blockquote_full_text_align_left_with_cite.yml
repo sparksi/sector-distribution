@@ -5,7 +5,7 @@ id: blockquote_full_text_align_left_with_cite
 label: 'Blockquote - Full. Text align left with cite'
 description: 'Full column blockquote with text aligned left with cite'
 body:
-  value: "<blockquote>\r\n<p>The content of a blockquote element must include block-level elements such as headings, lists, or paragraphs. They can also have an optional attribute cite.</p>\r\n<footer><cite>A cite defines an in-line citation or reference to another source</cite></footer>\r\n</blockquote>"
+  value: "<blockquote>\r\n<p>Sector block quotes via templates&nbsp;allow you to easily add&nbsp;attribute citation.</p>\r\n\r\n<footer><cite>An inline citation (in HTML called a <em>cite</em>) can reference the <a href=\"https://www.sector.org.nz/documentation/sector-wysiwyg-templates\">source of a quote</a></cite></footer>\r\n</blockquote>\r\n"
   format: full_html
 weight: null
 node_types: {  }

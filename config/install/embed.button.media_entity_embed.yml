@@ -1,12 +1,12 @@
 langcode: en
 status: true
 dependencies:
-  module:
-    - entity_embed
-    - media
   config:
     - media.type.file
     - media.type.image
+  module:
+    - entity_embed
+    - media
 label: 'Media Entity Embed'
 id: media_entity_embed
 type_id: entity

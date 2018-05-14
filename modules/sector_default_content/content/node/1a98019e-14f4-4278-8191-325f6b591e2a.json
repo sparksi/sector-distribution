@@ -17,6 +17,11 @@
                 "lang": "und"
             }
         ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_auto_contextual_content": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/26?_format=hal_json"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_banner": [
             {
                 "href": "http:\/\/default\/image\/sample-image-landscape?_format=hal_json"
@@ -40,7 +45,7 @@
     ],
     "vid": [
         {
-            "value": 27
+            "value": 58
         }
     ],
     "langcode": [
@@ -56,7 +61,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-04-19T02:19:55+00:00",
+            "value": "2018-05-10T01:00:14+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -73,7 +78,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "6c76b983-fb51-4799-9629-7233f2c4b77c"
                     }
                 ]
             }
@@ -90,10 +95,27 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "6c76b983-fb51-4799-9629-7233f2c4b77c"
                     }
                 ],
                 "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_auto_contextual_content": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/26?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/automated_contextual_content"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "c37defa1-f9c9-4576-b62c-fe07323ca436"
+                    }
+                ]
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_banner": [
@@ -152,7 +174,7 @@
     ],
     "changed": [
         {
-            "value": "2018-04-19T02:19:55+00:00",
+            "value": "2018-05-10T01:00:14+00:00",
             "lang": "und",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -183,7 +205,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Sector Section entry pages | Base3",
+                "title": "Sector Section entry pages | Base2",
                 "description": "Sector's simple\u00a0layout templates use\u00a0sitebuilder tools\u00a0and\u00a0Drupal taxonomies\u00a0to keep displays\u00a0modular and consistent across your site.\u00a0"
             }
         }

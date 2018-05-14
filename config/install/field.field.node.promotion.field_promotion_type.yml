@@ -9,9 +9,9 @@ id: node.promotion.field_promotion_type
 field_name: field_promotion_type
 entity_type: node
 bundle: promotion
-label: 'Promotion type'
+label: 'Promotion category'
 description: ''
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''

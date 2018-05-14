@@ -27,7 +27,7 @@
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
             {
-                "href": "http:\/\/default\/taxonomy\/term\/4?_format=hal_json"
+                "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
             }
         ]
     },
@@ -43,7 +43,7 @@
     ],
     "vid": [
         {
-            "value": 11
+            "value": 62
         }
     ],
     "langcode": [
@@ -59,7 +59,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2017-11-01T01:50:30+00:00",
+            "value": "2018-05-13T23:27:19+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -76,7 +76,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "17b949d8-5d39-4411-a009-d5b9d8459d75"
                     }
                 ]
             }
@@ -93,7 +93,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "17b949d8-5d39-4411-a009-d5b9d8459d75"
                     }
                 ],
                 "lang": "und"
@@ -135,7 +135,7 @@
             {
                 "_links": {
                     "self": {
-                        "href": "http:\/\/default\/taxonomy\/term\/4?_format=hal_json"
+                        "href": "http:\/\/default\/taxonomy\/term\/6?_format=hal_json"
                     },
                     "type": {
                         "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/page_variants"
@@ -143,7 +143,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "61cfac98-8d22-416a-bcbe-7a1a83904b67"
+                        "value": "fd9a1a20-c2a0-454b-8b57-b2981e3affc2"
                     }
                 ]
             }
@@ -170,7 +170,7 @@
     ],
     "changed": [
         {
-            "value": "2017-11-01T01:50:30+00:00",
+            "value": "2018-05-13T23:27:19+00:00",
             "lang": "und",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -214,9 +214,19 @@
             "lang": "und"
         }
     ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ],
     "body": [
         {
-            "value": "<p class=\"lead\">Next to the Page variants Sector introduces Page content settings to provide further display options per node.&nbsp;As the Page variants,&nbsp;Page content settings are defined using&nbsp;Drupal taxonomies&nbsp;and Drupal&nbsp;context condition.<\/p>\r\n\r\n<p>So while your pages are grouped in Section entry pages and Standard&nbsp;pages, you can hide the sidebar on&nbsp;either variant - like on this sample page.&nbsp;Another usage is as sort citeria in Drupal Views, for example in Drupal Search API Search views via&nbsp;&#39;Hide from search results&#39; (optional extention).&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">Next to the Page variants Sector introduces Page content settings to provide further display options per node.&nbsp;As the Page variants,&nbsp;Page content settings are defined using&nbsp;Drupal taxonomies&nbsp;and Drupal&nbsp;context condition.<\/p>\r\n\r\n<p>So while your pages are grouped in Section entry pages and Standard&nbsp;pages, you can hide the sidebar on&nbsp;either variant - like on this sample page.&nbsp;Another usage is as sort citeria in Drupal Views, for example in Drupal Search API Search views via&nbsp;'Hide from search results' (optional extention).&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
             "processed": "<p class=\"lead\">Next to the Page variants Sector introduces Page content settings to provide further display options per node.\u00a0As the Page variants,\u00a0Page content settings are defined using\u00a0Drupal taxonomies\u00a0and Drupal\u00a0context condition.<\/p>\n\n<p>So while your pages are grouped in Section entry pages and Standard\u00a0pages, you can hide the sidebar on\u00a0either variant - like on this sample page.\u00a0Another usage is as sort citeria in Drupal Views, for example in Drupal Search API Search views via\u00a0'Hide from search results' (optional extention).\u00a0<\/p>\n\n<p>{Sample content}<\/p>",
             "summary": ""

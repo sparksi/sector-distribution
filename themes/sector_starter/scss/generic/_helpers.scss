@@ -381,4 +381,17 @@
     color: rgba($white,0.9);
     @include font-smoothing;
   }
+  a {
+    text-decoration: underline;
+    &:visited {
+      color: rgba($white,0.9);
+    }
+    &[href^="http://"],
+    &[href^="https://"],
+    &[rel*='external'] {
+      &:after {
+        @include sprite(icon--external-white);
+      }
+    }
+  }
 }
