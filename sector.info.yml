@@ -92,7 +92,7 @@ dependencies:
  - wysiwyg_template
  - default_content
  - entity_browser_entity_form
-
+ - views_menu_children_filter
 
 themes:
  - bootstrap
