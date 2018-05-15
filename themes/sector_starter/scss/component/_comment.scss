@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Extend Drupal's comment class
+ */
+.comment-delete,
+.comment-edit,
+.comment-reply {
+  @extend %has-margin-top-half;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.comment-form {
+  .form-group {
+    @extend %has-margin-top-base;
+  }
+}
