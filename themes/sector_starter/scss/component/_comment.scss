@@ -15,3 +15,22 @@
     @extend %has-margin-top-base;
   }
 }
+
+.comment__link-to-anchor {
+  display: none;
+  font-size: 14px;
+  &:before {
+    content: '';
+    vertical-align: bottom;
+    font-size: 18px;
+    @include sprite(icon--paper-clip);
+  }
+}
+
+.comment {
+  &:hover {
+    .comment__link-to-anchor {
+      display: inline-block;
+    }
+  }
+}

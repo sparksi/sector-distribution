@@ -137,3 +137,11 @@
     display: inline-block;
   }
 }
+
+.promotion--blog-archive {
+  .view-content {
+    > ul {
+      @extend .list-unstyled;
+    }
+  }
+}
