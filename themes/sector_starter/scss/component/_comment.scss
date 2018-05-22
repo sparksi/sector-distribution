@@ -4,21 +4,45 @@
  */
 .comment-delete,
 .comment-edit,
-.comment-reply {
+.comment-reply,
+.comment-approve {
   @extend %has-margin-top-half;
-  font-size: 16px;
-  font-weight: 600;
+  .list-inline & {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+  > a {
+    font-size: 16px;
+    font-family: $font-family-monospace;
+    font-weight: 700;
+    color: $brand-warning;
+    @include font-smoothing;
+  }
 }
 
 .comment-form {
   .form-group {
     @extend %has-margin-top-base;
   }
+  .form-item-field-comment-plain-0-value {
+    > label {
+      display: none;
+    }
+  }
+  [data-drupal-selector="edit-actions"] {
+    .button--primary {
+      @extend .btn-primary;
+    }
+  }
 }
 
 .comment__link-to-anchor {
-  display: none;
   font-size: 14px;
+  @include respond-to(desktop-and-up) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-out;
+  }
   &:before {
     content: '';
     vertical-align: bottom;
@@ -30,7 +54,20 @@
 .comment {
   &:hover {
     .comment__link-to-anchor {
-      display: inline-block;
+      @include respond-to(desktop-and-up) {
+        display: inline-block;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+[data-drupal-selector="comment-blog-post-comment-delete-form"] {
+  [data-drupal-selector="edit-actions"] {
+    @extend %has-margin-top-base;
+    > a {
+      margin-left: 20px;
     }
   }
 }
