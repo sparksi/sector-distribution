@@ -36,3 +36,11 @@ fonts:
   css:
     theme:
       https://fonts.googleapis.com/css?family=Roboto:700: { type: external }
+
+
+comments:
+  version: "1.0.x"
+  js:
+    js/dist/comments.behaviors.js: {}
+  dependencies:
+    - core/jquery
