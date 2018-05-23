@@ -12,22 +12,19 @@
     padding-left: 0;
   }
   > a {
-    font-size: 16px;
-    font-family: $font-family-monospace;
-    font-weight: 700;
-    color: $brand-warning;
-    @include font-smoothing;
+    .user-logged-in & {
+      font-size: 16px;
+      font-family: $font-family-monospace;
+      font-weight: 700;
+      color: $brand-warning;
+      @include font-smoothing;
+    }
   }
 }
 
 .comment-form {
   .form-group {
     @extend %has-margin-top-base;
-  }
-  .form-item-field-comment-plain-0-value {
-    > label {
-      display: none;
-    }
   }
   [data-drupal-selector="edit-actions"] {
     .button--primary {
@@ -60,6 +57,9 @@
         opacity: 1;
       }
     }
+  }
+  .list-inline {
+    margin-left: 0;
   }
 }
 
