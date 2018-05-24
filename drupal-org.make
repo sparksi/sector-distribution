@@ -33,6 +33,7 @@ projects[facets][type] = module
 projects[facets][version] = 1.0-beta2
 projects[field_delimiter][type] = module
 projects[field_delimiter][version] = 1.0
+projects[field_delimiter][patch][] = "https://www.drupal.org/files/issues/field-deleimiter-undefined-2926377.patch"
 projects[field_formatter_filter][type] = module
 projects[field_formatter_filter][version] = 1.0
 projects[field_group][type] = module
