@@ -98,12 +98,12 @@ content:
           id: default
           settings:
             lb: ''
+            lb-col: true
             classes:
               - slat__date
               - slat__term
               - inline-block
               - has-margin-top-half
-            lb-col: false
   field_resource_type:
     type: entity_reference_label
     weight: 1

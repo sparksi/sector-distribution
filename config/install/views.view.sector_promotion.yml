@@ -5,13 +5,9 @@ dependencies:
     - core.entity_view_mode.node.teaser_alternate
     - entityqueue.entity_queue.promotional_tiles
     - node.type.promotion
-    - taxonomy.vocabulary.promotion_type
-  content:
-    - 'taxonomy_term:promotion_type:a785ceef-9c7c-4c2a-aee7-625fd9fe01d6'
   module:
     - entityqueue
     - node
-    - taxonomy
     - user
 id: sector_promotion
 label: 'Sector promotion'
@@ -252,7 +248,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -272,7 +267,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:

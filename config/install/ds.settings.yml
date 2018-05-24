@@ -71,4 +71,5 @@ classes:
     - text-center
     - text-center-wide-and-up
     - has-line-height-prose
+    - has-font-weight-600
 use_field_names: true
