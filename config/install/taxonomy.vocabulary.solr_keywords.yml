@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Solr keywords'
-vid: solr_keywords
-description: ''
-hierarchy: 0
-weight: 0
