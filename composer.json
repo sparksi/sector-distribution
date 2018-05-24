@@ -28,22 +28,24 @@
         "drupal/better_normalizers": "1.0-beta3",
         "drupal/block_class": "1.0-alpha1",
         "drupal/bootstrap": "3.10",
+        "drupal/captcha": "1.0-beta1",
         "drupal/config_update": "1.5",
         "drupal/core": "8.5.3",
         "drupal/ctools": "3.0",
         "drupal/default_content": "1.0-alpha7",
         "drupal/devel": "1.2",
         "drupal/ds": "3.1",
-	"drupal/embed": "1.0",
-	"drupal/entity_embed": "1.0-beta2",
+        "drupal/embed": "1.0",
+        "drupal/entity_embed": "1.0-beta2",
         "drupal/entityqueue": "1.0-alpha7",
         "drupal/facets": "1.0-beta2",
+        "drupal/field_delimiter": "1.0",
         "drupal/field_formatter_filter": "1.0",
         "drupal/field_group": "1.0",
         "drupal/field_group_link": "1.0-rc3",
         "drupal/fieldblock": "2.0-alpha1",
         "drupal/google_analytics": "2.2",
-	"drupal/inline_entity_form": "1.0-beta1",
+        "drupal/inline_entity_form": "1.0-beta1",
         "drupal/linkit": "5.0-beta6",
         "drupal/media_entity_browser": "2.0-alpha1",
         "drupal/menu_block": "1.4",
@@ -51,12 +53,13 @@
         "drupal/password_policy": "3.0-alpha4",
         "drupal/pathauto": "1.0",
         "drupal/rabbit_hole": "1.0-beta4",
+        "drupal/recaptcha": "2.3",
         "drupal/recreate_block_content": "1.0",
         "drupal/term_condition": "1.1",
         "drupal/token": "1.1",
         "drupal/views_menu_children_filter": "1.0-beta2",
-        "drupal/xmlsitemap": "1.0-alpha2",
-        "drupal/wysiwyg_template": "2.0-beta1"
+        "drupal/wysiwyg_template": "2.0-beta1",
+        "drupal/xmlsitemap": "1.0-alpha2"
     },
     "replace": {
       "ckeditor/templates": "*"
@@ -118,6 +121,9 @@
             },
             "drupal/core": {
                 "Profile provided configuration entities can have unmeetable dependencies": "https://www.drupal.org/files/issues/2922417-2.patch"
+            },
+            "drupal/field_delimiter": {
+                "Unfined index fix": "https://www.drupal.org/files/issues/field-deleimiter-undefined-2926377.patch"
             }
         }
     }
