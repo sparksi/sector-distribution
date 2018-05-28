@@ -241,7 +241,9 @@ gulp.task('watch', () => {
   gulp.watch(`${config.paths.styles.sass}**/*.{scss,sass}`).on('change', function(event) {
     let path = event.path.replace(process.cwd(), '..');
     log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type} , recompiling...`);
-    
+
+    environment = 'dev';
+
     runSequence(
       'sass'
     );
@@ -251,7 +253,7 @@ gulp.task('watch', () => {
   gulp.watch(`${config.paths.sprite.src}*.svg`).on('change', (event) => {
     let path = event.path.replace(process.cwd(), '..');
     log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, rebuilding sprite...`);
-    
+
     runSequence(
       'svgSprite',
       'copySpriteMixins'
@@ -261,7 +263,7 @@ gulp.task('watch', () => {
   gulp.watch(`${config.js.src}*.js`).on('change', (event) => {
     let path = event.path.replace(process.cwd(), '..');
     log(chalk`File {bold.hex('${config.palette.primary}') ${path}} was ${event.type}, transpiling javascripts...`);
-    
+
     runSequence(
       'eslint',
       'babel'

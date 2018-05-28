@@ -4,7 +4,7 @@
  */
 .alert {
   margin-top: $spacing-base;
-  margin-bottom: 0;
+  margin-bottom: $spacing-base;
   border-radius:0;
   .close {
     line-height: 0.8em;
@@ -72,26 +72,19 @@
   }
 }
 
-// TO clean up (Tom)
-
-// .contextual-links-wrapper {
-//   a {
-//     &:focus {
-//       background-color: transparent;
-//       @include tab-focus;
-//     }
-//   }
-// }
-
-// a {
-//   &:focus {
-//     #admin-menu & {
-//       background-color: transparent;
-//       outline: none;
-//       outline-offset: 0;
-//     }
-//   }
-// }
+.captcha {
+  [data-toggle="collapse"] {
+    background-color: transparent;
+    outline: none;
+    outline-offset: 0;
+    &:focus {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
 
 /*
  * Unpublished node indicator, attached to full view mode of node

@@ -7,7 +7,7 @@
   padding: 6px 12px 6px 17px;
   opacity: 0;
   visibility: hidden;
-  transition:opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
   @extend .pull-right;
   @extend .btn;
   &:before {
@@ -17,8 +17,7 @@
     left: 4px;
     white-space: nowrap;
   }
-  .you-are-going-down &,
-  .no-js & {
+  .you-are-going-down & {
     visibility: visible;
     opacity: 1;
   }

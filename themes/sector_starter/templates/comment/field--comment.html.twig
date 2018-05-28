@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Overrides default (core) theme override for comment fields.
+ *
+ * Add classes to headings for aesthetic reasons
+ *
+ */
+#}
+<section{{ attributes }}>
+  {% if comments and not label_hidden %}
+    {{ title_prefix }}
+    <h2 class="has-margin-top-double h3"{{ title_attributes }}>{{ label }}</h2>
+    {{ title_suffix }}
+  {% endif %}
+
+  {{ comments }}
+
+  {% if comment_form %}
+    <h3 class="has-margin-top-double"{{ content_attributes }}>{{ 'Add new comment'|t }}</h3>
+    {{ comment_form }}
+  {% endif %}
+
+</section>

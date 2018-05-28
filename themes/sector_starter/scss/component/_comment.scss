@@ -1,0 +1,73 @@
+/**
+ * @file
+ * Extend Drupal's comment class
+ */
+.comment-delete,
+.comment-edit,
+.comment-reply,
+.comment-approve {
+  @extend %has-margin-top-half;
+  .list-inline & {
+    padding-right: 15px;
+    padding-left: 0;
+  }
+  > a {
+    .user-logged-in & {
+      font-size: 16px;
+      font-family: $font-family-monospace;
+      font-weight: 700;
+      color: $brand-warning;
+      @include font-smoothing;
+    }
+  }
+}
+
+.comment-form {
+  .form-group {
+    @extend %has-margin-top-base;
+  }
+  [data-drupal-selector="edit-actions"] {
+    .button--primary {
+      @extend .btn-primary;
+    }
+  }
+}
+
+.comment__link-to-anchor {
+  font-size: 14px;
+  @include respond-to(desktop-and-up) {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-out;
+  }
+  &:before {
+    content: '';
+    vertical-align: bottom;
+    font-size: 18px;
+    @include sprite(icon--paper-clip);
+  }
+}
+
+.comment {
+  &:hover {
+    .comment__link-to-anchor {
+      @include respond-to(desktop-and-up) {
+        display: inline-block;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  .list-inline {
+    margin-left: 0;
+  }
+}
+
+[data-drupal-selector="comment-blog-post-comment-delete-form"] {
+  [data-drupal-selector="edit-actions"] {
+    @extend %has-margin-top-base;
+    > a {
+      margin-left: 20px;
+    }
+  }
+}

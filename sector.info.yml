@@ -93,6 +93,8 @@ dependencies:
  - default_content
  - entity_browser_entity_form
  - views_menu_children_filter
+ - captcha
+ - field_delimiter
 
 themes:
  - bootstrap
