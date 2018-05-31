@@ -40,6 +40,15 @@ $brand-gray-light: #CCCCCC;
 $brand-gray-lighter: #DDDDDD;
 $brand-blue-gray: #111212;
 
+$brand-gray-b-lighter: #f6f7f8;
+
+$brand-blue-b-gray: #252526;
+
+
+// 4e5d78
+
+// d5d7dd (Borders/lines)
+
 @import 'sprite';
 
 $sprite: map-get($icons, sprite) !default;

@@ -12,7 +12,6 @@
   margin-bottom: 0;
   .hero & {
     .path-frontpage & {
-      color: $white;
       @include font-smoothing;
     }
   }

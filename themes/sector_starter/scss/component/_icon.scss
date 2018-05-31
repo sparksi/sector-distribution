@@ -7,7 +7,7 @@
   &:before {
     content: '';
     font-size: 16px;
-    @include sprite('icon--close-white');
+    @include sprite('icon--close-dark-grey');
   }
 }
 
@@ -15,14 +15,14 @@
   &:before {
     content: '';
     font-size: 16px;
-    @include sprite('icon--menu-white');
+    @include sprite('icon--menu-dark-grey');
   }
 }
 
 .icon--search {
   &:before {
     content: '';
-    font-size: 17px;
-    @include sprite('icon--search-white');
+    font-size: 18px;
+    @include sprite('icon--search-dark-grey');
   }
 }

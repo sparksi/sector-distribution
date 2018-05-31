@@ -116,13 +116,13 @@
   padding-top: 2px;
   width: 100%;
   @include respond-to(desktop-and-up) {
-    width: 60%;
+    width: 63%;
   }
   @include respond-to(wide-and-up) {
-    width: 65%;
+    width: 68%;
   }
   @include respond-to(mega-large-and-up) {
-    width: 68%;
+    width: 71%;
   }
   @extend %apply-flyout-menu-style;
   @include respond-to(tablet-large-and-down) {
@@ -155,7 +155,7 @@
         }
         &:hover {
           background-color: transparent;
-          color: rgba(255,255,255,0.8);
+          color: rgba($brand-blue-b-gray,0.8);
         }
       }
     }
@@ -178,19 +178,18 @@
       background-color: transparent;
       border-right: 1px solid $gray-darker;
       border-bottom: 1px solid $gray-darker;
-      color: $white;
+      color: $brand-blue-b-gray;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
       @include respond-to(desktop-and-up) {
-        font-weight: 600;
         border-right: none;
         border-bottom: none;
       }
       &:hover,
       &:focus {
         background-color: transparent;
-        color: rgba(255,255,255,0.8);
+        color: rgba($brand-blue-b-gray,0.8);
       }
     }
   }

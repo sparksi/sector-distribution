@@ -72,10 +72,10 @@
     margin-bottom: 0;
   }
   .btn {
-    background-color: $gray-darker;
-    border: 1px solid $black;
-    height: 43px;
-    width: 43px;
+    background-color: $brand-gray-b-lighter;
+    border: 1px solid #d5d7dd;
+    height: 54px;
+    width: 54px;
     padding: 0;
     position: relative;
     text-indent: -50000px;
@@ -88,19 +88,23 @@
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%) scale(1.5);
-      @include sprite(icon--search-white);
+      @include sprite(icon--search-dark-grey);
       @include font-smoothing;
-      font-size: 14px;
+      font-size: 13px;
     }
-    &:hover {
-      background-color: $brand-primary;
-      border: 1px solid $black;
-    }
+    &:hover,
+    &:active,
+    &:active:focus,
     &:focus {
+      background-color: darken($brand-gray-b-lighter,5%);
+      border: 1px solid #d5d7dd;
       box-shadow: none;
-      background-color: $black;
-      outline: 1px solid $black;
       outline-offset: 0;
+      outline: none;
+    }
+    &:focus,
+    &:active:focus {
+      border: 1px solid $black;
     }
   }
   .description {
@@ -111,12 +115,10 @@
 }
 
 .search--flyout {
-  background-color: $gray-dark;
-  padding: 15px;
   clear: both;
   display: none;
   @include respond-to(tablet-large-and-down) {
-    margin-top: $spacing-quarter;
+    margin-top: $spacing-half;
   }
   &.search-is-active {
     display: block;
@@ -127,8 +129,8 @@
     .js & {
       display: none;
       position: absolute;
-      top: -12px;
-      right: 45px;
+      top: -4px;
+      right: 51px;
       clear: none;
     }
   }
@@ -143,9 +145,10 @@
   .form-control {
     &.form-text,
     &.form-search {
-      background-color: $gray;
-      border: 1px solid $black;
+      background-color: $white;
+      border: 1px solid #d5d7dd;
       color: $gray-lighter;
+      height: 54px;
       &:focus {
         outline: none;
         outline-offset: 0;

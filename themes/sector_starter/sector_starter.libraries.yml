@@ -31,8 +31,8 @@ twbs.bootstrap:
 
 fonts:
   license:
-    name: Apache License
-    url: https://github.com/google/roboto/blob/master/LICENSE
+    name: OFL web version
+    url: http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL_web
   css:
     theme:
-      https://fonts.googleapis.com/css?family=Roboto:700: { type: external }
+      https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700: { type: external }

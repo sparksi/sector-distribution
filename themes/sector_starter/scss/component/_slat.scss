@@ -24,6 +24,7 @@
 
 .slat__title {
   a {
+    color: $brand-blue-b-gray;
     &:hover,
     &:focus {
       text-decoration: underline;
@@ -48,18 +49,7 @@
 }
 
 .slat__read-more {
-  margin-top: $spacing-half;
-  > a {
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-  }
-  &.btn-default {
-    > a {
-      color: $gray-dark;
-    }
-  }
+  
 }
 
 .slat__date {
@@ -94,7 +84,7 @@
   width: 100%;
   display: block;
   .slat__title {
-    color: $brand-primary;
+    color: $brand-blue-b-gray;
     transition: none;
   }
   .slat__body {
@@ -107,7 +97,7 @@
   &:focus {
     text-decoration: none;
     .slat__title {
-      color: lighten($brand-primary,15%);
+      color: $brand-blue-b-gray;
       text-decoration: underline;
       transition: all 0.05s ease-in;
     }
@@ -138,8 +128,8 @@
       &:after {
         font-size: 16px;
         content: '';
-        @include sprite(icon--external-dark-grey);
-        margin-left: 6px;
+        @include sprite(icon--external-blue);
+        margin-left: 2px;
         vertical-align: middle;
       }
     }

@@ -16,7 +16,7 @@ $gray-base:                 #000;
 $gray-light:                lighten($gray-base, 40%);
 // $gray-lighter:           lighten($gray-base, 93.5%) // #eee
 
-$brand-primary:         #005ea5;
+$brand-primary:         #204ad4;
 $brand-success:         #00823b;
 // $brand-info:            #5bc0de
 $brand-warning:         darken(#f0ad4e,10%);
@@ -44,11 +44,10 @@ $brand-warning:         darken(#f0ad4e,10%);
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-sans-serif-alt: 'roboto', Helvetica, Arial, sans-serif; // Font loaded via sector_starter.libraries.yml
+$font-family-sans-serif: 'Nunito Sans', Helvetica, Arial, sans-serif; // Nunito Sans Font loaded via sector_starter.libraries.yml
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace: "Courier New", monospace;
+$font-family-monospace: 'Courier New', monospace;
 // $font-family-base:        $font-family-sans-serif
 
 $font-size-base:          18px !default;
@@ -56,9 +55,9 @@ $font-size-large:         ceil(($font-size-base * 1.333));
 $font-size-small:         ceil(($font-size-base * 0.777));
 
 $font-size-h1:            floor(($font-size-base * 3.111)); // 56
-$font-size-h2:            floor(($font-size-base * 2.333)); // 42
-$font-size-h3:            ceil(($font-size-base * 1.667)); // 30
-$font-size-h4:            ceil(($font-size-base * 1.333)); // 24
+$font-size-h2:            floor(($font-size-base * 1.66)); // 30
+$font-size-h3:            ceil(($font-size-base * 1.333)); // 24
+$font-size-h4:            ceil(($font-size-base * 1.111)); // 20
 $font-size-h5:            $font-size-base;
 $font-size-h6:            ceil(($font-size-base * 0.777)); // 14
 

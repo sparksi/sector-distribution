@@ -44,7 +44,7 @@
 }
 
 .block-title {
-  @extend .h3;
+  @extend %has-heading-alternate;
 }
 
 .contextual-links {
@@ -53,7 +53,10 @@
 
 .page-header {
   border-bottom: none;
-  @extend .h1;
+  font-weight: 300;
+  margin-top: $line-height-computed;
+  margin-bottom: ($line-height-computed/2);
+  padding-bottom: 0;
 }
 
 /* Override Drupal date.css */

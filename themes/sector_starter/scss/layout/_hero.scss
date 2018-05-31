@@ -10,20 +10,12 @@
   .region-hero {
     @include make-md-column(12);
     .path-frontpage & {
-      @include make-md-column(10);
-      @include make-md-column-push(1);
-      text-align: center;
       margin-top: 3vw;
       margin-bottom: 16vw;
       @include respond-to(desktop-and-up) {
         margin-top: 13vh;
         margin-bottom: 17vh;
       }
-    }
-  }
-  .page-header {
-    .path-frontpage & {
-      color: $white;
     }
   }
 }
