@@ -85,7 +85,6 @@ html body.admin-ui-hide.admin-menu {margin-top: 0!important;}
     @extend .btn-sm;
     @extend .btn-primary;
     font-family: $font-family-sans-serif;
-    @include font-smoothing;
     background-color: #ab3131;
     padding: 14px 14px 13px;
     font-size: 9px;

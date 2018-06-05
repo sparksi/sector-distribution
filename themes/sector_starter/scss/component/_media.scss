@@ -108,7 +108,6 @@ $icon-offset: 54px;
     font-weight: 700;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    @include font-smoothing;
     &:focus {
       outline-offset: 0;
     }

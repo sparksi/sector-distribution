@@ -11,7 +11,6 @@
     padding: $spacing-quarter;
     &:focus {
       color: $white;
-      @include font-smoothing;
     }
   }
 }

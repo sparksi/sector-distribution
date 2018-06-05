@@ -279,7 +279,6 @@
     padding: $spacing-half 0;
     color: $text-color;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    @include font-smoothing;
     &:hover,
     &:focus {
       border-bottom: 1px solid rgba(0, 0, 0, 0.35);

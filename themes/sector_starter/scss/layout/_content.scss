@@ -3,16 +3,36 @@
  * BEM block for content.
  */
 .content {
-  padding-top: $spacing-base;
-  .path-frontpage & {
-    padding-top: 0;
-  }
-  @include respond-to(desktop-and-up) {
-    padding-top: $spacing-and-half;
-    .path-frontpage & {
-      padding-top: 0;
+  > .site__inner {
+    padding-top: $spacing-base;
+    margin-top: $spacing-base;
+    @include respond-to(desktop-and-up) {
+      padding-top: $spacing-double;
+      margin-top: $spacing-double;
+    }
+    @include respond-to(wide-and-up) {
+      padding-top: ($spacing-base*3);
+      margin-top: ($spacing-base*3);
+    }
+    position: relative;
+    &:before {
+      content: '';
+      height: 3px;
+      background-color: $brand-blue-b-gray;
+      position: absolute;
+      top: 0;
+      width: 100%;
     }
   }
+  // .path-frontpage & {
+  //   padding-top: 0;
+  // }
+  // @include respond-to(desktop-and-up) {
+  //   padding-top: $spacing-and-half;
+  //   .path-frontpage & {
+  //     padding-top: 0;
+  //   }
+  // }
   .region-content {
     .path-user & {
       @extend .row;

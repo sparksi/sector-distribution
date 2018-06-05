@@ -16,10 +16,8 @@
 .call-to-action--success,
 .call-to-action--primary {
   color: $white;
-  @include font-smoothing;
   p {
     color: $white;
-    @include font-smoothing;
   }
 }
 

@@ -54,7 +54,6 @@
   }
   .description {
     color: $gray-lighter;
-    @include font-smoothing;
   }
 }
 
@@ -65,7 +64,6 @@
     &.form-text,
     &.form-search {
       height: 43px;
-      @include font-smoothing;
     }
   }
   .form-group {
@@ -89,7 +87,6 @@
       left: 50%;
       transform: translateY(-50%) translateX(-50%) scale(1.5);
       @include sprite(icon--search-dark-grey);
-      @include font-smoothing;
       font-size: 13px;
     }
     &:hover,
@@ -108,7 +105,6 @@
     }
   }
   .description {
-    @include font-smoothing;
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -169,7 +165,6 @@
   padding: $spacing-base;
   margin: 0;
   .search-help-link {
-    @include font-smoothing;
     display: inline-block;
   }
 }

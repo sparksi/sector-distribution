@@ -2,10 +2,16 @@
  * @file
  * Global typography
  */
+html,
+body {
+  overflow-x: hidden;
+}
+
 body {
   font-size: $font-size-base;
   line-height: $line-height-base;
   font-weight: 400;
+  @include font-smoothing;
 }
 
 h1, .h1,
@@ -16,7 +22,6 @@ h5, .h5,
 h6, .h6 {
   font-weight: 700;
   color: $brand-blue-b-gray;
-  @include font-smoothing;
   margin: 0;
   > a {
     &:focus {
@@ -88,7 +93,6 @@ hr {
 }
 
 .lead {
-  font-weight: 400;
   margin-bottom: 0;
   font-size: floor(($font-size-base * 1.15));
   @include respond-to(tablet-and-up) {
@@ -116,7 +120,6 @@ blockquote {
     color: $white;
     background-color: $gray-dark;
     border-left: none;
-    @include font-smoothing;
     cite,
     a {
       color: $white;

@@ -16,7 +16,6 @@
   p {
     font-size: 16px;
     color: $brand-gray-light;
-    @include font-smoothing;
   }
   .field a:after {
     content:none;
@@ -27,19 +26,40 @@
 }
 
 .promotion--brand {
-  width: 70%;
+  .header & {
+    width: 70%;
+  }
   @include respond-to(tablet-and-up) {
-    width: 60%;
+    .header & {
+      width: 60%;
+    }
   }
   @include respond-to(desktop-and-up) {
-    width: 27%;
-    margin-top: 0;
+    .header & {
+      width: 27%;
+      margin-top: 0;
+    }
   }
   @include respond-to(wide-and-up) {
-    width: 22%;
+    .header & {
+      width: 22%;
+    }
   }
   @include respond-to(mega-large-and-up) {
-    width: 19%;
+    .header & {
+      width: 19%;
+    }
+  }
+  .footer-regions-wrapper & {
+    @include make-xs-column(12);
+    margin-top: $spacing-base;
+    @include respond-to(desktop-and-up) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: auto;
+      margin-top: 0;
+    }
   }
 }
 
@@ -111,14 +131,62 @@
   }
 }
 
+.promotion--information-tiles {
+  position: relative;
+  padding-top: $spacing-base;
+  padding-bottom: $spacing-base;
+  @include respond-to(desktop-and-up) {
+    padding-top: $spacing-double;
+    padding-bottom: $spacing-double;
+  }
+  @include respond-to(wide-and-up) {
+    padding-top: ($spacing-base*3);
+    padding-bottom: ($spacing-base*3);
+  }
+  &:after {
+    @include respond-to(tablet-and-up) {
+      content: '';
+      width: 100vw;
+      background-color: $brand-gray-b-lighter;
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      top: 0;
+    }
+  }
+}
+
 .promotion--news {
-  @include make-xs-column(12);
-  @include make-md-column(6);
+  width: 100%;
+  padding-left: $responsive-layout-gutter;
+  padding-right: $responsive-layout-gutter;
+  @include respond-to(desktop-and-up) {
+    width: 48%;
+  }
+  .more-link {
+    @extend %has-margin-top-and-half;
+    a {
+      @extend %action--more;
+    }
+  }
 }
 
 .promotion--resources {
-  @include make-xs-column(12);
-  @include make-md-column(6);
+  width: 100%;
+  padding-left: $responsive-layout-gutter;
+  padding-right: $responsive-layout-gutter;
+  @include respond-to(desktop-and-up) {
+    width: 48%;
+  }
+  .more-link {
+    @extend %has-margin-top-and-half;
+    a {
+      @extend %action--more;
+    }
+  }
 }
 
 .promotion--last-updated {

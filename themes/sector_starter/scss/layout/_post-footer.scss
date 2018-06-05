@@ -11,7 +11,7 @@
     padding: ($spacing-base*3) 0;
   }
   .site__row {
-    @include respond-to(wide-and-up) {
+    @include respond-to(desktop-and-up) {
       position: relative; // Create a positioning context
     }
   }

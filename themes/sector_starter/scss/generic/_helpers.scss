@@ -53,16 +53,6 @@
   */
 /*.list-unstyled {}*/
 
-/* More link */
-.more-link,
-%more-link {
-  font-size: 18px;
-  font-weight: 600;
-  &:focus {
-    outline-offset: 0;
-  }
-}
-
 /* Inline block helper */
 .inline-block {
   display: inline-block;
@@ -211,12 +201,12 @@
   padding-top: 1px;
   &:before {
     position: absolute;
-    top: -2px;
+    top: -1px;
     left: 0;
     content: '';
     width: 40px;
-    height: 2px;
-    background-color: $brand-border;
+    height: 1px;
+    background-color: $black;
   }
 }
 
@@ -386,7 +376,6 @@
   ul,
   ol {
     color: rgba($white,0.9);
-    @include font-smoothing;
   }
   a {
     text-decoration: underline;
