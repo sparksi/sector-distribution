@@ -17,6 +17,7 @@
   }
   &.navigation-is-open {
     display: block;
+    margin-top: 13px;
   }
   @include respond-to(tablet-large-and-down) {
     width: 100%;
@@ -113,10 +114,12 @@
 }
 
 .navigation--primary {
-  padding-top: 2px;
+  background-color: $gray-darker;
+  //padding-top: 2px;
   width: 100%;
   @include respond-to(desktop-and-up) {
     width: 63%;
+    background-color: transparent;
   }
   @include respond-to(wide-and-up) {
     width: 68%;
@@ -155,7 +158,10 @@
         }
         &:hover {
           background-color: transparent;
-          color: rgba($brand-blue-b-gray,0.8);
+          color: $white;
+          @include respond-to(desktop-and-up) {
+            color: rgba($brand-blue-b-gray,0.8);
+          }
         }
       }
     }
@@ -178,18 +184,22 @@
       background-color: transparent;
       border-right: 1px solid $gray-darker;
       border-bottom: 1px solid $gray-darker;
-      color: $brand-blue-b-gray;
+      color: $white;
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
       @include respond-to(desktop-and-up) {
         border-right: none;
         border-bottom: none;
+        color: $brand-blue-b-gray;
       }
       &:hover,
       &:focus {
         background-color: transparent;
-        color: rgba($brand-blue-b-gray,0.8);
+        color: $white;
+        @include respond-to(desktop-and-up) {
+          color: rgba($brand-blue-b-gray,0.8);
+        }
       }
     }
   }

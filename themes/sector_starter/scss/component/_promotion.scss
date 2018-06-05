@@ -28,6 +28,7 @@
 .promotion--brand {
   .header & {
     width: 70%;
+    margin-top: 5px;
   }
   @include respond-to(tablet-and-up) {
     .header & {

@@ -4,6 +4,7 @@
  */
 .content {
   > .site__inner {
+    position: relative;
     padding-top: $spacing-base;
     margin-top: $spacing-base;
     @include respond-to(desktop-and-up) {
@@ -14,7 +15,17 @@
       padding-top: ($spacing-base*3);
       margin-top: ($spacing-base*3);
     }
-    position: relative;
+    .path-frontpage & {
+      padding-top: 0;
+      @include respond-to(desktop-and-up) {
+        padding-top: 0;
+        margin-top: $spacing-and-half;
+      }
+      @include respond-to(wide-and-up) {
+        padding-top: 0;
+        margin-top: $spacing-and-half;
+      }
+    }
     &:before {
       content: '';
       height: 3px;
@@ -22,6 +33,9 @@
       position: absolute;
       top: 0;
       width: 100%;
+      .path-frontpage & {
+        display: none;
+      }
     }
   }
   // .path-frontpage & {

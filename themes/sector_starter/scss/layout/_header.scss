@@ -12,6 +12,12 @@
     padding-bottom: $spacing-base;
     position: relative;
   }
+  &.navigation-is-open {
+    padding-bottom: 0;
+    @include respond-to(desktop-and-up) {
+      padding-bottom: $spacing-base;
+    }
+  }
   .site__row {
     @include respond-to(desktop-and-up) {
       position: relative; // Create a positioning context

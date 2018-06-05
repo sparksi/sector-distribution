@@ -4,26 +4,26 @@
  */
 .action--back-to-top {
   position: relative;
-  padding: 6px 12px 6px 17px;
+  padding: 30px 10px 6px 10px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease-out;
   @extend .pull-right;
-  @extend .btn;
+  color: $text-color;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
   &:before {
-    content: '\2191';
+    content: '';
     position: absolute;
-    top: 4px;
-    left: 4px;
-    white-space: nowrap;
+    top: 6px;
+    left: 35px;
+    font-size: 18px;
+    @include sprite(arrow--chevron-up-dark-grey);
   }
   .you-are-going-down & {
     visibility: visible;
     opacity: 1;
-  }
-  &:hover,
-  &:active {
-    box-shadow: none;
   }
 }
 

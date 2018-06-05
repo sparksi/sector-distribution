@@ -180,6 +180,7 @@
       _flyout_menu_targets.toggle.toggleClass('active');
       _flyout_menu_targets.elem.each(function(){
         $(this).toggleClass("navigation-is-open");
+        $(".header").toggleClass("navigation-is-open");
       });
 
       // Close search
@@ -189,6 +190,7 @@
       _flyout_menu_targets.toggle.removeClass('active');
       _flyout_menu_targets.elem.each(function(){
         $(this).removeClass("navigation-is-open");
+        $(".header").removeClass("navigation-is-open");
       });
     }
   };

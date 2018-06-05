@@ -182,3 +182,12 @@ ol {
     }
   }
 }
+
+mark {
+  &.alternate {
+    color: #ef604d;
+    background-color: transparent;
+    background: transparent;
+    padding: 0;
+  }
+}

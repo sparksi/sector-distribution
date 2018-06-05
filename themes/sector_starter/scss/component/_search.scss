@@ -118,9 +118,15 @@
   }
   &.search-is-active {
     display: block;
+    padding-left: $responsive-layout-gutter;
+    padding-right: $responsive-layout-gutter;
+    @include respond-to(desktop-and-up) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   // only hide for desktop
-  @include respond-to(desktop-and-up){
+  @include respond-to(desktop-and-up) {
     width: 64%;
     .js & {
       display: none;
