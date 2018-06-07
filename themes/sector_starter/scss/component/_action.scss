@@ -20,6 +20,15 @@
     left: 35px;
     font-size: 18px;
     @include sprite(arrow--chevron-up-dark-grey);
+    transition: all 0.175s ease-in;
+  }
+  &:hover,
+  &:focus {
+    color: $text-color;
+    text-decoration: none;
+    &:before {
+      margin-top: -5px;
+    }
   }
   .you-are-going-down & {
     visibility: visible;
@@ -33,14 +42,28 @@
   position: relative;
   font-weight: 700;
   font-size: 15px;
-  &:after {
+  &:before {
     content: '';
-    width: 80%;
+    width: 70%;
     height: 1px;
     position: absolute;
     bottom: -3px;
     left: 0;
     background-color: #4f89e1;
+    transition: width 0.175s ease-in;
+  }
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    &:before {
+      width: 100%;
+    }
+  }
+  &:visited {
+    color: #4d6edd;
+    &:before {
+      background-color: #4d6edd;
+    }
   }
 }
 

@@ -12,7 +12,7 @@
   }
   .site__row {
     @include respond-to(desktop-and-up) {
-      position: relative; // Create a positioning context
+      position: relative;
     }
   }
 }

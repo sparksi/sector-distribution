@@ -84,8 +84,8 @@ html body.admin-ui-hide.admin-menu {margin-top: 0!important;}
     @extend .btn;
     @extend .btn-sm;
     @extend .btn-primary;
+    border-radius: 0;
     font-family: $font-family-sans-serif;
-    background-color: #ab3131;
     padding: 14px 14px 13px;
     font-size: 9px;
     position: fixed;
@@ -96,17 +96,13 @@ html body.admin-ui-hide.admin-menu {margin-top: 0!important;}
     z-index: 9999;
     font-weight: 700;
     line-height: 1;
-    &:hover,
-    &:focus {
-      background-color: darken(#ab3131,10%);
-    }
     &:focus {
       outline: none;
     }
   }
   &.ui-is-hidden {
     button {
-      @extend .btn-info;
+      @extend .btn-danger;
     }
   }
 }

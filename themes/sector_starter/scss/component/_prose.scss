@@ -55,7 +55,7 @@
       margin-top: ($line-height-prose-computed/2);
     }
     blockquote {
-      padding: ($line-height-prose-computed / 2) $line-height-prose-computed;
+      padding: ($line-height-prose-computed / 2) $spacing-and-half;
       margin: 0 0 $line-height-prose-computed;
       line-height: $line-height-base;
       &.featured {

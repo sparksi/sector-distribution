@@ -30,24 +30,17 @@ $white: #ffffff;
 $black: #000000;
 
 /* Brand visited & focused styles */
-$brand-visited: #4c2c92;
-$brand-focused: rgba(255, 255, 0, 0.5);
+//$brand-visited: #4c2c92;
+$brand-focused: rgba($brand-danger,0.2);
 
 /* Brand border */
-$brand-border: #e2e2e2;
+$brand-border: #d5d7dd;
 
 $brand-gray-light: #CCCCCC;
 $brand-gray-lighter: #DDDDDD;
-$brand-blue-gray: #111212;
-
-$brand-gray-b-lighter: #f6f7f8;
-
-$brand-blue-b-gray: #252526;
-
-
-// 4e5d78
-
-// d5d7dd (Borders/lines)
+$brand-gray-lightest: #f6f7f8;
+$brand-blue-gray: #252526;
+$brand-bluer-gray: #4e5d78;
 
 @import 'sprite';
 

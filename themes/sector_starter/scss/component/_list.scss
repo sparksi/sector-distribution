@@ -44,9 +44,14 @@
     > a {
       @extend .btn;
       @extend .btn-default;
+      border-radius: 0;
+      font-weight: 400;
       float: left;
       display: block;
       margin: 0 8px 8px 0;
+      @include respond-to(tablet-and-up) {
+        padding: 10px 15px;
+      }
     }
   }
 }

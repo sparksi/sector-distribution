@@ -11,6 +11,10 @@
   }
 }
 
+label {
+  font-size: 15px;
+}
+
 .form-control {
   height: 50px;
   border-radius:0;
@@ -19,8 +23,6 @@
     border: 1px solid $gray;
   }
 }
-
- /* Note: This list style requires a nested <a> */
 
 .select-wrapper {
   position: relative;
@@ -36,6 +38,7 @@
     pointer-events: none;
   }
 }
+
 .form-select {
   background-color: transparent;
   background-color: $white;
@@ -43,22 +46,10 @@
   padding-right: 32px;
   border: 1px solid rgba($black,0.4);
 }
+
 .form-select::-ms-expand {
   // Hide default select arrow from IE 10
   display: none;
-}
-
-.search-form {
-  .button {
-    margin-right: 10px;
-    padding: 12px 10px;
-    font-size: 16px;
-    margin-top: 0;
-  }
-}
-
-.search-help-link {
-  text-decoration: underline;
 }
 
 .description {

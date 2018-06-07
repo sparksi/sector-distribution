@@ -5,51 +5,36 @@
 .content {
   > .site__inner {
     position: relative;
-    padding-top: $spacing-base;
-    margin-top: $spacing-base;
+    padding-top: 0;
     @include respond-to(desktop-and-up) {
-      padding-top: $spacing-double;
-      margin-top: $spacing-double;
+      padding-top: 0;
+      margin-top: $spacing-and-half;
     }
     @include respond-to(wide-and-up) {
-      padding-top: ($spacing-base*3);
-      margin-top: ($spacing-base*3);
-    }
-    .path-frontpage & {
       padding-top: 0;
+      margin-top: $spacing-and-half;
+    }
+    .page-variant--section-entry-page & {
+      padding-top: $spacing-base;
+      margin-top: $spacing-base;
       @include respond-to(desktop-and-up) {
-        padding-top: 0;
-        margin-top: $spacing-and-half;
+        padding-top: $spacing-double;
+        margin-top: $spacing-double;
       }
       @include respond-to(wide-and-up) {
-        padding-top: 0;
-        margin-top: $spacing-and-half;
+        padding-top: ($spacing-base*3);
+        margin-top: ($spacing-base*3);
       }
     }
     &:before {
-      content: '';
-      height: 3px;
-      background-color: $brand-blue-b-gray;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      .path-frontpage & {
-        display: none;
+      .page-variant--section-entry-page & {
+        content: '';
+        height: 3px;
+        background-color: $brand-blue-gray;
+        position: absolute;
+        top: 0;
+        width: 100%;
       }
-    }
-  }
-  // .path-frontpage & {
-  //   padding-top: 0;
-  // }
-  // @include respond-to(desktop-and-up) {
-  //   padding-top: $spacing-and-half;
-  //   .path-frontpage & {
-  //     padding-top: 0;
-  //   }
-  // }
-  .region-content {
-    .path-user & {
-      @extend .row;
     }
   }
 }

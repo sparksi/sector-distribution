@@ -43,11 +43,6 @@
   }
   @include respond-to(wide-and-up) {
     .header & {
-      width: 22%;
-    }
-  }
-  @include respond-to(mega-large-and-up) {
-    .header & {
       width: 19%;
     }
   }
@@ -148,7 +143,7 @@
     @include respond-to(tablet-and-up) {
       content: '';
       width: 100vw;
-      background-color: $brand-gray-b-lighter;
+      background-color: $brand-gray-lightest;
       position: absolute;
       z-index: -1;
       height: 100%;
@@ -194,7 +189,7 @@
   @include make-xs-column(12);
   h2 {
     display: inline-block;
-    font-size: $font-size-base;
+    font-size: 16px;
     font-family: $font-family-sans-serif;
     margin: 0;
     color: $text-color;
@@ -213,4 +208,22 @@
       @extend .list-unstyled;
     }
   }
+}
+
+.promotion--navigation-primary {
+  width: 100%;
+  @include respond-to(desktop-and-up) {
+    width: 63%;
+    background-color: transparent;
+    padding-top: 5px;
+  }
+  @include respond-to(wide-and-up) {
+    width: 71%;
+  }
+}
+
+.promotion--navigation-quaternary {
+  @include make-xs-column(12);
+  @include make-lg-column(8);
+  margin-top: $spacing-half;
 }

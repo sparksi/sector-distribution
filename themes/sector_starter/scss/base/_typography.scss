@@ -21,7 +21,7 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   font-weight: 700;
-  color: $brand-blue-b-gray;
+  color: $brand-blue-gray;
   margin: 0;
   > a {
     &:focus {
@@ -113,46 +113,39 @@ p {
 }
 
 blockquote {
-  border-left: 10px solid $brand-gray-light;
-  font-size: $font-size-h4;
+  border-left: none;
+  font-size: 26px;
   line-height: $line-height-base;
-  &.featured {
-    color: $white;
-    background-color: $gray-dark;
-    border-left: none;
-    cite,
-    a {
-      color: $white;
+  font-style: italic;
+  font-weight: 300;
+  > p {
+    .prose & {
+      margin: 0 0 20px;
     }
+  }
+  &.featured {
+    background-color: rgba($brand-info,0.2);
     a {
       text-decoration: underline;
-      &:visited {
-        color: rgba($white,0.9);
-      }
-      &[href^="http://"],
-      &[href^="https://"],
-      &[rel*='external'] {
-        &:after {
-          @include sprite(icon--external-white);
-        }
-      }
     }
   }
   footer {
-    font-size: 70%;
+    font-size: 16px;
   }
   cite {
+    color: $brand-blue-gray;
     font-style: normal;
+    font-weight: 400;
   }
 }
 
 .blockquote-reverse {
-  border-right: 10px solid $brand-gray-light;
+  border-right: none;
 }
 
 a {
   &:visited {
-    color: $brand-visited;
+    color: #4d6edd;
   }
   &:focus {
     background-color: $brand-focused;
@@ -189,5 +182,7 @@ mark {
     background-color: transparent;
     background: transparent;
     padding: 0;
+    margin-top: $line-height-prose-computed;
+    display: block;
   }
 }

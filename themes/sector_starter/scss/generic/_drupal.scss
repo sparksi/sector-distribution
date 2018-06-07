@@ -14,30 +14,46 @@
 .tabs--primary {
   margin-top: $spacing-base;
   margin-bottom: $spacing-base;
-  font-family: $font-family-monospace;
   font-weight: 700;
+  .path-user & {
+    margin-top: 0;
+  }
   > li {
+    margin-right: 5px;
     > a {
-      border-radius:0;
-      color: $brand-warning;
+      color: $brand-danger;
+      @extend .btn;
+      padding: 6px 12px;
       &:focus {
         color: $white;
-        background-color: $brand-warning;
-        outline: 3px solid $brand-warning;
+        background-color: $brand-danger;
+        outline: 3px solid $brand-danger;
       }
     }
     &.active {
       > a {
-        background-color: $brand-warning;
+        background-color: $brand-danger;
         &:hover {
-          background-color: $brand-warning;
+          background-color: $brand-danger;
         }
         &:focus {
           color: $white;
-          background-color: $brand-warning;
-          outline: 3px solid $brand-warning;
+          background-color: $brand-danger;
+          outline: 3px solid $brand-danger;
         }
       }
+    }
+  }
+}
+
+.path-user {
+  h4 {
+    &.label {
+      color: $brand-blue-gray;
+      display: block;
+      font-size: 100%;
+      text-align: left;
+      padding: 0;
     }
   }
 }
@@ -52,10 +68,15 @@
 
 .page-header {
   border-bottom: none;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: $line-height-computed;
   margin-bottom: ($line-height-computed/2);
   padding-bottom: 0;
+  font-size: $font-size-h2;
+  @include respond-to(tablet-and-up) {
+    font-weight: 300;
+    font-size: $font-size-h1;
+  }
 }
 
 /* Override Drupal date.css */
@@ -88,6 +109,51 @@
   }
 }
 
+.user-login-form,
+.user-pass {
+  margin: $spacing-half 0;
+  @extend %box-it-up;
+  @extend %has-margin-top-double;
+  @include respond-to(tablet-and-up) {
+    margin: $spacing-base 0;
+  }
+}
+
+.user-login-form {
+  @include respond-to(wide-and-up) {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  > .form-item {
+    @include respond-to(wide-and-up) {
+      width: 40%;
+      margin-right: 3%;
+    }
+  }
+  > .form-actions {
+    @include respond-to(wide-and-up) {
+      width: 14%;
+      margin-top: 31px;
+    }
+    .button {
+      margin-right: 10px;
+      padding: 12px 10px;
+      font-size: 16px;
+      margin-top: 0;
+    }
+  }
+}
+
+.toolbar-tray {
+  a {
+    &:visited {
+      color: #565656;
+    }
+  }
+}
+
 /*
  * Unpublished node indicator, attached to full view mode of node
  * inside content region.
@@ -95,7 +161,7 @@
 .node--view-mode-full {
   .page-node-status-unpublished .content & {
     background-color: transparent;
-    border-top: 40px solid $brand-warning;
+    border-top: 40px solid $brand-danger;
     padding-top: 20px;
     position: relative;
     margin-top:20px;

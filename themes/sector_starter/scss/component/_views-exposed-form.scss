@@ -31,10 +31,8 @@
  */
 
 .views-exposed-form {
-  border: 1px solid $brand-border;
-  background-color: lighten($gray-lighter,5%);
-  padding: $spacing-half;
   margin: $spacing-half 0;
+  @extend %box-it-up;
   @include respond-to(tablet-and-up) {
     margin: $spacing-base 0;
   }
@@ -70,7 +68,7 @@
     }
     .button {
       margin-right: 10px;
-      padding: 12px 10px;
+      padding: 12px 15px;
       font-size: 16px;
       margin-top: 0;
     }
@@ -85,6 +83,10 @@
     flex-wrap: nowrap;
     padding-left: 0;
     padding-right: 0;
+    @include respond-to(tablet-and-up) {
+      padding-left: $responsive-layout-gutter;
+      padding-right: $responsive-layout-gutter;
+    }
     > .form-item,
     > .form-actions {
       padding-left: $responsive-layout-gutter;

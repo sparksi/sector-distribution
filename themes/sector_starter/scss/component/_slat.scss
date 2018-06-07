@@ -24,14 +24,14 @@
 
 .slat__title {
   a {
-    color: $brand-blue-b-gray;
+    color: $brand-blue-gray;
     &:hover,
     &:focus {
       text-decoration: underline;
       transition:all 0.05s ease-in;
     }
     &:visited {
-      color: $brand-visited;
+      color: #515151;
     }
   }
 }
@@ -40,6 +40,7 @@
   .lead {
     color: $text-color;
     font-size: $font-size-base;
+    font-weight: 400;
   }
 }
 
@@ -54,7 +55,7 @@
 
 .slat__term {
   font-size: 14px;
-  color: $gray-light;
+  color: $brand-blue-gray;
   > a {
     &:focus {
       outline-offset: 0;
@@ -80,7 +81,7 @@
   width: 100%;
   display: block;
   .slat__title {
-    color: $brand-blue-b-gray;
+    color: $brand-blue-gray;
     transition: none;
   }
   .slat__body {
@@ -93,7 +94,7 @@
   &:focus {
     text-decoration: none;
     .slat__title {
-      color: $brand-blue-b-gray;
+      color: $brand-blue-gray;
       text-decoration: underline;
       transition: all 0.05s ease-in;
     }
@@ -113,14 +114,20 @@
   }
   &:visited {
     .slat__title {
-      color: $brand-visited;
+      color: #515151;
+    }
+    .action--more {
+      color: #4d6edd;
+      &:before {
+        background-color: #4d6edd;
+      }
     }
   }
   /* Add external link icon to links within the main content areas */
   &[href^="http://"],
   &[href^="https://"],
   &[rel*='external'] {
-    .slat__read-more {
+    .action--more {
       &:after {
         font-size: 16px;
         content: '';

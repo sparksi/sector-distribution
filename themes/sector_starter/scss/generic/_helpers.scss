@@ -56,7 +56,6 @@
 /* Inline block helper */
 .inline-block {
   display: inline-block;
-  //vertical-align: top;
 }
 
 /**
@@ -246,11 +245,11 @@
   }
 }
 
-
 .has-heading-alternate,
 %has-heading-alternate {
   font-size: $font-size-h4;
-  color: #4e5d78;
+  color: $brand-bluer-gray;
+  letter-spacing: 0.02em;
 }
 
 .link-down,
@@ -323,8 +322,6 @@
 
 .is-pseudo-dl-item,
 %is-pseudo-dl-item {
-  @include respond-to(tablet-and-up) {
-  }
   .field--label {
     @extend %pseudo-dl-term;
   }
@@ -396,6 +393,11 @@
   margin-left: $spacing-base;
 }
 
-.has-font-weight-600 {
-  font-weight: 600;
+.box-it-up,
+%box-it-up {
+  background-color: #eaecef;
+  padding: $spacing-half;
+  @include respond-to(tablet-and-up) {
+    padding: $spacing-base;
+  }
 }

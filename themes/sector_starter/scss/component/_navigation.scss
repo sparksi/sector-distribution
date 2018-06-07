@@ -115,18 +115,6 @@
 
 .navigation--primary {
   background-color: $gray-darker;
-  //padding-top: 2px;
-  width: 100%;
-  @include respond-to(desktop-and-up) {
-    width: 63%;
-    background-color: transparent;
-  }
-  @include respond-to(wide-and-up) {
-    width: 68%;
-  }
-  @include respond-to(mega-large-and-up) {
-    width: 71%;
-  }
   @extend %apply-flyout-menu-style;
   @include respond-to(tablet-large-and-down) {
     display: none;
@@ -150,17 +138,26 @@
       }
     }
     > .menu__item {
+      @include respond-to(desktop-and-up) {
+        margin: 0 15px;
+      }
+      @include respond-to(wide-large-and-up) {
+        margin: 0 $spacing-base;
+      }
       > .menu__link {
         background-color: transparent;
         margin: 0;
-        @include respond-to(wide-large-and-up) {
-          padding: 10px $spacing-base;
+        @include respond-to(desktop-and-up) {
+          padding: 5px 0;
+        }
+        &:focus {
+          outline-offset: 0;
         }
         &:hover {
           background-color: transparent;
           color: $white;
           @include respond-to(desktop-and-up) {
-            color: rgba($brand-blue-b-gray,0.8);
+            color: rgba($brand-blue-gray,0.8);
           }
         }
       }
@@ -176,7 +173,7 @@
     &.active-trail {
       .menu__link {
         @include respond-to(desktop-and-up) {
-          text-decoration: underline;
+          border-bottom: 1px solid $brand-blue-gray;
         }
       }
     }
@@ -191,14 +188,14 @@
       @include respond-to(desktop-and-up) {
         border-right: none;
         border-bottom: none;
-        color: $brand-blue-b-gray;
+        color: $brand-blue-gray;
       }
       &:hover,
       &:focus {
         background-color: transparent;
         color: $white;
         @include respond-to(desktop-and-up) {
-          color: rgba($brand-blue-b-gray,0.8);
+          color: rgba($brand-blue-gray,0.8);
         }
       }
     }
@@ -223,6 +220,10 @@
       &.is-expanded {
         .menu__link {
           background-color: transparent;
+          &:focus {
+            background-color: $brand-focused;
+            outline-offset: 0;
+          }
         }
       }
     }
@@ -303,6 +304,10 @@
       font-weight: 700;
       color: darken($text-color,10%);
       border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+      &:focus {
+        background-color: $brand-focused;
+        outline-offset: 0;
+      }
     }
     &:focus {
       background-color: $brand-focused;
@@ -312,9 +317,6 @@
 }
 
 .navigation--quaternary {
-  @include make-xs-column(12);
-  @include make-lg-column(8);
-  margin-top: $spacing-half;
   .menu__item {
     @include respond-to(tablet-and-up) {
       float: left;

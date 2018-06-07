@@ -3,20 +3,21 @@
  * BEM block for Related content.
  */
 .related {
-  border-top: 1px solid $brand-border;
+  @extend %has-border-top-large;
   padding-top: $spacing-base;
   > .field {
     @extend %has-margin-top-and-half;
   }
   .field--label {
-    font-weight: 700;
-    margin: $spacing-double 0 5px 0;
+    margin: $spacing-double 0 $spacing-half 0;
+    @extend %has-heading-alternate;
     @extend %has-border-top-alternate;
     &:before {
       top: -12px;
     }
   }
-  .field__items {
+  .field--items {
+    line-height: $line-height-base-prose;
     margin: $spacing-quarter 0 0 0;
   }
 }
