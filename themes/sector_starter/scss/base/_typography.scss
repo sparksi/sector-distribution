@@ -145,7 +145,7 @@ blockquote {
 
 a {
   &:visited {
-    color: #4d6edd;
+    color: $brand-visited;
   }
   &:focus {
     background-color: $brand-focused;

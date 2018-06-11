@@ -117,9 +117,9 @@
       color: #515151;
     }
     .action--more {
-      color: #4d6edd;
+      color: $brand-visited;
       &:before {
-        background-color: #4d6edd;
+        background-color: $brand-visited;
       }
     }
   }
