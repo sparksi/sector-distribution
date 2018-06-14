@@ -68,13 +68,16 @@
 
 .page-header {
   border-bottom: none;
-  font-weight: 400;
+  font-weight: 300;
   margin-top: $line-height-computed;
   margin-bottom: ($line-height-computed/2);
   padding-bottom: 0;
   font-size: $font-size-h2;
+  .path-frontpage & {
+    font-size: 45px;
+    padding-bottom: 10px;
+  }
   @include respond-to(tablet-and-up) {
-    font-weight: 300;
     font-size: $font-size-h1;
   }
 }

@@ -20,9 +20,11 @@
       right: 0px;
     }
     > a {
+      color: $text-color;
       text-decoration: underline;
       &:hover,
       &:focus {
+        color: $text-color;
         text-decoration: underline;
       }
       &:focus {

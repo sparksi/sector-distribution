@@ -44,6 +44,7 @@
     > a {
       @extend .btn;
       @extend .btn-default;
+      text-align: left;
       border-radius: 0;
       font-weight: 400;
       float: left;

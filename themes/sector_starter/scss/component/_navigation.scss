@@ -17,7 +17,7 @@
   }
   &.navigation-is-open {
     display: block;
-    margin-top: 13px;
+    margin-top: 20px;
   }
   @include respond-to(tablet-large-and-down) {
     width: 100%;
@@ -41,6 +41,7 @@
         border-top: 1px solid #4e4e4e;
         position: relative;
         padding-left: 18px;
+        padding: 15px 15px;
         &[href^="http://"],
         &[href^="https://"],
         &[rel*='external'] {
@@ -117,7 +118,6 @@
   background-color: $gray-darker;
   @extend %apply-flyout-menu-style;
   @include respond-to(tablet-large-and-down) {
-    display: none;
     padding-left: 0;
     padding-right: 0;
   }

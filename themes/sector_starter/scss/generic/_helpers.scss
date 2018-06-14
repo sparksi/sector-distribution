@@ -127,6 +127,14 @@
   margin-left: $spacing-half;
 }
 
+.has-margin-top-base-alternate,
+%has-margin-top-base-alternate {
+  margin-top: $spacing-half+($spacing-quarter);
+  @include respond-to(desktop-and-up) {
+    margin-top: $spacing-base;
+  }
+}
+
 /**
  * Responsive padding top OOCSS spacing helpers.
  * If a border is required above your site building block then use padding instead.

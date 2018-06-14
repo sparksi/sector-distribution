@@ -12,8 +12,11 @@
     padding-right: 15px;
     .path-frontpage & {
       padding-top: 3vw;
-      padding-bottom: 6vw;
+      padding-bottom: 15vw;
       margin: 0;
+      @include respond-to(tablet-and-up) {
+        padding-bottom: 8vw;
+      }
       @include respond-to(wide-and-up) {
         padding-right: 70%;
         padding-top: 13vh;
@@ -23,7 +26,7 @@
         background-repeat: no-repeat;
         background-size: 697px 470px;
       }
-      @include respond-to(wide-large-and-up) {
+      @include respond-to(mega-and-up) {
         background-position: 490px 90px;
       }
     }

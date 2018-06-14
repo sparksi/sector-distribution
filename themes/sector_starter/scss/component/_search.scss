@@ -114,7 +114,7 @@
   clear: both;
   display: none;
   @include respond-to(tablet-large-and-down) {
-    margin-top: $spacing-half;
+    margin-top: 20px;
   }
   &.search-is-active {
     display: block;

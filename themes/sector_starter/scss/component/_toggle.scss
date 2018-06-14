@@ -23,8 +23,11 @@
     margin-top: 3px;
   }
   .icon--search {
-    margin-top: 2px;
+    margin-top: 14px;
     margin-left: 2px;
+    @include respond-to(desktop-and-up) {
+      margin-top: 0;
+    }
   }
   .icon--close {
     display: none;

@@ -3,7 +3,12 @@
  * BEM block for pre-content.
  */
 .pre-content {
-  @extend %has-margin-top-and-half;
+  @include respond-to(tablet-and-up) {
+  	margin-top: $spacing-base;
+  }
+  @include respond-to(desktop-and-up) {
+  	margin-top: $spacing-and-half;
+  }
   .region-pre-content {
     @include make-md-column(12);
   }

@@ -15,25 +15,38 @@
       margin-top: $spacing-and-half;
     }
     .page-variant--section-entry-page & {
-      padding-top: $spacing-base;
       margin-top: $spacing-base;
-      @include respond-to(desktop-and-up) {
-        padding-top: $spacing-double;
+      @include respond-to(tablet-and-up) {
         margin-top: $spacing-double;
       }
-      @include respond-to(wide-and-up) {
+      @include respond-to(desktop-and-up) {
         padding-top: ($spacing-base*3);
+      }
+      @include respond-to(wide-and-up) {
         margin-top: ($spacing-base*3);
       }
     }
     &:before {
       .page-variant--section-entry-page & {
-        content: '';
-        height: 3px;
-        background-color: $brand-blue-gray;
-        position: absolute;
-        top: 0;
-        width: 100%;
+        @include respond-to(tablet-large-and-up) {
+          content: '';
+          height: 3px;
+          background-color: $brand-blue-gray;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          left: $grid-gutter-width / 2;
+          max-width: $container-tablet - $grid-gutter-width;
+        }
+        @include respond-to(desktop-and-up) {
+          max-width: $container-desktop - $grid-gutter-width;
+        }
+        @include respond-to(wide-and-up) {
+          max-width:$container-large-desktop - $grid-gutter-width;
+        }
+        @include respond-to(mega-and-up) {
+          max-width: 1240px - $grid-gutter-width;
+        }
       }
     }
   }

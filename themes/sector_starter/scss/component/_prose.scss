@@ -55,22 +55,18 @@
       margin-top: ($line-height-prose-computed/2);
     }
     blockquote {
-      padding: ($line-height-prose-computed / 2) $spacing-and-half;
+      padding: $spacing-base;
       margin: 0 0 $line-height-prose-computed;
-      line-height: $line-height-base;
-      &.featured {
-        padding: $line-height-prose-computed $line-height-prose-computed;
-      }
     }
     address {
       margin-bottom: $line-height-prose-computed;
     }
     h1, .h1,
-    h2, .h2,
-    h3, .h3 {
+    h2, .h2 {
       margin-top: ($line-height-prose-computed*2);
       margin-bottom: ($line-height-prose-computed/2);
     }
+    h3, .h3,
     h4, .h4,
     h5, .h5,
     h6, .h6 {

@@ -8,12 +8,30 @@
 
 .promotion--navigation-primary {
   width: 100%;
+  position: relative;
+  @include respond-to(tablet-large-and-down) {
+    display: none;
+  }
   @include respond-to(desktop-and-up) {
     width: 63%;
     background-color: transparent;
   }
   @include respond-to(wide-and-up) {
     width: 71%;
+  }
+  &:after {
+    @include respond-to(tablet-large-and-down) {
+      content: '';
+      width: 100vw;
+      background-color: #444;
+      position: absolute;
+      z-index: -1;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: block;
+      top: 0;
+    }
   }
 }
 
@@ -103,6 +121,7 @@
 }
 
 .promotion--in-this-section {
+  margin-top: $spacing-double;
   border-top: 1px solid $brand-border;
   > .block-title {
     font-size: $font-size-h4;

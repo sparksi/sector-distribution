@@ -3,5 +3,7 @@
  * BEM block for wrapping the header regions
  */
 .header-regions-wrapper {
-  background-color: $brand-gray-lightest;
+	@include respond-to(desktop-and-up) {
+  	background-color: $brand-gray-lightest;
+  }
 }
