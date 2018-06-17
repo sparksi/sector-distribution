@@ -240,5 +240,15 @@ function sector_starter_form_alter(&$form, \Drupal\Core\Form\FormStateInterface 
       $form['#attached']['library'][] = 'sector_starter/comments';
     break;
   }
+}
 
+function sector_starter_preprocess_form_element(&$variables) {
+  $element =& $variables['element'];
+
+  /**
+     * Hide description field from header search form
+    */
+  if(!empty($element['#id']) && $element['#id'] == "edit-keys") {
+    unset($variables['description']);
+  }
 }
