@@ -1,35 +1,199 @@
 $icons: (
-    sprite: (width: 759px, height: 737px, svgPath: '../images/sprite.svg'),
-   arrow--chevron-up-dark-grey: (width: 25px, height: 13px, backgroundX: 0px, backgroundY: 0px),
-   arrow--medium-left-thin-dark-grey: (width: 9px, height: 16px, backgroundX: -35px, backgroundY: -23px),
-   arrow--medium-right-thin-dark-grey: (width: 9px, height: 16px, backgroundX: -54px, backgroundY: -49px),
-   arrow--micro-down-blue: (width: 11px, height: 6px, backgroundX: -73px, backgroundY: -75px),
-   arrow--micro-down-dark-blue: (width: 11px, height: 6px, backgroundX: -94px, backgroundY: -91px),
-   arrow--micro-down-white: (width: 11px, height: 6px, backgroundX: -115px, backgroundY: -107px),
-   arrow--micro-up-blue: (width: 11px, height: 6px, backgroundX: -136px, backgroundY: -123px),
-   arrow--micro-up-dark-blue: (width: 11px, height: 6px, backgroundX: -157px, backgroundY: -139px),
-   arrow--micro-up-white: (width: 11px, height: 6px, backgroundX: -178px, backgroundY: -155px),
-   arrow--mini-down-grey: (width: 11px, height: 6px, backgroundX: -199px, backgroundY: -171px),
-   arrow--mini-left-blue: (width: 6px, height: 11px, backgroundX: -220px, backgroundY: -187px),
-   arrow--mini-left-dark-blue: (width: 6px, height: 11px, backgroundX: -236px, backgroundY: -208px),
-   arrow--mini-right-grey: (width: 6px, height: 11px, backgroundX: -252px, backgroundY: -229px),
-   icon--close-dark-grey: (width: 20px, height: 20px, backgroundX: -268px, backgroundY: -250px),
-   icon--close-small-blue: (width: 12px, height: 12px, backgroundX: -298px, backgroundY: -280px),
-   icon--close-white: (width: 20px, height: 20px, backgroundX: -320px, backgroundY: -302px),
-   icon--envelope-dark-grey: (width: 16px, height: 16px, backgroundX: -350px, backgroundY: -332px),
-   icon--envelope-white: (width: 16px, height: 16px, backgroundX: -376px, backgroundY: -358px),
-   icon--external-blue: (width: 8px, height: 8px, backgroundX: -402px, backgroundY: -384px),
-   icon--external-white: (width: 8px, height: 8px, backgroundX: -420px, backgroundY: -402px),
-   icon--facebook-dark-grey: (width: 16px, height: 16px, backgroundX: -438px, backgroundY: -420px),
-   icon--facebook-white: (width: 16px, height: 16px, backgroundX: -464px, backgroundY: -446px),
-   icon--filter-grey: (width: 14px, height: 14px, backgroundX: -490px, backgroundY: -472px),
-   icon--linkedin-dark-grey: (width: 16px, height: 16px, backgroundX: -514px, backgroundY: -496px),
-   icon--linkedin-white: (width: 16px, height: 16px, backgroundX: -540px, backgroundY: -522px),
-   icon--menu-dark-grey: (width: 20px, height: 18px, backgroundX: -566px, backgroundY: -548px),
-   icon--menu-white: (width: 20px, height: 18px, backgroundX: -596px, backgroundY: -576px),
-   icon--paper-clip: (width: 15px, height: 15px, backgroundX: -626px, backgroundY: -604px),
-   icon--search-dark-grey: (width: 18px, height: 18px, backgroundX: -651px, backgroundY: -629px),
-   icon--search-white: (width: 18px, height: 18px, backgroundX: -679px, backgroundY: -657px),
-   icon--twitter-dark-grey: (width: 16px, height: 16px, backgroundX: -707px, backgroundY: -685px),
-   icon--twitter-white: (width: 16px, height: 16px, backgroundX: -733px, backgroundY: -711px),
+  sprite: (
+    width: 759px,
+    height: 737px,
+    svgPath: '../images/sprite.svg'
+  ),
+  arrow--chevron-up-dark-grey: (
+    width: 25px,
+    height: 13px,
+    backgroundX: 0px,
+    backgroundY: 0px
+  ),
+  arrow--medium-left-thin-dark-grey: (
+    width: 9px,
+    height: 16px,
+    backgroundX: -35px,
+    backgroundY: -23px
+  ),
+  arrow--medium-right-thin-dark-grey: (
+    width: 9px,
+    height: 16px,
+    backgroundX: -54px,
+    backgroundY: -49px
+  ),
+  arrow--micro-down-blue: (
+    width: 11px,
+    height: 6px,
+    backgroundX: -73px,
+    backgroundY: -75px
+  ),
+  arrow--micro-down-dark-blue: (
+    width: 11px,
+    height: 6px,
+    backgroundX: -94px,
+    backgroundY: -91px
+  ),
+  arrow--micro-down-white: (
+    width: 11px,
+    height: 6px,
+    backgroundX: -115px,
+    backgroundY: -107px
+  ),
+  arrow--micro-up-blue: (
+    width: 11px,
+    height: 6px,
+    backgroundX: -136px,
+    backgroundY: -123px
+  ),
+  arrow--micro-up-dark-blue: (
+    width: 11px,
+    height: 6px,
+    backgroundX: -157px,
+    backgroundY: -139px
+  ),
+  arrow--micro-up-white: (
+    width: 11px,
+    height: 6px,
+    backgroundX: -178px,
+    backgroundY: -155px
+  ),
+  arrow--mini-down-grey: (
+    width: 11px,
+    height: 6px,
+    backgroundX: -199px,
+    backgroundY: -171px
+  ),
+  arrow--mini-left-blue: (
+    width: 6px,
+    height: 11px,
+    backgroundX: -220px,
+    backgroundY: -187px
+  ),
+  arrow--mini-left-dark-blue: (
+    width: 6px,
+    height: 11px,
+    backgroundX: -236px,
+    backgroundY: -208px
+  ),
+  arrow--mini-right-grey: (
+    width: 6px,
+    height: 11px,
+    backgroundX: -252px,
+    backgroundY: -229px
+  ),
+  icon--close-dark-grey: (
+    width: 20px,
+    height: 20px,
+    backgroundX: -268px,
+    backgroundY: -250px
+  ),
+  icon--close-small-blue: (
+    width: 12px,
+    height: 12px,
+    backgroundX: -298px,
+    backgroundY: -280px
+  ),
+  icon--close-white: (
+    width: 20px,
+    height: 20px,
+    backgroundX: -320px,
+    backgroundY: -302px
+  ),
+  icon--envelope-dark-grey: (
+    width: 16px,
+    height: 16px,
+    backgroundX: -350px,
+    backgroundY: -332px
+  ),
+  icon--envelope-white: (
+    width: 16px,
+    height: 16px,
+    backgroundX: -376px,
+    backgroundY: -358px
+  ),
+  icon--external-blue: (
+    width: 8px,
+    height: 8px,
+    backgroundX: -402px,
+    backgroundY: -384px
+  ),
+  icon--external-white: (
+    width: 8px,
+    height: 8px,
+    backgroundX: -420px,
+    backgroundY: -402px
+  ),
+  icon--facebook-dark-grey: (
+    width: 16px,
+    height: 16px,
+    backgroundX: -438px,
+    backgroundY: -420px
+  ),
+  icon--facebook-white: (
+    width: 16px,
+    height: 16px,
+    backgroundX: -464px,
+    backgroundY: -446px
+  ),
+  icon--filter-grey: (
+    width: 14px,
+    height: 14px,
+    backgroundX: -490px,
+    backgroundY: -472px
+  ),
+  icon--linkedin-dark-grey: (
+    width: 16px,
+    height: 16px,
+    backgroundX: -514px,
+    backgroundY: -496px
+  ),
+  icon--linkedin-white: (
+    width: 16px,
+    height: 16px,
+    backgroundX: -540px,
+    backgroundY: -522px
+  ),
+  icon--menu-dark-grey: (
+    width: 20px,
+    height: 18px,
+    backgroundX: -566px,
+    backgroundY: -548px
+  ),
+  icon--menu-white: (
+    width: 20px,
+    height: 18px,
+    backgroundX: -596px,
+    backgroundY: -576px
+  ),
+  icon--paper-clip: (
+    width: 15px,
+    height: 15px,
+    backgroundX: -626px,
+    backgroundY: -604px
+  ),
+  icon--search-dark-grey: (
+    width: 18px,
+    height: 18px,
+    backgroundX: -651px,
+    backgroundY: -629px
+  ),
+  icon--search-white: (
+    width: 18px,
+    height: 18px,
+    backgroundX: -679px,
+    backgroundY: -657px
+  ),
+  icon--twitter-dark-grey: (
+    width: 16px,
+    height: 16px,
+    backgroundX: -707px,
+    backgroundY: -685px
+  ),
+  icon--twitter-white: (
+    width: 16px,
+    height: 16px,
+    backgroundX: -733px,
+    backgroundY: -711px
+  ),
 );

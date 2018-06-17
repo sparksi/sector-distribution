@@ -83,9 +83,9 @@ This repository contains an `.nvmrc` that allows us to set the node version we e
 To install NVM, run `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash`.
 When the install finishes it will tell you to log out and back in, but this is not required, just run `source ~/.profile` to refresh your path.
 
-To download versions of NodeJS, run `nvm install x.x` or just `nvm install 9` which is the latest version as of writing this.
+To download versions of NodeJS, run `nvm install x.x` or just `nvm install stable` which is the latest stable version.
 
-Run `nvm install 9`
+Run `nvm install stable`
 
 `nvm ls-remote` will give you a complete list of available versions.
 
@@ -97,11 +97,11 @@ NVM will look for an `.nvmrc` file and use that if it can, so once you `cd` insi
 Note that any NVM commands you run are session only.
 When you log out, next time you come back the system version of NodeJS will be in use again.
 
-Run `nvm alias default 9`
+Run `nvm alias default 10`
 
 This is to save a default that will be used for all future bash sessions.
 
-You can replace "6" with the "x.x" version you prefer if required.
+You can replace "10" with the "x.x" version you prefer if required.
 
 ### 2. Install dependencies & Run the project
 
@@ -115,21 +115,21 @@ Then `cd` inside the root of this theme directory.
 
 Now you can run the 3 commands needed to compile and watch the files in the `./scss/` directory as well as watch for new SVG's in the `/build/sprite/` directory. The SCSS files will be compiled into a `./css/` directory. SVG's will be compiled to the `/images/` directory. Read more about svg here: https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
 
-`npm install && npm run gulp`
+`npm install && npm run-script build`
 
 or if using yarn
 
-`yarn install && yarn run gulp`
+`yarn install && yarn build`
 
 The first command, `npm install` or `yarn install` will download and install all the modules listed in the `package.json` file into the `./node_modules/` directory.
 
-The last command, `npm run gulp` or `yarn run gulp`, again executes a script defined in the `package.json`. This script runs Gulp, which simply executes the default commands found in the `gulpfile.js` file.
+The last command, `npm run-script build` or `yarn build`, again executes a script defined in the `package.json`. This script runs a series of subtasks also defined in `package.json` that will build the CSS, Javascript and SVG's that the theme requires.
 
 #### Known error during default Gulp task:
 
 `Error: EPERM: operation not permitted, chmod  '…/sector_starter/scss/generic/_sprite-mixins.scss'`
 
-During the Gulp task Gulp is trying to run chmod over scss/generic/_sprite-mixins.scss
+During the Gulp SVG task Gulp is trying to run chmod over scss/generic/_sprite-mixins.scss
 
 Because the _sprite-mixins.scss file is not owned by your user Gulp is not able to perform the chmod.
 
@@ -137,22 +137,49 @@ Related issue: https://github.com/gulpjs/gulp/issues/1012
 
 In order to allow Gulp to perform the chmod run `sudo chown -R <your-user-name> scss/generic/_sprite-mixins.scss` at the root of the theme.
 
-Rerun the `npm run gulp` or `yarn run gulp` command and the error should be resolved.
+Rerun the `npm run-script svg:sprite` or `yarn svg:sprite` command and the error should be resolved.
 
 #### Working with Sass and Gulp
 
 To watch for changes to SASS and new SVG's run the following command
 inside the root of this theme directory.
 
-`npm run gulp`
+`npm run-script watch`
 
 or with yarn
 
-`yarn run gulp` (One off production command complies sprites and compiles and lints SCSS, JS)
+`yarn build` (One off production command complies sprites and compiles and lints SCSS, JS)
 
-`yarn run gulp watch` (Watches Sprites, SCSS and JS and lints SCSS and JS)
+`yarn watch` (Watches Sprites, SCSS and JS and lints SCSS and JS)
 
-`yarn run gulp dev` (+ Source mapping)
+`yarn scss:compile` (+ Source mapping)
+
+#### Other useful NPM scripts
+
+* postinstall - runs after packages are installed. `yarn outdated` is executed, which checks your installed packages for updates.
+
+* yarn reinstall - empties node_modules directory, cleans yarn caceh and reinstalls packages
+* yarn clean - empties css & js/dist directories
+
+* build compiles production-ready theme. Executes `yarn clean`, builds optimised SVG sprite, lints SCSS, builds SCSS (if linting is successful), runs post-css (autoprefixer) and compiles javascript.
+
+* yarn js:transpile - runs babel transpiler
+* yarn js:lint - runs eslint, according to configuration in .eslintrc.yml
+* yarn js:watch - listens on js/src/*.js and runs js:transpile,
+* yarn js - executes both js:lint & yarn js:transpile
+
+* yarn scss:lint - lints the SCSS according to configuration in .sass-lint.yml
+* yarn scss:compile - compiles SCSS (in gulpfile) with dev flag (source maps),
+* yarn scss:watch - listens on scss/**/*.scss and runs scss:compile
+* yarn pcss - runs autoprefixer on all files in css/*
+
+* yarn svg:sprite - runs svgSprite & copySpriteMixins gulp tasks
+* yarn svg:optimise - runs svgo on all svgs (including sprite) in images/
+* yarn svg:watch - listens on build/sprite/*.svg and executes yarn svg (both sprite + optimise tasks)
+* yarn svg - executes svg:sprite & svg:optimise tasks
+
+* yarn watch - runs all scripts matching *:watch
+
 
 ## CSS Coding Standards and Frontend Architecture
 This theme includes Bootstrap so we already have a frontend architecture framework out of the box. The aim of this theme is to use Bootstrap frontend architecture as a baseline framework whilst embracing the consensus of the Drupal community for all new development of frontend related components.

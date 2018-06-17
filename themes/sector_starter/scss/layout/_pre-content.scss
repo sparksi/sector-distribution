@@ -4,10 +4,10 @@
  */
 .pre-content {
   @include respond-to(tablet-and-up) {
-  	margin-top: $spacing-base;
+    margin-top: $spacing-base;
   }
   @include respond-to(desktop-and-up) {
-  	margin-top: $spacing-and-half;
+    margin-top: $spacing-and-half;
   }
   .region-pre-content {
     @include make-md-column(12);

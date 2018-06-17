@@ -44,7 +44,7 @@
   }
 }
 
- /**
+/**
   * See Bootstrap. http://getbootstrap.com/css/#type-lists. Repeated here
   * because it is a common 'helper'.
   * Remove the default list-style and left margin on list items
@@ -278,8 +278,7 @@
   @include word-wrap;
 }
 
-@import "../scss/generic/sprite",
-        "../scss/generic/sprite-mixins";
+@import "generic/sprite", "generic/sprite-mixins";
 
 %apply-external-link-icon {
   /* Add external link icon to links */

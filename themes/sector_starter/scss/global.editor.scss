@@ -2,17 +2,17 @@
 
 /* BOOTSTRAP CUSTOM VARIABLES
 ------------------------------------------------------------------------*/
-@import "../scss/generic/variables-bootstrap-custom";
+@import "generic/variables-bootstrap-custom";
 
 
 /* VARIABLES
 ------------------------------------------------------------------------*/
-@import "../scss/generic/variables";
+@import "generic/variables";
 
 
 /* BOOTSTRAP
 ------------------------------------------------------------------------*/
-@import "../scss/vendor/bootstrap/bootstrap-custom.scss";
+@import "vendor/bootstrap/bootstrap-custom.scss";
 
 
 /* BREAKPOINT
@@ -22,25 +22,23 @@
 
 /* GENERIC
 ------------------------------------------------------------------------*/
-@import "../scss/generic/mixins",
-        "../scss/generic/breakpoints",
-        "../scss/generic/helpers";
+@import "generic/mixins", "generic/breakpoints", "generic/helpers";
 
 /* Prose
 ------------------------------------------------------------------------*/
-@import "../scss/component/_prose.scss";
+@import "component/_prose.scss";
 
 .cke_editable {
-	padding: 10px;
-	max-width: 800px;
-	@extend %prose;
-	h2, .h2 { font-size: $font-size-h2; }
-	h3, .h3 { font-size: $font-size-h3; }
-	h4, .h4 { font-size: $font-size-h4; }
-	h5, .h5 { font-size: $font-size-h5; }
-	h6, .h6 { font-size: $font-size-h6; }
-	dl {
-  	margin-left: 0;
-  	padding-left: 0;
+  padding: 10px;
+  max-width: 800px;
+  @extend %prose;
+  h2, .h2 { font-size: $font-size-h2; }
+  h3, .h3 { font-size: $font-size-h3; }
+  h4, .h4 { font-size: $font-size-h4; }
+  h5, .h5 { font-size: $font-size-h5; }
+  h6, .h6 { font-size: $font-size-h6; }
+  dl {
+    margin-left: 0;
+    padding-left: 0;
   }
 }

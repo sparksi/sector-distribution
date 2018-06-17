@@ -5,7 +5,7 @@
 
 /* BOOTSTRAP CUSTOM VARIABLES
 ------------------------------------------------------------------------*/
-@import "../scss/generic/variables-bootstrap-custom";
+@import "generic/variables-bootstrap-custom";
 
 
 /* VARIABLES
@@ -30,8 +30,7 @@
 
 /* GENERIC
 ------------------------------------------------------------------------*/
-@import "../scss/generic/mixins",
-        "../scss/generic/breakpoints";
+@import "generic/mixins", "generic/breakpoints";
 
 
 /* COMPONENT

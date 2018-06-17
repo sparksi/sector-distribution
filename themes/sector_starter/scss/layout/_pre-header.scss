@@ -3,7 +3,7 @@
  * BEM block for pre-header.
  */
 .pre-header {
-	background-color: $white;
+  background-color: $white;
   .region-pre-header {
     @include make-md-column(12);
   }

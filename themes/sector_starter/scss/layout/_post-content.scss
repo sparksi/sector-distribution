@@ -4,14 +4,14 @@
  */
 .post-content {
   .region-post-content {
-  	.path-frontpage & {
-	    display: flex;
-			align-items: flex-start;
-			flex-wrap: wrap;
-	    height: 100%;
-	    @include respond-to(desktop-and-up) {
-	    	justify-content: space-between;
-	    }
-	  }
+    .path-frontpage & {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      height: 100%;
+      @include respond-to(desktop-and-up) {
+        justify-content: space-between;
+      }
+    }
   }
 }

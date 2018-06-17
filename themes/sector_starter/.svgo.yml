@@ -1,0 +1,46 @@
+multipass: true
+
+plugins:
+  - addAttributesToSVGElement: false
+  - addClassesToSVGElement: false
+  - cleanupAttrs: true
+  - cleanupEnableBackground: false
+  - cleanupIDs: true
+  - cleanupListOfValues: false
+  - cleanupNumericValues:
+      floatPrecision: 2
+  - collapseGroups: false
+  - convertColors: false
+  - convertPathData: false
+  - convertShapeToPath: false
+  - convertStyleToAttrs: false
+  - convertTransform: false
+  - mergePaths: false
+  - minifyStyles: true
+  - moveElemsAttrsToGroup: false
+  - moveGroupAttrsToElems: false
+  - removeAttrs: false
+  - removeComments: true
+  - removeDesc: true
+  - removeDimensions: false
+  - removeDoctype: false
+  - removeEditorsNSData: true
+  - removeElementsByAttr: false
+  - removeEmptyAttrs: false
+  - removeEmptyContainers: false
+  - removeEmptyText: true
+  - removeHiddenElems: false
+  - removeMetadata: true
+  - removeNonInheritableGroupAttrs: false
+  - removeRasterImages: true
+  - removeStyleElement: true
+  - removeTitle: true
+  - removeUnknownsAndDefaults: true
+  - removeUnusedNS: true
+  - removeUselessDefs: true
+  - removeUselessStrokeAndFill: true
+  - removeViewBox: false
+  - removeXMLNS: false
+  - removeXMLProcInst: false
+  - sortAttrs: true
+  - transformsWithOnePath: false

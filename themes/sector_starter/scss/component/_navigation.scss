@@ -247,12 +247,12 @@
       .menu__item {
         &.collapsed {
           > .menu__link {
-             background-position: right 15px;
+            background-position: right 15px;
           }
         }
         &.is-expanded {
           > .menu__link {
-             background-position: right 16px;
+            background-position: right 16px;
           }
         }
       }

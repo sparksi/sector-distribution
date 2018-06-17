@@ -1,16 +1,16 @@
 /* BOOTSTRAP CUSTOM VARIABLES
 ------------------------------------------------------------------------*/
-@import "../scss/generic/variables-bootstrap-custom";
+@import "generic/variables-bootstrap-custom";
 
 
 /* VARIABLES
 ------------------------------------------------------------------------*/
-@import "../scss/generic/variables";
+@import "generic/variables";
 
 
 /* BOOTSTRAP
 ------------------------------------------------------------------------*/
-@import "../scss/vendor/bootstrap/bootstrap-custom.scss";
+@import "vendor/bootstrap/bootstrap-custom.scss";
 
 
 /* BREAKPOINT
@@ -20,28 +20,23 @@
 
 /* GENERIC
 ------------------------------------------------------------------------*/
-@import "../scss/generic/mixins",
-        "../scss/generic/breakpoints",
-        "../scss/generic/helpers",
-        "../scss/generic/sprite",
-        "../scss/generic/sprite-mixins",
-        "../scss/generic/drupal";
+@import "generic/mixins", "generic/breakpoints", "generic/helpers", "generic/sprite", "generic/sprite-mixins", "generic/drupal";
 
 /* BASE
 ------------------------------------------------------------------------*/
-@import "../scss/base/*";
+@import "base/*";
 
 
 /* LAYOUT
 ------------------------------------------------------------------------*/
-@import "../scss/layout/*";
+@import "layout/*";
 
 
 /* THEME
 ------------------------------------------------------------------------*/
-@import "../scss/theme/*";
+@import "theme/*";
 
 
 /* COMPONENT
 ------------------------------------------------------------------------*/
-@import "../scss/component/*";
+@import "component/*";
