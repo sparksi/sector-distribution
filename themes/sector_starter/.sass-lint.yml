@@ -16,6 +16,7 @@ files:
     - 'scss/vendor/**/*.*'
     - 'scss/global.print.scss'
     - 'scss/generic/*.scss'
+    - 'scss/admin-ui-toggle.scss'
 # Rule Configuration
 rules:
   #extends-before-mixins: 1
@@ -43,10 +44,4 @@ rules:
   #      - display
   #      - margin
   #    ignore-custom-properties: true
-  variable-for-property:
-    - 1
-    -
-      properties:
-        - color
-        - background-color
-        - border-color
+  variable-for-property: 0

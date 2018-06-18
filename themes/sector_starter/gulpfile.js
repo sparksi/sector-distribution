@@ -59,11 +59,6 @@ const config = {
       bust : false,
       mapname : 'icons'
     }
-  },
-  palette : {
-    primary : '#4e5d78',
-    secondary : '#02B290',
-    tertiary : '#EF604D'
   }
 };
 
