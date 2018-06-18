@@ -104,6 +104,9 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       $('#edit-keys').focus(); // Core search
 
       Drupal.behaviors.flyoutMenu.close(); // Close navigation
+
+      // update aria label
+      searchTargets.toggle.attr('aria-label', searchTargets.toggle.hasClass('active') ? 'Close search' : 'Open search');
     },
     close: function close() {
       searchTargets.toggle.removeClass('active');

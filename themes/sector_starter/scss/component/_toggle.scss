@@ -16,9 +16,36 @@
   width: 26px;
   height: 26px;
   margin-right: 14px;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  position: relative;
+  
   &:hover {
     text-decoration: none;
   }
+  
+  .no-touchevents &:focus {
+    background-color: $brand-focused;
+    outline: 3px solid $brand-focused;
+    outline-offset: -3px;
+  }
+  
+  .icon--inline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  
   .icon--menu {
     margin-top: 3px;
   }

@@ -100,6 +100,9 @@
       $('#edit-keys').focus(); // Core search
 
       Drupal.behaviors.flyoutMenu.close(); // Close navigation
+
+      // update aria label
+      searchTargets.toggle.attr('aria-label', searchTargets.toggle.hasClass('active') ? 'Close search' : 'Open search');
     },
     close: () => {
       searchTargets.toggle.removeClass('active');
