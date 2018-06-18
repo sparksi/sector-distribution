@@ -34,23 +34,20 @@ Make a copy of the Sector Starter theme
 
 **Within your _new_ `{PROJECTTHEMENAME}` theme...**
 
-**Rename the .yml and theme files in the root of your theme eg: sector_starter.info.yml becomes:**
+`yarn && yarn setup` will install all theme dependencies and execute a script which will rename: 
 
-`/{PROJECTTHEMENAME}/{PROJECTTHEMENAME}.info.yml`
+* `{PROJECTTHEMENAME}.breakpoints.yml`
+* `{PROJECTTHEMENAME}.info.yml`
+* `{PROJECTTHEMENAME}.libraries.yml`
+* `{PROJECTTHEMENAME}.theme`
 
-Shortcuts:
+files, and rename the theme preprocess hooks in `{PROJECTTHEMENAME}.theme` accordingly, e.g. `function {PROJECTTHEMENAME}_preprocess()`.
 
-`mv sector_starter.breakpoints.yml {PROJECTTHEMENAME}.breakpoints.yml`
-`mv sector_starter.info.yml {PROJECTTHEMENAME}.info.yml`
-`mv sector_starter.libraries.yml {PROJECTTHEMENAME}.libraries.yml`
-`mv sector_starter.theme {PROJECTTHEMENAME}.theme`
-
-**Search and replace 'sector_starter', 'Sector starter' and 'Sector' with your theme name or similar within your new theme. We recommended to take a granular approach.**
-
-Note: The package.json file also inludes a repository url which should be updated.
+*Note: The package.json file also inludes a repository url which should be updated.*
 
 Optionally update your themes screenshot.png
 
+---
 Now jump in the backend and activate your new subtheme via the path:
 
 `/admin/appearance`
@@ -148,37 +145,45 @@ inside the root of this theme directory.
 
 or with yarn
 
-`yarn build` (One off production command complies sprites and compiles and lints SCSS, JS)
+`yarn build` (One off production command complies sprites and compiles and lints SCSS, JS, builds SVG sprite...)
 
 `yarn watch` (Watches Sprites, SCSS and JS and lints SCSS and JS)
 
 `yarn scss:compile` (+ Source mapping)
 
-#### Other useful NPM scripts
+#### Useful NPM scripts
 
-* postinstall - runs after packages are installed. `yarn outdated` is executed, which checks your installed packages for updates.
+##### Utilities
 
-* yarn reinstall - empties node_modules directory, cleans yarn caceh and reinstalls packages
-* yarn clean - empties css & js/dist directories
+* `postinstall` - runs after packages are installed. `yarn outdated` is executed, which checks your installed packages for updates.
+* `yarn reinstall` - empties node_modules directory, cleans yarn cache and reinstalls packages
+* `yarn clean` - empties css & js/dist directories
 
-* build compiles production-ready theme. Executes `yarn clean`, builds optimised SVG sprite, lints SCSS, builds SCSS (if linting is successful), runs post-css (autoprefixer) and compiles javascript.
+##### Javascript
 
-* yarn js:transpile - runs babel transpiler
-* yarn js:lint - runs eslint, according to configuration in .eslintrc.yml
-* yarn js:watch - listens on js/src/*.js and runs js:transpile,
-* yarn js - executes both js:lint & yarn js:transpile
+* `yarn js:transpile` - runs babel transpiler
+* `yarn js:lint` - runs eslint, according to configuration in .eslintrc.yml
+* `yarn js:watch` - listens on js/src/*.js and runs js:transpile,
+* `yarn js` - executes both js:lint & yarn js:transpile
 
-* yarn scss:lint - lints the SCSS according to configuration in .sass-lint.yml
-* yarn scss:compile - compiles SCSS (in gulpfile) with dev flag (source maps),
-* yarn scss:watch - listens on scss/**/*.scss and runs scss:compile
-* yarn pcss - runs autoprefixer on all files in css/*
+##### SASS
 
-* yarn svg:sprite - runs svgSprite & copySpriteMixins gulp tasks
-* yarn svg:optimise - runs svgo on all svgs (including sprite) in images/
-* yarn svg:watch - listens on build/sprite/*.svg and executes yarn svg (both sprite + optimise tasks)
-* yarn svg - executes svg:sprite & svg:optimise tasks
+* `yarn scss:lint` - lints the SCSS according to configuration in .sass-lint.yml
+* `yarn scss:compile` - compiles SCSS (in gulpfile) with dev flag (source maps),
+* `yarn scss:watch` - listens on scss/**/*.scss and runs scss:compile
+* `yarn pcss` - runs autoprefixer on all files in css/*
 
-* yarn watch - runs all scripts matching *:watch
+##### SVGs
+
+* `yarn svg:sprite` - runs svgSprite & copySpriteMixins gulp tasks
+* `yarn svg:optimise` - runs svgo on all svgs (including sprite) in images/
+* `yarn svg:watch` - listens on build/sprite/*.svg and executes yarn svg (both sprite + optimise tasks)
+* `yarn svg` - executes svg:sprite & svg:optimise tasks
+
+##### Watching & Building
+
+* `yarn watch` - runs all scripts matching *:watch
+* `yarn build` - compiles production-ready theme. Executes `yarn clean`, builds optimised SVG sprite, lints SCSS, builds SCSS (if linting is successful), runs post-css (autoprefixer) and compiles javascript.
 
 
 ## CSS Coding Standards and Frontend Architecture
