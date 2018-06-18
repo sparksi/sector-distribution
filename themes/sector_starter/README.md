@@ -43,6 +43,8 @@ Make a copy of the Sector Starter theme
 
 files, and rename the theme preprocess hooks in `{PROJECTTHEMENAME}.theme` accordingly, e.g. `function {PROJECTTHEMENAME}_preprocess()`.
 
+**You'll need to edit `{PROJECTTHEMENAME}.info.yml` and change the theme's `name` property.**
+
 *Note: The package.json file also inludes a repository url which should be updated.*
 
 Optionally update your themes screenshot.png
