@@ -65,7 +65,7 @@ const config = {
 /**
  * Gulp svgSprite task.
  */
-gulp.task('svgSprite', () => {  
+gulp.task('svgSprite', () => {
   return gulp.src(`${config.paths.sprite.src}*`)
     .pipe(svg.sprite({
       shape: {
@@ -108,13 +108,12 @@ gulp.task('copySpriteMixins', () => {
     .pipe(gulp.dest(config.paths.sprite.mixins.dist));
 });
 
-
-gulp.task('default', () => {  
+gulp.task('default', () => {
   var param, i = process.argv.indexOf("--env");
   environment = i>-1 ? process.argv[i+1] : environment;
-  
+
   let sass_config = config.sass[environment];
-  sass_config.includePaths = config.sass.includePaths;  
+  sass_config.includePaths = config.sass.includePaths;
 
   return gulp.src('scss/**/*.s+(a|c)ss')
     // Initialize the source maps.
@@ -128,4 +127,3 @@ gulp.task('default', () => {
     // Send output through vinyl-fs to play nice with ownership.
     .pipe(gulp.dest('./css'));
 });
-

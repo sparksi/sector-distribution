@@ -23,10 +23,6 @@
     "svg": "yarn svg:sprite && yarn svg:optimise",
     "watch": "yarn run-p *:watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@gitlab.com:sparksi/sector-distribution.git"
-  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
