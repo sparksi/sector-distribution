@@ -102,7 +102,10 @@
       Drupal.behaviors.flyoutMenu.close(); // Close navigation
 
       // update aria label
-      searchTargets.toggle.attr('aria-label', searchTargets.toggle.hasClass('active') ? 'Close search' : 'Open search');
+      searchTargets.toggle.attr({
+        'aria-label': searchTargets.toggle.hasClass('active') ? 'Close search' : 'Open search',
+        'aria-pressed': !!searchTargets.toggle.hasClass('active'),
+      });
     },
     close: () => {
       searchTargets.toggle.removeClass('active');

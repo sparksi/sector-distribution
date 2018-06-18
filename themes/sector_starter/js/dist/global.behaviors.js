@@ -106,7 +106,10 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       Drupal.behaviors.flyoutMenu.close(); // Close navigation
 
       // update aria label
-      searchTargets.toggle.attr('aria-label', searchTargets.toggle.hasClass('active') ? 'Close search' : 'Open search');
+      searchTargets.toggle.attr({
+        'aria-label': searchTargets.toggle.hasClass('active') ? 'Close search' : 'Open search',
+        'aria-pressed': !!searchTargets.toggle.hasClass('active')
+      });
     },
     close: function close() {
       searchTargets.toggle.removeClass('active');
