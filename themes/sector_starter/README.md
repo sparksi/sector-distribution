@@ -17,7 +17,7 @@ This README outlines:
 
 There are two ways to use Sector Starter, as a base theme or by cloning and owning.
 
-### Use Sector Starter as a base theme.
+### Use Sector Starter as a base theme
 
 Create a subtheme the [Drupal way](https://www.drupal.org/node/225125) using Sector Starter as your base theme.
 
@@ -34,20 +34,20 @@ Make a copy of the Sector Starter theme
 
 **Within your _new_ `{PROJECTTHEMENAME}` theme...**
 
-`yarn && yarn setup` will install all theme dependencies and execute a script which will rename: 
+`yarn && yarn setup` will install all theme dependencies and execute a script which will rename these files: 
 
 * `{PROJECTTHEMENAME}.breakpoints.yml`
 * `{PROJECTTHEMENAME}.info.yml`
 * `{PROJECTTHEMENAME}.libraries.yml`
 * `{PROJECTTHEMENAME}.theme`
 
-files, and rename the theme preprocess hooks in `{PROJECTTHEMENAME}.theme` accordingly, e.g. `function {PROJECTTHEMENAME}_preprocess()`.
+It will also rename the theme preprocess hooks in `{PROJECTTHEMENAME}.theme`. e.g. `function {PROJECTTHEMENAME}_preprocess()`.
 
-**You'll need to edit `{PROJECTTHEMENAME}.info.yml` and change the theme's `name` property.**
+And rename references to sector_starter in `package.json` and `js/src/global.behaviors.js`.
 
-*Note: The package.json file also inludes a repository url which should be updated.*
+**However you will still need to edit `{PROJECTTHEMENAME}.info.yml` and change the theme's `name` property.**
 
-Optionally update your themes screenshot.png
+Optionally update your themes `screenshot.png`.
 
 ---
 Now jump in the backend and activate your new subtheme via the path:
@@ -64,7 +64,7 @@ If you want to modify SCSS/CSS/SVG sprites etc you'll need to install localised 
 
 This project uses a NodeJS LibSaSS compilation pipeline.
 
-This project uses NPM or Yarn to provide a completely localised project dependency environment.
+This project uses Yarn to provide a completely localised project dependency environment.
 
 ### Installing the localised dependencies requires the following steps:
 
@@ -104,7 +104,7 @@ You can replace "10" with the "x.x" version you prefer if required.
 
 ### 2. Install dependencies & Run the project
 
-Install Yarn (Optional)
+Install Yarn
 
  `apt-get install yarn`
 
@@ -114,15 +114,11 @@ Then `cd` inside the root of this theme directory.
 
 Now you can run the 3 commands needed to compile and watch the files in the `./scss/` directory as well as watch for new SVG's in the `/build/sprite/` directory. The SCSS files will be compiled into a `./css/` directory. SVG's will be compiled to the `/images/` directory. Read more about svg here: https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
 
-`npm install && npm run-script build`
-
-or if using yarn
-
 `yarn install && yarn build`
 
-The first command, `npm install` or `yarn install` will download and install all the modules listed in the `package.json` file into the `./node_modules/` directory.
+The first command, `yarn install` will download and install all the modules listed in the `package.json` file into the `./node_modules/` directory.
 
-The last command, `npm run-script build` or `yarn build`, again executes a script defined in the `package.json`. This script runs a series of subtasks also defined in `package.json` that will build the CSS, Javascript and SVG's that the theme requires.
+The last command, `yarn build`, again executes a script defined in the `package.json`. This script runs a series of subtasks also defined in `package.json` that will build the CSS, Javascript and SVG's that the theme requires.
 
 #### Known error during default Gulp task:
 
@@ -136,20 +132,16 @@ Related issue: https://github.com/gulpjs/gulp/issues/1012
 
 In order to allow Gulp to perform the chmod run `sudo chown -R <your-user-name> scss/generic/_sprite-mixins.scss` at the root of the theme.
 
-Rerun the `npm run-script svg:sprite` or `yarn svg:sprite` command and the error should be resolved.
+Rerun the `yarn svg:sprite` command and the error should be resolved.
 
 #### Working with Sass and Gulp
 
 To watch for changes to SASS and new SVG's run the following command
 inside the root of this theme directory.
 
-`npm run-script watch`
-
-or with yarn
-
 `yarn build` (One off production command complies sprites and compiles and lints SCSS, JS, builds SVG sprite...)
 
-`yarn watch` (Watches Sprites, SCSS and JS and lints SCSS and JS)
+`yarn watch` (Watches Sprites, SCSS and JS and lints SCSS and JS + Source mapping)
 
 `yarn scss:compile` (+ Source mapping)
 

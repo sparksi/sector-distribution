@@ -31,7 +31,7 @@ async function main() {
     const {
       changedFiles,
       countOfMatchesByPaths,
-      replaceInFilesOptions 
+      replaceInFilesOptions
     } = await replaceInFiles(options);
     console.log('Modified files:', changedFiles);
     console.log('Count of matches by paths:', countOfMatchesByPaths);

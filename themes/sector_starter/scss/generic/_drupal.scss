@@ -157,6 +157,12 @@
   }
 }
 
+.contextual {
+  .slat__link & {
+    display: none;
+  }
+}
+
 /*
  * Unpublished node indicator, attached to full view mode of node
  * inside content region.

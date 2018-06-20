@@ -6,6 +6,38 @@
   padding: 0 0 $spacing-base;
 }
 
+.promotion--brand {
+  .header & {
+    width: 70%;
+  }
+  @include respond-to(tablet-and-up) {
+    .header & {
+      width: 60%;
+    }
+  }
+  @include respond-to(desktop-and-up) {
+    .header & {
+      width: 27%;
+    }
+  }
+  @include respond-to(wide-and-up) {
+    .header & {
+      width: 19%;
+    }
+  }
+  .footer-regions-wrapper & {
+    @include make-xs-column(12);
+    margin-top: $spacing-base;
+    @include respond-to(desktop-and-up) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: auto;
+      margin-top: 0;
+    }
+  }
+}
+
 .promotion--navigation-primary {
   width: 100%;
   position: relative;
@@ -60,52 +92,6 @@
   }
 }
 
-.promotion--brand {
-  .header & {
-    width: 70%;
-  }
-  @include respond-to(tablet-and-up) {
-    .header & {
-      width: 60%;
-    }
-  }
-  @include respond-to(desktop-and-up) {
-    .header & {
-      width: 27%;
-    }
-  }
-  @include respond-to(wide-and-up) {
-    .header & {
-      width: 19%;
-    }
-  }
-  .footer-regions-wrapper & {
-    @include make-xs-column(12);
-    margin-top: $spacing-base;
-    @include respond-to(desktop-and-up) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: auto;
-      margin-top: 0;
-    }
-  }
-}
-
-.promotion--associated-organisation  {
-  @include make-xs-column(12);
-  @include make-lg-column(4);
-  padding-top: $spacing-base;
-  padding-bottom: $spacing-half;
-  @include respond-to(wide-and-up) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
 .promotion--social-share {
   @extend %has-margin-top-double;
   display: inline-block;
@@ -125,39 +111,6 @@
   border-top: 1px solid $brand-border;
   > .block-title {
     font-size: $font-size-h4;
-  }
-}
-
-.promotion--post-it {
-  > h2 {
-    font-size: $font-size-h4;
-    border-bottom: 1px solid $gray;
-    padding-bottom: $spacing-half;
-    color: $white;
-  }
-  .menu {
-    padding: $spacing-half 0;
-    @include respond-to(tablet) {
-      padding: $spacing-base 0;
-    }
-  }
-  .menu__link {
-    font-size: 16px;
-    color: $brand-gray-light;
-    padding: $spacing-quarter 0;
-    text-decoration: underline;
-    @include respond-to(tablet-and-up) {
-      padding: em(10) em(3);
-      margin: 0 $spacing-base 0 0;
-    }
-    &:hover,
-    &.active {
-      color: darken($brand-gray-light,10%);
-      text-decoration: underline;
-    }
-    &:hover {
-      background-color: transparent;
-    }
   }
 }
 

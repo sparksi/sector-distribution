@@ -176,6 +176,20 @@
   }
 }
 
+.search__results {
+  + .pager-nav {
+    .pager__item--next,
+    .pager__item--last,
+    .pager__item--previous,
+    .pager__item--first {
+      span {
+        text-transform: capitalize;
+        display: inline-block;
+      }
+    }
+  }
+}
+
 .search-help-link {
   text-decoration: underline;
 }

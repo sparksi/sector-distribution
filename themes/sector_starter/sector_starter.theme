@@ -233,15 +233,6 @@ function sector_starter_preprocess_field(&$variables) {
   }
 }
 
-
-function sector_starter_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  switch($form_id){
-    case 'comment_blog_post_comment_form' :
-      $form['#attached']['library'][] = 'sector_starter/comments';
-    break;
-  }
-}
-
 function sector_starter_preprocess_form_element(&$variables) {
   $element =& $variables['element'];
 
