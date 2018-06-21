@@ -421,7 +421,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\n<p> For example this text is added via a 'Global view filed using unfiltered text'.</p></div>\n"
+          content: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\n<p> For example this text is added via a 'Global view field using unfiltered text'.</p></div>\n"
           plugin_id: text_custom
       defaults:
         header: false
@@ -562,8 +562,8 @@ display:
           tags:
             previous: Previous
             next: Next
-            first: First
-            last: Last
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'

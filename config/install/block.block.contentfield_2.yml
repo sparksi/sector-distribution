@@ -13,20 +13,20 @@ dependencies:
 third_party_settings:
   block_class:
     classes: node__subtitle
-id: contentfield
+id: contentfield_2
 theme: sector_starter
-region: hero
-weight: -14
+region: pre_content
+weight: 0
 provider: null
 plugin: 'fieldblock:node'
 settings:
   id: 'fieldblock:node'
-  label: 'Subtitle (default)'
+  label: 'Subtitle (alternate 1)'
   provider: fieldblock
   label_display: '0'
   label_from_field: 1
   field_name: field_subtitle
-  formatter_id: text_default
+  formatter_id: text_trimmed
   formatter_settings: {  }
 visibility:
   term:
@@ -34,6 +34,6 @@ visibility:
     negate: false
     tid:
       -
-        target_id: '4'
+        target_id: '7'
     context_mapping:
       node: '@node.node_route_context:node'

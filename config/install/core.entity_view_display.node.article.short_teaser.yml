@@ -33,7 +33,7 @@ third_party_settings:
         classes:
           layout_class:
             slat: slat
-            has-margin-top-half: has-margin-top-half
+            has-margin-top-base-alternate: has-margin-top-base-alternate
             has-border-top: has-border-top
           ds_content: {  }
     regions:
@@ -49,12 +49,35 @@ third_party_settings:
         formatter: default
         settings:
           link: true
-          wrapper: h2
-          class: 'slat__title h5 has-no-margin-bottom'
+          wrapper: ''
+          class: ''
         ft:
-          id: reset
+          id: expert
           settings:
             lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: has-margin-top-base-alternate
+            ow-at: ''
+            fis: true
+            fis-el: h3
+            fis-cl: 'slat__title h5 has-no-margin'
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
 id: node.article.short_teaser
 targetEntityType: node
 bundle: article

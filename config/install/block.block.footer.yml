@@ -11,7 +11,7 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'navigation navigation--quaternary'
+    classes: 'navigation navigation--quaternary promotion promotion--navigation-quaternary js-responsive-navigation'
 id: footer
 theme: sector_starter
 region: post_footer

@@ -5,18 +5,17 @@ dependencies:
     - views.view.sector_view_information_tiles
   module:
     - block_class
-    - system
     - term_condition
     - views
   theme:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: has-margin-top-double
+    classes: 'promotion promotion--information-tiles has-margin-top-double'
 id: views_block__sector_view_information_tiles_block_1
 theme: sector_starter
 region: content
-weight: -8
+weight: -10
 provider: null
 plugin: 'views_block:sector_view_information_tiles-block_1'
 settings:
@@ -30,11 +29,8 @@ visibility:
   term:
     id: term
     negate: false
-    tid: null
+    tid:
+      -
+        target_id: '4'
     context_mapping:
       node: '@node.node_route_context:node'
-  request_path:
-    id: request_path
-    pages: '<front>'
-    negate: false
-    context_mapping: {  }

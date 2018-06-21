@@ -27,7 +27,5 @@ visibility:
     tid:
       -
         target_id: '4'
-      -
-        target_id: '7'
     context_mapping:
       node: '@node.node_route_context:node'
