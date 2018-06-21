@@ -95,6 +95,9 @@ dependencies:
  - views_menu_children_filter
  - captcha
  - field_delimiter
+ - views_bulk_operations
+ - views_bulk_edit
+ - actions_permissions
 
 themes:
  - bootstrap
