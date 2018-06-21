@@ -41,7 +41,7 @@
     ],
     "vid": [
         {
-            "value": 37
+            "value": 70
         }
     ],
     "langcode": [
@@ -57,7 +57,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-04-24T00:27:46+00:00",
+            "value": "2018-06-06T21:56:13+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -74,7 +74,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "33ef5f9f-9442-4c3e-972d-8afeaa84c364"
                     }
                 ]
             }
@@ -91,7 +91,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "33ef5f9f-9442-4c3e-972d-8afeaa84c364"
                     }
                 ],
                 "lang": "en"
@@ -154,7 +154,7 @@
     ],
     "changed": [
         {
-            "value": "2018-04-24T00:27:46+00:00",
+            "value": "2018-06-06T21:56:13+00:00",
             "lang": "en",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -186,7 +186,7 @@
     "metatag": [
         {
             "value": {
-                "title": "News content sample  | Base3",
+                "title": "News content sample  | Sector d8 base 1",
                 "description": "The News Content type is an example for\u00a0taxonomy (or data)\u00a0driven content. Taxonomy driven content\u00a0\u00a0is content organised by sort and filter criteria. In a Drupal context the sort and filter criteria can be either data\u00a0or taxonomy based."
             }
         }
@@ -211,9 +211,9 @@
     ],
     "body": [
         {
-            "value": "<p class=\"lead\">The News Content type is an example for&nbsp;taxonomy (or data)&nbsp;driven content. Taxonomy driven content&nbsp;&nbsp;is content organised by sort and filter criteria. In a Drupal context the sort and filter criteria can be either data&nbsp;or taxonomy based. &nbsp;<\/p>\r\n\r\n<p>The Sector News content type (based on Drupal's core Article content type)&nbsp;is prepared for transient content that is most relevant on publication (Issue date). The Article type taxonomy allows to sort and filter News into groups for example media release&nbsp;or&nbsp;newsletter. The News archive allows the user to filter by date.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample page is a node of the content type <em>News<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">The News Content type is an example for&nbsp;taxonomy (or data)&nbsp;driven content. Taxonomy driven content&nbsp;&nbsp;is content organised by sort and filter criteria. In a Drupal context the sort and filter criteria can be either data&nbsp;or taxonomy based. &nbsp;<\/p>\r\n\r\n<p>The Sector News content type (based on Drupal's core Article content type)&nbsp;is prepared for transient content that is most relevant on publication (Issue date). The Article type taxonomy allows to sort and filter News into groups for example media release&nbsp;or&nbsp;newsletter. The News archive allows the user to filter by date.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\r\n<p>This sample page is a node of the content type <em>News<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
-            "processed": "<p class=\"lead\">The News Content type is an example for\u00a0taxonomy (or data)\u00a0driven content. Taxonomy driven content\u00a0\u00a0is content organised by sort and filter criteria. In a Drupal context the sort and filter criteria can be either data\u00a0or taxonomy based. \u00a0<\/p>\n\n<p>The Sector News content type (based on Drupal's core Article content type)\u00a0is prepared for transient content that is most relevant on publication (Issue date). The Article type taxonomy allows to sort and filter News into groups for example media release\u00a0or\u00a0newsletter. The News archive allows the user to filter by date.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n<p>This\u00a0sample page is a node of the content type <em>News<\/em>.<\/p>\n<\/div>\n\n<p>{Sample content}<\/p>",
+            "processed": "<p class=\"lead\">The News Content type is an example for\u00a0taxonomy (or data)\u00a0driven content. Taxonomy driven content\u00a0\u00a0is content organised by sort and filter criteria. In a Drupal context the sort and filter criteria can be either data\u00a0or taxonomy based. \u00a0<\/p>\n\n<p>The Sector News content type (based on Drupal's core Article content type)\u00a0is prepared for transient content that is most relevant on publication (Issue date). The Article type taxonomy allows to sort and filter News into groups for example media release\u00a0or\u00a0newsletter. The News archive allows the user to filter by date.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This sample page is a node of the content type <em>News<\/em>.<\/p>\n<\/div>\n\n<p>{Sample content}<\/p>",
             "summary": ""
         }
     ],
