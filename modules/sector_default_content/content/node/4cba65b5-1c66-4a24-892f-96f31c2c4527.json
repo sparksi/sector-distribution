@@ -35,7 +35,7 @@
     ],
     "vid": [
         {
-            "value": 14
+            "value": 79
         }
     ],
     "langcode": [
@@ -51,7 +51,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2017-11-01T01:51:01+00:00",
+            "value": "2018-06-21T00:55:08+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -68,7 +68,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "33ef5f9f-9442-4c3e-972d-8afeaa84c364"
                     }
                 ]
             }
@@ -85,7 +85,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "33ef5f9f-9442-4c3e-972d-8afeaa84c364"
                     }
                 ],
                 "lang": "und"
@@ -130,7 +130,7 @@
     ],
     "changed": [
         {
-            "value": "2017-11-01T01:51:01+00:00",
+            "value": "2018-06-21T00:55:08+00:00",
             "lang": "und",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -161,7 +161,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Site map | Base3",
+                "title": "Site map | Sector d8 base 1",
                 "description": "The sitemap is built from a Drupal menu block and a node of the content type page assigned to the footer menu."
             }
         }
@@ -174,17 +174,22 @@
             "lang": "und"
         }
     ],
-    "body": [
+    "rh_action": [
         {
-            "value": "<p class=\"lead\">The sitemap is built from a Drupal menu block and a node of the content type page assigned to the footer menu.<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n\t<p>In this example a Drupal menu block based on the main menu is embedded into a node of the content type page.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
-            "format": "basic_html",
-            "processed": "<p class=\"lead\">The sitemap is built from a Drupal menu block and a node of the content type page assigned to the footer menu.<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n\t<p>In this example a Drupal menu block based on the main menu is embedded into a node of the content type page.<\/p>\n<\/div>\n\n<p>{Sample content}<\/p>",
-            "summary": ""
+            "value": "bundle_default"
         }
     ],
-    "field_auto_contextual_content": [
+    "rh_redirect_response": [
         {
-            "target_id": 3
+            "value": 301
+        }
+    ],
+    "body": [
+        {
+            "value": "<p class=\"lead\">The sitemap is built from a Drupal menu block and a node of the content type page assigned to the footer menu.<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\r\n<p>In this example a Drupal menu block based on the main menu is embedded into a node of the content type page.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "format": "basic_html",
+            "processed": "<p class=\"lead\">The sitemap is built from a Drupal menu block and a node of the content type page assigned to the footer menu.<\/p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>In this example a Drupal menu block based on the main menu is embedded into a node of the content type page.<\/p>\n<\/div>\n\n<p>{Sample content}<\/p>",
+            "summary": ""
         }
     ],
     "field_last_updated": [

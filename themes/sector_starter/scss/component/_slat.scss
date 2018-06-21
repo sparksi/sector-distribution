@@ -24,13 +24,14 @@
 
 .slat__title {
   a {
+    color: $brand-blue-gray;
     &:hover,
     &:focus {
       text-decoration: underline;
       transition:all 0.05s ease-in;
     }
     &:visited {
-      color: $brand-visited;
+      color: #515151;
     }
   }
 }
@@ -39,6 +40,7 @@
   .lead {
     color: $text-color;
     font-size: $font-size-base;
+    font-weight: 400;
   }
 }
 
@@ -47,28 +49,13 @@
   text-decoration: underline;
 }
 
-.slat__read-more {
-  margin-top: $spacing-half;
-  > a {
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
-  }
-  &.btn-default {
-    > a {
-      color: $gray-dark;
-    }
-  }
-}
-
 .slat__date {
   @extend %date;
 }
 
 .slat__term {
   font-size: 14px;
-  color: $gray-light;
+  color: $brand-blue-gray;
   > a {
     &:focus {
       outline-offset: 0;
@@ -94,7 +81,7 @@
   width: 100%;
   display: block;
   .slat__title {
-    color: $brand-primary;
+    color: $brand-blue-gray;
     transition: none;
   }
   .slat__body {
@@ -107,7 +94,7 @@
   &:focus {
     text-decoration: none;
     .slat__title {
-      color: lighten($brand-primary,15%);
+      color: $brand-blue-gray;
       text-decoration: underline;
       transition: all 0.05s ease-in;
     }
@@ -127,19 +114,25 @@
   }
   &:visited {
     .slat__title {
+      color: #515151;
+    }
+    .action--more {
       color: $brand-visited;
+      &:before {
+        background-color: $brand-visited;
+      }
     }
   }
   /* Add external link icon to links within the main content areas */
   &[href^="http://"],
   &[href^="https://"],
   &[rel*='external'] {
-    .slat__read-more {
+    .action--more {
       &:after {
         font-size: 16px;
         content: '';
-        @include sprite(icon--external-dark-grey);
-        margin-left: 6px;
+        @include sprite(icon--external-blue);
+        margin-left: 2px;
         vertical-align: middle;
       }
     }

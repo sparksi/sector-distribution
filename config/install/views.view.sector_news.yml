@@ -304,7 +304,7 @@ display:
           admin_label: ''
           empty: true
           tokenize: false
-          content: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\n<p> For example this text is added via a 'Global view filed using unfiltered text'.</p></div>"
+          content: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\n<p> For example this text is added via a 'Global view field using unfiltered text'.</p></div>"
           plugin_id: text_custom
       defaults:
         header: false

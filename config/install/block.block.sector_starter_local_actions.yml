@@ -6,7 +6,7 @@ dependencies:
 id: sector_starter_local_actions
 theme: sector_starter
 region: content
-weight: -13
+weight: -15
 provider: null
 plugin: local_actions_block
 settings:

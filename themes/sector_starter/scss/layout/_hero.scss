@@ -3,34 +3,39 @@
  * BEM block for hero.
  */
 .hero {
-  background-color: #EBEBEB;
+  background-color: $brand-gray-lightest;
   .path-frontpage & {
     background-color: transparent;
   }
   .region-hero {
-    @include make-md-column(12);
+    padding-left: 15px;
+    padding-right: 15px;
     .path-frontpage & {
-      @include make-md-column(10);
-      @include make-md-column-push(1);
-      text-align: center;
-      margin-top: 3vw;
-      margin-bottom: 16vw;
-      @include respond-to(desktop-and-up) {
-        margin-top: 13vh;
-        margin-bottom: 17vh;
+      padding-top: 3vw;
+      padding-bottom: 15vw;
+      margin: 0;
+      @include respond-to(tablet-and-up) {
+        padding-bottom: 8vw;
       }
-    }
-  }
-  .page-header {
-    .path-frontpage & {
-      color: $white;
+      @include respond-to(wide-and-up) {
+        padding-right: 70%;
+        padding-top: 13vh;
+        padding-bottom: 17vh;
+        background-image: url(../images/device-set.svg);
+        background-position: right 90px;
+        background-repeat: no-repeat;
+        background-size: 697px 470px;
+      }
+      @include respond-to(mega-and-up) {
+        background-position: 490px 90px;
+      }
     }
   }
 }
 
 :not(.path-frontpage) .region-hero {
-  margin: 4vw 0;
+  margin: 2vw 0;
   @include respond-to(desktop-and-up) {
-    margin: 4vh 0;
+    margin: 2vh 0;
   }
 }

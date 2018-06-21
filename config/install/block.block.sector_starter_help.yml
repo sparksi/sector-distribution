@@ -8,7 +8,7 @@ dependencies:
 id: sector_starter_help
 theme: sector_starter
 region: content
-weight: -16
+weight: -18
 provider: null
 plugin: help_block
 settings:

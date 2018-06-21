@@ -8,12 +8,20 @@
 }
 
 .node__subtitle {
-  @extend .lead;
+  margin-bottom: 0;
+  font-weight: 300;
+  @include respond-to(tablet-and-up) {
+    font-size: 22px;
+    line-height: 1.7;
+  }
   margin-bottom: 0;
   .hero & {
     .path-frontpage & {
-      color: $white;
-      @include font-smoothing;
+      font-weight: 400;
+      @extend %has-margin-top-base;
+      @include respond-to(tablet-and-up) {
+        font-size: 18px;
+      }
     }
   }
 }

@@ -3,6 +3,7 @@
 use Drupal\Component\Utility\Html;
 use Drupal\Core\Entity;
 use Drupal\taxonomy\Entity\Term;
+use Drupal\node\Entity\Node;
 /**
  * @file
  * Adjust the theme settings form to add local tweaks and options.
@@ -176,8 +177,23 @@ function sector_starter_preprocess_page(&$variables) {
 }
 
 function sector_starter_preprocess_html(&$variables) {
-  if($node = \Drupal::routeMatch()->getParameter('node')) {
-    $variables['node_status'] = $node->isPublished() ? 'published' : 'unpublished';
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if($node instanceof Node) {
+    if(isset($variables['node_status'])) {
+      $variables['node_status'] = $node->isPublished() ? 'published' : 'unpublished';
+    }
+    /**
+     * Get the term id from the 'field_page_variant' taxonomy field.
+     * If greater than zero, load the term and acquire the name value
+     * as a css safe value.
+    */
+    if($node->hasField('field_page_variant')) {
+      $tid = $node->get('field_page_variant')->target_id;
+      if($tid > 0) {
+        $term_object = Term::load($tid);
+        $variables['attributes']['class'][] = 'page-variant--' . Html::getClass($term_object->get('name')->value);
+      }
+    }
   }
 }
 
@@ -217,12 +233,13 @@ function sector_starter_preprocess_field(&$variables) {
   }
 }
 
+function sector_starter_preprocess_form_element(&$variables) {
+  $element =& $variables['element'];
 
-function sector_starter_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-  switch($form_id){
-    case 'comment_blog_post_comment_form' :
-      $form['#attached']['library'][] = 'sector_starter/comments';
-    break;
+  /**
+     * Hide description field from header search form
+    */
+  if(!empty($element['#id']) && $element['#id'] == "edit-keys") {
+    unset($variables['description']);
   }
-
 }

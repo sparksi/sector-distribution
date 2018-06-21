@@ -2,7 +2,8 @@
  * @file
  * BEM block for Custom list styles
  */
- /* Note: This list style requires a nested <a> */
+
+/* Note: This list style requires a nested <a> */
 .list--has-arrows {
   > li {
     > a {
@@ -44,9 +45,15 @@
     > a {
       @extend .btn;
       @extend .btn-default;
+      text-align: left;
+      border-radius: 0;
+      font-weight: 400;
       float: left;
       display: block;
-      margin: 0 2px 2px 0;
+      margin: 0 8px 8px 0;
+      @include respond-to(tablet-and-up) {
+        padding: 10px 15px;
+      }
     }
   }
 }

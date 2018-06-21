@@ -45,7 +45,7 @@
     ],
     "vid": [
         {
-            "value": 58
+            "value": 72
         }
     ],
     "langcode": [
@@ -61,7 +61,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-05-10T01:00:14+00:00",
+            "value": "2018-06-06T22:10:45+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -78,7 +78,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "6c76b983-fb51-4799-9629-7233f2c4b77c"
+                        "value": "33ef5f9f-9442-4c3e-972d-8afeaa84c364"
                     }
                 ]
             }
@@ -95,7 +95,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "6c76b983-fb51-4799-9629-7233f2c4b77c"
+                        "value": "33ef5f9f-9442-4c3e-972d-8afeaa84c364"
                     }
                 ],
                 "lang": "und"
@@ -174,7 +174,7 @@
     ],
     "changed": [
         {
-            "value": "2018-05-10T01:00:14+00:00",
+            "value": "2018-06-06T22:10:45+00:00",
             "lang": "und",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -196,16 +196,10 @@
             "lang": "und"
         }
     ],
-    "revision_translation_affected": [
-        {
-            "value": true,
-            "lang": "und"
-        }
-    ],
     "metatag": [
         {
             "value": {
-                "title": "Sector Section entry pages | Base2",
+                "title": "Sector Section entry pages | Sector d8 base 1",
                 "description": "Sector's simple\u00a0layout templates use\u00a0sitebuilder tools\u00a0and\u00a0Drupal taxonomies\u00a0to keep displays\u00a0modular and consistent across your site.\u00a0"
             }
         }
@@ -230,9 +224,9 @@
     ],
     "body": [
         {
-            "value": "<p class=\"lead\">Sector's simple&nbsp;layout templates use&nbsp;sitebuilder tools&nbsp;and&nbsp;Drupal taxonomies&nbsp;to keep displays&nbsp;modular and consistent across your site.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample page is a node of the content type <em>Page<\/em> added to Level 1 in the&nbsp;main menu. It&nbsp;is displayed using&nbsp;the Section entry page <em>Page variant<\/em>.&nbsp;<\/p>\r\n<\/div>\r\n\r\n<p>The flexible Drupal content type architecture allows site builders to create a new content type&nbsp;for each design template. But using content types to distinguish between layouts can lead to a large number of content types with the risk of&nbsp;inconsistent display and&nbsp;hard to maintain sites.&nbsp;<\/p>\r\n\r\n<p>Sector's concept of Page layout variants and Page content settings allows us to built and manage a variety of design templates per content type. This way content types can be used to distinguish between data types, not design requirements, leading to a lean and simple content architecture and grouping.&nbsp;&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">Sector's simple&nbsp;layout templates use&nbsp;sitebuilder tools&nbsp;and&nbsp;Drupal taxonomies&nbsp;to keep displays&nbsp;modular and consistent across your site.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\r\n<p>This&nbsp;sample page is a node of the content type <em>Page<\/em> added to Level 1 in the&nbsp;main menu. It&nbsp;is displayed using&nbsp;the Section entry page <em>Page variant<\/em>.&nbsp;<\/p>\r\n<\/div>\r\n\r\n<p>The flexible Drupal content type architecture allows site builders to create a new content type&nbsp;for each design template. But using content types to distinguish between layouts can lead to a large number of content types with the risk of&nbsp;inconsistent display and&nbsp;hard to maintain sites.&nbsp;<\/p>\r\n\r\n<p>Sector's concept of Page layout variants and Page content settings allows us to built and manage a variety of design templates per content type. This way content types can be used to distinguish between data types, not design requirements, leading to a lean and simple content architecture and grouping.&nbsp;&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "basic_html",
-            "processed": "<p class=\"lead\">Sector's simple\u00a0layout templates use\u00a0sitebuilder tools\u00a0and\u00a0Drupal taxonomies\u00a0to keep displays\u00a0modular and consistent across your site.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n<p>This\u00a0sample page is a node of the content type <em>Page<\/em> added to Level 1 in the\u00a0main menu. It\u00a0is displayed using\u00a0the Section entry page <em>Page variant<\/em>.\u00a0<\/p>\n<\/div>\n\n<p>The flexible Drupal content type architecture allows site builders to create a new content type\u00a0for each design template. But using content types to distinguish between layouts can lead to a large number of content types with the risk of\u00a0inconsistent display and\u00a0hard to maintain sites.\u00a0<\/p>\n\n<p>Sector's concept of Page layout variants and Page content settings allows us to built and manage a variety of design templates per content type. This way content types can be used to distinguish between data types, not design requirements, leading to a lean and simple content architecture and grouping.\u00a0\u00a0<\/p>\n\n<p>{Sample content}<\/p>",
+            "processed": "<p class=\"lead\">Sector's simple\u00a0layout templates use\u00a0sitebuilder tools\u00a0and\u00a0Drupal taxonomies\u00a0to keep displays\u00a0modular and consistent across your site.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This\u00a0sample page is a node of the content type <em>Page<\/em> added to Level 1 in the\u00a0main menu. It\u00a0is displayed using\u00a0the Section entry page <em>Page variant<\/em>.\u00a0<\/p>\n<\/div>\n\n<p>The flexible Drupal content type architecture allows site builders to create a new content type\u00a0for each design template. But using content types to distinguish between layouts can lead to a large number of content types with the risk of\u00a0inconsistent display and\u00a0hard to maintain sites.\u00a0<\/p>\n\n<p>Sector's concept of Page layout variants and Page content settings allows us to built and manage a variety of design templates per content type. This way content types can be used to distinguish between data types, not design requirements, leading to a lean and simple content architecture and grouping.\u00a0\u00a0<\/p>\n\n<p>{Sample content}<\/p>",
             "summary": ""
         }
     ],

@@ -59,15 +59,12 @@
  */
 #}
 {{ title_prefix }}
-<h4{{ title_attributes }} class="slat__title">
+<h3{{ title_attributes }} class="h4 slat__title">
   <a href="{{ url }}">{{ title }}</a>
-</h4>
+</h3>
 {{ title_suffix }}
 {% if snippet %}
   <div class="slat__body">
     <p{{ content_attributes }}>{{ snippet }}</p>
   </div>
-{% endif %}
-{% if info %}
-  <p>{{ info }}</p>
 {% endif %}

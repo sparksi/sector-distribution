@@ -44,7 +44,7 @@
   }
 }
 
- /**
+/**
   * See Bootstrap. http://getbootstrap.com/css/#type-lists. Repeated here
   * because it is a common 'helper'.
   * Remove the default list-style and left margin on list items
@@ -53,20 +53,9 @@
   */
 /*.list-unstyled {}*/
 
-/* More link */
-.more-link,
-%more-link {
-  font-size: 18px;
-  font-weight: 600;
-  &:focus {
-    outline-offset: 0;
-  }
-}
-
 /* Inline block helper */
 .inline-block {
   display: inline-block;
-  //vertical-align: top;
 }
 
 /**
@@ -136,6 +125,14 @@
 .has-margin-left-half,
 %has-margin-left-half {
   margin-left: $spacing-half;
+}
+
+.has-margin-top-base-alternate,
+%has-margin-top-base-alternate {
+  margin-top: $spacing-half+($spacing-quarter);
+  @include respond-to(desktop-and-up) {
+    margin-top: $spacing-base;
+  }
 }
 
 /**
@@ -211,12 +208,12 @@
   padding-top: 1px;
   &:before {
     position: absolute;
-    top: -2px;
+    top: -1px;
     left: 0;
     content: '';
     width: 40px;
-    height: 2px;
-    background-color: $brand-border;
+    height: 1px;
+    background-color: $black;
   }
 }
 
@@ -256,6 +253,13 @@
   }
 }
 
+.has-heading-alternate,
+%has-heading-alternate {
+  font-size: $font-size-h4;
+  color: $brand-bluer-gray;
+  letter-spacing: 0.02em;
+}
+
 .link-down,
 %link-down {
   position: relative;
@@ -274,8 +278,7 @@
   @include word-wrap;
 }
 
-@import "../scss/generic/sprite",
-        "../scss/generic/sprite-mixins";
+@import "generic/sprite", "generic/sprite-mixins";
 
 %apply-external-link-icon {
   /* Add external link icon to links */
@@ -326,8 +329,6 @@
 
 .is-pseudo-dl-item,
 %is-pseudo-dl-item {
-  @include respond-to(tablet-and-up) {
-  }
   .field--label {
     @extend %pseudo-dl-term;
   }
@@ -379,7 +380,6 @@
   ul,
   ol {
     color: rgba($white,0.9);
-    @include font-smoothing;
   }
   a {
     text-decoration: underline;
@@ -400,6 +400,11 @@
   margin-left: $spacing-base;
 }
 
-.has-font-weight-600 {
-  font-weight: 600;
+.box-it-up,
+%box-it-up {
+  background-color: #eaecef;
+  padding: $spacing-half;
+  @include respond-to(tablet-and-up) {
+    padding: $spacing-base;
+  }
 }

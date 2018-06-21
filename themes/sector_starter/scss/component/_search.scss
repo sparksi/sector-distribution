@@ -54,10 +54,8 @@
   }
   .description {
     color: $gray-lighter;
-    @include font-smoothing;
   }
 }
-
 
 .search--flyout,
 .search-page-form {
@@ -65,20 +63,20 @@
     &.form-text,
     &.form-search {
       height: 43px;
-      @include font-smoothing;
     }
   }
   .form-group {
     margin-bottom: 0;
   }
   .btn {
-    background-color: $gray-darker;
-    border: 1px solid $black;
-    height: 43px;
-    width: 43px;
+    background-color: $brand-gray-lightest;
+    border: 1px solid $brand-border;
+    height: 54px;
+    width: 54px;
     padding: 0;
     position: relative;
     text-indent: -50000px;
+    border-radius: 0;
     .icon {
       display: none;
     }
@@ -88,47 +86,53 @@
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%) scale(1.5);
-      @include sprite(icon--search-white);
-      @include font-smoothing;
-      font-size: 14px;
+      @include sprite(icon--search-dark-grey);
+      font-size: 13px;
     }
-    &:hover {
-      background-color: $brand-primary;
-      border: 1px solid $black;
-    }
+    &:hover,
+    &:active,
+    &:active:focus,
     &:focus {
+      background-color: darken($brand-gray-lightest,5%);
+      border: 1px solid $brand-border;
       box-shadow: none;
-      background-color: $black;
-      outline: 1px solid $black;
       outline-offset: 0;
+      outline: none;
+    }
+    &:focus,
+    &:active:focus {
+      border: 1px solid $black;
     }
   }
   .description {
-    @include font-smoothing;
     margin-bottom: 0;
     margin-top: 0;
   }
 }
 
 .search--flyout {
-  background-color: $gray-dark;
-  padding: 15px;
   clear: both;
   display: none;
   @include respond-to(tablet-large-and-down) {
-    margin-top: $spacing-quarter;
+    margin-top: 20px;
   }
   &.search-is-active {
     display: block;
+    padding-left: $responsive-layout-gutter;
+    padding-right: $responsive-layout-gutter;
+    @include respond-to(desktop-and-up) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   // only hide for desktop
-  @include respond-to(desktop-and-up){
+  @include respond-to(desktop-and-up) {
     width: 64%;
     .js & {
       display: none;
       position: absolute;
-      top: -12px;
-      right: 45px;
+      top: -4px;
+      right: 51px;
       clear: none;
     }
   }
@@ -143,9 +147,10 @@
   .form-control {
     &.form-text,
     &.form-search {
-      background-color: $gray;
-      border: 1px solid $black;
-      color: $gray-lighter;
+      background-color: $white;
+      border: 1px solid $brand-border;
+      color: $text-color;
+      height: 54px;
       &:focus {
         outline: none;
         outline-offset: 0;
@@ -153,20 +158,38 @@
       }
     }
   }
-  .description {
-    @extend .text-hide;
-    //color: $gray-lighter;
-  }
 }
 
 /* /search/node for core search */
 .search-form {
-  border: 1px solid $brand-border;
-  background-color: lighten($gray-lighter,5%);
-  padding: $spacing-base;
   margin: 0;
+  @extend %box-it-up;
   .search-help-link {
-    @include font-smoothing;
     display: inline-block;
   }
+  .button {
+    border-radius: 0;
+    margin-right: 10px;
+    padding: 12px 15px;
+    font-size: 16px;
+    margin-top: 0;
+  }
+}
+
+.search__results {
+  + .pager-nav {
+    .pager__item--next,
+    .pager__item--last,
+    .pager__item--previous,
+    .pager__item--first {
+      span {
+        text-transform: capitalize;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+.search-help-link {
+  text-decoration: underline;
 }

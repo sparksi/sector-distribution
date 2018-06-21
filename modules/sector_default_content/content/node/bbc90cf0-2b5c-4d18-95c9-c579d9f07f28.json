@@ -48,7 +48,7 @@
     ],
     "vid": [
         {
-            "value": 35
+            "value": 77
         }
     ],
     "langcode": [
@@ -64,7 +64,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2018-04-19T04:04:05+00:00",
+            "value": "2018-06-13T22:24:38+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -81,7 +81,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "33ef5f9f-9442-4c3e-972d-8afeaa84c364"
                     }
                 ]
             }
@@ -98,7 +98,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "33ef5f9f-9442-4c3e-972d-8afeaa84c364"
                     }
                 ],
                 "lang": "und"
@@ -192,7 +192,7 @@
     ],
     "changed": [
         {
-            "value": "2018-04-19T04:04:05+00:00",
+            "value": "2018-06-13T22:24:38+00:00",
             "lang": "und",
             "format": "Y-m-d\\TH:i:sP"
         }
@@ -223,7 +223,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Sector Standard pages | Base3",
+                "title": "Sector Standard pages | Sector d8 base 1",
                 "description": "Sector supports a variety of Information Architecture principles - one is to organise your content hierarchical.\u00a0Hierarchical content is stored in pages.\u00a0The pages are organised in a menu tree.\u00a0"
             }
         }
@@ -248,9 +248,9 @@
     ],
     "body": [
         {
-            "value": "<p class=\"lead\">Sector supports a variety of Information Architecture principles - one is to organise your content hierarchical.&nbsp;Hierarchical content is stored in pages.&nbsp;The pages are organised in a menu tree.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n<p>This&nbsp;sample page is a node of the content type <em>Page<\/em> added in&nbsp;Level 2&nbsp;under Section A&nbsp;in the&nbsp;main menu. It&nbsp;is displayed using&nbsp;the Standard&nbsp;page <em>Page variant<\/em>.&nbsp;<\/p>\r\n<\/div>\r\n\r\n<p>Most hierarchical pages in your Sector site will use the Standard page variant and menus.&nbsp;&nbsp;<\/p>\r\n\r\n<p><strong>The concept works well with:<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>linear content structure and user movements (book like content, A to B to C)<\/li>\r\n\t<li>'layered'&nbsp;information architecture (information about information in promotional or introductory top layers).<\/li>\r\n<\/ul>\r\n\r\n<p><strong>Known limitations:<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.<\/li>\r\n\t<li>Hierarchical content assumes the principal of 'one page, one position'. This often does not work in web context. But if the principle is broken, context is lost.<\/li>\r\n<\/ul>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">Sector supports a variety of Information Architecture principles - one is to organise your content hierarchical.&nbsp;Hierarchical content is stored in pages.&nbsp;The pages are organised in a menu tree.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\r\n<p>This&nbsp;sample page is a node of the content type <em>Page<\/em> added in&nbsp;Level 2&nbsp;under Section A&nbsp;in the&nbsp;main menu. It&nbsp;is displayed using&nbsp;the Standard&nbsp;page <em>Page variant<\/em>.&nbsp;<\/p>\r\n<\/div>\r\n\r\n<p>Most hierarchical pages in your Sector site will use the Standard page variant and menus.&nbsp;&nbsp;<\/p>\r\n\r\n<p><strong>The concept works well with:<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>linear content structure and user movements (book like content, A to B to C)<\/li>\r\n\t<li>'layered'&nbsp;information architecture (information about information in promotional or introductory top layers).<\/li>\r\n<\/ul>\r\n\r\n<p><strong>Known limitations:<\/strong><\/p>\r\n\r\n<ul>\r\n\t<li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.<\/li>\r\n\t<li>Hierarchical content assumes the principal of 'one page, one position'. This often does not work in web context. But if the principle is broken, context is lost.<\/li>\r\n<\/ul>\r\n\r\n<p>{Sample content}<\/p>\r\n",
             "format": "full_html",
-            "processed": "<p class=\"lead\">Sector supports a variety of Information Architecture principles - one is to organise your content hierarchical.\u00a0Hierarchical content is stored in pages.\u00a0The pages are organised in a menu tree.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n<p>This\u00a0sample page is a node of the content type <em>Page<\/em> added in\u00a0Level 2\u00a0under Section A\u00a0in the\u00a0main menu. It\u00a0is displayed using\u00a0the Standard\u00a0page <em>Page variant<\/em>.\u00a0<\/p>\n<\/div>\n\n<p>Most hierarchical pages in your Sector site will use the Standard page variant and menus.\u00a0\u00a0<\/p>\n\n<p><strong>The concept works well with:<\/strong><\/p>\n\n<ul><li>linear content structure and user movements (book like content, A to B to C)<\/li>\n\t<li>'layered'\u00a0information architecture (information about information in promotional or introductory top layers).<\/li>\n<\/ul><p><strong>Known limitations:<\/strong><\/p>\n\n<ul><li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.<\/li>\n\t<li>Hierarchical content assumes the principal of 'one page, one position'. This often does not work in web context. But if the principle is broken, context is lost.<\/li>\n<\/ul><p>{Sample content}<\/p>\n",
+            "processed": "<p class=\"lead\">Sector supports a variety of Information Architecture principles - one is to organise your content hierarchical.\u00a0Hierarchical content is stored in pages.\u00a0The pages are organised in a menu tree.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This\u00a0sample page is a node of the content type <em>Page<\/em> added in\u00a0Level 2\u00a0under Section A\u00a0in the\u00a0main menu. It\u00a0is displayed using\u00a0the Standard\u00a0page <em>Page variant<\/em>.\u00a0<\/p>\n<\/div>\n\n<p>Most hierarchical pages in your Sector site will use the Standard page variant and menus.\u00a0\u00a0<\/p>\n\n<p><strong>The concept works well with:<\/strong><\/p>\n\n<ul><li>linear content structure and user movements (book like content, A to B to C)<\/li>\n\t<li>'layered'\u00a0information architecture (information about information in promotional or introductory top layers).<\/li>\n<\/ul><p><strong>Known limitations:<\/strong><\/p>\n\n<ul><li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.<\/li>\n\t<li>Hierarchical content assumes the principal of 'one page, one position'. This often does not work in web context. But if the principle is broken, context is lost.<\/li>\n<\/ul><p>{Sample content}<\/p>\n",
             "summary": ""
         }
     ],

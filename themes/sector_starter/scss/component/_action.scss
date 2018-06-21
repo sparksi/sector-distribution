@@ -4,26 +4,66 @@
  */
 .action--back-to-top {
   position: relative;
-  padding: 6px 12px 6px 17px;
+  padding: 30px 10px 6px 10px;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease-out;
   @extend .pull-right;
-  @extend .btn;
+  color: $text-color;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
   &:before {
-    content: '\2191';
+    content: '';
     position: absolute;
-    top: 4px;
-    left: 4px;
-    white-space: nowrap;
+    top: 6px;
+    left: 35px;
+    font-size: 18px;
+    @include sprite(arrow--chevron-up-dark-grey);
+    transition: all 0.175s ease-in;
+  }
+  &:hover,
+  &:focus {
+    color: $text-color;
+    text-decoration: none;
+    &:before {
+      margin-top: -5px;
+    }
   }
   .you-are-going-down & {
     visibility: visible;
     opacity: 1;
   }
+}
+
+.action--more,
+%action--more {
+  color: $brand-primary;
+  position: relative;
+  font-weight: 700;
+  font-size: 15px;
+  &:before {
+    content: '';
+    width: 70%;
+    height: 1px;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    background-color: #4f89e1;
+    transition: width 0.175s ease-in;
+  }
   &:hover,
-  &:active {
-    box-shadow: none;
+  &:focus {
+    text-decoration: none;
+    &:before {
+      width: 100%;
+    }
+  }
+  &:visited {
+    color: $brand-visited;
+    &:before {
+      background-color: $brand-visited;
+    }
   }
 }
 

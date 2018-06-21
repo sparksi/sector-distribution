@@ -6,7 +6,7 @@ dependencies:
 id: sector_starter_local_tasks
 theme: sector_starter
 region: content
-weight: -15
+weight: -17
 provider: null
 plugin: local_tasks_block
 settings:

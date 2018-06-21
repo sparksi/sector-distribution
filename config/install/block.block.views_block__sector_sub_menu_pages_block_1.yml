@@ -11,11 +11,11 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'promotion promotion--in-this-section has-margin-top-double'
+    classes: 'promotion promotion--in-this-section'
 id: views_block__sector_sub_menu_pages_block_1
 theme: sector_starter
 region: content
-weight: -10
+weight: -12
 provider: null
 plugin: 'views_block:sector_sub_menu_pages-block_1'
 settings:

@@ -13,9 +13,12 @@ classes:
     - slat--has-rollover
     - slat--tile
     - has-margin-top-base
+    - has-margin-top-base-alternate
     - has-margin-top-half
     - has-margin-top-double
     - has-margin-top-and-half
+    - has-padding-top-double
+    - has-padding-top-and-half
     - has-padding-top-base
     - has-padding-top-half
     - has-border-top
@@ -56,6 +59,7 @@ classes:
     - has-margin-top-quarter
     - has-margin-top-half
     - has-margin-top-base
+    - has-margin-top-base-alternate
     - has-margin-top-double
     - has-margin-right-quarter
     - has-margin-left-quarter
@@ -70,6 +74,5 @@ classes:
     - text-right
     - text-center
     - text-center-wide-and-up
-    - has-line-height-prose
-    - has-font-weight-600
+    - action--more
 use_field_names: true

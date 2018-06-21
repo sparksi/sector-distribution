@@ -16,7 +16,6 @@
 
 .control--fly-out-search {
   width: 10%;
-  margin-top: 9px;
   @include respond-to(tablet-large-and-down) {
     display: none;
   }

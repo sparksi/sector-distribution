@@ -37,7 +37,7 @@ third_party_settings:
           layout_class:
             slat: slat
             has-margin-top-base: has-margin-top-base
-            has-border-top-large: has-border-top-large
+            has-border-top-alternate: has-border-top-alternate
           ds_content: {  }
     regions:
       ds_content:
@@ -51,8 +51,8 @@ third_party_settings:
         formatter: default
         settings:
           link: true
-          wrapper: h2
-          class: 'slat__title h4'
+          wrapper: h3
+          class: slat__title
         ft:
           id: reset
           settings:
@@ -69,6 +69,8 @@ content:
     settings:
       trim_length: 256
     third_party_settings:
+      field_formatter_filter:
+        format: teaser_display_text
       ds:
         ft:
           id: default
@@ -76,9 +78,8 @@ content:
             lb: ''
             classes:
               - slat__body
+              - has-margin-top-half
             lb-col: false
-      field_formatter_filter:
-        format: teaser_display_text
     region: ds_content
 hidden:
   field_auto_contextual_content: true

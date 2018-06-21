@@ -17,7 +17,7 @@ $icon-offset: 54px;
       position: absolute;
       top: 0;
       left: -($icon-offset);
-      background-image: url(../images/sprite--file-type-icons.png);
+      background-image: url(../images/sprite--file-type-icons-medium.png);
       background-position: 0 -53px;
       background-repeat: no-repeat;
       height: 53px;
@@ -55,28 +55,11 @@ $icon-offset: 54px;
         top: 3px;
         left: 0;
         background-image: url(../images/sprite--file-type-icons-small.png);
-        background-position: 0 -18px;
+        background-position: 0 0;
         height: 18px;
         width: 13px;
         background-size: inherit;
       }
-
-      // Acrobat types.
-      &.file--application-pdf {&:before {background-position: 0 -36px;}}
-
-      // Word document types.
-      &.file--x-office-document {&:before {background-position: 0 -72px;}}
-
-      // Spreadsheet document types.
-      &.file--x-office-spreadsheet {&:before {background-position: 0 -54px;}}
-
-      // Presentation document types.
-      &.file--x-office-presentation {&:before {background-position: 0 -108px;}}
-
-      // Compressed archive types
-      &.file--package-x-generic {&:before {background-position: 0 0;}}
-
-      &.file--text-html {&:before {background-position: 0 -198px;}}
     }
     .media__meta {
       font-size: 14px;
@@ -108,7 +91,6 @@ $icon-offset: 54px;
     font-weight: 700;
     overflow-wrap: break-word;
     word-wrap: break-word;
-    @include font-smoothing;
     &:focus {
       outline-offset: 0;
     }

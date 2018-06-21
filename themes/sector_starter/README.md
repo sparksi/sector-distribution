@@ -17,7 +17,7 @@ This README outlines:
 
 There are two ways to use Sector Starter, as a base theme or by cloning and owning.
 
-### Use Sector Starter as a base theme.
+### Use Sector Starter as a base theme
 
 Create a subtheme the [Drupal way](https://www.drupal.org/node/225125) using Sector Starter as your base theme.
 
@@ -34,23 +34,22 @@ Make a copy of the Sector Starter theme
 
 **Within your _new_ `{PROJECTTHEMENAME}` theme...**
 
-**Rename the .yml and theme files in the root of your theme eg: sector_starter.info.yml becomes:**
+`yarn && yarn setup` will install all theme dependencies and execute a script which will rename these files: 
 
-`/{PROJECTTHEMENAME}/{PROJECTTHEMENAME}.info.yml`
+* `{PROJECTTHEMENAME}.breakpoints.yml`
+* `{PROJECTTHEMENAME}.info.yml`
+* `{PROJECTTHEMENAME}.libraries.yml`
+* `{PROJECTTHEMENAME}.theme`
 
-Shortcuts:
+It will also rename the theme preprocess hooks in `{PROJECTTHEMENAME}.theme`. e.g. `function {PROJECTTHEMENAME}_preprocess()`.
 
-`mv sector_starter.breakpoints.yml {PROJECTTHEMENAME}.breakpoints.yml`
-`mv sector_starter.info.yml {PROJECTTHEMENAME}.info.yml`
-`mv sector_starter.libraries.yml {PROJECTTHEMENAME}.libraries.yml`
-`mv sector_starter.theme {PROJECTTHEMENAME}.theme`
+And rename references to sector_starter in `package.json` and `js/src/global.behaviors.js`.
 
-**Search and replace 'sector_starter', 'Sector starter' and 'Sector' with your theme name or similar within your new theme. We recommended to take a granular approach.**
+**However you will still need to edit `{PROJECTTHEMENAME}.info.yml` and change the theme's `name` property.**
 
-Note: The package.json file also inludes a repository url which should be updated.
+Optionally update your themes `screenshot.png`.
 
-Optionally update your themes screenshot.png
-
+---
 Now jump in the backend and activate your new subtheme via the path:
 
 `/admin/appearance`
@@ -65,7 +64,7 @@ If you want to modify SCSS/CSS/SVG sprites etc you'll need to install localised 
 
 This project uses a NodeJS LibSaSS compilation pipeline.
 
-This project uses NPM or Yarn to provide a completely localised project dependency environment.
+This project uses Yarn to provide a completely localised project dependency environment.
 
 ### Installing the localised dependencies requires the following steps:
 
@@ -83,9 +82,9 @@ This repository contains an `.nvmrc` that allows us to set the node version we e
 To install NVM, run `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.1/install.sh | bash`.
 When the install finishes it will tell you to log out and back in, but this is not required, just run `source ~/.profile` to refresh your path.
 
-To download versions of NodeJS, run `nvm install x.x` or just `nvm install 9` which is the latest version as of writing this.
+To download versions of NodeJS, run `nvm install x.x` or just `nvm install stable` which is the latest stable version.
 
-Run `nvm install 9`
+Run `nvm install stable`
 
 `nvm ls-remote` will give you a complete list of available versions.
 
@@ -97,15 +96,15 @@ NVM will look for an `.nvmrc` file and use that if it can, so once you `cd` insi
 Note that any NVM commands you run are session only.
 When you log out, next time you come back the system version of NodeJS will be in use again.
 
-Run `nvm alias default 9`
+Run `nvm alias default 10`
 
 This is to save a default that will be used for all future bash sessions.
 
-You can replace "6" with the "x.x" version you prefer if required.
+You can replace "10" with the "x.x" version you prefer if required.
 
 ### 2. Install dependencies & Run the project
 
-Install Yarn (Optional)
+Install Yarn
 
  `apt-get install yarn`
 
@@ -115,21 +114,17 @@ Then `cd` inside the root of this theme directory.
 
 Now you can run the 3 commands needed to compile and watch the files in the `./scss/` directory as well as watch for new SVG's in the `/build/sprite/` directory. The SCSS files will be compiled into a `./css/` directory. SVG's will be compiled to the `/images/` directory. Read more about svg here: https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
 
-`npm install && npm run gulp`
+`yarn install && yarn build`
 
-or if using yarn
+The first command, `yarn install` will download and install all the modules listed in the `package.json` file into the `./node_modules/` directory.
 
-`yarn install && yarn run gulp`
-
-The first command, `npm install` or `yarn install` will download and install all the modules listed in the `package.json` file into the `./node_modules/` directory.
-
-The last command, `npm run gulp` or `yarn run gulp`, again executes a script defined in the `package.json`. This script runs Gulp, which simply executes the default commands found in the `gulpfile.js` file.
+The last command, `yarn build`, again executes a script defined in the `package.json`. This script runs a series of subtasks also defined in `package.json` that will build the CSS, Javascript and SVG's that the theme requires.
 
 #### Known error during default Gulp task:
 
 `Error: EPERM: operation not permitted, chmod  '…/sector_starter/scss/generic/_sprite-mixins.scss'`
 
-During the Gulp task Gulp is trying to run chmod over scss/generic/_sprite-mixins.scss
+During the Gulp SVG task Gulp is trying to run chmod over scss/generic/_sprite-mixins.scss
 
 Because the _sprite-mixins.scss file is not owned by your user Gulp is not able to perform the chmod.
 
@@ -137,22 +132,53 @@ Related issue: https://github.com/gulpjs/gulp/issues/1012
 
 In order to allow Gulp to perform the chmod run `sudo chown -R <your-user-name> scss/generic/_sprite-mixins.scss` at the root of the theme.
 
-Rerun the `npm run gulp` or `yarn run gulp` command and the error should be resolved.
+Rerun the `yarn svg:sprite` command and the error should be resolved.
 
 #### Working with Sass and Gulp
 
 To watch for changes to SASS and new SVG's run the following command
 inside the root of this theme directory.
 
-`npm run gulp`
+`yarn build` (One off production command complies sprites and compiles and lints SCSS, JS, builds SVG sprite...)
 
-or with yarn
+`yarn watch` (Watches Sprites, SCSS and JS and lints SCSS and JS + Source mapping)
 
-`yarn run gulp` (One off production command complies sprites and compiles and lints SCSS, JS)
+`yarn scss:compile` (+ Source mapping)
 
-`yarn run gulp watch` (Watches Sprites, SCSS and JS and lints SCSS and JS)
+#### Useful NPM scripts
 
-`yarn run gulp dev` (+ Source mapping)
+##### Utilities
+
+* `postinstall` - runs after packages are installed. `yarn outdated` is executed, which checks your installed packages for updates.
+* `yarn reinstall` - empties node_modules directory, cleans yarn cache and reinstalls packages
+* `yarn clean` - empties css & js/dist directories
+
+##### Javascript
+
+* `yarn js:transpile` - runs babel transpiler
+* `yarn js:lint` - runs eslint, according to configuration in .eslintrc.yml
+* `yarn js:watch` - listens on js/src/*.js and runs js:transpile,
+* `yarn js` - executes both js:lint & yarn js:transpile
+
+##### SASS
+
+* `yarn scss:lint` - lints the SCSS according to configuration in .sass-lint.yml
+* `yarn scss:compile` - compiles SCSS (in gulpfile) with dev flag (source maps),
+* `yarn scss:watch` - listens on scss/**/*.scss and runs scss:compile
+* `yarn pcss` - runs autoprefixer on all files in css/*
+
+##### SVGs
+
+* `yarn svg:sprite` - runs svgSprite & copySpriteMixins gulp tasks
+* `yarn svg:optimise` - runs svgo on all svgs (including sprite) in images/
+* `yarn svg:watch` - listens on build/sprite/*.svg and executes yarn svg (both sprite + optimise tasks)
+* `yarn svg` - executes svg:sprite & svg:optimise tasks
+
+##### Watching & Building
+
+* `yarn watch` - runs all scripts matching *:watch
+* `yarn build` - compiles production-ready theme. Executes `yarn clean`, builds optimised SVG sprite, lints SCSS, builds SCSS (if linting is successful), runs post-css (autoprefixer) and compiles javascript.
+
 
 ## CSS Coding Standards and Frontend Architecture
 This theme includes Bootstrap so we already have a frontend architecture framework out of the box. The aim of this theme is to use Bootstrap frontend architecture as a baseline framework whilst embracing the consensus of the Drupal community for all new development of frontend related components.

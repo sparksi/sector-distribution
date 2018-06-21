@@ -54,14 +54,15 @@ third_party_settings:
       weight: 0
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'meta call-to-action'
+        label: Meta
         element: div
         show_label: false
         label_element: h3
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'meta call-to-action-left-line'
       label: Meta
     group_related_content:
       children:

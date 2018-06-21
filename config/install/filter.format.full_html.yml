@@ -5,7 +5,7 @@ dependencies:
     - editor
     - entity_embed
     - linkit
-  default_config_hash: ZXvAkQXJ9qh2vet7LBDx1Lh4WmvNvklIZQJHF6CuQuA
+  default_config_hash: bARQrVIepawQHwIj6TIFYwbTtkW8PCdKP2_aHbfwhB0
 name: 'Full HTML'
 format: full_html
 weight: -8

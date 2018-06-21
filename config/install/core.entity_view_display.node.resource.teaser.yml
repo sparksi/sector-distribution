@@ -36,8 +36,8 @@ third_party_settings:
         classes:
           layout_class:
             slat: slat
-            has-margin-top-base: has-margin-top-base
-            has-padding-top-base: has-padding-top-base
+            has-margin-top-and-half: has-margin-top-and-half
+            has-padding-top-and-half: has-padding-top-and-half
             has-border-top: has-border-top
           ds_content: {  }
     regions:
@@ -55,7 +55,7 @@ third_party_settings:
         settings:
           link: true
           wrapper: h2
-          class: 'slat__title h4 has-no-margin'
+          class: 'slat__title h3 has-no-margin'
         ft:
           id: reset
           settings:

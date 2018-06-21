@@ -17,6 +17,7 @@
   }
   &.navigation-is-open {
     display: block;
+    margin-top: 20px;
   }
   @include respond-to(tablet-large-and-down) {
     width: 100%;
@@ -40,6 +41,7 @@
         border-top: 1px solid #4e4e4e;
         position: relative;
         padding-left: 18px;
+        padding: 15px 15px;
         &[href^="http://"],
         &[href^="https://"],
         &[rel*='external'] {
@@ -113,20 +115,9 @@
 }
 
 .navigation--primary {
-  padding-top: 2px;
-  width: 100%;
-  @include respond-to(desktop-and-up) {
-    width: 60%;
-  }
-  @include respond-to(wide-and-up) {
-    width: 65%;
-  }
-  @include respond-to(mega-large-and-up) {
-    width: 68%;
-  }
+  background-color: $gray-darker;
   @extend %apply-flyout-menu-style;
   @include respond-to(tablet-large-and-down) {
-    display: none;
     padding-left: 0;
     padding-right: 0;
   }
@@ -147,15 +138,27 @@
       }
     }
     > .menu__item {
+      @include respond-to(desktop-and-up) {
+        margin: 0 15px;
+      }
+      @include respond-to(wide-large-and-up) {
+        margin: 0 $spacing-base;
+      }
       > .menu__link {
         background-color: transparent;
         margin: 0;
-        @include respond-to(wide-large-and-up) {
-          padding: 10px $spacing-base;
+        @include respond-to(desktop-and-up) {
+          padding: 5px 0;
+        }
+        &:focus {
+          outline-offset: 0;
         }
         &:hover {
           background-color: transparent;
-          color: rgba(255,255,255,0.8);
+          color: $white;
+          @include respond-to(desktop-and-up) {
+            color: rgba($brand-blue-gray,0.8);
+          }
         }
       }
     }
@@ -170,7 +173,7 @@
     &.active-trail {
       .menu__link {
         @include respond-to(desktop-and-up) {
-          text-decoration: underline;
+          border-bottom: 1px solid $brand-blue-gray;
         }
       }
     }
@@ -183,14 +186,17 @@
       text-overflow: ellipsis;
       overflow: hidden;
       @include respond-to(desktop-and-up) {
-        font-weight: 600;
         border-right: none;
         border-bottom: none;
+        color: $brand-blue-gray;
       }
       &:hover,
       &:focus {
         background-color: transparent;
-        color: rgba(255,255,255,0.8);
+        color: $white;
+        @include respond-to(desktop-and-up) {
+          color: rgba($brand-blue-gray,0.8);
+        }
       }
     }
   }
@@ -214,6 +220,10 @@
       &.is-expanded {
         .menu__link {
           background-color: transparent;
+          &:focus {
+            background-color: $brand-focused;
+            outline-offset: 0;
+          }
         }
       }
     }
@@ -237,12 +247,12 @@
       .menu__item {
         &.collapsed {
           > .menu__link {
-             background-position: right 15px;
+            background-position: right 15px;
           }
         }
         &.is-expanded {
           > .menu__link {
-             background-position: right 16px;
+            background-position: right 16px;
           }
         }
       }
@@ -280,7 +290,6 @@
     padding: $spacing-half 0;
     color: $text-color;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-    @include font-smoothing;
     &:hover,
     &:focus {
       border-bottom: 1px solid rgba(0, 0, 0, 0.35);
@@ -295,6 +304,10 @@
       font-weight: 700;
       color: darken($text-color,10%);
       border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+      &:focus {
+        background-color: $brand-focused;
+        outline-offset: 0;
+      }
     }
     &:focus {
       background-color: $brand-focused;
@@ -304,9 +317,6 @@
 }
 
 .navigation--quaternary {
-  @include make-xs-column(12);
-  @include make-lg-column(8);
-  margin-top: $spacing-half;
   .menu__item {
     @include respond-to(tablet-and-up) {
       float: left;

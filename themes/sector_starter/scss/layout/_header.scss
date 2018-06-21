@@ -3,16 +3,24 @@
  * BEM block for header.
  */
 .header {
-  padding-top: $spacing-half;
-  padding-bottom: $spacing-half;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: 0px 6px 10px rgba(#667891,0.15);
   @include respond-to(desktop-and-up) {
+    background-color: $white;
     padding-top: $spacing-base;
     padding-bottom: $spacing-base;
     position: relative;
   }
+  &.navigation-is-open {
+    padding-bottom: 0;
+    @include respond-to(desktop-and-up) {
+      padding-bottom: $spacing-base;
+    }
+  }
   .site__row {
     @include respond-to(desktop-and-up) {
-      position: relative; // Create a positioning context
+      position: relative;
     }
   }
   .region-header {
@@ -20,5 +28,6 @@
     align-items: flex-start;
     flex-wrap: wrap;
     height: 100%;
+    align-items: center;
   }
 }

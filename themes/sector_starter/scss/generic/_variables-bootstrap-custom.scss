@@ -16,12 +16,11 @@ $gray-base:                 #000;
 $gray-light:                lighten($gray-base, 40%);
 // $gray-lighter:           lighten($gray-base, 93.5%) // #eee
 
-$brand-primary:         #005ea5;
-$brand-success:         #00823b;
-// $brand-info:            #5bc0de
-$brand-warning:         darken(#f0ad4e,10%);
-// $brand-danger:          #d9534f
-
+$brand-primary:         #204ad4;
+$brand-success:         #07b16b;
+$brand-info:            #4689e1;
+$brand-warning:         #b28a70;
+$brand-danger:          #ef604d;
 
 //== Scaffolding
 //
@@ -30,7 +29,7 @@ $brand-warning:         darken(#f0ad4e,10%);
 //** Background color for `<body>`.
 // $body-bg:               #fff
 //** Global text color on `<body>`.
-// $text-color:            $gray-dark
+$text-color:            #252526;
 
 //** Global textual link color.
 // $link-color:            $brand-primary
@@ -44,11 +43,10 @@ $brand-warning:         darken(#f0ad4e,10%);
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-sans-serif-alt: 'roboto', Helvetica, Arial, sans-serif; // Font loaded via sector_starter.libraries.yml
+$font-family-sans-serif: 'Nunito Sans', Helvetica, Arial, sans-serif; // Nunito Sans Font loaded via sector_starter.libraries.yml
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
-$font-family-monospace: "Courier New", monospace;
+$font-family-monospace: 'Courier New', monospace;
 // $font-family-base:        $font-family-sans-serif
 
 $font-size-base:          18px !default;
@@ -56,17 +54,17 @@ $font-size-large:         ceil(($font-size-base * 1.333));
 $font-size-small:         ceil(($font-size-base * 0.777));
 
 $font-size-h1:            floor(($font-size-base * 3.111)); // 56
-$font-size-h2:            floor(($font-size-base * 2.333)); // 42
-$font-size-h3:            ceil(($font-size-base * 1.667)); // 30
-$font-size-h4:            ceil(($font-size-base * 1.333)); // 24
+$font-size-h2:            floor(($font-size-base * 1.66)); // 30
+$font-size-h3:            ceil(($font-size-base * 1.333)); // 24
+$font-size-h4:            ceil(($font-size-base * 1.111)); // 20
 $font-size-h5:            $font-size-base;
 $font-size-h6:            ceil(($font-size-base * 0.777)); // 14
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.444; // 26/18
+$line-height-base:        1.555; // 28/18
 
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed: 26px;
+$line-height-computed: 28px;
 //** By default, this inherits from the `<body>`.
 // $headings-font-family:    inherit
 // $headings-font-weight:    500
@@ -344,7 +342,7 @@ $grid-gutter-width:         30px;
 //## Define the maximum width of `.container` for different screen sizes.
 
 // Small screen / tablet
-// $container-tablet:             (720px + $grid-gutter-width)
+$container-tablet:             (660px + $grid-gutter-width);
 //** For `$screen-sm-min` and up.
 // $container-sm:                 $container-tablet
 

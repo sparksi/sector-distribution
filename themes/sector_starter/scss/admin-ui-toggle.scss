@@ -5,7 +5,7 @@
 
 /* BOOTSTRAP CUSTOM VARIABLES
 ------------------------------------------------------------------------*/
-@import "../scss/generic/variables-bootstrap-custom";
+@import "generic/variables-bootstrap-custom";
 
 
 /* VARIABLES
@@ -30,8 +30,7 @@
 
 /* GENERIC
 ------------------------------------------------------------------------*/
-@import "../scss/generic/mixins",
-        "../scss/generic/breakpoints";
+@import "generic/mixins", "generic/breakpoints";
 
 
 /* COMPONENT
@@ -84,10 +83,9 @@ html body.admin-ui-hide.admin-menu {margin-top: 0!important;}
     @extend .btn;
     @extend .btn-sm;
     @extend .btn-primary;
+    border-radius: 0;
     font-family: $font-family-sans-serif;
-    @include font-smoothing;
-    background-color: #ab3131;
-    padding: 14px 14px 13px;
+    padding: 13px 14px 14px;
     font-size: 9px;
     position: fixed;
     top: 0;
@@ -97,17 +95,13 @@ html body.admin-ui-hide.admin-menu {margin-top: 0!important;}
     z-index: 9999;
     font-weight: 700;
     line-height: 1;
-    &:hover,
-    &:focus {
-      background-color: darken(#ab3131,10%);
-    }
     &:focus {
       outline: none;
     }
   }
   &.ui-is-hidden {
     button {
-      @extend .btn-info;
+      @extend .btn-danger;
     }
   }
 }

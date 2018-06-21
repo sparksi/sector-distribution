@@ -8,7 +8,7 @@
 .btn {
   font-size: 16px;
   text-decoration: none;
-  border-radius:0;
+  font-weight: 700;
   white-space: normal;
   &:focus {
     outline: 3px solid $brand-focused;
@@ -42,16 +42,16 @@
   align-content: center;
   -ms-flex-line-pack: center;
   color: $white;
-  height: 48px;
-  width: 48px;
+  height: 58px;
+  width: 58px;
   padding: 0;
   border-left: 1px solid $black;
   text-indent: -5000px;
   &:after {
     content: '';
     position: absolute;
-    top: 20px;
-    left: 18px;
+    top: 24px;
+    left: 24px;
     @include sprite(arrow--micro-down-white);
   }
 }

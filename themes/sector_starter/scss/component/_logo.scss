@@ -17,50 +17,24 @@
 .logo--primary {
   .header & {
     margin-left: 15px;
+    height: 44px;
+  }
+  svg {
+    .header & {
+      height: 44px;
+    }
   }
   .logo__link {
-    display: block;
+    display: inline-block;
+  }
+  .logo__brand {
+    transition: all 0.05s ease-in;
     .footer-regions-wrapper & {
-      color: $white;
+      width: 200px;
     }
-  }
-  .logo__brand {
-    fill: $white;
-    transition:all 0.05s ease-in;
-    @include respond-to(desktop) {
-      .logo__item {
-         fill: transparent;
-      }
-    }
-  }
-}
-
-.logo--secondary {
-  .logo__brand {
-    fill: $gray-lighter;
-  }
-  .logo__link {
-    display: block;
-    width: 260px;
-    height: 30px;
-    color: $white;
-    @include respond-to(wide-and-up) {
-      float: right;
-    }
-    &:hover {
-      .logo__brand {
-        fill: $white;
-      }
-      &:focus {
-        .logo__brand {
-          fill: $black;
-        }
-      }
-    }
-    &:focus {
-      outline-offset: 0;
-      .logo__brand {
-        fill: $black;
+    path {
+      .footer-regions-wrapper & {
+        fill: $white!important;
       }
     }
   }

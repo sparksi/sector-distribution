@@ -37,7 +37,7 @@ third_party_settings:
         effect: none
         speed: fast
         id: ''
-        classes: 'meta call-to-action'
+        classes: 'meta call-to-action-left-line'
     group_related_content:
       children:
         - field_related_files
