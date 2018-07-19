@@ -49,6 +49,7 @@ settings:
           items:
             - media_entity_image
             - media_entity_file
+            - insert_video
         -
           name: Format
           items:

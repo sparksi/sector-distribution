@@ -11,6 +11,7 @@ dependencies:
     - media.type.file
   module:
     - ds
+    - field_delimiter
     - field_formatter_filter
     - field_group
     - file
@@ -145,6 +146,8 @@ content:
     settings:
       link: false
     third_party_settings:
+      field_delimiter:
+        delimiter: ','
       ds:
         ds_limit: ''
         ft:

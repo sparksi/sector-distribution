@@ -2,19 +2,33 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.image.field_credit_or_caption
-    - field.field.media.image.field_media_image
-    - field.field.media.image.field_tags
-    - field.field.media.image.field_title
-    - media.type.image
+    - core.entity_view_mode.media.full_width
+    - field.field.media.video.field_credit_or_caption
+    - field.field.media.video.field_media_video_embed_field
+    - field.field.media.video.field_tags
+    - field.field.media.video.field_title
+    - field.field.media.video.field_transcript
+    - media.type.video
   module:
     - ds
-    - field_delimiter
     - field_formatter_filter
     - field_group
-    - responsive_image
     - text
+    - video_embed_field
 third_party_settings:
+  field_group:
+    group_transcript:
+      children:
+        - field_transcript
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        label: Transcript
+        id: ''
+        classes: 'transcript has-margin-top-base'
+        open: false
+      label: Transcript
   ds:
     layout:
       id: ds_1col
@@ -33,31 +47,15 @@ third_party_settings:
           ds_content: {  }
     regions:
       ds_content:
-        - field_media_image
+        - field_media_video_embed_field
         - field_credit_or_caption
+        - group_transcript
+        - field_transcript
         - group_meta
-        - field_tags
-  field_group:
-    group_meta:
-      children:
-        - field_tags
-      parent_name: ''
-      weight: 2
-      format_type: html_element
-      format_settings:
-        id: ''
-        classes: 'meta call-to-action has-margin-top-base'
-        element: div
-        show_label: false
-        label_element: h3
-        attributes: ''
-        effect: none
-        speed: fast
-      label: Meta
-id: media.image.default
+id: media.video.full_width
 targetEntityType: media
-bundle: image
-mode: default
+bundle: video
+mode: full_width
 content:
   field_credit_or_caption:
     weight: 1
@@ -76,35 +74,36 @@ content:
             lb-col: false
     type: text_default
     region: ds_content
-  field_media_image:
+  field_media_video_embed_field:
     weight: 0
     label: hidden
     settings:
-      image_link: ''
-      responsive_image_style: ''
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
     third_party_settings: {  }
-    type: responsive_image
+    type: video_embed_field_video
     region: ds_content
-  field_tags:
+  field_transcript:
     weight: 3
-    label: inline
-    settings:
-      link: false
+    label: hidden
+    settings: {  }
     third_party_settings:
-      field_delimiter:
-        delimiter: ','
+      field_formatter_filter:
+        format: full_html
       ds:
-        ds_limit: ''
         ft:
           id: default
           settings:
             lb: ''
-            lb-col: true
+            lb-col: false
             classes: {  }
-    type: entity_reference_label
+    type: text_default
     region: ds_content
 hidden:
   created: true
+  field_tags: true
   field_title: true
   name: true
   thumbnail: true
