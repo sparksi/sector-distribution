@@ -1,0 +1,92 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/sites\/default\/files\/embed_buttons\/media-video.png"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/file\/file"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "href": "http:\/\/default\/user\/1?_format=hal_json"
+            }
+        ]
+    },
+    "fid": [
+        {
+            "value": 16
+        }
+    ],
+    "uuid": [
+        {
+            "value": "8aa3af84-2c7b-4946-b4e1-9ea5204ebefd"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/file\/file\/uid": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/user\/1?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/user\/user"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "fdb861ec-f98e-4ef6-87e9-fce6d1f65e84"
+                    }
+                ]
+            }
+        ]
+    },
+    "filename": [
+        {
+            "value": "media-video.png"
+        }
+    ],
+    "uri": [
+        {
+            "value": "public:\/\/embed_buttons\/media-video.png",
+            "url": "\/sites\/default\/files\/embed_buttons\/media-video.png"
+        }
+    ],
+    "filemime": [
+        {
+            "value": "image\/png"
+        }
+    ],
+    "filesize": [
+        {
+            "value": 209
+        }
+    ],
+    "status": [
+        {
+            "value": true
+        }
+    ],
+    "created": [
+        {
+            "value": "2018-07-17T04:59:39+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "changed": [
+        {
+            "value": "2018-07-17T04:59:41+00:00",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "data": [
+        {
+            "value": "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8\/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAAAg0lEQVQ4y7WTwQ3CQAwE59AVkP88aCElUEI6gJbogA6glJQAD9dxvJAQUhRyhv35seu1vS6tNTKoAGqXSkSU+l5sIb+a7kjifwLqTZ0yDgbgql7UITPCEZjVMbODPXBYzMEKHsAUEXOPgzMwLpHXHJwi4t59hW\/IPwlS\/cz2VpTsOz8BBSglo2XOzngAAAAASUVORK5CYII="
+        }
+    ]
+}
