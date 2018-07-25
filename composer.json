@@ -58,6 +58,7 @@
         "drupal/recreate_block_content": "1.0",
         "drupal/term_condition": "1.1",
         "drupal/token": "1.1",
+        "drupal/video_embed_field": "2.0",
         "drupal/views_bulk_edit": "2.1",
         "drupal/views_bulk_operations": "2.3",
         "drupal/views_menu_children_filter": "1.0-beta2",
