@@ -8,6 +8,7 @@ label: 'Linkit WYSIWYG'
 description: 'Profile used by the Linkit button in the WYSIWYG'
 matchers:
   6cd345c6-4771-47db-884a-10e35534abc3:
+    uuid: 6cd345c6-4771-47db-884a-10e35534abc3
     id: 'entity:node'
     weight: 0
     settings:
