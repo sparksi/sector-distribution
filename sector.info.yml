@@ -98,6 +98,8 @@ dependencies:
  - views_bulk_operations
  - views_bulk_edit
  - actions_permissions
+ - video_embed_media
+ - video_embed_field
 
 themes:
  - bootstrap
