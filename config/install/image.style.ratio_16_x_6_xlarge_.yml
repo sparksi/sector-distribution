@@ -11,3 +11,4 @@ effects:
     data:
       width: 1400
       height: 525
+      anchor: center-center
