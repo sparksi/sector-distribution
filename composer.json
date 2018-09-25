@@ -31,7 +31,7 @@
         "drupal/bootstrap": "3.10",
         "drupal/captcha": "1.0-beta1",
         "drupal/config_update": "1.5",
-        "drupal/core": "8.5.3",
+        "drupal/core": "8.6.1",
         "drupal/ctools": "3.0",
         "drupal/default_content": "1.0-alpha7",
         "drupal/devel": "1.2",
@@ -124,7 +124,7 @@
                 "Hide menu block title if empty": "https://www.drupal.org/files/issues/2018-04-12/menu_block-hide_block_if_no_links-2757215-7.patch"
             },
             "drupal/core": {
-                "Profile provided configuration entities can have unmeetable dependencies": "https://www.drupal.org/files/issues/2922417-2.patch"
+                "Profile provided configuration entities can have unmeetable dependencies": "https://www.drupal.org/files/issues/2018-09-20/2922417-25.patch"
             },
             "drupal/field_delimiter": {
                 "Unfined index fix": "https://www.drupal.org/files/issues/field-deleimiter-undefined-2926377.patch"
