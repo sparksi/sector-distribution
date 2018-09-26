@@ -4,6 +4,7 @@ use Drupal\Component\Utility\Html;
 use Drupal\Core\Entity;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
 /**
  * @file
  * Adjust the theme settings form to add local tweaks and options.
@@ -154,7 +155,8 @@ function sector_starter_preprocess_breadcrumb(&$variables){
 function sector_starter_preprocess_page(&$variables) {
 
   // Load the node entity from the current route.
-  if($node = \Drupal::routeMatch()->getParameter('node')) {
+  $node = getNodeFromRoute();
+  if(!empty($node)) {
     if ($node->hasField('field_auto_contextual_content')) {
       // Taxonomy name we will be searching for.
       $taxonomy_name = 'Hide sidebar';
@@ -177,8 +179,13 @@ function sector_starter_preprocess_page(&$variables) {
 }
 
 function sector_starter_preprocess_html(&$variables) {
-  $node = \Drupal::routeMatch()->getParameter('node');
-  if($node instanceof Node) {
+  // Load the node entity from the current route.
+  $node = getNodeFromRoute();
+  if(!empty($node)) {
+    // Add a class to the <body> if the node is unpublished.
+    if(!$node->isPublished()) {
+      $variables['attributes']['class'][] = 'page-node-status-unpublished';
+    }
     if(isset($variables['node_status'])) {
       $variables['node_status'] = $node->isPublished() ? 'published' : 'unpublished';
     }
@@ -241,5 +248,33 @@ function sector_starter_preprocess_form_element(&$variables) {
     */
   if(!empty($element['#id']) && $element['#id'] == "edit-keys") {
     unset($variables['description']);
+  }
+}
+
+/**
+ * Helper function.
+ *
+ * Gets the current node from the route.
+ *
+ * Needed to get the correct node when viewing a revision.
+ * Credit for this code goes to Berdir: https://www.drupal.org/u/berdir
+ *
+ * Taken from https://www.drupal.org/project/drupal/issues/2730631#comment-12667635
+ * and adjusted slightly.
+ */
+function getNodeFromRoute() {
+  $node = NULL;
+  if (\Drupal::routeMatch()->getParameter('node')) {
+    $node = \Drupal::routeMatch()->getParameter('node');
+  }
+  if ($node instanceof NodeInterface) {
+    return $node;
+  }
+  // The node revision page does not upcast the node.
+  if (\Drupal::routeMatch()->getParameter('node_revision')) {
+    $revision_id = \Drupal::routeMatch()->getParameter('node_revision');
+    if ($revision_id > 0) {
+      return \Drupal::entityTypeManager()->getStorage('node')->loadRevision($revision_id);
+    }
   }
 }
