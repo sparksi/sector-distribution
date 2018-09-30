@@ -10,7 +10,7 @@
 
 /* VARIABLES
 ------------------------------------------------------------------------*/
-@import "../scss/generic/variables";
+@import "generic/variables";
 
 
 /* BOOTSTRAP (Just the components we need)
@@ -35,7 +35,7 @@
 
 /* COMPONENT
 ------------------------------------------------------------------------*/
-@import "../scss/component/btn";
+@import "component/btn";
 
 
 html body.admin-ui-hide.admin-menu {margin-top: 0!important;}

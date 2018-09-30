@@ -11,7 +11,8 @@ const options = {
     'sector_starter.theme',
     'package.json',
     'js/src/global.behaviors.js',
-    'config/install/sector_starter.settings.yml'
+    'config/install/sector_starter.settings.yml',
+    'composer.json'
   ],
   from: /sector_starter/g,  // string or regex
   to: `${themeName}`,
