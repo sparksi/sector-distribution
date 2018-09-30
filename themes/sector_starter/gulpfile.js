@@ -10,10 +10,6 @@ const log = console.log;
 let environment = 'prod';   // default to prod
 
 const gulp = require('gulp'),
-      sass = require('gulp-sass'),
-      sourcemaps = require('gulp-sourcemaps'),
-      globbing = require('gulp-sass-glob'),
-      gulpif = require('gulp-if'),
       rename = require("gulp-rename"),
       svg = {
         sprite : require('gulp-svg-sprite')
@@ -40,17 +36,6 @@ const config = {
       css : './css/',
       sass : './scss/'
     }
-  },
-  sass : {
-    dev : {
-      outputStyle : 'expanded',
-      sourceMaps : true,
-    },
-    prod : {
-      outputStyle : 'compressed',
-      sourceMaps : false
-    },
-    includePaths : ['node_modules']
   },
   svg : {
     sprite : {
@@ -108,22 +93,4 @@ gulp.task('copySpriteMixins', () => {
     .pipe(gulp.dest(config.paths.sprite.mixins.dist));
 });
 
-gulp.task('default', () => {
-  var param, i = process.argv.indexOf("--env");
-  environment = i>-1 ? process.argv[i+1] : environment;
-
-  let sass_config = config.sass[environment];
-  sass_config.includePaths = config.sass.includePaths;
-
-  return gulp.src('scss/**/*.s+(a|c)ss')
-    // Initialize the source maps.
-    .pipe(gulpif(sass_config.sourceMaps, sourcemaps.init()))
-    // Enable globbing and configure it to look for SCSS files.
-    .pipe(globbing())
-    // Compile the SASS
-    .pipe(sass(sass_config).on('error', sass.logError))
-    // Write sourcemaps into the CSS file.
-    .pipe(gulpif(sass_config.sourceMaps, sourcemaps.write()))
-    // Send output through vinyl-fs to play nice with ownership.
-    .pipe(gulp.dest('./css'));
-});
+gulp.task('default', ['svgSprite','copySpriteMixins']);
