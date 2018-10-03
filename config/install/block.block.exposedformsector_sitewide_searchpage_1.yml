@@ -1,0 +1,38 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_sitewide_search
+  module:
+    - block_class
+    - system
+    - term_condition
+    - views
+  theme:
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'search search--primary'
+id: exposedformsector_sitewide_searchpage_1
+theme: sector_starter
+region: content
+weight: -15
+provider: null
+plugin: 'views_exposed_filter_block:sector_sitewide_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:sector_sitewide_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }
