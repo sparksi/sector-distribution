@@ -1,0 +1,60 @@
+/**
+ * @file
+ * Style for Facets
+ */
+.facets-widget-links {
+  > ul {
+    @extend .list-unstyled;
+  }
+}
+
+.facet-summary-item--clear {
+  float: right;
+  > a {
+    color: $brand-primary;
+    text-decoration: underline;
+    font-size: 16px;
+    border-radius: 0;
+    margin-top: 6px;
+    display: inline-block;
+    &:hover,
+    &:focus,
+    &:active:focus {
+      background-color: $white;
+    }
+    &:visited {
+      color: $brand-primary;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}
+
+.facet-summary-item--facet {
+  > a {
+    font-size: 16px;
+    display: block;
+    position: relative;
+    font-weight: 600;
+    border: 1px solid $brand-primary;
+    padding: 5px 33px 5px 10px;
+    color: $brand-primary;
+    background-color: $white;
+    .action--deactivate-facet {
+      &:before {
+        content: '';
+        position: absolute;
+        @include sprite(icon--close-small-blue);
+        top: 11px;
+        right: 10px;
+      }
+    }
+    &:visited {
+      color: $brand-primary;
+      &:hover {
+        color: $brand-primary;
+      }
+    }
+  }
+}

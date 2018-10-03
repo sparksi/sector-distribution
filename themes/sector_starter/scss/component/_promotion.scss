@@ -248,3 +248,67 @@
     }
   }
 }
+
+.promotion--facet-summary {
+  > ul {
+    @extend .list-unstyled;
+    @extend .list-inline;
+    .facet-summary-item--clear {
+      padding: 0;
+      + .facet-summary-item--facet {
+        position: relative;
+        padding-left: 91px;
+        &:before {
+          content: 'Active filters:';
+          position: absolute;
+          top: 8px;
+          left: 0;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.promotion--facet-group {
+  .block-title {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 21px;
+      @include sprite(icon--filter-grey);
+    }
+    .site__sidebar-inner & {
+      font-size: $font-size-h5;
+      padding: 20px 0 20px 25px;
+      margin: 0;
+    }
+  }
+  .facet-item {
+    display: block;
+    position: relative;
+    border-bottom: 1px solid #e2e2e2;
+    > a {
+      display: block;
+      padding: 10px 28px 10px 0;
+      line-height: 1.3;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .action--deactivate-facet {
+    position: absolute;
+    top: 14px;
+    right: 12px;
+    &:before {
+      content: '';
+      position: absolute;
+      @include sprite(icon--close-small-blue);
+      top: 0;
+      left: 0;
+    }
+  }
+}
