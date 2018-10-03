@@ -15,7 +15,7 @@ third_party_settings:
 id: views_block__sector_view_information_tiles_block_1
 theme: sector_starter
 region: content
-weight: -10
+weight: -7
 provider: null
 plugin: 'views_block:sector_view_information_tiles-block_1'
 settings:

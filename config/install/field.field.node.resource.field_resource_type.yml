@@ -10,7 +10,7 @@ field_name: field_resource_type
 entity_type: node
 bundle: resource
 label: 'Resource category'
-description: ''
+description: '<a href=''/admin/structure/taxonomy/manage/resource_types/overview'' >Add or edit terms for this taxonomy</a> (requires specific permissions).'
 required: true
 translatable: true
 default_value: {  }

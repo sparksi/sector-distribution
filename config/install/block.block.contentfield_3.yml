@@ -24,11 +24,11 @@ settings:
   label: 'Article type'
   provider: fieldblock
   label_display: '0'
-  label_from_field: 1
+  label_from_field: true
   field_name: field_article_type
   formatter_id: entity_reference_label
   formatter_settings:
-    link: 0
+    link: false
 visibility:
   term:
     id: term

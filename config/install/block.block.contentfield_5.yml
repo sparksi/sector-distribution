@@ -24,11 +24,11 @@ settings:
   label: 'Resource type'
   provider: fieldblock
   label_display: '0'
-  label_from_field: 1
+  label_from_field: true
   field_name: field_resource_type
   formatter_id: entity_reference_label
   formatter_settings:
-    link: 0
+    link: false
 visibility:
   node_type:
     id: node_type

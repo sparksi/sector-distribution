@@ -15,7 +15,7 @@ dependencies:
 id: sector_resource
 label: 'Sector resource'
 module: views
-description: ''
+description: 'Resource view supporting the Sector Resource content type provided by the Sector profile.'
 tag: ''
 base_table: node_field_data
 base_field: nid
@@ -499,11 +499,11 @@ display:
           exposed: true
           expose:
             operator_id: field_resource_type_target_id_op
-            label: 'Resource type'
+            label: 'Resource category'
             description: ''
             use_operator: false
             operator: field_resource_type_target_id_op
-            identifier: field_resource_type_target_id
+            identifier: category
             required: false
             remember: false
             multiple: false
@@ -573,7 +573,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 9
-      use_ajax: true
+      use_ajax: false
       style:
         type: html_list
         options:

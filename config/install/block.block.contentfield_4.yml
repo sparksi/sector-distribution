@@ -24,7 +24,7 @@ settings:
   label: 'Last updated'
   provider: fieldblock
   label_display: visible
-  label_from_field: 1
+  label_from_field: true
   field_name: field_last_updated
   formatter_id: datetime_default
   formatter_settings:
