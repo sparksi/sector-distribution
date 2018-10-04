@@ -153,9 +153,9 @@
     }
   }
   .js & {
+    display: none;
     @include respond-to(desktop-and-up) {
       width: 64%;
-      display: none;
       position: absolute;
       top: -4px;
       right: 51px;
@@ -166,9 +166,7 @@
     }
   }
   .js &.search-is-active {
-    @include respond-to(desktop-and-up) {
-      display: block;
-    }
+    display: block;
   }
   .form-control {
     &.form-text,
