@@ -1,0 +1,86 @@
+{
+    "_links": {
+        "self": {
+            "href": "http:\/\/default\/taxonomy\/term\/27?_format=hal_json"
+        },
+        "type": {
+            "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/automated_contextual_content"
+        },
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/automated_contextual_content\/parent": [
+            null
+        ]
+    },
+    "tid": [
+        {
+            "value": 27
+        }
+    ],
+    "uuid": [
+        {
+            "value": "ca376547-fdf7-433f-a889-a4e0cb136bf4"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en",
+            "lang": "en"
+        }
+    ],
+    "vid": [
+        {
+            "target_id": "automated_contextual_content"
+        }
+    ],
+    "status": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "name": [
+        {
+            "value": "Hide from sitewide search results",
+            "lang": "en"
+        }
+    ],
+    "weight": [
+        {
+            "value": 3
+        }
+    ],
+    "_embedded": {
+        "http:\/\/drupal.org\/rest\/relation\/taxonomy_term\/automated_contextual_content\/parent": [
+            null
+        ]
+    },
+    "changed": [
+        {
+            "value": "2018-10-03T03:09:58+00:00",
+            "lang": "en",
+            "format": "Y-m-d\\TH:i:sP"
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true,
+            "lang": "en"
+        }
+    ],
+    "metatag": [
+        {
+            "value": {
+                "title": "Hide from sitewide search results | Sector base 1"
+            }
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
+        }
+    ]
+}
