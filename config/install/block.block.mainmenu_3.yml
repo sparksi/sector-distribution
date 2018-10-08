@@ -15,7 +15,7 @@ third_party_settings:
 id: mainmenu_3
 theme: sector_starter
 region: sidebar
-weight: -17
+weight: -16
 provider: null
 plugin: 'menu_block:main-menu'
 settings:

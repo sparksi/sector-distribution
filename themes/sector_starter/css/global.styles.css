@@ -777,11 +777,11 @@ ul, ol { margin-top: 0; margin-bottom: 14px; }
 
 ul ul, ul ol, ol ul, ol ol { margin-bottom: 0; }
 
-.list-unstyled, .promotion--blog-archive .view-content > ul { padding-left: 0; list-style: none; }
+.list-unstyled, .promotion--blog-archive .view-content > ul, .promotion--facet-summary > ul { padding-left: 0; list-style: none; }
 
-.list-inline { padding-left: 0; list-style: none; margin-left: -5px; }
+.list-inline, .promotion--facet-summary > ul { padding-left: 0; list-style: none; margin-left: -5px; }
 
-.list-inline > li { display: inline-block; padding-left: 5px; padding-right: 5px; }
+.list-inline > li, .promotion--facet-summary > ul > li { display: inline-block; padding-left: 5px; padding-right: 5px; }
 
 dl { margin-top: 0; margin-bottom: 28px; }
 
@@ -2096,11 +2096,11 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 .dont-break-out { overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; word-break: break-word; -ms-hyphens: auto; -webkit-hyphens: auto; hyphens: auto; }
 
 /** The following variable and function originate from the sass-mq library. If you have already included it, you can eliminate the below https://github.com/sass-mq/sass-mq/blob/master/_mq.scss */
-.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .search-page-form .btn:after, .search-page-form .tabs--primary > li > a:after, .search-page-form .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after, .transcript > div a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 47.4375em 46.0625em; }
+.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .promotion--facet-group .block-title:before, .promotion--facet-group .action--deactivate-facet:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .search-page-form .btn:after, .search-page-form .tabs--primary > li > a:after, .search-page-form .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after, .transcript > div a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
 
 .caption, .site__sidebar-inner .block, .field--type-link, .prose { /* Add external link icon to links */ /* 1. Site domain as defined in _variables.scss. Let's not add an icon if a link has been created using the sites full absolute domain. */ }
 
-.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after { content: ''; width: 0.5625em; height: 0.5625em; background-position: -25.4375em -24.3125em; margin-left: .25em; vertical-align: middle; }
+.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after { content: ''; width: 0.5625em; height: 0.5625em; background-position: -26.8125em -25.6875em; margin-left: .25em; vertical-align: middle; }
 
 .caption a[href*='<yourdomain>'], .site__sidebar-inner .block a[href*='<yourdomain>'], .field--type-link a[href*='<yourdomain>'], .prose a[href*='<yourdomain>'] { /* [1] */ }
 
@@ -2129,16 +2129,16 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .promotion--notice .field--name-body a:visited { color: rgba(255, 255, 255, 0.9); }
 
-.promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after { width: 0.5625em; height: 0.5625em; background-position: -26.5625em -25.4375em; }
+.promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after { width: 0.5625em; height: 0.5625em; background-position: -27.9375em -26.8125em; }
 
 .indented { margin-left: 1.555em; }
 
-.box-it-up, .user-login-form, .user-pass, .call-to-action, .search-form, .views-exposed-form { background-color: #eaecef; padding: 0.7775em; }
+.box-it-up, .user-login-form, .user-pass, .call-to-action, .search--primary, .views-exposed-form { background-color: #eaecef; padding: 0.7775em; }
 
-@media (min-width: 480px) { .box-it-up, .user-login-form, .user-pass, .call-to-action, .search-form, .views-exposed-form { padding: 1.555em; } }
+@media (min-width: 480px) { .box-it-up, .user-login-form, .user-pass, .call-to-action, .search--primary, .views-exposed-form { padding: 1.555em; } }
 
 /** The following variable and function originate from the sass-mq library. If you have already included it, you can eliminate the below https://github.com/sass-mq/sass-mq/blob/master/_mq.scss */
-.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .search-page-form .btn:after, .search-page-form .tabs--primary > li > a:after, .search-page-form .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after, .transcript > div a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 47.4375em 46.0625em; }
+.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .promotion--facet-group .block-title:before, .promotion--facet-group .action--deactivate-facet:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .search-page-form .btn:after, .search-page-form .tabs--primary > li > a:after, .search-page-form .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after, .transcript > div a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
 
 /** @file Custom tweaks to admin elements */
 .alert { margin-top: 1.555em; margin-bottom: 1.555em; border-radius: 0; }
@@ -2201,11 +2201,11 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 .slat__link .contextual { display: none; }
 
 /* Unpublished node indicator, attached to full view mode of node inside content region. */
-.page-node-status-unpublished .content .node--view-mode-full { background-color: transparent; border-top: 40px solid #ef604d; padding-top: 20px; position: relative; margin-top: 20px; }
+.entity-status-unpublished .content .node--view-mode-full, .entity-status-unpublished .content .media--view-mode-full { background-color: transparent; border-top: 40px solid #ef604d; padding-top: 20px; position: relative; margin-top: 20px; }
 
-.page-node-status-unpublished .content .node--view-mode-full:before { position: absolute; content: 'Unpublished'; font-family: "Courier New", monospace; top: -32px; left: 10px; color: #ffffff; }
+.entity-status-unpublished .content .node--view-mode-full:before, .entity-status-unpublished .content .media--view-mode-full:before { position: absolute; content: 'Unpublished'; font-family: "Courier New", monospace; top: -32px; left: 10px; color: #ffffff; }
 
-.page-node-status-unpublished.admin-ui-hide .content .node--view-mode-full { display: none; }
+.entity-status-unpublished.admin-ui-hide .content .node--view-mode-full, .entity-status-unpublished.admin-ui-hide .content .media--view-mode-full { display: none; }
 
 /* BASE
 ------------------------------------------------------------------------*/
@@ -2572,7 +2572,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 /** @file Override Bootstrap button styles */
 /** The following variable and function originate from the sass-mq library. If you have already included it, you can eliminate the below https://github.com/sass-mq/sass-mq/blob/master/_mq.scss */
-.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .search-page-form .btn:after, .search-page-form .tabs--primary > li > a:after, .search-page-form .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after, .transcript > div a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 47.4375em 46.0625em; }
+.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .promotion--facet-group .block-title:before, .promotion--facet-group .action--deactivate-facet:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .search-page-form .btn:after, .search-page-form .tabs--primary > li > a:after, .search-page-form .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after, .transcript > div a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
 
 .btn, .tabs--primary > li > a, .list--fridge-magnets > li > a { font-size: 16px; text-decoration: none; font-weight: 700; white-space: normal; }
 
@@ -2616,7 +2616,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 @media (min-width: 1200px) { .call-to-action-left-line { margin-bottom: 60px; } }
 
 /** @file Extend Drupal's comment class */
-.list-inline .comment-delete, .list-inline .comment-edit, .list-inline .comment-reply, .list-inline .comment-approve { padding-right: 15px; padding-left: 0; }
+.list-inline .comment-delete, .promotion--facet-summary > ul .comment-delete, .list-inline .comment-edit, .promotion--facet-summary > ul .comment-edit, .list-inline .comment-reply, .promotion--facet-summary > ul .comment-reply, .list-inline .comment-approve, .promotion--facet-summary > ul .comment-approve { padding-right: 15px; padding-left: 0; }
 
 .user-logged-in .comment-delete > a, .user-logged-in .comment-edit > a, .user-logged-in .comment-reply > a, .user-logged-in .comment-approve > a { font-size: 16px; font-weight: 700; color: #ef604d; }
 
@@ -2624,11 +2624,11 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 @media (min-width: 992px) { .comment__link-to-anchor { opacity: 0; visibility: hidden; -webkit-transition: opacity 0.2s ease-out; transition: opacity 0.2s ease-out; } }
 
-.comment__link-to-anchor:before { content: ''; vertical-align: bottom; font-size: 18px; width: 1em; height: 1em; background-position: -39.4375em -38.0625em; }
+.comment__link-to-anchor:before { content: ''; vertical-align: bottom; font-size: 18px; width: 1em; height: 1em; background-position: -40.8125em -39.4375em; }
 
 @media (min-width: 992px) { .comment:hover .comment__link-to-anchor { display: inline-block; visibility: visible; opacity: 1; } }
 
-.comment .list-inline { margin-left: 0; }
+.comment .list-inline, .comment .promotion--facet-summary > ul { margin-left: 0; }
 
 [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"] > a { margin-left: 20px; }
 
@@ -2743,9 +2743,9 @@ label { font-size: 15px; }
 /** @file BEM block for icon. */
 .icon--close:before { content: ''; font-size: 16px; width: 1.3125em; height: 1.3125em; background-position: -17.0625em -15.9375em; }
 
-.icon--menu:before { content: ''; font-size: 16px; width: 1.3125em; height: 1.1875em; background-position: -35.6875em -34.5625em; }
+.icon--menu:before { content: ''; font-size: 16px; width: 1.3125em; height: 1.1875em; background-position: -37.0625em -35.9375em; }
 
-.icon--search:before { content: ''; font-size: 18px; width: 1.1875em; height: 1.1875em; background-position: -41em -39.625em; }
+.icon--search:before { content: ''; font-size: 18px; width: 1.1875em; height: 1.1875em; background-position: -42.375em -41em; }
 
 /** @file BEM block for Custom list styles */
 /* Note: This list style requires a nested <a> */
@@ -2876,7 +2876,7 @@ label { font-size: 15px; }
   .navigation--primary .menu__item { border-top: 1px solid #000000; position: relative; }
   .navigation--primary .menu__item .btn-expand { -ms-flex-line-pack: center; align-content: center; position: absolute; top: 0; right: 0; }
   .navigation--primary .menu__item .menu__link { color: #fff; border-top: 1px solid #4e4e4e; position: relative; padding-left: 18px; padding: 15px 15px; }
-  .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after { width: 0.5625em; height: 0.5625em; background-position: -26.5625em -25.4375em; }
+  .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after { width: 0.5625em; height: 0.5625em; background-position: -27.9375em -26.8125em; }
   .navigation--primary .menu__item.is-expanded .menu__link { padding-right: 60px; }
   .navigation--primary .menu__item .menu__item .menu__link { padding-left: 47px; }
   .navigation--primary .menu__item .menu__item .menu__item .menu__link { padding-left: 67px; }
@@ -3245,7 +3245,29 @@ label { font-size: 15px; }
 
 @media (min-width: 480px) { .promotion--notice .action--close { top: 12px; right: 22px; } }
 
-.promotion--notice .action--close:before { cursor: pointer; font-size: 13px; width: 1.3125em; height: 1.3125em; background-position: -20.3125em -19.1875em; }
+.promotion--notice .action--close:before { cursor: pointer; font-size: 13px; width: 1.3125em; height: 1.3125em; background-position: -21.6875em -20.5625em; }
+
+.promotion--facet-summary > ul .facet-summary-item--clear { padding: 0; }
+
+.promotion--facet-summary > ul .facet-summary-item--clear + .facet-summary-item--facet { position: relative; padding-left: 91px; }
+
+.promotion--facet-summary > ul .facet-summary-item--clear + .facet-summary-item--facet:before { content: 'Active filters:'; position: absolute; top: 8px; left: 0; font-size: 14px; }
+
+.promotion--facet-group .block-title { position: relative; }
+
+.promotion--facet-group .block-title:before { content: ''; position: absolute; left: 0; top: 21px; width: 0.9375em; height: 0.9375em; background-position: -32.3125em -31.1875em; }
+
+.site__sidebar-inner .promotion--facet-group .block-title { font-size: 18px; padding: 20px 0 20px 25px; margin: 0; }
+
+.promotion--facet-group .facet-item { display: block; position: relative; border-bottom: 1px solid #e2e2e2; }
+
+.promotion--facet-group .facet-item > a { display: block; padding: 10px 28px 10px 0; line-height: 1.3; }
+
+.promotion--facet-group .facet-item > a:hover { text-decoration: underline; }
+
+.promotion--facet-group .action--deactivate-facet { position: absolute; top: 14px; right: 12px; }
+
+.promotion--facet-group .action--deactivate-facet:before { content: ''; position: absolute; width: 0.8125em; height: 0.8125em; background-position: -18.9375em -17.8125em; top: 0; left: 0; }
 
 /** @file Optimized typographic spacing in roughly 700px wide setting. (Classic node body area - Add .prose via display suite as required) http://www.pearsonified.com/typography/ */
 .prose a { text-decoration: underline; }
@@ -3352,13 +3374,15 @@ label { font-size: 15px; }
 .responsive-ratio--7-1 { padding-bottom: 14.28571%; }
 
 /** @file BEM block for Search */
-.search--primary { position: relative; /* Create a positioning context for the submit button */ }
+.search--primary { position: relative; }
+
+.search--primary.views-exposed-form { margin-top: 0; }
 
 @media (max-width: 480px) { .search--primary.views-exposed-form { padding: 0.7775em; } }
 
-.search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary { position: absolute; top: 26px; right: 26px; padding: 12px 21px 13px; font-size: 16px; margin-top: 0; }
+.search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary { position: absolute; top: 28px; right: 28px; padding: 12px 21px 12px; font-size: 16px; margin-top: 0; border-radius: 0; }
 
-@media (max-width: 480px) { .search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary { top: 13px; right: 13px; } }
+@media (max-width: 480px) { .search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary { top: 14px; right: 14px; } }
 
 .search--primary .btn-primary .icon, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary .icon, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary .icon { display: none; }
 
@@ -3376,6 +3400,10 @@ label { font-size: 15px; }
 
 .search--small .description { color: #eeeeee; }
 
+.search--flyout form, .search-page-form form { position: relative; }
+
+.search--flyout [data-drupal-selector="edit-actions"], .search-page-form [data-drupal-selector="edit-actions"] { position: absolute; top: 0; right: 0; }
+
 .search--flyout .form-control.form-text, .search--flyout .form-control.form-search, .search-page-form .form-control.form-text, .search-page-form .form-control.form-search { height: 43px; }
 
 .search--flyout .form-group, .search-page-form .form-group { margin-bottom: 0; }
@@ -3384,7 +3412,7 @@ label { font-size: 15px; }
 
 .search--flyout .btn .icon, .search--flyout .tabs--primary > li > a .icon, .search--flyout .list--fridge-magnets > li > a .icon, .search-page-form .btn .icon, .search-page-form .tabs--primary > li > a .icon, .search-page-form .list--fridge-magnets > li > a .icon { display: none; }
 
-.search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .search-page-form .btn:after, .search-page-form .tabs--primary > li > a:after, .search-page-form .list--fridge-magnets > li > a:after { content: ''; position: absolute; top: 50%; left: 50%; -webkit-transform: translateY(-50%) translateX(-50%) scale(1.5); transform: translateY(-50%) translateX(-50%) scale(1.5); width: 1.1875em; height: 1.1875em; background-position: -41em -39.625em; font-size: 13px; }
+.search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .search-page-form .btn:after, .search-page-form .tabs--primary > li > a:after, .search-page-form .list--fridge-magnets > li > a:after { content: ''; position: absolute; top: 50%; left: 50%; -webkit-transform: translateY(-50%) translateX(-50%) scale(1.5); transform: translateY(-50%) translateX(-50%) scale(1.5); width: 1.1875em; height: 1.1875em; background-position: -42.375em -41em; font-size: 13px; }
 
 .search--flyout .btn:hover, .search--flyout .tabs--primary > li > a:hover, .search--flyout .list--fridge-magnets > li > a:hover, .search--flyout .btn:active, .search--flyout .tabs--primary > li > a:active, .search--flyout .list--fridge-magnets > li > a:active, .search--flyout .btn:active:focus, .search--flyout .tabs--primary > li > a:active:focus, .search--flyout .list--fridge-magnets > li > a:active:focus, .search--flyout .btn:focus, .search--flyout .tabs--primary > li > a:focus, .search--flyout .list--fridge-magnets > li > a:focus, .search-page-form .btn:hover, .search-page-form .tabs--primary > li > a:hover, .search-page-form .list--fridge-magnets > li > a:hover, .search-page-form .btn:active, .search-page-form .tabs--primary > li > a:active, .search-page-form .list--fridge-magnets > li > a:active, .search-page-form .btn:active:focus, .search-page-form .tabs--primary > li > a:active:focus, .search-page-form .list--fridge-magnets > li > a:active:focus, .search-page-form .btn:focus, .search-page-form .tabs--primary > li > a:focus, .search-page-form .list--fridge-magnets > li > a:focus { background-color: #e8eaed; border: 1px solid #d5d7dd; -webkit-box-shadow: none; box-shadow: none; outline-offset: 0; outline: none; }
 
@@ -3392,35 +3420,33 @@ label { font-size: 15px; }
 
 .search--flyout .description, .search-page-form .description { margin-bottom: 0; margin-top: 0; }
 
-.search--flyout { clear: both; display: none; }
+.search--flyout { clear: both; width: 100%; }
 
-@media (max-width: 991px) { .search--flyout { margin-top: 20px; } }
+.search--flyout.views-exposed-form { padding-top: 0; padding-bottom: 0; margin-bottom: 0; background-color: transparent; width: 100%; }
+
+.js .search--flyout.views-exposed-form { margin: 0; }
+
+@media (max-width: 991px) { .js .search--flyout.views-exposed-form { margin-top: 20px; } }
+
+@media (min-width: 480px) { .search--flyout.views-exposed-form { padding: 0 15px; } }
+
+@media (max-width: 991px) { .search--flyout.views-exposed-form { margin-top: 20px; } }
 
 .search--flyout.search-is-active { display: block; padding-left: 15px; padding-right: 15px; }
 
 @media (min-width: 992px) { .search--flyout.search-is-active { padding-left: 0; padding-right: 0; } }
 
-@media (min-width: 992px) { .search--flyout { width: 64%; }
-  .js .search--flyout { display: none; position: absolute; top: -4px; right: 51px; clear: none; } }
+.js .search--flyout { display: none; }
 
-@media (min-width: 992px) { .js .search--flyout.search-is-active { display: block; } }
+@media (min-width: 992px) { .js .search--flyout { width: 64%; position: absolute; top: -4px; right: 51px; clear: none; } }
 
-@media (min-width: 1260px) { .search--flyout { width: 70%; } }
+@media (min-width: 1260px) { .js .search--flyout { width: 74%; } }
+
+.js .search--flyout.search-is-active { display: block; }
 
 .search--flyout .form-control.form-text, .search--flyout .form-control.form-search { background-color: #ffffff; border: 1px solid #d5d7dd; color: #252526; height: 54px; }
 
 .search--flyout .form-control.form-text:focus, .search--flyout .form-control.form-search:focus { outline: none; outline-offset: 0; -webkit-box-shadow: none; box-shadow: none; }
-
-/* /search/node for core search */
-.search-form { margin: 0; }
-
-.search-form .search-help-link { display: inline-block; }
-
-.search-form .button { border-radius: 0; margin-right: 10px; padding: 12px 15px; font-size: 16px; margin-top: 0; }
-
-.search__results + .pager-nav .pager__item--next span, .search__results + .pager-nav .pager__item--last span, .search__results + .pager-nav .pager__item--previous span, .search__results + .pager-nav .pager__item--first span { text-transform: capitalize; display: inline-block; }
-
-.search-help-link { text-decoration: underline; }
 
 /** @file Accessibility skip link */
 .skip-link { background-color: #222222; text-align: center; }
@@ -3480,7 +3506,7 @@ label { font-size: 15px; }
 
 .slat__link:visited .action--more:before { background-color: #4d6edd; }
 
-.slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after { font-size: 16px; content: ''; width: 0.5625em; height: 0.5625em; background-position: -25.4375em -24.3125em; margin-left: 2px; vertical-align: middle; }
+.slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after { font-size: 16px; content: ''; width: 0.5625em; height: 0.5625em; background-position: -26.8125em -25.6875em; margin-left: 2px; vertical-align: middle; }
 
 /** @file BEM block for Toggle. */
 .toggle { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; float: right; clear: both; color: #ffffff; position: relative; padding: 0; cursor: pointer; width: 26px; height: 26px; margin-right: 14px; border: none; background-color: transparent; outline: none; position: relative; }
@@ -3493,9 +3519,9 @@ label { font-size: 15px; }
 
 .toggle .icon--inline:before { position: absolute; top: 50%; left: 50%; -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%); }
 
-.toggle .icon--menu { margin-top: 3px; }
+@media (min-width: 992px) { .toggle .icon--menu { margin-top: 3px; } }
 
-.toggle .icon--search { margin-top: 14px; margin-left: 2px; }
+.toggle .icon--search { margin-top: 2px; margin-left: 2px; }
 
 @media (min-width: 992px) { .toggle .icon--search { margin-top: 0; } }
 

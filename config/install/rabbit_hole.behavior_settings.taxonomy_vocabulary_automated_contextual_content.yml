@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: taxonomy_vocabulary_automated_contextual_content
-action: display_page
-allow_override: 1
+action: access_denied
+allow_override: 0
 redirect: ''
 redirect_code: 301

@@ -159,7 +159,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 ------------------------------------------------------------------------*/
 /** @file Override Bootstrap button styles */
 /** The following variable and function originate from the sass-mq library. If you have already included it, you can eliminate the below https://github.com/sass-mq/sass-mq/blob/master/_mq.scss */
-.btn-expand:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 47.4375em 46.0625em; }
+.btn-expand:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
 
 .btn, .admin-ui-toggle button { font-size: 16px; text-decoration: none; font-weight: 700; white-space: normal; }
 

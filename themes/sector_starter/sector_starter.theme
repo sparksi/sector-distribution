@@ -5,6 +5,7 @@ use Drupal\Core\Entity;
 use Drupal\taxonomy\Entity\Term;
 use Drupal\node\Entity\Node;
 use Drupal\node\NodeInterface;
+use Drupal\media\MediaInterface;
 /**
  * @file
  * Adjust the theme settings form to add local tweaks and options.
@@ -155,13 +156,13 @@ function sector_starter_preprocess_breadcrumb(&$variables){
 function sector_starter_preprocess_page(&$variables) {
 
   // Load the node entity from the current route.
-  $node = getNodeFromRoute();
-  if(!empty($node)) {
-    if ($node->hasField('field_auto_contextual_content')) {
+  $entity = getEntityFromRoute('node');
+  if(!empty($entity)) {
+    if ($entity->hasField('field_auto_contextual_content')) {
       // Taxonomy name we will be searching for.
       $taxonomy_name = 'Hide sidebar';
       // Get the referenced taxonomy terms from the auto contextual content field.
-      $node_contextual_content = $node->get('field_auto_contextual_content')->referencedEntities();
+      $node_contextual_content = $entity->get('field_auto_contextual_content')->referencedEntities();
 
       // Loops through each taxonomy term checking if the name of the term is
       // the same as $taxonomy_name
@@ -179,26 +180,30 @@ function sector_starter_preprocess_page(&$variables) {
 }
 
 function sector_starter_preprocess_html(&$variables) {
-  // Load the node entity from the current route.
-  $node = getNodeFromRoute();
-  if(!empty($node)) {
-    // Add a class to the <body> if the node is unpublished.
-    if(!$node->isPublished()) {
-      $variables['attributes']['class'][] = 'page-node-status-unpublished';
-    }
-    if(isset($variables['node_status'])) {
-      $variables['node_status'] = $node->isPublished() ? 'published' : 'unpublished';
-    }
-    /**
-     * Get the term id from the 'field_page_variant' taxonomy field.
-     * If greater than zero, load the term and acquire the name value
-     * as a css safe value.
-    */
-    if($node->hasField('field_page_variant')) {
-      $tid = $node->get('field_page_variant')->target_id;
-      if($tid > 0) {
-        $term_object = Term::load($tid);
-        $variables['attributes']['class'][] = 'page-variant--' . Html::getClass($term_object->get('name')->value);
+
+  $relaventEntities = ['node', 'media'];
+  foreach ($relaventEntities as $entityTypeId) {
+    // Load the node entity from the current route.
+    $entity = getEntityFromRoute($entityTypeId);
+    if (!empty($entity)) {
+      // Add a class to the <body> if the entity is unpublished.
+      if (!$entity->isPublished()) {
+        $variables['attributes']['class'][] = 'entity-status-unpublished';
+      }
+      if (isset($variables['node_status'])) {
+        $variables['node_status'] = $entity->isPublished() ? 'published' : 'unpublished';
+      }
+      /**
+       * Get the term id from the 'field_page_variant' taxonomy field.
+       * If greater than zero, load the term and acquire the name value
+       * as a css safe value.
+       */
+      if ($entity->hasField('field_page_variant')) {
+        $tid = $entity->get('field_page_variant')->target_id;
+        if ($tid > 0) {
+          $term_object = Term::load($tid);
+          $variables['attributes']['class'][] = 'page-variant--' . Html::getClass($term_object->get('name')->value);
+        }
       }
     }
   }
@@ -240,17 +245,6 @@ function sector_starter_preprocess_field(&$variables) {
   }
 }
 
-function sector_starter_preprocess_form_element(&$variables) {
-  $element =& $variables['element'];
-
-  /**
-     * Hide description field from header search form
-    */
-  if(!empty($element['#id']) && $element['#id'] == "edit-keys") {
-    unset($variables['description']);
-  }
-}
-
 /**
  * Helper function.
  *
@@ -262,19 +256,28 @@ function sector_starter_preprocess_form_element(&$variables) {
  * Taken from https://www.drupal.org/project/drupal/issues/2730631#comment-12667635
  * and adjusted slightly.
  */
-function getNodeFromRoute() {
-  $node = NULL;
-  if (\Drupal::routeMatch()->getParameter('node')) {
-    $node = \Drupal::routeMatch()->getParameter('node');
-  }
-  if ($node instanceof NodeInterface) {
-    return $node;
+function getEntityFromRoute($entityTypeId) {
+  $entity = NULL;
+  if (\Drupal::routeMatch()->getParameter($entityTypeId)) {
+    $entity = \Drupal::routeMatch()->getParameter($entityTypeId);
   }
   // The node revision page does not upcast the node.
-  if (\Drupal::routeMatch()->getParameter('node_revision')) {
-    $revision_id = \Drupal::routeMatch()->getParameter('node_revision');
+  if (\Drupal::routeMatch()->getParameter($entityTypeId . '_revision')) {
+    $revision_id = \Drupal::routeMatch()->getParameter($entityTypeId . '_revision');
     if ($revision_id > 0) {
-      return \Drupal::entityTypeManager()->getStorage('node')->loadRevision($revision_id);
+      return \Drupal::entityTypeManager()->getStorage($entityTypeId)->loadRevision($revision_id);
     }
+  }
+  switch ($entityTypeId) {
+    case 'node':
+      if ($entity instanceof NodeInterface) {
+        return $entity;
+      }
+      break;
+    case 'media':
+      if ($entity instanceof MediaInterface) {
+        return $entity;
+      }
+      break;
   }
 }

@@ -167,8 +167,9 @@
  * Unpublished node indicator, attached to full view mode of node
  * inside content region.
  */
-.node--view-mode-full {
-  .page-node-status-unpublished .content & {
+.node--view-mode-full,
+.media--view-mode-full {
+  .entity-status-unpublished .content & {
     background-color: transparent;
     border-top: 40px solid $brand-danger;
     padding-top: 20px;
@@ -183,7 +184,7 @@
       color: $white;
     }
   }
-  .page-node-status-unpublished.admin-ui-hide .content & {
+  .entity-status-unpublished.admin-ui-hide .content & {
     display: none;
   }
 }

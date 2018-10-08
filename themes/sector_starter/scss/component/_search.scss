@@ -4,22 +4,25 @@
  */
 
 .search--primary {
-  position: relative; /* Create a positioning context for the submit button */
+  position: relative;
+  @extend %box-it-up;
   &.views-exposed-form {
+    margin-top: 0;
     @include respond-to(mobile) {
       padding: $spacing-half;
     }
   }
   .btn-primary {
     position: absolute;
-    top: 26px;
-    right: 26px;
-    padding: 12px 21px 13px;
+    top: 28px;
+    right: 28px;
+    padding: 12px 21px 12px;
     font-size: 16px;
     margin-top: 0;
+    border-radius: 0;
     @include respond-to(mobile) {
-      top: 13px;
-      right: 13px;
+      top: 14px;
+      right: 14px;
     }
     .icon {
       display: none;
@@ -59,6 +62,14 @@
 
 .search--flyout,
 .search-page-form {
+  form {
+    position: relative;
+  }
+  [data-drupal-selector="edit-actions"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
   .form-control {
     &.form-text,
     &.form-search {
@@ -112,9 +123,25 @@
 
 .search--flyout {
   clear: both;
-  display: none;
-  @include respond-to(tablet-large-and-down) {
-    margin-top: 20px;
+  width: 100%;
+  &.views-exposed-form {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: transparent;
+    width: 100%;
+    .js & {
+      margin: 0;
+      @include respond-to(tablet-large-and-down) {
+        margin-top: 20px;
+      }
+    }
+    @include respond-to(tablet-and-up) {
+      padding: 0 $responsive-layout-gutter;
+    }
+    @include respond-to(tablet-large-and-down) {
+      margin-top: 20px;
+    }
   }
   &.search-is-active {
     display: block;
@@ -125,24 +152,21 @@
       padding-right: 0;
     }
   }
-  // only hide for desktop
-  @include respond-to(desktop-and-up) {
-    width: 64%;
-    .js & {
-      display: none;
+  .js & {
+    display: none;
+    @include respond-to(desktop-and-up) {
+      width: 64%;
       position: absolute;
       top: -4px;
       right: 51px;
       clear: none;
     }
-  }
-  .js &.search-is-active {
-    @include respond-to(desktop-and-up) {
-      display: block;
+    @include respond-to(wide-large-and-up) {
+      width: 74%;
     }
   }
-  @include respond-to(wide-large-and-up) {
-    width: 70%;
+  .js &.search-is-active {
+    display: block;
   }
   .form-control {
     &.form-text,
@@ -158,38 +182,4 @@
       }
     }
   }
-}
-
-/* /search/node for core search */
-.search-form {
-  margin: 0;
-  @extend %box-it-up;
-  .search-help-link {
-    display: inline-block;
-  }
-  .button {
-    border-radius: 0;
-    margin-right: 10px;
-    padding: 12px 15px;
-    font-size: 16px;
-    margin-top: 0;
-  }
-}
-
-.search__results {
-  + .pager-nav {
-    .pager__item--next,
-    .pager__item--last,
-    .pager__item--previous,
-    .pager__item--first {
-      span {
-        text-transform: capitalize;
-        display: inline-block;
-      }
-    }
-  }
-}
-
-.search-help-link {
-  text-decoration: underline;
 }

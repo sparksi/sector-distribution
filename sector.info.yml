@@ -64,7 +64,7 @@ dependencies:
  - node
  - options
  - page_cache
- - search
+ - diff
  - sector_utils
  - sector_wysiwyg_utils
  - serialization
@@ -100,6 +100,15 @@ dependencies:
  - actions_permissions
  - video_embed_media
  - video_embed_field
+ - search_api
+ - search_api_db
+ - facets
+ - facets_summary
+ - redirect
+ - redirect_404
+ - webform
+ - webform_ui
+ - honeypot
 
 themes:
  - bootstrap

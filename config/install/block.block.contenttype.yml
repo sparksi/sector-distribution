@@ -1,25 +1,27 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - facets.facet.content_type
   module:
     - block_class
-    - search
+    - facets
     - term_condition
   theme:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'search search--flyout'
-id: searchform
+    classes: promotion--facet-group
+id: contenttype
 theme: sector_starter
-region: header
-weight: 0
+region: sidebar
+weight: -17
 provider: null
-plugin: search_form_block
+plugin: 'facet_block:content_type'
 settings:
-  id: search_form_block
-  label: 'Search form (Flyout)'
-  provider: search
+  id: 'facet_block:content_type'
+  label: 'Filter by type'
+  provider: facets
   label_display: visible
 visibility:
   term:

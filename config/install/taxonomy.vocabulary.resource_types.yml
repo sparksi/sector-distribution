@@ -3,6 +3,6 @@ status: true
 dependencies: {  }
 name: 'Resource category'
 vid: resource_types
-description: 'Used to sort views and searches by type and to target CSS rules to a specific group of resources.'
+description: 'Used to sort views and searches by category. <em>Terms are rabbit-holed with a /resources redirect<em>'
 hierarchy: 0
-weight: -7
+weight: -9

@@ -2097,11 +2097,11 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 .dont-break-out { overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; word-break: break-word; -ms-hyphens: auto; -webkit-hyphens: auto; hyphens: auto; }
 
 /** The following variable and function originate from the sass-mq library. If you have already included it, you can eliminate the below https://github.com/sass-mq/sass-mq/blob/master/_mq.scss */
-.caption a[href^="http://"]:after, .prose a[href^="http://"]:after, .cke_editable a[href^="http://"]:after, .caption a[href^="https://"]:after, .prose a[href^="https://"]:after, .cke_editable a[href^="https://"]:after, .caption a[rel*='external']:after, .prose a[rel*='external']:after, .cke_editable a[rel*='external']:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 47.4375em 46.0625em; }
+.caption a[href^="http://"]:after, .prose a[href^="http://"]:after, .cke_editable a[href^="http://"]:after, .caption a[href^="https://"]:after, .prose a[href^="https://"]:after, .cke_editable a[href^="https://"]:after, .caption a[rel*='external']:after, .prose a[rel*='external']:after, .cke_editable a[rel*='external']:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
 
 .caption, .prose, .cke_editable { /* Add external link icon to links */ /* 1. Site domain as defined in _variables.scss. Let's not add an icon if a link has been created using the sites full absolute domain. */ }
 
-.caption a[href^="http://"]:after, .prose a[href^="http://"]:after, .cke_editable a[href^="http://"]:after, .caption a[href^="https://"]:after, .prose a[href^="https://"]:after, .cke_editable a[href^="https://"]:after, .caption a[rel*='external']:after, .prose a[rel*='external']:after, .cke_editable a[rel*='external']:after { content: ''; width: 0.5625em; height: 0.5625em; background-position: -25.4375em -24.3125em; margin-left: .25em; vertical-align: middle; }
+.caption a[href^="http://"]:after, .prose a[href^="http://"]:after, .cke_editable a[href^="http://"]:after, .caption a[href^="https://"]:after, .prose a[href^="https://"]:after, .cke_editable a[href^="https://"]:after, .caption a[rel*='external']:after, .prose a[rel*='external']:after, .cke_editable a[rel*='external']:after { content: ''; width: 0.5625em; height: 0.5625em; background-position: -26.8125em -25.6875em; margin-left: .25em; vertical-align: middle; }
 
 .caption a[href*='<yourdomain>'], .prose a[href*='<yourdomain>'], .cke_editable a[href*='<yourdomain>'] { /* [1] */ }
 

@@ -91,6 +91,23 @@
                 "lang": "und"
             }
         ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_auto_contextual_content": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/taxonomy\/term\/27?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/automated_contextual_content"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "ca376547-fdf7-433f-a889-a4e0cb136bf4"
+                    }
+                ]
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
             {
                 "_links": {

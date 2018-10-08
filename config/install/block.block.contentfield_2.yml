@@ -24,7 +24,7 @@ settings:
   label: 'Subtitle (alternate 1)'
   provider: fieldblock
   label_display: '0'
-  label_from_field: 1
+  label_from_field: true
   field_name: field_subtitle
   formatter_id: text_trimmed
   formatter_settings: {  }

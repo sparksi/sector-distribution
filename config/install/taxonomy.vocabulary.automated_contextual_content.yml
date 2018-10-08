@@ -3,6 +3,6 @@ status: true
 dependencies: {  }
 name: 'Content settings'
 vid: automated_contextual_content
-description: 'Content which is shown based on the context of the current node'
+description: 'Content which is shown based on the context of the current node. <em>Terms are rabbit-holed to 403.</em>'
 hierarchy: 0
-weight: -4
+weight: -7

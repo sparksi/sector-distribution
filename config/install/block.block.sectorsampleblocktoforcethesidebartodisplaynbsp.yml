@@ -16,7 +16,7 @@ third_party_settings:
 id: sectorsampleblocktoforcethesidebartodisplaynbsp
 theme: sector_starter
 region: sidebar
-weight: -15
+weight: -14
 provider: null
 plugin: 'block_content:e45eaec2-a0a4-4144-b589-f38f255934df'
 settings:
