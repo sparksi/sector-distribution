@@ -278,7 +278,7 @@
   @include word-wrap;
 }
 
-@import "generic/sprite", "generic/sprite-mixins";
+@import "./sprite", "./sprite-mixins";
 
 %apply-external-link-icon {
   /* Add external link icon to links */
