@@ -1,5 +1,7 @@
 <?php
 
+use Drupal\user\Entity\User;
+
 /**
  * @file
  */
@@ -20,5 +22,21 @@ function sector_utils_form_alter(&$form, $form_state, $form_id) {
       $element['#title'] = t('Published');
       $element['#description'] = t('');
       break;
+  }
+}
+
+/**
+ * Implements hook_contextual_links_view_alter().
+ *
+ * Hides the configure block link based if the user doesn't have the right
+ * permission.
+ */
+function sector_utils_contextual_links_view_alter(&$element, $items) {
+  $user = \Drupal::currentUser();
+
+  if(isset($element['#links']['block-configure'])) {
+    if (!$user->hasPermission('configure blocks from contextual links')) {
+      unset($element['#links']['block-configure']);
+    }
   }
 }
