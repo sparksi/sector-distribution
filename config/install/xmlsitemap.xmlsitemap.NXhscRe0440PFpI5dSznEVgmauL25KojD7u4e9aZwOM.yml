@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: NXhscRe0440PFpI5dSznEVgmauL25KojD7u4e9aZwOM
-label: 'http://base3.sectord8.artichoke.sparksi.co/core/install.php/'
+label: 'Sector default sitemap'
 chunks: 1
 links: 18
 max_filesize: 3622

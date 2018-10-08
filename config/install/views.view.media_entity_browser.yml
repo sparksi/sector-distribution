@@ -2,11 +2,7 @@ langcode: und
 status: true
 dependencies:
   config:
-    - field.storage.media.field_title
     - image.style.media_entity_browser_thumbnail
-    - media.type.file
-    - media.type.image
-    - media.type.video
   module:
     - entity_browser
     - image

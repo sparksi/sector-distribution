@@ -38,6 +38,7 @@ function sector_install() {
   _create_entityqueues();
   _create_users();
   _generate_alias();
+  _exclude_xmlsitemap_nodes();
 }
 
 /**
@@ -143,5 +144,15 @@ function _generate_alias() {
   $nodes = Node::loadMultiple();
   foreach ($nodes as $node) {
     \Drupal::service('pathauto.generator')->updateEntityAlias($node, 'insert');
+  }
+}
+
+function _exclude_xmlsitemap_nodes() {
+  $nids = [14, 5];
+  foreach ($nids as $nid) {
+    $link = \Drupal::service('xmlsitemap.link_storage')->load('node', $nid);
+    $link['status'] = "0";
+    $link['status_override'] = "1";
+    $save = \Drupal::service('xmlsitemap.link_storage')->save($link);
   }
 }
