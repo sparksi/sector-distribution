@@ -3,6 +3,18 @@
   "version": "1.0.0",
   "description": "Sector Starter theme",
   "main": "gulpfile.js",
+  "contributors": [
+    "Sparks Interactive"
+  ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/sparksi/sector-distribution.git"
+  },
+  "engines": {
+    "node": ">=8.0.0 <=10.13.0",
+    "npm": ">=6.0.0"
+  },
+  "engineStrict": true,
   "scripts": {
     "reinstall": "yarn rimraf node_modules && yarn cache clean && yarn install",
     "setup": "node .fix-theme-namespaces.js && yarn js:transpile",
