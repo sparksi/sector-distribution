@@ -28,6 +28,9 @@
       display: none;
     }
   }
+  label {
+    @extend .sr-only;
+  }
   .form-group {
     margin-bottom: 0;
   }
@@ -60,8 +63,15 @@
   }
 }
 
-.search--flyout,
-.search-page-form {
+.search--flyout {
+  clear: both;
+  width: 100%;
+  .form-group {
+    margin-bottom: 0;
+  }
+  label {
+    @extend .sr-only;
+  }
   form {
     position: relative;
   }
@@ -69,15 +79,6 @@
     position: absolute;
     top: 0;
     right: 0;
-  }
-  .form-control {
-    &.form-text,
-    &.form-search {
-      height: 43px;
-    }
-  }
-  .form-group {
-    margin-bottom: 0;
   }
   .btn {
     background-color: $brand-gray-lightest;
@@ -119,11 +120,6 @@
     margin-bottom: 0;
     margin-top: 0;
   }
-}
-
-.search--flyout {
-  clear: both;
-  width: 100%;
   &.views-exposed-form {
     padding-top: 0;
     padding-bottom: 0;

@@ -100,7 +100,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     toggle: function toggle() {
       searchTargets.toggle.toggleClass('active');
       searchTargets.elem.toggleClass('search-is-active');
-      $('.search__input').focus(); // Custom search API
+      $('#edit-query').focus(); // Custom search API
       $('#edit-keys').focus(); // Core search
 
       Drupal.behaviors.flyoutMenu.close(); // Close navigation
