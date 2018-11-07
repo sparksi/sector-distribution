@@ -188,3 +188,14 @@
     display: none;
   }
 }
+
+/* Manually add the required asterix to webform forms. */
+/* https://www.drupal.org/project/webform/issues/2860855 */
+.webform-submission-form {
+  .js-form-required {
+    &:after {
+      content: '*';
+      color: $brand-danger;
+    }
+  }
+}

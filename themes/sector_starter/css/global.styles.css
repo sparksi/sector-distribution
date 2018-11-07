@@ -2217,6 +2217,10 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .entity-status-unpublished.admin-ui-hide .content .node--view-mode-full, .entity-status-unpublished.admin-ui-hide .content .media--view-mode-full { display: none; }
 
+/* Manually add the required asterix to webform forms. */
+/* https://www.drupal.org/project/webform/issues/2860855 */
+.webform-submission-form .js-form-required:after { content: '*'; color: #ef604d; }
+
 /* BASE
 ------------------------------------------------------------------------*/
 /** @file Override and extend table styles */
