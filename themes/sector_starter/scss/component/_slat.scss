@@ -138,3 +138,29 @@
     }
   }
 }
+
+.slat--sometimes-has-left-aligned-media {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  @include respond-to(tablet-and-up) {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+  }
+  .slat__media {
+    width: 100%;
+    @include respond-to(tablet-and-up) {
+      flex: 1 0 30%;
+      padding-right: 5%;
+    }
+  }
+  .slat__content {
+    margin-top: $spacing-base;
+    @include respond-to(tablet-and-up) {
+      margin-top: 0;
+      flex-grow: 1;
+      flex: 1 0 60%;
+    }
+  }
+}
