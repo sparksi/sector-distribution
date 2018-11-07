@@ -24,18 +24,18 @@
     <div class="promotion promotion--brand">
       {% if site_logo %}
         <div class="logo logo--primary">
-            <a class="logo__link" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-            {% if svg_logo_source %}
-              {{ svg_logo_source|raw }}
-            {% else %}
-              <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
-            {% endif %}
-            </a>
-            {% if site_name %}
-              <span class="sr-only">
-                {{ site_name }}
-              </span>
-            {% endif %}
+          <a class="logo__link" href="{{ path('<front>') }}" rel="home">
+          {% if svg_logo_source %}
+            {{ svg_logo_source|raw }}
+          {% else %}
+            <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
+          {% endif %}
+          {% if site_name %}
+            <span class="sr-only">
+              {{ site_name }}
+            </span>
+          {% endif %}
+          </a>
         </div>
         {% if site_slogan %}
           <h2 class="slogan">{{ site_slogan }}</h2>
