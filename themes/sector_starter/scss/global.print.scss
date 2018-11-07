@@ -126,11 +126,9 @@ abbr[title]:after {
 
 blockquote {
   page-break-inside: avoid;
-  font-family: georgia;
-  font-style: italic;
   border: none;
   margin: 0;
-  padding: 0;
+  padding: 0!important
 }
 
 pre {
@@ -162,7 +160,9 @@ iframe,
 .link-down,
 .pager,
 .pagination,
-.site__sidebar {
+.site__sidebar,
+.action--back-to-top,
+.media--type-video > .field {
   display: none !important;
 }
 
@@ -194,9 +194,44 @@ iframe,
   }
 }
 
+.logo--primary {
+  .logo__brand {
+    path {
+      .footer-regions-wrapper & {
+        fill: $black;
+      }
+    }
+  }
+}
+
 .logo__link {
   &:after {
     padding-top: 10px;
+  }
+}
+
+.list--fridge-magnets {
+  > li {
+    > a {
+      padding: 0;
+      border: none;
+    }
+  }
+}
+
+.page-header {
+  margin-top: 0;
+}
+
+.path-frontpage {
+  .page-header {
+    margin-top: 0;
+  }
+  .hero {
+    .region-hero {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -218,6 +253,8 @@ iframe,
 
 .collapse {
   display: block!important;
+  height: auto!important;
+  opacity: 1!important;
 }
 
 .footer,
@@ -230,4 +267,18 @@ iframe,
 .related h3,
 .related .field-label {
   margin: 0!important;
+}
+
+.embedded-entity {
+  .media--has-background-icon {
+    &.media--view-mode-teaser {
+      padding: 0;
+      border: none;
+    }
+    &.media--view-mode-short-teaser {
+      .file {
+        padding-left: 0;
+      }
+    }
+  }
 }
