@@ -189,6 +189,21 @@
   }
 }
 
+/*
+ * Unpublished menu item indicator.
+ */
+.navigation {
+  > .menu {
+    > .menu__item {
+      &.menu-item-is-unpublished {
+        > .menu__link {
+          outline: 1px dashed $brand-danger;
+        }
+      }
+    }
+  }
+}
+
 /* Manually add the required asterix to webform forms. */
 /* https://www.drupal.org/project/webform/issues/2860855 */
 .webform-submission-form {
