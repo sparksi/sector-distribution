@@ -24,7 +24,7 @@
       </div>
     </div>
     <![endif]-->
-    <span class="sr-only" id="back-to-top-anchor">Back to top anchor</span>
+    <span class="sr-only" id="back-to-top-anchor" aria-disabled="true">Back to top anchor</span>
 
     <div class="header-regions-wrapper">
 
@@ -162,7 +162,7 @@
 
           {% if page.sidebar %}
             <aside class="site__sidebar">
-              <span class="sr-only" id="sidebar-anchor">Sidebar anchor</span>
+              <span class="sr-only" id="sidebar-anchor" aria-disabled="true">Sidebar anchor</span>
               <div class="site__sidebar-inner">
                 {# Sidebar #}
                 {% block sidebar %}
@@ -191,7 +191,7 @@
 
     {% if (page.pre_footer) or (page.footer) or page.post_footer %}
     <div class="footer-regions-wrapper">
-      <span class="footer-regions-wrapper__anchor sr-only" id="footer-anchor">More menu anchor</span>
+      <span class="footer-regions-wrapper__anchor sr-only" id="footer-anchor" aria-disabled="true">More menu anchor</span>
       {# Pre-Footer #}
       {% if page.pre_footer %}
         {% block pre_footer %}
