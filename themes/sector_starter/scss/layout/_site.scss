@@ -20,6 +20,8 @@
 }
 
 .site__content {
+  padding-left: $responsive-layout-gutter;
+  padding-right: $responsive-layout-gutter;
   &.has-sidebar {
     @include respond-to(desktop-and-up) {
       width: percentage(8/12);
