@@ -45,27 +45,25 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
   Drupal.behaviors.formEnhancements = {
     attach: function attach(context) {
       /**
-      * Radios & Checkboxes
-      * Add class="is-checked" to the parent element of checked inputs
-      * on page load. The CSS uses this class to exaggerate checked input.
-      */
+       * Radios & Checkboxes.
+       *
+       * Add class="is-checked" to the parent element of checked inputs
+       * on page load. The CSS uses this class to exaggerate checked input.
+       */
+      $('input:checked', context).closest('.form-type-radio, .form-type-checkbox').addClass('is-checked');
 
       /**
-      * Radios
-      */
-      $('input:checked', context).parent('.form-type-radio, .form-type-checkbox').addClass('is-checked');
-
-      $('input.form-radio', context).change(function () {
-        if ($(this).prop('checked')) {
-          $('input.form-radio').parent('.form-type-radio').removeClass('is-checked');
-          $(this).parent('.form-type-radio').addClass('is-checked');
-        }
-      }).change();
+       * Radios.
+       */
+      $('input:radio', context).change(function () {
+        $(this).closest('.fieldset-wrapper').find('.is-checked').removeClass('is-checked');
+        $(this).closest('.form-type-radio').addClass('is-checked');
+      });
 
       /**
-      * Checkboxes
-      */
-      $('input:checkbox').change(function () {
+       * Checkboxes.
+       */
+      $('input:checkbox', context).change(function () {
         $(this).closest('.form-type-checkbox').toggleClass('is-checked', this.checked);
       });
     }
