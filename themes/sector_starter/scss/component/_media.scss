@@ -76,12 +76,6 @@ $icon-offset: 54px;
   }
 }
 
-.media--view-mode-half-width {
-  @include respond-to(tablet-large-and-up) {
-    width: 45%;
-  }
-}
-
 .media__content {
   display: block;
   @include respond-to(tablet-and-up) {
