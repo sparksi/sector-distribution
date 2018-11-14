@@ -10,6 +10,7 @@
     margin-top: $spacing-and-half;
   }
   .region-pre-content {
-    @include make-md-column(12);
+    margin-left: $responsive-layout-gutter;
+    margin-right: $responsive-layout-gutter;
   }
 }

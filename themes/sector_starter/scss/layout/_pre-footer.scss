@@ -9,6 +9,7 @@
     padding-bottom: $spacing-double;
   }
   .region-pre-footer {
-    @include make-md-column(12);
+    margin-left: $responsive-layout-gutter;
+    margin-right: $responsive-layout-gutter;
   }
 }

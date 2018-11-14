@@ -26,7 +26,8 @@
     }
   }
   .footer-regions-wrapper & {
-    @include make-xs-column(12);
+    margin-left: $responsive-layout-gutter;
+    margin-right: $responsive-layout-gutter;
     margin-top: $spacing-base;
     @include respond-to(desktop-and-up) {
       position: absolute;
@@ -68,17 +69,23 @@
 }
 
 .promotion--navigation-quaternary {
-  @include make-xs-column(12);
-  @include make-lg-column(8);
+  margin-left: $responsive-layout-gutter;
+  margin-right: $responsive-layout-gutter;
   margin-top: $spacing-half;
+  @include respond-to(desktop-and-up) {
+    width: 70%;
+  }
 }
 
 .promotion--copyright {
-  @include make-xs-column(12);
-  @include make-lg-column(8);
+  margin-left: $responsive-layout-gutter;
+  margin-right: $responsive-layout-gutter;
   margin-top: $spacing-base;
   @include respond-to(tablet-and-up) {
     margin-top: 0;
+  }
+  @include respond-to(desktop-and-up) {
+    width: 70%;
   }
   p {
     font-size: 16px;
@@ -173,7 +180,8 @@
 }
 
 .promotion--last-updated {
-  @include make-xs-column(12);
+  margin-left: $responsive-layout-gutter;
+  margin-right: $responsive-layout-gutter;
   h2 {
     display: inline-block;
     font-size: 16px;

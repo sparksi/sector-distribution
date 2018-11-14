@@ -4,6 +4,7 @@
  */
 .post-header {
   .region-post-header {
-    @include make-md-column(12);
+    margin-left: $responsive-layout-gutter;
+    margin-right: $responsive-layout-gutter;
   }
 }

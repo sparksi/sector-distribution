@@ -29,4 +29,8 @@
 .node__term {
   font-size: $font-size-h4;
   color: $gray-light;
+  margin-top: $spacing-half;
+  @include respond-to(tablet-and-up) {
+    margin-top: 0;
+  }
 }

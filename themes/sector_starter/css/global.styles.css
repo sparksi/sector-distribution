@@ -2406,9 +2406,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 .header .region-header { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 /** @file BEM block for post-header. */
-.help .region-help { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
-
-@media (min-width: 992px) { .help .region-help { float: left; width: 100%; } }
+.help .region-help { margin-left: 15px; margin-right: 15px; }
 
 /** @file BEM block for hero. */
 .hero { background-color: #f6f7f8; }
@@ -2444,60 +2442,42 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 @media (min-width: 992px) { .post-footer .site__row { position: relative; } }
 
 /** @file BEM block for post-header. */
-.post-header .region-post-header { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
-
-@media (min-width: 992px) { .post-header .region-post-header { float: left; width: 100%; } }
+.post-header .region-post-header { margin-left: 15px; margin-right: 15px; }
 
 /** @file BEM block for post-header. */
-.post-hero .region-post-hero { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
-
-@media (min-width: 992px) { .post-hero .region-post-hero { float: left; width: 100%; } }
+.post-hero .region-post-hero { margin-left: 15px; margin-right: 15px; }
 
 /** @file BEM block for pre-content. */
 @media (min-width: 480px) { .pre-content { margin-top: 1.555em; } }
 
 @media (min-width: 992px) { .pre-content { margin-top: 2.3325em; } }
 
-.pre-content .region-pre-content { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
-
-@media (min-width: 992px) { .pre-content .region-pre-content { float: left; width: 100%; } }
+.pre-content .region-pre-content { margin-left: 15px; margin-right: 15px; }
 
 /** @file BEM block for pre-footer. */
 .pre-footer { background-color: #ffffff; padding-bottom: 1.555em; }
 
 @media (min-width: 992px) { .pre-footer { padding-bottom: 3.11em; } }
 
-.pre-footer .region-pre-footer { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
-
-@media (min-width: 992px) { .pre-footer .region-pre-footer { float: left; width: 100%; } }
+.pre-footer .region-pre-footer { margin-left: 15px; margin-right: 15px; }
 
 /** @file BEM block for pre-header. */
 .pre-header { background-color: #ffffff; }
 
-.pre-header .region-pre-header { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
-
-@media (min-width: 992px) { .pre-header .region-pre-header { float: left; width: 100%; } }
+.pre-header .region-pre-header { margin-left: 15px; margin-right: 15px; }
 
 /** @file BEM block for post-header. */
-.pre-hero .region-pre-hero { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
-
-@media (min-width: 992px) { .pre-hero .region-pre-hero { float: left; width: 100%; } }
+.pre-hero .region-pre-hero { margin-left: 15px; margin-right: 15px; }
 
 /** @file BEM block for site wrapper. */
 /** @file BEM block for site. */
 @media (min-width: 1360px) { .site__inner { width: 1240px; } }
 
-.site__content { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+.content .site__row { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; }
 
-@media (min-width: 992px) { .site__content { float: left; width: 100%; } }
+@media (min-width: 992px) { .site__content.has-sidebar { width: 66.66667%; } }
 
-.site__content.has-sidebar { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
-
-@media (min-width: 992px) { .site__content.has-sidebar { float: left; width: 66.66667%; } }
-
-@media (min-width: 1200px) { .site__content.has-sidebar { float: left; width: 75%; } }
-
-@media (min-width: 1200px) { .site__content.has-sidebar { padding: 0 5em 0 15px; } }
+@media (min-width: 1200px) { .site__content.has-sidebar { width: 75%; padding: 0 5em 0 15px; } }
 
 @media (min-width: 1360px) { .site__content.has-sidebar { padding: 0 8.75em 0 15px; } }
 
@@ -2505,11 +2485,11 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 @media (min-width: 992px) { .site__content + .site__sidebar { margin-top: 0; } }
 
-.site__sidebar { position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+.site__sidebar { padding-left: 15px; padding-right: 15px; }
 
-@media (min-width: 992px) { .site__sidebar { float: left; width: 33.33333%; } }
+@media (min-width: 992px) { .site__sidebar { width: 33.33333%; } }
 
-@media (min-width: 1200px) { .site__sidebar { float: left; width: 25%; } }
+@media (min-width: 1200px) { .site__sidebar { width: 25%; } }
 
 .site__sidebar-inner { font-size: 16px; line-height: 1.625; }
 
@@ -3074,7 +3054,9 @@ label { font-size: 15px; }
 
 @media (min-width: 480px) { .path-frontpage .hero .node__subtitle { font-size: 18px; } }
 
-.node__term { font-size: 20px; color: #666666; }
+.node__term { font-size: 20px; color: #666666; margin-top: 0.7775em; }
+
+@media (min-width: 480px) { .node__term { margin-top: 0; } }
 
 /** @file BEM block for Note. Use a callout note to draw attention to important content on the page. */
 .note { position: relative; background-color: #f6f7f8; padding: 1.555em; margin: 28px 0; border: 1px solid #d4d7dd; border-left: 4px solid #CCCCCC; }
@@ -3209,7 +3191,7 @@ label { font-size: 15px; }
 
 @media (min-width: 1200px) { .header .promotion--brand { width: 19%; } }
 
-.footer-regions-wrapper .promotion--brand { position: relative; float: left; width: 100%; min-height: 1px; padding-left: 15px; padding-right: 15px; margin-top: 1.555em; }
+.footer-regions-wrapper .promotion--brand { margin-left: 15px; margin-right: 15px; margin-top: 1.555em; }
 
 @media (min-width: 992px) { .footer-regions-wrapper .promotion--brand { position: absolute; top: 0; right: 0; width: auto; margin-top: 0; } }
 
@@ -3223,15 +3205,15 @@ label { font-size: 15px; }
 
 @media (max-width: 991px) { .promotion--navigation-primary:after { content: ''; width: 100vw; background-color: #444; position: absolute; z-index: -1; height: 100%; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: block; top: 0; } }
 
-.promotion--navigation-quaternary { position: relative; float: left; width: 100%; min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; margin-top: 0.7775em; }
+.promotion--navigation-quaternary { margin-left: 15px; margin-right: 15px; margin-top: 0.7775em; }
 
-@media (min-width: 1200px) { .promotion--navigation-quaternary { float: left; width: 66.66667%; } }
+@media (min-width: 992px) { .promotion--navigation-quaternary { width: 70%; } }
 
-.promotion--copyright { position: relative; float: left; width: 100%; min-height: 1px; padding-left: 15px; padding-right: 15px; position: relative; min-height: 1px; padding-left: 15px; padding-right: 15px; margin-top: 1.555em; }
-
-@media (min-width: 1200px) { .promotion--copyright { float: left; width: 66.66667%; } }
+.promotion--copyright { margin-left: 15px; margin-right: 15px; margin-top: 1.555em; }
 
 @media (min-width: 480px) { .promotion--copyright { margin-top: 0; } }
+
+@media (min-width: 992px) { .promotion--copyright { width: 70%; } }
 
 .promotion--copyright p { font-size: 16px; color: #CCCCCC; }
 
@@ -3263,7 +3245,7 @@ label { font-size: 15px; }
 
 @media (min-width: 992px) { .promotion--resources { width: 48%; } }
 
-.promotion--last-updated { position: relative; float: left; width: 100%; min-height: 1px; padding-left: 15px; padding-right: 15px; }
+.promotion--last-updated { margin-left: 15px; margin-right: 15px; }
 
 .promotion--last-updated h2 { display: inline-block; font-size: 16px; font-family: "Nunito Sans", Helvetica, Arial, sans-serif; margin: 0; color: #252526; }
 

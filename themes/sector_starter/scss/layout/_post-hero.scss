@@ -4,7 +4,8 @@
  */
 .post-hero {
   .region-post-hero {
-    @include make-md-column(12);
+    margin-left: $responsive-layout-gutter;
+    margin-right: $responsive-layout-gutter;
     @extend %has-margin-top-base;
   }
 }
