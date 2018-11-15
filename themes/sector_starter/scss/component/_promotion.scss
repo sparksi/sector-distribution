@@ -7,50 +7,23 @@
 }
 
 .promotion--brand {
-  .header & {
-    width: 70%;
-  }
-  @include respond-to(tablet-and-up) {
-    .header & {
-      width: 60%;
-    }
-  }
-  @include respond-to(desktop-and-up) {
-    .header & {
-      width: 27%;
-    }
-  }
-  @include respond-to(wide-and-up) {
-    .header & {
-      width: 19%;
-    }
-  }
   .footer-regions-wrapper & {
     margin-left: $responsive-layout-gutter;
     margin-right: $responsive-layout-gutter;
     margin-top: $spacing-base;
     @include respond-to(desktop-and-up) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: auto;
       margin-top: 0;
     }
   }
 }
 
 .promotion--navigation-primary {
-  width: 100%;
   position: relative;
   @include respond-to(tablet-large-and-down) {
     display: none;
   }
   @include respond-to(desktop-and-up) {
-    width: 63%;
     background-color: transparent;
-  }
-  @include respond-to(wide-and-up) {
-    width: 71%;
   }
   &:after {
     @include respond-to(tablet-large-and-down) {
@@ -73,7 +46,7 @@
   margin-right: $responsive-layout-gutter;
   margin-top: $spacing-half;
   @include respond-to(desktop-and-up) {
-    width: 70%;
+    margin-top: 0;
   }
 }
 
@@ -81,11 +54,8 @@
   margin-left: $responsive-layout-gutter;
   margin-right: $responsive-layout-gutter;
   margin-top: $spacing-base;
-  @include respond-to(tablet-and-up) {
-    margin-top: 0;
-  }
   @include respond-to(desktop-and-up) {
-    width: 70%;
+    margin-top: 0;
   }
   p {
     font-size: 16px;
@@ -150,11 +120,10 @@
 }
 
 .promotion--news {
-  width: 100%;
   padding-left: $responsive-layout-gutter;
   padding-right: $responsive-layout-gutter;
   @include respond-to(desktop-and-up) {
-    width: 48%;
+    padding-right: 40px;
   }
   .more-link {
     @extend %has-margin-top-and-half;
@@ -165,11 +134,10 @@
 }
 
 .promotion--resources {
-  width: 100%;
   padding-left: $responsive-layout-gutter;
   padding-right: $responsive-layout-gutter;
   @include respond-to(desktop-and-up) {
-    width: 48%;
+    padding-left: 40px;
   }
   .more-link {
     @extend %has-margin-top-and-half;

@@ -4,8 +4,9 @@
  */
 .post-hero {
   .region-post-hero {
-    margin-left: $responsive-layout-gutter;
-    margin-right: $responsive-layout-gutter;
+    width: 100%;
+    padding-left: $responsive-layout-gutter;
+    padding-right: $responsive-layout-gutter;
     @extend %has-margin-top-base;
   }
 }

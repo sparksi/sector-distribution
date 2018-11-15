@@ -91,7 +91,7 @@
       // Add this search's .site region to list of offclick 'whitelist'
       offclickRegions.push(searchTargets.elem.parents('.site'));
     },
-    toggle: () => {
+    toggle: (event) => {
       searchTargets.toggle.toggleClass('active');
       searchTargets.elem.toggleClass('search-is-active');
       $('#edit-query').focus(); // Custom search API
@@ -104,6 +104,7 @@
         'aria-label': searchTargets.toggle.hasClass('active') ? 'Close search' : 'Open search',
         'aria-pressed': !!searchTargets.toggle.hasClass('active'),
       });
+      event.preventDefault();
     },
     close: () => {
       searchTargets.toggle.removeClass('active');

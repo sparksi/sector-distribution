@@ -64,8 +64,47 @@
 }
 
 .search--flyout {
-  clear: both;
+  display: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  background-color: transparent;
   width: 100%;
+  @include respond-to(tablet) {
+    padding: 0 $responsive-layout-gutter;
+  }
+  .js & {
+    margin: 0;
+    @include respond-to(tablet-large-and-down) {
+      margin-top: 20px;
+    }
+    @include respond-to(desktop-and-up) {
+      padding: 0;
+      position: absolute;
+      right: 51px;
+      clear: none;
+      top: -4px;
+      width: 64%;
+    }
+    @include respond-to(wide-large-and-up) {
+      width: 71%;
+    }
+    @include respond-to(mega-and-up) {
+      width: 74%;
+    }
+  }
+  .js &.search-is-active {
+    display: block;
+  }
+  &.search-is-active {
+    display: block;
+    padding-left: $responsive-layout-gutter;
+    padding-right: $responsive-layout-gutter;
+    @include respond-to(desktop-and-up) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
   .form-group {
     margin-bottom: 0;
   }
@@ -119,50 +158,6 @@
   .description {
     margin-bottom: 0;
     margin-top: 0;
-  }
-  &.views-exposed-form {
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-bottom: 0;
-    background-color: transparent;
-    width: 100%;
-    .js & {
-      margin: 0;
-      @include respond-to(tablet-large-and-down) {
-        margin-top: 20px;
-      }
-    }
-    @include respond-to(tablet-and-up) {
-      padding: 0 $responsive-layout-gutter;
-    }
-    @include respond-to(tablet-large-and-down) {
-      margin-top: 20px;
-    }
-  }
-  &.search-is-active {
-    display: block;
-    padding-left: $responsive-layout-gutter;
-    padding-right: $responsive-layout-gutter;
-    @include respond-to(desktop-and-up) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-  }
-  .js & {
-    display: none;
-    @include respond-to(desktop-and-up) {
-      width: 64%;
-      position: absolute;
-      top: -4px;
-      right: 51px;
-      clear: none;
-    }
-    @include respond-to(wide-large-and-up) {
-      width: 74%;
-    }
-  }
-  .js &.search-is-active {
-    display: block;
   }
   .form-control {
     &.form-text,

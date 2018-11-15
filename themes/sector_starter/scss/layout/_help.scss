@@ -1,10 +1,11 @@
 /**
  * @file
- * BEM block for post-header.
+ * BEM block for help.
  */
 .help {
   .region-help {
-    margin-left: $responsive-layout-gutter;
-    margin-right: $responsive-layout-gutter;
+    width: 100%;
+    padding-left: $responsive-layout-gutter;
+    padding-right: $responsive-layout-gutter;
   }
 }
