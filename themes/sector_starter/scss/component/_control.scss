@@ -4,21 +4,10 @@
  */
 
 .control--responsive-menu {
-  width: 30%;
   margin-top: -2px;
-  @include respond-to(tablet-and-up) {
-    width: 40%;
-  }
-  @include respond-to(desktop-and-up) {
-    display: none;
-  }
 }
 
 .control--fly-out-search {
-  width: 10%;
-  @include respond-to(tablet-large-and-down) {
-    display: none;
-  }
   .toggle--search {
     &.active {
       .icon--search {

@@ -4,7 +4,8 @@
  */
 .post-header {
   .region-post-header {
-    margin-left: $responsive-layout-gutter;
-    margin-right: $responsive-layout-gutter;
+    width: 100%;
+    padding-left: $responsive-layout-gutter;
+    padding-right: $responsive-layout-gutter;
   }
 }

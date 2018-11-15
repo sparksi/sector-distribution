@@ -95,7 +95,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       // Add this search's .site region to list of offclick 'whitelist'
       offclickRegions.push(searchTargets.elem.parents('.site'));
     },
-    toggle: function toggle() {
+    toggle: function toggle(event) {
       searchTargets.toggle.toggleClass('active');
       searchTargets.elem.toggleClass('search-is-active');
       $('#edit-query').focus(); // Custom search API
@@ -108,6 +108,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
         'aria-label': searchTargets.toggle.hasClass('active') ? 'Close search' : 'Open search',
         'aria-pressed': !!searchTargets.toggle.hasClass('active')
       });
+      event.preventDefault();
     },
     close: function close() {
       searchTargets.toggle.removeClass('active');

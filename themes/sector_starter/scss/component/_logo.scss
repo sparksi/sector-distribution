@@ -33,6 +33,7 @@
   .logo__brand {
     transition: all 0.05s ease-in;
     .footer-regions-wrapper & {
+      vertical-align: top;
       width: 200px;
     }
     path {
