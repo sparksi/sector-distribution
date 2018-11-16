@@ -5,7 +5,6 @@
 .help {
   .region-help {
     width: 100%;
-    padding-left: $responsive-layout-gutter;
-    padding-right: $responsive-layout-gutter;
+    @include apply-gutter;
   }
 }

@@ -154,6 +154,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 /* Px to Em https://web-design-weekly.com/snippets/converts-pixels-to-ems-with-sass/ */
 /* WebKit-style focus */
 /* To handle long words and URLs */
+/* Default gutters */
 /** @file Map Bootstrap breakpoints to nice mixins. */
 /* COMPONENT
 ------------------------------------------------------------------------*/

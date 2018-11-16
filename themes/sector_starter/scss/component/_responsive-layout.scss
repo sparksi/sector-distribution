@@ -34,8 +34,7 @@
   margin-right: $responsive-layout-gutter * -1;
   > .responsive-layout__item,
   > %responsive-layout__item {
-    padding-left: $responsive-layout-gutter;
-    padding-right: $responsive-layout-gutter;
+    @include apply-gutter;
     ~ .responsive-layout__item,
     ~ %responsive-layout__item {
       margin-top: $spacing-base;

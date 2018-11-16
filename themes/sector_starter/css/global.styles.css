@@ -1205,7 +1205,7 @@ input[type="file"]:focus, input[type="radio"]:focus, input[type="checkbox"]:focu
 
 output { display: block; padding-top: 7px; font-size: 18px; line-height: 1.555; color: #555555; }
 
-.form-control { display: block; width: 100%; height: 42px; padding: 6px 12px; font-size: 18px; line-height: 1.555; color: #555555; background-color: #fff; background-image: none; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; }
+.form-control { display: block; width: 100%; height: 50px; padding: 6px 12px; font-size: 18px; line-height: 1.555; color: #555555; background-color: #fff; background-image: none; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s; }
 
 .form-control:focus { border-color: #66afe9; outline: 0; -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
 
@@ -1225,9 +1225,9 @@ textarea.form-control { height: auto; }
 
 input[type="search"] { -webkit-appearance: none; }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) { input[type="date"].form-control, input[type="time"].form-control, input[type="datetime-local"].form-control, input[type="month"].form-control { line-height: 42px; }
-  input[type="date"].input-sm, .input-group-sm > input.form-control[type="date"], .input-group-sm > input.input-group-addon[type="date"], .input-group-sm > .input-group-btn > input.btn[type="date"], .input-group-sm input[type="date"], input[type="time"].input-sm, .input-group-sm > input.form-control[type="time"], .input-group-sm > input.input-group-addon[type="time"], .input-group-sm > .input-group-btn > input.btn[type="time"], .input-group-sm input[type="time"], input[type="datetime-local"].input-sm, .input-group-sm > input.form-control[type="datetime-local"], .input-group-sm > input.input-group-addon[type="datetime-local"], .input-group-sm > .input-group-btn > input.btn[type="datetime-local"], .input-group-sm input[type="datetime-local"], input[type="month"].input-sm, .input-group-sm > input.form-control[type="month"], .input-group-sm > input.input-group-addon[type="month"], .input-group-sm > .input-group-btn > input.btn[type="month"], .input-group-sm input[type="month"] { line-height: 33px; }
-  input[type="date"].input-lg, .input-group-lg > input.form-control[type="date"], .input-group-lg > input.input-group-addon[type="date"], .input-group-lg > .input-group-btn > input.btn[type="date"], .input-group-lg input[type="date"], input[type="time"].input-lg, .input-group-lg > input.form-control[type="time"], .input-group-lg > input.input-group-addon[type="time"], .input-group-lg > .input-group-btn > input.btn[type="time"], .input-group-lg input[type="time"], input[type="datetime-local"].input-lg, .input-group-lg > input.form-control[type="datetime-local"], .input-group-lg > input.input-group-addon[type="datetime-local"], .input-group-lg > .input-group-btn > input.btn[type="datetime-local"], .input-group-lg input[type="datetime-local"], input[type="month"].input-lg, .input-group-lg > input.form-control[type="month"], .input-group-lg > input.input-group-addon[type="month"], .input-group-lg > .input-group-btn > input.btn[type="month"], .input-group-lg input[type="month"] { line-height: 54px; } }
+@media screen and (-webkit-min-device-pixel-ratio: 0) { input[type="date"].form-control, input[type="time"].form-control, input[type="datetime-local"].form-control, input[type="month"].form-control { line-height: 50px; }
+  input[type="date"].input-sm, .input-group-sm > input.form-control[type="date"], .input-group-sm > input.input-group-addon[type="date"], .input-group-sm > .input-group-btn > input.btn[type="date"], .input-group-sm input[type="date"], input[type="time"].input-sm, .input-group-sm > input.form-control[type="time"], .input-group-sm > input.input-group-addon[type="time"], .input-group-sm > .input-group-btn > input.btn[type="time"], .input-group-sm input[type="time"], input[type="datetime-local"].input-sm, .input-group-sm > input.form-control[type="datetime-local"], .input-group-sm > input.input-group-addon[type="datetime-local"], .input-group-sm > .input-group-btn > input.btn[type="datetime-local"], .input-group-sm input[type="datetime-local"], input[type="month"].input-sm, .input-group-sm > input.form-control[type="month"], .input-group-sm > input.input-group-addon[type="month"], .input-group-sm > .input-group-btn > input.btn[type="month"], .input-group-sm input[type="month"] { line-height: 50px; }
+  input[type="date"].input-lg, .input-group-lg > input.form-control[type="date"], .input-group-lg > input.input-group-addon[type="date"], .input-group-lg > .input-group-btn > input.btn[type="date"], .input-group-lg input[type="date"], input[type="time"].input-lg, .input-group-lg > input.form-control[type="time"], .input-group-lg > input.input-group-addon[type="time"], .input-group-lg > .input-group-btn > input.btn[type="time"], .input-group-lg input[type="time"], input[type="datetime-local"].input-lg, .input-group-lg > input.form-control[type="datetime-local"], .input-group-lg > input.input-group-addon[type="datetime-local"], .input-group-lg > .input-group-btn > input.btn[type="datetime-local"], .input-group-lg input[type="datetime-local"], input[type="month"].input-lg, .input-group-lg > input.form-control[type="month"], .input-group-lg > input.input-group-addon[type="month"], .input-group-lg > .input-group-btn > input.btn[type="month"], .input-group-lg input[type="month"] { line-height: 50px; } }
 
 .form-group { margin-bottom: 15px; }
 
@@ -1253,43 +1253,43 @@ input[type="radio"][disabled], input[type="radio"].disabled, fieldset[disabled] 
 
 .form-control-static.input-lg, .input-group-lg > .form-control-static.form-control, .input-group-lg > .form-control-static.input-group-addon, .input-group-lg > .input-group-btn > .form-control-static.btn, .tabs--primary.input-group-lg > li.input-group-btn > a.form-control-static, .list--fridge-magnets.input-group-lg > li.input-group-btn > a.form-control-static, .form-control-static.input-sm, .input-group-sm > .form-control-static.form-control, .input-group-sm > .form-control-static.input-group-addon, .input-group-sm > .input-group-btn > .form-control-static.btn, .tabs--primary.input-group-sm > li.input-group-btn > a.form-control-static, .list--fridge-magnets.input-group-sm > li.input-group-btn > a.form-control-static { padding-left: 0; padding-right: 0; }
 
-.input-sm, .input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn, .tabs--primary.input-group-sm > li.input-group-btn > a, .list--fridge-magnets.input-group-sm > li.input-group-btn > a { height: 33px; padding: 5px 10px; font-size: 14px; line-height: 1.5; border-radius: 3px; }
+.input-sm, .input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn, .tabs--primary.input-group-sm > li.input-group-btn > a, .list--fridge-magnets.input-group-sm > li.input-group-btn > a { height: 50px; padding: 5px 10px; font-size: 14px; line-height: 1.5; border-radius: 3px; }
 
-select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select.input-group-addon, .input-group-sm > .input-group-btn > select.btn { height: 33px; line-height: 33px; }
+select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select.input-group-addon, .input-group-sm > .input-group-btn > select.btn { height: 50px; line-height: 50px; }
 
 textarea.input-sm, .input-group-sm > textarea.form-control, .input-group-sm > textarea.input-group-addon, .input-group-sm > .input-group-btn > textarea.btn, select[multiple].input-sm, .input-group-sm > select.form-control[multiple], .input-group-sm > select.input-group-addon[multiple], .input-group-sm > .input-group-btn > select.btn[multiple] { height: auto; }
 
-.form-group-sm .form-control { height: 33px; padding: 5px 10px; font-size: 14px; line-height: 1.5; border-radius: 3px; }
+.form-group-sm .form-control { height: 50px; padding: 5px 10px; font-size: 14px; line-height: 1.5; border-radius: 3px; }
 
-.form-group-sm select.form-control { height: 33px; line-height: 33px; }
+.form-group-sm select.form-control { height: 50px; line-height: 50px; }
 
 .form-group-sm textarea.form-control, .form-group-sm select[multiple].form-control { height: auto; }
 
-.form-group-sm .form-control-static { height: 33px; min-height: 42px; padding: 6px 10px; font-size: 14px; line-height: 1.5; }
+.form-group-sm .form-control-static { height: 50px; min-height: 42px; padding: 6px 10px; font-size: 14px; line-height: 1.5; }
 
-.input-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn, .tabs--primary.input-group-lg > li.input-group-btn > a, .list--fridge-magnets.input-group-lg > li.input-group-btn > a { height: 54px; padding: 10px 16px; font-size: 24px; line-height: 1.33333; border-radius: 6px; }
+.input-lg, .input-group-lg > .form-control, .input-group-lg > .input-group-addon, .input-group-lg > .input-group-btn > .btn, .tabs--primary.input-group-lg > li.input-group-btn > a, .list--fridge-magnets.input-group-lg > li.input-group-btn > a { height: 50px; padding: 10px 16px; font-size: 24px; line-height: 1.33333; border-radius: 6px; }
 
-select.input-lg, .input-group-lg > select.form-control, .input-group-lg > select.input-group-addon, .input-group-lg > .input-group-btn > select.btn { height: 54px; line-height: 54px; }
+select.input-lg, .input-group-lg > select.form-control, .input-group-lg > select.input-group-addon, .input-group-lg > .input-group-btn > select.btn { height: 50px; line-height: 50px; }
 
 textarea.input-lg, .input-group-lg > textarea.form-control, .input-group-lg > textarea.input-group-addon, .input-group-lg > .input-group-btn > textarea.btn, select[multiple].input-lg, .input-group-lg > select.form-control[multiple], .input-group-lg > select.input-group-addon[multiple], .input-group-lg > .input-group-btn > select.btn[multiple] { height: auto; }
 
-.form-group-lg .form-control { height: 54px; padding: 10px 16px; font-size: 24px; line-height: 1.33333; border-radius: 6px; }
+.form-group-lg .form-control { height: 50px; padding: 10px 16px; font-size: 24px; line-height: 1.33333; border-radius: 6px; }
 
-.form-group-lg select.form-control { height: 54px; line-height: 54px; }
+.form-group-lg select.form-control { height: 50px; line-height: 50px; }
 
 .form-group-lg textarea.form-control, .form-group-lg select[multiple].form-control { height: auto; }
 
-.form-group-lg .form-control-static { height: 54px; min-height: 52px; padding: 11px 16px; font-size: 24px; line-height: 1.33333; }
+.form-group-lg .form-control-static { height: 50px; min-height: 52px; padding: 11px 16px; font-size: 24px; line-height: 1.33333; }
 
 .has-feedback { position: relative; }
 
-.has-feedback .form-control { padding-right: 52.5px; }
+.has-feedback .form-control { padding-right: 62.5px; }
 
-.form-control-feedback { position: absolute; top: 0; right: 0; z-index: 2; display: block; width: 42px; height: 42px; line-height: 42px; text-align: center; pointer-events: none; }
+.form-control-feedback { position: absolute; top: 0; right: 0; z-index: 2; display: block; width: 50px; height: 50px; line-height: 50px; text-align: center; pointer-events: none; }
 
-.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, .input-group-lg > .input-group-addon + .form-control-feedback, .input-group-lg > .input-group-btn > .btn + .form-control-feedback, .tabs--primary.input-group-lg > li.input-group-btn > a + .form-control-feedback, .list--fridge-magnets.input-group-lg > li.input-group-btn > a + .form-control-feedback, .input-group-lg + .form-control-feedback, .form-group-lg .form-control + .form-control-feedback { width: 54px; height: 54px; line-height: 54px; }
+.input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, .input-group-lg > .input-group-addon + .form-control-feedback, .input-group-lg > .input-group-btn > .btn + .form-control-feedback, .tabs--primary.input-group-lg > li.input-group-btn > a + .form-control-feedback, .list--fridge-magnets.input-group-lg > li.input-group-btn > a + .form-control-feedback, .input-group-lg + .form-control-feedback, .form-group-lg .form-control + .form-control-feedback { width: 50px; height: 50px; line-height: 50px; }
 
-.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, .input-group-sm > .input-group-addon + .form-control-feedback, .input-group-sm > .input-group-btn > .btn + .form-control-feedback, .tabs--primary.input-group-sm > li.input-group-btn > a + .form-control-feedback, .list--fridge-magnets.input-group-sm > li.input-group-btn > a + .form-control-feedback, .input-group-sm + .form-control-feedback, .form-group-sm .form-control + .form-control-feedback { width: 33px; height: 33px; line-height: 33px; }
+.input-sm + .form-control-feedback, .input-group-sm > .form-control + .form-control-feedback, .input-group-sm > .input-group-addon + .form-control-feedback, .input-group-sm > .input-group-btn > .btn + .form-control-feedback, .tabs--primary.input-group-sm > li.input-group-btn > a + .form-control-feedback, .list--fridge-magnets.input-group-sm > li.input-group-btn > a + .form-control-feedback, .input-group-sm + .form-control-feedback, .form-group-sm .form-control + .form-control-feedback { width: 50px; height: 50px; line-height: 50px; }
 
 .has-success .help-block, .has-success .control-label, .has-success .radio, .has-success .checkbox, .has-success .radio-inline, .has-success .checkbox-inline, .has-success.radio label, .has-success.checkbox label, .has-success.radio-inline label, .has-success.checkbox-inline label { color: #3c763d; }
 
@@ -1978,6 +1978,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /* Px to Em https://web-design-weekly.com/snippets/converts-pixels-to-ems-with-sass/ */
 /* WebKit-style focus */
 /* To handle long words and URLs */
+/* Default gutters */
 /** @file Map Bootstrap breakpoints to nice mixins. */
 /** @file OOCSS Helpers & BEM modifiers */
 /* Useful within Display Suite for removing margin from headings. */
@@ -2003,9 +2004,9 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 @media (min-width: 992px) { .has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .page-node-type-resource .field--name-field-related-files > .field--items > .field--item, .meta__featured + .field, .path-frontpage .hero .node__subtitle { margin-top: 1.555em; } }
 
-.has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field { margin-top: 1.555em; }
+.has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field, .webform-submission-form .form-item { margin-top: 1.555em; }
 
-@media (min-width: 992px) { .has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field { margin-top: 2.3325em; } }
+@media (min-width: 992px) { .has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field, .webform-submission-form .form-item { margin-top: 2.3325em; } }
 
 .has-margin-top-double, .user-login-form, .user-pass, .footer-regions-wrapper, .pagination, .pager, .promotion--social-share { margin-top: 1.555em; }
 
@@ -2096,7 +2097,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 .dont-break-out { overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; word-break: break-word; -ms-hyphens: auto; -webkit-hyphens: auto; hyphens: auto; }
 
 /** The following variable and function originate from the sass-mq library. If you have already included it, you can eliminate the below https://github.com/sass-mq/sass-mq/blob/master/_mq.scss */
-.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .transcript > div a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .facet-summary-item--facet > a .action--deactivate-facet:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .promotion--facet-group .block-title:before, .promotion--facet-group .action--deactivate-facet:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
+.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .transcript > div a:after, .webform-submission-form .panel-default .panel-heading a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .facet-summary-item--facet > a .action--deactivate-facet:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .promotion--facet-group .block-title:before, .promotion--facet-group .action--deactivate-facet:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
 
 .caption, .site__sidebar-inner .block, .field--type-link, .prose { /* Add external link icon to links */ /* 1. Site domain as defined in _variables.scss. Let's not add an icon if a link has been created using the sites full absolute domain. */ }
 
@@ -2137,18 +2138,18 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 @media (min-width: 480px) { .box-it-up, .user-login-form, .user-pass, .call-to-action, .search--primary, .views-exposed-form { padding: 1.555em; } }
 
-.transcript > div a { font-weight: 700; line-height: 1.1; display: block; margin-top: 13px; margin-bottom: 13px; }
+.transcript > div a, .webform-submission-form .panel-default .panel-heading a { font-weight: 700; line-height: 1.1; display: block; margin-top: 13px; margin-bottom: 13px; }
 
-.transcript > div a:after { content: ''; width: 0.75em; height: 0.4375em; background-position: -4.875em -5em; position: absolute; margin: 8px 0 0 6px; }
+.transcript > div a:after, .webform-submission-form .panel-default .panel-heading a:after { content: ''; width: 0.75em; height: 0.4375em; background-position: -4.875em -5em; position: absolute; margin: 8px 0 0 6px; }
 
-.transcript > div a:hover:after { width: 0.75em; height: 0.4375em; background-position: -6.1875em -6em; }
+.transcript > div a:hover:after, .webform-submission-form .panel-default .panel-heading a:hover:after { width: 0.75em; height: 0.4375em; background-position: -6.1875em -6em; }
 
-.transcript > div a[aria-expanded="true"]:after { width: 0.75em; height: 0.4375em; background-position: -8.8125em -8em; margin: 7px 0 0 6px; }
+.transcript > div a[aria-expanded="true"]:after, .webform-submission-form .panel-default .panel-heading a[aria-expanded="true"]:after { width: 0.75em; height: 0.4375em; background-position: -8.8125em -8em; margin: 7px 0 0 6px; }
 
-.transcript > div a[aria-expanded="true"]:hover:after { width: 0.75em; height: 0.4375em; background-position: -10.125em -9em; }
+.transcript > div a[aria-expanded="true"]:hover:after, .webform-submission-form .panel-default .panel-heading a[aria-expanded="true"]:hover:after { width: 0.75em; height: 0.4375em; background-position: -10.125em -9em; }
 
 /** The following variable and function originate from the sass-mq library. If you have already included it, you can eliminate the below https://github.com/sass-mq/sass-mq/blob/master/_mq.scss */
-.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .transcript > div a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .facet-summary-item--facet > a .action--deactivate-facet:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .promotion--facet-group .block-title:before, .promotion--facet-group .action--deactivate-facet:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
+.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .transcript > div a:after, .webform-submission-form .panel-default .panel-heading a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .facet-summary-item--facet > a .action--deactivate-facet:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .promotion--facet-group .block-title:before, .promotion--facet-group .action--deactivate-facet:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
 
 /** @file Custom tweaks to admin elements */
 .alert { margin-top: 1.555em; margin-bottom: 1.555em; border-radius: 0; }
@@ -2241,7 +2242,7 @@ table ul, table ol { padding-left: 15px; }
 
 .table > tbody > tr > th { background-color: #eeeeee; }
 
-.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td { padding: 15px 20px; line-height: 28px; }
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td { padding: 4px 8px; line-height: 28px; }
 
 .table-responsive .table > thead > tr > th, .table-responsive .table > thead > tr > td, .table-responsive .table > tbody > tr > th, .table-responsive .table > tbody > tr > td, .table-responsive .table > tfoot > tr > th, .table-responsive .table > tfoot > tr > td { border-left: 1px solid #DDDDDD; }
 
@@ -2253,7 +2254,7 @@ table ul, table ol { padding-left: 15px; }
 
 .table-bare.table { border-top: none; }
 
-.table-bare.table > thead > tr > th, .table-bare.table > thead > tr > td, .table-bare.table > tbody > tr > th, .table-bare.table > tbody > tr > td, .table-bare.table > tfoot > tr > th, .table-bare.table > tfoot > tr > td { padding: 15px 20px 15px 0; }
+.table-bare.table > thead > tr > th, .table-bare.table > thead > tr > td, .table-bare.table > tbody > tr > th, .table-bare.table > tbody > tr > td, .table-bare.table > tfoot > tr > th, .table-bare.table > tfoot > tr > td { padding: 4px 8px 4px 0; }
 
 .table-responsive .table-bare.table > thead > tr > th, .table-responsive .table-bare.table > thead > tr > td, .table-responsive .table-bare.table > tbody > tr > th, .table-responsive .table-bare.table > tbody > tr > td, .table-responsive .table-bare.table > tfoot > tr > th, .table-responsive .table-bare.table > tfoot > tr > td { border-left: none; }
 
@@ -2617,7 +2618,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 /** @file Override Bootstrap button styles */
 /** The following variable and function originate from the sass-mq library. If you have already included it, you can eliminate the below https://github.com/sass-mq/sass-mq/blob/master/_mq.scss */
-.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .transcript > div a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .facet-summary-item--facet > a .action--deactivate-facet:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .promotion--facet-group .block-title:before, .promotion--facet-group .action--deactivate-facet:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
+.caption a[href^="http://"]:after, .site__sidebar-inner .block a[href^="http://"]:after, .field--type-link a[href^="http://"]:after, .prose a[href^="http://"]:after, .caption a[href^="https://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field--type-link a[href^="https://"]:after, .prose a[href^="https://"]:after, .caption a[rel*='external']:after, .site__sidebar-inner .block a[rel*='external']:after, .field--type-link a[rel*='external']:after, .prose a[rel*='external']:after, .promotion--notice .field--name-body a[href^="http://"]:after, .promotion--notice .field--name-body a[href^="https://"]:after, .promotion--notice .field--name-body a[rel*='external']:after, .transcript > div a:after, .webform-submission-form .panel-default .panel-heading a:after, .transcript > div a:hover:after, .transcript > div a[aria-expanded="true"]:after, .transcript > div a[aria-expanded="true"]:hover:after, .action--back-to-top:before, .action--back:before, .action--back:hover:before, .action--back:focus:before, .action--close:before, .btn-expand:after, .comment__link-to-anchor:before, .facet-summary-item--facet > a .action--deactivate-facet:before, .icon--close:before, .icon--menu:before, .icon--search:before, .list--has-arrows > li > a:before, .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after, .navigation--primary .menu__item.is-open > .btn-expand:after, .navigation--secondary .menu__item.collapsed > .menu__link:after, .navigation--secondary .menu__item.is-expanded > .menu__link:after, .pagination > li.pager__item--first > a:after, .pagination > li.pager__item--first > a:before, .pagination > li.pager__item--previous > a:after, .pagination > li.pager__item--next > a:after, .pagination > li.pager__item--last > a:after, .pagination > li.pager__item--last > a:before, .pagination--large-arrows > li.previous > a:after, .pagination--large-arrows > li.pager__item--previous > a:after, .pager > li.previous > a:after, .pager > li.pager__item--previous > a:after, .pagination--large-arrows > li.next > a:after, .pagination--large-arrows > li.pager__item--next > a:after, .pager > li.next > a:after, .pager > li.pager__item--next > a:after, .promotion--notice .action--close:before, .promotion--facet-group .block-title:before, .promotion--facet-group .action--deactivate-facet:before, .search--flyout .btn:after, .search--flyout .tabs--primary > li > a:after, .search--flyout .list--fridge-magnets > li > a:after, .slat__link[href^="http://"] .action--more:after, .slat__link[href^="https://"] .action--more:after, .slat__link[rel*='external'] .action--more:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
 
 .btn, .tabs--primary > li > a, .list--fridge-magnets > li > a { font-size: 16px; text-decoration: none; font-weight: 700; white-space: normal; }
 
@@ -2784,9 +2785,11 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 /** @file Forms */
 .input-group .form-control:first-child { border-radius: 0; }
 
+.form-group { margin-bottom: 0; }
+
 label { font-size: 15px; }
 
-.form-control { height: 50px; border-radius: 0; font-size: 16px; }
+.form-control { border-radius: 0; font-size: 16px; }
 
 .form-control:hover { border: 1px solid #555555; }
 
@@ -2794,11 +2797,59 @@ label { font-size: 15px; }
 
 .select-wrapper:after { position: absolute; bottom: 22px; right: 16px; content: ''; display: block; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 5px solid #3b3a3a; pointer-events: none; }
 
+.select2-container .select2-selection--single { height: 50px; }
+
+.select2-container .select2-selection--single .select2-selection__rendered { padding-right: 40px; }
+
+.select2-container--default .select2-selection--single .select2-selection__rendered { line-height: 50px; }
+
+.select2-container--default .select2-selection--single .select2-selection__arrow { height: 50px; position: absolute; top: 0; right: 0; width: 40px; }
+
 .form-select { background-color: transparent; background-color: #ffffff; -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 32px; border: 1px solid rgba(0, 0, 0, 0.4); }
 
-.form-select::-ms-expand { display: none; }
-
 .description { font-size: 80%; }
+
+.form-type-radio, .form-type-checkbox { padding: 0; background: #eeeeee; border: 1px solid #eeeeee; }
+
+.table .form-type-radio, .table .form-type-checkbox { background: transparent; border: none; }
+
+.form-type-radio:hover, .form-type-checkbox:hover { border: 1px solid #555555; }
+
+.table .form-type-radio:hover, .table .form-type-checkbox:hover { border: none; }
+
+.form-type-radio.is-checked, .form-type-checkbox.is-checked { outline: 3px solid #CCCCCC; outline-offset: -3px; }
+
+.table .form-type-radio.is-checked, .table .form-type-checkbox.is-checked { outline: none; }
+
+.form-type-radio .description, .form-type-checkbox .description { background-color: #ffffff; padding: 10px 20px; margin-top: 0; margin-bottom: 0; }
+
+.radio label, .checkbox label { position: relative; width: 100%; padding: 20px 20px 20px 54px; }
+
+.table .radio label, .table .checkbox label { width: auto; padding: 0; }
+
+.radio.form-item-webform-buttons label, .checkbox.form-item-webform-buttons label { width: auto; padding: 20px; }
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] { position: absolute; top: 0; left: 0; margin: 26px; }
+
+.table .radio input[type="radio"], .table .radio-inline input[type="radio"], .table .checkbox input[type="checkbox"], .table .checkbox-inline input[type="checkbox"] { position: relative; top: auto; left: auto; margin: inherit; }
+
+.fieldset-legend { display: inline-block; max-width: 100%; margin-bottom: 5px; font-weight: bold; font-size: 15px; }
+
+.form-type-range .input-group-addon { padding: 0; font-size: inherit; line-height: inherit; color: inherit; text-align: left; background-color: transparent; border: none; border-radius: 0; }
+
+[data-drupal-selector="edit-range"] { -webkit-box-shadow: none; box-shadow: none; }
+
+.form-type-color:before, .form-type-color:after { content: " "; display: table; }
+
+.form-type-color:after { clear: both; }
+
+.form-type-color > label { margin-right: 3px; }
+
+.form-type-color > label, .form-type-color input { float: left; }
+
+[data-drupal-selector="edit-color"] { margin: 0; }
+
+.filter-wrapper { margin-top: 0.7775em; }
 
 /** @file BEM block for icon. */
 .icon--close:before { content: ''; font-size: 16px; width: 1.3125em; height: 1.3125em; background-position: -17.0625em -15.9375em; }
@@ -3663,3 +3714,18 @@ label { font-size: 15px; }
 @media (min-width: 1200px) { .has-filters-with-responsive-layout-w4 .views-exposed-form { -ms-flex-wrap: wrap; flex-wrap: wrap; }
   .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-item, .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-actions { width: 25%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 1.555em; }
   .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-item:nth-child(-n+4), .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-actions:nth-child(-n+4) { margin-top: 0; } }
+
+/** @file BEM block for Webforms. */
+.webform-submission-form a { text-decoration: underline; }
+
+@media (min-width: 480px) { .webform-submission-form .form-item { line-height: 1.722; } }
+
+.webform-submission-form .form-item.form-type-radio, .webform-submission-form .form-item.form-type-checkbox, .webform-submission-form .form-item.form-item-text-format-format { margin-top: 0; }
+
+.webform-submission-form .panel-default .panel-heading a { text-decoration: none; }
+
+.webform-submission-form .panel-default .panel-heading a:hover, .webform-submission-form .panel-default .panel-heading a:focus { text-decoration: underline; }
+
+@media (min-width: 480px) { .webform-submission-form .form-item-range__output { line-height: 50px; } }
+
+.webform-submission-form .form-type-color > input { margin: 0; }

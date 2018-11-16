@@ -5,8 +5,7 @@
 .post-hero {
   .region-post-hero {
     width: 100%;
-    padding-left: $responsive-layout-gutter;
-    padding-right: $responsive-layout-gutter;
+    @include apply-gutter;
     @extend %has-margin-top-base;
   }
 }

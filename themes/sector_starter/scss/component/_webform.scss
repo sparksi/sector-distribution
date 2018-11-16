@@ -1,0 +1,44 @@
+/**
+ * @file
+ * BEM block for Webforms.
+ */
+
+
+.webform-submission-form {
+  a {
+    text-decoration: underline;
+  }
+  .form-item {
+    @extend %has-margin-top-and-half;
+    @include respond-to(tablet-and-up) {
+      line-height: $line-height-base-prose;
+    }
+    &.form-type-radio,
+    &.form-type-checkbox,
+    &.form-item-text-format-format {
+      margin-top: 0;
+    }
+  }
+  .panel-default {
+    .panel-heading {
+      @extend %switch;
+      a {
+        text-decoration: none;
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .form-item-range__output {
+    @include respond-to(tablet-and-up) {
+      line-height: 50px;
+    }
+  }
+  .form-type-color {
+    > input {
+      margin: 0;
+    }
+  }
+}

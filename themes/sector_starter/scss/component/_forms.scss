@@ -11,13 +11,17 @@
   }
 }
 
+.form-group {
+  margin-bottom: 0;
+}
+
 label {
   font-size: 15px;
 }
 
 .form-control {
-  height: 50px;
-  border-radius:0;
+  //height: 50px;
+  border-radius: 0;
   font-size: 16px;
   &:hover {
     border: 1px solid $gray;
@@ -39,6 +43,30 @@ label {
   }
 }
 
+.select2-container {
+  .select2-selection--single {
+    height: 50px;
+    .select2-selection__rendered {
+      padding-right: 40px;
+    }
+  }
+}
+
+.select2-container--default {
+  .select2-selection--single {
+    .select2-selection__rendered {
+      line-height: 50px;
+    }
+    .select2-selection__arrow {
+      height: 50px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+    }
+  }
+}
+
 .form-select {
   background-color: transparent;
   background-color: $white;
@@ -47,11 +75,118 @@ label {
   border: 1px solid rgba($black,0.4);
 }
 
-.form-select::-ms-expand {
-  // Hide default select arrow from IE 10
-  display: none;
-}
-
 .description {
   font-size: 80%;
 }
+
+.form-type-radio,
+.form-type-checkbox {
+  padding: 0;
+  background: $gray-lighter;
+  border: 1px solid $gray-lighter;
+  .table & {
+    background: transparent;
+    border: none;
+  }
+  &:hover {
+    border: 1px solid $gray;
+    .table & {
+      border: none;
+    }
+  }
+  &.is-checked {
+    outline: 3px solid $brand-gray-light;
+    outline-offset: -3px;
+    .table & {
+      outline: none;
+    }
+  }
+  .description {
+    background-color: $white;
+    padding: 10px 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.radio,
+.checkbox {
+  label {
+    position: relative;
+    width: 100%;
+    padding: 20px 20px 20px 54px;
+    .table & {
+      width: auto;
+      padding: 0;
+    }
+  }
+  &.form-item-webform-buttons {
+    label {
+      width: auto;
+      padding: 20px;
+    }
+  }
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 26px;
+  .table & {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: inherit;
+  }
+}
+
+.fieldset-legend {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.form-type-range {
+  .input-group-addon {
+    padding: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    text-align: left;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+  }
+}
+
+[data-drupal-selector="edit-range"] {
+  box-shadow: none;
+}
+
+.form-type-color {
+  @include clearfix;
+  > label {
+    margin-right: 3px;
+  }
+  > label,
+  input {
+    float: left;
+  }
+}
+
+[data-drupal-selector="edit-color"] {
+  margin: 0;
+}
+
+.filter-wrapper {
+  margin-top: $spacing-half;
+}
+
+// select.input-sm,
+// .input-group-sm > select.form-control,
+// .input-group-sm > select.input-group-addon,
+// .input-group-sm > .input-group-btn > select.btn

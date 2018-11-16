@@ -120,8 +120,7 @@
 }
 
 .promotion--news {
-  padding-left: $responsive-layout-gutter;
-  padding-right: $responsive-layout-gutter;
+  @include apply-gutter;
   @include respond-to(desktop-and-up) {
     padding-right: 40px;
   }
@@ -134,8 +133,7 @@
 }
 
 .promotion--resources {
-  padding-left: $responsive-layout-gutter;
-  padding-right: $responsive-layout-gutter;
+  @include apply-gutter;
   @include respond-to(desktop-and-up) {
     padding-left: 40px;
   }
