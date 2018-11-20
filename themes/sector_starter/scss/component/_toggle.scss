@@ -68,9 +68,6 @@
 }
 
 .toggle--search {
-  display: none;
+  display: flex;
   margin-top: 6px;
-  .js & {
-    display: flex;
-  }
 }

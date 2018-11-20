@@ -1,9 +1,10 @@
 /**
  * @file
- * BEM block for post-header.
+ * BEM block for help.
  */
 .help {
   .region-help {
-    @include make-md-column(12);
+    width: 100%;
+    @include apply-gutter;
   }
 }

@@ -4,6 +4,7 @@
  */
 .pre-hero {
   .region-pre-hero {
-    @include make-md-column(12);
+    width: 100%;
+    @include apply-gutter;
   }
 }

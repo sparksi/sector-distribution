@@ -348,6 +348,9 @@
       background-color: $brand-focused;
       color: $black;
       outline-offset: 0;
+      .footer-regions-wrapper & {
+        color: $white;
+      }
     }
   }
 }

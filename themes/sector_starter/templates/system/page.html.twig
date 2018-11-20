@@ -8,7 +8,7 @@
  */
 #}
 
-<div class="site-wrapper" role="main">
+<div class="site-wrapper">
   <div class="site-wrapper__row">
     <!--[if IE 8 ]>
     <div class="site">
@@ -24,7 +24,7 @@
       </div>
     </div>
     <![endif]-->
-    <span class="sr-only" id="back-to-top-anchor">Back to top anchor</span>
+    <span class="sr-only" id="back-to-top-anchor" aria-disabled="true">Back to top anchor</span>
 
     <div class="header-regions-wrapper">
 
@@ -139,7 +139,7 @@
     {%
       set content_classes = [
       'site__content',
-        page.sidebar ? 'has-sidebar'
+        (page.sidebar|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'has-sidebar' : 'has-no-sidebar'
       ]
     %}
     <div class="site content">
@@ -159,10 +159,13 @@
               {{ page.content }}
             {% endblock %}
           </div>
+          {%
+            set has_sidebar = (page.sidebar|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? TRUE : FALSE
+          %}
 
-          {% if page.sidebar %}
+          {% if (has_sidebar) %}
             <aside class="site__sidebar">
-              <span class="sr-only" id="sidebar-anchor">Sidebar anchor</span>
+              <span class="sr-only" id="sidebar-anchor" aria-disabled="true">Sidebar anchor</span>
               <div class="site__sidebar-inner">
                 {# Sidebar #}
                 {% block sidebar %}
@@ -191,7 +194,7 @@
 
     {% if (page.pre_footer) or (page.footer) or page.post_footer %}
     <div class="footer-regions-wrapper">
-      <span class="footer-regions-wrapper__anchor sr-only" id="footer-anchor">More menu anchor</span>
+      <span class="footer-regions-wrapper__anchor sr-only" id="footer-anchor" aria-disabled="true">More menu anchor</span>
       {# Pre-Footer #}
       {% if page.pre_footer %}
         {% block pre_footer %}

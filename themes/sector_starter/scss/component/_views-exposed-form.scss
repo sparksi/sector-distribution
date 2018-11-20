@@ -84,13 +84,11 @@
     padding-left: 0;
     padding-right: 0;
     @include respond-to(tablet-and-up) {
-      padding-left: $responsive-layout-gutter;
-      padding-right: $responsive-layout-gutter;
+      @include apply-gutter;
     }
     > .form-item,
     > .form-actions {
-      padding-left: $responsive-layout-gutter;
-      padding-right: $responsive-layout-gutter;
+      @include apply-gutter;
       @include respond-to(tablet-large-and-up) {
         margin-top: 0;
       }

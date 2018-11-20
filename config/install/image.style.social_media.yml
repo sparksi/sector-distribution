@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: social_media
+label: 'Social media'
+effects:
+  3e7f03af-4ffb-4b06-9508-5437ffc5ee15:
+    uuid: 3e7f03af-4ffb-4b06-9508-5437ffc5ee15
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 630
+      anchor: center-center

@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies: {  }
-id: '403'
-label: '403 access denied'
+id: node__promotion
+label: 'Content: Promotion'
 tags:
   robots: noindex

@@ -45,7 +45,7 @@ table {
 .table > tbody > tr > td,
 .table > tfoot > tr > th,
 .table > tfoot > tr > td {
-  padding: 15px 20px;
+  padding: 4px 8px;
   .table-responsive & {
     border-left: 1px solid $brand-gray-lighter;
   }
@@ -76,7 +76,7 @@ table {
   &.table > tbody > tr > td,
   &.table > tfoot > tr > th,
   &.table > tfoot > tr > td {
-    padding: 15px 20px 15px 0;
+    padding: 4px 8px 4px 0;
     .table-responsive & {
       border-left: none;
     }

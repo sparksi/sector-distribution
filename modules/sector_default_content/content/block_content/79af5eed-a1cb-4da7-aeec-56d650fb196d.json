@@ -73,7 +73,7 @@
     ],
     "body": [
         {
-            "value": "<p><a class=\"action action--back-to-top\" href=\"#back-to-top-anchor\" title=\"Back to top\">Back to top<\/a><\/p>\r\n",
+            "value": "<p><a aria-disabled=\"true\" class=\"action action--back-to-top\" href=\"#back-to-top-anchor\" title=\"Back to top\">Back to top<\/a><\/p>\r\n",
             "format": "full_html",
             "summary": "",
             "lang": "en"

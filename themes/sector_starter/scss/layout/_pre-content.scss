@@ -10,6 +10,7 @@
     margin-top: $spacing-and-half;
   }
   .region-pre-content {
-    @include make-md-column(12);
+    width: 100%;
+    @include apply-gutter;
   }
 }

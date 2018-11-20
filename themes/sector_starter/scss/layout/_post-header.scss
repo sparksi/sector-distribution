@@ -4,6 +4,7 @@
  */
 .post-header {
   .region-post-header {
-    @include make-md-column(12);
+    width: 100%;
+    @include apply-gutter;
   }
 }

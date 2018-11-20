@@ -5,6 +5,7 @@
 .pre-header {
   background-color: $white;
   .region-pre-header {
-    @include make-md-column(12);
+    width: 100%;
+    @include apply-gutter;
   }
 }

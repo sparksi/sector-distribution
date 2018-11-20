@@ -53,3 +53,9 @@ $browser-context: 16;
   -webkit-hyphens: auto;
   hyphens: auto;
 }
+
+/* Default gutters */
+@mixin apply-gutter() {
+  padding-left: $responsive-layout-gutter;
+  padding-right: $responsive-layout-gutter;
+}

@@ -11,31 +11,46 @@
 
 .site__row {
   @extend .row;
+  .content & {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+  }
 }
 
 .site__content {
-  @include make-md-column(12);
+  @include apply-gutter;
+  width: 100%;
   &.has-sidebar {
-    @include make-md-column(8);
-    @include make-lg-column(9);
+    @include respond-to(desktop-and-up) {
+      width: percentage(8/12);
+    }
     @include respond-to(wide-and-up) {
-      padding: 0 em(80) 0 ($grid-gutter-width/2);
+      width: percentage(9/12);
+      padding: 0 em(80) 0 $responsive-layout-gutter;
     }
     @include respond-to(mega-and-up) {
-      padding: 0 em(140) 0 ($grid-gutter-width/2);
+      padding: 0 em(140) 0 $responsive-layout-gutter;
     }
   }
   + .site__sidebar {
     margin-top: $spacing-base;
-    @include respond-to(desktop-and-up){
+    @include respond-to(desktop-and-up) {
       margin-top: 0;
     }
   }
 }
 
 .site__sidebar {
-  @include make-md-column(4);
-  @include make-lg-column(3);
+  @include apply-gutter;
+  width: 100%;
+  @include respond-to(desktop-and-up) {
+    width: percentage(4/12);
+  }
+  @include respond-to(wide-and-up) {
+    width: percentage(3/12);
+  }
 }
 
 .site__sidebar-inner {

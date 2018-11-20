@@ -13,17 +13,19 @@
  */
 #}
 {% if breadcrumb %}
-  <ol class="breadcrumb">
-    {% for item in breadcrumb %}
-      <li {{ item.attributes }}>
-        {% if item.url %}
-          <a href="{{ item.url }}">{{ item.text }}</a>
-        {% elseif media_title %}
-          {{ media_title }}
-        {% else %}
-          {{ item.text }}
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ol>
+  <nav role="navigation" aria-label="Breadcrumb">
+    <ol class="breadcrumb">
+      {% for item in breadcrumb %}
+        <li {{ item.attributes }}>
+          {% if item.url %}
+            <a href="{{ item.url }}">{{ item.text }}</a>
+          {% elseif media_title %}
+            {{ media_title }}
+          {% else %}
+            {{ item.text }}
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </nav>
 {% endif %}
