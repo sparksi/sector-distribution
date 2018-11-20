@@ -39,6 +39,9 @@ function sector_install() {
   _create_users();
   _generate_alias();
   _exclude_xmlsitemap_nodes();
+
+  // Rebuild permissions
+  node_access_rebuild();
 }
 
 /**
