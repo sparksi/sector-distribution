@@ -577,8 +577,7 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags:
-        - 'config:field.storage.media.field_title'
+      tags: {  }
   entity_browser_1:
     display_plugin: entity_browser
     id: entity_browser_1
@@ -594,8 +593,7 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags:
-        - 'config:field.storage.media.field_title'
+      tags: {  }
   entity_browser_2:
     display_plugin: entity_browser
     id: entity_browser_2
@@ -826,8 +824,7 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags:
-        - 'config:field.storage.media.field_title'
+      tags: {  }
   entity_browser_3:
     display_plugin: entity_browser
     id: entity_browser_3
@@ -1057,8 +1054,7 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags:
-        - 'config:field.storage.media.field_title'
+      tags: {  }
   entity_browser_4:
     display_plugin: entity_browser
     id: entity_browser_4
@@ -1288,5 +1284,4 @@ display:
         - url
         - url.query_args
         - user.permissions
-      tags:
-        - 'config:field.storage.media.field_title'
+      tags: {  }

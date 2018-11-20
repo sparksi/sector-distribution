@@ -27,7 +27,8 @@ settings:
   label_from_field: true
   field_name: field_subtitle
   formatter_id: text_trimmed
-  formatter_settings: {  }
+  formatter_settings:
+    trim_length: 600
 visibility:
   term:
     id: term
@@ -35,5 +36,7 @@ visibility:
     tid:
       -
         target_id: '7'
+      -
+        target_id: '6'
     context_mapping:
       node: '@node.node_route_context:node'

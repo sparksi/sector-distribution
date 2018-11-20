@@ -6,6 +6,7 @@ dependencies:
   module:
     - block_class
     - facets
+    - system
     - term_condition
   theme:
     - sector_starter
@@ -23,9 +24,15 @@ settings:
   label: 'Filter by type'
   provider: facets
   label_display: visible
+  block_id: contenttype
 visibility:
   term:
     id: term
     negate: false
     tid: null
+    context_mapping: {  }
+  request_path:
+    id: request_path
+    pages: "/search\r\n/search*"
+    negate: false
     context_mapping: {  }

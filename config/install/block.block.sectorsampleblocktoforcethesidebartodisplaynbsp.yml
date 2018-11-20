@@ -12,7 +12,7 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: ''
+    classes: 'has-no-border-top'
 id: sectorsampleblocktoforcethesidebartodisplaynbsp
 theme: sector_starter
 region: sidebar
@@ -30,7 +30,7 @@ settings:
 visibility:
   request_path:
     id: request_path
-    pages: '/media/*'
+    pages: "/media/*\r\n/node/12\r\n/user\r\n/user/*\r\n"
     negate: false
     context_mapping: {  }
   term:

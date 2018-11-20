@@ -140,6 +140,7 @@ permissions:
   - 'use workbench_moderation needs review tab'
   - 'view all revisions'
   - 'view all unpublished content'
+  - 'view any unpublished content'
   - 'view article revisions'
   - 'view files'
   - 'view moderation history'
