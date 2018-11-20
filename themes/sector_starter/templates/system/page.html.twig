@@ -139,7 +139,7 @@
     {%
       set content_classes = [
       'site__content',
-        page.sidebar ? 'has-sidebar'
+        (page.sidebar|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'has-sidebar' : 'has-no-sidebar'
       ]
     %}
     <div class="site content">
@@ -159,8 +159,11 @@
               {{ page.content }}
             {% endblock %}
           </div>
+          {%
+            set has_sidebar = (page.sidebar|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? TRUE : FALSE
+          %}
 
-          {% if page.sidebar %}
+          {% if (has_sidebar) %}
             <aside class="site__sidebar">
               <span class="sr-only" id="sidebar-anchor" aria-disabled="true">Sidebar anchor</span>
               <div class="site__sidebar-inner">
