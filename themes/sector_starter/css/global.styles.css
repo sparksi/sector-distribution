@@ -1385,21 +1385,21 @@ a.btn.disabled, .tabs--primary > li > a.disabled, .list--fridge-magnets > li > a
 
 .btn-default .badge, .list--fridge-magnets > li > a .badge { color: #fff; background-color: #333; }
 
-.btn-primary, .comment-form [data-drupal-selector="edit-actions"] .button--primary { color: #fff; background-color: #204ad4; border-color: #1d42be; }
+.btn-primary, .comment-form [data-drupal-selector="edit-actions"] .button--primary, .webform-multiple-add .btn-success, .webform-multiple-table--operations .btn-success { color: #fff; background-color: #204ad4; border-color: #1d42be; }
 
-.btn-primary:focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary:focus, .btn-primary.focus, .comment-form [data-drupal-selector="edit-actions"] .focus.button--primary { color: #fff; background-color: #193ba8; border-color: #0c1c4f; }
+.btn-primary:focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary:focus, .webform-multiple-add .btn-success:focus, .webform-multiple-table--operations .btn-success:focus, .btn-primary.focus, .comment-form [data-drupal-selector="edit-actions"] .focus.button--primary, .webform-multiple-add .focus.btn-success, .webform-multiple-table--operations .focus.btn-success { color: #fff; background-color: #193ba8; border-color: #0c1c4f; }
 
-.btn-primary:hover, .comment-form [data-drupal-selector="edit-actions"] .button--primary:hover { color: #fff; background-color: #193ba8; border-color: #153089; }
+.btn-primary:hover, .comment-form [data-drupal-selector="edit-actions"] .button--primary:hover, .webform-multiple-add .btn-success:hover, .webform-multiple-table--operations .btn-success:hover { color: #fff; background-color: #193ba8; border-color: #153089; }
 
-.btn-primary:active, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active, .btn-primary.active, .comment-form [data-drupal-selector="edit-actions"] .active.button--primary, .open > .btn-primary.dropdown-toggle, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.button--primary { color: #fff; background-color: #193ba8; border-color: #153089; }
+.btn-primary:active, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active, .webform-multiple-add .btn-success:active, .webform-multiple-table--operations .btn-success:active, .btn-primary.active, .comment-form [data-drupal-selector="edit-actions"] .active.button--primary, .webform-multiple-add .active.btn-success, .webform-multiple-table--operations .active.btn-success, .open > .btn-primary.dropdown-toggle, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.button--primary, .webform-multiple-add .open > .dropdown-toggle.btn-success, .webform-multiple-table--operations .open > .dropdown-toggle.btn-success { color: #fff; background-color: #193ba8; border-color: #153089; }
 
-.btn-primary:active:hover, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active:hover, .btn-primary:active:focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active:focus, .btn-primary:active.focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active.focus, .btn-primary.active:hover, .comment-form [data-drupal-selector="edit-actions"] .active.button--primary:hover, .btn-primary.active:focus, .comment-form [data-drupal-selector="edit-actions"] .active.button--primary:focus, .btn-primary.active.focus, .comment-form [data-drupal-selector="edit-actions"] .active.focus.button--primary, .open > .btn-primary.dropdown-toggle:hover, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.button--primary:hover, .open > .btn-primary.dropdown-toggle:focus, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.button--primary:focus, .open > .btn-primary.dropdown-toggle.focus, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.focus.button--primary { color: #fff; background-color: #153089; border-color: #0c1c4f; }
+.btn-primary:active:hover, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active:hover, .webform-multiple-add .btn-success:active:hover, .webform-multiple-table--operations .btn-success:active:hover, .btn-primary:active:focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active:focus, .webform-multiple-add .btn-success:active:focus, .webform-multiple-table--operations .btn-success:active:focus, .btn-primary:active.focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active.focus, .webform-multiple-add .btn-success:active.focus, .webform-multiple-table--operations .btn-success:active.focus, .btn-primary.active:hover, .comment-form [data-drupal-selector="edit-actions"] .active.button--primary:hover, .webform-multiple-add .active.btn-success:hover, .webform-multiple-table--operations .active.btn-success:hover, .btn-primary.active:focus, .comment-form [data-drupal-selector="edit-actions"] .active.button--primary:focus, .webform-multiple-add .active.btn-success:focus, .webform-multiple-table--operations .active.btn-success:focus, .btn-primary.active.focus, .comment-form [data-drupal-selector="edit-actions"] .active.focus.button--primary, .webform-multiple-add .active.focus.btn-success, .webform-multiple-table--operations .active.focus.btn-success, .open > .btn-primary.dropdown-toggle:hover, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.button--primary:hover, .webform-multiple-add .open > .dropdown-toggle.btn-success:hover, .webform-multiple-table--operations .open > .dropdown-toggle.btn-success:hover, .open > .btn-primary.dropdown-toggle:focus, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.button--primary:focus, .webform-multiple-add .open > .dropdown-toggle.btn-success:focus, .webform-multiple-table--operations .open > .dropdown-toggle.btn-success:focus, .open > .btn-primary.dropdown-toggle.focus, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.focus.button--primary, .webform-multiple-add .open > .dropdown-toggle.focus.btn-success, .webform-multiple-table--operations .open > .dropdown-toggle.focus.btn-success { color: #fff; background-color: #153089; border-color: #0c1c4f; }
 
-.btn-primary:active, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active, .btn-primary.active, .comment-form [data-drupal-selector="edit-actions"] .active.button--primary, .open > .btn-primary.dropdown-toggle, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.button--primary { background-image: none; }
+.btn-primary:active, .comment-form [data-drupal-selector="edit-actions"] .button--primary:active, .webform-multiple-add .btn-success:active, .webform-multiple-table--operations .btn-success:active, .btn-primary.active, .comment-form [data-drupal-selector="edit-actions"] .active.button--primary, .webform-multiple-add .active.btn-success, .webform-multiple-table--operations .active.btn-success, .open > .btn-primary.dropdown-toggle, .comment-form [data-drupal-selector="edit-actions"] .open > .dropdown-toggle.button--primary, .webform-multiple-add .open > .dropdown-toggle.btn-success, .webform-multiple-table--operations .open > .dropdown-toggle.btn-success { background-image: none; }
 
-.btn-primary.disabled:hover, .comment-form [data-drupal-selector="edit-actions"] .disabled.button--primary:hover, .btn-primary.disabled:focus, .comment-form [data-drupal-selector="edit-actions"] .disabled.button--primary:focus, .btn-primary.disabled.focus, .comment-form [data-drupal-selector="edit-actions"] .disabled.focus.button--primary, .btn-primary[disabled]:hover, .comment-form [data-drupal-selector="edit-actions"] .button--primary[disabled]:hover, .btn-primary[disabled]:focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary[disabled]:focus, .btn-primary[disabled].focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary[disabled].focus, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .comment-form [data-drupal-selector="edit-actions"] .button--primary:hover, .comment-form [data-drupal-selector="edit-actions"] fieldset[disabled] .button--primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .comment-form [data-drupal-selector="edit-actions"] .button--primary:focus, .comment-form [data-drupal-selector="edit-actions"] fieldset[disabled] .button--primary:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .comment-form [data-drupal-selector="edit-actions"] .focus.button--primary, .comment-form [data-drupal-selector="edit-actions"] fieldset[disabled] .focus.button--primary { background-color: #204ad4; border-color: #1d42be; }
+.btn-primary.disabled:hover, .comment-form [data-drupal-selector="edit-actions"] .disabled.button--primary:hover, .webform-multiple-add .disabled.btn-success:hover, .webform-multiple-table--operations .disabled.btn-success:hover, .btn-primary.disabled:focus, .comment-form [data-drupal-selector="edit-actions"] .disabled.button--primary:focus, .webform-multiple-add .disabled.btn-success:focus, .webform-multiple-table--operations .disabled.btn-success:focus, .btn-primary.disabled.focus, .comment-form [data-drupal-selector="edit-actions"] .disabled.focus.button--primary, .webform-multiple-add .disabled.focus.btn-success, .webform-multiple-table--operations .disabled.focus.btn-success, .btn-primary[disabled]:hover, .comment-form [data-drupal-selector="edit-actions"] .button--primary[disabled]:hover, .webform-multiple-add .btn-success[disabled]:hover, .webform-multiple-table--operations .btn-success[disabled]:hover, .btn-primary[disabled]:focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary[disabled]:focus, .webform-multiple-add .btn-success[disabled]:focus, .webform-multiple-table--operations .btn-success[disabled]:focus, .btn-primary[disabled].focus, .comment-form [data-drupal-selector="edit-actions"] .button--primary[disabled].focus, .webform-multiple-add .btn-success[disabled].focus, .webform-multiple-table--operations .btn-success[disabled].focus, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .comment-form [data-drupal-selector="edit-actions"] .button--primary:hover, .comment-form [data-drupal-selector="edit-actions"] fieldset[disabled] .button--primary:hover, fieldset[disabled] .webform-multiple-add .btn-success:hover, .webform-multiple-add fieldset[disabled] .btn-success:hover, fieldset[disabled] .webform-multiple-table--operations .btn-success:hover, .webform-multiple-table--operations fieldset[disabled] .btn-success:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .comment-form [data-drupal-selector="edit-actions"] .button--primary:focus, .comment-form [data-drupal-selector="edit-actions"] fieldset[disabled] .button--primary:focus, fieldset[disabled] .webform-multiple-add .btn-success:focus, .webform-multiple-add fieldset[disabled] .btn-success:focus, fieldset[disabled] .webform-multiple-table--operations .btn-success:focus, .webform-multiple-table--operations fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-primary.focus, fieldset[disabled] .comment-form [data-drupal-selector="edit-actions"] .focus.button--primary, .comment-form [data-drupal-selector="edit-actions"] fieldset[disabled] .focus.button--primary, fieldset[disabled] .webform-multiple-add .focus.btn-success, .webform-multiple-add fieldset[disabled] .focus.btn-success, fieldset[disabled] .webform-multiple-table--operations .focus.btn-success, .webform-multiple-table--operations fieldset[disabled] .focus.btn-success { background-color: #204ad4; border-color: #1d42be; }
 
-.btn-primary .badge, .comment-form [data-drupal-selector="edit-actions"] .button--primary .badge { color: #204ad4; background-color: #fff; }
+.btn-primary .badge, .comment-form [data-drupal-selector="edit-actions"] .button--primary .badge, .webform-multiple-add .btn-success .badge, .webform-multiple-table--operations .btn-success .badge { color: #204ad4; background-color: #fff; }
 
 .btn-success { color: #fff; background-color: #07b16b; border-color: #06985c; }
 
@@ -1477,7 +1477,7 @@ a.btn.disabled, .tabs--primary > li > a.disabled, .list--fridge-magnets > li > a
 
 .btn-lg { padding: 10px 16px; font-size: 24px; line-height: 1.33333; border-radius: 6px; }
 
-.btn-sm { padding: 5px 10px; font-size: 14px; line-height: 1.5; border-radius: 3px; }
+.btn-sm, .webform-multiple-table--operations .btn, .webform-multiple-table--operations .tabs--primary > li > a, .webform-multiple-table--operations .list--fridge-magnets > li > a { padding: 5px 10px; font-size: 14px; line-height: 1.5; border-radius: 3px; }
 
 .btn-xs { padding: 1px 5px; font-size: 14px; line-height: 1.5; border-radius: 3px; }
 
@@ -2000,17 +2000,17 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 .inline-block { display: inline-block; }
 
 /** Responsive margin top OOCSS spacing helpers. Ideally always using margin above your site building blocks for consistency. */
-.has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .page-node-type-resource .field--name-field-related-files > .field--items > .field--item, .meta__featured + .field, .path-frontpage .hero .node__subtitle { margin-top: 0.7775em; }
+.has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .page-node-type-resource .field--name-field-related-files > .field--items > .field--item, .meta__featured + .field, .path-frontpage .hero .node__subtitle, .webform-submission-form .form-item { margin-top: 0.7775em; }
 
-@media (min-width: 992px) { .has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .page-node-type-resource .field--name-field-related-files > .field--items > .field--item, .meta__featured + .field, .path-frontpage .hero .node__subtitle { margin-top: 1.555em; } }
+@media (min-width: 992px) { .has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .page-node-type-resource .field--name-field-related-files > .field--items > .field--item, .meta__featured + .field, .path-frontpage .hero .node__subtitle, .webform-submission-form .form-item { margin-top: 1.555em; } }
 
-.has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field, .webform-submission-form .form-item { margin-top: 1.555em; }
+.has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field { margin-top: 1.555em; }
 
-@media (min-width: 992px) { .has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field, .webform-submission-form .form-item { margin-top: 2.3325em; } }
+@media (min-width: 992px) { .has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field { margin-top: 2.3325em; } }
 
-.has-margin-top-double, .user-login-form, .user-pass, .footer-regions-wrapper, .pagination, .pager, .promotion--social-share { margin-top: 1.555em; }
+.has-margin-top-double, .user-login-form, .user-pass, .footer-regions-wrapper, .pagination, .pager, .promotion--social-share, .webform-submission-form, .webform-submission-form [data-drupal-selector="edit-actions"] { margin-top: 1.555em; }
 
-@media (min-width: 992px) { .has-margin-top-double, .user-login-form, .user-pass, .footer-regions-wrapper, .pagination, .pager, .promotion--social-share { margin-top: 3.11em; } }
+@media (min-width: 992px) { .has-margin-top-double, .user-login-form, .user-pass, .footer-regions-wrapper, .pagination, .pager, .promotion--social-share, .webform-submission-form, .webform-submission-form [data-drupal-selector="edit-actions"] { margin-top: 3.11em; } }
 
 .has-margin-top-triple { margin-top: 1.555em; }
 
@@ -2628,11 +2628,11 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 .btn-default > a:focus, .list--fridge-magnets > li > a > a:focus { background-color: transparent; outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
 
-.btn-sm { font-size: 14px; }
+.btn-sm, .webform-multiple-table--operations .btn, .webform-multiple-table--operations .tabs--primary > li > a, .webform-multiple-table--operations .list--fridge-magnets > li > a { font-size: 14px; }
 
 .btn-lg { font-size: 24px; }
 
-.btn-primary:visited, .comment-form [data-drupal-selector="edit-actions"] .button--primary:visited { color: #ffffff; }
+.btn-primary:visited, .comment-form [data-drupal-selector="edit-actions"] .button--primary:visited, .webform-multiple-add .btn-success:visited, .webform-multiple-table--operations .btn-success:visited { color: #ffffff; }
 
 .btn-expand { display: -webkit-box; display: -ms-flexbox; display: flex; align-content: center; -ms-flex-line-pack: center; color: #ffffff; height: 58px; width: 58px; padding: 0; border-left: 1px solid #000000; text-indent: -5000px; }
 
@@ -2789,6 +2789,8 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 label { font-size: 15px; }
 
+.form-type-date.form-inline .control-label, .form-type-tel.form-inline .control-label { margin-bottom: 5px; }
+
 .form-control { border-radius: 0; font-size: 16px; }
 
 .form-control:hover { border: 1px solid #555555; }
@@ -2805,33 +2807,33 @@ label { font-size: 15px; }
 
 .select2-container--default .select2-selection--single .select2-selection__arrow { height: 50px; position: absolute; top: 0; right: 0; width: 40px; }
 
+select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select.input-group-addon, .input-group-sm > .input-group-btn > select.btn { line-height: normal; }
+
 .form-select { background-color: transparent; background-color: #ffffff; -webkit-appearance: none; -moz-appearance: none; appearance: none; padding-right: 32px; border: 1px solid rgba(0, 0, 0, 0.4); }
 
-.description { font-size: 80%; }
+.description { font-size: 80%; color: #555555; }
 
-.form-type-radio, .form-type-checkbox { padding: 0; background: #eeeeee; border: 1px solid #eeeeee; }
+.has-accessible-radios-and-checkboxes .form-type-radio, .has-accessible-radios-and-checkboxes .form-type-checkbox { padding: 0; background: #eeeeee; border: 1px solid #eeeeee; }
 
-.table .form-type-radio, .table .form-type-checkbox { background: transparent; border: none; }
+.has-accessible-radios-and-checkboxes .form-type-radio:hover, .has-accessible-radios-and-checkboxes .form-type-checkbox:hover { border: 1px solid #555555; }
 
-.form-type-radio:hover, .form-type-checkbox:hover { border: 1px solid #555555; }
+.has-accessible-radios-and-checkboxes .form-type-radio.is-checked, .has-accessible-radios-and-checkboxes .form-type-checkbox.is-checked { outline: 3px solid #CCCCCC; outline-offset: -3px; }
 
-.table .form-type-radio:hover, .table .form-type-checkbox:hover { border: none; }
+.has-accessible-radios-and-checkboxes .form-type-radio .description, .has-accessible-radios-and-checkboxes .form-type-checkbox .description { background-color: #ffffff; padding: 10px; margin-top: 0; margin-bottom: 0; }
 
-.form-type-radio.is-checked, .form-type-checkbox.is-checked { outline: 3px solid #CCCCCC; outline-offset: -3px; }
+.has-accessible-radios-and-checkboxes .radio label, .has-accessible-radios-and-checkboxes .checkbox label { position: relative; width: 100%; padding: 10px 10px 10px 44px; }
 
-.table .form-type-radio.is-checked, .table .form-type-checkbox.is-checked { outline: none; }
+.has-accessible-radios-and-checkboxes .radio.form-item-webform-buttons label, .has-accessible-radios-and-checkboxes .checkbox.form-item-webform-buttons label { width: auto; padding: 10px; }
 
-.form-type-radio .description, .form-type-checkbox .description { background-color: #ffffff; padding: 10px 20px; margin-top: 0; margin-bottom: 0; }
+.has-accessible-radios-and-checkboxes .radio input[type="radio"], .has-accessible-radios-and-checkboxes .radio-inline input[type="radio"], .has-accessible-radios-and-checkboxes .checkbox input[type="checkbox"], .has-accessible-radios-and-checkboxes .checkbox-inline input[type="checkbox"] { position: absolute; top: 0; left: 0; margin: 16px; }
 
-.radio label, .checkbox label { position: relative; width: 100%; padding: 20px 20px 20px 54px; }
+.has-accessible-radios-and-checkboxes table .form-type-radio, .has-accessible-radios-and-checkboxes table .form-type-checkbox { background: transparent; border: none; }
 
-.table .radio label, .table .checkbox label { width: auto; padding: 0; }
+.has-accessible-radios-and-checkboxes table .form-type-radio.is-checked, .has-accessible-radios-and-checkboxes table .form-type-checkbox.is-checked { outline: none; }
 
-.radio.form-item-webform-buttons label, .checkbox.form-item-webform-buttons label { width: auto; padding: 20px; }
+.has-accessible-radios-and-checkboxes table .radio label, .has-accessible-radios-and-checkboxes table .checkbox label { width: auto; padding: 0; }
 
-.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] { position: absolute; top: 0; left: 0; margin: 26px; }
-
-.table .radio input[type="radio"], .table .radio-inline input[type="radio"], .table .checkbox input[type="checkbox"], .table .checkbox-inline input[type="checkbox"] { position: relative; top: auto; left: auto; margin: inherit; }
+.has-accessible-radios-and-checkboxes table .radio input[type="radio"], .has-accessible-radios-and-checkboxes table .radio-inline input[type="radio"], .has-accessible-radios-and-checkboxes table .checkbox input[type="checkbox"], .has-accessible-radios-and-checkboxes table .checkbox-inline input[type="checkbox"] { position: relative; top: auto; left: auto; margin: inherit; }
 
 .fieldset-legend { display: inline-block; max-width: 100%; margin-bottom: 5px; font-weight: bold; font-size: 15px; }
 
@@ -3483,11 +3485,11 @@ label { font-size: 15px; }
 
 @media (max-width: 480px) { .search--primary.views-exposed-form { padding: 0.7775em; } }
 
-.search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary { position: absolute; top: 28px; right: 28px; padding: 12px 21px 12px; font-size: 16px; margin-top: 0; border-radius: 0; }
+.search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary, .search--primary .webform-multiple-add .btn-success, .webform-multiple-add .search--primary .btn-success, .search--primary .webform-multiple-table--operations .btn-success, .webform-multiple-table--operations .search--primary .btn-success { position: absolute; top: 28px; right: 28px; padding: 12px 21px 12px; font-size: 16px; margin-top: 0; border-radius: 0; }
 
-@media (max-width: 480px) { .search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary { top: 14px; right: 14px; } }
+@media (max-width: 480px) { .search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary, .search--primary .webform-multiple-add .btn-success, .webform-multiple-add .search--primary .btn-success, .search--primary .webform-multiple-table--operations .btn-success, .webform-multiple-table--operations .search--primary .btn-success { top: 14px; right: 14px; } }
 
-.search--primary .btn-primary .icon, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary .icon, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary .icon { display: none; }
+.search--primary .btn-primary .icon, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary .icon, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary .icon, .search--primary .webform-multiple-add .btn-success .icon, .webform-multiple-add .search--primary .btn-success .icon, .search--primary .webform-multiple-table--operations .btn-success .icon, .webform-multiple-table--operations .search--primary .btn-success .icon { display: none; }
 
 .search--primary .form-group { margin-bottom: 0; }
 
@@ -3718,8 +3720,6 @@ label { font-size: 15px; }
 /** @file BEM block for Webforms. */
 .webform-submission-form a { text-decoration: underline; }
 
-@media (min-width: 480px) { .webform-submission-form .form-item { line-height: 1.722; } }
-
 .webform-submission-form .form-item.form-type-radio, .webform-submission-form .form-item.form-type-checkbox, .webform-submission-form .form-item.form-item-text-format-format { margin-top: 0; }
 
 .webform-submission-form .panel-default .panel-heading a { text-decoration: none; }
@@ -3729,3 +3729,23 @@ label { font-size: 15px; }
 @media (min-width: 480px) { .webform-submission-form .form-item-range__output { line-height: 50px; } }
 
 .webform-submission-form .form-type-color > input { margin: 0; }
+
+.webform-submission-form [data-drupal-selector="edit-actions"] { text-align: center; overflow: hidden; width: 100%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; height: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.webform-submission-form [data-drupal-selector="edit-actions"] .btn, .webform-submission-form [data-drupal-selector="edit-actions"] .tabs--primary > li > a, .webform-submission-form [data-drupal-selector="edit-actions"] .list--fridge-magnets > li > a { margin-right: 10px; }
+
+@media (min-width: 768px) { .webform-flexbox { margin: 0 -1em; } }
+
+@media (min-width: 768px) { .webform-flex--container { margin: 0 1em; } }
+
+.webform-multiple-table--operations { margin-bottom: 20px; }
+
+.webform-multiple-table--operations .btn-success { margin-right: 10px; }
+
+.webform-multiple-add input, .form-item-entity-autocomplete-multiple-add-more-items input { height: 40px; margin-left: 10px; margin-right: 10px; }
+
+.webform-progress-tracker .progress-step.is-complete .progress-marker, .webform-progress-tracker .progress-step.is-complete:hover .progress-marker, .webform-progress-tracker .progress-step.is-active:hover .progress-marker, .progress-step.is-active .progress-marker, .progress-step.is-complete::after { background-color: #4689e1; }
+
+.progress-marker { padding-bottom: 0; }
+
+.progress-step .progress-marker { font-weight: 700; }

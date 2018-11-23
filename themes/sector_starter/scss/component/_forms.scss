@@ -19,8 +19,16 @@ label {
   font-size: 15px;
 }
 
+.form-type-date,
+.form-type-tel {
+  &.form-inline {
+    .control-label {
+      margin-bottom: 5px;
+    }
+  }
+}
+
 .form-control {
-  //height: 50px;
   border-radius: 0;
   font-size: 16px;
   &:hover {
@@ -67,6 +75,10 @@ label {
   }
 }
 
+select.input-sm {
+  line-height: normal;
+}
+
 .form-select {
   background-color: transparent;
   background-color: $white;
@@ -77,68 +89,80 @@ label {
 
 .description {
   font-size: 80%;
+  color: $gray;
 }
 
-.form-type-radio,
-.form-type-checkbox {
-  padding: 0;
-  background: $gray-lighter;
-  border: 1px solid $gray-lighter;
-  .table & {
-    background: transparent;
-    border: none;
-  }
-  &:hover {
-    border: 1px solid $gray;
-    .table & {
-      border: none;
+.has-accessible-radios-and-checkboxes {
+  .form-type-radio,
+  .form-type-checkbox {
+    padding: 0;
+    background: $gray-lighter;
+    border: 1px solid $gray-lighter;
+    &:hover {
+      border: 1px solid $gray;
+    }
+    &.is-checked {
+      outline: 3px solid $brand-gray-light;
+      outline-offset: -3px;
+    }
+    .description {
+      background-color: $white;
+      padding: 10px;
+      margin-top: 0;
+      margin-bottom: 0;
     }
   }
-  &.is-checked {
-    outline: 3px solid $brand-gray-light;
-    outline-offset: -3px;
-    .table & {
-      outline: none;
-    }
-  }
-  .description {
-    background-color: $white;
-    padding: 10px 20px;
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-}
-.radio,
-.checkbox {
-  label {
-    position: relative;
-    width: 100%;
-    padding: 20px 20px 20px 54px;
-    .table & {
-      width: auto;
-      padding: 0;
-    }
-  }
-  &.form-item-webform-buttons {
+  .radio,
+  .checkbox {
     label {
-      width: auto;
-      padding: 20px;
+      position: relative;
+      width: 100%;
+      padding: 10px 10px 10px 44px;
+    }
+    &.form-item-webform-buttons {
+      label {
+        width: auto;
+        padding: 10px;
+      }
     }
   }
+  .radio input[type="radio"],
+  .radio-inline input[type="radio"],
+  .checkbox input[type="checkbox"],
+  .checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 16px;
+  }
 }
-.radio input[type="radio"],
-.radio-inline input[type="radio"],
-.checkbox input[type="checkbox"],
-.checkbox-inline input[type="checkbox"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin: 26px;
-  .table & {
-    position: relative;
-    top: auto;
-    left: auto;
-    margin: inherit;
+
+.has-accessible-radios-and-checkboxes {
+  table {
+    .form-type-radio,
+    .form-type-checkbox {
+      background: transparent;
+      border: none;
+      &.is-checked {
+        outline: none;
+      }
+    }
+    .radio,
+    .checkbox {
+      label {
+        width: auto;
+        padding: 0;
+      }
+    }
+    .radio input[type="radio"],
+    .radio-inline input[type="radio"],
+    .checkbox input[type="checkbox"],
+    .checkbox-inline input[type="checkbox"] {
+      position: relative;
+      top: auto;
+      left: auto;
+      margin: inherit;
+    }
   }
 }
 
@@ -185,8 +209,3 @@ label {
 .filter-wrapper {
   margin-top: $spacing-half;
 }
-
-// select.input-sm,
-// .input-group-sm > select.form-control,
-// .input-group-sm > select.input-group-addon,
-// .input-group-sm > .input-group-btn > select.btn
