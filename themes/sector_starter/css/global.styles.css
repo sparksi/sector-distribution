@@ -2004,13 +2004,13 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 @media (min-width: 992px) { .has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .page-node-type-resource .field--name-field-related-files > .field--items > .field--item, .meta__featured + .field, .path-frontpage .hero .node__subtitle, .webform-submission-form .form-item { margin-top: 1.555em; } }
 
-.has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field { margin-top: 1.555em; }
+.has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field, .webform-submission-form [data-drupal-selector="edit-actions"] { margin-top: 1.555em; }
 
-@media (min-width: 992px) { .has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field { margin-top: 2.3325em; } }
+@media (min-width: 992px) { .has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field, .webform-submission-form [data-drupal-selector="edit-actions"] { margin-top: 2.3325em; } }
 
-.has-margin-top-double, .user-login-form, .user-pass, .footer-regions-wrapper, .pagination, .pager, .promotion--social-share, .webform-submission-form, .webform-submission-form [data-drupal-selector="edit-actions"] { margin-top: 1.555em; }
+.has-margin-top-double, .user-login-form, .user-pass, .footer-regions-wrapper, .pagination, .pager, .promotion--social-share, .webform-submission-form { margin-top: 1.555em; }
 
-@media (min-width: 992px) { .has-margin-top-double, .user-login-form, .user-pass, .footer-regions-wrapper, .pagination, .pager, .promotion--social-share, .webform-submission-form, .webform-submission-form [data-drupal-selector="edit-actions"] { margin-top: 3.11em; } }
+@media (min-width: 992px) { .has-margin-top-double, .user-login-form, .user-pass, .footer-regions-wrapper, .pagination, .pager, .promotion--social-share, .webform-submission-form { margin-top: 3.11em; } }
 
 .has-margin-top-triple { margin-top: 1.555em; }
 
@@ -2813,27 +2813,28 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .description { font-size: 80%; color: #555555; }
 
-.has-accessible-radios-and-checkboxes .form-type-radio, .has-accessible-radios-and-checkboxes .form-type-checkbox { padding: 0; background: #eeeeee; border: 1px solid #eeeeee; }
+/* Has alternate style radios and checkboxes which feature surrounding box with a background color to improve visual accessibility */
+.has-alternate-radios-and-checkboxes .form-type-radio, .has-alternate-radios-and-checkboxes .form-type-checkbox { padding: 0; background: #eeeeee; border: 1px solid #eeeeee; }
 
-.has-accessible-radios-and-checkboxes .form-type-radio:hover, .has-accessible-radios-and-checkboxes .form-type-checkbox:hover { border: 1px solid #555555; }
+.has-alternate-radios-and-checkboxes .form-type-radio:hover, .has-alternate-radios-and-checkboxes .form-type-checkbox:hover { border: 1px solid #555555; }
 
-.has-accessible-radios-and-checkboxes .form-type-radio.is-checked, .has-accessible-radios-and-checkboxes .form-type-checkbox.is-checked { outline: 3px solid #CCCCCC; outline-offset: -3px; }
+.has-alternate-radios-and-checkboxes .form-type-radio.is-checked, .has-alternate-radios-and-checkboxes .form-type-checkbox.is-checked { outline: 3px solid #CCCCCC; outline-offset: -3px; }
 
-.has-accessible-radios-and-checkboxes .form-type-radio .description, .has-accessible-radios-and-checkboxes .form-type-checkbox .description { background-color: #ffffff; padding: 10px; margin-top: 0; margin-bottom: 0; }
+.has-alternate-radios-and-checkboxes .form-type-radio .description, .has-alternate-radios-and-checkboxes .form-type-checkbox .description { background-color: #ffffff; padding: 10px; margin-top: 0; margin-bottom: 0; }
 
-.has-accessible-radios-and-checkboxes .radio label, .has-accessible-radios-and-checkboxes .checkbox label { position: relative; width: 100%; padding: 10px 10px 10px 44px; }
+.has-alternate-radios-and-checkboxes .radio label, .has-alternate-radios-and-checkboxes .checkbox label { position: relative; width: 100%; padding: 10px 10px 10px 44px; }
 
-.has-accessible-radios-and-checkboxes .radio.form-item-webform-buttons label, .has-accessible-radios-and-checkboxes .checkbox.form-item-webform-buttons label { width: auto; padding: 10px; }
+.has-alternate-radios-and-checkboxes .radio.form-item-webform-buttons label, .has-alternate-radios-and-checkboxes .checkbox.form-item-webform-buttons label { width: auto; padding: 10px; }
 
-.has-accessible-radios-and-checkboxes .radio input[type="radio"], .has-accessible-radios-and-checkboxes .radio-inline input[type="radio"], .has-accessible-radios-and-checkboxes .checkbox input[type="checkbox"], .has-accessible-radios-and-checkboxes .checkbox-inline input[type="checkbox"] { position: absolute; top: 0; left: 0; margin: 16px; }
+.has-alternate-radios-and-checkboxes .radio input[type="radio"], .has-alternate-radios-and-checkboxes .radio-inline input[type="radio"], .has-alternate-radios-and-checkboxes .checkbox input[type="checkbox"], .has-alternate-radios-and-checkboxes .checkbox-inline input[type="checkbox"] { position: absolute; top: 0; left: 0; margin: 16px; }
 
-.has-accessible-radios-and-checkboxes table .form-type-radio, .has-accessible-radios-and-checkboxes table .form-type-checkbox { background: transparent; border: none; }
+.has-alternate-radios-and-checkboxes table .form-type-radio, .has-alternate-radios-and-checkboxes table .form-type-checkbox { background: transparent; border: none; }
 
-.has-accessible-radios-and-checkboxes table .form-type-radio.is-checked, .has-accessible-radios-and-checkboxes table .form-type-checkbox.is-checked { outline: none; }
+.has-alternate-radios-and-checkboxes table .form-type-radio.is-checked, .has-alternate-radios-and-checkboxes table .form-type-checkbox.is-checked { outline: none; }
 
-.has-accessible-radios-and-checkboxes table .radio label, .has-accessible-radios-and-checkboxes table .checkbox label { width: auto; padding: 0; }
+.has-alternate-radios-and-checkboxes table .radio label, .has-alternate-radios-and-checkboxes table .checkbox label { width: auto; padding: 0; }
 
-.has-accessible-radios-and-checkboxes table .radio input[type="radio"], .has-accessible-radios-and-checkboxes table .radio-inline input[type="radio"], .has-accessible-radios-and-checkboxes table .checkbox input[type="checkbox"], .has-accessible-radios-and-checkboxes table .checkbox-inline input[type="checkbox"] { position: relative; top: auto; left: auto; margin: inherit; }
+.has-alternate-radios-and-checkboxes table .radio input[type="radio"], .has-alternate-radios-and-checkboxes table .radio-inline input[type="radio"], .has-alternate-radios-and-checkboxes table .checkbox input[type="checkbox"], .has-alternate-radios-and-checkboxes table .checkbox-inline input[type="checkbox"] { position: relative; top: auto; left: auto; margin: inherit; }
 
 .fieldset-legend { display: inline-block; max-width: 100%; margin-bottom: 5px; font-weight: bold; font-size: 15px; }
 
@@ -3730,7 +3731,7 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .webform-submission-form .form-type-color > input { margin: 0; }
 
-.webform-submission-form [data-drupal-selector="edit-actions"] { text-align: center; overflow: hidden; width: 100%; position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; height: 100%; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.webform-submission-form [data-drupal-selector="edit-actions"] { overflow: hidden; width: 100%; position: relative; }
 
 .webform-submission-form [data-drupal-selector="edit-actions"] .btn, .webform-submission-form [data-drupal-selector="edit-actions"] .tabs--primary > li > a, .webform-submission-form [data-drupal-selector="edit-actions"] .list--fridge-magnets > li > a { margin-right: 10px; }
 

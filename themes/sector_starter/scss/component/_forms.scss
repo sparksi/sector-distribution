@@ -91,8 +91,10 @@ select.input-sm {
   font-size: 80%;
   color: $gray;
 }
-
-.has-accessible-radios-and-checkboxes {
+/* Has alternate style radios and checkboxes which feature surrounding box
+   with a background color to improve visual accessibility */
+.has-alternate-radios-and-checkboxes,
+%has-alternate-radios-and-checkboxes {
   .form-type-radio,
   .form-type-checkbox {
     padding: 0;
@@ -135,9 +137,6 @@ select.input-sm {
     left: 0;
     margin: 16px;
   }
-}
-
-.has-accessible-radios-and-checkboxes {
   table {
     .form-type-radio,
     .form-type-checkbox {
