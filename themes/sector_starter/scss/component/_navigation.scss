@@ -20,7 +20,6 @@
     margin-top: 20px;
   }
   @include respond-to(tablet-large-and-down) {
-    width: 100%;
     > .menu {
       border-bottom: 1px solid #4e4e4e;
     }
@@ -41,7 +40,7 @@
         border-top: 1px solid #4e4e4e;
         position: relative;
         padding-left: 18px;
-        padding: 15px 15px;
+        padding: 15px;
         &[href^="http://"],
         &[href^="https://"],
         &[rel*='external'] {

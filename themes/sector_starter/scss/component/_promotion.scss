@@ -8,8 +8,7 @@
 
 .promotion--brand {
   .footer-regions-wrapper & {
-    margin-left: $responsive-layout-gutter;
-    margin-right: $responsive-layout-gutter;
+    @include apply-gutter;
     margin-top: $spacing-base;
     @include respond-to(desktop-and-up) {
       margin-top: 0;
@@ -42,8 +41,7 @@
 }
 
 .promotion--navigation-quaternary {
-  margin-left: $responsive-layout-gutter;
-  margin-right: $responsive-layout-gutter;
+  @include apply-gutter;
   margin-top: $spacing-half;
   @include respond-to(desktop-and-up) {
     margin-top: 0;
@@ -51,8 +49,7 @@
 }
 
 .promotion--copyright {
-  margin-left: $responsive-layout-gutter;
-  margin-right: $responsive-layout-gutter;
+  @include apply-gutter;
   margin-top: $spacing-base;
   @include respond-to(desktop-and-up) {
     margin-top: 0;
@@ -146,8 +143,7 @@
 }
 
 .promotion--last-updated {
-  margin-left: $responsive-layout-gutter;
-  margin-right: $responsive-layout-gutter;
+  @include apply-gutter;
   h2 {
     display: inline-block;
     font-size: 16px;

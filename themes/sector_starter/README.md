@@ -34,7 +34,7 @@ Make a copy of the Sector Starter theme
 
 **Within your _new_ `{PROJECTTHEMENAME}` theme...**
 
-`yarn && yarn setup` will install all theme dependencies and execute a script which will rename these files: 
+`yarn && yarn setup` will install all theme dependencies and execute a script which will rename these files:
 
 * `{PROJECTTHEMENAME}.breakpoints.yml`
 * `{PROJECTTHEMENAME}.info.yml`
@@ -86,7 +86,7 @@ To download versions of NodeJS, run `nvm install x.x` or just `nvm install stabl
 
 Run `nvm install stable`
 
-> currently, we enforce node version(s) 8.0 to 10.13 as there's incompatibility with vinyl-fs and node 11.x. 
+> currently, we enforce node version(s) 8.0 to 10.13 as there's incompatibility with vinyl-fs and node 11.x.
 
 `nvm ls-remote` will give you a complete list of available versions.
 

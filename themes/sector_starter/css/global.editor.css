@@ -1980,6 +1980,8 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /* WebKit-style focus */
 /* To handle long words and URLs */
 /* Default gutters */
+/* Slightly lighten a color */
+/* Slightly darken a color */
 /** @file Map Bootstrap breakpoints to nice mixins. */
 /** @file OOCSS Helpers & BEM modifiers */
 /* Useful within Display Suite for removing margin from headings. */

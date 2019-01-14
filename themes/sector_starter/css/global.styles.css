@@ -1979,6 +1979,8 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /* WebKit-style focus */
 /* To handle long words and URLs */
 /* Default gutters */
+/* Slightly lighten a color */
+/* Slightly darken a color */
 /** @file Map Bootstrap breakpoints to nice mixins. */
 /** @file OOCSS Helpers & BEM modifiers */
 /* Useful within Display Suite for removing margin from headings. */
@@ -2000,9 +2002,9 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 .inline-block { display: inline-block; }
 
 /** Responsive margin top OOCSS spacing helpers. Ideally always using margin above your site building blocks for consistency. */
-.has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .page-node-type-resource .field--name-field-related-files > .field--items > .field--item, .meta__featured + .field, .path-frontpage .hero .node__subtitle, .webform-submission-form .form-item { margin-top: 0.7775em; }
+.has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .meta__featured + .field, .path-frontpage .hero .node__subtitle, .webform-submission-form .form-item { margin-top: 0.7775em; }
 
-@media (min-width: 992px) { .has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .page-node-type-resource .field--name-field-related-files > .field--items > .field--item, .meta__featured + .field, .path-frontpage .hero .node__subtitle, .webform-submission-form .form-item { margin-top: 1.555em; } }
+@media (min-width: 992px) { .has-margin-top-base, .post-hero .region-post-hero, .comment-form .form-group, [data-drupal-selector="comment-blog-post-comment-delete-form"] [data-drupal-selector="edit-actions"], .meta__featured + .field, .path-frontpage .hero .node__subtitle, .webform-submission-form .form-item { margin-top: 1.555em; } }
 
 .has-margin-top-and-half, .promotion--news .more-link, .promotion--resources .more-link, .related > .field, .webform-submission-form [data-drupal-selector="edit-actions"] { margin-top: 1.555em; }
 
@@ -2020,7 +2022,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .has-margin-top-half, .comment-delete, .comment-edit, .comment-reply, .comment-approve { margin-top: 0.7775em; }
 
-.has-margin-top-quarter { margin-top: 0.38875em; }
+.has-margin-top-quarter, .list--faux > .field--items > .field--item { margin-top: 0.38875em; }
 
 .has-margin-right-quarter { margin-right: 0.38875em; }
 
@@ -2378,7 +2380,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 @media (min-width: 1360px) { .page-variant--section-entry-page .content > .site__inner:before { max-width: 1210px; } }
 
-/** @file BEM block for wrapping the footer regions */
+/** @file BEM block for wrapping the footer regions. */
 .footer-regions-wrapper { width: 100%; background-color: #222222; color: #ffffff; }
 
 @media (min-width: 992px) { .footer-regions-wrapper { /* https://css-tricks.com/forums/topic/viewport-height-for-full-screen-div/ */ min-height: 100vh; } }
@@ -2390,7 +2392,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 @media (min-width: 992px) { .footer { padding-top: 3.11em; padding-bottom: 3.11em; } }
 
-/** @file BEM block for wrapping the header regions */
+/** @file BEM block for wrapping the header regions. */
 @media (min-width: 992px) { .header-regions-wrapper { background-color: #f6f7f8; } }
 
 /** @file BEM block for header. */
@@ -2491,7 +2493,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 /** @file BEM block for post-header. */
 .post-header .region-post-header { width: 100%; padding-left: 15px; padding-right: 15px; }
 
-/** @file BEM block for post-header. */
+/** @file BEM block for post-hero. */
 .post-hero .region-post-hero { width: 100%; padding-left: 15px; padding-right: 15px; }
 
 /** @file BEM block for pre-content. */
@@ -2513,7 +2515,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 .pre-header .region-pre-header { width: 100%; padding-left: 15px; padding-right: 15px; }
 
-/** @file BEM block for post-header. */
+/** @file BEM block for pre-hero. */
 .pre-hero .region-pre-hero { width: 100%; padding-left: 15px; padding-right: 15px; }
 
 /** @file BEM block for site wrapper. */
@@ -2772,12 +2774,6 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 @media (min-width: 480px) { .field--name-field-media-file { display: inline-block; margin-right: 7px; } }
 
-.page-node-type-resource .field--name-field-related-files .field--label { font-size: 20px; }
-
-.page-node-type-resource .field--name-field-related-files > .field--items { margin: 0.7775em 0 3.11em; }
-
-.page-node-type-resource .field--name-field-related-files > .field--items > .field--item:first-child { margin-top: 0; }
-
 .field--name-field-last-updated { font-size: 16px; }
 
 .field--name-field-name-comment { font-weight: 700; }
@@ -2878,6 +2874,12 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 .list--fridge-magnets > li > a { text-align: left; border-radius: 0; font-weight: 400; float: left; display: block; margin: 0 8px 8px 0; }
 
 @media (min-width: 480px) { .list--fridge-magnets > li > a { padding: 10px 15px; } }
+
+.list--faux .field--label { font-size: 20px; }
+
+.list--faux > .field--items { margin: 0.7775em 0 3.11em; }
+
+.list--faux > .field--items > .field--item:first-child { margin-top: 0; }
 
 /** @file BEM block for logo. */
 .logo svg { max-width: 100%; height: auto; }
@@ -2984,12 +2986,11 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .navigation-is-open.navigation--primary { display: block; margin-top: 20px; }
 
-@media (max-width: 991px) { .navigation--primary { width: 100%; }
-  .navigation--primary > .menu { border-bottom: 1px solid #4e4e4e; }
+@media (max-width: 991px) { .navigation--primary > .menu { border-bottom: 1px solid #4e4e4e; }
   .navigation--primary > .menu { display: block; }
   .navigation--primary .menu__item { border-top: 1px solid #000000; position: relative; }
   .navigation--primary .menu__item .btn-expand { -ms-flex-line-pack: center; align-content: center; position: absolute; top: 0; right: 0; }
-  .navigation--primary .menu__item .menu__link { color: #fff; border-top: 1px solid #4e4e4e; position: relative; padding-left: 18px; padding: 15px 15px; }
+  .navigation--primary .menu__item .menu__link { color: #fff; border-top: 1px solid #4e4e4e; position: relative; padding-left: 18px; padding: 15px; }
   .navigation--primary .menu__item .menu__link[href^="http://"]:after, .navigation--primary .menu__item .menu__link[href^="https://"]:after, .navigation--primary .menu__item .menu__link[rel*='external']:after { width: 0.5625em; height: 0.5625em; background-position: -27.9375em -26.8125em; }
   .navigation--primary .menu__item.is-expanded .menu__link { padding-right: 60px; }
   .navigation--primary .menu__item .menu__item .menu__link { padding-left: 47px; }
@@ -3140,7 +3141,7 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 .navigation--site-map .menu__link { color: #333333; }
 
 /** @file BEM block for Node. */
-.node__subtitle { margin-bottom: 0; font-weight: 300; margin-bottom: 0; }
+.node__subtitle { margin-bottom: 0; font-weight: 300; }
 
 @media (min-width: 480px) { .node__subtitle { font-size: 22px; line-height: 1.7; } }
 
@@ -3277,7 +3278,7 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 /** @file BEM block for Promoted content. */
 .promotion--default { padding: 0 0 1.555em; }
 
-.footer-regions-wrapper .promotion--brand { margin-left: 15px; margin-right: 15px; margin-top: 1.555em; }
+.footer-regions-wrapper .promotion--brand { padding-left: 15px; padding-right: 15px; margin-top: 1.555em; }
 
 @media (min-width: 992px) { .footer-regions-wrapper .promotion--brand { margin-top: 0; } }
 
@@ -3289,11 +3290,11 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 @media (max-width: 991px) { .promotion--navigation-primary:after { content: ''; width: 100vw; background-color: #444; position: absolute; z-index: -1; height: 100%; left: 50%; -webkit-transform: translateX(-50%); transform: translateX(-50%); display: block; top: 0; } }
 
-.promotion--navigation-quaternary { margin-left: 15px; margin-right: 15px; margin-top: 0.7775em; }
+.promotion--navigation-quaternary { padding-left: 15px; padding-right: 15px; margin-top: 0.7775em; }
 
 @media (min-width: 992px) { .promotion--navigation-quaternary { margin-top: 0; } }
 
-.promotion--copyright { margin-left: 15px; margin-right: 15px; margin-top: 1.555em; }
+.promotion--copyright { padding-left: 15px; padding-right: 15px; margin-top: 1.555em; }
 
 @media (min-width: 992px) { .promotion--copyright { margin-top: 0; } }
 
@@ -3327,7 +3328,7 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 @media (min-width: 992px) { .promotion--resources { padding-left: 40px; } }
 
-.promotion--last-updated { margin-left: 15px; margin-right: 15px; }
+.promotion--last-updated { padding-left: 15px; padding-right: 15px; }
 
 .promotion--last-updated h2 { display: inline-block; font-size: 16px; font-family: "Nunito Sans", Helvetica, Arial, sans-serif; margin: 0; color: #252526; }
 
@@ -3407,7 +3408,7 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .related .field--label:before { top: -12px; }
 
-.related .field--items { line-height: 1.722; margin: 0.38875em 0 0 0; }
+.related .field--items { margin: 0.38875em 0 0 0; }
 
 /** @file Responsive layout (Modular utility grid) */
 /** Naming convention for grid modifiers. For example: .responsive-layout--t2 translates to layout of 2 columns for tablet large and up breakpoint ('t' for tablet-large) .responsive-layout--d3 translates to layout of 3 columns for desktop and up ('d' for desktop). .responsive-layout--w4 translates to layout of 4 columns for wide and up ('w' for wide). Intention is to use any combination of these modifiers to achieve desired grid configuration. For example: <div class="responsive-layout responsive-layout--t2 responsive-layout--w4"> <div class="responsive-layout__item"> ... </div> <div class="responsive-layout__item"> ... </div> <div class="responsive-layout__item"> ... </div> <div class="responsive-layout__item"> ... </div> </div> By default, without any modifiers, the .responsive-layout component will squash all child .responsive-layout__item elements into the same row, without any wrapping. */

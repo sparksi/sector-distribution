@@ -57,3 +57,18 @@
     }
   }
 }
+
+.list--faux {
+  .field--label {
+    font-size: $font-size-h4;
+  }
+  > .field--items {
+    margin: $spacing-half 0 $spacing-double;
+    > .field--item {
+      @extend %has-margin-top-quarter;
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

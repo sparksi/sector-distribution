@@ -8,8 +8,7 @@
     background-color: transparent;
   }
   .region-hero {
-    padding-left: 15px;
-    padding-right: 15px;
+    @include apply-gutter;
     .path-frontpage & {
       padding-top: 3vw;
       padding-bottom: 15vw;

@@ -36,23 +36,6 @@
   }
 }
 
-.field--name-field-related-files {
-  .page-node-type-resource & {
-    .field--label {
-      font-size: $font-size-h4;
-    }
-    > .field--items {
-      margin: $spacing-half 0 $spacing-double;
-      > .field--item {
-        @extend %has-margin-top-base;
-        &:first-child {
-          margin-top: 0;
-        }
-      }
-    }
-  }
-}
-
 .field--name-field-last-updated {
   font-size: 16px;
 }
