@@ -213,8 +213,12 @@
     }
     &:before {
       cursor: pointer;
-      font-size: 13px;
-      @include sprite(icon--close-white);
+      background: svg-load('../images/icons/icon--close.svg', fill=#FFFFFF);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      height: 17px;
+      width: 17px;
     }
   }
 }
@@ -248,7 +252,11 @@
       position: absolute;
       left: 0;
       top: 21px;
-      @include sprite(icon--filter-grey);
+      background: svg-load('../images/icons/icon--filter.svg', fill=#333333);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      height: 14px;
+      width: 14px;
     }
     .site__sidebar-inner & {
       font-size: $font-size-h5;
@@ -276,7 +284,11 @@
     &:before {
       content: '';
       position: absolute;
-      @include sprite(icon--close-small-blue);
+      background: svg-load('../images/icons/icon--close-small.svg', fill=#204ad4);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      height: 12px;
+      width: 12px;
       top: 0;
       left: 0;
     }

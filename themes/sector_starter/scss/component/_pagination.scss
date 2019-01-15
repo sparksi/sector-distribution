@@ -89,16 +89,24 @@
         &:after {
           content: '';
           position: absolute;
-          @include sprite(arrow--medium-left-thin-dark-grey);
-          font-size: 13px;
+          background: svg-load('../images/icons/arrow--medium-left-thin.svg', fill=#313132);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: 85% 85%;
+          width: 9px;
+          height: 16px;
           top: 14px;
           left: 16px;
         }
         &:before {
           content: '';
           position: absolute;
-          @include sprite(arrow--medium-left-thin-dark-grey);
-          font-size: 13px;
+          background: svg-load('../images/icons/arrow--medium-left-thin.svg', fill=#313132);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: 85% 85%;
+          width: 9px;
+          height: 16px;
           top: 14px;
           left: 9px;
         }
@@ -115,9 +123,13 @@
         &:after {
           content: '';
           position: absolute;
-          @include sprite(arrow--medium-left-thin-dark-grey);
-          font-size: 13px;
-          top: 14px;
+          background: svg-load('../images/icons/arrow--medium-left-thin.svg', fill=#313132);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: 85% 85%;
+          width: 9px;
+          height: 16px;
+          top: 15px;
           left: 7px;
         }
       }
@@ -133,9 +145,13 @@
         &:after {
           content: '';
           position: absolute;
-          @include sprite(arrow--medium-right-thin-dark-grey);
-          font-size: 13px;
-          top: 14px;
+          background: svg-load('../images/icons/arrow--medium-right-thin.svg', fill=#313132);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: 85% 85%;
+          width: 9px;
+          height: 16px;
+          top: 15px;
           right: 7px;
         }
       }
@@ -158,17 +174,25 @@
         &:after {
           content: '';
           position: absolute;
-          @include sprite(arrow--medium-right-thin-dark-grey);
-          font-size: 13px;
-          top: 14px;
+          background: svg-load('../images/icons/arrow--medium-right-thin.svg', fill=#313132);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: 85% 85%;
+          width: 9px;
+          height: 16px;
+          top: 15px;
           right: 16px;
         }
         &:before {
           content: '';
           position: absolute;
-          @include sprite(arrow--medium-right-thin-dark-grey);
-          font-size: 13px;
-          top: 14px;
+          background: svg-load('../images/icons/arrow--medium-right-thin.svg', fill=#313132);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: 85% 85%;
+          width: 9px;
+          height: 16px;
+          top: 15px;
           right: 9px;
         }
       }
@@ -205,12 +229,16 @@
         &:after {
           content: '';
           position: absolute;
-          @include sprite(arrow--medium-left-thin-dark-grey);
+          background: svg-load('../images/icons/arrow--medium-left-thin.svg', fill=#313132);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: cover;
+          width: 9px;
+          height: 16px;
           top: 2px;
           left: 6px;
-          font-size: 16px;
           @include respond-to(tablet-and-up) {
-            top: 15px;
+            top: 14px;
             left: 15px;
           }
         }
@@ -233,12 +261,16 @@
         &:after {
           content: '';
           position: absolute;
-          @include sprite(arrow--medium-right-thin-dark-grey);
+          background: svg-load('../images/icons/arrow--medium-right-thin.svg', fill=#313132);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: cover;
+          width: 9px;
+          height: 16px;
           top: 2px;
           right: 6px;
-          font-size: 16px;
           @include respond-to(tablet-and-up) {
-            top: 15px;
+            top: 14px;
             right: 15px;
           }
         }

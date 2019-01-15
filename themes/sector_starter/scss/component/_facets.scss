@@ -45,7 +45,11 @@
       &:before {
         content: '';
         position: absolute;
-        @include sprite(icon--close-small-blue);
+        background: svg-load('../images/icons/icon--close-small.svg', fill=#204ad4);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        height: 12px;
+        width: 12px;
         top: 11px;
         right: 10px;
       }

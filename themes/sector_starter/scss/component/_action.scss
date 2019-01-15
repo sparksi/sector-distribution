@@ -7,28 +7,20 @@
   padding: 30px 10px 6px 10px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.2s ease-out;
+  transition: all 0.2s ease-out;
   @extend .pull-right;
   color: $text-color;
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 6px;
-    left: 35px;
-    font-size: 18px;
-    @include sprite(arrow--chevron-up-dark-grey);
-    transition: all 0.175s ease-in;
-  }
+  background: svg-load('../images/icons/arrow--chevron-up.svg', fill=#252526);
+  background-repeat: no-repeat;
+  background-position: 35px 6px;
   &:hover,
   &:focus {
     color: $text-color;
     text-decoration: none;
-    &:before {
-      margin-top: -5px;
-    }
+    background-position: 35px 1px;
   }
   .you-are-going-down & {
     visibility: visible;
@@ -74,13 +66,16 @@
     position: absolute;
     top: 8px;
     left: 0;
-    font-size: 16px;
-    @include sprite(arrow--mini-left-blue);
+    background: svg-load('../images/icons/arrow--mini-left.svg', fill=#204ad4);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 11px;
+    width: 6px;
   }
   &:hover,
   &:focus {
     &:before {
-      @include sprite(arrow--mini-left-dark-blue);
+      background: svg-load('../images/icons/arrow--mini-left.svg', fill=#0042a3);
     }
   }
   &:focus {
@@ -102,8 +97,11 @@
   &:before {
     content: '';
     position: absolute;
-    font-size: 27px;
-    @include sprite(icon--close-small-blue);
+    background: svg-load('../images/icons/icon--close-small.svg', fill=#204ad4);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 12px;
+    width: 12px;
     top: 0;
     left: 0;
   }

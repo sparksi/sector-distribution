@@ -278,8 +278,6 @@
   @include word-wrap;
 }
 
-@import "./sprite", "./sprite-mixins";
-
 %apply-external-link-icon {
   /* Add external link icon to links */
   a[href^="http://"],
@@ -287,9 +285,14 @@
   a[rel*='external'] {
     &:after {
       content: '';
-      @include sprite(icon--external-blue);
+      background: svg-load('../images/icons/icon--external.svg', fill=#204ad4);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      height: 10px;
+      width: 10px;
       margin-left: .25em;
-      vertical-align: middle;
+      display: inline-block;
     }
   }
 
@@ -390,7 +393,7 @@
     &[href^="https://"],
     &[rel*='external'] {
       &:after {
-        @include sprite(icon--external-white);
+        background: svg-load('../images/icons/icon--external.svg', fill=#FFFFFF);
       }
     }
   }
@@ -418,23 +421,27 @@
     margin-bottom: 13px;
     &:after {
       content: '';
-      @include sprite(arrow--micro-down-blue);
       position: absolute;
+      background: svg-load('../images/icons/arrow--micro-down.svg', fill=#204ad4);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      height: 6px;
+      width: 11px;
       margin: 8px 0 0 6px;
     }
     &:hover {
       &:after {
-        @include sprite(arrow--micro-down-dark-blue);
+        background: svg-load('../images/icons/arrow--micro-down.svg', fill=#003259);
       }
     }
     &[aria-expanded="true"] {
       &:after {
-        @include sprite(arrow--micro-up-blue);
+        background: svg-load('../images/icons/arrow--micro-up.svg', fill=#204ad4);
         margin: 7px 0 0 6px;
       }
       &:hover {
         &:after {
-          @include sprite(arrow--micro-up-dark-blue);
+          background: svg-load('../images/icons/arrow--micro-up.svg', fill=#003259);
         }
       }
     }

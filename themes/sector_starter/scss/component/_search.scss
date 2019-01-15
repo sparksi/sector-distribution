@@ -133,11 +133,14 @@
     &:after {
       content:'';
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translateY(-50%) translateX(-50%) scale(1.5);
-      @include sprite(icon--search-dark-grey);
-      font-size: 13px;
+      top: 17px;
+      left: 17px;
+      background: svg-load('../images/icons/icon--search.svg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      height: 20px;
+      width: 20px;
     }
     &:hover,
     &:active,

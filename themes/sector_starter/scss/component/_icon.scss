@@ -6,23 +6,33 @@
 .icon--close {
   &:before {
     content: '';
-    font-size: 16px;
-    @include sprite('icon--close-dark-grey');
+    background: svg-load('../images/icons/icon--close.svg', fill=#313132);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 20px;
+    width: 20px;
   }
 }
 
 .icon--menu {
   &:before {
     content: '';
-    font-size: 16px;
-    @include sprite('icon--menu-dark-grey');
+    background: svg-load('../images/icons/icon--menu.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 18px;
+    width: 20px;
   }
 }
 
 .icon--search {
   &:before {
     content: '';
-    font-size: 18px;
-    @include sprite('icon--search-dark-grey');
+    background: svg-load('../images/icons/icon--search.svg');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    height: 20px;
+    width: 20px;
   }
 }
