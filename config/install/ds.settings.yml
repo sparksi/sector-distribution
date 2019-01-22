@@ -75,4 +75,5 @@ classes:
     - text-center
     - text-center-wide-and-up
     - action--more
+    - list--related-files
 use_field_names: true
