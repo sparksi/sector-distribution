@@ -42,11 +42,6 @@ $brand-gray-lightest: #f6f7f8;
 $brand-blue-gray: #252526;
 $brand-bluer-gray: #4e5d78;
 
-@import 'sprite';
-
-$sprite: map-get($icons, sprite) !default;
-$baseFontSize: 16px !default;
-
 /**
  * Specify your site domain here. Used to override detection of off-site links
  * if a link has been created that uses the sites full absolute href. Removes the external

@@ -8,8 +8,7 @@
 
 .promotion--brand {
   .footer-regions-wrapper & {
-    margin-left: $responsive-layout-gutter;
-    margin-right: $responsive-layout-gutter;
+    @include apply-gutter;
     margin-top: $spacing-base;
     @include respond-to(desktop-and-up) {
       margin-top: 0;
@@ -42,8 +41,7 @@
 }
 
 .promotion--navigation-quaternary {
-  margin-left: $responsive-layout-gutter;
-  margin-right: $responsive-layout-gutter;
+  @include apply-gutter;
   margin-top: $spacing-half;
   @include respond-to(desktop-and-up) {
     margin-top: 0;
@@ -51,8 +49,7 @@
 }
 
 .promotion--copyright {
-  margin-left: $responsive-layout-gutter;
-  margin-right: $responsive-layout-gutter;
+  @include apply-gutter;
   margin-top: $spacing-base;
   @include respond-to(desktop-and-up) {
     margin-top: 0;
@@ -146,8 +143,7 @@
 }
 
 .promotion--last-updated {
-  margin-left: $responsive-layout-gutter;
-  margin-right: $responsive-layout-gutter;
+  @include apply-gutter;
   h2 {
     display: inline-block;
     font-size: 16px;
@@ -217,8 +213,12 @@
     }
     &:before {
       cursor: pointer;
-      font-size: 13px;
-      @include sprite(icon--close-white);
+      background: svg-load('../images/icons/icon--close.svg', fill=#FFFFFF);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: cover;
+      height: 17px;
+      width: 17px;
     }
   }
 }
@@ -252,7 +252,11 @@
       position: absolute;
       left: 0;
       top: 21px;
-      @include sprite(icon--filter-grey);
+      background: svg-load('../images/icons/icon--filter.svg', fill=#333333);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      height: 14px;
+      width: 14px;
     }
     .site__sidebar-inner & {
       font-size: $font-size-h5;
@@ -280,7 +284,11 @@
     &:before {
       content: '';
       position: absolute;
-      @include sprite(icon--close-small-blue);
+      background: svg-load('../images/icons/icon--close-small.svg', fill=#204ad4);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      height: 12px;
+      width: 12px;
       top: 0;
       left: 0;
     }

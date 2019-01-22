@@ -41,8 +41,12 @@
   &:before {
     content: '';
     vertical-align: bottom;
-    font-size: 18px;
-    @include sprite(icon--paper-clip);
+    background: svg-load('../images/icons/icon--paper-clip.svg', fill=#898989);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+    height: 18px;
+    width: 18px;
   }
 }
 

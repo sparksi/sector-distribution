@@ -20,7 +20,7 @@
 
 /* GENERIC
 ------------------------------------------------------------------------*/
-@import "generic/mixins", "generic/breakpoints", "generic/helpers", "generic/sprite", "generic/sprite-mixins", "generic/drupal";
+@import "generic/mixins", "generic/breakpoints", "generic/helpers", "generic/drupal";
 
 /* BASE
 ------------------------------------------------------------------------*/
@@ -47,11 +47,6 @@
 @import "layout/pre-hero";
 @import "layout/site-wrapper";
 @import "layout/site";
-
-
-/* THEME
-------------------------------------------------------------------------*/
-//@import "theme/*";
 
 
 /* COMPONENT

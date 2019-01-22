@@ -7,8 +7,8 @@
     "Sparks Interactive"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/sparksi/sector-distribution.git"
+    "type": "git",
+    "url": "https://github.com/sparksi/sector-distribution.git"
   },
   "engines": {
     "node": ">=8.0.0 <=10.13.0",
@@ -24,15 +24,12 @@
     "js:lint": "yarn eslint js/src/** --config .eslintrc.yml --fix",
     "js:watch": "onchange -j2 'js/src/*.js' -- yarn run js:transpile",
     "js": "yarn js:lint && yarn js:transpile",
-    "pcss": "yarn postcss --config postcss.config.js -r css/*.css --no-map",
+    "pcss": "yarn postcss --config postcss.config.js -r css/*.css",
     "scss:lint": "yarn sass-lint -c .sass-lint.yml --verbose",
-    "scss:compile": "yarn node-sass -r scss -o css --include-path node_modules  --output-style nested --indent-type space --indent-width 2 --source-map-embed",
+    "scss:compile": "yarn node-sass -r scss -o css --include-path node_modules  --output-style nested --indent-type space --indent-width 2 --source-map-embed && yarn pcss",
     "scss:production": "yarn node-sass -r scss -o css --include-path node_modules  --output-style compact",
     "scss:watch": "onchange 'scss/**/*.scss' -- yarn scss:compile",
-    "svg:sprite": "yarn run gulp svgSprite && yarn run gulp copySpriteMixins",
-    "svg:optimise": "yarn svgo -f images --config .svgo.yml",
-    "svg:watch": "onchange 'build/sprite/*.svg' -- yarn run svg",
-    "svg": "yarn svg:sprite && yarn svg:optimise",
+    "svg": "yarn svgo -f images --config .svgo.yml",
     "watch": "yarn run-p *:watch"
   },
   "author": "Sparks Interactive",
@@ -49,9 +46,6 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
-    "gulp": "^3.9.1",
-    "gulp-rename": "1.4.0",
-    "gulp-svg-sprite": "^1.5.0",
     "mv": "^2.1.1",
     "node-sass": "^4.9.3",
     "npm-run-all": "^4.1.3",
@@ -79,5 +73,8 @@
         "stage-0"
       ]
     ]
+  },
+  "dependencies": {
+    "postcss-inline-svg": "^3.1.1"
   }
 }

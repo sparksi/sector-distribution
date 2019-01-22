@@ -20,7 +20,6 @@
     margin-top: 20px;
   }
   @include respond-to(tablet-large-and-down) {
-    width: 100%;
     > .menu {
       border-bottom: 1px solid #4e4e4e;
     }
@@ -41,12 +40,12 @@
         border-top: 1px solid #4e4e4e;
         position: relative;
         padding-left: 18px;
-        padding: 15px 15px;
+        padding: 15px;
         &[href^="http://"],
         &[href^="https://"],
         &[rel*='external'] {
           &:after {
-            @include sprite(icon--external-white);
+            background: svg-load('../images/icons/icon--external.svg', fill=#FFFFFF);
           }
         }
       }
@@ -81,7 +80,7 @@
         }
         > .btn-expand {
           &:after {
-            @include sprite(arrow--micro-up-white);
+            background: svg-load('../images/icons/arrow--micro-up.svg', fill=#FFFFFF);
           }
         }
       }
@@ -259,13 +258,17 @@
     }
   }
   .menu__item {
-    &.collapsed {
+    &.is-collapsed {
       > .menu__link {
         position: relative;
         &:after {
           content: '';
           position: absolute;
-          @include sprite(arrow--mini-right-grey);
+          background: svg-load('../images/icons/arrow--mini-right.svg', fill=#999999);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          height: 11px;
+          width: 6px;
           top: 42%;
           right: 1px;
         }
@@ -277,7 +280,11 @@
         &:after {
           content: '';
           position: absolute;
-          @include sprite(arrow--mini-down-grey);
+          background: svg-load('../images/icons/arrow--mini-down.svg', fill=#999999);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          height: 6px;
+          width: 11px;
           top: 47%;
           right: 0;
         }

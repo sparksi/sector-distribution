@@ -15,8 +15,12 @@
       &:before {
         content: '';
         position: absolute;
-        @include sprite(arrow--mini-right-grey);
-        top: 21px;
+        background: svg-load('../images/icons/arrow--mini-right.svg', fill=#999999);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        height: 11px;
+        width: 6px;
+        top: 23px;
         left: 0;
       }
     }
@@ -53,6 +57,21 @@
       margin: 0 8px 8px 0;
       @include respond-to(tablet-and-up) {
         padding: 10px 15px;
+      }
+    }
+  }
+}
+
+.list--related-files {
+  .field--label {
+    font-size: $font-size-h4;
+  }
+  > .field--items {
+    margin: $spacing-half 0 $spacing-double;
+    > .field--item {
+      @extend %has-margin-top-base;
+      &:first-child {
+        margin-top: 0;
       }
     }
   }

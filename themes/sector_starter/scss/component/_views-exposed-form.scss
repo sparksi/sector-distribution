@@ -99,7 +99,7 @@
     }
     > .form-actions {
       @include respond-to(tablet-large-and-up) {
-        padding-top: 26px;
+        padding-top: 29px;
       }
     }
     @include respond-to(tablet-large-and-up) {

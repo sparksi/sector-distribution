@@ -34,7 +34,7 @@ Make a copy of the Sector Starter theme
 
 **Within your _new_ `{PROJECTTHEMENAME}` theme...**
 
-`yarn && yarn setup` will install all theme dependencies and execute a script which will rename these files: 
+`yarn && yarn setup` will install all theme dependencies and execute a script which will rename these files:
 
 * `{PROJECTTHEMENAME}.breakpoints.yml`
 * `{PROJECTTHEMENAME}.info.yml`
@@ -60,7 +60,7 @@ Your new theme may be loading the Bootstrap CDN by default. Make sure you turn t
 
 ## Sector Starter frontend workflow
 
-If you want to modify SCSS/CSS/SVG sprites etc you'll need to install localised dependencies.
+If you want to modify SCSS/CSS sprites etc you'll need to install localised dependencies.
 
 This project uses a NodeJS LibSaSS compilation pipeline.
 
@@ -86,7 +86,7 @@ To download versions of NodeJS, run `nvm install x.x` or just `nvm install stabl
 
 Run `nvm install stable`
 
-> currently, we enforce node version(s) 8.0 to 10.13 as there's incompatibility with vinyl-fs and node 11.x. 
+> currently, we enforce node version(s) 8.0 to 10.13 as there's incompatibility with vinyl-fs and node 11.x.
 
 `nvm ls-remote` will give you a complete list of available versions.
 
@@ -114,7 +114,7 @@ See more: https://yarnpkg.com/en/docs/install
 
 Then `cd` inside the root of this theme directory.
 
-Now you can run the 3 commands needed to compile and watch the files in the `./scss/` directory as well as watch for new SVG's in the `/build/sprite/` directory. The SCSS files will be compiled into a `./css/` directory. SVG's will be compiled to the `/images/` directory. Read more about svg here: https://www.liquidlight.co.uk/blog/article/creating-svg-sprites-using-gulp-and-sass/
+Now you can run the 3 commands needed to compile and watch the files in the `./scss/` directory. The SCSS files will be compiled into a `./css/` directory.
 
 `yarn install && yarn build`
 
@@ -122,28 +122,14 @@ The first command, `yarn install` will download and install all the modules list
 
 The last command, `yarn build`, again executes a script defined in the `package.json`. This script runs a series of subtasks also defined in `package.json` that will build the CSS, Javascript and SVG's that the theme requires.
 
-#### Known error during default Gulp task:
-
-`Error: EPERM: operation not permitted, chmod  '…/sector_starter/scss/generic/_sprite-mixins.scss'`
-
-During the Gulp SVG task Gulp is trying to run chmod over scss/generic/_sprite-mixins.scss
-
-Because the _sprite-mixins.scss file is not owned by your user Gulp is not able to perform the chmod.
-
-Related issue: https://github.com/gulpjs/gulp/issues/1012
-
-In order to allow Gulp to perform the chmod run `sudo chown -R <your-user-name> scss/generic/_sprite-mixins.scss` at the root of the theme.
-
-Rerun the `yarn svg:sprite` command and the error should be resolved.
-
 #### Working with Sass and Gulp
 
 To watch for changes to SASS and new SVG's run the following command
 inside the root of this theme directory.
 
-`yarn build` (One off production command complies sprites and compiles and lints SCSS, JS, builds SVG sprite...)
+`yarn build` (One off production command compiles production-ready theme. Executes `yarn clean`, lints SCSS, builds SCSS (if linting is successful), runs post-css (autoprefixer) and compiles javascript.)
 
-`yarn watch` (Watches Sprites, SCSS and JS and lints SCSS and JS + Source mapping)
+`yarn watch` (Watches SCSS and JS and lints SCSS and JS + Source mapping)
 
 `yarn scss:compile` (+ Source mapping)
 
@@ -171,15 +157,12 @@ inside the root of this theme directory.
 
 ##### SVGs
 
-* `yarn svg:sprite` - runs svgSprite & copySpriteMixins gulp tasks
-* `yarn svg:optimise` - runs svgo on all svgs (including sprite) in images/
-* `yarn svg:watch` - listens on build/sprite/*.svg and executes yarn svg (both sprite + optimise tasks)
-* `yarn svg` - executes svg:sprite & svg:optimise tasks
+* `yarn svg` - runs svgo on all svgs
 
 ##### Watching & Building
 
 * `yarn watch` - runs all scripts matching *:watch
-* `yarn build` - compiles production-ready theme. Executes `yarn clean`, builds optimised SVG sprite, lints SCSS, builds SCSS (if linting is successful), runs post-css (autoprefixer) and compiles javascript.
+* `yarn build` - compiles production-ready theme. Executes `yarn clean`, lints SCSS, builds SCSS (if linting is successful), runs post-css (autoprefixer) and compiles javascript.
 
 
 ## CSS Coding Standards and Frontend Architecture

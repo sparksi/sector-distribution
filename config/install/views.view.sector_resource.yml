@@ -562,8 +562,8 @@ display:
           tags:
             previous: Previous
             next: Next
-            first: '« First'
-            last: 'Last »'
+            first: First
+            last: Last
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -572,7 +572,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          quantity: 6
       use_ajax: false
       style:
         type: html_list

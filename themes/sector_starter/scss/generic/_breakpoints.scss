@@ -45,7 +45,7 @@ $screen-xmg:  1760px;
     @include breakpoint(max-width $screen-xs) { @content; }
   }
   @else if $media == tablet-and-down {
-    @include breakpoint(max-width ($screen-sm - 1)) { @content; }
+    @include breakpoint(max-width ($screen-md - 1)) { @content; }
   }
   @else if $media == tablet-large-and-down {
     @include breakpoint(max-width ($screen-md - 1)) { @content; }

@@ -129,10 +129,14 @@
   &[rel*='external'] {
     .action--more {
       &:after {
-        font-size: 16px;
         content: '';
-        @include sprite(icon--external-blue);
+        background: svg-load('../images/icons/icon--external.svg', fill=#204ad4);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        height: 10px;
+        width: 10px;
         margin-left: 2px;
+        display: inline-block;
         vertical-align: middle;
       }
     }

@@ -1980,6 +1980,8 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /* WebKit-style focus */
 /* To handle long words and URLs */
 /* Default gutters */
+/* Slightly lighten a color */
+/* Slightly darken a color */
 /** @file Map Bootstrap breakpoints to nice mixins. */
 /** @file OOCSS Helpers & BEM modifiers */
 /* Useful within Display Suite for removing margin from headings. */
@@ -2097,12 +2099,9 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 /* To handle long words and URLs */
 .dont-break-out { overflow-wrap: break-word; word-wrap: break-word; -ms-word-break: break-all; word-break: break-word; -ms-hyphens: auto; -webkit-hyphens: auto; hyphens: auto; }
 
-/** The following variable and function originate from the sass-mq library. If you have already included it, you can eliminate the below https://github.com/sass-mq/sass-mq/blob/master/_mq.scss */
-.caption a[href^="http://"]:after, .prose a[href^="http://"]:after, .cke_editable a[href^="http://"]:after, .caption a[href^="https://"]:after, .prose a[href^="https://"]:after, .cke_editable a[href^="https://"]:after, .caption a[rel*='external']:after, .prose a[rel*='external']:after, .cke_editable a[rel*='external']:after { display: inline-block; background-image: url("../images/sprite.svg"); background-size: 48.8125em 47.4375em; }
-
 .caption, .prose, .cke_editable { /* Add external link icon to links */ /* 1. Site domain as defined in _variables.scss. Let's not add an icon if a link has been created using the sites full absolute domain. */ }
 
-.caption a[href^="http://"]:after, .prose a[href^="http://"]:after, .cke_editable a[href^="http://"]:after, .caption a[href^="https://"]:after, .prose a[href^="https://"]:after, .cke_editable a[href^="https://"]:after, .caption a[rel*='external']:after, .prose a[rel*='external']:after, .cke_editable a[rel*='external']:after { content: ''; width: 0.5625em; height: 0.5625em; background-position: -26.8125em -25.6875em; margin-left: .25em; vertical-align: middle; }
+.caption a[href^="http://"]:after, .prose a[href^="http://"]:after, .cke_editable a[href^="http://"]:after, .caption a[href^="https://"]:after, .prose a[href^="https://"]:after, .cke_editable a[href^="https://"]:after, .caption a[rel*='external']:after, .prose a[rel*='external']:after, .cke_editable a[rel*='external']:after { content: ''; background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='8' height='8' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg' fill='%23204ad4'%3E%3Cpath d='M8 .26v7h-1.62v-4.52l-.73.77-4.5 4.49-1.15-1.14 4.51-4.5.84-.8h-4.48v-1.56h6.87z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: 0 0; background-size: cover; height: 10px; width: 10px; margin-left: .25em; display: inline-block; }
 
 .caption a[href*='<yourdomain>'], .prose a[href*='<yourdomain>'], .cke_editable a[href*='<yourdomain>'] { /* [1] */ }
 

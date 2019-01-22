@@ -3,8 +3,6 @@
  * Override Bootstrap button styles
  */
 
-@import "../generic/sprite-mixins";
-
 .btn {
   font-size: 16px;
   text-decoration: none;
@@ -52,6 +50,10 @@
     position: absolute;
     top: 24px;
     left: 24px;
-    @include sprite(arrow--micro-down-white);
+    background: svg-load('../images/icons/arrow--micro-down.svg', fill=#FFFFFF);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 6px;
+    width: 11px;
   }
 }
