@@ -2866,6 +2866,18 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .list--related-files > .field--items > .field--item:first-child { margin-top: 0; }
 
+@media (min-width: 992px) { .list--a-z .view-content { -webkit-column-count: 3; column-count: 3; -webkit-column-gap: 50px; column-gap: 50px; } }
+
+.list--a-z .view-content > div { width: 100%; margin-bottom: 10px; margin-top: 50px; display: inline-block; }
+
+@media (min-width: 992px) { .list--a-z .view-content > div { margin-top: 100px; } }
+
+.list--a-z .view-content > div > h3 { margin-top: 0; }
+
+.list--a-z .view-content > div > ul > li { border-top: 1px solid #d5d7dd; }
+
+.list--a-z .view-content > div > ul > li > a { display: block; padding: 15px 0; line-height: 1.4; }
+
 /** @file BEM block for logo. */
 .logo svg { max-width: 100%; height: auto; }
 
@@ -3653,16 +3665,18 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 @media (min-width: 992px) { .views-exposed-form > .form-actions { margin-top: 2.3325em; } }
 
-.views-exposed-form > .form-actions .button { margin-right: 10px; padding: 12px 15px; font-size: 16px; margin-top: 0; }
+.views-exposed-form > .form-actions .button { margin-right: 10px; padding: 12px 14px; font-size: 16px; margin-top: 0; }
 
 /* [1] */
 .has-filters-with-responsive-layout .views-exposed-form { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: nowrap; flex-wrap: nowrap; padding-left: 0; padding-right: 0; }
 
 @media (min-width: 480px) { .has-filters-with-responsive-layout .views-exposed-form { padding-left: 15px; padding-right: 15px; } }
 
-.has-filters-with-responsive-layout .views-exposed-form > .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions { padding-left: 15px; padding-right: 15px; }
+.has-filters-with-responsive-layout .views-exposed-form > .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions { padding-left: 7.5px; padding-right: 7.5px; }
 
 @media (min-width: 768px) { .has-filters-with-responsive-layout .views-exposed-form > .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions { margin-top: 0; } }
+
+@media (min-width: 1260px) { .has-filters-with-responsive-layout .views-exposed-form > .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions { padding-left: 15px; padding-right: 15px; } }
 
 .has-filters-with-responsive-layout .views-exposed-form > .form-item ~ .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-item ~ .form-actions, .has-filters-with-responsive-layout .views-exposed-form > .form-actions ~ .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions ~ .form-actions { margin-top: 0.7775em; }
 

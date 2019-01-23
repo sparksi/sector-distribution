@@ -76,3 +76,34 @@
     }
   }
 }
+
+.list--a-z {
+  .view-content {
+    @include respond-to(desktop-and-up) {
+      column-count: 3;
+      column-gap: 50px;
+    }
+    > div {
+      width: 100%;
+      margin-bottom: 10px;
+      margin-top: 50px;
+      display: inline-block;
+      @include respond-to(desktop-and-up) {
+        margin-top: 100px;
+      }
+      > h3 {
+        margin-top: 0;
+      }
+      > ul {
+        > li {
+          border-top: 1px solid $brand-border;
+          > a {
+            display: block;
+            padding: 15px 0;
+            line-height: 1.4;
+          }
+        }
+      }
+    }
+  }
+}
