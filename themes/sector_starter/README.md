@@ -86,8 +86,6 @@ To download versions of NodeJS, run `nvm install x.x` or just `nvm install stabl
 
 Run `nvm install stable`
 
-> currently, we enforce node version(s) 8.0 to 10.13 as there's incompatibility with vinyl-fs and node 11.x.
-
 `nvm ls-remote` will give you a complete list of available versions.
 
 You can check your current version of node with `node -v`, by default this will be the system version (if `node` is installed system-wide).
