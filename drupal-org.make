@@ -17,6 +17,7 @@ projects[block_class][type] = module
 projects[block_class][version] = 1.0
 projects[bootstrap][type] = theme
 projects[bootstrap][version] = 3.17
+projects[bootstrap][patch][] = "https://www.drupal.org/files/issues/2019-01-24/3027569-8.x-3.x-8.patch"
 projects[captcha][type] = module
 projects[captcha][version] = 1.0-beta1
 projects[config_update][type] = module
