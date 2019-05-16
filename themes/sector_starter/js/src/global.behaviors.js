@@ -87,8 +87,6 @@
   Drupal.behaviors.flyoutSearch = {
     attach: () => {
       searchTargets.toggle.once().on(clickTrigger, Drupal.behaviors.flyoutSearch.toggle);
-      //$('.js-toggle-search, .js-toggle-flyout-search').once().on(clickTrigger, Drupal.behaviors.flyoutSearch.toggle);
-
       // Add this search's .site region to list of offclick 'whitelist'
       offclickRegions.push(searchTargets.elem.parents('.site'));
     },

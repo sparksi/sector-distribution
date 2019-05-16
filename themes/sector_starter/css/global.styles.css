@@ -2326,6 +2326,8 @@ a:visited { color: #4d6edd; }
 
 a:focus { background-color: rgba(239, 96, 77, 0.2); outline: 3px solid rgba(239, 96, 77, 0.2); outline-offset: -3px; }
 
+::-moz-selection { background: rgba(255, 255, 0, 0.3); }
+
 ::selection { background: rgba(255, 255, 0, 0.3); }
 
 pre { border-radius: 0; }
@@ -2854,9 +2856,9 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .list--related-files > .field--items > .field--item:first-child { margin-top: 0; }
 
-@media (min-width: 992px) { .list--a-z .view-content { -webkit-column-count: 3; column-count: 3; -webkit-column-gap: 50px; column-gap: 50px; } }
+@media (min-width: 992px) { .list--a-z .view-content { -webkit-column-count: 3; -moz-column-count: 3; column-count: 3; -webkit-column-gap: 50px; -moz-column-gap: 50px; column-gap: 50px; } }
 
-.list--a-z .view-content > .list__group { width: 100%; margin-bottom: 10px; margin-top: 50px; display: inline-block; -webkit-column-break-inside: avoid; break-inside: avoid; }
+.list--a-z .view-content > .list__group { width: 100%; margin-bottom: 10px; margin-top: 50px; display: inline-block; -webkit-column-break-inside: avoid; -moz-column-break-inside: avoid; break-inside: avoid; }
 
 @media (min-width: 992px) { .list--a-z .view-content > .list__group { margin-top: 100px; } }
 

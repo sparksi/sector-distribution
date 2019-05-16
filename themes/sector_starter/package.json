@@ -30,26 +30,27 @@
   "author": "Sparks Interactive",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.4.7",
+    "autoprefixer": "^9.5.1",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-0": "^6.24.1",
-    "bootstrap-sass": "^3.4.0",
+    "bootstrap-sass": "^3.4.1",
     "breakpoint-sass": "^2.7.1",
-    "eslint": "^5.13.0",
+    "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react": "^7.13.0",
     "mv": "^2.1.1",
-    "node-sass": "^4.11.0",
+    "node-sass": "^4.12.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^5.2.0",
-    "postcss-cli": "^6.1.1",
+    "postcss-cli": "^6.1.2",
+    "postcss-inline-svg": "^3.1.1",
     "replace-in-files": "^1.1.4",
     "rimraf": "^2.6.3",
-    "sass-lint": "^1.12.1",
-    "svgo": "^1.1.1"
+    "sass-lint": "^1.13.1",
+    "svgo": "^1.2.2"
   },
   "babel": {
     "presets": [
@@ -68,8 +69,5 @@
         "stage-0"
       ]
     ]
-  },
-  "dependencies": {
-    "postcss-inline-svg": "^3.1.1"
   }
 }
