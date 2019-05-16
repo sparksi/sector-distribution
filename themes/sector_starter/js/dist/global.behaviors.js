@@ -101,7 +101,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       searchTargets.elem.toggleClass('search-is-active');
       $('#edit-query').focus(); // Custom search API
       $('#edit-keys').focus(); // Core search
-      console.log('test');
       Drupal.behaviors.flyoutMenu.close(); // Close navigation
 
       // update aria label
