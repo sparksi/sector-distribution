@@ -10,6 +10,7 @@ global:
   dependencies:
       - core/jquery
       - core/modernizr
+      - core/jquery.once
 
 scottjehl.Respond:
   remote: https://github.com/scottjehl/Respond

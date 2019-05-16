@@ -90,8 +90,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
   Drupal.behaviors.flyoutSearch = {
     attach: function attach() {
-      searchTargets.toggle.on(clickTrigger, Drupal.behaviors.flyoutSearch.toggle);
-
+      searchTargets.toggle.once().on(clickTrigger, Drupal.behaviors.flyoutSearch.toggle);
       // Add this search's .site region to list of offclick 'whitelist'
       offclickRegions.push(searchTargets.elem.parents('.site'));
     },
@@ -100,7 +99,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       searchTargets.elem.toggleClass('search-is-active');
       $('#edit-query').focus(); // Custom search API
       $('#edit-keys').focus(); // Core search
-
       Drupal.behaviors.flyoutMenu.close(); // Close navigation
 
       // update aria label
