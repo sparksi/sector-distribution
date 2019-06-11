@@ -46,10 +46,10 @@
   @include apply-gutter;
   width: 100%;
   @include respond-to(desktop-and-up) {
-    width: percentage(4/12);
+    width: 33.22%;
   }
   @include respond-to(wide-and-up) {
-    width: percentage(3/12);
+    width: 24.90%;
   }
 }
 
