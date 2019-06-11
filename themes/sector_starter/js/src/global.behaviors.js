@@ -51,9 +51,9 @@
       /**
        * Radios.
        */
-      $('input:radio', context).change(function () {
+      $('.form-radio', context).on(clickTrigger, function () {
         $(this).closest('.fieldset-wrapper').find('.is-checked').removeClass('is-checked');
-        $(this).closest('.form-type-radio').addClass('is-checked');
+        $(this).parents('.form-type-radio').addClass('is-checked');
       });
 
       /**

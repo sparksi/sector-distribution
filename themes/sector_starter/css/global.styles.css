@@ -1455,15 +1455,15 @@ a.btn.disabled, .tabs--primary > li > a.disabled, .list--fridge-magnets > li > a
 
 .btn-danger .badge { color: #ef604d; background-color: #fff; }
 
-.btn-link { font-weight: 400; color: #204ad4; border-radius: 0; }
+.btn-link, .webform-button--reset.btn, .tabs--primary > li > a.webform-button--reset, .list--fridge-magnets > li > a.webform-button--reset { font-weight: 400; color: #204ad4; border-radius: 0; }
 
-.btn-link, .btn-link:active, .btn-link.active, .btn-link[disabled], fieldset[disabled] .btn-link { background-color: transparent; -webkit-box-shadow: none; box-shadow: none; }
+.btn-link, .webform-button--reset.btn, .tabs--primary > li > a.webform-button--reset, .list--fridge-magnets > li > a.webform-button--reset, .btn-link:active, .webform-button--reset.btn:active, .tabs--primary > li > a.webform-button--reset:active, .list--fridge-magnets > li > a.webform-button--reset:active, .btn-link.active, .active.webform-button--reset.btn, .tabs--primary > li > a.active.webform-button--reset, .list--fridge-magnets > li > a.active.webform-button--reset, .btn-link[disabled], .webform-button--reset.btn[disabled], .tabs--primary > li > a.webform-button--reset[disabled], .list--fridge-magnets > li > a.webform-button--reset[disabled], fieldset[disabled] .btn-link, fieldset[disabled] .webform-button--reset.btn, fieldset[disabled] .tabs--primary > li > a.webform-button--reset, fieldset[disabled] .list--fridge-magnets > li > a.webform-button--reset { background-color: transparent; -webkit-box-shadow: none; box-shadow: none; }
 
-.btn-link, .btn-link:hover, .btn-link:focus, .btn-link:active { border-color: transparent; }
+.btn-link, .webform-button--reset.btn, .tabs--primary > li > a.webform-button--reset, .list--fridge-magnets > li > a.webform-button--reset, .btn-link:hover, .webform-button--reset.btn:hover, .tabs--primary > li > a.webform-button--reset:hover, .list--fridge-magnets > li > a.webform-button--reset:hover, .btn-link:focus, .webform-button--reset.btn:focus, .tabs--primary > li > a.webform-button--reset:focus, .list--fridge-magnets > li > a.webform-button--reset:focus, .btn-link:active, .webform-button--reset.btn:active, .tabs--primary > li > a.webform-button--reset:active, .list--fridge-magnets > li > a.webform-button--reset:active { border-color: transparent; }
 
-.btn-link:hover, .btn-link:focus { color: #163392; text-decoration: underline; background-color: transparent; }
+.btn-link:hover, .webform-button--reset.btn:hover, .tabs--primary > li > a.webform-button--reset:hover, .list--fridge-magnets > li > a.webform-button--reset:hover, .btn-link:focus, .webform-button--reset.btn:focus, .tabs--primary > li > a.webform-button--reset:focus, .list--fridge-magnets > li > a.webform-button--reset:focus { color: #163392; text-decoration: underline; background-color: transparent; }
 
-.btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus { color: #666666; text-decoration: none; }
+.btn-link[disabled]:hover, .webform-button--reset.btn[disabled]:hover, .tabs--primary > li > a.webform-button--reset[disabled]:hover, .list--fridge-magnets > li > a.webform-button--reset[disabled]:hover, .btn-link[disabled]:focus, .webform-button--reset.btn[disabled]:focus, .tabs--primary > li > a.webform-button--reset[disabled]:focus, .list--fridge-magnets > li > a.webform-button--reset[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .webform-button--reset.btn:hover, fieldset[disabled] .tabs--primary > li > a.webform-button--reset:hover, fieldset[disabled] .list--fridge-magnets > li > a.webform-button--reset:hover, fieldset[disabled] .btn-link:focus, fieldset[disabled] .webform-button--reset.btn:focus, fieldset[disabled] .tabs--primary > li > a.webform-button--reset:focus, fieldset[disabled] .list--fridge-magnets > li > a.webform-button--reset:focus { color: #666666; text-decoration: none; }
 
 .btn-lg { padding: 10px 16px; font-size: 24px; line-height: 1.33333; border-radius: 6px; }
 
@@ -2010,7 +2010,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 @media (min-width: 992px) { .has-margin-top-triple { margin-top: 4.665em; } }
 
-.has-margin-top-half, .comment-delete, .comment-edit, .comment-reply, .comment-approve { margin-top: 0.7775em; }
+.has-margin-top-half, .comment-delete, .comment-edit, .comment-reply, .comment-approve, .webform-submission-form fieldset .fieldset-wrapper > .form-item + .form-item { margin-top: 0.7775em; }
 
 .has-margin-top-quarter { margin-top: 0.38875em; }
 
@@ -2326,10 +2326,6 @@ a:visited { color: #4d6edd; }
 
 a:focus { background-color: rgba(239, 96, 77, 0.2); outline: 3px solid rgba(239, 96, 77, 0.2); outline-offset: -3px; }
 
-::-moz-selection { background: rgba(255, 255, 0, 0.3); }
-
-::selection { background: rgba(255, 255, 0, 0.3); }
-
 pre { border-radius: 0; }
 
 /* Legal style nested ordered lists */
@@ -2522,9 +2518,9 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 .site__sidebar { padding-left: 15px; padding-right: 15px; width: 100%; }
 
-@media (min-width: 992px) { .site__sidebar { width: 33.33333%; } }
+@media (min-width: 992px) { .site__sidebar { width: 33.22%; } }
 
-@media (min-width: 1200px) { .site__sidebar { width: 25%; } }
+@media (min-width: 1200px) { .site__sidebar { width: 24.90%; } }
 
 .site__sidebar-inner { font-size: 16px; line-height: 1.625; }
 
@@ -3106,12 +3102,12 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .navigation--site-map .menu > .menu__item > .menu > .menu__item > .menu > .menu__item .menu__link { margin-top: 0; color: #666666; }
 
-@media (min-width: 480px) { .navigation--site-map > .menu > .menu__item > .menu > .menu__item > .menu > .menu__item { width: 33.33333%; }
-  .navigation--site-map > .menu > .menu__item > .menu > .menu__item > .menu > .menu__item:nth-child(3n+1) { clear: both; } }
+.navigation--site-map > .menu > .menu__item { padding-left: 15px; padding-right: 15px; }
 
-@media (min-width: 992px) { .navigation--site-map > .menu > .menu__item > .menu > .menu__item > .menu > .menu__item { width: 16.66667%; }
-  .navigation--site-map > .menu > .menu__item > .menu > .menu__item > .menu > .menu__item:nth-child(3n+1) { clear: none; }
-  .navigation--site-map > .menu > .menu__item > .menu > .menu__item > .menu > .menu__item:nth-child(6n+1) { clear: both; } }
+@media (min-width: 992px) { .navigation--site-map > .menu > .menu__item { width: 20%; float: left; }
+  .navigation--site-map > .menu > .menu__item:nth-child(5n+1) { clear: both; } }
+
+@media (min-width: 480px) { .navigation--site-map > .menu > .menu__item > .menu > .menu__item > .menu > .menu__item { width: 100%; } }
 
 .navigation--site-map > .menu > .menu__item > .menu > .menu__item > .menu > .menu__item .menu__link { margin-top: 0; color: #666666; }
 
@@ -3709,6 +3705,10 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
   .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-item:nth-child(-n+4), .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-actions:nth-child(-n+4) { margin-top: 0; } }
 
 /** @file BEM block for Webforms. */
+.webform-submission-form { -webkit-box-shadow: 0 0 3vw rgba(0, 0, 0, 0.15); box-shadow: 0 0 3vw rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.2); padding: 1.555em; margin-top: 0; }
+
+@media (min-width: 1260px) { .webform-submission-form { margin-top: 4.665em; margin-bottom: 4.665em; padding: 3.11em; background-color: #ffffff; } }
+
 .webform-submission-form a { text-decoration: underline; }
 
 .webform-submission-form .form-item.form-type-radio, .webform-submission-form .form-item.form-type-checkbox, .webform-submission-form .form-item.form-item-text-format-format { margin-top: 0; }
@@ -3717,13 +3717,19 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .webform-submission-form .panel-default .panel-heading a:hover, .webform-submission-form .panel-default .panel-heading a:focus { text-decoration: underline; }
 
+.webform-submission-form .panel-default .panel-title { color: #4689e1; font-weight: 600; font-size: 28px; }
+
 @media (min-width: 480px) { .webform-submission-form .form-item-range__output { line-height: 50px; } }
 
 .webform-submission-form .form-type-color > input { margin: 0; }
 
 .webform-submission-form [data-drupal-selector="edit-actions"] { overflow: hidden; width: 100%; position: relative; }
 
-.webform-submission-form [data-drupal-selector="edit-actions"] .btn, .webform-submission-form [data-drupal-selector="edit-actions"] .tabs--primary > li > a, .webform-submission-form [data-drupal-selector="edit-actions"] .list--fridge-magnets > li > a { margin-right: 10px; }
+.webform-submission-form [data-drupal-selector="edit-actions"] .btn, .webform-submission-form [data-drupal-selector="edit-actions"] .tabs--primary > li > a, .webform-submission-form [data-drupal-selector="edit-actions"] .list--fridge-magnets > li > a { margin-right: 10px; margin-top: 10px; }
+
+.webform-submission-form fieldset .fieldset-wrapper > .form-item { margin-top: 0; }
+
+.webform-submission-form .js-form-required:after { font-size: 22px; margin-left: 3px; line-height: 1; }
 
 @media (min-width: 768px) { .webform-flexbox { margin: 0 -1em; } }
 
@@ -3735,8 +3741,32 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .webform-multiple-add input, .form-item-entity-autocomplete-multiple-add-more-items input { height: 40px; margin-left: 10px; margin-right: 10px; }
 
-.webform-progress-tracker .progress-step.is-complete .progress-marker, .webform-progress-tracker .progress-step.is-complete:hover .progress-marker, .webform-progress-tracker .progress-step.is-active:hover .progress-marker, .progress-step.is-active .progress-marker, .progress-step.is-complete::after { background-color: #4689e1; }
+.webform-progress-tracker .progress-step .progress-text { font-size: 15px; }
 
-.progress-marker { padding-bottom: 0; }
+.webform-progress-tracker.progress-tracker { margin-top: 20px; margin-bottom: 60px; }
+
+.webform-progress-tracker .progress-step.is-complete .progress-marker, .webform-progress-tracker .progress-step.is-complete:hover .progress-marker, .webform-progress-tracker .progress-step.is-active:hover .progress-marker, .progress-step.is-active .progress-marker, .progress-step.is-complete::after { background-color: #4689e1 !important; }
+
+.webform-progress-tracker .progress-step:not(.is-active) .progress-marker { background-color: #CCCCCC; }
+
+.webform-progress-tracker .progress-step::after { background-color: #CCCCCC; }
+
+.progress-step:not(:last-child)::after { z-index: 0; height: 2px; top: 18px; bottom: 18px; }
+
+.progress-marker { padding-bottom: 0; width: 38px; height: 38px; }
 
 .progress-step .progress-marker { font-weight: 700; }
+
+@media (min-width: 480px) { .webform-button--previous { float: left; } }
+
+@media (min-width: 480px) { .webform-button--next { float: right; margin-right: 0 !important; } }
+
+.webform-button--reset { clear: both; }
+
+@media (min-width: 480px) { .webform-button--reset { float: right; clear: both; margin-top: 50px !important; } }
+
+.webform-button--reset.btn, .tabs--primary > li > a.webform-button--reset, .list--fridge-magnets > li > a.webform-button--reset { height: 44px; min-width: 74px; }
+
+.webform-button--reset.btn:focus, .tabs--primary > li > a.webform-button--reset:focus, .list--fridge-magnets > li > a.webform-button--reset:focus { outline: none; }
+
+.webform-button--reset.btn:active:focus, .tabs--primary > li > a.webform-button--reset:active:focus, .list--fridge-magnets > li > a.webform-button--reset:active:focus { background-color: transparent; border: none; outline: none; outline-offset: 0; color: #204ad4; }
