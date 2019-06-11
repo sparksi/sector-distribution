@@ -5,6 +5,16 @@
 
 .webform-submission-form {
   @extend %has-margin-top-double;
+  box-shadow: 0 0 3vw rgba(0,0,0,0.15);
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: $spacing-base;
+  margin-top: 0;
+  @include respond-to(wide-large-and-up) {
+    margin-top: ($spacing-base*3);
+    margin-bottom: ($spacing-base*3);
+    padding: $spacing-double;
+    background-color: $white;
+  }
   a {
     text-decoration: underline;
   }
@@ -27,6 +37,11 @@
         }
       }
     }
+    .panel-title {
+      color: $brand-info;
+      font-weight: 600;
+      font-size: 28px;
+    }
   }
   .form-item-range__output {
     @include respond-to(tablet-and-up) {
@@ -45,6 +60,24 @@
     @extend %has-margin-top-and-half;
     .btn {
       margin-right: 10px;
+      margin-top: 10px;
+    }
+  }
+  fieldset {
+    .fieldset-wrapper {
+      > .form-item {
+        margin-top: 0;
+        + .form-item { // Eg Select Other
+          @extend %has-margin-top-half;
+        }
+      }
+    }
+  }
+  .js-form-required {
+    &:after {
+      font-size: 22px;
+      margin-left: 3px;
+      line-height: 1;
     }
   }
 }
@@ -87,18 +120,82 @@
   }
 }
 
+.webform-progress-tracker .progress-step .progress-text {
+  font-size: 15px;
+}
+
+.webform-progress-tracker.progress-tracker {
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
 .webform-progress-tracker .progress-step.is-complete .progress-marker,
 .webform-progress-tracker .progress-step.is-complete:hover .progress-marker,
 .webform-progress-tracker .progress-step.is-active:hover .progress-marker,
 .progress-step.is-active .progress-marker,
 .progress-step.is-complete::after {
-  background-color: $brand-info;
+  background-color: $brand-info!important;
+}
+
+.webform-progress-tracker .progress-step:not(.is-active) .progress-marker {
+  background-color: $brand-gray-light;
+}
+
+.webform-progress-tracker .progress-step::after {
+  background-color: $brand-gray-light;
+}
+
+.progress-step:not(:last-child)::after {
+  z-index: 0;
+  height: 2px;
+  top: 18px;
+  bottom: 18px;
 }
 
 .progress-marker {
   padding-bottom: 0;
+  width: 38px;
+  height: 38px;
 }
 
 .progress-step .progress-marker {
   font-weight: 700;
+}
+
+.webform-button--previous {
+  @include respond-to(tablet-and-up) {
+    float: left;
+  }
+}
+
+.webform-button--next {
+  @include respond-to(tablet-and-up) {
+    float: right;
+    margin-right: 0!important;
+  }
+}
+
+.webform-button--reset {
+  @include respond-to(tablet-and-up) {
+    float: right;
+    clear: both;
+    margin-top: 50px!important;
+  }
+  clear: both;
+  &.btn {
+    @extend .btn-link;
+    height: 44px;
+    min-width: 74px;
+    &:focus {
+      outline: none;
+    }
+    &:active {
+      &:focus {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        outline-offset: 0;
+        color: $link-color;
+      }
+    }
+  }
 }
