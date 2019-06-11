@@ -32,7 +32,23 @@ sector_starter.large:
     - 2x
 sector_starter.xlarge:
   label: xlarge
-  mediaQuery: 'all and (min-width: 1400px)'
+  mediaQuery: 'all and (min-width: 1260px)'
+  weight: 1
+  group: sector_starter
+  multipliers:
+    - 1x
+    - 2x
+sector_starter.mega:
+  label: mega
+  mediaQuery: 'all and (min-width: 1360px)'
+  weight: 1
+  group: sector_starter
+  multipliers:
+    - 1x
+    - 2x
+sector_starter.xmega:
+  label: xmega
+  mediaQuery: 'all and (min-width: 1760px)'
   weight: 1
   group: sector_starter
   multipliers:
