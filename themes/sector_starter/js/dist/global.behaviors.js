@@ -130,7 +130,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
       var breakpoints = _extends({}, settings.responsive);
 
       // Toggle menu open/close
-      flyoutMenuTargets.toggle.on(clickTrigger, Drupal.behaviors.flyoutMenu.toggle);
+      flyoutMenuTargets.toggle.once().on(clickTrigger, Drupal.behaviors.flyoutMenu.toggle);
 
       // Loop through each menu that's a mobile menu target
       flyoutMenuTargets.elem.each(function () {
@@ -204,7 +204,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
     attach: function attach() {
       // Detect a click outside the element and hide.
       // https://css-tricks.com/dangers-stopping-event-propagation/
-      $(document).on(clickTrigger, '.site', function (event) {
+      $(document).once().on(clickTrigger, '.site', function (event) {
         var clickedRegion = $(event.target).closest('.site'); // Section that was clicked
 
         var match = offclickRegions.filter(function (region) {

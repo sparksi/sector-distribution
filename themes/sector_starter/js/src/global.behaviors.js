@@ -126,7 +126,7 @@
       const breakpoints = { ...settings.responsive, };
 
       // Toggle menu open/close
-      flyoutMenuTargets.toggle.on(clickTrigger, Drupal.behaviors.flyoutMenu.toggle);
+      flyoutMenuTargets.toggle.once().on(clickTrigger, Drupal.behaviors.flyoutMenu.toggle);
 
       // Loop through each menu that's a mobile menu target
       flyoutMenuTargets.elem.each(function () {
@@ -200,7 +200,7 @@
     attach: () => {
       // Detect a click outside the element and hide.
       // https://css-tricks.com/dangers-stopping-event-propagation/
-      $(document).on(clickTrigger, '.site', (event) => {
+      $(document).once().on(clickTrigger, '.site', (event) => {
         const clickedRegion = $(event.target).closest('.site'); // Section that was clicked
 
         const match = offclickRegions.filter(region => region.is(clickedRegion))[0];
