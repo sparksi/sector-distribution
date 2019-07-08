@@ -256,7 +256,18 @@ function sector_starter_preprocess_field(&$variables) {
  */
 function sector_starter_preprocess_menu(&$variables) {
 
-  foreach ($variables['items'] as &$item) {
+  foreach ($variables['items'] as $key => $item) {
+    // TODO - set the data ID only for the megamenu - Not all menus
+    $attribute = &$variables['items'][$key]['attributes'];
+
+    //$key might change if the link is pointing to another place
+    //but is also a very ugly id and some times very big
+    //$attribute->setAttribute('id', $key);
+
+    //so to get a smaller id from previous key
+    //use http://php.net/manual/en/function.hash.php
+    $key_hash = hash('crc32b', $key);
+    $attribute->setAttribute('data-id', $key_hash);
 
     // We only want to look at internal links.
     if (!$item['url']->isExternal()) {

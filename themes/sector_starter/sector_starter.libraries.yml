@@ -7,6 +7,10 @@ global:
       css/admin-ui-toggle.css: {}
   js:
     js/dist/global.behaviors.js: {}
+    js/dist/offclick.behaviors.js: {}
+    js/dist/flyouts.behaviors.js: {}
+    # js/dist/megamenu.behaviors.js: {}
+    js/dist/toggle.behaviors.js: {}
   dependencies:
       - core/jquery
       - core/modernizr
