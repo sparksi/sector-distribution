@@ -23,9 +23,6 @@ rules:
   curly : 
     - error
     - all
-  comma-dangle: 
-    - error
-    - always
   func-names :
     - error
     - never
@@ -44,3 +41,10 @@ rules:
   semi:
     - error
     - always
+  no-shadow:
+    - warn
+  no-restricted-syntax:
+    - warn
+  guard-for-in:
+    - warn
+  comma-dangle: 0
