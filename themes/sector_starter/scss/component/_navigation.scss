@@ -362,6 +362,15 @@
   }
 }
 
+.navigation--mega-menu {
+  display: none;
+  &.mega-menu-is-active {
+    @include respond-to(desktop-and-up) {
+      display: block;
+    }
+  }
+}
+
 .navigation--site-map {
   .menu {
     > .menu__item {

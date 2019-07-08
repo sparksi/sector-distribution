@@ -3124,6 +3124,10 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .footer-regions-wrapper .navigation--quaternary .menu__link:focus { color: #ffffff; }
 
+.navigation--mega-menu { display: none; }
+
+@media (min-width: 992px) { .navigation--mega-menu.mega-menu-is-active { display: block; } }
+
 .navigation--site-map .menu > .menu__item > .menu__link { font-size: 24px; margin-top: 1.555em; border-bottom: 1px solid #666666; padding: 0.7775em 0.7775em 0.7775em 0; }
 
 @media (min-width: 480px) { .navigation--site-map .menu > .menu__item > .menu__link { margin-top: 3.11em; } }
