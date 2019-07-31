@@ -28,7 +28,8 @@
    *
    * - See offclick.behaviors.js
    *
-   * Create a new behaviour within <sitename>.behaviours.js
+   * In order to impliment offclick you'll need to create a new behaviour
+   * within <sitename>.behaviours.js
    *
    * E.G -
    *
@@ -36,18 +37,24 @@
    *      attach: () => {
    *        Drupal.behaviors.offRegionClick.addBehaviour('promotionSlotOffRegionClick');
    *      },
-   *      close: (context) => {
+   *      close: () => {
    *        $('.js-target-promotion-slot').removeClass('promotion-slot-is-active');
    *      }
-   *    }
+   *    };
    *
-   * Then add the '.js-offclick-whitelist' class to your toggle and/or target elements.
+   * Then add the '.js-offclick-whitelist' class to your toggle and/or target
+   * element parent.
+   *
+   * @TODO - Allow for js-offclick-whitelist class to be placed directly on
+   * trigger element
+   *
+   * Flush Drupal and Browser caches for the new behaviour to register.
    *
    * @type {{attach: attach}}
    */
   Drupal.behaviors.attachToggleHandlers = {
     attach: () => {
-      $('[class^="js-toggle-"]').once().on('click', (event) => {
+      $('[class*="js-toggle-"]').once().on('click', (event) => {
         // Turn classList into array with es6 spread operator.
         const classList = [...event.currentTarget.classList];
         // Find the toggle class.
