@@ -112,6 +112,7 @@ dependencies:
  - webform_bootstrap 
  - webform_ui
  - honeypot
+ - username_enumeration_prevention
 
 themes:
  - bootstrap

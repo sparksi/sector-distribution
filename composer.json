@@ -61,6 +61,7 @@
         "drupal/search_api": "1.13",
         "drupal/term_condition": "1.1",
         "drupal/token": "1.5",
+        "drupal/username_enumeration_prevention": "1.0-beta2",
         "drupal/video_embed_field": "2.1",
         "drupal/view_unpublished": "1.0-alpha1",
         "drupal/views_bulk_edit": "2.2",
