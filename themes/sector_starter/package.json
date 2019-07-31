@@ -16,7 +16,7 @@
     "clean": "rimraf css/* && rimraf js/dist/*",
     "build": "yarn clean && yarn svg && yarn scss:lint && yarn scss:production && yarn pcss && yarn js",
     "js:transpile": "yarn babel js/src --out-dir js/dist",
-    "js:lint": "yarn eslint js/src/** --config .eslintrc.yml --fix",
+    "js:lint": "yarn eslint js/src/** --config .eslintrc.yml",
     "js:watch": "onchange -j2 'js/src/*.js' -- yarn run js:transpile",
     "js": "yarn js:lint && yarn js:transpile",
     "pcss": "yarn postcss --config postcss.config.js -r css/*.css",
