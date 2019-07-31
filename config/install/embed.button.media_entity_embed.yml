@@ -2,6 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.full_width
+    - core.entity_view_mode.media.half_width
+    - core.entity_view_mode.media.preview
+    - core.entity_view_mode.media.short_teaser
+    - core.entity_view_mode.media.teaser
+    - core.entity_view_mode.media.token
+    - entity_browser.browser.media_entity_browser
     - media.type.file
     - media.type.image
   module:

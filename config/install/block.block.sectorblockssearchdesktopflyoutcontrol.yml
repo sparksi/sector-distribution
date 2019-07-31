@@ -9,7 +9,7 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'control control--fly-out-search'
+    classes: 'control control--fly-out-search js-offclick-whitelist'
 id: sectorblockssearchdesktopflyoutcontrol
 theme: sector_starter
 region: header

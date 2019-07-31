@@ -9,7 +9,7 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'control control--responsive-menu'
+    classes: 'control control--responsive-menu js-offclick-whitelist'
 id: sectorblocksresponsivemenucontrols
 theme: sector_starter
 region: header

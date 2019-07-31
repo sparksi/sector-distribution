@@ -2,6 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.short_teaser
+    - core.entity_view_mode.media.teaser
     - media.type.file
   content:
     - 'file:file:ef8428a5-53d7-4bed-b02a-54d3b6c98c82'

@@ -4,6 +4,7 @@ dependencies:
   module:
     - node
     - user
+    - view_unpublished
 id: content_recent
 label: 'Recent content'
 module: node

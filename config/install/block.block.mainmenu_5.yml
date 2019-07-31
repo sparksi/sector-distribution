@@ -12,7 +12,7 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'navigation navigation--site-map'
+    classes: 'navigation navigation--site-map row'
 id: mainmenu_5
 theme: sector_starter
 region: content
