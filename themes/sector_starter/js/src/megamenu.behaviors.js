@@ -42,7 +42,7 @@
           sourceMenu = $('.js-mega-menu-source');
         }
       }
-      $('> .menu > li > a', sourceMenu).on('click', function (evt) {
+      $('> .menu > li > a', sourceMenu).once().on('click', function (evt) {
         if (!$(this).hasClass('tabbed')) {
           // If link has children act as Megamenu .. otherwise simply execute link.
           const menuItemClass = $(this).parent().data('id');
