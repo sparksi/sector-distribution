@@ -117,9 +117,6 @@
             ]
         },
         "patches": {
-            "drupal/term_condition": {
-                "2948550 & 2797205 & 3010105 combined": "https://raw.githubusercontent.com/sparksi/sector-distribution/8.x-2.x/patches/term-condition-patches-2948550-3010105.patch"
-            },
             "drupal/menu_block": {
                 "No contextual link to edit menu": "https://www.drupal.org/files/issues/2799821-2.menu_block.contextual_links.patch",
                 "Hide menu block title if empty": "https://www.drupal.org/files/issues/2018-05-08/menu_block-hide_block_if_no_links-2757215-9.patch"

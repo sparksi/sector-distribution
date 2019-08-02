@@ -79,7 +79,6 @@ projects[search_api][type] = module
 projects[search_api][version] = 1.13
 projects[term_condition][type] = module
 projects[term_condition][version] = 1.2
-projects[term_condition][patch][] = "https://www.drupal.org/files/issues/2018-11-21/term-condition-patches-2948550-3010105.patch"
 projects[token][type] = module
 projects[token][version] = 1.5
 projects[token][patch][] = "https://www.drupal.org/files/issues/token_node_preview_menu_link-2823731-4.patch"
