@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.full_width
     - media.type.video
   content:
     - 'file:file:8aa3af84-2c7b-4946-b4e1-9ea5204ebefd'

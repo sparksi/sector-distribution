@@ -13,5 +13,9 @@
  */
 #}
 <span{{ attributes.addClass('media__content') }}>
-  <a href={{link.getUrl()}}>{{ link.getText() }}</a>
+  {%  if link.getText() and link.getUrl() %}
+    <a href={{link.getUrl()}}>{{ link.getText() }}</a>
+  {% else %}
+      {{ link }}
+  {% endif %}
 </span>

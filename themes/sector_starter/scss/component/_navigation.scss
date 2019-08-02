@@ -362,6 +362,15 @@
   }
 }
 
+.navigation--mega-menu {
+  display: none;
+  &.mega-menu-is-active {
+    @include respond-to(desktop-and-up) {
+      display: block;
+    }
+  }
+}
+
 .navigation--site-map {
   .menu {
     > .menu__item {
@@ -404,24 +413,20 @@
   }
   > .menu {
     > .menu__item {
+      @include apply-gutter;
+      @include respond-to(desktop-and-up) {
+        width: (100%/5);
+        float: left;
+        &:nth-child(5n+1) {
+          clear: both;
+        }
+      }
       > .menu {
         > .menu__item {
           > .menu {
             > .menu__item {
               @include respond-to(tablet-and-up) {
-                width: (100%/3);
-                &:nth-child(3n+1) {
-                  clear: both;
-                }
-              }
-              @include respond-to(desktop-and-up) {
-                width: (100%/6);
-                &:nth-child(3n+1) {
-                  clear: none;
-                }
-                &:nth-child(6n+1) {
-                  clear: both;
-                }
+                width: 100%;
               }
               .menu__link {
                 margin-top: 0;

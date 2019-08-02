@@ -2,6 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.full_width
+    - core.entity_view_mode.media.half_width
     - media.type.image
   content:
     - 'file:file:0f8ba457-2ddb-4afa-9efd-3ed52cc9700a'

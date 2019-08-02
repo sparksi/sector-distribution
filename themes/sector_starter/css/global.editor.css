@@ -2160,3 +2160,5 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 .cke_editable h6, .cke_editable .h6 { font-size: 14px; }
 
 .cke_editable dl { margin-left: 0; padding-left: 0; }
+
+.cke_editable .embedded-entity.align-left, .cke_editable .embedded-entity.align-right { width: auto; }

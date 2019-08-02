@@ -12,7 +12,7 @@ dependencies:
     - sector_starter
 third_party_settings:
   block_class:
-    classes: 'has-no-border-top'
+    classes: has-no-border-top
 id: sectorsampleblocktoforcethesidebartodisplaynbsp
 theme: sector_starter
 region: sidebar

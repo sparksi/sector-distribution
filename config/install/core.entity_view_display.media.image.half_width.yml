@@ -7,7 +7,7 @@ dependencies:
     - field.field.media.image.field_media_image
     - field.field.media.image.field_tags
     - field.field.media.image.field_title
-    - image.style.ratio_5_x_3_small_
+    - image.style.scale_width_half_column
     - media.type.image
   module:
     - ds
@@ -61,7 +61,7 @@ content:
     weight: 0
     label: hidden
     settings:
-      image_style: ratio_5_x_3_small_
+      image_style: scale_width_half_column
       image_link: ''
     third_party_settings:
       ds:
@@ -69,10 +69,8 @@ content:
           id: default
           settings:
             lb: ''
-            classes:
-              - responsive-ratio
-              - responsive-ratio--5-3
             lb-col: false
+            classes: {  }
     type: image
     region: ds_content
 hidden:

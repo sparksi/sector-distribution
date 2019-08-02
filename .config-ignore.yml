@@ -1,0 +1,8 @@
+ignore:
+  - core.date_format.*
+  - block.block.basesiteinuse.yml
+  - core.extension.yml
+  - devel.*
+  - system.menu.devel.yml
+  - webform.webform.example_*
+

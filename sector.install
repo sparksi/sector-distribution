@@ -2,6 +2,7 @@
 
 use Drupal\entityqueue\Entity\EntityQueue;
 use Drupal\node\Entity\Node;
+use Drupal\user\Entity\User;
 
 /**
  * @file
@@ -35,10 +36,10 @@ function sector_install() {
     ->save(TRUE);
 
   // Cleanup functions.
-  _create_entityqueues();
-  _create_users();
-  _generate_alias();
-  _exclude_xmlsitemap_nodes();
+  createEntityqueues();
+  createUsers();
+  generateAlias();
+  excludeXmlsitemapNodes();
 
   // Rebuild permissions
   node_access_rebuild();
@@ -46,52 +47,54 @@ function sector_install() {
 
 /**
  * Loads the two entityqueues on the front page and adds the content to them.
+ *
+ * TODO - Some code duplication here. I think we could polish that.
  */
-function _create_entityqueues() {
+function createEntityqueues() {
   // Load entityqueue. Need to load items next.
-  $queue_storage = \Drupal::entityManager()->getStorage('entity_subqueue');
-  $informationalQueue = $queue_storage->load('information_tiles');
-  $promotionalLinksQueue = $queue_storage->load('promotional_links');
-  $promotionalTilesQueue = $queue_storage->load('promotional_tiles');
-  $InformationTileEntityIds = array(
+  $queueStorage = \Drupal::entityManager()->getStorage('entity_subqueue');
+  $informationalQueue = $queueStorage->load('information_tiles');
+  $promotionalLinksQueue = $queueStorage->load('promotional_links');
+  $promotionalTilesQueue = $queueStorage->load('promotional_tiles');
+  $InformationTileEntityIds = [
     '8',
     '11',
     '4',
-  );
-  $promotionalLinksEntityIds = array(
+  ];
+  $promotionalLinksEntityIds = [
     '8',
     '6',
     '4',
     '7',
     '11',
     '19',
-  );
-  $promotionalTilesEntityIds = array(
+  ];
+  $promotionalTilesEntityIds = [
     '23',
     '24',
     '25',
-  );
-  $items = array();
+  ];
+  $items = [];
 
   foreach ($InformationTileEntityIds as $id) {
-    $node_storage = \Drupal::entityManager()->getStorage('node');
-    $node = $node_storage->load($id);
+    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
+    $node = $nodeStorage->load($id);
     $items[] = $node;
   }
   $informationalQueue->set('items', $items);
   $informationalQueue->save();
-  $items = array();
+  $items = [];
   foreach ($promotionalLinksEntityIds as $id) {
-    $node_storage = \Drupal::entityManager()->getStorage('node');
-    $node = $node_storage->load($id);
+    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
+    $node = $nodeStorage->load($id);
     $items[] = $node;
   }
   $promotionalLinksQueue->set('items', $items);
   $promotionalLinksQueue->save();
-  $items = array();
+  $items = [];
   foreach ($promotionalTilesEntityIds as $id) {
-    $node_storage = \Drupal::entityManager()->getStorage('node');
-    $node = $node_storage->load($id);
+    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
+    $node = $nodeStorage->load($id);
     $items[] = $node;
   }
   $promotionalTilesQueue->set('items', $items);
@@ -103,18 +106,18 @@ function _create_entityqueues() {
  *
  * Passwords are randomly generated.
  */
-function _create_users() {
+function createUsers() {
 
-  $users = array(
+  $users = [
     'Content Editor' => 'content_editor',
     'Content Administrator' => 'content_administrator',
     'Support Agent' => 'administrator',
-    'Robot',
-  );
+    'Robot' => 'robot',
+  ];
   $count = 0;
   foreach ($users as $username => $role) {
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    $user = \Drupal\user\Entity\User::create();
+    $user = User::create();
 
     // Randomly generate a 10 character pass.
     $randomPassword = user_password(10);
@@ -143,14 +146,14 @@ function _create_users() {
 /**
  * Regenerates all node aliases.
  */
-function _generate_alias() {
+function generateAlias() {
   $nodes = Node::loadMultiple();
   foreach ($nodes as $node) {
     \Drupal::service('pathauto.generator')->updateEntityAlias($node, 'insert');
   }
 }
 
-function _exclude_xmlsitemap_nodes() {
+function excludeXmlsitemapNodes() {
   $nids = [14, 5];
   foreach ($nids as $nid) {
     $link = \Drupal::service('xmlsitemap.link_storage')->load('node', $nid);

@@ -4,6 +4,7 @@ dependencies:
   module:
     - node
     - user
+    - view_unpublished
     - views_bulk_operations
 id: content
 label: Content
