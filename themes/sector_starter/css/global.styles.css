@@ -2980,6 +2980,53 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 @media (min-width: 1200px) { .media--featured { margin-bottom: 60px; } }
 
+/** @file BEM block for mega-menu. */
+.mega-menu { margin: 0 15px; padding: 4.665em 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; }
+
+.mega-menu a { color: #252526; }
+
+.mega-menu a.active { text-decoration: underline; }
+
+.mega-menu a:focus { outline-offset: 0; outline: none; }
+
+.mega-menu > a { width: 30%; font-size: 18px; color: #252526; font-weight: 700; line-height: 1.1; }
+
+@media (min-width: 1200px) { .mega-menu > a { font-size: 20px; } }
+
+@media (min-width: 1760px) { .mega-menu > a { font-size: 24px; } }
+
+.nav .mega-menu > a { padding-left: 0; padding-right: 0; }
+
+.nav .mega-menu > a:hover { text-decoration: underline; }
+
+.nav .mega-menu > a:hover, .nav .mega-menu > a:focus { background-color: transparent; }
+
+.mega-menu > ul { width: 70%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; -ms-flex-wrap: wrap; flex-wrap: wrap; height: 100%; }
+
+.mega-menu > ul > li { width: 41%; margin-right: 8%; border-top: 1px solid #d5d7dd; }
+
+.mega-menu > ul > li > a { padding: 10px 0; }
+
+@media (min-width: 1360px) { .mega-menu > ul > li > a { padding: 15px; } }
+
+.nav .mega-menu-item { display: none; }
+
+.nav .mega-menu-item.mega-menu-is-open { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.mega-menu-is-open > ul > li > a { font-size: 15px; line-height: 1.3; font-weight: 600; }
+
+@media (min-width: 1200px) { .mega-menu-is-open > ul > li > a { font-size: 16px; } }
+
+.mega-menu-is-open > ul > li li { display: none; }
+
+.mega-menu-is-open > ul > li li:nth-child(-n+7) { display: list-item; }
+
+.mega-menu-is-open > ul > li li a { padding: 0.38875em 0; position: relative; font-size: 16px; color: #eeeeee; }
+
+.mega-menu-is-open ul > li > a:hover { text-decoration: underline; }
+
+.mega-menu-is-open ul > li > a:hover, .mega-menu-is-open ul > li > a:focus { background-color: transparent; }
+
 /** @file BEM block for menu. */
 .menu__link { font-size: 16px; }
 
