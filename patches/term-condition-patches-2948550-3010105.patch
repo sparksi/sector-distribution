@@ -1,0 +1,118 @@
+t a/src/Plugin/Condition/Term.php b/src/Plugin/Condition/Term.php
+index 1935a69..e8a57b1 100644
+--- a/src/Plugin/Condition/Term.php
++++ b/src/Plugin/Condition/Term.php
+@@ -12,17 +12,17 @@ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Plugin\Context\ContextDefinition;
+ 
+ /**
+-* Provides a 'Term' condition to enable a condition based in module selected status.
+-*
+-* @Condition(
+-*   id = "term",
+-*   label = @Translation("Term"),
+-*   context = {
+-*     "node" = @ContextDefinition("entity:node", required = TRUE , label = @Translation("node"))
+-*   }
+-* )
+-*
+-*/
++ * Provides a 'Term' condition to enable a condition based in module selected status.
++ *
++ * @Condition(
++ *   id = "term",
++ *   label = @Translation("Term"),
++ *   context = {
++ *     "node" = @ContextDefinition("entity:node", required = FALSE , label = @Translation("node"))
++ *   }
++ * )
++ *
++ */
+ class Term extends ConditionPluginBase {
+   /**
+    * {@inheritdoc}
+@@ -57,11 +57,29 @@ class Term extends ConditionPluginBase {
+    * {@inheritdoc}
+    */
+   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
++    $default_terms = [];
++
++    if(!empty($this->configuration['tid'])) {
++      $terms = $this->configuration['tid'];
++      if (!empty($terms)) {
++
++        if (is_array($terms)) {
++          foreach ($terms as $key => $term) {
++            $term = array_pop($term);
++            $default_terms[] = \Drupal\taxonomy\Entity\Term::load($term);
++          }
++        } else {
++          $default_terms = \Drupal\taxonomy\Entity\Term::load($terms);
++        }
++      }
++    }
++
+     $form['tid'] = array(
+       '#type' => 'entity_autocomplete',
+-      '#title' => $this->t('Select a taxonomy term'),
+-      '#default_value' => $this->configuration['tid'],
++      '#title' => $this->t('Select taxonomy term(s)'),
++      '#default_value' => $default_terms,
+       '#target_type' => 'taxonomy_term',
++      '#tags' => TRUE,
+     );
+ 
+     return parent::buildConfigurationForm($form, $form_state);
+@@ -86,12 +104,40 @@ class Term extends ConditionPluginBase {
+       return TRUE;
+     }
+ 
++    // If configuration['tid'] is an array, there is multiple terms set.
++    if(is_array($this->configuration['tid'])) {
++      $tids = $this->configuration['tid'];
++      unset($this->configuration['tid']);
++      foreach ($tids as $tid) {
++        $this->configuration['tid'][] = array_pop($tid);
++      }
++    }
++
+     $node = $this->getContextValue('node');
+ 
++    // Not in a node context.
++    if (!$node) {
++      $revisionID = \Drupal::routeMatch()->getParameter('node_revision');
++      $node = \Drupal::entityTypeManager()->getStorage('node')->loadRevision($revisionID);
++      if(!$node) {
++        return FALSE;
++      }
++    }
++
+     foreach ($node->referencedEntities() as $referenced_entity) {
+-      if ($referenced_entity->getEntityTypeId() == 'taxonomy_term'
+-        && $referenced_entity->id() == $this->configuration['tid']) {
+-        return TRUE;
++      // If configuration['tid'] is an array with multiple terms, check all
++      // tids in the array against the term.
++      if(is_array($this->configuration['tid'])) {
++        if ($referenced_entity->getEntityTypeId() == 'taxonomy_term'
++          && in_array($referenced_entity->id(), $this->configuration['tid'])) {
++          return TRUE;
++        }
++      }
++      else {
++        if ($referenced_entity->getEntityTypeId() == 'taxonomy_term'
++          && $referenced_entity->id() == $this->configuration['tid']) {
++          return TRUE;
++        }
+       }
+     }
+ 
+@@ -111,6 +157,6 @@ class Term extends ConditionPluginBase {
+     else {
+       return $this->t('The node is associated with taxonomy term @tid.', array('@tid' => $tid));
+     }
+- }
++  }
+ 
+ }
+
