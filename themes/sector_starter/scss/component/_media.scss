@@ -149,3 +149,8 @@ $icon-offset: 54px;
     margin-bottom: ($line-height-prose-computed*2);
   }
 }
+
+/* Blazy spinner: /modules/contrib/blazy/css/components/blazy.loading.css */
+.media--loading::before {
+  background: $black;
+}
