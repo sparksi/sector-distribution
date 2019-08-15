@@ -60,6 +60,7 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Media meta'
+      region: hidden
 id: media.file.teaser
 targetEntityType: media
 bundle: file

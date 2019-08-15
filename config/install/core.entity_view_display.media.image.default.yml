@@ -54,6 +54,7 @@ third_party_settings:
         effect: none
         speed: fast
       label: Meta
+      region: hidden
 id: media.image.default
 targetEntityType: media
 bundle: image

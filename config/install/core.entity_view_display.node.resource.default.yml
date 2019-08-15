@@ -65,6 +65,7 @@ third_party_settings:
         id: ''
         classes: 'meta call-to-action-left-line'
       label: Meta
+      region: hidden
     group_related_content:
       children:
         - field_related_links
@@ -81,6 +82,7 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Related content'
+      region: hidden
 id: node.resource.default
 targetEntityType: node
 bundle: resource

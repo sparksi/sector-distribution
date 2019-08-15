@@ -38,6 +38,7 @@ third_party_settings:
         speed: fast
         id: ''
         classes: 'meta call-to-action-left-line'
+      region: hidden
     group_related_content:
       children:
         - field_related_files
@@ -56,6 +57,7 @@ third_party_settings:
         speed: fast
         id: ''
         classes: 'related has-margin-top-double'
+      region: hidden
   ds:
     layout:
       id: ds_1col

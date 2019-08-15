@@ -126,6 +126,7 @@ third_party_settings:
         custom_uri: ''
         target_attribute: default
       label: Link
+      region: hidden
 id: node.promotion.teaser_alternate
 targetEntityType: node
 bundle: promotion
