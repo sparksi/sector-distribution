@@ -40,6 +40,7 @@ third_party_settings:
         open: true
         required_fields: true
       label: 'Page display options'
+      region: content
     group_related_content:
       children:
         - field_related_files
@@ -54,6 +55,7 @@ third_party_settings:
         classes: ''
         open: false
       label: 'Related content'
+      region: content
 id: node.page.default
 targetEntityType: node
 bundle: page

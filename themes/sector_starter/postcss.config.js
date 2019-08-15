@@ -1,7 +1,7 @@
 module.exports = ctx => ({
   plugins: {
     autoprefixer: {
-      browsers: [
+      overrideBrowserslist: [
         "last 2 version"
       ],
       grid : true

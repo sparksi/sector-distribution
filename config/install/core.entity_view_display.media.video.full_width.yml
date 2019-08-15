@@ -29,6 +29,7 @@ third_party_settings:
         classes: 'transcript has-margin-top-base'
         open: false
       label: Transcript
+      region: hidden
   ds:
     layout:
       id: ds_1col

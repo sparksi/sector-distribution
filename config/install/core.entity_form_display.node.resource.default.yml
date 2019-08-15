@@ -38,6 +38,7 @@ third_party_settings:
         classes: ''
         open: false
       label: 'Meta data'
+      region: content
     group_related_content:
       children:
         - field_related_links
@@ -50,6 +51,7 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Related content'
+      region: content
 id: node.resource.default
 targetEntityType: node
 bundle: resource

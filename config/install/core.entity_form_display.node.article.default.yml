@@ -37,6 +37,7 @@ third_party_settings:
         id: ''
         classes: ''
         open: false
+      region: content
     group_related_content:
       children:
         - field_related_files
@@ -50,6 +51,7 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Related content'
+      region: content
 id: node.article.default
 targetEntityType: node
 bundle: article
