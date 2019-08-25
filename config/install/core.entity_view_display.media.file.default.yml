@@ -61,6 +61,7 @@ third_party_settings:
         id: ''
         classes: 'meta call-to-action has-margin-top-and-half'
       label: Meta
+      region: hidden
     group_media_meta:
       children:
         - field_mimetype
@@ -78,6 +79,7 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Media meta'
+      region: hidden
 id: media.file.default
 targetEntityType: media
 bundle: file

@@ -58,7 +58,7 @@
         "env",
         {
           "targets": {
-            "browsers": [
+            "browserslist": [
               "last 2 versions",
               "safari >= 7"
             ]

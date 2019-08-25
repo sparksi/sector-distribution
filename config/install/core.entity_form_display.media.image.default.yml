@@ -26,6 +26,7 @@ third_party_settings:
         open: false
         required_fields: true
       label: 'Meta data'
+      region: content
 id: media.image.default
 targetEntityType: media
 bundle: image
