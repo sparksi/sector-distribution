@@ -2120,6 +2120,12 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 @media (min-width: 480px) { .box-it-up { padding: 1.555em; } }
 
+.media-center { text-align: center; background-color: #eeeeee; }
+
+.media-center img { display: inline; }
+
+.media-center > a { display: block; }
+
 /* Prose
 ------------------------------------------------------------------------*/
 /** @file Optimized typographic spacing in roughly 700px wide setting. (Classic node body area - Add .prose via display suite as required) http://www.pearsonified.com/typography/ */

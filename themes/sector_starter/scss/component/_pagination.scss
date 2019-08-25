@@ -203,9 +203,6 @@
 .pagination--large-arrows,
 %pagination--large-arrows {
   width: 100%;
-  @include respond-to(tablet-and-up) {
-    font-size: $font-size-h4;
-  }
   > li {
     > a {
       position: relative;
@@ -216,16 +213,18 @@
       color: $text-color;
       &:hover {
         text-decoration: underline;
+        background-color: transparent;
+      }
+      &:visited {
+        color: $text-color;
       }
     }
-    &.previous,
-    &.pager__item--previous {
+    &.previous {
       > a {
-        padding: 10px 10px 10px 40px;
+        padding: 10px 10px 10px 20px;
         @include respond-to(tablet-and-up) {
-          padding: 10px 20px 10px 40px;
+          padding: 16px 20px 16px 44px;
         }
-        @extend .pull-left;
         &:after {
           content: '';
           position: absolute;
@@ -235,29 +234,23 @@
           background-size: cover;
           width: 9px;
           height: 16px;
-          top: 2px;
-          left: 6px;
+          top: 14px;
+          left: 0;
           @include respond-to(tablet-and-up) {
             top: 14px;
             left: 15px;
-          }
-        }
-        &:visited {
-          color: $link-color;
-          &:hover {
-            color: $link-hover-color;
+            width: 18px;
+            height: 32px;
           }
         }
       }
     }
-    &.next,
-    &.pager__item--next {
+    &.next {
       > a {
-        padding: 10px 40px 10px 10px;
+        padding: 10px 20px 10px 10px;
         @include respond-to(tablet-and-up) {
-          padding: 10px 40px 10px 20px;
+          padding: 16px 44px 16px 20px;
         }
-        @extend .pull-right;
         &:after {
           content: '';
           position: absolute;
@@ -267,17 +260,13 @@
           background-size: cover;
           width: 9px;
           height: 16px;
-          top: 2px;
-          right: 6px;
+          top: 14px;
+          right: 0;
           @include respond-to(tablet-and-up) {
             top: 14px;
             right: 15px;
-          }
-        }
-        &:visited {
-          color: $link-color;
-          &:hover {
-            color: $link-hover-color;
+            width: 18px;
+            height: 32px;
           }
         }
       }
@@ -287,20 +276,6 @@
 
 /* Drupal's default mini pager */
 .pager {
-  position: relative;
-  @extend %has-margin-top-double;
-  /* Extend variant large-arrows as declared above */
+  @extend %has-margin-top-base;
   @extend %pagination--large-arrows;
-  .pager-current {
-    position: absolute;
-    top: 11px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: $font-size-base;
-    z-index: -1;
-    @include respond-to(tablet-and-up) {
-      top: 14px;
-    }
-  }
 }
