@@ -55,7 +55,6 @@ third_party_settings:
       weight: 0
       format_type: html_element
       format_settings:
-        label: Meta
         element: div
         show_label: false
         label_element: h3
@@ -112,7 +111,7 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: sector_medium_date
     third_party_settings:
       ds:
         ft:
@@ -126,7 +125,7 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: sector_medium_date
     third_party_settings:
       ds:
         ft:

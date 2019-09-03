@@ -149,7 +149,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 /* COMPONENT
 ------------------------------------------------------------------------*/
 /** @file Override Bootstrap button styles */
-.btn, .admin-ui-toggle button { font-size: 16px; text-decoration: none; font-weight: 700; white-space: normal; }
+.btn, .admin-ui-toggle button { font-size: 16px; text-decoration: none; font-weight: 700; }
 
 .btn:focus, .admin-ui-toggle button:focus { outline: 3px solid rgba(239, 96, 77, 0.2); }
 

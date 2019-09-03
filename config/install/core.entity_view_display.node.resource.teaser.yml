@@ -91,7 +91,7 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: sector_medium_date
     third_party_settings:
       ds:
         ft:

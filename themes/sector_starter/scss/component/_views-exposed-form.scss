@@ -4,23 +4,12 @@
  *
  * [1]
  *
- * We use our responsive layout Sass map (See: ../generic/_variables.scss)
- * to generate modular classes for views exposed filters.
- *
- * eg:
- *
- * .has-filters-with-responsive-layout
- * .has-filters-with-responsive-layout-t2
- * .has-filters-with-responsive-layout-d3
- * .has-filters-with-responsive-layout-w4
- *
- * The intention is to use any combination of these modifiers to achieve your
- * desired grid configuration of views exposed filters by applying the classes
- * to the view via views UI Advanced > CSS class.
+ * The intention is to create responsive views exposed filters by applying the
+ * classe to the view via views UI Advanced > CSS class.
  *
  * For example:
  *
- * <div class="view has-filters-with-responsive-layout has-filters-with-responsive-layout-t2 has-filters-with-responsive-layout-w4">
+ * <div class="view has-filters-with-responsive-layout">
  *    <div class="views-exposed-form">
  *        <div class="form-item ...">     ... </div>
  *        <div class="form-item ...">     ... </div>
@@ -32,7 +21,6 @@
 
 .views-exposed-form {
   margin: $spacing-half 0;
-  @extend %box-it-up;
   @include respond-to(tablet-and-up) {
     margin: $spacing-base 0;
   }
@@ -67,10 +55,12 @@
       margin-top: $spacing-and-half;
     }
     .button {
-      margin-right: 10px;
       padding: 12px 14px;
       font-size: 16px;
       margin-top: 0;
+      @include respond-to(tablet-and-up) {
+        margin-right: 10px;
+      }
     }
   }
 }
@@ -81,20 +71,20 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    padding-left: 0;
     padding-right: 0;
-    @include respond-to(tablet-and-up) {
-      @include apply-gutter;
+    justify-content: center;
+    @include respond-to(desktop-and-up) {
+      max-width: 600px;
+    }
+    > .form-item {
+      @include respond-to(tablet-and-up) {
+        padding-right: 10px;
+      }
     }
     > .form-item,
     > .form-actions {
-      padding-left: ($responsive-layout-gutter/2);
-      padding-right: ($responsive-layout-gutter/2);
       @include respond-to(tablet-large-and-up) {
         margin-top: 0;
-      }
-      @include respond-to(wide-large-and-up) {
-        @include apply-gutter;
       }
       ~ .form-item,
       ~ .form-actions {
@@ -102,41 +92,34 @@
       }
     }
     > .form-actions {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      @include respond-to(tablet-and-up) {
+        flex-wrap: nowrap;
+      }
       @include respond-to(tablet-large-and-up) {
-        padding-top: 29px;
+        padding-top: 28px;
+      }
+      .button {
+        @include respond-to(mobile) {
+          width: 100%;
+          display: block;
+        }
+        + .button {
+          @include respond-to(mobile) {
+            margin-top: $spacing-half;
+          }
+        }
       }
     }
     @include respond-to(tablet-large-and-up) {
       flex-direction: row;
       > .form-item,
       > .form-actions {
-        flex: 1;
         ~ .form-item,
         ~ .form-actions {
           margin-top: 0;
-        }
-      }
-    }
-  }
-}
-
-@each $breakpoint, $cols in $responsive-layout-variants {
-  $first-character: str-slice($breakpoint, 0, 1);
-  $breakpoint: #{$breakpoint}-and-up;
-  @each $col in $cols {
-    .has-filters-with-responsive-layout-#{$first-character}#{$col} {
-      .views-exposed-form {
-        @include respond-to(#{$breakpoint}){
-          flex-wrap: wrap;
-          > .form-item,
-          > .form-actions {
-            width: (100% / $col);
-            flex: none;
-            margin-top: $spacing-base;
-            &:nth-child(-n+#{$col}){
-              margin-top: 0;
-            }
-          }
         }
       }
     }

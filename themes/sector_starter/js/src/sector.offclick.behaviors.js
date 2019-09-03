@@ -1,4 +1,3 @@
-
 /**
  * Offclick javascript
  *

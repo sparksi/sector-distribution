@@ -3,6 +3,12 @@
  * BEM block for Node.
  */
 
+.node {
+  &.entity-status-unpublished {
+    outline: 1px dashed $brand-danger;
+  }
+}
+
 .node__date {
   @extend %date;
 }

@@ -1,4 +1,3 @@
-
 /**
  * Flyouts javascript
  *

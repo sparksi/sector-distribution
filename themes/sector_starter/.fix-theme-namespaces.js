@@ -10,7 +10,8 @@ const options = {
     'sector_starter.libraries.yml',
     'sector_starter.theme',
     'package.json',
-    'js/src/global.behaviors.js',
+    'js/src/sector.flyouts.behaviors.js',
+    'js/src/sector.megamenu.behaviors.js',
     'config/install/sector_starter.settings.yml',
     'composer.json'
   ],

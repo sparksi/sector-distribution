@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\user\Entity\User;
+use Drupal\Core\Entity\EntityInterface;
 
 /**
  * @file
@@ -38,5 +39,21 @@ function sector_utils_contextual_links_view_alter(&$element, $items) {
     if (!$user->hasPermission('configure blocks from contextual links')) {
       unset($element['#links']['block-configure']);
     }
+  }
+}
+
+/**
+ * Implements hook_ds_pre_render_alter().
+ *
+ * Add entity-status-unpublished class to all view modes other than full.
+ * CSS in the theme will add a visual indicator to allow editors to recognise
+ * unpublished content.
+ */
+function sector_utils_ds_pre_render_alter(array &$layout_render_array, array $context, array &$vars) {
+  if ($layout_render_array['#view_mode'] != 'full'
+    && !empty($context['entity'])
+    && $context['entity'] instanceof EntityInterface
+    && !$context['entity']->isPublished()){
+    $vars['attributes']['class'][] = 'entity-status-unpublished';
   }
 }

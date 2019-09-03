@@ -5,7 +5,6 @@
 
 .search--primary {
   position: relative;
-  @extend %box-it-up;
   &.views-exposed-form {
     margin-top: 0;
     @include respond-to(mobile) {
@@ -14,16 +13,12 @@
   }
   .btn-primary {
     position: absolute;
-    top: 28px;
-    right: 28px;
+    top: 0;
+    right: 0;
     padding: 12px 21px 12px;
     font-size: 16px;
     margin-top: 0;
     border-radius: 0;
-    @include respond-to(mobile) {
-      top: 14px;
-      right: 14px;
-    }
     .icon {
       display: none;
     }

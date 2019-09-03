@@ -11,6 +11,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - view_unpublished
 id: sector_news
 label: 'Sector news'
 module: views
@@ -129,17 +130,6 @@ display:
           separator: ', '
           field_api_classes: false
       filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
         type:
           id: type
           table: node_field_data
@@ -170,7 +160,7 @@ display:
     display_plugin: block
     id: block_1
     display_title: 'Teaser (Block)'
-    position: 1
+    position: 2
     display_options:
       display_extenders: {  }
       display_description: ''
@@ -195,6 +185,8 @@ display:
         style: false
         row: false
         pager: false
+        filters: false
+        filter_groups: false
       css_class: ''
       title: 'Sector news'
       style:
@@ -232,12 +224,65 @@ display:
             offset: false
             offset_label: Offset
           quantity: 6
+      filters:
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          plugin_id: view_unpublished_node_status
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            article: article
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -260,6 +305,8 @@ display:
         link_url: false
         style: false
         row: false
+        filters: false
+        filter_groups: false
       pager:
         type: some
         options:
@@ -299,11 +346,64 @@ display:
         options:
           relationship: none
           view_mode: short_teaser
+      filters:
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          plugin_id: view_unpublished_node_status
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            article: article
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -311,23 +411,25 @@ display:
     display_plugin: page
     id: page_1
     display_title: 'Filtered View (Page)'
-    position: 2
+    position: 1
     display_options:
       display_extenders: {  }
       path: news/archive
       display_description: ''
       header:
-        area_text_custom:
-          id: area_text_custom
+        area:
+          id: area
           table: views
-          field: area_text_custom
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
           empty: true
           tokenize: false
-          content: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\n<p> For example this text is added via a 'Global view field using unfiltered text'.</p></div>"
-          plugin_id: text_custom
+          content:
+            value: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\r\n<p> For example this text is added via the global view element 'Text area'.</p></div>"
+            format: full_html
+          plugin_id: text
       defaults:
         header: false
         filters: false
@@ -338,18 +440,45 @@ display:
         css_class: false
         style: false
         row: false
+        empty: false
       filters:
-        status:
-          value: '1'
+        status_extra:
+          id: status_extra
           table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
+          field: status_extra
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
           group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          plugin_id: view_unpublished_node_status
         type:
           id: type
           table: node_field_data
@@ -359,6 +488,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
         field_article_type_target_id:
           id: field_article_type_target_id
           table: node__field_article_type
@@ -372,7 +502,7 @@ display:
           exposed: true
           expose:
             operator_id: field_article_type_target_id_op
-            label: 'Article category'
+            label: 'Filter by category'
             description: ''
             use_operator: false
             operator: field_article_type_target_id_op
@@ -446,7 +576,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 6
-      css_class: 'has-filters-with-responsive-layout has-filters-with-responsive-layout-t2'
+      css_class: has-filters-with-responsive-layout
       style:
         type: html_list
         options:
@@ -461,6 +591,20 @@ display:
         options:
           relationship: none
           view_mode: teaser
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
+          relationship: none
+          group_type: group
+          admin_label: ''
+          empty: true
+          tokenize: false
+          content:
+            value: "<div class=\"prose has-margin-top-double\">\r\n<div class=\"note note--primary\">\r\n<p class=\"lead\">Sorry. We can't find what you are looking for. You can <a href=\"/news\">reset the filters</a> and try again, or use our <a href=\"/search\">site-wide search</a>.</p>\r\n</div>\r\n</div>"
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

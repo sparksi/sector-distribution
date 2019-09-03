@@ -29,7 +29,6 @@ third_party_settings:
       label: Meta
       format_type: html_element
       format_settings:
-        label: Meta
         element: div
         show_label: false
         label_element: h3
@@ -48,7 +47,6 @@ third_party_settings:
       label: 'Related content'
       format_type: html_element
       format_settings:
-        label: 'Related content'
         element: div
         show_label: true
         label_element: h3
@@ -111,7 +109,7 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: sector_medium_date
     third_party_settings:
       ds:
         ft:
@@ -126,7 +124,7 @@ content:
     label: inline
     settings:
       timezone_override: ''
-      format_type: medium
+      format_type: sector_medium_date
     third_party_settings:
       ds:
         ft:

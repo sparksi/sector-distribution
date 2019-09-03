@@ -2123,9 +2123,9 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 .indented { margin-left: 1.555em; }
 
-.box-it-up, .user-login-form, .user-pass, .call-to-action { background-color: #eaecef; padding: 0.7775em; }
+.box-it-up, .user-login-form, .user-pass, .call-to-action, .search--primary, .views-exposed-form { background-color: #eaecef; padding: 0.7775em; }
 
-@media (min-width: 480px) { .box-it-up, .user-login-form, .user-pass, .call-to-action { padding: 1.555em; } }
+@media (min-width: 480px) { .box-it-up, .user-login-form, .user-pass, .call-to-action, .search--primary, .views-exposed-form { padding: 1.555em; } }
 
 .transcript > div a, .webform-submission-form .panel-default .panel-heading a { font-weight: 700; line-height: 1.1; display: block; margin-top: 13px; margin-bottom: 13px; }
 
@@ -2607,7 +2607,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 .breadcrumb > .active { color: #666666; }
 
 /** @file Override Bootstrap button styles */
-.btn, .tabs--primary > li > a, .list--fridge-magnets > li > a { font-size: 16px; text-decoration: none; font-weight: 700; }
+.btn, .tabs--primary > li > a, .list--fridge-magnets > li > a { font-size: 16px; text-decoration: none; font-weight: 700; white-space: normal; }
 
 .btn:focus, .tabs--primary > li > a:focus, .list--fridge-magnets > li > a:focus { outline: 3px solid rgba(239, 96, 77, 0.2); }
 
@@ -3308,8 +3308,6 @@ html.carousel-is-active:before { content: ''; position: absolute; top: 0; left: 
 .navigation--site-map .menu__link { color: #333333; }
 
 /** @file BEM block for Node. */
-.node.entity-status-unpublished { outline: 1px dashed #ef604d; }
-
 .node__subtitle { margin-bottom: 0; font-weight: 300; }
 
 @media (min-width: 480px) { .node__subtitle { font-size: 22px; line-height: 1.7; } }
@@ -3646,7 +3644,9 @@ html.carousel-is-active:before { content: ''; position: absolute; top: 0; left: 
 
 @media (max-width: 480px) { .search--primary.views-exposed-form { padding: 0.7775em; } }
 
-.search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary, .search--primary .webform-multiple-add .btn-success, .webform-multiple-add .search--primary .btn-success, .search--primary .webform-multiple-table--operations .btn-success, .webform-multiple-table--operations .search--primary .btn-success { position: absolute; top: 0; right: 0; padding: 12px 21px 12px; font-size: 16px; margin-top: 0; border-radius: 0; }
+.search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary, .search--primary .webform-multiple-add .btn-success, .webform-multiple-add .search--primary .btn-success, .search--primary .webform-multiple-table--operations .btn-success, .webform-multiple-table--operations .search--primary .btn-success { position: absolute; top: 28px; right: 28px; padding: 12px 21px 12px; font-size: 16px; margin-top: 0; border-radius: 0; }
+
+@media (max-width: 480px) { .search--primary .btn-primary, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary, .search--primary .webform-multiple-add .btn-success, .webform-multiple-add .search--primary .btn-success, .search--primary .webform-multiple-table--operations .btn-success, .webform-multiple-table--operations .search--primary .btn-success { top: 14px; right: 14px; } }
 
 .search--primary .btn-primary .icon, .search--primary .comment-form [data-drupal-selector="edit-actions"] .button--primary .icon, .comment-form [data-drupal-selector="edit-actions"] .search--primary .button--primary .icon, .search--primary .webform-multiple-add .btn-success .icon, .webform-multiple-add .search--primary .btn-success .icon, .search--primary .webform-multiple-table--operations .btn-success .icon, .webform-multiple-table--operations .search--primary .btn-success .icon { display: none; }
 
@@ -3804,7 +3804,7 @@ html.carousel-is-active:before { content: ''; position: absolute; top: 0; left: 
 .toggle--search { display: -webkit-box; display: -ms-flexbox; display: flex; margin-top: 6px; }
 
 /** @file BEM block for Transcript. */
-/** @file BEM block for Views exposed form. [1] The intention is to create responsive views exposed filters by applying the classe to the view via views UI Advanced > CSS class. For example: <div class="view has-filters-with-responsive-layout"> <div class="views-exposed-form"> <div class="form-item ...">     ... </div> <div class="form-item ...">     ... </div> <div class="form-item ...">     ... </div> <div class="form-actions ...">  ... </div> </div> </div> */
+/** @file BEM block for Views exposed form. [1] We use our responsive layout Sass map (See: ../generic/_variables.scss) to generate modular classes for views exposed filters. eg: .has-filters-with-responsive-layout .has-filters-with-responsive-layout-t2 .has-filters-with-responsive-layout-d3 .has-filters-with-responsive-layout-w4 The intention is to use any combination of these modifiers to achieve your desired grid configuration of views exposed filters by applying the classes to the view via views UI Advanced > CSS class. For example: <div class="view has-filters-with-responsive-layout has-filters-with-responsive-layout-t2 has-filters-with-responsive-layout-w4"> <div class="views-exposed-form"> <div class="form-item ...">     ... </div> <div class="form-item ...">     ... </div> <div class="form-item ...">     ... </div> <div class="form-actions ...">  ... </div> </div> </div> */
 .views-exposed-form { margin: 0.7775em 0; }
 
 @media (min-width: 480px) { .views-exposed-form { margin: 1.555em 0; } }
@@ -3825,33 +3825,58 @@ html.carousel-is-active:before { content: ''; position: absolute; top: 0; left: 
 
 @media (min-width: 992px) { .views-exposed-form > .form-actions { margin-top: 2.3325em; } }
 
-.views-exposed-form > .form-actions .button { padding: 12px 14px; font-size: 16px; margin-top: 0; }
-
-@media (min-width: 480px) { .views-exposed-form > .form-actions .button { margin-right: 10px; } }
+.views-exposed-form > .form-actions .button { margin-right: 10px; padding: 12px 14px; font-size: 16px; margin-top: 0; }
 
 /* [1] */
-.has-filters-with-responsive-layout .views-exposed-form { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: nowrap; flex-wrap: nowrap; padding-right: 0; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+.has-filters-with-responsive-layout .views-exposed-form { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: nowrap; flex-wrap: nowrap; padding-left: 0; padding-right: 0; }
 
-@media (min-width: 992px) { .has-filters-with-responsive-layout .views-exposed-form { max-width: 600px; } }
+@media (min-width: 480px) { .has-filters-with-responsive-layout .views-exposed-form { padding-left: 15px; padding-right: 15px; } }
 
-@media (min-width: 480px) { .has-filters-with-responsive-layout .views-exposed-form > .form-item { padding-right: 10px; } }
+.has-filters-with-responsive-layout .views-exposed-form > .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions { padding-left: 7.5px; padding-right: 7.5px; }
 
 @media (min-width: 768px) { .has-filters-with-responsive-layout .views-exposed-form > .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions { margin-top: 0; } }
 
+@media (min-width: 1260px) { .has-filters-with-responsive-layout .views-exposed-form > .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions { padding-left: 15px; padding-right: 15px; } }
+
 .has-filters-with-responsive-layout .views-exposed-form > .form-item ~ .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-item ~ .form-actions, .has-filters-with-responsive-layout .views-exposed-form > .form-actions ~ .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions ~ .form-actions { margin-top: 0.7775em; }
 
-.has-filters-with-responsive-layout .views-exposed-form > .form-actions { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-wrap: wrap; flex-wrap: wrap; }
-
-@media (min-width: 480px) { .has-filters-with-responsive-layout .views-exposed-form > .form-actions { -ms-flex-wrap: nowrap; flex-wrap: nowrap; } }
-
-@media (min-width: 768px) { .has-filters-with-responsive-layout .views-exposed-form > .form-actions { padding-top: 28px; } }
-
-@media (max-width: 480px) { .has-filters-with-responsive-layout .views-exposed-form > .form-actions .button { width: 100%; display: block; } }
-
-@media (max-width: 480px) { .has-filters-with-responsive-layout .views-exposed-form > .form-actions .button + .button { margin-top: 0.7775em; } }
+@media (min-width: 768px) { .has-filters-with-responsive-layout .views-exposed-form > .form-actions { padding-top: 29px; } }
 
 @media (min-width: 768px) { .has-filters-with-responsive-layout .views-exposed-form { -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; }
+  .has-filters-with-responsive-layout .views-exposed-form > .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; }
   .has-filters-with-responsive-layout .views-exposed-form > .form-item ~ .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-item ~ .form-actions, .has-filters-with-responsive-layout .views-exposed-form > .form-actions ~ .form-item, .has-filters-with-responsive-layout .views-exposed-form > .form-actions ~ .form-actions { margin-top: 0; } }
+
+@media (min-width: 768px) { .has-filters-with-responsive-layout-t2 .views-exposed-form { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .has-filters-with-responsive-layout-t2 .views-exposed-form > .form-item, .has-filters-with-responsive-layout-t2 .views-exposed-form > .form-actions { width: 50%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 1.555em; }
+  .has-filters-with-responsive-layout-t2 .views-exposed-form > .form-item:nth-child(-n+2), .has-filters-with-responsive-layout-t2 .views-exposed-form > .form-actions:nth-child(-n+2) { margin-top: 0; } }
+
+@media (min-width: 768px) { .has-filters-with-responsive-layout-t3 .views-exposed-form { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .has-filters-with-responsive-layout-t3 .views-exposed-form > .form-item, .has-filters-with-responsive-layout-t3 .views-exposed-form > .form-actions { width: 33.33333%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 1.555em; }
+  .has-filters-with-responsive-layout-t3 .views-exposed-form > .form-item:nth-child(-n+3), .has-filters-with-responsive-layout-t3 .views-exposed-form > .form-actions:nth-child(-n+3) { margin-top: 0; } }
+
+@media (min-width: 992px) { .has-filters-with-responsive-layout-d2 .views-exposed-form { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .has-filters-with-responsive-layout-d2 .views-exposed-form > .form-item, .has-filters-with-responsive-layout-d2 .views-exposed-form > .form-actions { width: 50%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 1.555em; }
+  .has-filters-with-responsive-layout-d2 .views-exposed-form > .form-item:nth-child(-n+2), .has-filters-with-responsive-layout-d2 .views-exposed-form > .form-actions:nth-child(-n+2) { margin-top: 0; } }
+
+@media (min-width: 992px) { .has-filters-with-responsive-layout-d3 .views-exposed-form { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .has-filters-with-responsive-layout-d3 .views-exposed-form > .form-item, .has-filters-with-responsive-layout-d3 .views-exposed-form > .form-actions { width: 33.33333%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 1.555em; }
+  .has-filters-with-responsive-layout-d3 .views-exposed-form > .form-item:nth-child(-n+3), .has-filters-with-responsive-layout-d3 .views-exposed-form > .form-actions:nth-child(-n+3) { margin-top: 0; } }
+
+@media (min-width: 992px) { .has-filters-with-responsive-layout-d4 .views-exposed-form { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .has-filters-with-responsive-layout-d4 .views-exposed-form > .form-item, .has-filters-with-responsive-layout-d4 .views-exposed-form > .form-actions { width: 25%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 1.555em; }
+  .has-filters-with-responsive-layout-d4 .views-exposed-form > .form-item:nth-child(-n+4), .has-filters-with-responsive-layout-d4 .views-exposed-form > .form-actions:nth-child(-n+4) { margin-top: 0; } }
+
+@media (min-width: 1200px) { .has-filters-with-responsive-layout-w2 .views-exposed-form { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .has-filters-with-responsive-layout-w2 .views-exposed-form > .form-item, .has-filters-with-responsive-layout-w2 .views-exposed-form > .form-actions { width: 50%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 1.555em; }
+  .has-filters-with-responsive-layout-w2 .views-exposed-form > .form-item:nth-child(-n+2), .has-filters-with-responsive-layout-w2 .views-exposed-form > .form-actions:nth-child(-n+2) { margin-top: 0; } }
+
+@media (min-width: 1200px) { .has-filters-with-responsive-layout-w3 .views-exposed-form { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .has-filters-with-responsive-layout-w3 .views-exposed-form > .form-item, .has-filters-with-responsive-layout-w3 .views-exposed-form > .form-actions { width: 33.33333%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 1.555em; }
+  .has-filters-with-responsive-layout-w3 .views-exposed-form > .form-item:nth-child(-n+3), .has-filters-with-responsive-layout-w3 .views-exposed-form > .form-actions:nth-child(-n+3) { margin-top: 0; } }
+
+@media (min-width: 1200px) { .has-filters-with-responsive-layout-w4 .views-exposed-form { -ms-flex-wrap: wrap; flex-wrap: wrap; }
+  .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-item, .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-actions { width: 25%; -webkit-box-flex: 0; -ms-flex: none; flex: none; margin-top: 1.555em; }
+  .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-item:nth-child(-n+4), .has-filters-with-responsive-layout-w4 .views-exposed-form > .form-actions:nth-child(-n+4) { margin-top: 0; } }
 
 /** @file BEM block for Webforms. */
 .webform-submission-form { -webkit-box-shadow: 0 0 3vw rgba(0, 0, 0, 0.15); box-shadow: 0 0 3vw rgba(0, 0, 0, 0.15); border: 1px solid rgba(0, 0, 0, 0.2); padding: 1.555em; margin-top: 0; }

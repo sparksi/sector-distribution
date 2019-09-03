@@ -10,6 +10,7 @@ dependencies:
     - node
     - taxonomy
     - user
+    - view_unpublished
 id: sector_view_template
 label: 'Sector default view'
 module: views
@@ -43,9 +44,9 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
-          reset_button: false
-          reset_button_label: Reset
+          submit_button: 'Filter news'
+          reset_button: true
+          reset_button_label: 'Show all'
           exposed_sorts_label: 'Sort by'
           expose_sort_order: true
           sort_asc_label: Asc
@@ -127,17 +128,43 @@ display:
           separator: ', '
           field_api_classes: false
       filters:
-        status:
-          value: '1'
+        status_extra:
+          id: status_extra
           table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
+          field: status_extra
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
           group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          plugin_id: view_unpublished_node_status
         type:
           id: type
           table: node_field_data
@@ -147,6 +174,7 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+          group: 1
       sorts: {  }
       title: 'Sector default view'
       header: {  }
@@ -155,12 +183,17 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -189,13 +222,34 @@ display:
       defaults:
         sorts: false
         css_class: false
-      css_class: content-listing
+        style: false
+        row: false
+        pager: false
+      css_class: ''
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: list-unstyled
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: teaser
+      pager:
+        type: some
+        options:
+          items_per_page: 6
+          offset: 0
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url.query_args
+        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -209,43 +263,30 @@ display:
       path: view-template
       display_description: ''
       header:
-        area_text_custom:
-          id: area_text_custom
+        area:
+          id: area
           table: views
-          field: area_text_custom
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
           empty: true
           tokenize: false
-          content: "<p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\n<p> For example this text is added via a \"Global view filed using unfiltered text.</p>\n"
-          plugin_id: text_custom
+          content:
+            value: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\r\n<p> For example this text is added via the global view element 'Text area'.</p></div>"
+            format: full_html
+          plugin_id: text
       defaults:
         header: false
         filters: false
         filter_groups: false
         sorts: false
-      filters:
-        status:
-          value: '1'
-          table: node_field_data
-          field: status
-          plugin_id: boolean
-          entity_type: node
-          entity_field: status
-          id: status
-          expose:
-            operator: ''
-          group: 1
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          value:
-            article: article
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
+        pager: false
+        style: false
+        row: false
+        css_class: false
+        empty: false
+      sorts:
         field_issue_date_value:
           id: field_issue_date_value
           table: node__field_issue_date
@@ -253,33 +294,71 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: '='
-          value:
-            min: ''
-            max: ''
-            value: ''
-            type: offset
-          group: 1
-          exposed: true
+          order: DESC
+          exposed: false
           expose:
-            operator_id: field_issue_date_value_op
-            label: 'Issue date (field_issue_date)'
+            label: ''
+          granularity: year
+          plugin_id: datetime
+      pager:
+        type: full
+        options:
+          items_per_page: 2
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: Previous
+            next: Next
+            first: First
+            last: Last
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 6
+      style:
+        type: html_list
+        options:
+          row_class: ''
+          default_row_class: false
+          uses_fields: false
+          type: ul
+          wrapper_class: ''
+          class: list-unstyled
+      row:
+        type: 'entity:node'
+        options:
+          view_mode: teaser
+      css_class: has-filters-with-responsive-layout
+      filters:
+        status_extra:
+          id: status_extra
+          table: node_field_data
+          field: status_extra
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: ''
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
             description: ''
             use_operator: false
-            operator: field_issue_date_value_op
-            identifier: field_issue_date_value
+            operator: ''
+            identifier: ''
             required: false
             remember: false
             multiple: false
             remember_roles:
               authenticated: authenticated
-              anonymous: '0'
-              content_administrator: '0'
-              administrator: '0'
-              content_editor: '0'
-            placeholder: ''
-            min_placeholder: ''
-            max_placeholder: ''
           is_grouped: false
           group_info:
             label: ''
@@ -292,7 +371,18 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: datetime
+          entity_type: node
+          plugin_id: view_unpublished_node_status
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          value:
+            article: article
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          group: 1
         field_article_type_target_id:
           id: field_article_type_target_id
           table: node__field_article_type
@@ -306,11 +396,11 @@ display:
           exposed: true
           expose:
             operator_id: field_article_type_target_id_op
-            label: 'Article type (field_article_type)'
+            label: 'Filter by category'
             description: ''
             use_operator: false
             operator: field_article_type_target_id_op
-            identifier: field_article_type_target_id
+            identifier: category
             required: false
             remember: false
             multiple: false
@@ -344,20 +434,20 @@ display:
         operator: AND
         groups:
           1: AND
-      sorts:
-        field_issue_date_value:
-          id: field_issue_date_value
-          table: node__field_issue_date
-          field: field_issue_date_value
+      empty:
+        area:
+          id: area
+          table: views
+          field: area
           relationship: none
           group_type: group
           admin_label: ''
-          order: DESC
-          exposed: false
-          expose:
-            label: ''
-          granularity: year
-          plugin_id: datetime
+          empty: true
+          tokenize: false
+          content:
+            value: "<div class=\"prose has-margin-top-double\">\r\n<div class=\"note note--primary\">\r\n<p class=\"lead\">Sorry. We can't find what you are looking for. You can <a href=\"/view-template\">reset the filters</a> and try again, or use our <a href=\"/search\">site-wide search</a>.</p>\r\n</div>\r\n</div>"
+            format: full_html
+          plugin_id: text
     cache_metadata:
       max-age: -1
       contexts:

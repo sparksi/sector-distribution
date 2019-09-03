@@ -6,11 +6,11 @@ global:
       css/global.print.css: { media: print }
       css/admin-ui-toggle.css: {}
   js:
-    js/dist/global.behaviors.js: {}
-    js/dist/offclick.behaviors.js: {}
-    js/dist/flyouts.behaviors.js: {}
-    # js/dist/megamenu.behaviors.js: {}
-    js/dist/toggle.behaviors.js: {}
+    js/dist/sector.behaviors.js: {}
+    js/dist/sector.offclick.behaviors.js: {}
+    js/dist/sector.flyouts.behaviors.js: {}
+    # js/dist/sector.megamenu.behaviors.js: {}
+    js/dist/sector.toggle.behaviors.js: {}
   dependencies:
       - core/jquery
       - core/modernizr

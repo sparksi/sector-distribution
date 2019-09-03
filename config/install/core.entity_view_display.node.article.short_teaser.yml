@@ -109,7 +109,7 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      format_type: short
+      format_type: sector_short_date
     third_party_settings:
       ds:
         ft:

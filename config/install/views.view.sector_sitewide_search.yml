@@ -499,8 +499,8 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<div class=\"prose note note--primary\">\r\n<p>Sorry. We can't find what you are looking for. You could <a href=\"/search\">reset the filters</a> and try again.</p>\r\n</div>"
-            format: basic_html
+            value: "<div class=\"prose has-margin-top-double\">\r\n<div class=\"note note--primary\">\r\n<p class=\"lead\">Sorry. We can't find what you are looking for. You could <a href=\"/search\">reset the filters</a> and try again.</p>\r\n</div>\r\n</div>"
+            format: full_html
           plugin_id: text
       relationships: {  }
       arguments: {  }

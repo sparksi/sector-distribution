@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sector_medium_date
+label: 'Sector medium date'
+locked: false
+pattern: 'D j M Y'

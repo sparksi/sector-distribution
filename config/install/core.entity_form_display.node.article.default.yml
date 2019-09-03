@@ -32,7 +32,6 @@ third_party_settings:
       label: 'Meta data'
       format_type: details
       format_settings:
-        label: 'Meta data'
         required_fields: true
         id: ''
         classes: ''
@@ -101,13 +100,13 @@ content:
     settings:
       entity_browser: media_entity_file
       field_widget_display: rendered_entity
+      field_widget_display_settings:
+        view_mode: preview
       field_widget_edit: true
       field_widget_remove: true
       selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: thumbnail_alternate
-      open: false
       field_widget_replace: false
+      open: false
     third_party_settings: {  }
     type: entity_browser_entity_reference
     region: content
