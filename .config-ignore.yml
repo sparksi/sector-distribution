@@ -7,4 +7,8 @@ ignore:
   - devel.*
   - system.menu.devel.yml
   - webform.webform.example_*
+  - webform.webform_options.*
+  - block.block.bartik*
+  - block.block.bootstrap_*
+  - system.action.*
 
