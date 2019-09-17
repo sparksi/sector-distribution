@@ -281,6 +281,13 @@ $gallery-gray-dark: #161616;
       left: 29px;
     }
   }
+  .slick__slide {
+    @include respond-to(tablet-large-and-down) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
   .slick {
     @include respond-to(desktop-and-up) {
       display: grid;

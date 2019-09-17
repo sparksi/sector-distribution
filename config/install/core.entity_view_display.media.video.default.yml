@@ -3,6 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.media.video.field_credit_or_caption
+    - field.field.media.video.field_description
     - field.field.media.video.field_media_video_embed_field
     - field.field.media.video.field_tags
     - field.field.media.video.field_title
@@ -41,7 +42,6 @@ third_party_settings:
       weight: 2
       format_type: details
       format_settings:
-        label: Transcript
         id: ''
         classes: 'transcript has-margin-top-base'
         open: false
@@ -65,11 +65,12 @@ third_party_settings:
           ds_content: {  }
     regions:
       ds_content:
-        - field_media_video_embed_field
         - field_tags
+        - field_media_video_embed_field
         - field_credit_or_caption
         - group_transcript
         - field_transcript
+        - field_description
         - group_meta
 id: media.video.default
 targetEntityType: media
@@ -90,6 +91,24 @@ content:
             lb: ''
             classes:
               - caption
+            lb-col: false
+    type: text_default
+    region: ds_content
+  field_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: full_html
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - has-margin-top-double
+              - prose
             lb-col: false
     type: text_default
     region: ds_content

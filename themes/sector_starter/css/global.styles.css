@@ -2561,7 +2561,7 @@ mark.alternate { color: #ef604d; background-color: transparent; background: tran
 
 .action--more:visited:before, .promotion--news .more-link a:visited:before, .promotion--resources .more-link a:visited:before { background-color: #4d6edd; }
 
-.action--back { padding-left: 10px; }
+.action--back { position: relative; padding-left: 10px; }
 
 .action--back:before { content: ''; position: absolute; top: 8px; left: 0; background: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='11' fill='%23204ad4'%3E%3Cpath d='M1.8 5.5l4.1-4.3C6 1.1 6 1 6 .9c0-.1 0-.2-.1-.2L5.4.1C5.3 0 5.2 0 5.1 0 5 0 5 0 4.9.1L.1 5.3c-.1 0-.1.1-.1.2s0 .2.1.2l4.8 5.1c.1.2.1.2.2.2s.2 0 .2-.1l.5-.5c.1-.1.2-.2.2-.3s0-.2-.1-.2c0-.1-4.1-4.4-4.1-4.4z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: 0 0; height: 11px; width: 6px; }
 
@@ -2961,6 +2961,8 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 @media (min-width: 992px) { .gallery--carousel .action--information { right: 10px; top: 280px; } }
 
 .gallery--carousel .action--information::before { background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='2' height='12' viewBox='0 0 2 12' xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF'%3E%3Cpath d='M0 4h2v8h-2v-8zm0-4h2v2h-2v-2z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: 0 0; background-size: cover; height: 18px; width: 3px; top: 20px; left: 29px; }
+
+@media (max-width: 991px) { .gallery--carousel .slick__slide { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
 
 @media (min-width: 992px) { .gallery--carousel .slick { display: -ms-grid; display: grid; -ms-grid-rows: 100%; grid-template-rows: 100%; -ms-grid-columns: 100%; grid-template-columns: 100%; } }
 

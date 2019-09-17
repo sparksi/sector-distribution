@@ -25,6 +25,7 @@ classes:
     - has-border-top-large
     - has-border-top-alternate
     - media--has-background-icon
+    - gallery__inner
   field:
     - slat__body
     - slat__media
@@ -76,4 +77,5 @@ classes:
     - text-center-wide-and-up
     - action--more
     - list--related-files
+    - media-center
 use_field_names: true

@@ -1,0 +1,48 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.media_entity_browser
+  module:
+    - entity_browser_entity_form
+    - views
+name: media_entity_image_and_video
+label: 'Media entity image and video'
+display: modal
+display_configuration:
+  width: '1000'
+  height: '600'
+  link_text: 'Select media'
+  auto_open: false
+selection_display: no_display
+selection_display_configuration: {  }
+widget_selector: tabs
+widget_selector_configuration: {  }
+widgets:
+  e44d32d5-874d-4415-a3ce-712007039bf4:
+    settings:
+      view: media_entity_browser
+      view_display: entity_browser_5
+      submit_text: 'Select media'
+      auto_select: false
+    weight: 1
+    label: Library
+    id: view
+  014a897f-4593-4cb6-b109-ac9bd49cc0a0:
+    settings:
+      entity_type: media
+      bundle: image
+      form_mode: default
+      submit_text: 'Save image'
+    weight: 2
+    label: 'Upload image'
+    id: entity_form
+  7b0af48f-a22a-4588-81a5-197e8a41cfc9:
+    settings:
+      entity_type: media
+      bundle: video
+      form_mode: default
+      submit_text: 'Save video'
+    weight: 3
+    label: 'Upload video'
+    id: entity_form

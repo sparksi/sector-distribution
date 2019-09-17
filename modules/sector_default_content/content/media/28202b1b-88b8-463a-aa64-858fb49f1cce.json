@@ -232,5 +232,13 @@
             "format": "restricted_basic_html",
             "processed": "<p>The video shows a logo animation. No words are spoken.<\/p>"
         }
+    ],
+    "field_description": [
+        {
+            "value": "<p>Use the&nbsp;<em>description<\/em>&nbsp;field to add supporting text.<\/p>\r\n",
+            "format": "restricted_basic_html",
+            "processed": "<p>Use the\u00a0<em>description<\/em>\u00a0field to add supporting text.<\/p>",
+            "lang": "en"
+        }
     ]
 }
