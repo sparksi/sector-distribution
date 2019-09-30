@@ -12,7 +12,7 @@
       display: block;
       padding: 14px $spacing-base 14px 18px;
       border-top: 1px solid $brand-border;
-      &:before {
+      &::before {
         content: '';
         position: absolute;
         background: svg-load('../images/icons/arrow--mini-right.svg', fill=#999999);

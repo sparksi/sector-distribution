@@ -39,6 +39,7 @@ classes:
     - responsive-ratio--3-2
     - responsive-ratio--5-3
     - responsive-ratio--16-9
+    - responsive-ratio--3-2-16-6
     - media
     - media--featured
     - node__date

@@ -4,15 +4,11 @@ dependencies:
   config:
     - views.view.sector_news
   module:
-    - block_class
     - system
     - term_condition
     - views
   theme:
     - sector_starter
-third_party_settings:
-  block_class:
-    classes: ''
 id: views_block__sector_news_block_1
 theme: sector_starter
 region: content

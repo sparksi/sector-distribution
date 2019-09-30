@@ -4,14 +4,10 @@ dependencies:
   content:
     - 'block_content:basic:79af5eed-a1cb-4da7-aeec-56d650fb196d'
   module:
-    - block_class
     - block_content
     - term_condition
   theme:
     - sector_starter
-third_party_settings:
-  block_class:
-    classes: ''
 id: backtotop
 theme: sector_starter
 region: pre_footer

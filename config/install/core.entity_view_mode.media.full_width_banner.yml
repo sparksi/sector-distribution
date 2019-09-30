@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.full_width_banner
+label: 'Full width banner'
+targetEntityType: media
+cache: true

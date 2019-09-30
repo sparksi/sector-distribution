@@ -118,7 +118,7 @@
     }
     .action--more {
       color: $brand-visited;
-      &:before {
+      &::before {
         background-color: $brand-visited;
       }
     }
@@ -128,7 +128,7 @@
   &[href^="https://"],
   &[rel*='external'] {
     .action--more {
-      &:after {
+      &::after {
         content: '';
         background: svg-load('../images/icons/icon--external.svg', fill=#204ad4);
         background-repeat: no-repeat;

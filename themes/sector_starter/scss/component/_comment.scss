@@ -38,7 +38,7 @@
     visibility: hidden;
     transition: opacity 0.2s ease-out;
   }
-  &:before {
+  &::before {
     content: '';
     vertical-align: bottom;
     background: svg-load('../images/icons/icon--paper-clip.svg', fill=#898989);

@@ -13,7 +13,7 @@ third_party_settings:
 id: breadcrumbs
 theme: sector_starter
 region: hero
-weight: -16
+weight: -20
 provider: null
 plugin: system_breadcrumb_block
 settings:

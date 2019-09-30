@@ -206,7 +206,7 @@
 %has-border-top-alternate {
   position: relative;
   padding-top: 1px;
-  &:before {
+  &::before {
     position: absolute;
     top: -1px;
     left: 0;
@@ -264,7 +264,7 @@
 %link-down {
   position: relative;
   padding-left: 10px;
-  &:before {
+  &::before {
     content: '\2193';
     position: absolute;
     top: -3px;
@@ -283,7 +283,7 @@
   a[href^="http://"],
   a[href^="https://"],
   a[rel*='external'] {
-    &:after {
+    &::after {
       content: '';
       background: svg-load('../images/icons/icon--external.svg', fill=#204ad4);
       background-repeat: no-repeat;
@@ -301,7 +301,7 @@
   * if a link has been created using the sites full absolute domain.
   */
   a[href*='#{$site-domain}'] { /* [1] */
-    &:after {
+    &::after {
       content: '';
     }
   }
@@ -348,7 +348,7 @@
   position: relative;
   padding: 10px 0;
   @extend %apply-external-link-icon;
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     bottom: -1px;
@@ -392,7 +392,7 @@
     &[href^="http://"],
     &[href^="https://"],
     &[rel*='external'] {
-      &:after {
+      &::after {
         background: svg-load('../images/icons/icon--external.svg', fill=#FFFFFF);
       }
     }
@@ -419,7 +419,7 @@
     display: block;
     margin-top: 13px;
     margin-bottom: 13px;
-    &:after {
+    &::after {
       content: '';
       position: absolute;
       background: svg-load('../images/icons/arrow--micro-down.svg', fill=#204ad4);
@@ -430,17 +430,17 @@
       margin: 8px 0 0 6px;
     }
     &:hover {
-      &:after {
+      &::after {
         background: svg-load('../images/icons/arrow--micro-down.svg', fill=#003259);
       }
     }
     &[aria-expanded="true"] {
-      &:after {
+      &::after {
         background: svg-load('../images/icons/arrow--micro-up.svg', fill=#204ad4);
         margin: 7px 0 0 6px;
       }
       &:hover {
-        &:after {
+        &::after {
           background: svg-load('../images/icons/arrow--micro-up.svg', fill=#003259);
         }
       }

@@ -67,13 +67,13 @@
     "metatag": [
         {
             "value": {
-                "title": "| Base1 sector D8"
+                "title": "| Sector"
             }
         }
     ],
     "body": [
         {
-            "value": "<p>&copy; 2018 - Sector is brought to you by <a href=\"https:\/\/www.sparksinteractive.co.nz\/\">Sparks Interactive<\/a><\/p>",
+            "value": "<p>&copy; 2019 - Sector is brought to you by <a href=\"https:\/\/www.sparksinteractive.co.nz\/\">Sparks Interactive<\/a><\/p>",
             "format": "basic_html",
             "summary": "",
             "lang": "en"

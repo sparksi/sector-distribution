@@ -2,17 +2,13 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - term_condition
   theme:
     - sector_starter
-third_party_settings:
-  block_class:
-    classes: ''
 id: pagetitle_2
 theme: sector_starter
 region: hero
-weight: -16
+weight: -19
 provider: null
 plugin: page_title_block
 settings:

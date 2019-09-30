@@ -51,15 +51,15 @@ third_party_settings:
       weight: 3
       format_type: html_element
       format_settings:
-        label: Meta
         element: div
         show_label: false
         label_element: h3
+        label_element_classes: ''
         attributes: ''
         effect: none
         speed: fast
         id: ''
-        classes: 'meta call-to-action has-margin-top-and-half'
+        classes: 'meta call-to-action-left-line has-margin-top-and-half'
       label: Meta
       region: hidden
     group_media_meta:

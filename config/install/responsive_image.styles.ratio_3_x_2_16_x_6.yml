@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.ratio_16_x_6_medium_
+    - image.style.ratio_16_x_6_xlarge_
+    - image.style.ratio_3_x_2_medium_
+    - image.style.ratio_3_x_2_small_
+  theme:
+    - sector_starter
+id: ratio_3_x_2_16_x_6
+label: 'Ratio 3 x 2 - 16 x 6'
+image_style_mappings:
+  -
+    breakpoint_id: sector_starter.mega
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: ratio_16_x_6_xlarge_
+  -
+    breakpoint_id: sector_starter.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: ratio_16_x_6_medium_
+  -
+    breakpoint_id: sector_starter.xsmall
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: ratio_3_x_2_small_
+  -
+    breakpoint_id: sector_starter.xsmall
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: ratio_3_x_2_medium_
+breakpoint_group: sector_starter
+fallback_image_style: ratio_3_x_2_small_

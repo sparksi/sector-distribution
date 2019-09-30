@@ -4,15 +4,11 @@ dependencies:
   config:
     - views.view.sector_resource
   module:
-    - block_class
     - node
     - term_condition
     - views
   theme:
     - sector_starter
-third_party_settings:
-  block_class:
-    classes: ''
 id: views_block__sector_resource_block_2_2
 theme: sector_starter
 region: sidebar

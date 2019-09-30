@@ -14,6 +14,8 @@ globals:
   Modernizr: true
   CKEDITOR: true
 rules:
+  arrow-parens:
+    - warn
   indent:
     - error
     - 2

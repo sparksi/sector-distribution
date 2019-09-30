@@ -293,7 +293,7 @@ display:
     position: 3
     display_options:
       display_extenders: {  }
-      title: 'Sector news'
+      title: 'Latest news'
       defaults:
         title: false
         pager: false

@@ -57,7 +57,7 @@
         // Turn classList into array with es6 spread operator.
         const classList = [...event.currentTarget.classList];
         // Find the toggle class.
-        const toggle = classList.filter(className => className.substr(0, 10) === 'js-toggle-');
+        const toggle = classList.filter((className) => className.substr(0, 10) === 'js-toggle-');
         if (toggle.length > 0) {
           // strip js-toggle- to find the unique ID.
           const toggleId = toggle[0].substr(10);

@@ -2,13 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - term_condition
   theme:
     - sector_starter
-third_party_settings:
-  block_class:
-    classes: ''
 id: pagetitle
 theme: sector_starter
 region: pre_content

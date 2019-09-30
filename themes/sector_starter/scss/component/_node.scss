@@ -21,9 +21,11 @@
     line-height: 1.7;
   }
   .hero & {
-    .path-frontpage & {
+    .page-variant--homepage & {
       font-weight: 400;
       @extend %has-margin-top-base;
+      position: relative;
+      z-index: 2;
       @include respond-to(tablet-and-up) {
         font-size: 18px;
       }
@@ -37,5 +39,29 @@
   margin-top: $spacing-half;
   @include respond-to(tablet-and-up) {
     margin-top: 0;
+  }
+}
+
+.node__banner {
+  .page-variant--homepage & {
+    position: relative;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  &::before {
+    .page-variant--homepage & {
+      content: '';
+      background-color: rgba($brand-gray-lightest,0.7);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      display: block;
+      @include respond-to(desktop-and-up) {
+        display: none;
+      }
+    }
   }
 }

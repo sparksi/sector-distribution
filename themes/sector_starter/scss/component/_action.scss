@@ -34,7 +34,7 @@
   position: relative;
   font-weight: 700;
   font-size: 15px;
-  &:before {
+  &::before {
     content: '';
     width: 70%;
     height: 1px;
@@ -47,13 +47,13 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    &:before {
+    &::before {
       width: 100%;
     }
   }
   &:visited {
     color: $brand-visited;
-    &:before {
+    &::before {
       background-color: $brand-visited;
     }
   }
@@ -62,7 +62,7 @@
 .action--back {
   position: relative;
   padding-left: 10px;
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     top: 8px;
@@ -75,7 +75,7 @@
   }
   &:hover,
   &:focus {
-    &:before {
+    &::before {
       background: svg-load('../images/icons/arrow--mini-left.svg', fill=#0042a3);
     }
   }
@@ -96,7 +96,7 @@
 .action--close {
   position: relative;
   @extend .text-hide;
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     background: svg-load('../images/icons/icon--close-small.svg', fill=#204ad4);
@@ -115,7 +115,7 @@
 .action--information {
   position: relative;
   @extend .text-hide;
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     background: svg-load('../images/icons/icon--information.svg', fill=#204ad4);

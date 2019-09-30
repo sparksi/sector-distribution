@@ -64,3 +64,10 @@
 .responsive-ratio--7-1 {
   padding-bottom: aspect-ratio-height(7, 1);
 }
+
+.responsive-ratio--3-2-16-6 {
+  padding-bottom: aspect-ratio-height(3, 2);
+  @include respond-to(tablet-large-and-up) {
+    padding-bottom: aspect-ratio-height(16, 6);
+  }
+}

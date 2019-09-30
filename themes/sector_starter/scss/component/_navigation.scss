@@ -44,7 +44,7 @@
         &[href^="http://"],
         &[href^="https://"],
         &[rel*='external'] {
-          &:after {
+          &::after {
             background: svg-load('../images/icons/icon--external.svg', fill=#FFFFFF);
           }
         }
@@ -79,7 +79,7 @@
           display: block;
         }
         > .btn-expand {
-          &:after {
+          &::after {
             background: svg-load('../images/icons/arrow--micro-up.svg', fill=#FFFFFF);
           }
         }
@@ -92,7 +92,7 @@
         }
         &.is-active {
           background-color: $black;
-          &:before {
+          &::before {
             content: '';
             position: absolute;
             bottom: 0;
@@ -104,7 +104,7 @@
         }
         &[href^="#"] {
           text-decoration: none;
-          &:before {
+          &::before {
             content: none;
           }
         }
@@ -261,7 +261,7 @@
     &.is-collapsed {
       > .menu__link {
         position: relative;
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--mini-right.svg', fill=#999999);
@@ -277,7 +277,7 @@
     &.is-expanded {
       > .menu__link {
         position: relative;
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--mini-down.svg', fill=#999999);

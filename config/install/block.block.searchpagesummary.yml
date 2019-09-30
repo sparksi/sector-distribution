@@ -16,7 +16,7 @@ third_party_settings:
 id: searchpagesummary
 theme: sector_starter
 region: content
-weight: -14
+weight: -15
 provider: null
 plugin: 'facets_summary_block:search_page_summary'
 settings:

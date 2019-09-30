@@ -19,7 +19,7 @@
   text-shadow: none!important;
 }
 
-:after {
+::after {
   background: transparent!important;
   box-shadow: none!important;
   color: #000!important;
@@ -82,39 +82,39 @@ a {
     background: transparent;
     font-weight: bold;
     text-decoration: underline;
-    &:after {
+    &::after {
       content: " (" attr(href) ") ";
       font-size: 90%;
     }
   }
 }
 
-a[href]:after {
+a[href]::after {
   content: " (" attr(href) ") ";
 }
 
-a[href^="#"]:after,
-a[href^="javascript:"]:after {
+a[href^="#"]::after,
+a[href^="javascript:"]::after {
   content:"";
 }
 
-abbr[title]:after {
+abbr[title]::after {
   content: " (" attr(title) ")";
 }
 
-abbr[title]:after {
+abbr[title]::after {
   content: " (" attr(title) ")";
 }
 
-.site__sidebar-inner .block a[href^="http://"]:after,
-.field-name-body a[href^="http://"]:after,
-.field-name-field-related-external-url a[href^="http://"]:after,
-.site__sidebar-inner .block a[href^="https://"]:after,
-.field-name-body a[href^="https://"]:after,
-.field-name-field-related-external-url a[href^="https://"]:after,
-.site__sidebar-inner .block a[rel*='external']:after,
-.field-name-body a[rel*='external']:after,
-.field-name-field-related-external-url a[rel*='external']:after {
+.site__sidebar-inner .block a[href^="http://"]::after,
+.field-name-body a[href^="http://"]::after,
+.field-name-field-related-external-url a[href^="http://"]::after,
+.site__sidebar-inner .block a[href^="https://"]::after,
+.field-name-body a[href^="https://"]::after,
+.field-name-field-related-external-url a[href^="https://"]::after,
+.site__sidebar-inner .block a[rel*='external']::after,
+.field-name-body a[rel*='external']::after,
+.field-name-field-related-external-url a[rel*='external']::after {
   content: " (" attr(href) ") ";
   width: auto;
   height: auto;
@@ -205,7 +205,7 @@ iframe,
 }
 
 .logo__link {
-  &:after {
+  &::after {
     padding-top: 10px;
   }
 }

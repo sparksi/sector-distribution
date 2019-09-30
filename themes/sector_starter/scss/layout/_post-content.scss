@@ -4,7 +4,7 @@
  */
 .post-content {
   .region-post-content {
-    .path-frontpage & {
+    .page-variant--homepage & {
       display: grid;
       grid-template-columns: 1fr;
       grid-template-rows: auto;

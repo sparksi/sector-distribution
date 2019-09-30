@@ -26,7 +26,7 @@
         margin-top: ($spacing-base*3);
       }
     }
-    &:before {
+    &::before {
       .page-variant--section-entry-page & {
         @include respond-to(tablet-large-and-up) {
           content: '';

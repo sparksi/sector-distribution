@@ -17,9 +17,22 @@
                 "lang": "und"
             }
         ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_auto_contextual_content": [
+            {
+                "href": "http:\/\/default\/taxonomy\/term\/2?_format=hal_json",
+                "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_banner": [
+            {
+                "href": "http:\/\/default\/image\/sample-image-banner?_format=hal_json",
+                "lang": "und"
+            }
+        ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
             {
-                "href": "http:\/\/default\/taxonomy\/term\/4?_format=hal_json"
+                "href": "http:\/\/default\/taxonomy\/term\/4?_format=hal_json",
+                "lang": "und"
             }
         ]
     },
@@ -51,7 +64,7 @@
     ],
     "revision_timestamp": [
         {
-            "value": "2017-11-01T01:51:43+00:00",
+            "value": "2019-09-18T04:34:24+00:00",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
@@ -68,7 +81,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "b67bf50c-4223-4bd6-9a0d-ad9fd06344ba"
                     }
                 ]
             }
@@ -85,7 +98,7 @@
                 },
                 "uuid": [
                     {
-                        "value": "3ce8af78-5eb8-4c07-965c-134d8750d355"
+                        "value": "b67bf50c-4223-4bd6-9a0d-ad9fd06344ba"
                     }
                 ],
                 "lang": "und"
@@ -105,7 +118,26 @@
                     {
                         "value": "922afa45-cc8b-474a-8192-42c5423bb35b"
                     }
-                ]
+                ],
+                "lang": "und"
+            }
+        ],
+        "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_banner": [
+            {
+                "_links": {
+                    "self": {
+                        "href": "http:\/\/default\/image\/sample-image-banner?_format=hal_json"
+                    },
+                    "type": {
+                        "href": "http:\/\/drupal.org\/rest\/type\/media\/image"
+                    }
+                },
+                "uuid": [
+                    {
+                        "value": "7ed52640-1055-4a02-8167-d5bc111335ad"
+                    }
+                ],
+                "lang": "und"
             }
         ],
         "http:\/\/drupal.org\/rest\/relation\/node\/page\/field_page_variant": [
@@ -122,7 +154,8 @@
                     {
                         "value": "61cfac98-8d22-416a-bcbe-7a1a83904b67"
                     }
-                ]
+                ],
+                "lang": "und"
             }
         ]
     },
@@ -147,14 +180,15 @@
     ],
     "changed": [
         {
-            "value": "2017-11-01T01:51:43+00:00",
+            "value": "2019-09-18T04:34:24+00:00",
             "lang": "und",
             "format": "Y-m-d\\TH:i:sP"
         }
     ],
     "promote": [
         {
-            "value": false
+            "value": false,
+            "lang": "und"
         }
     ],
     "sticky": [
@@ -178,20 +212,37 @@
     "metatag": [
         {
             "value": {
-                "title": "Content management made easy. | Base3"
+                "title": "Content management made easy. | Sector",
+                "shortlink": "http:\/\/default\/node\/10",
+                "canonical_url": "http:\/\/default\/node\/10",
+                "og_url": "http:\/\/default\/node\/10",
+                "og_title": "Content management made easy.",
+                "og_image_type": "image\/jpeg"
             }
+        }
+    ],
+    "rh_action": [
+        {
+            "value": "bundle_default"
+        }
+    ],
+    "rh_redirect_response": [
+        {
+            "value": 301
         }
     ],
     "field_last_updated": [
         {
-            "value": "2017-10-24"
+            "value": "2017-10-24",
+            "lang": "und"
         }
     ],
     "field_subtitle": [
         {
             "value": "Built on Bootstrap and the Drupal Bootstrap theme, the Sector Starter Theme and Base configuration is ready to go and easy to administer.",
             "format": "teaser_display_text",
-            "processed": "Built on Bootstrap and the Drupal Bootstrap theme, the Sector Starter Theme and Base configuration is ready to go and easy to administer."
+            "processed": "Built on Bootstrap and the Drupal Bootstrap theme, the Sector Starter Theme and Base configuration is ready to go and easy to administer.",
+            "lang": "und"
         }
     ]
 }

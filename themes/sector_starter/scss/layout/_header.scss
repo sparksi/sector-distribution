@@ -6,11 +6,11 @@
   padding-top: 20px;
   padding-bottom: 20px;
   box-shadow: 0px 6px 10px rgba(#667891,0.15);
+  position: relative;
   @include respond-to(desktop-and-up) {
     background-color: $white;
     padding-top: $spacing-base;
     padding-bottom: $spacing-base;
-    position: relative;
   }
   &.navigation-is-open {
     padding-bottom: 0;

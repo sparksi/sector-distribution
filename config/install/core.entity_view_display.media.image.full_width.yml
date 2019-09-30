@@ -4,6 +4,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.full_width
     - field.field.media.image.field_credit_or_caption
+    - field.field.media.image.field_description
     - field.field.media.image.field_media_image
     - field.field.media.image.field_tags
     - field.field.media.image.field_title
@@ -75,6 +76,7 @@ content:
     region: ds_content
 hidden:
   created: true
+  field_description: true
   field_tags: true
   field_title: true
   name: true

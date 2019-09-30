@@ -1959,7 +1959,7 @@ button.close { padding: 0; cursor: pointer; background: transparent; border: 0; 
 
 * { background: transparent !important; -webkit-box-shadow: none !important; box-shadow: none !important; color: #000 !important; text-shadow: none !important; }
 
-:after { background: transparent !important; -webkit-box-shadow: none !important; box-shadow: none !important; color: #000 !important; text-shadow: none !important; }
+::after { background: transparent !important; -webkit-box-shadow: none !important; box-shadow: none !important; color: #000 !important; text-shadow: none !important; }
 
 :before { background: transparent !important; -webkit-box-shadow: none !important; box-shadow: none !important; color: #000 !important; text-shadow: none !important; }
 
@@ -1993,17 +1993,17 @@ a:visited { text-decoration: underline; }
 
 a:link, a:visited { background: transparent; font-weight: bold; text-decoration: underline; }
 
-a:link:after, a:visited:after { content: " (" attr(href) ") "; font-size: 90%; }
+a:link::after, a:visited::after { content: " (" attr(href) ") "; font-size: 90%; }
 
-a[href]:after { content: " (" attr(href) ") "; }
+a[href]::after { content: " (" attr(href) ") "; }
 
-a[href^="#"]:after, a[href^="javascript:"]:after { content: ""; }
+a[href^="#"]::after, a[href^="javascript:"]::after { content: ""; }
 
-abbr[title]:after { content: " (" attr(title) ")"; }
+abbr[title]::after { content: " (" attr(title) ")"; }
 
-abbr[title]:after { content: " (" attr(title) ")"; }
+abbr[title]::after { content: " (" attr(title) ")"; }
 
-.site__sidebar-inner .block a[href^="http://"]:after, .field-name-body a[href^="http://"]:after, .field-name-field-related-external-url a[href^="http://"]:after, .site__sidebar-inner .block a[href^="https://"]:after, .field-name-body a[href^="https://"]:after, .field-name-field-related-external-url a[href^="https://"]:after, .site__sidebar-inner .block a[rel*='external']:after, .field-name-body a[rel*='external']:after, .field-name-field-related-external-url a[rel*='external']:after { content: " (" attr(href) ") "; width: auto; height: auto; background-position: initial; margin-left: 0; vertical-align: inherit; display: inline; }
+.site__sidebar-inner .block a[href^="http://"]::after, .field-name-body a[href^="http://"]::after, .field-name-field-related-external-url a[href^="http://"]::after, .site__sidebar-inner .block a[href^="https://"]::after, .field-name-body a[href^="https://"]::after, .field-name-field-related-external-url a[href^="https://"]::after, .site__sidebar-inner .block a[rel*='external']::after, .field-name-body a[rel*='external']::after, .field-name-field-related-external-url a[rel*='external']::after { content: " (" attr(href) ") "; width: auto; height: auto; background-position: initial; margin-left: 0; vertical-align: inherit; display: inline; }
 
 blockquote { page-break-inside: avoid; border: none; margin: 0; padding: 0 !important; }
 
@@ -2029,7 +2029,7 @@ tr { page-break-inside: avoid; }
 
 .footer-regions-wrapper .logo--primary .logo__brand path { fill: #000000; }
 
-.logo__link:after { padding-top: 10px; }
+.logo__link::after { padding-top: 10px; }
 
 .list--fridge-magnets > li > a { padding: 0; border: none; }
 

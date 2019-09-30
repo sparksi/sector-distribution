@@ -16,7 +16,7 @@ third_party_settings:
 id: exposedformsector_sitewide_searchpage_1
 theme: sector_starter
 region: content
-weight: -15
+weight: -16
 provider: null
 plugin: 'views_exposed_filter_block:sector_sitewide_search-page_1'
 settings:

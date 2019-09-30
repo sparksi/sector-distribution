@@ -370,7 +370,7 @@ $gallery-gray-dark: #161616;
 html {
   &.carousel-is-active {
     overflow: hidden;
-    &:before {
+    &::before {
       content: '';
       position: absolute;
       top: 0;

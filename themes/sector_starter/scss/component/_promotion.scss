@@ -24,7 +24,7 @@
   @include respond-to(desktop-and-up) {
     background-color: transparent;
   }
-  &:after {
+  &::after {
     @include respond-to(tablet-large-and-down) {
       content: '';
       width: 100vw;
@@ -100,7 +100,7 @@
     padding-top: ($spacing-base*3);
     padding-bottom: ($spacing-base*3);
   }
-  &:after {
+  &::after {
     @include respond-to(tablet-and-up) {
       content: '';
       width: 100vw;
@@ -150,7 +150,7 @@
     font-family: $font-family-sans-serif;
     margin: 0;
     color: $text-color;
-    &:after {
+    &::after {
       content: ':';
     }
   }
@@ -180,7 +180,7 @@
   &.is-hidden {
     display: none;
   }
-  &:after {
+  &::after {
     @include respond-to(tablet-and-up) {
       content: '';
       width: 100vw;
@@ -211,7 +211,7 @@
       top: 12px;
       right: 22px;
     }
-    &:before {
+    &::before {
       cursor: pointer;
       background: svg-load('../images/icons/icon--close.svg', fill=#FFFFFF);
       background-repeat: no-repeat;
@@ -232,7 +232,7 @@
       + .facet-summary-item--facet {
         position: relative;
         padding-left: 91px;
-        &:before {
+        &::before {
           content: 'Active filters:';
           position: absolute;
           top: 8px;

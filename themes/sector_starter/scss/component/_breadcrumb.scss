@@ -13,7 +13,7 @@
     position: relative;
     padding: 0 $spacing-base 0 0;
     margin: 0 $spacing-half 0 0;
-    &:after {
+    &::after {
       content: '/';
       position: absolute;
       top: 1px;
@@ -33,12 +33,12 @@
       }
     }
     + li {
-      &:before {
+      &::before {
         display: none;
       }
     }
     &:last-child {
-      &:after {
+      &::after {
         display: none;
       }
     }

@@ -1,4 +1,7 @@
 ignore:
+  - block.block.siteinuse.yml
+  - core.date_format.fallback.yml
+  - core.date_format.html_*
   - core.date_format.long
   - core.date_format.medium
   - core.date_format.short

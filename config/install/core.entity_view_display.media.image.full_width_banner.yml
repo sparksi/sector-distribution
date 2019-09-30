@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.teaser
+    - core.entity_view_mode.media.full_width_banner
     - field.field.media.image.field_credit_or_caption
     - field.field.media.image.field_description
     - field.field.media.image.field_media_image
     - field.field.media.image.field_tags
     - field.field.media.image.field_title
-    - image.style.ratio_16_x_9_small_
     - media.type.image
+    - responsive_image.styles.ratio_3_x_2_16_x_6
   module:
     - ds
-    - image
+    - responsive_image
 third_party_settings:
   ds:
     layout:
@@ -33,16 +33,16 @@ third_party_settings:
     regions:
       ds_content:
         - field_media_image
-id: media.image.teaser
+id: media.image.full_width_banner
 targetEntityType: media
 bundle: image
-mode: teaser
+mode: full_width_banner
 content:
   field_media_image:
     weight: 0
     label: hidden
     settings:
-      image_style: ratio_16_x_9_small_
+      responsive_image_style: ratio_3_x_2_16_x_6
       image_link: ''
     third_party_settings:
       ds:
@@ -51,11 +51,10 @@ content:
           settings:
             lb: ''
             classes:
-              - slat__media
               - responsive-ratio
-              - responsive-ratio--16-9
+              - responsive-ratio--3-2-16-6
             lb-col: false
-    type: image
+    type: responsive_image
     region: ds_content
 hidden:
   created: true

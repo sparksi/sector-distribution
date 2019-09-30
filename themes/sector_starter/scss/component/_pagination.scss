@@ -86,7 +86,7 @@
           text-decoration: underline;
           border-bottom: none;
         }
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--medium-left-thin.svg', fill=#313132);
@@ -98,7 +98,7 @@
           top: 14px;
           left: 16px;
         }
-        &:before {
+        &::before {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--medium-left-thin.svg', fill=#313132);
@@ -120,7 +120,7 @@
           text-decoration: underline;
           border-bottom: none;
         }
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--medium-left-thin.svg', fill=#313132);
@@ -142,7 +142,7 @@
           text-decoration: underline;
           border-bottom: none;
         }
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--medium-right-thin.svg', fill=#313132);
@@ -171,7 +171,7 @@
           text-decoration: underline;
           border-bottom: none;
         }
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--medium-right-thin.svg', fill=#313132);
@@ -183,7 +183,7 @@
           top: 15px;
           right: 16px;
         }
-        &:before {
+        &::before {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--medium-right-thin.svg', fill=#313132);
@@ -225,7 +225,7 @@
         @include respond-to(tablet-and-up) {
           padding: 16px 20px 16px 44px;
         }
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--medium-left-thin.svg', fill=#313132);
@@ -251,7 +251,7 @@
         @include respond-to(tablet-and-up) {
           padding: 16px 44px 16px 20px;
         }
-        &:after {
+        &::after {
           content: '';
           position: absolute;
           background: svg-load('../images/icons/arrow--medium-right-thin.svg', fill=#313132);

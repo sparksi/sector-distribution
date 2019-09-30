@@ -73,9 +73,12 @@
   margin-bottom: ($line-height-computed/2);
   padding-bottom: 0;
   font-size: $font-size-h2;
-  .path-frontpage & {
+  .page-variant--homepage & {
     font-size: 45px;
     padding-bottom: 10px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
   }
   @include respond-to(tablet-and-up) {
     font-size: $font-size-h1;
@@ -175,7 +178,7 @@
     padding-top: 20px;
     position: relative;
     margin-top:20px;
-    &:before {
+    &::before {
       position: absolute;
       content: 'Unpublished';
       font-family: $font-family-monospace;
@@ -208,7 +211,7 @@
 /* https://www.drupal.org/project/webform/issues/2860855 */
 .webform-submission-form {
   .js-form-required {
-    &:after {
+    &::after {
       content: '*';
       color: $brand-danger;
     }

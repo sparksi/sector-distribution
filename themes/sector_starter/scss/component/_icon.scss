@@ -4,7 +4,7 @@
  */
 
 .icon--close {
-  &:before {
+  &::before {
     content: '';
     background: svg-load('../images/icons/icon--close.svg', fill=#313132);
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@
 }
 
 .icon--menu {
-  &:before {
+  &::before {
     content: '';
     background: svg-load('../images/icons/icon--menu.svg');
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@
 }
 
 .icon--search {
-  &:before {
+  &::before {
     content: '';
     background: svg-load('../images/icons/icon--search.svg');
     background-repeat: no-repeat;
@@ -39,7 +39,7 @@
 
 .icon--facebook,
 %icon--facebook {
-  &:before {
+  &::before {
     content: '';
     background: svg-load('../images/icons/icon--facebook.svg');
     background-repeat: no-repeat;
@@ -51,7 +51,7 @@
 
 .icon--twitter,
 %icon--twitter {
-  &:before {
+  &::before {
     content: '';
     background: svg-load('../images/icons/icon--twitter.svg');
     background-repeat: no-repeat;
@@ -63,7 +63,7 @@
 
 .icon--youtube,
 %icon--youtube {
-  &:before {
+  &::before {
     content: '';
     background: svg-load('../images/icons/icon--youtube.svg');
     background-repeat: no-repeat;
@@ -75,7 +75,7 @@
 
 .icon--instagram,
 %icon--instagram {
-  &:before {
+  &::before {
     content: '';
     background: svg-load('../images/icons/icon--instagram.svg');
     background-repeat: no-repeat;

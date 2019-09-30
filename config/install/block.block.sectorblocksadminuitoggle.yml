@@ -3,14 +3,10 @@ status: true
 dependencies:
   module:
     - admin_ui_toggle
-    - block_class
     - term_condition
     - user
   theme:
     - sector_starter
-third_party_settings:
-  block_class:
-    classes: ''
 id: sectorblocksadminuitoggle
 theme: sector_starter
 region: header

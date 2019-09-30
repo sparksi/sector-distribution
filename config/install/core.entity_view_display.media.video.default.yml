@@ -25,14 +25,15 @@ third_party_settings:
       weight: 4
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'meta call-to-action has-margin-top-base'
         element: div
         show_label: false
         label_element: h3
+        label_element_classes: ''
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'meta call-to-action-left-line has-margin-top-base'
       label: Meta
       region: hidden
     group_transcript:

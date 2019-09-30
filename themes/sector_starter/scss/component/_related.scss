@@ -12,12 +12,11 @@
     margin: $spacing-double 0 $spacing-half 0;
     @extend %has-heading-alternate;
     @extend %has-border-top-alternate;
-    &:before {
+    &::before {
       top: -12px;
     }
   }
   .field--items {
-    //line-height: $line-height-base-prose;
     margin: $spacing-quarter 0 0 0;
   }
 }
