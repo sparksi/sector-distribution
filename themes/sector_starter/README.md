@@ -23,6 +23,8 @@ Create a subtheme the [Drupal way](https://www.drupal.org/node/225125) using Sec
 
 ### Use Sector Starter by cloning and owning
 
+**Note:** The Sector Starter frontend workflow requires a _minimum_ Node.js version of 8.10.0 but version 12 is recommended.
+
 Make a copy of the Sector Starter theme
 
 `cd {PROJECTNAME}/web/themes/$ mkdir custom`
@@ -96,11 +98,11 @@ NVM will look for an `.nvmrc` file and use that if it can, so once you `cd` insi
 Note that any NVM commands you run are session only.
 When you log out, next time you come back the system version of NodeJS will be in use again.
 
-Run `nvm alias default 10`
+Run `nvm alias default 12`
 
 This is to save a default that will be used for all future bash sessions.
 
-You can replace "10" with the "x.x" version you prefer if required.
+You can replace "12" with the "x.x" version you prefer if required.
 
 ### 2. Install dependencies & Run the project
 
