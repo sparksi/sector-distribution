@@ -20,6 +20,7 @@ permissions:
   - 'access media_entity_file_alternate entity browser pages'
   - 'access media_entity_image entity browser pages'
   - 'access media_entity_image_alternate entity browser pages'
+  - 'access media_entity_image_and_video entity browser pages'
   - 'access media_entity_video entity browser pages'
   - 'access media_entity_video_alternate entity browser pages'
   - 'access sector_document_browser entity browser pages'
