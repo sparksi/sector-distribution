@@ -9,6 +9,7 @@ permissions:
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
+  - 'never autoplay videos'
   - 'post comments'
   - 'search content'
   - 'submit latitude/longitude'
