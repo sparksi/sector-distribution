@@ -4,9 +4,8 @@ dependencies:
   config:
     - core.entity_view_mode.media.short_teaser
     - core.entity_view_mode.media.teaser
+    - entity_browser.browser.media_entity_file_alternate
     - media.type.file
-  content:
-    - 'file:file:ef8428a5-53d7-4bed-b02a-54d3b6c98c82'
   module:
     - entity_embed
     - media
@@ -23,4 +22,7 @@ type_settings:
   entity_browser: media_entity_file_alternate
   entity_browser_settings:
     display_review: true
+icon:
+  data: iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsSAAALEgHS3X78AAAAjElEQVQ4y+3TsQ0CMQyF4T8nJARSJnAyQRp69nDNRhnhJsgCGQBRsoRXoA1tBHeI6DrE6+zik2XLrrXGluz6QkSWtAdwNrP7EjB90mOMpJSOwFVETsNACIFSCimlA3ATkcsQAOC9p9aKqu6B+RWZvl1WzhlVBZj7vuuvsLLEt5iZG55gLX/gJwC39Z2fhakhmuU5XrEAAAAASUVORK5CYII=
+  uri: 'public://embed_buttons/media-file.png'
 icon_uuid: ef8428a5-53d7-4bed-b02a-54d3b6c98c82
