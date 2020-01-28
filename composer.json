@@ -69,7 +69,7 @@
         "drupal/views_menu_children_filter": "1.0-beta3",
         "drupal/webform": "5.8",
         "drupal/wysiwyg_template": "2.3",
-        "drupal/xmlsitemap": "1.0-rc2"
+        "drupal/xmlsitemap": "1.0-rc1"
     },
     "replace": {
       "ckeditor/templates": "*"
