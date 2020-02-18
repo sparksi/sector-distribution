@@ -14,7 +14,7 @@ dependencies:
 id: sector_view_information_tiles
 label: 'Sector content teasers'
 module: views
-description: 'Basic content view for teaser content on the homepage or other landing pages.'
+description: 'Content view for teaser content on the homepage or other landing pages. Provided by the Sector Starter KIT.'
 tag: Sector
 base_table: node_field_data
 base_field: nid

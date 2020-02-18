@@ -15,7 +15,7 @@ dependencies:
 id: sector_news
 label: 'Sector news'
 module: views
-description: 'News view supporting the Sector News content type provided by the Sector profile.'
+description: 'News view supporting the Sector News content type. Provided by the Sector Starter KIT.'
 tag: ''
 base_table: node_field_data
 base_field: nid

@@ -12,7 +12,7 @@ dependencies:
 id: sector_sub_menu_pages
 label: 'Sector sub menu pages'
 module: views
-description: ''
+description: 'A view listing the sub-pages of a page based on its position in a menu. Provided by the Sector Starter KIT.'
 tag: ''
 base_table: node_field_data
 base_field: nid

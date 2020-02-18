@@ -11,7 +11,7 @@ dependencies:
 id: sector_sitewide_search
 label: 'Sector sitewide search'
 module: views
-description: 'Search API search view provided by the Sector profile.'
+description: 'Search API search view. Provided by the Sector Starter KIT.'
 tag: ''
 base_table: search_api_index_sector_sitewide_search
 base_field: search_api_id

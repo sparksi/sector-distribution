@@ -11,7 +11,7 @@ dependencies:
 id: sector_view_promotional_links
 label: 'Sector quick links'
 module: views
-description: 'Basic content view to link content from the homepage or other landing pages.'
+description: 'Content view to add content quick links from the homepage or other landing pages. Provided by the Sector Starter KIT.'
 tag: ''
 base_table: node_field_data
 base_field: nid
