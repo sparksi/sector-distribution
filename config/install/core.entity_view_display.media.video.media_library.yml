@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.full_width
+    - core.entity_view_mode.media.media_library
     - field.field.media.video.field_credit_or_caption
     - field.field.media.video.field_description
     - field.field.media.video.field_media_video_embed_field
@@ -12,20 +12,33 @@ dependencies:
     - media.type.video
   module:
     - ds
-    - field_formatter_filter
     - field_group
-    - text
     - video_embed_field
 third_party_settings:
   field_group:
-    group_transcript:
-      children:
-        - field_transcript
+    group_meta:
+      children: {  }
       parent_name: ''
-      weight: 2
+      weight: 17
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'meta call-to-action-left-line has-margin-top-base'
+      label: Meta
+      region: hidden
+    group_transcript:
+      children: {  }
+      parent_name: ''
+      weight: 16
       format_type: details
       format_settings:
-        label: Transcript
         id: ''
         classes: 'transcript has-margin-top-base'
         open: false
@@ -38,6 +51,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -50,32 +64,12 @@ third_party_settings:
     regions:
       ds_content:
         - field_media_video_embed_field
-        - field_credit_or_caption
-        - group_transcript
-        - field_transcript
-        - group_meta
-id: media.video.full_width
+        - field_title
+id: media.video.media_library
 targetEntityType: media
 bundle: video
-mode: full_width
+mode: media_library
 content:
-  field_credit_or_caption:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      field_formatter_filter:
-        format: restricted_basic_html
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            classes:
-              - caption
-            lb-col: false
-    type: text_default
-    region: ds_content
   field_media_video_embed_field:
     weight: 0
     label: hidden
@@ -87,27 +81,20 @@ content:
     third_party_settings: {  }
     type: video_embed_field_video
     region: ds_content
-  field_transcript:
-    weight: 3
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      field_formatter_filter:
-        format: full_html
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: text_default
+  field_title:
+    type: string
+    weight: 1
     region: ds_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   created: true
+  field_credit_or_caption: true
   field_description: true
   field_tags: true
-  field_title: true
+  field_transcript: true
   name: true
   search_api_excerpt: true
   thumbnail: true

@@ -14,6 +14,7 @@ dependencies:
  - menu_link_content
  - menu_ui
  - media
+ - media_library
  - embed
  - entity_embed
  - inline_entity_form
@@ -75,7 +76,6 @@ dependencies:
  - update
  - user
  - views
- - media_entity_browser
  - admin_ui_toggle
  - password_policy
  - password_policy_character_types
@@ -92,7 +92,6 @@ dependencies:
  - rh_taxonomy
  - wysiwyg_template
  - default_content
- - entity_browser_entity_form
  - views_menu_children_filter
  - captcha
  - field_delimiter
@@ -109,7 +108,7 @@ dependencies:
  - redirect
  - redirect_404
  - webform
- - webform_bootstrap 
+ - webform_bootstrap
  - webform_ui
  - honeypot
  - username_enumeration_prevention

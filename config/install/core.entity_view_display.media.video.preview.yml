@@ -64,4 +64,5 @@ hidden:
   field_title: true
   field_transcript: true
   name: true
+  search_api_excerpt: true
   uid: true

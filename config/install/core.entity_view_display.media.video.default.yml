@@ -35,7 +35,7 @@ third_party_settings:
         id: ''
         classes: 'meta call-to-action-left-line has-margin-top-base'
       label: Meta
-      region: hidden
+      region: ds_content
     group_transcript:
       children:
         - field_transcript
@@ -47,7 +47,7 @@ third_party_settings:
         classes: 'transcript has-margin-top-base'
         open: false
       label: Transcript
-      region: hidden
+      region: ds_content
   ds:
     layout:
       id: ds_1col
@@ -55,6 +55,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -66,12 +67,12 @@ third_party_settings:
           ds_content: {  }
     regions:
       ds_content:
-        - field_tags
         - field_media_video_embed_field
+        - field_tags
         - field_credit_or_caption
         - group_transcript
-        - field_transcript
         - field_description
+        - field_transcript
         - group_meta
 id: media.video.default
 targetEntityType: media
@@ -162,5 +163,6 @@ hidden:
   created: true
   field_title: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

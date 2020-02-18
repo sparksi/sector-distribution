@@ -4,5 +4,4 @@ dependencies: {  }
 name: 'Article category'
 vid: article_types
 description: 'Used to sort views and searches by category. <em>Terms are rabbit-holed with a /news/archive redirect<em>'
-hierarchy: 0
 weight: -10

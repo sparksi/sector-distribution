@@ -6,7 +6,7 @@ general_settings:
   layout_plugins:
     visual_inline:
       weight: 0
-      enabled: false
+      enabled: true
     split_fields:
       enabled: true
       weight: 1

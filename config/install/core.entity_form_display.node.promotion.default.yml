@@ -2,15 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.media_entity_image
     - field.field.node.promotion.body
     - field.field.node.promotion.field_featured_content
     - field.field.node.promotion.field_promotion_type
     - field.field.node.promotion.field_teaser
     - node.type.promotion
   module:
-    - entity_browser
     - link
+    - media_library
     - text
 id: node.promotion.default
 targetEntityType: node
@@ -24,6 +23,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
   created:
@@ -49,16 +49,9 @@ content:
   field_teaser:
     weight: 2
     settings:
-      entity_browser: media_entity_image
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: preview
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   status:
     type: boolean_checkbox
@@ -82,13 +75,14 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   path: true
   promote: true

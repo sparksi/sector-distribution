@@ -1,11 +1,19 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.full_width
+    - core.entity_view_mode.media.half_width
+    - core.entity_view_mode.media.preview
+    - core.entity_view_mode.media.short_teaser
+    - core.entity_view_mode.media.teaser
   module:
     - editor
     - entity_embed
     - linkit
-  default_config_hash: bARQrVIepawQHwIj6TIFYwbTtkW8PCdKP2_aHbfwhB0
+    - media
+  default_config_hash: 0l2X23-uU3_zhT_BosHlwnUc_xzE15Pkb0qUI_qOYqM
 name: 'Full HTML'
 format: full_html
 weight: -8
@@ -14,7 +22,7 @@ filters:
     id: filter_html
     provider: filter
     status: false
-    weight: -46
+    weight: -45
     settings:
       allowed_html: '<a href hreflang data-entity-type data-entity-uuid data-entity-substitution> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-entity-substitution> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class="lead"> <span class="bg-warning">'
       filter_html_help: true
@@ -23,13 +31,13 @@ filters:
     id: filter_htmlcorrector
     provider: filter
     status: true
-    weight: -47
+    weight: -49
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
     status: false
-    weight: -49
+    weight: -46
     settings: {  }
   linkit:
     id: linkit
@@ -42,19 +50,19 @@ filters:
     id: editor_file_reference
     provider: editor
     status: false
-    weight: -44
+    weight: -43
     settings: {  }
   entity_embed:
     id: entity_embed
     provider: entity_embed
     status: true
-    weight: -48
+    weight: -47
     settings: {  }
   filter_html_escape:
     id: filter_html_escape
     provider: filter
     status: false
-    weight: -45
+    weight: -44
     settings: {  }
   filter_autop:
     id: filter_autop
@@ -72,7 +80,7 @@ filters:
     id: filter_align
     provider: filter
     status: true
-    weight: -43
+    weight: -48
     settings: {  }
   filter_url:
     id: filter_url
@@ -85,3 +93,21 @@ filters:
     id: filter_wysiwyg_cleanup
     weight: -39
     settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: -38
+    settings:
+      default_view_mode: full
+      allowed_media_types:
+        file: file
+        image: image
+        video: video
+      allowed_view_modes:
+        full: full
+        full_width: full_width
+        half_width: half_width
+        preview: preview
+        short_teaser: short_teaser
+        teaser: teaser

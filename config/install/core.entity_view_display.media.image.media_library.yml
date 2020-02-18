@@ -2,19 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.full_width
+    - core.entity_view_mode.media.media_library
     - field.field.media.image.field_credit_or_caption
     - field.field.media.image.field_description
     - field.field.media.image.field_media_image
     - field.field.media.image.field_tags
     - field.field.media.image.field_title
-    - image.style.scale_width_full_column
     - media.type.image
   module:
     - ds
-    - field_formatter_filter
-    - image
-    - text
+    - field_group
+    - responsive_image
 third_party_settings:
   ds:
     layout:
@@ -23,6 +21,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -35,50 +34,53 @@ third_party_settings:
     regions:
       ds_content:
         - field_media_image
-        - field_credit_or_caption
-id: media.image.full_width
+        - field_title
+  field_group:
+    group_meta:
+      children:
+        - field_tags
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'meta call-to-action-left-line has-margin-top-base'
+      label: Meta
+      region: hidden
+id: media.image.media_library
 targetEntityType: media
 bundle: image
-mode: full_width
+mode: media_library
 content:
-  field_credit_or_caption:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings:
-      field_formatter_filter:
-        format: restricted_basic_html
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            classes:
-              - caption
-            lb-col: false
-    type: text_default
-    region: ds_content
   field_media_image:
     weight: 0
     label: hidden
     settings:
-      image_style: scale_width_full_column
       image_link: ''
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    type: image
+      responsive_image_style: ''
+    third_party_settings: {  }
+    type: responsive_image
     region: ds_content
+  field_title:
+    type: string
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
 hidden:
   created: true
+  field_credit_or_caption: true
   field_description: true
   field_tags: true
-  field_title: true
   name: true
   search_api_excerpt: true
   thumbnail: true

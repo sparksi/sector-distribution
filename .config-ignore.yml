@@ -11,7 +11,9 @@ ignore:
   - system.menu.devel.yml
   - webform.webform.example_*
   - webform.webform_options.*
+  - webform.webform.contact.yml
   - block.block.bartik*
   - block.block.bootstrap_*
   - system.action.*
+  - image.style.linkit_result_thumbnail.yml
 

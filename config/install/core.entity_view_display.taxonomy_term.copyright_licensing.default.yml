@@ -47,4 +47,5 @@ content:
       target: ''
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true

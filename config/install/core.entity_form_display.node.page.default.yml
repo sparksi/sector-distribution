@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - entity_browser.browser.media_entity_image
     - field.field.node.page.body
     - field.field.node.page.field_auto_contextual_content
     - field.field.node.page.field_banner
@@ -16,9 +15,9 @@ dependencies:
     - node.type.page
   module:
     - datetime
-    - entity_browser
     - field_group
     - link
+    - media_library
     - metatag
     - path
     - text
@@ -49,7 +48,6 @@ third_party_settings:
       weight: 6
       format_type: details
       format_settings:
-        label: 'Related content'
         required_fields: true
         id: ''
         classes: ''
@@ -69,6 +67,7 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
   created:
     type: datetime_timestamp
@@ -85,16 +84,9 @@ content:
   field_banner:
     weight: 6
     settings:
-      entity_browser: media_entity_image
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: preview
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_last_updated:
     type: datetime_default
@@ -117,16 +109,9 @@ content:
   field_related_files:
     weight: 26
     settings:
-      entity_browser: media_entity_file
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: preview
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   field_related_links:
     weight: 27
@@ -147,16 +132,9 @@ content:
   field_teaser:
     weight: 7
     settings:
-      entity_browser: media_entity_image
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: preview
-      open: false
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_browser_entity_reference
+    type: media_library_widget
     region: content
   path:
     type: path
@@ -186,13 +164,14 @@ content:
       match_operator: CONTAINS
       size: 60
       placeholder: ''
+      match_limit: 10
     region: content
     third_party_settings: {  }
   url_redirects:
     weight: 50
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   promote: true
   sticky: true

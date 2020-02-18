@@ -23,6 +23,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -57,7 +58,7 @@ third_party_settings:
         id: ''
         classes: 'meta call-to-action-left-line has-margin-top-base'
       label: Meta
-      region: hidden
+      region: ds_content
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -129,5 +130,6 @@ hidden:
   created: true
   field_title: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

@@ -24,6 +24,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -39,9 +40,9 @@ third_party_settings:
         - field_media_file
         - group_media_meta
         - field_credit_or_caption
-        - field_mimetype
-        - group_meta
         - field_tags
+        - group_meta
+        - field_mimetype
         - field_filesize
   field_group:
     group_meta:
@@ -61,7 +62,7 @@ third_party_settings:
         id: ''
         classes: 'meta call-to-action-left-line has-margin-top-and-half'
       label: Meta
-      region: hidden
+      region: ds_content
     group_media_meta:
       children:
         - field_mimetype
@@ -79,7 +80,7 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Media meta'
-      region: hidden
+      region: ds_content
 id: media.file.default
 targetEntityType: media
 bundle: file
@@ -164,5 +165,6 @@ hidden:
   created: true
   field_title: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

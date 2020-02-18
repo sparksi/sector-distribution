@@ -5,8 +5,6 @@ dependencies:
     - field.storage.node.body
     - search_api.index.sector_sitewide_search
     - taxonomy.vocabulary.automated_contextual_content
-  content:
-    - 'taxonomy_term:automated_contextual_content:ca376547-fdf7-433f-a889-a4e0cb136bf4'
   module:
     - search_api
     - text
@@ -17,7 +15,6 @@ description: 'Search API search view provided by the Sector profile.'
 tag: ''
 base_table: search_api_index_sector_sitewide_search
 base_field: search_api_id
-core: 8.x
 display:
   default:
     display_plugin: default
@@ -373,6 +370,8 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -411,6 +410,8 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -458,6 +459,8 @@ display:
               administrator: '0'
               content_editor: '0'
             placeholder: ''
+            operator_limit_selection: false
+            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''

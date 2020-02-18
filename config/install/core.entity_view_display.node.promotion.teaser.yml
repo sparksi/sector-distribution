@@ -87,3 +87,4 @@ hidden:
   field_promotion_type: true
   field_teaser: true
   links: true
+  search_api_excerpt: true
