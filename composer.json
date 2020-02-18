@@ -121,9 +121,6 @@
                 "No contextual link to edit menu": "https://www.drupal.org/files/issues/2799821-2.menu_block.contextual_links.patch",
                 "Hide menu block title if empty": "https://www.drupal.org/files/issues/2018-05-08/menu_block-hide_block_if_no_links-2757215-9.patch"
             },
-            "drupal/core": {
-                "Profile provided configuration entities can have unmeetable dependencies": "https://www.drupal.org/files/issues/2018-09-20/2922417-25.patch"
-            },
             "drupal/field_delimiter": {
                 "Unfined index fix": "https://www.drupal.org/files/issues/field-deleimiter-undefined-2926377.patch"
             },
