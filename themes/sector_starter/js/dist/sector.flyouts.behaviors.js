@@ -107,7 +107,6 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
         if (breakpoints) {
           if (window.matchMedia(breakpoints['sector_starter.medium']).matches && Modernizr.touchevents) {
             var links = $('.expanded .menu__link', menu).not('.menu .menu .menu__link', menu);
-            console.log(links);
 
             links.once().on('touchend', function (evt) {
               if (!$(evt.currentTarget).hasClass('js-opened')) {

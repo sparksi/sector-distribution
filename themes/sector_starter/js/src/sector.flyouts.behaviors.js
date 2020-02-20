@@ -97,7 +97,6 @@
         if (breakpoints) {
           if (window.matchMedia(breakpoints['sector_starter.medium']).matches && Modernizr.touchevents) {
             const links = $('.expanded .menu__link', menu).not('.menu .menu .menu__link', menu);
-            console.log(links);
 
             links.once().on('touchend', (evt) => {
               if (!$(evt.currentTarget).hasClass('js-opened')) {
