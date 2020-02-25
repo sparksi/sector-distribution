@@ -4,6 +4,6 @@ first_day: 1
 timezone:
   default: UTC
   user:
-    configurable: true
+    configurable: false
     warn: false
     default: 0
