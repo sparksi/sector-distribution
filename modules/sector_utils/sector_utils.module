@@ -8,6 +8,22 @@ use Drupal\Core\Entity\EntityInterface;
  */
 
 /**
+ * Implements hook_page_attachments().
+ *
+ * Loads the CSS for the admin theme.
+ */
+function sector_utils_page_attachments(array &$attachments) {
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+  // Lets just keep this for the default admin theme. If people have changed
+  // they probably have their own styles/look.
+  if ($theme == 'seven') {
+    $attachments['#attached']['library'][] = 'sector_utils/admin';
+  }
+}
+
+
+
+/**
  * Implements hook_form_alter().
  *
  * Improve page node status checkbox by changing the label

@@ -2,52 +2,21 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_credit_or_caption
-    - field.field.media.video.field_description
-    - field.field.media.video.field_media_video_embed_field
-    - field.field.media.video.field_tags
-    - field.field.media.video.field_title
-    - field.field.media.video.field_transcript
-    - media.type.video
+    - field.field.media.remote_video.field_credit_or_caption
+    - field.field.media.remote_video.field_description
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_tags
+    - field.field.media.remote_video.field_title
+    - field.field.media.remote_video.field_transcript
+    - media.type.remote_video
   module:
     - ds
     - field_delimiter
     - field_formatter_filter
     - field_group
+    - media
     - text
-    - video_embed_field
 third_party_settings:
-  field_group:
-    group_meta:
-      children:
-        - field_tags
-      parent_name: ''
-      weight: 4
-      format_type: html_element
-      format_settings:
-        element: div
-        show_label: false
-        label_element: h3
-        label_element_classes: ''
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: 'meta call-to-action-left-line has-margin-top-base'
-      label: Meta
-      region: ds_content
-    group_transcript:
-      children:
-        - field_transcript
-      parent_name: ''
-      weight: 2
-      format_type: details
-      format_settings:
-        id: ''
-        classes: 'transcript has-margin-top-base'
-        open: false
-      label: Transcript
-      region: ds_content
   ds:
     layout:
       id: ds_1col
@@ -67,16 +36,49 @@ third_party_settings:
           ds_content: {  }
     regions:
       ds_content:
-        - field_media_video_embed_field
-        - field_tags
+        - field_media_oembed_video
         - field_credit_or_caption
         - group_transcript
         - field_description
-        - field_transcript
+        - field_tags
         - group_meta
-id: media.video.default
+        - field_transcript
+  field_group:
+    group_transcript:
+      children:
+        - field_transcript
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: ds_content
+      format_settings:
+        id: ''
+        classes: 'transcript has-margin-top-base'
+        description: ''
+        open: false
+        required_fields: false
+      label: Transcript
+    group_meta:
+      children:
+        - field_tags
+      parent_name: ''
+      weight: 4
+      format_type: html_element
+      region: ds_content
+      format_settings:
+        id: ''
+        classes: 'meta call-to-action-left-line has-margin-top-base'
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Meta
+id: media.remote_video.default
 targetEntityType: media
-bundle: video
+bundle: remote_video
 mode: default
 content:
   field_credit_or_caption:
@@ -88,7 +90,7 @@ content:
         format: restricted_basic_html
       ds:
         ft:
-          id: minimal
+          id: default
           settings:
             lb: ''
             classes:
@@ -114,21 +116,26 @@ content:
             lb-col: false
     type: text_default
     region: ds_content
-  field_media_video_embed_field:
-    weight: 0
+  field_media_oembed_video:
+    type: oembed
     label: hidden
+    weight: 0
     settings:
-      responsive: true
-      width: 854
-      height: 480
-      autoplay: true
-    third_party_settings: {  }
-    type: video_embed_field_video
+      max_width: 0
+      max_height: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - responsive-ratio
+              - responsive-ratio--16-9
+            lb-col: false
     region: ds_content
   field_tags:
-    type: entity_reference_label
-    weight: 0
-    region: ds_content
+    weight: 4
     label: inline
     settings:
       link: false
@@ -143,8 +150,10 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
+    type: entity_reference_label
+    region: ds_content
   field_transcript:
-    weight: 3
+    weight: 10
     label: hidden
     settings: {  }
     third_party_settings:

@@ -490,9 +490,6 @@ display:
         - 'config:core.entity_view_display.media.image.half_width'
         - 'config:core.entity_view_display.media.image.preview'
         - 'config:core.entity_view_display.media.image.teaser'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.full_width'
-        - 'config:core.entity_view_display.media.video.preview'
   page:
     display_plugin: page
     id: page
@@ -800,9 +797,6 @@ display:
         - 'config:core.entity_view_display.media.image.half_width'
         - 'config:core.entity_view_display.media.image.preview'
         - 'config:core.entity_view_display.media.image.teaser'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.full_width'
-        - 'config:core.entity_view_display.media.video.preview'
   widget:
     display_plugin: page
     id: widget
@@ -1133,9 +1127,6 @@ display:
         - 'config:core.entity_view_display.media.image.half_width'
         - 'config:core.entity_view_display.media.image.preview'
         - 'config:core.entity_view_display.media.image.teaser'
-        - 'config:core.entity_view_display.media.video.default'
-        - 'config:core.entity_view_display.media.video.full_width'
-        - 'config:core.entity_view_display.media.video.preview'
   widget_table:
     display_plugin: page
     id: widget_table

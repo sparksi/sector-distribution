@@ -2,11 +2,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - media.type.video
-id: media.video.status
+    - media.type.remote_video
+id: media.remote_video.status
 field_name: status
 entity_type: media
-bundle: video
+bundle: remote_video
 label: Published
 description: ''
 required: false

@@ -162,3 +162,11 @@ function excludeXmlsitemapNodes() {
     $save = \Drupal::service('xmlsitemap.link_storage')->save($link);
   }
 }
+
+/**
+ * Add missing oembed providers url into media.settings
+ */
+function sector_update_8401() {
+  $data = ["oembed_providers_url" => "https://oembed.com/providers.json"];
+  \Drupal::configFactory()->getEditable('media.settings')->merge($data)->save();
+}

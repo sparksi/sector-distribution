@@ -16,4 +16,7 @@ ignore:
   - block.block.bootstrap_*
   - system.action.*
   - image.style.linkit_result_thumbnail.yml
+  - media.settings.yml
+  - embed.button.*
+  - linkit.linkit_profile.default.yml
 

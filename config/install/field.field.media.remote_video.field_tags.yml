@@ -3,12 +3,12 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_tags
-    - media.type.video
+    - media.type.remote_video
     - taxonomy.vocabulary.tags
-id: media.video.field_tags
+id: media.remote_video.field_tags
 field_name: field_tags
 entity_type: media
-bundle: video
+bundle: remote_video
 label: Tags
 description: ''
 required: false

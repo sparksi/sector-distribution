@@ -13,7 +13,7 @@ dependencies:
     - entity_embed
     - linkit
     - media
-  default_config_hash: 0l2X23-uU3_zhT_BosHlwnUc_xzE15Pkb0qUI_qOYqM
+  default_config_hash: eIMLNXS_i4txsriUuAhsrhlXIB6lmniTHhFfn3lap7Q
 name: 'Full HTML'
 format: full_html
 weight: -8
@@ -99,11 +99,11 @@ filters:
     status: true
     weight: -38
     settings:
-      default_view_mode: full
+      default_view_mode: short_teaser
       allowed_media_types:
         file: file
         image: image
-        video: video
+        remote_video: remote_video
       allowed_view_modes:
         full: full
         full_width: full_width

@@ -3,34 +3,20 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full_width
-    - field.field.media.video.field_credit_or_caption
-    - field.field.media.video.field_description
-    - field.field.media.video.field_media_video_embed_field
-    - field.field.media.video.field_tags
-    - field.field.media.video.field_title
-    - field.field.media.video.field_transcript
-    - media.type.video
+    - field.field.media.remote_video.field_credit_or_caption
+    - field.field.media.remote_video.field_description
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_tags
+    - field.field.media.remote_video.field_title
+    - field.field.media.remote_video.field_transcript
+    - media.type.remote_video
   module:
     - ds
     - field_formatter_filter
     - field_group
+    - media
     - text
-    - video_embed_field
 third_party_settings:
-  field_group:
-    group_transcript:
-      children:
-        - field_transcript
-      parent_name: ''
-      weight: 2
-      format_type: details
-      format_settings:
-        label: Transcript
-        id: ''
-        classes: 'transcript has-margin-top-base'
-        open: false
-      label: Transcript
-      region: hidden
   ds:
     layout:
       id: ds_1col
@@ -38,6 +24,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -49,14 +36,28 @@ third_party_settings:
           ds_content: {  }
     regions:
       ds_content:
-        - field_media_video_embed_field
+        - field_media_oembed_video
         - field_credit_or_caption
         - group_transcript
         - field_transcript
-        - group_meta
-id: media.video.full_width
+  field_group:
+    group_transcript:
+      children:
+        - field_transcript
+      parent_name: ''
+      weight: 2
+      format_type: details
+      region: ds_content
+      format_settings:
+        id: ''
+        classes: 'transcript has-margin-top-base'
+        description: ''
+        open: false
+        required_fields: false
+      label: Transcript
+id: media.remote_video.full_width
 targetEntityType: media
-bundle: video
+bundle: remote_video
 mode: full_width
 content:
   field_credit_or_caption:
@@ -76,16 +77,23 @@ content:
             lb-col: false
     type: text_default
     region: ds_content
-  field_media_video_embed_field:
-    weight: 0
+  field_media_oembed_video:
+    type: oembed
     label: hidden
+    weight: 0
     settings:
-      responsive: true
-      width: 854
-      height: 480
-      autoplay: true
-    third_party_settings: {  }
-    type: video_embed_field_video
+      max_width: 0
+      max_height: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            classes:
+              - responsive-ratio
+              - responsive-ratio--16-9
+            lb-col: false
     region: ds_content
   field_transcript:
     weight: 3

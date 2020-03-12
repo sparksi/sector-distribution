@@ -3,20 +3,20 @@ status: true
 dependencies:
   config:
     - field.storage.media.field_credit_or_caption
-    - media.type.video
+    - media.type.remote_video
   module:
     - better_formats
     - text
 third_party_settings:
   better_formats:
-    allowed_formats_toggle: 1
+    allowed_formats_toggle: 0
     allowed_formats:
+      basic_html: basic_html
       restricted_basic_html: restricted_basic_html
-      basic_html: 0
-      full_html: 0
-      restricted_html: 0
-      teaser_display_text: 0
-      raw_html: 0
+      full_html: full_html
+      restricted_html: restricted_html
+      teaser_display_text: teaser_display_text
+      raw_html: raw_html
     default_order_toggle: 0
     default_order_wrapper:
       formats:
@@ -32,10 +32,10 @@ third_party_settings:
           weight: '-6'
         raw_html:
           weight: '0'
-id: media.video.field_credit_or_caption
+id: media.remote_video.field_credit_or_caption
 field_name: field_credit_or_caption
 entity_type: media
-bundle: video
+bundle: remote_video
 label: ' Credit or caption'
 description: ''
 required: false

@@ -2,17 +2,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.media.video.field_credit_or_caption
-    - field.field.media.video.field_description
-    - field.field.media.video.field_media_video_embed_field
-    - field.field.media.video.field_tags
-    - field.field.media.video.field_title
-    - field.field.media.video.field_transcript
-    - media.type.video
+    - field.field.media.remote_video.field_credit_or_caption
+    - field.field.media.remote_video.field_description
+    - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_tags
+    - field.field.media.remote_video.field_title
+    - field.field.media.remote_video.field_transcript
+    - media.type.remote_video
   module:
     - field_group
+    - media
     - text
-    - video_embed_field
 third_party_settings:
   field_group:
     group_meta_data:
@@ -20,29 +20,22 @@ third_party_settings:
         - field_transcript
         - field_tags
       parent_name: ''
-      weight: 4
+      weight: 5
       format_type: details
+      region: content
       format_settings:
         id: ''
         classes: ''
+        description: ''
         open: false
         required_fields: true
       label: 'Meta data'
-      region: content
-id: media.video.default
+id: media.remote_video.default
 targetEntityType: media
-bundle: video
+bundle: remote_video
 mode: default
 content:
   field_credit_or_caption:
-    weight: 2
-    settings:
-      rows: 5
-      placeholder: ''
-    third_party_settings: {  }
-    type: text_textarea
-    region: content
-  field_description:
     weight: 3
     settings:
       rows: 5
@@ -50,22 +43,32 @@ content:
     third_party_settings: {  }
     type: text_textarea
     region: content
-  field_media_video_embed_field:
-    weight: 0
-    settings: {  }
-    third_party_settings: {  }
-    type: video_embed_field_textfield
-    region: content
-  field_tags:
-    weight: 9
+  field_description:
+    weight: 4
     settings:
-      match_operator: CONTAINS
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_media_oembed_video:
+    type: oembed_textfield
+    weight: 0
+    settings:
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
-    type: entity_reference_autocomplete
     region: content
+  field_tags:
+    type: entity_reference_autocomplete
+    weight: 12
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_title:
     weight: 1
     settings:
@@ -75,22 +78,29 @@ content:
     type: string_textfield
     region: content
   field_transcript:
-    weight: 8
+    type: text_textarea
+    weight: 11
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: text_textarea
+  name:
+    type: string_textfield
+    weight: 2
     region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 5
+    weight: 6
     region: content
     third_party_settings: {  }
 hidden:
   created: true
-  name: true
   path: true
   uid: true

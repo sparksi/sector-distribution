@@ -13,7 +13,7 @@ dependencies:
     - entity_embed
     - linkit
     - media
-  default_config_hash: VVys1E9kKwjXPdnzmZJ-QUg9ssF8uTnYCNh4qQv2ZaA
+  default_config_hash: WSSFQPMOl2eToB7g1kaxq9ZBowt-YQNQ2rpPFajsE18
 name: 'Basic HTML'
 format: basic_html
 weight: -10
@@ -24,7 +24,7 @@ filters:
     status: true
     weight: -49
     settings:
-      allowed_html: '<em> <strong> <cite> <blockquote cite class> <code> <ul type class> <ol start type class> <li class> <dl class> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <br> <hr> <s> <sup> <sub> <hr> <p class> <span class> <div aria-label role class> <table class> <caption> <tbody><thead> <tr> <td> <th> <pre> <address> <code> <cite><em> <b> <u> <i> <strong> <del> <ins> <strike> <footer> <small> <mark class> <a href hreflang !href accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution name> <img class src alt height width data-entity-type data-entity-uuid data-entity-substitution data-align data-caption> <drupal-entity data-entity-type data-entity-uuid data-entity-substitution data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button> <drupal-media data-entity-type, data-entity-uuid>'
+      allowed_html: '<em> <strong> <cite> <blockquote cite class> <code> <ul type class> <ol start type class> <li class> <dl class> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id class> <h6 id class> <br> <hr> <s> <sup> <sub> <hr> <p class> <span class> <div aria-label role class> <table class> <caption> <tbody><thead> <tr> <td> <th> <pre> <address> <code> <cite><em> <b> <u> <i> <strong> <del> <ins> <strike> <footer> <small> <mark class> <a href hreflang !href accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution name> <img class src alt height width data-entity-type data-entity-uuid data-entity-substitution data-align data-caption> <drupal-entity data-entity-type data-entity-uuid data-entity-substitution data-entity-embed-display data-entity-embed-display-settings data-align data-caption data-embed-button> <drupal-media data-entity-type, data-entity-uuid data-view-mode>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -99,12 +99,10 @@ filters:
     status: true
     weight: 100
     settings:
-      default_view_mode: short_teaser
+      default_view_mode: full_width
       allowed_media_types: {  }
       allowed_view_modes:
-        full: full
         full_width: full_width
         half_width: half_width
-        preview: preview
         short_teaser: short_teaser
         teaser: teaser
