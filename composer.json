@@ -31,7 +31,7 @@
         "drupal/bootstrap": "3.21",
         "drupal/captcha": "1.0-beta4",
         "drupal/config_update": "1.6",
-        "drupal/core": "8.8.2",
+        "drupal/core": "8.8.4",
         "drupal/ctools": "3.2",
         "drupal/default_content": "1.0-alpha8",
         "drupal/devel": "2.1",
