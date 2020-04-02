@@ -52,7 +52,7 @@ third_party_settings:
         settings:
           link: true
           wrapper: h3
-          class: slat__title
+          class: 'slat__title h4'
         ft:
           id: reset
           settings:

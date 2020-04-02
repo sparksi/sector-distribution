@@ -58,13 +58,14 @@ third_party_settings:
         element: div
         show_label: false
         label_element: h3
+        label_element_classes: ''
         attributes: ''
         effect: none
         speed: fast
         id: ''
-        classes: 'meta call-to-action-left-line'
+        classes: 'meta call-to-action-left-line mb-3'
       label: Meta
-      region: hidden
+      region: ds_content
     group_related_content:
       children:
         - field_related_links
@@ -72,16 +73,17 @@ third_party_settings:
       weight: 3
       format_type: html_element
       format_settings:
-        id: ''
-        classes: 'related has-margin-top-double'
         element: div
         show_label: true
-        label_element: h3
+        label_element: h4
+        label_element_classes: mb-0
         attributes: ''
         effect: none
         speed: fast
+        id: ''
+        classes: 'related mt-5'
       label: 'Related content'
-      region: hidden
+      region: ds_content
 id: node.resource.default
 targetEntityType: node
 bundle: resource
@@ -129,12 +131,32 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: default
+          id: expert
           settings:
             lb: ''
-            lb-col: true
-            classes:
-              - has-margin-top-double
+            prefix: ''
+            lbw: true
+            lbw-el: strong
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'last-updated mt-4 mt-lg-6 d-inline-flex'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
     type: datetime_default
     region: ds_content
   field_related_files:
@@ -149,12 +171,32 @@ content:
       ds:
         ds_limit: ''
         ft:
-          id: default
+          id: expert
           settings:
             lb: 'Available formats and related files'
-            classes:
-              - list--related-files
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: 'h5 my-0 card-header'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'my-4 card'
+            ow-at: ''
+            fis: true
+            fis-el: ul
+            fis-cl: 'list-unstyled mb-0 mt-n3 card-body'
+            fis-at: ''
+            fi: true
+            fi-el: li
+            fi-cl: mt-3
+            fi-at: ''
+            suffix: ''
             lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
     type: entity_reference_entity_view
     region: ds_content
   field_related_links:
@@ -172,11 +214,32 @@ content:
       ds:
         ds_limit: ''
         ft:
-          id: default
+          id: expert
           settings:
             lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: 'h5 my-0 card-header'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'mt-4 card'
+            ow-at: ''
+            fis: true
+            fis-el: ul
+            fis-cl: 'list-unstyled mb-0 mt-n2 card-body'
+            fis-at: ''
+            fi: true
+            fi-el: li
+            fi-cl: 'mt-2 smooth-text'
+            fi-at: ''
+            suffix: ''
             lb-col: false
-            classes: {  }
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
     type: link
     region: ds_content
 hidden:

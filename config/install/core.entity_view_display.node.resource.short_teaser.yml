@@ -62,11 +62,11 @@ third_party_settings:
             lbw-at: ''
             ow: true
             ow-el: div
-            ow-cl: has-margin-top-base-alternate
+            ow-cl: w-100
             ow-at: ''
             fis: true
             fis-el: h3
-            fis-cl: 'slat__title h5 has-no-margin'
+            fis-cl: 'slat__title h5 my-0'
             fis-at: ''
             fi-el: ''
             fi-cl: ''
@@ -95,15 +95,32 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: default
+          id: expert
           settings:
             lb: ''
-            classes:
-              - slat__date
-              - slat__term
-              - inline-block
-              - has-margin-top-quarter
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'd-inline-flex ml-2 text-muted mt-2 mb-0'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: div
+            fi-cl: ml-1
+            fi-at: ''
+            suffix: ''
+            lbw: false
             lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
   field_resource_type:
     type: entity_reference_label
     weight: 1
@@ -114,15 +131,32 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: minimal
+          id: expert
           settings:
             lb: ''
-            classes:
-              - slat__term
-              - inline-block
-              - has-margin-top-quarter
-              - has-margin-right-quarter
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'd-inline-flex h6 mt-2 mb-0 align-self-center'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: span
+            fi-cl: 'badge badge-primary'
+            fi-at: ''
+            suffix: ''
+            lbw: false
             lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
 hidden:
   body: true
   field_copyright_license: true
