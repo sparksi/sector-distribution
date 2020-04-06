@@ -110,7 +110,7 @@ content:
             ow-at: ''
             fis: true
             fis-el: ul
-            fis-cl: 'list-unstyled mb-0 mt-n2 card-body'
+            fis-cl: 'list-unstyled mb-0 mt-n2 card-body smooth-text'
             fis-at: ''
             fi: true
             fi-el: li

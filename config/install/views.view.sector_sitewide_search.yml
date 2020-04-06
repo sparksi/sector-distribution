@@ -5,16 +5,19 @@ dependencies:
     - field.storage.node.body
     - search_api.index.sector_sitewide_search
     - taxonomy.vocabulary.automated_contextual_content
+  content:
+    - 'taxonomy_term:automated_contextual_content:ca376547-fdf7-433f-a889-a4e0cb136bf4'
   module:
     - search_api
     - text
 id: sector_sitewide_search
 label: 'Sector sitewide search'
 module: views
-description: 'Search API search view. Provided by the Sector Starter KIT.'
+description: 'Search API search view provided by the Sector profile.'
 tag: ''
 base_table: search_api_index_sector_sitewide_search
 base_field: search_api_id
+core: 8.x
 display:
   default:
     display_plugin: default
@@ -70,11 +73,11 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: 'slat has-margin-top-and-half has-padding-top-and-half has-border-top show'
+          row_class: 'slat mt-4 pt-4 border-top'
           default_row_class: false
           type: ul
-          wrapper_class: ''
-          class: list-unstyled
+          wrapper_class: 'mt-3 d-flex flex-column'
+          class: 'list-unstyled mt-n4'
       row:
         type: fields
       fields:
@@ -115,7 +118,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: h2
-          element_class: 'slat__title h3 has-no-margin'
+          element_class: 'slat__title h4 my-0 w-100'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -262,7 +265,7 @@ display:
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: div
-          element_wrapper_class: 'slat__body has-margin-top-half'
+          element_wrapper_class: 'slat__body mt-2 w-100'
           element_default_classes: false
           empty: '{{ body }}'
           hide_empty: false
@@ -310,12 +313,12 @@ display:
             preserve_tags: ''
             html: false
           element_type: span
-          element_class: 'slat__term inline-block has-margin-top-half has-margin-right-half'
+          element_class: 'badge badge-secondary'
           element_label_type: '0'
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: '0'
-          element_wrapper_class: ''
+          element_wrapper_type: div
+          element_wrapper_class: 'slat__term inline-block mt-2'
           element_default_classes: false
           empty: ''
           hide_empty: false
@@ -370,8 +373,6 @@ display:
             multiple: false
             remember_roles:
               authenticated: authenticated
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -410,8 +411,6 @@ display:
             remember_roles:
               authenticated: authenticated
             reduce: false
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -459,8 +458,6 @@ display:
               administrator: '0'
               content_editor: '0'
             placeholder: ''
-            operator_limit_selection: false
-            operator_list: {  }
           is_grouped: false
           group_info:
             label: ''
@@ -488,7 +485,7 @@ display:
           group_type: group
           admin_label: ''
           empty: false
-          content: "<div class=\"prose has-margin-top-base\">\r\n<p class=\"lead\"><strong>@total</strong> Results</p>\r\n<a class=\"link-down hidden-md hidden-lg has-margin-top-base\" href=\"#sidebar-anchor\">Filter search results</a>\r\n</div>"
+          content: "<div class=\"prose has-margin-top-base\">\r\n<p class=\"lead\"><strong>@total</strong> Results</p>\r\n<a class=\"link-down d-md-none d-lg-none d-xl-none d-xxl-none d-mg-none mt-2\" href=\"#sidebar-anchor\">Filter search results</a>\r\n</div>"
           plugin_id: result
       footer: {  }
       empty:
@@ -508,6 +505,7 @@ display:
       relationships: {  }
       arguments: {  }
       display_extenders: {  }
+      css_class: search-results
     cache_metadata:
       max-age: -1
       contexts:

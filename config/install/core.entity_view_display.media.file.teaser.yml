@@ -24,6 +24,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -40,7 +41,6 @@ third_party_settings:
         - group_media_meta
         - field_credit_or_caption
         - field_mimetype
-        - group_meta
         - field_filesize
   field_group:
     group_media_meta:
@@ -60,7 +60,7 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Media meta'
-      region: hidden
+      region: ds_content
 id: media.file.teaser
 targetEntityType: media
 bundle: file
@@ -75,7 +75,7 @@ content:
         format: restricted_basic_html
       ds:
         ft:
-          id: default
+          id: minimal
           settings:
             lb: ''
             classes:
@@ -104,7 +104,14 @@ content:
     label: hidden
     settings:
       use_description_as_link_text: true
-    third_party_settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: minimal
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
     type: file_default
     region: ds_content
   field_mimetype:
