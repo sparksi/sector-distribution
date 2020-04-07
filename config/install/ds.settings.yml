@@ -54,6 +54,7 @@ classes:
     - mr-9
     - mr-10
     - card
+    - d-print-none      
   field:
     - slat__body
     - slat__media
