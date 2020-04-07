@@ -109,7 +109,8 @@ content:
           settings:
             lb: ''
             lb-col: false
-            classes: {  }
+            classes:
+              - prose
     type: text_default
     region: ds_content
 hidden:
