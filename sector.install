@@ -52,7 +52,7 @@ function sector_install() {
  */
 function createEntityqueues() {
   // Load entityqueue. Need to load items next.
-  $queueStorage = \Drupal::entityManager()->getStorage('entity_subqueue');
+  $queueStorage = \Drupal::entityTypeManager()->getStorage('entity_subqueue');
   $informationalQueue = $queueStorage->load('information_tiles');
   $promotionalLinksQueue = $queueStorage->load('promotional_links');
   $promotionalTilesQueue = $queueStorage->load('promotional_tiles');
@@ -75,9 +75,8 @@ function createEntityqueues() {
     '25',
   ];
   $items = [];
-
+  $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
   foreach ($InformationTileEntityIds as $id) {
-    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
     $node = $nodeStorage->load($id);
     $items[] = $node;
   }
@@ -85,7 +84,6 @@ function createEntityqueues() {
   $informationalQueue->save();
   $items = [];
   foreach ($promotionalLinksEntityIds as $id) {
-    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
     $node = $nodeStorage->load($id);
     $items[] = $node;
   }
@@ -93,7 +91,6 @@ function createEntityqueues() {
   $promotionalLinksQueue->save();
   $items = [];
   foreach ($promotionalTilesEntityIds as $id) {
-    $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
     $node = $nodeStorage->load($id);
     $items[] = $node;
   }
@@ -115,8 +112,8 @@ function createUsers() {
     'Robot' => 'robot',
   ];
   $count = 0;
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
   foreach ($users as $username => $role) {
-    $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
     $user = User::create();
 
     // Randomly generate a 10 character pass.
@@ -148,18 +145,20 @@ function createUsers() {
  */
 function generateAlias() {
   $nodes = Node::loadMultiple();
+  $pathautoGenerator = \Drupal::service('pathauto.generator');
   foreach ($nodes as $node) {
-    \Drupal::service('pathauto.generator')->updateEntityAlias($node, 'insert');
+    $pathautoGenerator->updateEntityAlias($node, 'insert');
   }
 }
 
 function excludeXmlsitemapNodes() {
   $nids = [14, 5];
+  $xmlSitemapLinkStorage = \Drupal::service('xmlsitemap.link_storage'); 
   foreach ($nids as $nid) {
-    $link = \Drupal::service('xmlsitemap.link_storage')->load('node', $nid);
+    $link = $xmlSitemapLinkStorage->load('node', $nid);
     $link['status'] = "0";
     $link['status_override'] = "1";
-    $save = \Drupal::service('xmlsitemap.link_storage')->save($link);
+    $save = $xmlSitemapLinkStorage->save($link);
   }
 }
 
