@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_news
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: 'promotion promotion--news my-md-6 mt-5'
+id: views_block__sector_news_block_2_3
+theme: sector_radix_starter
+region: post_content
+weight: -26
+provider: null
+plugin: 'views_block:sector_news-block_2'
+settings:
+  id: 'views_block:sector_news-block_2'
+  label: 'Latest news'
+  provider: views
+  label_display: visible
+  views_label: 'Latest news'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

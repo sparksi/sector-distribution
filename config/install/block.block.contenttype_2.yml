@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.content_type
+  module:
+    - block_class
+    - facets
+    - system
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: 'promotion--facet-group block-facet--checkbox border-bottom mb-6 mb-sm-0'
+id: contenttype_2
+theme: sector_radix_starter
+region: sidebar
+weight: 0
+provider: null
+plugin: 'facet_block:content_type'
+settings:
+  id: 'facet_block:content_type'
+  label: 'Filter by type'
+  provider: facets
+  label_display: visible
+  block_id: contenttype_2
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }

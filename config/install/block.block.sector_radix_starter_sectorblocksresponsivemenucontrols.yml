@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - sector_blocks
+    - term_condition
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: 'control control--responsive-menu js-offclick-whitelist'
+id: sector_radix_starter_sectorblocksresponsivemenucontrols
+theme: sector_radix_starter
+region: header
+weight: -22
+provider: null
+plugin: responsive_menu_controls
+settings:
+  id: responsive_menu_controls
+  label: 'Sector blocks - Responsive menu controls'
+  provider: sector_blocks
+  label_display: '0'
+visibility:
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping:
+      node: '@node.node_route_context:node'

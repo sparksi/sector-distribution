@@ -1,0 +1,32 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - block_class
+    - system
+    - term_condition
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: 'promotion promotion--brand'
+id: sector_radix_starter_sitebranding
+theme: sector_radix_starter
+region: pre_header
+weight: -5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: false
+visibility:
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping: {  }

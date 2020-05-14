@@ -1,0 +1,40 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.sector_resource
+  module:
+    - block_class
+    - system
+    - term_condition
+    - views
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: 'promotion promotion--resources has-margin-top-double'
+id: sector_radix_starter_views_block__sector_resource_block_2
+theme: sector_radix_starter
+region: pre_header
+weight: -8
+provider: null
+plugin: 'views_block:sector_resource-block_2'
+settings:
+  id: 'views_block:sector_resource-block_2'
+  label: 'Latest resources'
+  provider: views
+  label_display: visible
+  views_label: 'Latest resources'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
+  term:
+    id: term
+    negate: false
+    tid: null
+    context_mapping:
+      node: '@node.node_route_context:node'

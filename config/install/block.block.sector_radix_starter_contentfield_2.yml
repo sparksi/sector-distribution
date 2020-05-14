@@ -1,0 +1,42 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+  module:
+    - block_class
+    - fieldblock
+    - term_condition
+    - text
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: node__subtitle
+id: sector_radix_starter_contentfield_2
+theme: sector_radix_starter
+region: pre_header
+weight: -4
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Subtitle (alternate 1)'
+  provider: fieldblock
+  label_display: '0'
+  label_from_field: true
+  field_name: field_subtitle
+  formatter_id: text_trimmed
+  formatter_settings:
+    trim_length: 600
+visibility:
+  term:
+    id: term
+    negate: false
+    tid:
+      -
+        target_id: '7'
+      -
+        target_id: '6'
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,39 @@
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main-menu
+  module:
+    - block_class
+    - menu_block
+    - term_condition
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: 'navigation navigation--secondary'
+id: sector_radix_starter_mainmenu_3
+theme: sector_radix_starter
+region: pre_header
+weight: -17
+provider: null
+plugin: 'menu_block:main-menu'
+settings:
+  id: 'menu_block:main-menu'
+  label: 'In this section (menu)'
+  provider: menu_block
+  label_display: visible
+  level: 2
+  depth: 0
+  expand: 0
+  parent: 'main-menu:'
+  suggestion: main_menu
+visibility:
+  term:
+    id: term
+    negate: true
+    tid:
+      -
+        target_id: '4'
+    context_mapping:
+      node: '@node.node_route_context:node'

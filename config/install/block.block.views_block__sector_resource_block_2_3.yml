@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_resource
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: 'promotion promotion--resources my-sm-6 mt-3'
+id: views_block__sector_resource_block_2_3
+theme: sector_radix_starter
+region: post_content
+weight: -25
+provider: null
+plugin: 'views_block:sector_resource-block_2'
+settings:
+  id: 'views_block:sector_resource-block_2'
+  label: 'Sector resource'
+  provider: views
+  label_display: visible
+  views_label: 'Sector resource'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

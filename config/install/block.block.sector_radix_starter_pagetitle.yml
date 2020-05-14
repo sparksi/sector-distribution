@@ -1,0 +1,27 @@
+langcode: en
+status: false
+dependencies:
+  module:
+    - term_condition
+  theme:
+    - sector_radix_starter
+id: sector_radix_starter_pagetitle
+theme: sector_radix_starter
+region: pre_header
+weight: -14
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title (default)'
+  provider: core
+  label_display: '0'
+visibility:
+  term:
+    id: term
+    negate: true
+    tid:
+      -
+        target_id: '4'
+    context_mapping:
+      node: '@node.node_route_context:node'
