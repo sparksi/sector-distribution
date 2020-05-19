@@ -1,7 +1,7 @@
 <?php
 
 use Drupal\user\Entity\User;
-use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityPublishedInterface;
 
 /**
  * @file
@@ -68,7 +68,7 @@ function sector_utils_contextual_links_view_alter(&$element, $items) {
 function sector_utils_ds_pre_render_alter(array &$layout_render_array, array $context, array &$vars) {
   if ($layout_render_array['#view_mode'] != 'full'
     && !empty($context['entity'])
-    && $context['entity'] instanceof EntityInterface
+    && $context['entity'] instanceof EntityPublishedInterface
     && !$context['entity']->isPublished()){
     $vars['attributes']['class'][] = 'entity-status-unpublished';
   }
