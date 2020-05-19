@@ -11,32 +11,9 @@ dependencies:
     - field.field.media.file.field_title
     - media.type.file
   module:
-    - ds
     - field_group
     - responsive_image
 third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        label: ''
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class:
-            media--has-background-icon: media--has-background-icon
-          ds_content: {  }
-    regions:
-      ds_content:
-        - thumbnail
-        - field_title
   field_group:
     group_meta:
       children:
@@ -81,7 +58,7 @@ content:
   field_title:
     type: string
     weight: 1
-    region: ds_content
+    region: content
     label: hidden
     settings:
       link_to_entity: false
@@ -89,7 +66,7 @@ content:
   thumbnail:
     type: responsive_image
     weight: 0
-    region: ds_content
+    region: content
     label: hidden
     settings:
       responsive_image_style: ''
