@@ -11,7 +11,7 @@ dependencies:
     - sector_radix_starter
 third_party_settings:
   block_class:
-    classes: 'promotion--facet-group block-facet--checkbox border-bottom mb-6 mb-sm-0'
+    classes: 'promotion--facet-group block-facet--checkbox border-bottom mt-4 mt-lg-0 mb-6 mb-sm-0'
 id: contenttype_2
 theme: sector_radix_starter
 region: sidebar

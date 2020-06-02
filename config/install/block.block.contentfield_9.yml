@@ -11,7 +11,7 @@ dependencies:
     - sector_radix_starter
 third_party_settings:
   block_class:
-    classes: 'node__banner my-lg-3 my-mg-5'
+    classes: 'node__banner my-md-4 my-lg-3 my-mg-5'
 id: contentfield_9
 theme: sector_radix_starter
 region: hero

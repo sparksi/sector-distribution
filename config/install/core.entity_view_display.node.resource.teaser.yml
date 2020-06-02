@@ -27,6 +27,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -36,9 +37,6 @@ third_party_settings:
         classes:
           layout_class:
             slat: slat
-            has-margin-top-and-half: has-margin-top-and-half
-            has-padding-top-and-half: has-padding-top-and-half
-            has-border-top: has-border-top
           ds_content: {  }
     regions:
       ds_content:
@@ -106,7 +104,7 @@ content:
             lb-col: true
             ow: true
             ow-el: div
-            ow-cl: 'd-inline-flex ml-2 text-muted mt-2 mb-0'
+            ow-cl: 'd-inline-flex mr-2 text-muted mt-2 mb-0'
             ow-at: ''
             fis-el: ''
             fis-cl: ''
@@ -141,7 +139,7 @@ content:
             lbw-at: ''
             ow: true
             ow-el: div
-            ow-cl: 'd-inline-flex h6 mt-2 mb-0 align-self-center'
+            ow-cl: 'd-inline-flex h6 mt-2 mb-0 align-self-center mr-2'
             ow-at: ''
             fis-el: ''
             fis-cl: ''

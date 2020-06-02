@@ -8,39 +8,39 @@ dependencies:
     - image.style.ratio_3_x_2_small_
     - image.style.ratio_3_x_2_xsmall_
   theme:
-    - sector_starter
+    - sector_radix_starter
 id: ratio_3_x_2_starting_with_medium_
 label: 'Ratio 3 x 2 (starting with Medium)'
 image_style_mappings:
   -
-    breakpoint_id: sector_starter.medium
+    breakpoint_id: sector_radix_starter.medium
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: ratio_3_x_2_medium_
   -
-    breakpoint_id: sector_starter.medium
+    breakpoint_id: sector_radix_starter.medium
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: ratio_3_x_2_2x_medium_
   -
-    breakpoint_id: sector_starter.small
+    breakpoint_id: sector_radix_starter.small
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: ratio_3_x_2_small_
   -
-    breakpoint_id: sector_starter.small
+    breakpoint_id: sector_radix_starter.small
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: ratio_3_x_2_2x_small_
   -
-    breakpoint_id: sector_starter.xsmall
+    breakpoint_id: sector_radix_starter.xsmall
     multiplier: 1x
     image_mapping_type: image_style
     image_mapping: ratio_3_x_2_xsmall_
   -
-    breakpoint_id: sector_starter.xsmall
+    breakpoint_id: sector_radix_starter.xsmall
     multiplier: 2x
     image_mapping_type: image_style
     image_mapping: ratio_3_x_2_small_
-breakpoint_group: sector_starter
+breakpoint_group: sector_radix_starter
 fallback_image_style: ratio_3_x_2_xsmall_

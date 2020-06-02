@@ -11,7 +11,7 @@ dependencies:
     - sector_radix_starter
 third_party_settings:
   block_class:
-    classes: 'back-to-top mt-4 mt-lg-0 mb-4 mb-lg-6 ml-lg-auto d-print-none'
+    classes: 'back-to-top mt-4 mt-lg-0 mb-4 mb-lg-6 ml-auto d-print-none'
 id: backtotop_2
 theme: sector_radix_starter
 region: post_content

@@ -18,7 +18,6 @@ use Drupal\user\Entity\User;
  */
 function sector_install() {
   
-//sector_starter
   \Drupal::service('theme_installer')->install(['sector_radix_starter']);
   \Drupal::service('theme_installer')->install(['seven']);
   \Drupal::service('module_installer')->install(['sector_default_content'], FALSE);

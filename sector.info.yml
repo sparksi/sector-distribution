@@ -115,9 +115,7 @@ dependencies:
  - components
 
 themes:
- - bootstrap
  - bartik
  - seven
  - radix
  - sector_radix_starter
- - sector_starter
