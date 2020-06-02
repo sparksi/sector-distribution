@@ -1,0 +1,133 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+::-moz-selection { background-color: rgba(239,96,77, .5);}
+::selection { background-color: rgba(239,96,77, .5);}
+
+a {
+  transition: all .15s ease;
+}
+
+
+.logo__link {
+  color: $dark;
+}
+
+
+.slat__media > img {
+  transition: transform .2s ease-in-out;
+}
+
+.slat__link:hover .slat__media > img {
+  transform: scale(1.1);
+  display: block;
+}
+
+
+.footer-regions-wrapper {
+  border-top: 10px solid $black;
+}
+
+
+.bg-dark {
+  background-color: $dark!important;
+}
+
+
+.navigation--primary .menu {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+@include media-breakpoint-up(lg) {
+  .navigation--primary .menu > .menu__item + .menu__item {
+    margin-left: 3em;
+  }
+}
+
+@include media-breakpoint-up(mg) {
+  .navigation--primary .menu > .menu__item + .menu__item {
+    margin-left: 4em;
+  }
+}
+
+.path-frontpage .node__banner .page__field-banner {
+  //padding-top: 6vmin;
+  //padding-bottom: 6vmin;
+}
+
+
+.breadcrumb {
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+}
+
+.breadcrumb a[aria-current] {
+  color: #666666;
+}
+
+
+.slat__link .action--more {
+  display: inline-flex;
+  position: relative;
+  overflow: visible;
+}
+
+.slat__link .action--more::before {
+  content: '';
+  width: 70%;
+  height: 1px;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  transition: width 0.175s ease-in;
+  background-color: $primary;
+}
+
+.slat__link:hover .action--more::before {
+  width: 100%;
+}
+
+
+.path-frontpage .promotion--tinted .slat {
+  position: relative
+}
+
+.path-frontpage .promotion--tinted .slat::before {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 1rem;
+  content: '';
+  width: 40px;
+  height: 1px;
+  background-color: $black;
+  display: block;
+}
+
+.path-frontpage .promotion--tinted .slat__title {
+  width: 100%;
+}
+
+
+.text-decoration-underline {
+  text-decoration: none;    /* contradiction for sake of prettiness */
+}
+
+.media--featured,
+.media--type-remote-video.media--view-mode-full-width {
+  margin-bottom: $spacer;
+}
+
+.media--has-background-icon .file {
+  padding-left: 1.45em;
+  
+  a::after {
+    content: none!important;
+  }
+}
+
+.navigation--secondary > .block-title {
+  display: block;
+  margin-bottom: calc(#{$spacer} * 1.5);
+}

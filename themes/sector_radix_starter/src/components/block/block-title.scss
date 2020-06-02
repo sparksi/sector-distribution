@@ -1,0 +1,15 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'mixins/type';
+
+.block-title {
+  color: $gray-700;
+  margin: 0;
+  font-weight: $font-weight-bold;
+  font-size: 1.2em;
+  letter-spacing: 0.02em;
+  @include font-smoothing;
+
+  ~ *:not(.contextual) {
+    margin-top: $spacer;
+  }
+}

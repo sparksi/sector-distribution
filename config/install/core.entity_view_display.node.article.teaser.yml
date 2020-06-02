@@ -26,6 +26,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -35,9 +36,6 @@ third_party_settings:
         classes:
           layout_class:
             slat: slat
-            has-margin-top-and-half: has-margin-top-and-half
-            has-padding-top-and-half: has-padding-top-and-half
-            has-border-top: has-border-top
           ds_content: {  }
     regions:
       ds_content:
@@ -54,7 +52,7 @@ third_party_settings:
         settings:
           link: true
           wrapper: h2
-          class: 'slat__title h3 has-no-margin'
+          class: 'slat__title h3 my-0 w-100'
         ft:
           id: reset
           settings:
@@ -81,7 +79,7 @@ content:
             lb: ''
             classes:
               - slat__body
-              - has-margin-top-half
+              - mt-2
             lb-col: false
   field_article_type:
     type: entity_reference_label
@@ -93,15 +91,32 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: minimal
+          id: expert
           settings:
             lb: ''
-            classes:
-              - slat__term
-              - inline-block
-              - has-margin-top-half
-              - has-margin-right-half
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'd-inline-flex h6 mt-2 mb-0 align-self-center mr-2'
+            ow-at: ''
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi: true
+            fi-el: span
+            fi-cl: 'badge badge-secondary'
+            fi-at: ''
+            suffix: ''
+            lbw: false
             lb-col: false
+            ow-def-at: false
+            ow-def-cl: false
+            fis: false
+            fis-def-at: false
+            fi-def-at: false
   field_issue_date:
     type: datetime_default
     weight: 2
@@ -113,15 +128,32 @@ content:
     third_party_settings:
       ds:
         ft:
-          id: default
+          id: expert
           settings:
             lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
             lb-col: true
-            classes:
-              - slat__date
-              - slat__term
-              - inline-block
-              - has-margin-top-half
+            ow: true
+            ow-el: div
+            ow-cl: 'd-inline-flex mr-2 text-muted mt-2 mb-0'
+            ow-at: ''
+            fis: true
+            fis-el: div
+            fis-cl: ml-1
+            fis-at: ''
+            fis-def-at: true
+            fi-el: div
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            ow-def-at: false
+            ow-def-cl: false
+            fi: false
+            fi-def-at: false
 hidden:
   field_last_updated: true
   field_metatag: true

@@ -1,0 +1,22 @@
+{
+  "plugins": [
+    "@babel/plugin-syntax-dynamic-import",
+  ],
+	"presets": [
+        [
+            "@babel/preset-env", {
+                "useBuiltIns": "entry",
+                "debug":false,
+                "corejs": 3,
+                "modules": "amd",
+                "targets": {
+                    "browsers": "> 0.5%, ie >= 11"
+                }
+            }
+        ],
+        ["@babel/preset-typescript", {
+            "modules": "auto",
+            "loose": true,
+        }]
+	]
+}

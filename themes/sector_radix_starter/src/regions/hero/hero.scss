@@ -1,0 +1,51 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'bootstrap/scss/mixins/grid';
+
+.hero {
+  background-color: $gray-100;
+  color: $body-color;
+  position: relative;
+}
+
+
+.region-hero {
+  @include make-container-max-widths;
+  @include make-container;
+
+
+  .page-variant--homepage & {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "heading" "subheading";
+    grid-gap: 1.5vmax 3vmax;
+    
+    @include media-breakpoint-up(lg) {
+      grid-template-areas: "heading banner" "subheading banner";
+      grid-template-columns: 1fr minmax(auto, 60%);
+    }
+
+    > .node__title {
+      grid-area: heading;
+      margin: 0;
+      align-self: flex-end;
+      z-index: 1;
+    }
+
+    > .node__subtitle {
+      grid-area: subheading;
+      z-index: 1;
+    }
+
+    > .node__banner {
+      grid-row: 1 / 3;
+      grid-column: 1 / 2;
+      z-index: 0;
+      
+      @include media-breakpoint-up(lg) {
+        grid-area: banner;
+      }
+    }
+  }
+}

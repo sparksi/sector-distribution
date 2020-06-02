@@ -1,0 +1,14 @@
+.footer-regions-wrapper {
+  padding-top: calc(1rem * 4);
+  padding-bottom: calc(1rem * 4); }
+
+.footer-regions-wrapper.bg-dark {
+  background-color: #212529;
+  color: #fff; }
+  .footer-regions-wrapper.bg-dark .menu__link {
+    color: #fff; }
+
+.footer-divide {
+  border: none;
+  margin-bottom: 0;
+  margin-top: 1rem; }

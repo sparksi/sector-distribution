@@ -1,0 +1,149 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'mixins/type';
+@import 'mixins/forms';
+@import 'mixins/a11y';
+
+.search--flyout {
+  box-shadow: 0 0 1vmax rgba(0,0,0,.15);
+  display: inline-flex;
+  margin-left: auto;
+  overflow: hidden;
+  margin-top: 0!important;
+  width: 0;
+  height: 0;
+  display: none;
+  
+  &.search {  // override exposed form styles
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    display: none;
+  }
+  
+  
+    
+    
+  body.search-is-active & {
+    position: fixed;
+    overflow: visible;      
+    width: 90vw;
+    z-index: 499;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10vh;
+    display: block;
+      
+    @include media-breakpoint-up(lg) {  
+      top: 19%;
+      width: 80vw;
+    }
+  }
+  
+
+  form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    grid-gap: 3vmax 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    
+    @include media-breakpoint-up(md) {  
+      grid-template-columns: 1fr auto;
+      grid-template-rows: 1fr;
+    }
+  }
+
+  .form-item {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: $spacer;
+    grid-template-rows: auto 10vh;
+    height: 100%;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    grid-auto-flow: column;
+    
+    @include media-breakpoint-up(md) {  
+      grid-template-columns: auto 1fr;
+      grid-template-rows: 10vh;
+      grid-auto-flow: row;
+    }
+    
+    /*&:focus-within label {
+      transform: translateY(-100%);
+      color: $gray-600;
+    }*/
+
+    label {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      font-weight: 600;
+      margin: 0;
+      cursor: pointer;
+      font-size: calc(1em + .5vmax);
+      white-space: nowrap;
+      //grid-row: 1 / 2;
+      z-index: 1;
+      //transition: transform .3s ease, color .3s ease;
+      @include font-smoothing;
+      //color: $gray-300;
+      color: $gray-700;
+      justify-content: center;
+    }
+    
+    .form-control {
+      //grid-row: 2 / 3;
+      appearance: none;
+      height: 100%;
+      background-color: transparent;
+      border: 1px $gray-400 solid;
+      border-radius: 0;
+      border-top-left-radius: .2em;
+      border-bottom-left-radius: .2em;
+      z-index: 10;
+      padding-left: .5em;
+      font-size: calc(1em + .5vmax);
+      outline: none;
+      box-shadow: none;
+      
+      @include placeholder {
+        color: rgba(0,0,0,.15);
+      }
+      
+    }
+  }
+
+  .button {
+    height: 100%;
+    width: 100%;
+    font-size: 2.75vmax;
+    padding-left: .2em;
+    padding-right: .2em;
+    @include focusOutlineAndResetHover;
+    
+    @include media-breakpoint-up(md) {  
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      width: 10vh;
+      font-size: 1.75vh;
+    }
+    
+    + .button {
+      margin-left: .5em;
+    }
+    
+    &.close {
+      border-radius: 0;
+    }
+    
+  }
+
+
+}

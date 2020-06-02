@@ -31,7 +31,6 @@ third_party_settings:
         classes:
           layout_class:
             slat: slat
-            has-margin-top-and-half: has-margin-top-and-half
           ds_content: {  }
     regions:
       ds_content:
@@ -56,11 +55,11 @@ third_party_settings:
             lbw-at: ''
             ow: true
             ow-el: div
-            ow-cl: has-margin-top-base
+            ow-cl: mt-3
             ow-at: ''
             fis: true
             fis-el: span
-            fis-cl: action--more
+            fis-cl: 'action action--more'
             fis-at: ''
             fi-el: ''
             fi-cl: ''
@@ -92,14 +91,14 @@ third_party_settings:
             lbw-at: ''
             ow: true
             ow-el: div
-            ow-cl: has-margin-top-base-alternate
+            ow-cl: mt-3
             ow-at: ''
             fis-el: ''
             fis-cl: ''
             fis-at: ''
             fi: true
             fi-el: h3
-            fi-cl: 'slat__title has-no-margin'
+            fi-cl: 'slat__title h4 my-0'
             fi-at: ''
             suffix: ''
             lbw: false
@@ -126,7 +125,7 @@ third_party_settings:
         custom_uri: ''
         target_attribute: default
       label: Link
-      region: hidden
+      region: ds_content
 id: node.promotion.teaser_alternate
 targetEntityType: node
 bundle: promotion

@@ -61,12 +61,12 @@ display:
       style:
         type: html_list
         options:
-          row_class: responsive-layout__item
+          row_class: 'px-4 mt-md-2 mt-5 col-xs-12 col-md-4'
           default_row_class: false
           uses_fields: false
           type: ul
-          wrapper_class: ''
-          class: 'list-unstyled responsive-layout responsive-layout--d3'
+          wrapper_class: 'mt-4 overflow-hidden w-100'
+          class: 'list-unstyled d-flex flex-column flex-md-row mx-n4 mt-md-n2 mt-n4'
       row:
         type: 'entity:node'
         options:

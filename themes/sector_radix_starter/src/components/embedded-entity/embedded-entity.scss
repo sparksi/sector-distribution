@@ -1,0 +1,44 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+.embedded-entity {
+  float: none;
+  
+  + * {
+    margin-top: $spacer;
+  }
+}
+
+.embedded-entity.align-right,
+.embedded-entity.align-left {
+  margin-top: inherit;
+  float: none;
+  position: static;
+  display: inline;
+}
+
+
+
+
+@include media-breakpoint-up(lg) {
+  
+  .embedded-entity.align-right > .media {
+    margin: 9px 0 30px 30px;
+    float: right;
+  }
+  
+  .embedded-entity.align-left > .media {
+    margin: 9px 30px 30px 0;
+    float: left;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .has-offset-right, .embedded-entity.align-right {
+    margin-right: -120px;
+  }
+  
+  .has-offset-left, .embedded-entity.align-left {
+    margin-left: -120px;
+  }
+}

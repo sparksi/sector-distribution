@@ -194,12 +194,12 @@ display:
       style:
         type: html_list
         options:
-          row_class: ''
+          row_class: 'mt-5 pt-5 border-top'
           default_row_class: false
           uses_fields: false
           type: ul
-          wrapper_class: ''
-          class: list-unstyled
+          wrapper_class: 'mt-5 d-flex flex-column'
+          class: 'list-unstyled mt-n5'
       row:
         type: 'entity:node'
         options:
@@ -342,12 +342,12 @@ display:
       style:
         type: html_list
         options:
-          row_class: ''
+          row_class: 'mt-3 pt-3 border-top'
           default_row_class: false
           uses_fields: false
           type: ul
-          wrapper_class: has-margin-top-base
-          class: list-unstyled
+          wrapper_class: 'mt-5 test'
+          class: 'list-unstyled mt-n3'
       row:
         type: 'entity:node'
         options:
@@ -599,12 +599,12 @@ display:
       style:
         type: html_list
         options:
-          row_class: ''
+          row_class: 'mt-5 pt-5 border-top'
           default_row_class: false
           uses_fields: false
           type: ul
-          wrapper_class: ''
-          class: list-unstyled
+          wrapper_class: 'mt-5 d-flex flex-column'
+          class: 'list-unstyled mt-n5'
       row:
         type: 'entity:node'
         options:

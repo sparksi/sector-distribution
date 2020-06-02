@@ -1,0 +1,66 @@
+name: sector_radix_starter
+description: A theme based on Radix.
+screenshot: screenshot.png
+core: 8.x
+# version: VERSION
+engine: twig
+type: theme
+base theme: radix
+
+regions:
+  notices: 'Notices'
+  pre_header: 'Pre-header'
+  header: 'Header'
+  post_header: 'Post-Header'
+  pre_hero: 'Pre-Hero'
+  hero: 'Hero'
+  post_hero: 'Post-Hero'
+  help: 'Help'
+  pre_content: 'Pre-Content'
+  content: 'Content'
+  sidebar: 'Sidebar'
+  post_content: 'Post-Content'
+  pre_footer: 'Pre-Footer'
+  footer: 'Footer'
+  post_footer: 'Post-Footer'
+
+libraries:
+  - radix/style
+  - sector_radix_starter/bootstrap-custom
+  - sector_radix_starter/style
+  - sector_radix_starter/logo
+  - sector_radix_starter/search--flyout
+  - sector_radix_starter/list--fridge-magnets
+  - sector_radix_starter/breadcrumb
+  - sector_radix_starter/media
+  - sector_radix_starter/alert
+  - sector_radix_starter/node
+
+libraries-override:
+  system/base:
+    css:
+      component:
+        css/system/components/align.module.css: false
+  radix/bootstrap: false
+
+ckeditor_stylesheets:
+  - dist/typography.css
+  - dist/drupal/wysiwyg.css
+  - dist/bootstrap/components/card.css
+  - dist/bootstrap/components/tables.css
+  - dist/components/embedded-entity/embedded-entity.css
+  - dist/components/media/media.css
+  - dist/components/media/file.css
+  - dist/components/media/image.css
+  - dist/components/media/video.css
+  - dist/components/responsive-ratio/responsive-ratio.css
+
+component-libraries:
+  sector_radix_starter:
+    paths:
+      - ./src/components
+
+# Information added by Drupal.org packaging script on 2020-01-26
+version: '8.x-4.7'
+project: 'radix'
+datestamp: 1580057585

@@ -1,0 +1,31 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - term_condition
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: node__title
+id: pagetitle_4
+theme: sector_radix_starter
+region: pre_content
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  term:
+    id: term
+    tid:
+      -
+        target_id: '4'
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'

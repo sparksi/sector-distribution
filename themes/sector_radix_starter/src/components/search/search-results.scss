@@ -1,0 +1,11 @@
+@import 'mixins/a11y';
+
+.search-results .slat strong {
+  font-weight: 800;
+}
+
+.search-results .slat__title a {
+  &:focus {
+    @include focusOutline;
+  }
+}

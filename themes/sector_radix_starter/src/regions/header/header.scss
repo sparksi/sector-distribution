@@ -1,0 +1,75 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'bootstrap/scss/mixins/grid';
+
+.header {
+  box-shadow: 0px 6px 10px rgba(102, 120, 145, 0.15);
+  background-color: $white;
+  //@apply --linkStyle;
+  position: relative;
+  z-index: 2;
+
+  ~ * {
+    z-index: 1;
+  }
+}
+
+
+.region-header {
+  //@apply --container;
+  @include make-container;
+  display: grid;
+  grid-template-areas: "branding . controls hamburger" "nav nav nav nav";
+  grid-template-columns: 1fr 5vw minmax(min-content, auto) minmax(min-content, auto);
+  grid-template-rows: auto;
+  grid-gap: calc(#{$grid-gutter-width} * 0.5) 2vw;
+  padding-top: calc(#{$grid-gutter-width} * 0.5);
+  //overflow: hidden;
+  
+  @include media-breakpoint-up(lg) {
+    @include make-container-max-widths;   // span 100% until lg breakpoint
+    display: flex;      // grid was causing all kinds of issues in safari
+    flex-direction: row;
+    padding-bottom: calc(#{$grid-gutter-width} * 0.5);
+  }
+  
+  &::after {
+    content: none;
+  }
+
+  > .promotion--brand {
+    grid-area: branding;
+    align-self: center;
+  }
+
+  > .search, 
+  > .promotion--navigation-primary {
+    grid-area: nav;
+    margin-left: auto;
+  }
+  
+  > .promotion--navigation-primary {
+    flex: 1;
+  }
+  
+
+  > .control {
+    grid-area: controls;
+    align-self: center;
+    
+    @include media-breakpoint-up(lg) {
+      margin-left: $spacer;
+      .search-is-active & {
+        margin-left: 0;
+      }
+    }
+  }
+  
+  > .control--responsive-menu {
+    grid-area: hamburger;
+  }
+  
+  .logo--primary {
+    max-width: 50vw;
+  }
+}

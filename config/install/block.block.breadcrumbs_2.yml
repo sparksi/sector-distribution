@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - system
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: hidden-print
+id: breadcrumbs_2
+theme: sector_radix_starter
+region: hero
+weight: -27
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

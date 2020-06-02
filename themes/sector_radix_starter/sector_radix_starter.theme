@@ -1,0 +1,258 @@
+<?php
+/**
+ * @file
+ * Theme functions
+ */
+
+
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Entity;
+use Drupal\taxonomy\Entity\Term;
+use Drupal\node\Entity\Node;
+use Drupal\node\NodeInterface;
+use Drupal\media\MediaInterface;
+use Drupal\Core\Render\Markup;
+
+// Include all files from the includes directory.
+$includes_path = dirname(__FILE__) . '/includes/*.inc';
+foreach (glob($includes_path) as $filename) {
+  //dpm($filename);
+  require_once dirname(__FILE__) . '/includes/' . basename($filename);
+}
+
+
+/**
+ * @file
+ * Adjust the theme settings form to add local tweaks and options.
+ *
+ * https://www.drupal.org/node/177868
+ *
+ * /admin/appearance/settings/sector_starter_2020
+ *
+ * This mimics what Bootstrap does in its own form_alter.
+ * Beware, removing Bootstrap may break assumptions about the theme form made here.
+ *
+ * Creates the SVG logo source textfield so Designers can use it in their twig
+ * templates.
+ *
+ * Implements hook_form_alter().
+ */
+function sector_radix_starter_form_system_theme_settings_alter(&$form, &$form_state) {
+  // Vertical tab.
+  $form['sector_radix_starter'] = array(
+    '#type' => 'vertical_tabs',
+    '#prefix' => '<h2><small>Sector starter settings</small></h2>',
+    '#weight' => -20,
+  );
+  // Component.
+  $form['customizations'] = array(
+    '#type' => 'details',
+    '#title' => t('Inline SVG logo'),
+    '#group' => 'sector_radix_starter',
+  );
+
+  // Textarea for user to enter the svg_logo_source.
+  $form['customizations']['svg_logo_source'] = array(
+    '#type'     => 'textarea',
+    '#title'    => t('Add your SVG logo raw source code here:'),
+    '#description'    => t('Inline SVGs can be targeted via CSS e.g. to add hover effects. This setting overrides the default logo supplied by the theme via Global Settings below.'),
+    '#format'   => 'full_html',
+    '#required' => FALSE,
+    '#default_value' => theme_get_setting('svg_logo_source'),
+  );
+  // Textarea for user to enter the svg_logo_source.
+  $form['customizations']['apply_glitter'] = array(
+    '#type'     => 'checkbox',
+    '#title'    => t('Apply glitter CSS'),
+    '#required' => FALSE,
+    '#default_value' => theme_get_setting('apply_glitter'),
+  );
+}
+
+function sector_radix_starter_preprocess_page(&$variables) {
+  $node = ($variables['node']) ?? null;
+  if (!empty($node) && $node instanceof NodeInterface) {
+    //dpm($node);
+  }
+
+  // Load the node entity from the current route.
+  $entity = getEntityFromRoute('node');
+  if(!empty($entity)) {
+    $variables['page']['isPublishedClass'] = $entity->isPublished() ? 'is-published' : 'is-unpublished';
+
+    if ($entity->hasField('field_auto_contextual_content')) {
+      // Taxonomy name we will be searching for.
+      $taxonomy_name = 'Hide sidebar';
+      // Get the referenced taxonomy terms from the auto contextual content field.
+      $node_contextual_content = $entity->get('field_auto_contextual_content')->referencedEntities();
+
+      // Loops through each taxonomy term checking if the name of the term is
+      // the same as $taxonomy_name
+      foreach($node_contextual_content as $key => $value) {
+        if($value->getName() == $taxonomy_name) {
+          // remove the sidebar from the page.
+          unset($variables['page']['sidebar']);
+          // This doesn't need to keep going once it's found this, so break here
+          // and exit the foreach loop.
+          break;
+        }
+      }
+    }
+  }
+}
+
+
+function sector_radix_starter_preprocess_html(&$variables) {
+
+  $theme = \Drupal::theme()->getActiveTheme();
+  $adminTheme = \Drupal::config('system.theme')->get('admin');
+
+  if(\Drupal::currentUser()->isAuthenticated() && $adminTheme === 'sector_admin') {
+    $variables['#attached']['library'][] = 'sector_admin/global';
+  }
+
+  $relaventEntities = ['node', 'media'];
+  foreach ($relaventEntities as $entityTypeId) {
+    // Load the node entity from the current route.
+    $entity = getEntityFromRoute($entityTypeId);
+    if (!empty($entity)) {
+      // Add a class to the <body> if the entity is unpublished.
+      if (!$entity->isPublished()) {
+        $variables['attributes']['class'][] = 'entity-status-unpublished';
+      }
+      if (isset($variables['node_status'])) {
+        $variables['node_status'] = $entity->isPublished() ? 'published' : 'unpublished';
+      }
+      /**
+       * Get the term id from the 'field_page_variant' taxonomy field.
+       * If greater than zero, load the term and acquire the name value
+       * as a css safe value.
+       */
+      if ($entity->hasField('field_page_variant')) {
+        $tid = $entity->get('field_page_variant')->target_id;
+        if ($tid > 0) {
+          $term_object = Term::load($tid);
+          $variables['attributes']['class'][] = 'page-variant--' . Html::getClass($term_object->get('name')->value);
+        }
+      }
+    }
+  }
+
+
+  $lockViewport = [
+    '#tag' => 'meta',
+    '#attributes' => [
+      'name' => 'viewport',
+      'content' => 'width=device-width, initial-scale=1.0',
+    ],
+  ];
+  $variables['page']['#attached']['html_head'][] = [$lockViewport, 'lock-viewport'];
+
+
+
+
+  $variables['page']['#attached']['html_head_link'][] = array(array(
+    'rel' => 'apple-touch-icon',
+    'href' => '/' . $theme->getPath() .'/dist/favicons/apple-touch-icon.png'
+  ));
+  
+  $variables['page']['#attached']['html_head_link'][] = array(array(
+    'rel' => 'apple-touch-icon',
+    'sizes' => '180x180',
+    'href' => '/' . $theme->getPath() .'/dist/favicons/apple-touch-icon-180x180.png'
+  ));
+  $variables['page']['#attached']['html_head_link'][] = array(array(
+    'rel' => 'apple-touch-icon-precomposed',
+    'sizes' => '180x180',
+    'href' => '/' . $theme->getPath() .'/dist/favicons/apple-touch-icon-precomposed.png'
+  ));
+  $variables['page']['#attached']['html_head_link'][] = array(array(
+    'rel' => 'icon',
+    'type' => 'image/png',
+    'sizes' => '48x48',
+    'href' => '/' . $theme->getPath() .'/dist/favicons/favicon-48x48.png'
+  ));
+  $variables['page']['#attached']['html_head_link'][] = array(array(
+    'rel' => 'shortcut icon',
+    'type' => 'image/svg+xml',
+    'href' => '/' . $theme->getPath() .'/favicon.svg'
+  ));
+  $variables['page']['#attached']['html_head_link'][] = array(array(
+    'rel' => 'mask-icon',
+    'color' => '#111111',
+    'href' => '/' . $theme->getPath() .'/favicon.svg'
+  ));
+
+}
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function sector_radix_starter_page_attachments_alter(array &$page) {
+
+  $breakpoints = \Drupal::service('breakpoint.manager')->getBreakpointsByGroup('sector_radix_starter');
+
+  if (!empty($breakpoints)) {
+    $media_queries = array();
+    foreach ($breakpoints as $breakpoint) {
+      foreach ($breakpoints as $id => $breakpoint) {
+        $media_queries[$id] = $breakpoint->getMediaQuery();
+      }
+    }
+    $page['#attached']['drupalSettings']['breakpoints'] = $media_queries;
+  }
+  if (theme_get_setting('apply_glitter')) {
+    $page['#attached']['library'][] = 'sector_radix_starter/glitter';
+  }
+}
+
+
+/**
+ * Helper function.
+ *
+ * Gets the current node from the route.
+ *
+ * Needed to get the correct node when viewing a revision.
+ * Credit for this code goes to Berdir: https://www.drupal.org/u/berdir
+ *
+ * Taken from https://www.drupal.org/project/drupal/issues/2730631#comment-12667635
+ * and adjusted slightly.
+ */
+function getEntityFromRoute($entityTypeId) {
+  $entity = NULL;
+  if (\Drupal::routeMatch()->getParameter($entityTypeId)) {
+    $entity = \Drupal::routeMatch()->getParameter($entityTypeId);
+  }
+  // The node revision page does not upcast the node.
+  if (\Drupal::routeMatch()->getParameter($entityTypeId . '_revision')) {
+    $revision_id = \Drupal::routeMatch()->getParameter($entityTypeId . '_revision');
+    if ($revision_id > 0) {
+      return \Drupal::entityTypeManager()->getStorage($entityTypeId)->loadRevision($revision_id);
+    }
+  }
+  switch ($entityTypeId) {
+    case 'node':
+      if ($entity instanceof NodeInterface) {
+        return $entity;
+      }
+      break;
+    case 'media':
+      if ($entity instanceof MediaInterface) {
+        return $entity;
+      }
+      break;
+  }
+}
+
+/**
+ * Attach libraries based on CSS classes.
+ *
+ * @param array $variables
+ * @param array $classes
+ */
+function _sector_radix_starter_attach_library_by_class(array &$variables, array $classes) {
+  foreach($classes as $library) {
+    $variables['#attached']['library'][] = 'sector_radix_starter/' . $library;
+  }
+}
+

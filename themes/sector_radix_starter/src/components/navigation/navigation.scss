@@ -1,0 +1,5 @@
+@import 'mixins/a11y';
+
+.navigation .menu__link {
+  @include focusOutlineAndResetHover;
+}

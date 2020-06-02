@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_updated
+  module:
+    - block_class
+    - datetime
+    - fieldblock
+    - term_condition
+  theme:
+    - sector_radix_starter
+third_party_settings:
+  block_class:
+    classes: 'last-updated my-4 my-md-6'
+id: contentfield_10
+theme: sector_radix_starter
+region: post_content
+weight: -28
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Last Updated'
+  provider: fieldblock
+  label_display: visible
+  label_from_field: true
+  field_name: field_last_updated
+  formatter_id: datetime_default
+  formatter_settings:
+    timezone_override: ''
+    format_type: sector_medium_date
+visibility:
+  term:
+    id: term
+    tid:
+      -
+        target_id: '5'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

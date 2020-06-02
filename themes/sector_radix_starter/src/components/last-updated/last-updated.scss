@@ -1,0 +1,29 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'mixins/type';
+
+.last-updated {
+  flex: 1;
+  
+  display: inline-flex;
+  align-items: baseline;
+  
+  > .block-title,
+  > strong {
+    font-size: $font-size-base;
+    color: $gray-800;
+    @include font-smoothing;
+    white-space: nowrap;
+    
+    &::after {
+      content: ':\a0';
+    }
+  }
+  
+  > .page__field-last-updated,
+  > time {
+    margin-top: 0;
+    color: $gray-800;
+    @include font-smoothing;
+    white-space: nowrap;
+  }
+}

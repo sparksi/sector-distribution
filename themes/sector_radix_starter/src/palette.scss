@@ -1,0 +1,7 @@
+@import 'bootstrap/custom-bootstrap-variables';
+
+:root {
+  @each $key, $color in $theme-colors {
+    --#{$key}: #{$color};
+  }  
+}

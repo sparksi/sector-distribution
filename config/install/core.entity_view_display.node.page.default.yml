@@ -15,6 +15,7 @@ dependencies:
     - node.type.page
   module:
     - ds
+    - field_delimiter
     - field_group
     - link
     - text
@@ -32,13 +33,14 @@ third_party_settings:
       format_settings:
         element: div
         show_label: true
-        label_element: h3
+        label_element: h4
+        label_element_classes: mb-0
         attributes: ''
         effect: none
         speed: fast
         id: ''
-        classes: 'related has-margin-top-double'
-      region: hidden
+        classes: 'related mt-5'
+      region: ds_content
   ds:
     layout:
       id: ds_1col
@@ -89,14 +91,37 @@ content:
       view_mode: short_teaser
       link: false
     third_party_settings:
+      field_delimiter:
+        delimiter: ''
       ds:
         ds_limit: ''
         ft:
-          id: default
+          id: expert
           settings:
             lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: 'h5 my-0 card-header'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'mt-4 card'
+            ow-at: ''
+            fis: true
+            fis-el: ul
+            fis-cl: 'list-unstyled mb-0 mt-n2 card-body smooth-text'
+            fis-at: ''
+            fi: true
+            fi-el: li
+            fi-cl: mt-2
+            fi-at: ''
+            suffix: ''
             lb-col: false
-            classes: {  }
+            ow-def-at: false
+            ow-def-cl: false
+            fis-def-at: false
+            fi-def-at: false
     region: ds_content
   field_related_links:
     weight: 14
@@ -108,14 +133,37 @@ content:
       rel: '0'
       target: '0'
     third_party_settings:
+      field_delimiter:
+        delimiter: ''
       ds:
         ds_limit: ''
         ft:
-          id: default
+          id: expert
           settings:
             lb: ''
+            prefix: ''
+            lbw: true
+            lbw-el: h4
+            lbw-cl: 'h5 my-0 card-header'
+            lbw-at: ''
+            ow: true
+            ow-el: div
+            ow-cl: 'mt-4 card'
+            ow-at: ''
+            ow-def-at: true
+            ow-def-cl: true
+            fis: true
+            fis-el: ul
+            fis-cl: 'list-unstyled mb-0 mt-n2 card-body'
+            fis-at: ''
+            fi: true
+            fi-el: li
+            fi-cl: mt-2
+            fi-at: ''
+            fi-def-at: true
+            suffix: ''
             lb-col: false
-            classes: {  }
+            fis-def-at: false
     type: link
     region: ds_content
 hidden:

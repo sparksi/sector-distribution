@@ -1,0 +1,64 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'bootstrap/scss/mixins/grid';
+@import 'mixins/type';
+
+.navigation--mega-menu {
+  background-color: $gray-800;
+  display: none;
+  
+  &.is-active {
+    display: block;
+  }
+  
+  @include media-breakpoint-down(md) {   
+    display: none!important;
+  }
+  
+  
+  > .menu {
+    @include make-container-max-widths;
+    @include make-container;
+    @include font-smoothing;
+        
+    
+    > .menu__item {
+      display: flex;
+      width: 100%;
+      
+      > .menu__link {
+        font-weight: 600;
+        flex: 1 0 20%;
+        font-size: $font-size-lg;
+        display: none;
+      }
+      
+      > .menu {
+        flex: 1 0 80%;
+        flex-wrap: wrap;
+        display: none;
+        
+        > .menu__item {
+          flex: 1;
+          
+          > .menu__link {
+            font-weight: 600;
+          }
+        }
+      }
+      
+      > .menu__link.is-open {
+        display: block;
+        
+        + .menu {
+          display: flex;
+        }
+      }
+    }
+  }
+  
+  
+  .menu__link {
+    color: $white;
+  }
+}

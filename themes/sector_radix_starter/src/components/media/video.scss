@@ -1,0 +1,50 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'mixins/responsive-ratio';
+@import 'mixins/icon';
+
+@svg-load chevron url( 'chevron-down.svg') {
+  fill: rgb(20, 21, 20);
+}
+
+.video__field-media-video-embed-field {
+  width: 100%;
+}
+
+.video-embed-field-responsive-video { 
+  @include responsive-ratio((16, 9));
+}
+
+.transcript > summary {
+  position: relative;
+  padding-left: 2.25em;
+  
+  &::-webkit-details-marker {
+    display:none;
+  }
+  
+  &:first-of-type {
+    list-style-type: none;
+  }
+  
+  &::before {
+    content: '';
+    background-image: svg-inline(chevron);
+    background-repeat: no-repeat;
+    width: 18px;
+    height: 18px;   // ie 
+    //width: calc(1em + 0vmax);
+    //height: calc(1em + 0vmax);
+    margin-right: .35em;
+    position: absolute;
+    left: .85em;
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: center;
+  }
+  
+}
+
+.transcript[open] > summary::before {
+  transform: rotate(180deg) translateY(50%);
+  
+}

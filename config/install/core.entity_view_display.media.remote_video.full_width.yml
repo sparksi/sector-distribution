@@ -32,7 +32,8 @@ third_party_settings:
         link_attribute: ''
         link_custom: ''
         classes:
-          layout_class: {  }
+          layout_class:
+            d-print-none: d-print-none
           ds_content: {  }
     regions:
       ds_content:
@@ -108,7 +109,8 @@ content:
           settings:
             lb: ''
             lb-col: false
-            classes: {  }
+            classes:
+              - prose
     type: text_default
     region: ds_content
 hidden:

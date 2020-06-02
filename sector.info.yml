@@ -112,9 +112,10 @@ dependencies:
  - webform_ui
  - honeypot
  - username_enumeration_prevention
+ - components
 
 themes:
- - bootstrap
  - bartik
  - seven
- - sector_starter
+ - radix
+ - sector_radix_starter
