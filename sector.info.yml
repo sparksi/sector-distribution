@@ -1,7 +1,6 @@
 name: Sector
 type: profile
 description: Sector D8 Profile
-core: 8.x
 core_version_requirement: ^8 || ^9
 
 distribution:
