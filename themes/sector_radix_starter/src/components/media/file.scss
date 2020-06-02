@@ -1,0 +1,88 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'mixins/type';
+
+@import './file-icons';
+
+
+.media--has-background-icon .file {
+  position: relative;
+  padding-left: 1.2em;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 18px;
+    height: 20px;
+    transform: translateY(-50%);
+    background-position: left center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: svg-load('assets/document-small.svg', fill=#{$gray-800});
+  }
+}
+
+.media--type-file {
+  flex-direction: row;
+  align-items: baseline;
+  line-height: 1;
+  flex-wrap: wrap;
+  @include font-smoothing;
+  
+  @include media-breakpoint-down(sm) {
+    flex-direction: column;
+  }
+  
+  .field-name-field-credit-or-caption {
+    width: 100%;
+  }
+  
+  * + .field-name-field-credit-or-caption {
+    margin-top: calc(#{$spacer} * 0.5);
+  }
+  
+  
+  &.media--view-mode-teaser {
+    border: 1px solid $border-color;
+    padding: $spacer;
+    
+    
+    &.media--has-background-icon {
+      padding-left: calc(35px + (#{$spacer} * 2));
+      position: relative;
+      background-color: $light;
+      
+      .file > a::before {
+        content: '';
+        width: 32px;
+        height: 46px;
+        position: absolute;
+        display: block;
+        left: $spacer;
+        top: $spacer;
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: svg-inline(documentWithExtension);
+      }
+      
+      .file--application-pdf > a::before {background-image: svg-inline(documentPDF)}
+      .file--x-office-document > a::before {background-image: svg-inline(documentWord)}
+      .file--application-doc > a::before {background-image: svg-inline(documentWord)}
+      .file--application-xls > a::before {background-image: svg-inline(documentExcel)}
+      .file--application-ppt > a::before {background-image: svg-inline(documentPowerpoint)}
+      
+      .file {
+        padding-left: 0;
+        position: static;
+      }
+      
+      .file::before {
+        content: none;        
+      }
+    }
+  }
+}
+

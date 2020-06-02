@@ -1,0 +1,56 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'bootstrap/scss/mixins/grid';
+@import 'mixins/type';
+
+.navigation--site-map { 
+  
+  .nav {
+    display: block;
+  }
+  
+  > .nav {
+    display: flex;
+    flex-direction: column;
+    gap: calc(#{$spacer} * 2);
+    @include font-smoothing;
+    
+    @include media-breakpoint-up(md) {
+      flex-direction: row; 
+      flex-wrap: wrap;
+    }
+    
+    > .menu__item {
+      flex: 1;
+      
+      > .menu__link {
+        font-size: 1.25em;
+        display: block;
+        border-bottom: 1px solid $gray-200;
+        padding-bottom: .25em;
+        
+        &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
+      
+      .menu {
+        margin-top: .25em;
+        margin-bottom: .5em;
+        
+        .menu__link::before {
+          content: '\2013';
+          margin-right: .25em;
+        }
+        
+        .menu .menu__link {
+          padding-left: 1em;
+        }
+        
+        .menu .menu .menu__link {
+          padding-left: 2em;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'bootstrap/scss/mixins/grid';
+
+@import 'mixins/icon';
+
+@svg-load radioOn url( 'circle-fill.svg' ) {
+  fill: $body-color;
+}
+
+@svg-load checkboxOn url( 'check.svg' ) {
+  fill: $body-color;
+}
+
+.webform-submission-form {
+  @include make-row;
+  margin-top: $spacer * -1;
+  
+  .form-group {
+    margin-bottom: 0;
+  }
+  
+  > .form-item,
+  > .form-actions {
+    @include make-col-ready;
+    margin-top: $spacer;
+  }
+  
+  > .form-item > label,
+  .fieldset-legend {
+    font-size: $font-size-base;
+  }
+  
+  
+  .form-radios,
+  .form-checkboxes {
+    margin-top: $spacer * -0.5;
+    
+    .form-item {
+      overflow: hidden;
+      margin-top: $spacer * 0.5;
+      padding-left: 0;
+    }
+    
+    .option {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      cursor: pointer;
+      
+      &::before {
+        content: '';
+        display: block;
+        width: 1.15em;
+        height: 1.15em;
+        margin-right: .5em;
+        border: 1px solid $body-color;
+        border-radius: 50%;
+      }
+    }
+  }
+  
+  .form-radios .form-item {    
+    :checked + .option {
+      @include pseudoIcon(radioOn);
+      
+      &::before {
+        outline: 2px white solid;
+      }
+    }
+  }
+  
+  .form-checkboxes .form-item {
+    .option::before {
+      border-radius: 2px;
+    }
+    :checked + .option {
+      @include pseudoIcon(checkboxOn);
+    }
+  }
+}

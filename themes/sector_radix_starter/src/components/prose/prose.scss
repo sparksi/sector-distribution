@@ -1,0 +1,51 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/vendor/rfs';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'mixins/type';
+
+@import './lead';
+@import './default';
+
+.prose {
+  @include prose;
+    
+  
+  
+}
+
+.prose .lead {
+  @include lead;
+}
+
+
+mark.alternate {
+  color: $danger;
+  background: transparent;
+  padding: 0;
+  display: block;
+}
+
+
+.element.pull-left, 
+.element.pull-right, 
+.element.action--back-to-top {
+  
+  @include media-breakpoint-up(sm) {      
+    width: 45%;
+  }
+}
+
+.element.pull-right, 
+.element.action--back-to-top {
+  @include media-breakpoint-up(sm) { 
+    float: right; 
+    margin: 0.5em 0 30px 5%;
+  }
+}
+
+.element.pull-left {
+  @include media-breakpoint-up(sm) { 
+    float: left; 
+    margin: 0.5em 5% 30px 0;
+  }
+}

@@ -1,0 +1,13 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'bootstrap/scss/mixins/grid';
+
+.footer {
+
+  
+}
+
+.region-footer {
+  @include make-container-max-widths;
+  @include make-container;
+}

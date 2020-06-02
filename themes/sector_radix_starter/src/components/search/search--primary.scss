@@ -1,0 +1,14 @@
+@import "bootstrap/scss/functions";
+
+@import "bootstrap/custom-bootstrap-variables";
+@import 'components/view/exposed-form';
+
+.search--primary {
+  display: initial;
+  padding: initial;
+  border: initial;
+}
+
+.search--primary > form {
+  @include exposed-form;
+}

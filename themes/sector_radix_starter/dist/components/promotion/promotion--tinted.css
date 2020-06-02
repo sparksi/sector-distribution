@@ -1,0 +1,1 @@
+.promotion--tinted{position:relative;background-color:#f8f9fa}.promotion--tinted::before{content:'';display:block;background-color:#f8f9fa;z-index:0;position:absolute;top:0;bottom:0;left:-9999px;border-left:9999px solid #f8f9fa;box-shadow:9999px 0 0 #f8f9fa;left:50%;transform:translateX(-100%)}.promotion--tinted>*:not(.contextual){position:relative;z-index:1}

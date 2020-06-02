@@ -1,0 +1,106 @@
+@import "bootstrap/custom-bootstrap-variables";
+@import 'bootstrap/scss/mixins/breakpoints';
+
+@import 'mixins/type';
+@import 'mixins/a11y';
+
+@svg-load x url( 'x.svg' ) {
+  fill: $primary;
+}
+
+@svg-load xHover url( 'x.svg' ) {
+  fill: $danger;
+}
+
+.promotion--facet-summary {
+  @include font-smoothing;
+  
+  + * {
+    margin-top: $spacer;
+  }
+  
+  > ul {
+    padding-left: 0;
+    list-style: none;
+    margin: -.5em 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    
+    @include media-breakpoint-up(sm) {  
+      flex-direction: row-reverse;
+    }
+    
+    > .facet-summary-item--clear {
+      width: 100%;
+      
+      @include media-breakpoint-up(sm) {
+        margin-left: auto;
+        width: auto;  
+      }
+    }
+    
+    > .facet-summary-item--facet {
+      margin-right: .75em;
+      font-size: 14px;
+      margin-top: .5em;
+    }
+    
+    &::after {
+      content: 'Active filters:';
+      font-size: 14px;
+      margin-right: .75em;
+      width: 100%;
+      order: -1;
+      
+      @include media-breakpoint-up(sm) {
+        width: auto; 
+        order: 1;
+      }
+    }
+  }
+}
+
+.facet-summary-item--clear > a {
+  text-decoration: underline;
+  @include focusOutlineAndResetHover;
+}
+
+.facet-summary-item--facet > a {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  border: $primary solid 1px;
+  color: $primary;
+  padding: 8px 10px 8px 10px;
+  font-weight: 500; 
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  @include focusOutlineAndResetHover;
+  
+  .facet-item__status {
+    margin-left: .25em;
+    display: block;
+    width: 1.45em;
+    height: 1.45em;
+    text-indent: -5000em;
+    overflow: hidden;
+    background-position: center, -1000px -1000px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: svg-inline(x), svg-inline(xHover);
+  }
+  
+  @media (hover: hover) {
+    &:hover, &:active {
+      color: $danger;
+      border-color: $danger;
+    
+      .facet-item__status {
+        background-position: -1000px -1000px, center;
+      }
+    }
+  }
+}

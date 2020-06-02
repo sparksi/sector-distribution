@@ -1,0 +1,16 @@
+.last-updated {
+  flex: 1;
+  display: inline-flex;
+  align-items: baseline; }
+  .last-updated > .block-title {
+    font-size: 1rem;
+    color: #343a40;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+    .last-updated > .block-title::after {
+      content: ':\a0'; }
+  .last-updated > .page__field-last-updated {
+    margin-top: 0;
+    color: #343a40;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }

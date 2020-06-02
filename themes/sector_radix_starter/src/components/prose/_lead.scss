@@ -1,0 +1,6 @@
+@mixin lead {
+  @include responsive-font-size(1.7rem);
+  line-height: 1.55555;
+  margin-bottom: 1.05em;
+  font-weight: 300;
+}

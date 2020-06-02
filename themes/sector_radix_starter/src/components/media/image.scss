@@ -1,0 +1,17 @@
+@import 'mixins/ie11';
+
+.media.media--type-image {
+  @include ie {
+    display: block;
+    overflow: hidden;
+    max-width: 100%;
+  }
+  
+  img {
+    vertical-align: top;
+  }
+  
+  &.media--view-mode-full-width-banner {
+    display: block;
+  }
+}

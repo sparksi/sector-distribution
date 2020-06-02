@@ -1,0 +1,59 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'mixins/type';
+@import 'mixins/a11y';
+
+@svg-load chevron url( 'chevron-up.svg' ) {
+  fill: $link-color;
+}
+
+@svg-load chevronHover url( 'chevron-up.svg' ) {
+  fill: $link-hover-color;
+}
+
+.back-to-top {
+  align-self: center;
+  
+  
+  p {
+    margin: 0;
+    @include font-smoothing;
+    font-weight: 600;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity .2s ease;
+    
+    a {
+      display: block;
+      font-size: 12px;
+      text-transform: uppercase;
+      
+      &::before {
+        content:'';
+        width: 3em;
+        height: 2em;
+        display: block;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: svg-inline(chevron);
+      }
+      
+      &:focus {
+        @include focusOutline;
+      }
+      
+      &:hover::before, &:active::before {
+        background-image: svg-inline(chevronHover);
+      }
+    }
+  }
+  
+  &.is-visible p {
+    max-height: inherit;
+    opacity: 1;
+  }
+}

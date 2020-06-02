@@ -1,0 +1,11 @@
+@mixin ie {
+  @media (-ms-high-contrast: none) {
+    @content;
+  }  
+}
+
+@mixin edge {
+  @supports (-ms-ime-align:auto) {
+    @content; 
+  }
+}

@@ -1,0 +1,31 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'mixins/type';
+@import 'mixins/a11y';
+
+.list--fridge-magnets {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -8px;
+  @include font-smoothing;
+
+  > li {
+    margin-right: 8px;
+    margin-top: 8px;
+  }
+
+  a {
+    border: 1px $gray-400 solid;
+    display: block;
+    padding: 10px 15px;
+    background-color: $white;
+    text-decoration: none;
+    color: $body-color;
+    @include focusOutlineAndResetHover;
+    
+    @media (hover: hover){
+      &:hover, &:active {
+        background-color: $gray-100;
+      }
+    }
+  }
+}

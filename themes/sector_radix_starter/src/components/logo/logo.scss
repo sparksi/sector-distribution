@@ -1,0 +1,46 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'mixins/ie11';
+@import 'mixins/a11y';
+
+.logo__link {
+  display: block;
+  @include focusOutlineAndResetHover;
+  
+  .bg-dark & {
+    color: $white;
+    
+    @media (hover: hover) {
+      &:hover, &:active {
+        color: rgba($white, .9);
+      }
+    }
+  }
+}
+
+
+.logo__link > img {
+
+  max-width: 100%;
+  max-height: 8vh;
+  width: auto;
+  height: auto;
+  vertical-align: top;
+}
+
+.logo__brand {
+  vertical-align: top;
+  height: auto;
+  
+  @include media-breakpoint-down(sm) {
+    max-width: 100%;    // safari fix
+  }
+  
+  @include ie {
+    max-height: 44px;
+  }
+  
+  footer & {
+    color: $white;
+  }
+}

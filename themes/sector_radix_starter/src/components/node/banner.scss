@@ -1,0 +1,17 @@
+.node__banner { 
+  
+  .media {
+    width: 100%;
+  }
+  
+  img, embed {
+    object-fit: contain;
+    height: 100%;
+  }
+  
+  .media, 
+  .page__field-banner,
+  .image__field-media-image {
+    height: 100%;
+  }
+}
