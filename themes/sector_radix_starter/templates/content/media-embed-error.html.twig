@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Theme override for a missing media error.
+ *
+ * Available variables
+ * - message: The message text.
+ * - attributes: HTML attributes for the containing element.
+ * - authenticatedUser: Boolean - Returns if a user is authenticated or not.
+ *
+ * When a response from the back end can't be returned, a related error message
+ * is displayed from JavaScript.
+ *
+ * @see Drupal.theme.mediaEmbedPreviewError
+ */
+#}
+{% if authenticatedUser %}
+<div{{ attributes.addClass('alert alert-danger d-inline-block') }}>
+  {{ message }}
+</div>
+{% endif %}
