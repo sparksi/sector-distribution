@@ -65,6 +65,7 @@
         "drupal/ds": "3.7",
         "drupal/embed": "1.4",
         "drupal/entity_embed": "1.1",
+        "drupal/entity_usage": "2.0-beta3",
         "drupal/entityqueue": "1.0",
         "drupal/facets": "1.4",
         "drupal/field_delimiter": "1.1",
@@ -150,6 +151,9 @@
             },
             "drupal/token": {
                 "Prevent ghost menu items": "https://www.drupal.org/files/issues/token_node_preview_menu_link-2823731-4.patch"
+            },
+            "drupal/entity_usage": {
+                "Better tracking per entity": "https://www.drupal.org/files/issues/2020-06-16/per-node-tracking_3151920_4.patch"
             }
         }
     }

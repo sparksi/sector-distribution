@@ -113,6 +113,7 @@ dependencies:
  - honeypot
  - username_enumeration_prevention
  - components
+ - entity_usage  
 
 themes:
  - bartik

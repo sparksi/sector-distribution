@@ -2,6 +2,11 @@
 
 use Drupal\user\Entity\User;
 use Drupal\Core\Entity\EntityPublishedInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media\MediaInterface;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Url;
+use Drupal\Core\Entity\ContentEntityDeleteForm;
 
 /**
  * @file
@@ -21,8 +26,6 @@ function sector_utils_page_attachments(array &$attachments) {
   }
 }
 
-
-
 /**
  * Implements hook_form_alter().
  *
@@ -30,6 +33,8 @@ function sector_utils_page_attachments(array &$attachments) {
  * from "Publishing status" to "Publish" and removing the description.
  *
  * This should bring it in line with all other content types.
+ *
+ * Also adding extra text to the media delete form.
  */
 function sector_utils_form_alter(&$form, $form_state, $form_id) {
   switch ($form_id) {
@@ -39,6 +44,32 @@ function sector_utils_form_alter(&$form, $form_state, $form_id) {
       $element['#title'] = t('Published');
       $element['#description'] = t('');
       break;
+  }
+  $callbackObject = $form_state->getBuildInfo()['callback_object'];
+  // We want to add extra details to the media entity delete form.
+  if (!$callbackObject instanceof ContentEntityDeleteForm || !$callbackObject->getEntity() instanceof MediaInterface) {
+    // Early exit. We only want Media.
+    return;
+  }
+  $entity = $callbackObject->getEntity();
+  if (!$entity) {
+    // No entity. Stop here. Can't see why this would ever fail but just in case.
+    return;
+  }
+  $formIdWithBundle = 'media_' . $entity->bundle() . '_delete_form';
+  if ($form_id == $formIdWithBundle) {
+    $url = Url::fromRoute('entity.media.entity_usage', ['media' => $entity->id()]);
+    $entityUsage = Drupal::service('entity_usage.usage');
+    $usages = $entityUsage->listUsage($entity);
+    if (empty($usages)) {
+      // No usages. Stop here, default works.
+      return;
+    }
+    // Extra helper text on the delete form.
+    $markup = "<p>Are you sure you want to delete <strong>" . $entity->getName() . "?</strong></p>";
+    $markup .= "<p>This media item is <a href='" . $url->toString() . "'>used in either published content or revisions</a>. Are you sure you want to delete it?</p>";
+    $markup .= "<p>This action cannot be undone.</p>";
+    $form['description']['#markup'] = new TranslatableMarkup($markup);
   }
 }
 
