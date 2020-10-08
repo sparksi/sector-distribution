@@ -33,8 +33,6 @@ function sector_utils_page_attachments(array &$attachments) {
  * from "Publishing status" to "Publish" and removing the description.
  *
  * This should bring it in line with all other content types.
- *
- * Also adding extra text to the media delete form.
  */
 function sector_utils_form_alter(&$form, $form_state, $form_id) {
   switch ($form_id) {
@@ -45,6 +43,20 @@ function sector_utils_form_alter(&$form, $form_state, $form_id) {
       $element['#description'] = t('');
       break;
   }
+
+  sector_utils_track_entity_usage($form, $form_state, $form_id);
+}
+
+/**
+ * Helper function to add extra text to the media delete form.
+ */
+function sector_utils_track_entity_usage(&$form, $form_state, $form_id) {
+  if (!\Drupal::moduleHandler()->moduleExists('entity_usage')) {
+    // All code below is regarding entity_usage. If the module isn't enabled,
+    // exit early to save processing time.
+    return;
+  }
+
   $callbackObject = $form_state->getBuildInfo()['callback_object'];
   // We want to add extra details to the media entity delete form.
   if (!$callbackObject instanceof ContentEntityDeleteForm || !$callbackObject->getEntity() instanceof MediaInterface) {
