@@ -154,6 +154,9 @@
             },
             "drupal/entity_usage": {
                 "Better tracking per entity": "https://www.drupal.org/files/issues/2020-06-16/per-node-tracking_3151920_4.patch"
+            },
+            "drupal/password_policy": {
+                "Issue with saving user profiles - Remove after next PP release" : "https://www.drupal.org/files/issues/2020-03-19/password_policy-empty-password-skip-validation-2971079-37.patch"
             }
         }
     }

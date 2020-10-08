@@ -5,7 +5,6 @@
   const SearchTrigger = document.querySelector('.js-toggle-flyout-search');
   const NavTrigger = document.querySelector('.js-toggle-navigation');
 
-
   SearchTrigger.addEventListener('click', event => {
     searchIsOpen = !searchIsOpen;
 
@@ -24,7 +23,6 @@
     document.body.classList.toggle('nav-is-active');
     navIsOpen = !navIsOpen;
   });
-
 
   document.addEventListener('keydown', ({ keyCode }) => {
     searchIsOpen = keyCode === 27 ? false : searchIsOpen;

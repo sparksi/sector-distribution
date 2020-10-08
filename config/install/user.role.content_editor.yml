@@ -23,7 +23,6 @@ permissions:
   - 'administer menu attributes'
   - 'administer meta tags'
   - 'administer nodes'
-  - 'administer xmlsitemap'
   - 'bypass rh_file'
   - 'bypass rh_node'
   - 'bypass rh_taxonomy'

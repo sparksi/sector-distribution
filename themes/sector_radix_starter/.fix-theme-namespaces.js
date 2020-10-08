@@ -1,11 +1,10 @@
-const replaceInFiles = require('replace-in-files');
+const replace = require('replace-in-file');
 const mv = require('mv');
 
 const themeName = __dirname.split('/').pop();
 
 console.log(`New theme name: ${themeName}`);
 
-const replace = require('replace-in-file');
 const options = {
   allowEmptyPaths: true,
   files: [
@@ -17,7 +16,8 @@ const options = {
     'config/install/sector_radix_starter.settings.yml',
     'includes/*.inc',
     'composer.json',
-    'config/**/*.yml'
+    'config/**/*.yml',
+    'src/components/node/node.twig',
   ],
   from: /sector_radix_starter/g,
   to: themeName,

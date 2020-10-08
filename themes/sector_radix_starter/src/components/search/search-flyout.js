@@ -7,7 +7,6 @@
 
   const input = searchBox.querySelector('input[name=query]');
 
-
   const showSearch = () => {
     input.focus();
     searchBox.setAttribute('aria-hidden', false);
@@ -22,7 +21,6 @@
     document.body.classList.remove('search-is-active');
   }
 
-
   Drupal.toggleFlyoutSearch = searchIsOpen => {
     if (searchIsOpen) {
       showSearch();
@@ -30,7 +28,6 @@
       hideSearch();
     }
   }
-
 
   // attach a11y button
   const a11yButton = document.createElement('button');

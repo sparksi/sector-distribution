@@ -8,3 +8,9 @@
 @import "bootstrap/scss/vendor/rfs";
 
 @import "bootstrap/scss/tables";
+
+.table {
+  caption {
+    caption-side: top;
+  }
+}

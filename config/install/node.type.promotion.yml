@@ -15,5 +15,5 @@ type: promotion
 description: 'Use <em>Promotion</em> to create promotional and supporting content elements for display throughout your site.'
 help: ''
 new_revision: true
-preview_mode: 0
+preview_mode: 1
 display_submitted: false

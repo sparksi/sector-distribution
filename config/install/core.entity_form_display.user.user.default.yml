@@ -43,10 +43,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  timezone:
-    weight: 6
-    settings: {  }
-    third_party_settings: {  }
-    region: content
 hidden:
   user_picture: true

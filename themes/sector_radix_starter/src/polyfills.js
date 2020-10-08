@@ -5,7 +5,6 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
 }
 
-
 // IE support
 require('details-element-polyfill',);
 require('intersection-observer',);

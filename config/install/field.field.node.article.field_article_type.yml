@@ -10,7 +10,7 @@ field_name: field_article_type
 entity_type: node
 bundle: article
 label: 'Article category'
-description: '<a href=''/admin/structure/taxonomy/manage/article_types/overview'' >Add or edit terms for this taxonomy</a> (requires specific permissions).'
+description: '<a href=''/admin/structure/taxonomy/manage/article_types/overview'' target="_blank" >Add or edit terms for this taxonomy</a> (requires specific permissions).'
 required: true
 translatable: true
 default_value: {  }

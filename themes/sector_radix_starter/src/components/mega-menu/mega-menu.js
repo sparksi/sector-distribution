@@ -16,10 +16,8 @@
 
       let isMobile = isSmallDevice();
 
-
       MenuSource.forEach(sourceMenu => {
         triggers = sourceMenu.querySelectorAll('.menu__item.is-expanded > .menu__link');
-
 
         if (isMobile === false) {
           triggers.forEach(trigger => {
@@ -27,7 +25,6 @@
           })
         }
       })
-
 
       if (window.ResizeObserver === undefined) {
         return;

@@ -11,6 +11,7 @@ style:
       
   js:
     dist/polyfills.js: {}
+    dist/a11y.js: { attributes: { async: true } }
   dependencies:
 #    - core/jquery
     - core/drupal

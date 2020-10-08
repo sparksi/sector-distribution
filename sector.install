@@ -106,7 +106,7 @@ function createUsers() {
 
   $users = [
     'Content Editor' => 'content_editor',
-    'Content Administrator' => 'content_administrator',
+    'Content Administrator' => ['content_administrator', 'content_editor'],
     'Support Agent' => 'administrator',
     'Robot' => 'robot',
   ];
@@ -120,19 +120,22 @@ function createUsers() {
     //Mandatory settings
     $user->setPassword($randomPassword);
     $user->enforceIsNew();
-    $user->setEmail('noreply+' . $count . '@sparksinteractive.co.nz');
     $user->setUsername($username);
-    if(isset($role)) {
-      $user->addRole($role);
+    if (isset($role)) {
+      if (is_array($role)) {
+        foreach ($role as $r) {
+          $user->addRole($r);
+        }
+      }
+      else {
+        $user->addRole($role);
+      }
     }
-
-    //Optional settings
     $user->set("init", 'email');
     $user->set("langcode", $language);
     $user->set("preferred_langcode", $language);
     $user->set("preferred_admin_langcode", $language);
     $user->block();
-
     //Save user
     $res = $user->save();
     $count++;
@@ -168,3 +171,4 @@ function sector_update_8401() {
   $data = ["oembed_providers_url" => "https://oembed.com/providers.json"];
   \Drupal::configFactory()->getEditable('media.settings')->merge($data)->save();
 }
+
