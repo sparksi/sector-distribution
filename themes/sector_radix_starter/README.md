@@ -3,36 +3,36 @@
 Welcome.
 
 - Who - [Sparks Interactive](http://sparksinteractive.co.nz/).
-- What - Sector Starter is a Drupal theme designed to work in tandem with the Sector install profile.
-- Why - Sector Starter provides base typography, helper classes, spacing and general styles for default components provided by Sector.
-- How - You can use Sector Starter as a base theme or by cloning and owning.
+- What - Sector Radix Starter is a Drupal theme designed to work in tandem with the Sector install profile.
+- Why - Sector Radix Starter provides base typography, helper classes, spacing and general styles for default components provided by Sector.
+- How - You can use Sector Radix Starter as a base theme or by cloning and owning.
 
 This README outlines:
 
-- How to use Sector Starter
-- Sector Starter frontend workflow
+- How to use Sector Radix Starter
+- Sector Radix Starter frontend workflow
 - CSS coding standards and frontend architecture
 
-## How to use Sector Starter
+## How to use Sector Radix Starter
 
-There are two ways to use Sector Starter, as a base theme or by cloning and owning.
+There are two ways to use Sector Radix Starter, as a base theme or by cloning and owning.
 
-### Use Sector Starter as a base theme
+### Use Sector Radix Starter as a base theme
 
-Create a subtheme the [Drupal way](https://www.drupal.org/node/225125) using Sector Starter as your base theme.
+Create a subtheme the [Drupal way](https://www.drupal.org/node/225125) using Sector Radix Starter as your base theme.
 
-### Use Sector Starter by cloning and owning
+### Use Sector Radix Starter by cloning and owning
 
-**Note:** The Sector Starter frontend workflow requires a _minimum_ Node.js version of 8.10.0 but version 12 is recommended.
+**Note:** The Sector Radix Starter frontend workflow requires a _minimum_ Node.js version of 10 but version 12 is recommended.
 
-Make a copy of the Sector Starter theme
+Make a copy of the Sector Radix Starter theme
 
 `cd {PROJECTNAME}/web/themes/$ mkdir custom`
 `cd custom/`
 
-Make a copy of the Sector Starter theme
+Make a copy of the Sector Radix Starter theme
 
-`{PROJECTNAME}/web/themes/custom/$ cp -R ../../profiles/contrib/sector-distribution/themes/sector_starter {PROJECTTHEMENAME}`
+`{PROJECTNAME}/web/themes/custom/$ cp -R ../../profiles/contrib/sector-distribution/themes/sector_radix_starter {PROJECTTHEMENAME}`
 
 **Within your _new_ `{PROJECTTHEMENAME}` theme...**
 
@@ -56,7 +56,7 @@ Now jump in the backend and activate your new subtheme via the path:
 
 `/admin/appearance`
 
-## Sector Starter frontend workflow
+## Sector Radix Starter frontend workflow
 
 This project uses a NodeJS LibSaSS compilation pipeline.
 

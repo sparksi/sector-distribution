@@ -27,7 +27,7 @@ foreach (glob($includes_path) as $filename) {
  *
  * https://www.drupal.org/node/177868
  *
- * /admin/appearance/settings/sector_starter_2020
+ * /admin/appearance/settings/sector_radix_starter
  *
  * This mimics what Bootstrap does in its own form_alter.
  * Beware, removing Bootstrap may break assumptions about the theme form made here.
