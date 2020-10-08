@@ -172,3 +172,12 @@ function sector_update_8401() {
   \Drupal::configFactory()->getEditable('media.settings')->merge($data)->save();
 }
 
+/**
+ * Enable the Fakeobjects module
+ */
+function sector_update_8501() {
+  if (!\Drupal::moduleHandler()->moduleExists('fakeobjects')) {
+    \Drupal::service('module_installer')->install(['fakeobjects']);
+  }
+}
+
