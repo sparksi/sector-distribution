@@ -1,4 +1,4 @@
-name: sector_radix_starter
+name: Sector Radix Starter
 description: A theme based on Radix.
 screenshot: screenshot.png
 core: 8.x
@@ -59,8 +59,3 @@ component-libraries:
   sector_radix_starter:
     paths:
       - ./src/components
-
-# Information added by Drupal.org packaging script on 2020-01-26
-version: '8.x-4.7'
-project: 'radix'
-datestamp: 1580057585
