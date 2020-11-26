@@ -1,50 +1,16 @@
 {
     "name": "sparksinteractive/sector-distribution",
+    "type": "drupal-profile",
     "description": "Sector is a distribution for Drupal 8.",
     "license": "GPL-2.0-or-later",
-    "type" : "drupal-profile",
     "authors": [
         {
             "name": "Sparks Interactive"
         }
     ],
-    "repositories": {
-        "packagist.drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "asset.packagist": {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        },
-        "ckeditor-plugin/link": {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/link",
-                "version": "4.14.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        "ckeditor-plugin/fakeobjects": {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/fakeobjects",
-                "version": "4.14.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip",
-                    "type": "zip"
-                }
-            }
-        }
-    },
     "require": {
-        "ckeditor-plugin/link": "4.14.0",
         "ckeditor-plugin/fakeobjects": "4.14.0",
+        "ckeditor-plugin/link": "4.14.0",
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "~1.0",
         "drupal/admin_toolbar": "2.4",
@@ -83,8 +49,8 @@
         "drupal/password_policy": "3.0-beta1",
         "drupal/pathauto": "1.8",
         "drupal/rabbit_hole": "1.0-beta7",
-        "drupal/recaptcha": "3.0",
         "drupal/radix": "4.10",
+        "drupal/recaptcha": "3.0",
         "drupal/redirect": "1.6",
         "drupal/search_api": "1.17",
         "drupal/term_condition": "1.2",
@@ -100,22 +66,13 @@
         "drupal/xmlsitemap": "1.0"
     },
     "replace": {
-      "ckeditor/templates": "*"
+        "ckeditor/templates": "*"
     },
     "conflict": {
         "drupal/drupal": "*"
     },
     "config": {
         "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
-    "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
-    },
-    "scripts": {
     },
     "extra": {
         "installer-paths": {
@@ -156,8 +113,50 @@
                 "Better tracking per entity": "https://www.drupal.org/files/issues/2020-06-16/per-node-tracking_3151920_4.patch"
             },
             "drupal/password_policy": {
-                "Issue with saving user profiles - Remove after next PP release" : "https://www.drupal.org/files/issues/2020-03-19/password_policy-empty-password-skip-validation-2971079-37.patch"
+                "Issue with saving user profiles - Remove after next PP release": "https://www.drupal.org/files/issues/2020-03-19/password_policy-empty-password-skip-validation-2971079-37.patch"
             }
         }
-    }
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ]
+    },
+    "repositories": {
+        "packagist.drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "asset.packagist": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        "ckeditor-plugin/link": {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/link",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/link/releases/link_4.14.0.zip",
+                    "type": "zip"
+                }
+            }
+        },
+        "ckeditor-plugin/fakeobjects": {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/fakeobjects",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.14.0.zip",
+                    "type": "zip"
+                }
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {}
 }
