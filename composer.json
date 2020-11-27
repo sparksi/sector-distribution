@@ -11,6 +11,7 @@
     "require": {
         "ckeditor-plugin/fakeobjects": "4.14.0",
         "ckeditor-plugin/link": "4.14.0",
+        "ckeditor-plugin/templates": "4.14.0",
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "~1.0",
         "drupal/admin_toolbar": "2.4",
@@ -130,6 +131,18 @@
         "asset.packagist": {
             "type": "composer",
             "url": "https://asset-packagist.org"
+        },
+        "ckeditor-plugin/templates": {
+            "type": "package",
+            "package": {
+                "name": "ckeditor-plugin/templates",
+                "version": "4.14.0",
+                "type": "drupal-library",
+                "dist": {
+                    "url": "https://download.ckeditor.com/templates/releases/templates_4.14.0.zip",
+                    "type": "zip"
+                }
+            }
         },
         "ckeditor-plugin/link": {
             "type": "package",
