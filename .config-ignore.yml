@@ -7,8 +7,6 @@ ignore:
   - core.date_format.short
   - block.block.basesiteinuse.yml
   - core.extension.yml
-  - devel.*
-  - system.menu.devel.yml
   - webform.webform.example_*
   - webform.webform_options.*
   - webform.webform.contact.yml
