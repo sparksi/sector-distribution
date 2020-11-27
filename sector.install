@@ -17,7 +17,6 @@ use Drupal\user\Entity\User;
  * @see system_install()
  */
 function sector_install() {
-  
   \Drupal::service('theme_installer')->install(['sector_radix_starter']);
   \Drupal::service('theme_installer')->install(['seven']);
   \Drupal::service('module_installer')->install(['sector_default_content'], FALSE);
@@ -103,7 +102,6 @@ function createEntityqueues() {
  * Passwords are randomly generated.
  */
 function createUsers() {
-
   $users = [
     'Content Editor' => 'content_editor',
     'Content Administrator' => ['content_administrator', 'content_editor'],
@@ -155,7 +153,7 @@ function generateAlias() {
 
 function excludeXmlsitemapNodes() {
   $nids = [14, 5];
-  $xmlSitemapLinkStorage = \Drupal::service('xmlsitemap.link_storage'); 
+  $xmlSitemapLinkStorage = \Drupal::service('xmlsitemap.link_storage');
   foreach ($nids as $nid) {
     $link = $xmlSitemapLinkStorage->load('node', $nid);
     $link['status'] = "0";
@@ -181,3 +179,12 @@ function sector_update_8501() {
   }
 }
 
+/**
+ * Reset the WYSIWYG template library path.
+ */
+function sector_update_8502() {
+  $config = ['library_path' => 'libraries/templates'];
+  if (\Drupal::moduleHandler()->moduleExists('wysiwyg_template')) {
+    \Drupal::configFactory()->getEditable('wysiwyg_template.settings')->merge($config)->save();
+  }
+}
