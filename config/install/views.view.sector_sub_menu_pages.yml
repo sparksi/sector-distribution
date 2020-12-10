@@ -8,7 +8,7 @@ dependencies:
     - node
     - user
     - view_unpublished
-    - views_menu_children_filter
+#    - views_menu_children_filter
 id: sector_sub_menu_pages
 label: 'Sector sub menu pages'
 module: views
