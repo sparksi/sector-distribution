@@ -19,12 +19,11 @@ ignore:
   - linkit.linkit_profile.default.yml
   - views.settings.yml
   - views.view.glossary.yml
-  - better_formats.settings.yml
   - filter.settings.yml
   - menu_ui.settings.yml
   - metatag.metatag_defaults.front.yml
-  - node.settings.yml  
-  - password_policy.settings.yml  
+  - node.settings.yml
+  - password_policy.settings.yml
   - text.settings.yml
   - user.flood.yml
   - system.cron.yml
@@ -34,5 +33,5 @@ ignore:
   - system.menu.account.yml
   - system.menu.admin.yml
   - system.menu.main.yml
-  - system.menu.tools.yml  
-  - system.theme.global.yml  
+  - system.menu.tools.yml
+  - system.theme.global.yml

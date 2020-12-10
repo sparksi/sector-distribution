@@ -30,7 +30,7 @@ dependencies:
  - admin_toolbar_tools
  - autologout
  - automated_cron
- - better_formats
+ - allowed_formats
  - block
  - block_class
  - block_content
@@ -113,7 +113,7 @@ dependencies:
  - honeypot
  - username_enumeration_prevention
  - components
- - entity_usage  
+ - entity_usage
 
 themes:
  - bartik
