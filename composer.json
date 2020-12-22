@@ -1,7 +1,7 @@
 {
     "name": "sparksinteractive/sector-distribution",
     "type": "drupal-profile",
-    "description": "Sector is a distribution for Drupal 8.",
+    "description": "Sector is a distribution for Drupal 9.",
     "license": "GPL-2.0-or-later",
     "authors": [
         {

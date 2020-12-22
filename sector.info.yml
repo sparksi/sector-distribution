@@ -1,7 +1,7 @@
 name: Sector
 type: profile
-description: Sector D8 Profile
-core_version_requirement: '^8.8.3 || ^9'
+description: Sector D9 Profile
+core_version_requirement: '^9'
 
 distribution:
   name: Sector

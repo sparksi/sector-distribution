@@ -1,6 +1,5 @@
 name: Sector Utilities
+type: module
 description: Provides utilities, UX, and UI improvements for Sector.
 package: Sector
-
-type: module
-core: 8.x
+core_version_requirement: '^9'
