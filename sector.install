@@ -188,3 +188,39 @@ function sector_update_8502() {
     \Drupal::configFactory()->getEditable('wysiwyg_template.settings')->merge($config)->save();
   }
 }
+
+/**
+ * Replace Better Formats with Allowed Formats.
+ */
+function sector_update_9001() {
+  if (!\Drupal::moduleHandler()->moduleExists('allowed_formats')) {
+    \Drupal::service('module_installer')->install(['allowed_formats']);
+    // Load all field configs.
+    $field_configs = \Drupal::entityTypeManager()->getStorage('field_config')->loadMultiple();
+    $converted = 0;
+    foreach ($field_configs as $field_config) {
+      // Check if a field has better_formats config.
+      $betterFormatsSettings = $field_config->getThirdPartySetting('better_formats', 'allowed_formats') ?? FALSE;
+      if ($betterFormatsSettings) {
+        foreach ($betterFormatsSettings as $format => $betterFormatsSetting) {
+          // Set the allowed_formats config using the better_format config.
+          $field_config->setThirdPartySetting('allowed_formats', $format, $betterFormatsSetting);
+        }
+        // Save.
+        try {
+          $field_config->save();
+        }
+        catch (Drupal\Core\Entity\EntityStorageException $e) {
+          return $e->getMessage();
+        }
+        $converted++;
+      }
+    }
+    // Allow better_formats to remove its own config by uninstalling it.
+    if (\Drupal::moduleHandler()->moduleExists('better_formats')) {
+      \Drupal::service('module_installer')->uninstall(['better_formats']);
+    }
+
+    return t('@count field configs converted.', ['@count' => $converted]);
+  }
+}
