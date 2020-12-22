@@ -9,3 +9,8 @@ body:
   format: full_html
 weight: null
 node_types: {  }
+entity_types:
+  block_content: {  }
+  media: {  }
+  node: {  }
+  taxonomy_term: {  }
