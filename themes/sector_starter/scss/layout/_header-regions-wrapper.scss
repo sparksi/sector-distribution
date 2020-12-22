@@ -1,9 +1,0 @@
-/**
- * @file
- * BEM block for wrapping the header regions.
- */
-.header-regions-wrapper {
-  @include respond-to(desktop-and-up) {
-    background-color: $brand-gray-lightest;
-  }
-}

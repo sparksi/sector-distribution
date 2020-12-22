@@ -108,7 +108,6 @@ dependencies:
  - redirect
  - redirect_404
  - webform
- - webform_bootstrap
  - webform_ui
  - honeypot
  - username_enumeration_prevention
