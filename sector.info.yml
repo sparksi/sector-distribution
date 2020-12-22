@@ -92,7 +92,7 @@ dependencies:
  - rh_taxonomy
  - wysiwyg_template
  - default_content
-# - views_menu_children_filter
+ - views_menu_children_filter
  - captcha
  - field_delimiter
  - views_bulk_operations
