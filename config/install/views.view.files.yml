@@ -818,10 +818,14 @@ display:
           clear_on_exposed: false
           action_title: Action
           selected_actions:
-            views_bulk_edit: views_bulk_edit
-            views_bulk_operations_delete_entity: views_bulk_operations_delete_entity
-            pathauto_update_alias: 0
-            'entity:save_action:file': 0
+            -
+              action_id: views_bulk_edit
+            -
+              action_id: views_bulk_operations_delete_entity
+            -
+              action_id: pathauto_update_alias
+            -
+              action_id: 'entity:save_action:file'
           preconfiguration:
             views_bulk_edit:
               label_override: ''
