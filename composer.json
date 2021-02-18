@@ -105,9 +105,6 @@
                 "No contextual link to edit menu": "https://www.drupal.org/files/issues/2799821-2.menu_block.contextual_links.patch",
                 "Hide menu block title if empty": "https://www.drupal.org/files/issues/2018-05-08/menu_block-hide_block_if_no_links-2757215-9.patch"
             },
-            "drupal/token": {
-                "Prevent ghost menu items": "https://www.drupal.org/files/issues/token_node_preview_menu_link-2823731-4.patch"
-            },
             "drupal/entity_usage": {
                 "Better tracking per entity": "https://www.drupal.org/files/issues/2020-06-16/per-node-tracking_3151920_4.patch"
             },
