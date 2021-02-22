@@ -221,6 +221,38 @@ function sector_update_9001() {
       \Drupal::service('module_installer')->uninstall(['better_formats']);
     }
 
-    return t('@count field configs converted.', ['@count' => $converted]);
+    return t('<p>@count field configs converted. <em>Better Formats</em> has been replaced with <em>Allowed Formats</em> and should be removed:</p><p>composer remove drupal/better_formats</p>', ['@count' => $converted]);
   }
+}
+
+/**
+ * Implements hook_requirements().
+ *
+ * @param $phase
+ * @return array
+ */
+function sector_requirements($phase) {
+  $requirements = [];
+  /** @var \Drupal\Core\Extension\ExtensionList $extensionList */
+  $extensionList = \Drupal::service('extension.list.module');
+  $betterFormatsExists = $extensionList->exists('better_formats');
+  // Instruct the user to install Better Formats before continuing with updates.
+  // Remove in 9.2/9.3
+  if ($phase == 'update' && drupal_get_installed_schema_version('sector') < 9001) {
+    if (!$betterFormatsExists) {
+      $requirements['sector']['title'] = 'Sector';
+      $requirements['sector']['description'] = t('<p>Please install <em>Better Formats</em> with composer before continuing with the upgrade:</p><p><code>composer require drupal/better_formats</code></p><p>You will be prompted to remove it again after the update is complete.</p>');
+      $requirements['sector']['severity'] = REQUIREMENT_ERROR;
+    }
+  }
+  // If better formats exists after the D9 upgrade, write a line to the status report instructing the user to remove it.
+  // Remove in 9.2/9.3
+  if ($phase == 'runtime' && drupal_get_installed_schema_version('sector') >= 9001) {
+    if ($betterFormatsExists) {
+      $requirements['sector']['title'] = 'Sector';
+      $requirements['sector']['description'] = t('<p><em>Better Formats</em> has been replaced with <em>Allowed Formats</em> and should be removed:</p><p><code>composer remove drupal/better_formats</code></p>');
+      $requirements['sector']['severity'] = REQUIREMENT_ERROR;
+    }
+  }
+  return $requirements;
 }
