@@ -60,7 +60,7 @@
         "drupal/views_bulk_edit": "dev-2.x",
         "drupal/views_bulk_operations": "3.10",
         "drupal/views_menu_children_filter": "1.0-rc1",
-        "drupal/webform": "6.0.1",
+        "drupal/webform": "6.0.2",
         "drupal/wysiwyg_template": "3.0.0-rc1",
         "drupal/xmlsitemap": "1.0"
     },
