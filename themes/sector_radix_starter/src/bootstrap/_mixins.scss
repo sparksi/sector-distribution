@@ -1,0 +1,7 @@
+
+
+@mixin make-container-max-widths {
+    max-width: map-get($container-max-widths, xmg);
+    margin-left: auto;
+    margin-right: auto;
+}
