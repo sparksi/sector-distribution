@@ -6,9 +6,10 @@ style:
       dist/typography.css: {}
       dist/layouts/default.css: {}
       dist/layouts/print.css: { media: 'print' }
+      dist/utils/grid.css: {}
     theme:
       dist/ie11.css: { media: '(-ms-high-contrast: none)'}
-      
+
   js:
     dist/polyfills.js: {}
     dist/a11y.js: { attributes: { async: true } }
@@ -23,6 +24,12 @@ local_tasks_block:
   css:
     component:
       dist/drupal/local-tasks.css: { media: 'screen' }
+
+# Misc Drupal utils
+drupal-utils:
+  css:
+    base:
+      dist/drupal/utils.css: { media: 'screen' }
 
 # Custom Sector Bootstrap
 bootstrap-custom:
@@ -103,7 +110,6 @@ region--footer:
 region--post_footer:
   css:
     layout:
-      dist/regions/footer/footer-regions-wrapper.css: {}
       dist/regions/footer/post-footer.css: {}
 
 action:

@@ -13,6 +13,8 @@ use Drupal\node\NodeInterface;
 use Drupal\media\MediaInterface;
 use Drupal\Core\Render\Markup;
 
+use Symfony\Component\Yaml\Yaml;
+
 // Include all files from the includes directory.
 $includes_path = dirname(__FILE__) . '/includes/*.inc';
 foreach (glob($includes_path) as $filename) {
@@ -111,6 +113,10 @@ function sector_radix_starter_preprocess_html(&$variables) {
     $variables['#attached']['library'][] = 'sector_admin/global';
   }
 
+  if(\Drupal::currentUser()->isAuthenticated()) {
+    $variables['#attached']['library'][] = 'sector_radix_starter/drupal-utils';
+  }
+
   $relaventEntities = ['node', 'media'];
   foreach ($relaventEntities as $entityTypeId) {
     // Load the node entity from the current route.
@@ -149,40 +155,50 @@ function sector_radix_starter_preprocess_html(&$variables) {
   $variables['page']['#attached']['html_head'][] = [$lockViewport, 'lock-viewport'];
 
 
+  if(file_exists(dirname(__FILE__) . '/dist/fonts/preload-fonts.yaml')) {
+    $fonts_yaml = Yaml::parseFile(dirname(__FILE__) . '/dist/fonts/preload-fonts.yaml', Yaml::PARSE_OBJECT);
+    $fonts_variants = $fonts_yaml['fonts'] ?? [];
 
+    foreach($fonts_variants as $variant) {
+      $variables['page']['#attached']['html_head_link'][] = array(array(
+        'rel' => 'preload',
+        'href' => '/' . $theme->getPath() .'/' . $variant,
+        'as' => 'font',
+        'media' => '(prefers-reduced-data: no-preference)',
+        'type' => 'font/woff2',
+        'crossorigin' => 'anonymous'
+      ));
+    }
+  }
+
+  $icons = array(
+    array(
+      'rel' => 'icon',
+      'file' => 'favicon.ico'
+    ),
+    array(
+      'rel' => 'apple-touch-icon',
+      'file' => 'favicon-180.png'
+    ),
+    array(
+      'rel' => 'shortcut icon',
+      'file' => 'favicon.svg'
+    )
+  );
+
+  foreach($icons as $icon) {
+    if(file_exists(dirname(__FILE__) . '/dist/favicons/' . $icon['file'])) {
+      $variables['page']['#attached']['html_head_link'][] = array(array(
+        'rel' => $icon['rel'],
+        'href' => '/' . $theme->getPath() .'/dist/favicons/' . $icon['file']
+      ));
+    }
+  }
 
   $variables['page']['#attached']['html_head_link'][] = array(array(
-    'rel' => 'apple-touch-icon',
-    'href' => '/' . $theme->getPath() .'/dist/favicons/apple-touch-icon.png'
+    'rel' => 'manifest',
+    'href' => '/' . $theme->getPath() .'/dist/manifest.webmanifest'
   ));
-  
-  $variables['page']['#attached']['html_head_link'][] = array(array(
-    'rel' => 'apple-touch-icon',
-    'sizes' => '180x180',
-    'href' => '/' . $theme->getPath() .'/dist/favicons/apple-touch-icon-180x180.png'
-  ));
-  $variables['page']['#attached']['html_head_link'][] = array(array(
-    'rel' => 'apple-touch-icon-precomposed',
-    'sizes' => '180x180',
-    'href' => '/' . $theme->getPath() .'/dist/favicons/apple-touch-icon-precomposed.png'
-  ));
-  $variables['page']['#attached']['html_head_link'][] = array(array(
-    'rel' => 'icon',
-    'type' => 'image/png',
-    'sizes' => '48x48',
-    'href' => '/' . $theme->getPath() .'/dist/favicons/favicon-48x48.png'
-  ));
-  $variables['page']['#attached']['html_head_link'][] = array(array(
-    'rel' => 'shortcut icon',
-    'type' => 'image/svg+xml',
-    'href' => '/' . $theme->getPath() .'/favicon.svg'
-  ));
-  $variables['page']['#attached']['html_head_link'][] = array(array(
-    'rel' => 'mask-icon',
-    'color' => '#111111',
-    'href' => '/' . $theme->getPath() .'/favicon.svg'
-  ));
-
 }
 
 /**

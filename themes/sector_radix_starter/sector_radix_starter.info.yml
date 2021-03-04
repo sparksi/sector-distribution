@@ -1,7 +1,8 @@
 name: Sector Radix Starter
 description: A theme based on Radix.
 screenshot: screenshot.png
-core_version_requirement: '^9'
+core: 8.x
+# version: VERSION
 engine: twig
 type: theme
 base theme: radix
@@ -54,7 +55,7 @@ ckeditor_stylesheets:
   - dist/components/media/video.css
   - dist/components/responsive-ratio/responsive-ratio.css
 
-components:
-  namespaces:
-    sector_radix_starter:
+component-libraries:
+  sector_radix_starter:
+    paths:
       - ./src/components

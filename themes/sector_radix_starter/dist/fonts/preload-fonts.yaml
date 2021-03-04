@@ -1,0 +1,7 @@
+fonts:
+ - dist/fonts/NunitoSans-Bold.woff2
+ - dist/fonts/NunitoSans-Italic.woff2
+ - dist/fonts/NunitoSans-Light.woff2
+ - dist/fonts/NunitoSans-LightItalic.woff2
+ - dist/fonts/NunitoSans-Regular.woff2
+ - dist/fonts/NunitoSans-SemiBold.woff2
