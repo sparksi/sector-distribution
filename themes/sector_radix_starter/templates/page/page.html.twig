@@ -26,8 +26,8 @@
     {% if page.notices %}
       {% block notices %}
         <div class="site notices" role="region">
-          <div class="site__inner">
-            <div class="site__row">
+          <div class="site__inner container">
+            <div class="site__row row">
               {{ page.notices }}
             </div>
           </div>
@@ -41,8 +41,8 @@
       {% if page.pre_header %}
         {% block pre_header %}
           <div class="site pre-header" role="region">
-            <div class="site__inner">
-              <div class="site__row">
+            <div class="site__inner container">
+              <div class="site__row row">
                 {{ page.pre_header }}
               </div>
             </div>
@@ -54,8 +54,8 @@
       {% if page.header %}
         {% block header %}
           <header class="site header" role="banner">
-            <div class="site__inner">
-              <div class="site__row">
+            <div class="site__inner container">
+              <div class="site__row row">
                 {{ page.header }}
               </div>
             </div>
@@ -67,8 +67,8 @@
       {% if page.post_header %}
         {% block post_header %}
           <div class="site post-header" role="region">
-            <div class="site__inner">
-              <div class="site__row">
+            <div class="site__inner container">
+              <div class="site__row row">
                 {{ page.post_header }}
               </div>
             </div>
@@ -80,8 +80,8 @@
       {% if page.pre_hero %}
         {% block pre_hero %}
           <div class="site pre-hero" role="region" aria-label="Pre-hero">
-            <div class="site__inner">
-              <div class="site__row">
+            <div class="site__inner container">
+              <div class="site__row row">
                 {{ page.pre_hero }}
               </div>
             </div>
@@ -94,8 +94,8 @@
         {% block hero %}
           <div class="site hero" role="region" aria-label="Hero">
             <div class="hero__inner">
-              <div class="site__inner">
-                <div class="site__row">
+              <div class="site__inner container">
+                <div class="site__row row">
                   {{ page.hero }}
                 </div>
               </div>
@@ -108,8 +108,8 @@
       {% if page.post_hero %}
         {% block post_hero %}
           <div class="site post-hero" role="region" aria-label="Post-hero">
-            <div class="site__inner">
-              <div class="site__row">
+            <div class="site__inner container">
+              <div class="site__row row">
                 {{ page.post_hero }}
               </div>
             </div>
@@ -119,12 +119,15 @@
 
     </div>
 
+
+    <main role="main" class="main-regions-wrapper">
+
     {# Help #}
     {% if page.help %}
       {% block help %}
         <div class="site help" role="region">
-          <div class="site__inner">
-            <div class="site__row">
+          <div class="site__inner container">
+            <div class="site__row row">
               {{ page.help }}
             </div>
           </div>
@@ -136,8 +139,8 @@
     {% if page.pre_content %}
       {% block pre_content %}
         <div class="site pre-content" role="region" aria-label="Pre-content">
-          <div class="site__inner">
-            <div class="site__row">
+          <div class="site__inner container">
+            <div class="site__row row">
               {{ page.pre_content }}
             </div>
           </div>
@@ -148,12 +151,13 @@
     {%
       set content_classes = [
       'site__content',
+      'col-12',
         (page.sidebar|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'has-sidebar' : 'has-no-sidebar'
       ]
     %}
     <div class="site content">
-      <div class="site__inner">
-        <div class="site__row">
+      <div class="site__inner container">
+        <div class="site__row row">
           <div {{ content_attributes.addClass(content_classes) }} id="content" role="main">
 
             {# Action Links #}
@@ -192,8 +196,8 @@
     {% if page.post_content %}
       {% block post_content %}
         <div class="site post-content" role="region" aria-label="Post-content">
-          <div class="site__inner">
-            <div class="site__row">
+          <div class="site__inner container">
+            <div class="site__row row">
               {{ page.post_content }}
             </div>
           </div>
@@ -201,16 +205,19 @@
       {% endblock %}
     {% endif %}
 
+
+    </main>
+
     {% if (page.pre_footer) or (page.footer) or page.post_footer %}
     <hr class="footer-divide" />
-    <footer class="footer-regions-wrapper bg-dark" role="contentinfo">
+    <footer class="footer-regions-wrapper bg-dark text-white py-4 py-lg-6" role="contentinfo">
       <span class="footer-regions-wrapper__anchor sr-only" id="footer-anchor" aria-hidden="true" aria-disabled="true">More menu anchor</span>
       {# Pre-Footer #}
       {% if page.pre_footer %}
         {% block pre_footer %}
           <div class="site pre-footer">
-            <div class="site__inner">
-              <div class="site__row">
+            <div class="site__inner container">
+              <div class="site__row row">
                 {{ page.pre_footer }}
               </div>
             </div>
@@ -222,8 +229,8 @@
       {% if page.footer %}
         {% block footer %}
           <footer class="site footer">
-            <div class="site__inner">
-              <div class="site__row">
+            <div class="site__inner container">
+              <div class="site__row row">
                 {{ page.footer }}
               </div>
             </div>
@@ -235,8 +242,8 @@
       {% if page.post_footer %}
         {% block post_footer %}
           <div class="site post-footer">
-            <div class="site__inner">
-              <div class="site__row">
+            <div class="site__inner container">
+              <div class="site__row row">
                 {{ page.post_footer }}
               </div>
             </div>
