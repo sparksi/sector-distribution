@@ -84,3 +84,4 @@ permissions:
   - 'view revisions'
   - 'view workbench access information'
   - 'view workbench taxonomy pages'
+  - 'access entity usage statistics'

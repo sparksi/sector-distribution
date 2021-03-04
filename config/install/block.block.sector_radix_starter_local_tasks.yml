@@ -9,6 +9,9 @@ region: content
 weight: -17
 provider: null
 plugin: local_tasks_block
+third_party_settings:
+  block_class:
+    classes: 'local-tasks'
 settings:
   id: local_tasks_block
   label: Tabs
