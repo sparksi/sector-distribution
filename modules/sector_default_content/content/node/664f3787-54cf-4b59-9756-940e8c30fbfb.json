@@ -233,15 +233,15 @@
     ],
     "field_last_updated": [
         {
-            "value": "2017-10-24",
+            "value": "2020-03-04",
             "lang": "und"
         }
     ],
     "field_subtitle": [
         {
-            "value": "Built on Bootstrap and the Drupal Bootstrap theme, the Sector Starter Theme and Base configuration is ready to go and easy to administer.",
+            "value": "Built on the Drupal Radix theme, the Sector Starter Theme and base configuration is ready to go and easy to administer.",
             "format": "teaser_display_text",
-            "processed": "Built on Bootstrap and the Drupal Bootstrap theme, the Sector Starter Theme and Base configuration is ready to go and easy to administer.",
+            "processed": "Built on the Drupal Radix theme, the Sector Starter Theme and base configuration is ready to go and easy to administer.",
             "lang": "und"
         }
     ]

@@ -30,7 +30,7 @@
     ],
     "name": [
         {
-            "value": "Resource type marker",
+            "value": "Case studies {sample}",
             "lang": "en"
         }
     ],
@@ -55,7 +55,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Resource type marker | Base1 sector D8"
+                "title": "Resource type marker | Sector"
             }
         }
     ]

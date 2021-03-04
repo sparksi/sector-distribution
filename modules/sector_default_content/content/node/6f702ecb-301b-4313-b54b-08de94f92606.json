@@ -162,7 +162,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Resource content sample | Sector d8 base 1",
+                "title": "Resource content sample | Sector",
                 "description": "Resource\/Topic pages and news items have similar fieldsets and displays; however their data type and audiences is different."
             }
         }
@@ -187,20 +187,20 @@
     ],
     "body": [
         {
-            "value": "<p class=\"lead\">The Resource&nbsp;Content type is another example for taxonomy (or data) driven content. Resources&nbsp;and News items have similar fieldsets and displays; however their data type and audiences is different. Resources&nbsp;are non transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).<\/p>\r\n\r\n<p>The Sector Resource content type&nbsp;is prepared for information&nbsp;or knowledge database style content. The Resource type taxonomy allows to sort and filter Resource pages&nbsp;into groups for example training material&nbsp;or&nbsp;manuals. The Resource archive allows the user to filter by issue date or type.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\r\n<p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">The&nbsp;Resource&nbsp;content type is another example of&nbsp;taxonomy (or data) driven content. Resources&nbsp;and news items have similar field sets and displays; however their data type and audiences are different. Resources&nbsp;are non-transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).</p>\n\n<p>The Sector&nbsp;Resource<em>&nbsp;</em>content type&nbsp;is prepared for information&nbsp;or knowledge database content. The 'resource type' taxonomy allows you to sort and filter resource pages&nbsp;into groups, such as training materials or&nbsp;manuals. The resource archive allows the user to filter by issue date or type.&nbsp;</p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This&nbsp;sample node is a node of the content type&nbsp;Resource.</p>\n</div>\n\n<p>{sample content}</p>\n",
             "format": "basic_html",
-            "processed": "<p class=\"lead\">The Resource\u00a0Content type is another example for taxonomy (or data) driven content. Resources\u00a0and News items have similar fieldsets and displays; however their data type and audiences is different. Resources\u00a0are non transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).<\/p>\n\n<p>The Sector Resource content type\u00a0is prepared for information\u00a0or knowledge database style content. The Resource type taxonomy allows to sort and filter Resource pages\u00a0into groups for example training material\u00a0or\u00a0manuals. The Resource archive allows the user to filter by issue date or type.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This\u00a0sample node is a node of the content type\u00a0<em>Resource<\/em>.<\/p>\n<\/div>\n\n<p>{Sample content}<\/p>",
+            "processed": "<p class=\"lead\">The&nbsp;Resource&nbsp;content type is another example of&nbsp;taxonomy (or data) driven content. Resources&nbsp;and news items have similar field sets and displays; however their data type and audiences are different. Resources&nbsp;are non-transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).</p>\n\n<p>The Sector&nbsp;Resource<em>&nbsp;</em>content type&nbsp;is prepared for information&nbsp;or knowledge database content. The 'resource type' taxonomy allows you to sort and filter resource pages&nbsp;into groups, such as training materials or&nbsp;manuals. The resource archive allows the user to filter by issue date or type.&nbsp;</p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This&nbsp;sample node is a node of the content type&nbsp;Resource.</p>\n</div>\n\n<p>{sample content}</p>\n",
             "summary": "Resource\/Topic pages and news items have similar fieldsets and displays; however their data type and audiences is different."
         }
     ],
     "field_issue_date": [
         {
-            "value": "2017-01-08"
+            "value": "2020-03-04"
         }
     ],
     "field_last_updated": [
         {
-            "value": "2018-03-08",
+            "value": "2020-03-04",
             "lang": "en"
         }
     ],
@@ -212,7 +212,7 @@
             "lang": "en"
         },
         {
-            "uri": "https:\/\/www.sector.org.nz\/documentation\/sector-resource-content-type",
+            "uri": "https:\/\/www.sector.nz\/documentation\/sector-resource-content-type",
             "title": "Sector Resource content type documentation",
             "options": [],
             "lang": "en"

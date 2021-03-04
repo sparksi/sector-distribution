@@ -1,0 +1,62 @@
+{
+  "_links": {
+    "self": {
+      "href": "http:\/\/default\/taxonomy\/term\/29?_format=hal_json"
+    },
+    "type": {
+      "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/article_types"
+    }
+  },
+  "tid": [
+    {
+      "value": 29
+    }
+  ],
+  "uuid": [
+    {
+      "value": "bc9d2764-7bb5-4d9d-9d3a-a59467e9cdcb"
+    }
+  ],
+  "langcode": [
+    {
+      "value": "en",
+      "lang": "en"
+    }
+  ],
+  "vid": [
+    {
+      "target_id": "article_types"
+    }
+  ],
+  "name": [
+    {
+      "value": "News and updates {sample}",
+      "lang": "en"
+    }
+  ],
+  "weight": [
+    {
+      "value": 0
+    }
+  ],
+  "changed": [
+    {
+      "value": "2016-09-15T05:14:27+00:00",
+      "lang": "en",
+      "format": "Y-m-d\\TH:i:sP"
+    }
+  ],
+  "default_langcode": [
+    {
+      "value": true,
+      "lang": "en"
+    }
+  ],
+  "metatag": [
+    {
+      "value": {
+        "title": "News and updates | Sector"
+      }
+    }
+  ]
+}

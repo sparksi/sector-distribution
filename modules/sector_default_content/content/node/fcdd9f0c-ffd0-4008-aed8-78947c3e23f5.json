@@ -117,7 +117,7 @@
     ],
     "title": [
         {
-            "value": "Make your title unique, clear and descriptive",
+            "value": "Section B - section entry page",
             "lang": "und"
         }
     ],
@@ -161,7 +161,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Make your title unique, clear and descriptive | Base3",
+                "title": "Make your title unique, clear and descriptive | Sector",
                 "description": "The opening paragraph on every page should contain a concise introduction to the contents of the page."
             }
         }
@@ -176,9 +176,9 @@
     ],
     "body": [
         {
-            "value": "<p class=\"lead\">The opening paragraph on every page should contain a concise introduction to the contents of the page. This way your reader&nbsp;can instantly gain an understanding of what the page is about and decide whether they want to read the page or not.<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\r\n\t<p>This sample page is a node of the content type <em>Page<\/em> added to Level 1 in the main menu. It is displayed using the Section entry page <em>Page variant<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>Make sure the content of the page is relevant to the title and that the structure is clear and logical to the reader. All building blocks on your sites - the page content as a whole, paragraphs and sentences - should be <a href=\"http:\/\/www.webcredible.com\/blog\/content-usability-writing-web\/\">front-loaded<\/a>, with the important information at the beginning.<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">The opening paragraph on every page should contain a concise introduction to the contents of the page. This way your reader&nbsp;can instantly gain an understanding of what the page is about and decide whether they want to read on or not.</p>\n\n<p>Make sure the content of the page is relevant to the title and that the structure is clear and logical to the reader. All building blocks on your site&nbsp;should be <a href=\"http://www.webcredible.com/blog/content-usability-writing-web/\">front-loaded</a>&nbsp;(whether it's the page&nbsp;content, paragraphs, or sentences)&nbsp;with the important information at the beginning.</p>\n\n<p>{sample content}</p>\n",
             "format": "basic_html",
-            "processed": "<p class=\"lead\">The opening paragraph on every page should contain a concise introduction to the contents of the page. This way your reader\u00a0can instantly gain an understanding of what the page is about and decide whether they want to read the page or not.<\/p>\n\n<div aria-label=\"Information\" class=\"note\" role=\"note\">\n\t<p>This sample page is a node of the content type <em>Page<\/em> added to Level 1 in the main menu. It is displayed using the Section entry page <em>Page variant<\/em>.<\/p>\n<\/div>\n\n<p>Make sure the content of the page is relevant to the title and that the structure is clear and logical to the reader. All building blocks on your sites - the page content as a whole, paragraphs and sentences - should be <a href=\"http:\/\/www.webcredible.com\/blog\/content-usability-writing-web\/\">front-loaded<\/a>, with the important information at the beginning.<\/p>\n\n<p>{Sample content}<\/p>",
+            "processed": "<p class=\"lead\">The opening paragraph on every page should contain a concise introduction to the contents of the page. This way your reader&nbsp;can instantly gain an understanding of what the page is about and decide whether they want to read on or not.</p>\n\n<p>Make sure the content of the page is relevant to the title and that the structure is clear and logical to the reader. All building blocks on your site&nbsp;should be <a href=\"http://www.webcredible.com/blog/content-usability-writing-web/\">front-loaded</a>&nbsp;(whether it's the page&nbsp;content, paragraphs, or sentences)&nbsp;with the important information at the beginning.</p>\n\n<p>{sample content}</p>\n",
             "summary": ""
         }
     ],
@@ -189,9 +189,9 @@
     ],
     "field_subtitle": [
         {
-            "value": "Use the subtitle to support the page title.",
+            "value": "This sample page is a node of the 'page' content type added to Level 1 in the main menu. It is displayed using the 'section entry page' page variant.",
             "format": "teaser_display_text",
-            "processed": "Use the subtitle to support the page title."
+            "processed": "This sample page is a node of the 'page' content type added to Level 1 in the main menu. It is displayed using the 'section entry page' page variant."
         }
     ]
 }

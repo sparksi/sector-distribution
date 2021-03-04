@@ -141,7 +141,7 @@
     ],
     "title": [
         {
-            "value": "Learn about Sector on Sector.org.nz",
+            "value": "Learn about Sector on Sector.nz",
             "lang": "en"
         }
     ],
@@ -186,7 +186,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Learn about Sector on Sector.org.nz | Base2",
+                "title": "Learn about Sector on Sector.nz | Sector",
                 "description": "Learn more about Sector with our Sector Guide, find the latest additions to the Sector docs below, or browse through our collections."
             }
         }
@@ -203,16 +203,16 @@
     ],
     "body": [
         {
-            "value": "Learn more about Sector with our Sector Guide, find the latest additions to the Sector docs below, or browse through our collections.",
+            "value": "Learn more about Sector on our website - with guides and documentation for content editors, sitebuilders, and developers. Find out the latest Sector news and updates.",
             "format": "teaser_display_text",
-            "processed": "Learn more about Sector with our Sector Guide, find the latest additions to the Sector docs below, or browse through our collections.",
+            "processed": "Learn more about Sector on our website - with guides and documentation for content editors, sitebuilders, and developers. Find out the latest Sector news and updates.",
             "summary": ""
         }
     ],
     "field_featured_content": [
         {
-            "uri": "https:\/\/sector.org.nz",
-            "title": "Visit Sector.org.nz",
+            "uri": "https:\/\/sector.nz",
+            "title": "Visit Sector.nz",
             "options": []
         }
     ]

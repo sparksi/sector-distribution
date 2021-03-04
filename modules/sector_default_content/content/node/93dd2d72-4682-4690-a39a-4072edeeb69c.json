@@ -161,7 +161,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Sector News section entry page | Sector d8 base 1",
+                "title": "Sector News section entry page | Sector",
                 "description": "Next to hierarchical content\u00a0in a menu tree, Sector supports taxonomy\u00a0(or data) driven content. The news section entry page is an example of how to transition from pages to\u00a0views.\u00a0"
             }
         }
@@ -186,15 +186,15 @@
     ],
     "body": [
         {
-            "value": "<p class=\"lead\">Next to hierarchical content&nbsp;in a menu tree, Sector supports taxonomy&nbsp;(or data) driven content. The news section entry page is an example of how to transition from <em>pages<\/em> to&nbsp;<em>views<\/em>.&nbsp;<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\r\n<p>In this example an simple news listing is embedded into a node of the content type page. A filtered news archive view is preconfigured to act as a <a href=\"\/news\/archive\">News archive<\/a>.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">Along with&nbsp;hierarchical content&nbsp;in a menu, Sector also supports data-driven content using taxonomies. The news section entry page is an example of how to transition from <em>pages</em> to&nbsp;<em>views</em>.&nbsp;</p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>In this example, a&nbsp;simple news listing is embedded into a node of the 'page' content type. A filtered news archive view is also preconfigured to act as a <a href=\"/news/archive\">News archive</a>.</p>\n</div>\n\n<p>{sample content}</p>\n",
             "format": "basic_html",
-            "processed": "<p class=\"lead\">Next to hierarchical content\u00a0in a menu tree, Sector supports taxonomy\u00a0(or data) driven content. The news section entry page is an example of how to transition from <em>pages<\/em> to\u00a0<em>views<\/em>.\u00a0<\/p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>In this example an simple news listing is embedded into a node of the content type page. A filtered news archive view is preconfigured to act as a <a href=\"\/news\/archive\">News archive<\/a>.<\/p>\n<\/div>\n\n<p>{Sample content}<\/p>",
+            "processed": "<p class=\"lead\">Along with&nbsp;hierarchical content&nbsp;in a menu, Sector also supports data-driven content using taxonomies. The news section entry page is an example of how to transition from <em>pages</em> to&nbsp;<em>views</em>.&nbsp;</p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>In this example, a&nbsp;simple news listing is embedded into a node of the 'page' content type. A filtered news archive view is also preconfigured to act as a <a href=\"/news/archive\">News archive</a>.</p>\n</div>\n\n<p>{sample content}</p>\n",
             "summary": ""
         }
     ],
     "field_last_updated": [
         {
-            "value": "2017-10-24"
+            "value": "2020-03-04"
         }
     ]
 }

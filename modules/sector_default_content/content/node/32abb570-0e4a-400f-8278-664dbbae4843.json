@@ -141,7 +141,7 @@
     ],
     "title": [
         {
-            "value": "The Sector starter theme and Bootstrap",
+            "value": "The Sector starter theme and Radix",
             "lang": "en"
         }
     ],
@@ -186,7 +186,7 @@
     "metatag": [
         {
             "value": {
-                "title": "The Sector starter theme and Bootstrap | Base2",
+                "title": "The Sector starter theme and Bootstrap | Sector",
                 "description": "Launch your mobile-first projects with the Sector starter theme and the 'world's most popular' front end component library, Bootstrap."
             }
         }
@@ -203,16 +203,16 @@
     ],
     "body": [
         {
-            "value": "Launch your mobile-first projects with the Sector starter theme and the 'world's most popular' front end component library, Bootstrap.",
+            "value": "Launch your mobile-first projects with the Sector Radix starter theme - a sub-theme of Drupal Radix based on Bootstrap 4.",
             "format": "teaser_display_text",
-            "processed": "Launch your mobile-first projects with the Sector starter theme and the 'world's most popular' front end component library, Bootstrap.",
+            "processed": "Launch your mobile-first projects with the Sector Radix starter theme - a sub-theme of Drupal Radix based on Bootstrap 4.",
             "summary": ""
         }
     ],
     "field_featured_content": [
         {
-            "uri": "https:\/\/getbootstrap.com\/",
-            "title": "Visit the Bootstrap website",
+            "uri": "http://www.radixtheme.org/",
+            "title": "Visit the Radix website",
             "options": []
         }
     ]

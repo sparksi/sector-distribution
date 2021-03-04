@@ -1,0 +1,62 @@
+{
+  "_links": {
+    "self": {
+      "href": "http:\/\/default\/taxonomy\/term\/30?_format=hal_json"
+    },
+    "type": {
+      "href": "http:\/\/drupal.org\/rest\/type\/taxonomy_term\/resource_types"
+    }
+  },
+  "tid": [
+    {
+      "value": 30
+    }
+  ],
+  "uuid": [
+    {
+      "value": "01b0478b-ca51-4a6f-8087-af75a3b8b556"
+    }
+  ],
+  "langcode": [
+    {
+      "value": "en",
+      "lang": "en"
+    }
+  ],
+  "vid": [
+    {
+      "target_id": "resource_types"
+    }
+  ],
+  "name": [
+    {
+      "value": "Guidelines {sample}",
+      "lang": "en"
+    }
+  ],
+  "weight": [
+    {
+      "value": 0
+    }
+  ],
+  "changed": [
+    {
+      "value": "2016-09-15T05:14:27+00:00",
+      "lang": "en",
+      "format": "Y-m-d\\TH:i:sP"
+    }
+  ],
+  "default_langcode": [
+    {
+      "value": true,
+      "lang": "en"
+    }
+  ],
+  "metatag": [
+    {
+      "value": {
+        "title": "Guidelines | Sector"
+      }
+    }
+  ]
+}

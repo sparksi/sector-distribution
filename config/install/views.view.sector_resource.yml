@@ -538,7 +538,7 @@ display:
           empty: true
           tokenize: false
           content:
-            value: "<div class=\"prose\"><p class=\"lead\">This is a 'View page'. All elements of this page are managed via the view.</p>\r\n<p> For example this text is added via the global view element 'Text area'.</p></div>\r\n"
+            value: "<div class=\"prose\"><p class=\"lead\">This is a 'view' page for displaying content which has the 'resource' content type.</p>\r\n<p>Content administrators can change the filter categories by editing the taxonomy for that category.</p></div>\r\n"
             format: full_html
           plugin_id: text
       defaults:

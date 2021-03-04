@@ -157,7 +157,7 @@
     ],
     "title": [
         {
-            "value": "Sector Page Content settings - Hide sidebar",
+            "value": "Sector standard page - wide",
             "lang": "und"
         }
     ],
@@ -201,7 +201,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Sector Page Content settings - Hide sidebar | Base3",
+                "title": "Sector Page Content settings - Hide sidebar | Sector",
                 "description": "Next to the Page variants Sector introduces Page content settings to provide further display options per node.\u00a0As the Page variants,\u00a0Page content settings are defined using\u00a0Drupal taxonomies\u00a0and Drupal\u00a0context condition."
             }
         }
@@ -226,15 +226,23 @@
     ],
     "body": [
         {
-            "value": "<p class=\"lead\">Next to the Page variants Sector introduces Page content settings to provide further display options per node.&nbsp;As the Page variants,&nbsp;Page content settings are defined using&nbsp;Drupal taxonomies&nbsp;and Drupal&nbsp;context condition.<\/p>\r\n\r\n<p>So while your pages are grouped in Section entry pages and Standard&nbsp;pages, you can hide the sidebar on&nbsp;either variant - like on this sample page.&nbsp;Another usage is as sort citeria in Drupal Views, for example in Drupal Search API Search views via&nbsp;'Hide from search results' (optional extention).&nbsp;<\/p>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">Next to the page variants, Sector introduces page content settings to provide further display options per node. Like&nbsp;page variants, page content settings are defined using&nbsp;Drupal taxonomies&nbsp;and Drupal&nbsp;context conditions.</p>\n\n<p>Your pages can be displayed as section entry pages and standard&nbsp;pages, and&nbsp;for each node you can also change the page content settings to hide&nbsp;the sidebar on&nbsp;either variant (like on this sample page).&nbsp;Another usage for the page content settings is for managing&nbsp;sort criteria in Drupal Views -&nbsp;like&nbsp;'Hide from search results' (optional extension) in Drupal Search API views.&nbsp;</p>\n\n<p>{sample content}</p>\n",
             "format": "basic_html",
-            "processed": "<p class=\"lead\">Next to the Page variants Sector introduces Page content settings to provide further display options per node.\u00a0As the Page variants,\u00a0Page content settings are defined using\u00a0Drupal taxonomies\u00a0and Drupal\u00a0context condition.<\/p>\n\n<p>So while your pages are grouped in Section entry pages and Standard\u00a0pages, you can hide the sidebar on\u00a0either variant - like on this sample page.\u00a0Another usage is as sort citeria in Drupal Views, for example in Drupal Search API Search views via\u00a0'Hide from search results' (optional extention).\u00a0<\/p>\n\n<p>{Sample content}<\/p>",
+            "processed": "<p class=\"lead\">Next to the page variants, Sector introduces page content settings to provide further display options per node. Like&nbsp;page variants, page content settings are defined using&nbsp;Drupal taxonomies&nbsp;and Drupal&nbsp;context conditions.</p>\n\n<p>Your pages can be displayed as section entry pages and standard&nbsp;pages, and&nbsp;for each node you can also change the page content settings to hide&nbsp;the sidebar on&nbsp;either variant (like on this sample page).&nbsp;Another usage for the page content settings is for managing&nbsp;sort criteria in Drupal Views -&nbsp;like&nbsp;'Hide from search results' (optional extension) in Drupal Search API views.&nbsp;</p>\n\n<p>{sample content}</p>\n",
             "summary": ""
         }
     ],
     "field_last_updated": [
         {
-            "value": "2017-10-24"
+            "value": "2020-03-04"
+        }
+    ],
+    "field_subtitle": [
+        {
+            "value": "This sample page is a node of the 'page' content type added to 'Section A' in the main menu. It is displayed using the 'standard page' page variant, with the 'hide sidebar' page content setting selected.",
+            "format": "teaser_display_text",
+            "processed": "This sample page is a node of the 'page' content type added to 'Section A' in the main menu. It is displayed using the 'standard page' page variant, with the 'hide sidebar' page content setting selected.",
+            "lang": "und"
         }
     ]
 }

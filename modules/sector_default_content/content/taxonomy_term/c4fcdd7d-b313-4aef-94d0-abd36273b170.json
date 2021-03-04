@@ -30,7 +30,7 @@
     ],
     "name": [
         {
-            "value": "Article type marker",
+            "value": "Media release {sample}",
             "lang": "en"
         }
     ],
@@ -55,7 +55,7 @@
     "metatag": [
         {
             "value": {
-                "title": "Article type marker | Base1 sector D8"
+                "title": "Article type marker | Sector"
             }
         }
     ]

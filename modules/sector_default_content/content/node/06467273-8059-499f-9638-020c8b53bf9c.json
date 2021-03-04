@@ -231,20 +231,20 @@
     ],
     "body": [
         {
-            "value": "<p class=\"lead\">Current navigation pattern for large-scale websites move away from hierarchical structures towards taxonomy driven systems. The Resource content type can be&nbsp;a first step in this direction.<\/p>\r\n\r\n<p>Over time any hierarchical structure tends to grow both horizontally and vertically: the tree turns into a jungle. To avoid this growth we are recommending a content strategy that moves away from a hierarchical structure towards data-driven content. &nbsp;<\/p>\r\n\r\n<p>To move from pages to data you need a clear strategy for what goes where and why. Take time to sort your content into resource types and topics. Think about pre-filling your Tag&nbsp;taxonomy with useful topics that help your users to find content.<\/p>\r\n\r\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\r\n<p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource<\/em>.<\/p>\r\n<\/div>\r\n\r\n<p>{Sample content}<\/p>\r\n",
+            "value": "<p class=\"lead\">Current navigation pattern for large-scale websites move away from hierarchical structures and towards taxonomy driven systems. The Resource content type can be&nbsp;a first step in this direction.</p>\n\n<p>Over time, any hierarchical structure tends to grow both horizontally and vertically - and&nbsp;the tree grows into a jungle. To avoid this growth, we&nbsp;recommend&nbsp;a content strategy that moves away from a hierarchical structure and towards data-driven content. &nbsp;</p>\n\n<p>To move from pages to data you need a clear strategy for what goes where, and why. Take time to sort your content into resource types and topics. Think about pre-filling your 'tag' taxonomy with useful topics that help your users to find content.</p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource</em>.</p>\n</div>\n\n<p>{sample content}</p>",
             "format": "basic_html",
-            "processed": "<p class=\"lead\">Current navigation pattern for large-scale websites move away from hierarchical structures towards taxonomy driven systems. The Resource content type can be\u00a0a first step in this direction.<\/p>\n\n<p>Over time any hierarchical structure tends to grow both horizontally and vertically: the tree turns into a jungle. To avoid this growth we are recommending a content strategy that moves away from a hierarchical structure towards data-driven content. \u00a0<\/p>\n\n<p>To move from pages to data you need a clear strategy for what goes where and why. Take time to sort your content into resource types and topics. Think about pre-filling your Tag\u00a0taxonomy with useful topics that help your users to find content.<\/p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This\u00a0sample node is a node of the content type\u00a0<em>Resource<\/em>.<\/p>\n<\/div>\n\n<p>{Sample content}<\/p>",
+            "processed": "<p class=\"lead\">Current navigation pattern for large-scale websites move away from hierarchical structures and towards taxonomy driven systems. The Resource content type can be&nbsp;a first step in this direction.</p>\n\n<p>Over time, any hierarchical structure tends to grow both horizontally and vertically - and&nbsp;the tree grows into a jungle. To avoid this growth, we&nbsp;recommend&nbsp;a content strategy that moves away from a hierarchical structure and towards data-driven content. &nbsp;</p>\n\n<p>To move from pages to data you need a clear strategy for what goes where, and why. Take time to sort your content into resource types and topics. Think about pre-filling your 'tag' taxonomy with useful topics that help your users to find content.</p>\n\n<div aria-label=\"Information\" class=\"note note--primary\" role=\"note\">\n<p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource</em>.</p>\n</div>\n\n<p>{sample content}</p>",
             "summary": ""
         }
     ],
     "field_issue_date": [
         {
-            "value": "2017-01-08"
+            "value": "2020-03-04"
         }
     ],
     "field_last_updated": [
         {
-            "value": "2018-03-08",
+            "value": "2020-03-04",
             "lang": "en"
         }
     ]
