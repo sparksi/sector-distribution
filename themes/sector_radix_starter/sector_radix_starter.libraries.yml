@@ -320,6 +320,20 @@ webform:
   dependencies:
     - sector_radix_starter/forms
     - sector_radix_starter/bootstrap-forms
+
+
+# Sector Add-ons
+promotion--blog-archive:
+  css:
+    component:
+      dist/components/promotion/promotion--blog-archive.css: {}
+comments:
+  css:
+    component:
+      dist/components/comment/comment.css: { }
+      dist/components/comment/comment-form.css: { media: 'screen' }
+
+
 # Glitter. Mainly demo CSS that can be removed for most sites.
 glitter:
   css:

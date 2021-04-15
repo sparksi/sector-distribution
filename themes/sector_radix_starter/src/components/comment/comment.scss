@@ -1,0 +1,40 @@
+@import 'src/bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/gradients';
+@import 'bootstrap/scss/mixins/box-shadow';
+@import 'bootstrap/scss/mixins/hover';
+@import 'bootstrap/scss/mixins/buttons';
+
+.comment {
+
+
+  + .comment,
+  + .indented {
+    margin-top: $spacer * 1.25;
+  }
+
+  + .indented {
+    padding-left: $spacer;
+    border-left: 8px $gray-200 solid;
+  }
+
+  * + .links {
+    margin-top: $spacer * 0.5;
+  }
+
+  .links {
+    font-size: 90%;
+
+    > li:first-child > .nav-link {
+      border-top-left-radius: $btn-border-radius;
+      border-bottom-left-radius: $btn-border-radius;
+    }
+    > li:last-child > .nav-link {
+      border-top-right-radius: $btn-border-radius;
+      border-bottom-right-radius: $btn-border-radius;
+    }
+
+    .nav-link {
+      @include button-variant($primary, $primary);
+    }
+  }
+}

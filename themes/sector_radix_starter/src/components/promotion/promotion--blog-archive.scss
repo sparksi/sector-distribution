@@ -1,0 +1,27 @@
+@import 'src/bootstrap/custom-bootstrap-variables';
+@import 'mixins/type';
+
+.promotion--blog-archive {
+
+  ul {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    @include font-smoothing;
+
+    > li {
+      margin-right: .75rem;
+    }
+
+    a {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  // dont need a pager here
+  nav {
+    display: none;
+  }
+}
