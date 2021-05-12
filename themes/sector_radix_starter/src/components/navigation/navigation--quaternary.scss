@@ -5,17 +5,21 @@
 .navigation--quaternary .menu {
   display: flex;
   @include font-smoothing;
-  
+
   @include media-breakpoint-down(md) {
     flex-direction: column;
     width: auto;
     justify-content: center;
     height: auto;
   }
-  
+
   @include media-breakpoint-up(lg) {
     > .menu__item + .menu__item {
       margin-left: 2em;
     }
+  }
+
+  .bg-dark & .menu__link {
+    color: $white;
   }
 }

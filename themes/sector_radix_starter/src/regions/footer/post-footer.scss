@@ -2,29 +2,24 @@
 @import 'bootstrap/scss/mixins/breakpoints';
 @import 'bootstrap/scss/mixins/grid';
 
-.post-footer {
-  
-  
-}
-
 .region-post-footer {
   @include make-container-max-widths;
-  @include make-container;  
+  @include make-container;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   grid-gap: $spacer;
-  
-  @include media-breakpoint-up(md) {      
+
+  @include media-breakpoint-up(md) {
     grid-template-columns: 1fr auto;
-    grid-gap: 0 $spacer;  
+    grid-gap: 0 $spacer;
   }
-  
-  @include media-breakpoint-up(md) {   
+
+  @include media-breakpoint-up(md) {
     > .block {
       grid-column: 1 / 2;
     }
-    
+
     .promotion--brand {
       grid-column: 2 / 3;
       grid-row: 1 / span 3;
