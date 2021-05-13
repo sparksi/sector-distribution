@@ -108,3 +108,4 @@ permissions:
   - 'view the administration theme'
   - 'view workbench access information'
   - 'view workbench taxonomy pages'
+  - 'access entity usage statistics'
