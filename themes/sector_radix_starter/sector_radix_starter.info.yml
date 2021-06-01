@@ -39,7 +39,8 @@ libraries-override:
   system/base:
     css:
       component:
-        css/system/components/align.module.css: false
+        css/components/align.module.css: false
+        css/components/clearfix.module.css: false
   radix/bootstrap: false
 
 ckeditor_stylesheets:

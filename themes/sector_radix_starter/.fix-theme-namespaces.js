@@ -18,6 +18,7 @@ const options = {
     'composer.json',
     'config/**/*.yml',
     'src/components/node/node.twig',
+    'templates/content/node.html.twig'
   ],
   from: /sector_radix_starter/g,
   to: themeName,
@@ -30,18 +31,18 @@ const options = {
 replace(options)
   .then(results => {
     //console.log('Replacement results:', results);
-    
+
     Promise.all(results.map(({ file: fileName }) => new Promise((resolve, reject) => {
       const newFileName = fileName.replace('sector_radix_starter', themeName);
       mv(fileName, newFileName, (err) => {
         if(err)reject(err);
         resolve(`Renamed: ${fileName} ➡️ ${newFileName}`);
       });
-      
+
     }))).then(result => {
       console.log(`Renamed ${result.length} files`);
     });
-    
+
   })
   .catch(error => {
     console.error('Error occurred:', error);
