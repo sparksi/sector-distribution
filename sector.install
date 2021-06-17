@@ -10,13 +10,21 @@ use Drupal\user\Entity\User;
  */
 
 /**
- * Implements hook_install().
- *
- * Perform actions to set up the site for this profile.
- *
- * @see system_install()
+ * Implements hook_install_tasks().
  */
-function sector_install() {
+function sector_install_tasks() {
+  return [
+    'sector_install_default_content' => [
+      'display_name' => t('Sector install default content'),
+      'type' => 'default',
+    ],
+  ];
+}
+
+/**
+ * Content install task.
+ */
+function sector_install_default_content() {
   \Drupal::service('theme_installer')->install(['sector_radix_starter']);
   \Drupal::service('theme_installer')->install(['seven']);
   \Drupal::service('module_installer')->install(['sector_default_content'], FALSE);
