@@ -33,7 +33,7 @@ function sector_radix_starter_preprocess_menu(&$variables) {
 function _recursive_menu_item_unpublish_check(&$items) {
   foreach ($items as $key => &$item) {
     // We only want to look at internal links.
-    if (!$item['url']->isExternal()) {
+    if (!$item['url']->isExternal() && $item['url']->isRouted()) {
       // RouteParameters gets the NID of the linked item.
       $routeParameters = $item['url']->getRouteParameters();
       $nid = (!empty($routeParameters['node'])) ? $routeParameters['node'] : FALSE;
