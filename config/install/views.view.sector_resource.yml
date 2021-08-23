@@ -331,7 +331,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: short_teaser
+          view_mode: teaser
       pager:
         type: full
         options:
