@@ -4,7 +4,6 @@ local_task_enabled_entity_types:
 usage_controller_items_per_page: 25
 track_enabled_source_entity_types:
   - block_content
-  - entity_embed_fake_entity
   - entity_subqueue
   - media
   - menu_link_content
@@ -17,7 +16,6 @@ track_enabled_source_entity_types:
   - webform_submission
 track_enabled_target_entity_types:
   - block_content
-  - entity_embed_fake_entity
   - entity_subqueue
   - media
   - menu_link_content
@@ -38,6 +36,5 @@ track_enabled_plugins:
   - html_link
   - dynamic_entity_reference
   - layout_builder
-  - entity_embed
   - media_embed
 site_domains: {  }

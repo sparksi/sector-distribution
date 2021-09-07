@@ -15,8 +15,6 @@ dependencies:
  - menu_ui
  - media
  - media_library
- - embed
- - entity_embed
  - inline_entity_form
  - path
  - pathauto

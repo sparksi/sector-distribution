@@ -10,7 +10,6 @@ dependencies:
     - core.entity_view_mode.media.teaser
   module:
     - editor
-    - entity_embed
     - linkit
     - media
   default_config_hash: WSSFQPMOl2eToB7g1kaxq9ZBowt-YQNQ2rpPFajsE18
@@ -57,12 +56,6 @@ filters:
     provider: filter
     status: true
     weight: -47
-    settings: {  }
-  entity_embed:
-    id: entity_embed
-    provider: entity_embed
-    status: true
-    weight: -45
     settings: {  }
   filter_html_escape:
     id: filter_html_escape
