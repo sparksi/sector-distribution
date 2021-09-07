@@ -2,6 +2,9 @@
 @import 'bootstrap/scss/mixins/breakpoints';
 
 
+//$separator: \:;
+$separator: '-';
+
 .d-grid {
     display: grid;
 }
@@ -60,42 +63,45 @@
     .#{$breakpoint}\:grid,
     .d-#{$breakpoint}-grid {
 
-        @include media-breakpoint-up(#{$breakpoint}) {  
+        @include media-breakpoint-up(#{$breakpoint}) {
             display: grid;
         }
     }
-    
-    @for $i from 1 through 12 {
-        .#{$breakpoint}\:grid-cols-#{$i} {
-            grid-template-columns: repeat(#{$i}, 1fr);
-        }
-    
-        .#{$breakpoint}\:row-span-#{$i} {
-            grid-row: span #{$i} / span #{$i};
-        }
-    
-        .#{$breakpoint}\:row-start-#{$i} {
-            grid-row-start: #{$i};
-        }
-    
-        .#{$breakpoint}\:col-span-#{$i} {
-            grid-column: span #{$i} / span #{$i};
-        }
-    
-        .#{$breakpoint}\:col-start-#{$i} {
-            grid-column-start: #{$i};
-        }
-    
-        .#{$breakpoint}\:gap-#{$i} {
-            grid-gap: calc(#{($spacer / 2) * $i});
-        }
-    
-        .#{$breakpoint}\:gap-x-#{$i} {
-            column-gap: calc(#{($spacer / 2) * $i});
-        }
-    
-        .#{$breakpoint}\:gap-y-#{$i} {
-            row-gap: calc(#{($spacer / 2) * $i});
+
+
+    @include media-breakpoint-up(#{$breakpoint}) {
+        @for $i from 1 through 12 {
+            .#{$breakpoint}#{$separator}grid-cols-#{$i} {
+                grid-template-columns: repeat(#{$i}, 1fr);
+            }
+
+            .#{$breakpoint}#{$separator}row-span-#{$i} {
+                grid-row: span #{$i} / span #{$i};
+            }
+
+            .#{$breakpoint}#{$separator}row-start-#{$i} {
+                grid-row-start: #{$i};
+            }
+
+            .#{$breakpoint}#{$separator}col-span-#{$i} {
+                grid-column: span #{$i} / span #{$i};
+            }
+
+            .#{$breakpoint}#{$separator}col-start-#{$i} {
+                grid-column-start: #{$i};
+            }
+
+            .#{$breakpoint}#{$separator}gap-#{$i} {
+                grid-gap: calc(#{($spacer / 2) * $i});
+            }
+
+            .#{$breakpoint}#{$separator}gap-x-#{$i} {
+                column-gap: calc(#{($spacer / 2) * $i});
+            }
+
+            .#{$breakpoint}#{$separator}gap-y-#{$i} {
+                row-gap: calc(#{($spacer / 2) * $i});
+            }
         }
     }
 }

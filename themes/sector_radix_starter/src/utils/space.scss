@@ -1,0 +1,34 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+
+$divider: "-";
+
+@for $i from 1 through 12 {
+    .space-x-#{$i} > * + * {
+        margin-left: calc(#{$i} * #{$spacer});
+        margin-right: calc(#{$i} * #{$spacer});
+    }
+
+    .space-y-#{$i} > * + * {
+        margin-top: calc(#{$i} * #{$spacer});
+        //margin-bottom: calc(#{$i} * #{$spacer});
+    }
+}
+
+@each $breakpoint, $v in $grid-breakpoints {
+
+    @include media-breakpoint-up($breakpoint) {
+        @for $i from 1 through 12 {
+            .#{$breakpoint}#{$divider}space-x-#{$i} > * + * {
+                margin-left: calc(#{$i} * #{$spacer});
+                margin-right: calc(#{$i} * #{$spacer});
+            }
+
+            .#{$breakpoint}#{$divider}space-y-#{$i} > * + * {
+                margin-top: calc(#{$i} * #{$spacer});
+                //margin-bottom: calc(#{$i} * #{$spacer});
+            }
+        }
+    }
+}

@@ -31,4 +31,9 @@ function sector_radix_starter_preprocess_block(&$variables) {
   $variables['#attached']['library'][] = 'sector_radix_starter/' . $variables['elements']['#id'];
   // Attach the SVG logo.
   $variables['svg_logo_source'] = theme_get_setting('svg_logo_source');
+
+  if(isset($variables['bundle'])) {
+    $variables['#attached']['library'][] = 'sector_radix_starter/' . $variables['bundle'];
+    $variables['attributes']['class'][] = $variables['bundle'];
+  }
 }

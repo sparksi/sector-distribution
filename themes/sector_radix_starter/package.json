@@ -2,10 +2,14 @@
   "name": "sector_radix_starter",
   "description": "A theme based on Radix.",
   "private": true,
+  "engines": {
+    "node": ">14"
+  },
+  "engineStrict": true,
   "scripts": {
     "reinstall": "yarn rimraf node_modules && yarn cache clean && yarn install",
     "setup": "node .fix-theme-namespaces.js",
-    "prebuild": "yarn upgrade bootstrap && yarn eslint src/**/*.js && yarn sass-lint --verbose",
+    "prebuild": "yarn eslint src/**/*.js && yarn sass-lint --verbose",
     "postbuild": "yarn rimraf .sass-cache",
     "postinstall": "find node_modules/ -name '*.info.yml' -type f -delete",
     "pcss": "yarn postcss ./dist/{**,.,*}.css --replace --verbose --env production",
@@ -26,7 +30,7 @@
   },
   "devDependencies": {
     "eslint": "^7.10.0",
-    "eslint-config-airbnb": "18.2.0",
+    "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
     "eslint-plugin-react": "^7.20.6",
@@ -53,18 +57,17 @@
     "details-element-polyfill": "^2.4.0",
     "favicons": "^6.2.0",
     "fontmin": "^0.9.8",
-    "imports-loader": "^0.8.0",
-    "intersection-observer": "^0.11.0",
+    "imports-loader": "^3.0.0",
     "jquery": "^3.5.1",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.1",
     "popper.js": "^1.16.1",
     "postcss": "^8.2.7",
     "postcss-cli": "^8.3.1",
     "postcss-inline-svg": "^5.0.0",
     "sass-lint": "^1.13.1",
     "svgo": "^2.2.1",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
+    "webpack": "^5.48.0",
+    "webpack-cli": "^4.7.2",
     "webpack-entry-plus": "^1.0.18"
   }
 }

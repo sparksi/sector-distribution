@@ -8,7 +8,7 @@ dependencies:
     - sector_radix_starter
 third_party_settings:
   block_class:
-    classes: node__title
+    classes: 'node__title mt-5'
 id: pagetitle_4
 theme: sector_radix_starter
 region: pre_content

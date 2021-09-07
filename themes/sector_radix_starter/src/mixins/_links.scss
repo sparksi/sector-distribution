@@ -1,50 +1,17 @@
 
-@mixin external-link-icon-style($color: black, $hover-color: false) {
-  content: '';
-  background-image: svg-load('box-arrow-up-right.svg', fill=#{$color});
-  background-position: center;
-  background-repeat: repeat;
-  background-size: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 1em;
-  width: 1em;
-  margin-left: .18em;
-  display: inline-block;
-}
 
+@mixin external-link-icon {
 
-@mixin external-link-icon($color: black, $hover-color: false) {
-  
-  /*@svg-load boxArrow url( #{icon-path('box-arrow-up-right')}) {
-    fill: #{$color};
-  }*/
-  
-  &[href^="http://"]::after,
-  &[href^="https://"]::after,
-  &[target*="blank"]::after,
-  &[rel*="external"]::after {
-    @include external-link-icon-style($color, $hover-color);
-  }
-  
-  @if $hover-color {
-    &[href^="http://"]::after,
-    &[href^="https://"]::after,
-    &[target*="blank"]::after,
-    &[rel*="external"]::after {
-      background-image: svg-load('box-arrow-up-right.svg', fill=#{$color}), svg-load('box-arrow-up-right.svg', fill=#{$hover-color});
-      background-position: center, -1000em -1000em;
-    }
-    
-    
-    @media (hover: hover) {
-      &[href^="http://"]:hover::after,
-      &[href^="https://"]:hover::after,
-      &[target*="blank"]:hover::after,
-      &[rel*="external"]:hover::after {        
-        background-position: -1000em -1000em, center;              
-      }
+  svg {
+    width: auto;
+    max-width: 1em;
+    height: 1em;
+    padding: 0;
+    vertical-align: baseline;
+    margin-left: .1em;
+
+    path {
+      stroke: currentColor;
     }
   }
-  
 }

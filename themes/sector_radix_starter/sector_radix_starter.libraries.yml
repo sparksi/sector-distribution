@@ -7,6 +7,7 @@ style:
       dist/layouts/default.css: {}
       dist/layouts/print.css: { media: 'print' }
       dist/utils/grid.css: {}
+      dist/utils/space.css: {}
     theme:
       dist/ie11.css: { media: '(-ms-high-contrast: none)'}
 

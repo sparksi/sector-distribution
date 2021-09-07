@@ -22,6 +22,7 @@ third_party_settings:
       disable_css: false
       entity_classes: all_classes
       settings:
+        label: ''
         wrappers:
           ds_content: div
         outer_wrapper: div
@@ -35,16 +36,12 @@ third_party_settings:
     regions:
       ds_content:
         - field_media_file
-        - group_media_meta
-        - field_mimetype
-        - field_filesize
   field_group:
     group_media_meta:
       children:
         - field_mimetype
-        - field_filesize
       parent_name: ''
-      weight: 1
+      weight: 15
       format_type: html_element
       format_settings:
         id: ''
@@ -62,22 +59,6 @@ targetEntityType: media
 bundle: file
 mode: short_teaser
 content:
-  field_filesize:
-    weight: 4
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            classes:
-              - inline-block
-            lb-col: false
-    type: string
-    region: ds_content
   field_media_file:
     weight: 0
     label: hidden
@@ -86,25 +67,11 @@ content:
     third_party_settings: {  }
     type: file_default
     region: ds_content
-  field_mimetype:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            classes:
-              - inline-block
-            lb-col: false
-    type: string
-    region: ds_content
 hidden:
   created: true
   field_credit_or_caption: true
+  field_filesize: true
+  field_mimetype: true
   field_tags: true
   field_title: true
   name: true

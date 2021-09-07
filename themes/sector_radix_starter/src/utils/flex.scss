@@ -1,0 +1,28 @@
+@import 'bootstrap/custom-bootstrap-variables';
+@import 'bootstrap/scss/mixins/breakpoints';
+
+@for $i from 1 through 12 {
+  .gap-#{$i} {
+    grid-gap: calc(#{($spacer / 2) * $i});
+  }
+
+  .gap-x-#{$i} {
+    column-gap: calc(#{($spacer / 2) * $i});
+  }
+
+  .gap-y-#{$i} {
+    row-gap: calc(#{($spacer / 2) * $i});
+  }
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+@each $breakpoint, $v in $grid-breakpoints {
+  .flex-#{$breakpoint}-1 {
+    @include media-breakpoint-up(#{$breakpoint}) {
+      flex: 1;
+    }
+  }
+}

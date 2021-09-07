@@ -111,7 +111,7 @@ dependencies:
  - username_enumeration_prevention
  - components
  - entity_usage
-
+ - extlink  
 themes:
  - bartik
  - seven

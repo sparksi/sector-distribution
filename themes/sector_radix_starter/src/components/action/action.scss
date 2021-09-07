@@ -7,23 +7,13 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  
-  a[href^="http://"] &::after,
-  a[href^="https://"] &::after,
-  a[target*="blank"] &::after,
-  a[rel*="external"] &::after {
-    @include external-link-icon-style($link-color);
-  }
-  
-  a[href^="http://"]:hover &::after,
-  a[href^="https://"]:hover &::after,
-  a[target*="blank"]:hover &::after,
-  a[rel*="external"]:hover &::after {
-    @include external-link-icon-style($link-hover-color);
+
+  a.ext {
+    @include external-link-icon;
   }
 }
 
 
 .action--back-to-top {
-  
+
 }

@@ -31,6 +31,7 @@
         "drupal/entity_embed": "1.1",
         "drupal/entity_usage": "2.0-beta3",
         "drupal/entityqueue": "1.2",
+	"drupal/extlink": "1.6",
         "drupal/facets": "1.8",
         "drupal/field_delimiter": "1.1",
         "drupal/field_formatter_filter": "2.0.0",

@@ -7,28 +7,28 @@ xs:
     - 1x
 sm:
   label: SM
-  mediaQuery: '(min-width: 576px) and (max-width: 834px)'
+  mediaQuery: '(min-width: 576px)'
   weight: 1
   group: sector_radix_starter
   multipliers:
     - 1x
 md:
   label: MD
-  mediaQuery: '(min-width: 835px) and (max-width: 991px)'
+  mediaQuery: '(min-width: 835px)'
   weight: 1
   group: sector_radix_starter
   multipliers:
     - 1x
 lg:
   label: LG
-  mediaQuery: '(min-width: 992px) and (max-width: 1199px)'
+  mediaQuery: '(min-width: 992px)'
   weight: 1
   group: sector_radix_starter
   multipliers:
     - 1x
 xl:
   label: XL
-  mediaQuery: '(min-width: 1200px)'
+  mediaQuery: 'all and (min-width: 1200px)'
   weight: 1
   group: sector_radix_starter
   multipliers:

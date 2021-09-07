@@ -7,4 +7,3 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 // IE support
 require('details-element-polyfill',);
-require('intersection-observer',);

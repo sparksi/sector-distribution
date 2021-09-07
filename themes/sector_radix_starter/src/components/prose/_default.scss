@@ -10,23 +10,26 @@
   @include responsive-font-size(1.125rem);
   font-weight: 400;
   @include font-smoothing;
-  
+
   a {
-    @include external-link-icon($link-color, $link-hover-color);
     text-decoration: underline;
     text-underline-offset: .255em;
     @include focusOutlineAndResetHover;
+
+    &.ext {
+      @include external-link-icon;
+    }
   }
-  
+
   > *:first-child {
     margin-top: 0;
   }
-  
+
   > *:last-child {
     margin-bottom: 0;
   }
-  
-  
+
+
   blockquote {
     padding: 1.555em;
     margin-bottom: $spacer;
@@ -35,66 +38,66 @@
     line-height: 1.444;
     font-style: italic;
     font-weight: 300;
-    
+
     > p, > q {
       margin-bottom: calc(#{$spacer} * 0.5);
     }
-    
+
     footer, .small {
       display: block;
       line-height: 1.555;
       color: $gray-700;
       font-size: 16px;
-      
+
       &::before {
         content: "\2014 \00A0";
       }
     }
-    
+
     cite {
       color: $gray-800;
       font-style: normal;
       font-weight: 400;
     }
-    
+
     &.featured {
       background-color: rgba(70, 137, 225, 0.2);
     }
   }
-  
-    
+
+
   dl {
     display: grid;
     grid-template-columns: minmax(auto, 12.5em) 1fr;
     grid-template-rows: auto;
     grid-gap: .5em 1.2em;
-    
+
     @include media-breakpoint-down(md) {
       grid-template-columns: minmax(auto, 30vmin) 1fr;
     }
-    
+
     dd {
       margin-bottom: 0;
       grid-column: 1 / 3;
     }
-    
+
     > dt {
       grid-column: 1 / 2;
-      
+
       + dd {
         grid-column: 2 / 3;
       }
     }
   }
-  
+
   .row {
     width: 100%;
   }
-  
-  
+
+
   ol ol {
     list-style-type: lower-alpha;
-    
+
     ol {
       list-style-type: lower-roman;
     }

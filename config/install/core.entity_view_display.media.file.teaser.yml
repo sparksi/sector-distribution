@@ -38,17 +38,12 @@ third_party_settings:
     regions:
       ds_content:
         - field_media_file
-        - group_media_meta
         - field_credit_or_caption
-        - field_mimetype
-        - field_filesize
   field_group:
     group_media_meta:
-      children:
-        - field_mimetype
-        - field_filesize
+      children: {  }
       parent_name: ''
-      weight: 1
+      weight: 3
       format_type: html_element
       format_settings:
         id: ''
@@ -60,14 +55,14 @@ third_party_settings:
         effect: none
         speed: fast
       label: 'Media meta'
-      region: ds_content
+      region: hidden
 id: media.file.teaser
 targetEntityType: media
 bundle: file
 mode: teaser
 content:
   field_credit_or_caption:
-    weight: 2
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings:
@@ -82,22 +77,6 @@ content:
               - small
             lb-col: false
     type: text_default
-    region: ds_content
-  field_filesize:
-    weight: 4
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            classes:
-              - inline-block
-            lb-col: false
-    type: string
     region: ds_content
   field_media_file:
     weight: 0
@@ -114,27 +93,14 @@ content:
             classes: {  }
     type: file_default
     region: ds_content
-  field_mimetype:
-    weight: 3
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            classes:
-              - inline-block
-            lb-col: false
-    type: string
-    region: ds_content
 hidden:
   created: true
+  field_filesize: true
+  field_mimetype: true
   field_tags: true
   field_title: true
   name: true
   search_api_excerpt: true
   thumbnail: true
   uid: true
+
