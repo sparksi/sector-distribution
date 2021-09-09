@@ -1,8 +1,8 @@
 <?php
 
-use Drupal\entityqueue\Entity\EntityQueue;
 use Drupal\node\Entity\Node;
 use Drupal\user\Entity\User;
+use Drupal\sector\SectorInstallHelpers;
 
 /**
  * @file
@@ -42,10 +42,12 @@ function sector_install_default_content() {
     ->save(TRUE);
 
   // Cleanup functions.
+  // TODO - Move these to InstallHelpers.
   createEntityqueues();
   createUsers();
   generateAlias();
   excludeXmlsitemapNodes();
+  \Drupal::classResolver(SectorInstallHelpers::class)->addAntibotConfig();
 
   // Rebuild permissions
   node_access_rebuild();

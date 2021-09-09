@@ -29,6 +29,7 @@ dependencies:
  - autologout
  - automated_cron
  - allowed_formats
+ - antibot
  - block
  - block_class
  - block_content
@@ -91,7 +92,6 @@ dependencies:
  - wysiwyg_template
  - default_content
  - views_menu_children_filter
- - captcha
  - field_delimiter
  - views_bulk_operations
  - views_bulk_edit
@@ -107,11 +107,10 @@ dependencies:
  - redirect_404
  - webform
  - webform_ui
- - honeypot
  - username_enumeration_prevention
  - components
  - entity_usage
- - extlink  
+ - extlink
 themes:
  - bartik
  - seven
