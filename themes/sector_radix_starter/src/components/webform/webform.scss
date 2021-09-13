@@ -15,67 +15,77 @@
 .webform-submission-form {
   @include make-row;
   margin-top: $spacer * -1;
-  
+
   .form-group {
     margin-bottom: 0;
   }
-  
+
   > .form-item,
   > .form-actions {
     @include make-col-ready;
     margin-top: $spacer;
   }
-  
+
   > .form-item > label,
   .fieldset-legend {
     font-size: $font-size-base;
   }
-  
-  
+
+
   .form-radios,
   .form-checkboxes {
     margin-top: $spacer * -0.5;
-    
+
     .form-item {
       overflow: hidden;
       margin-top: $spacer * 0.5;
       padding-left: 0;
     }
-    
-    .option {
-      display: inline-flex;
-      align-items: center;
-      white-space: nowrap;
-      cursor: pointer;
-      
-      &::before {
-        content: '';
-        display: block;
-        width: 1.15em;
-        height: 1.15em;
-        margin-right: .5em;
-        border: 1px solid $body-color;
-        border-radius: 50%;
+
+    @supports (row-gap: $spacer * 0.5 ) {
+      margin-top: 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: $spacer * 0.5;
+
+      .form-item {
+        margin-top: 0;
       }
     }
   }
-  
-  .form-radios .form-item {    
+
+  .form-check-label {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 1.15em;
+      height: 1.15em;
+      margin-right: .5em;
+      border: 1px solid $body-color;
+      border-radius: 50%;
+    }
+  }
+
+  .form-radios .form-item {
     :checked + .option {
       @include pseudoIcon(radioOn);
-      
+
       &::before {
         outline: 2px white solid;
       }
     }
   }
-  
-  .form-checkboxes .form-item {
-    .option::before {
-      border-radius: 2px;
-    }
-    :checked + .option {
-      @include pseudoIcon(checkboxOn);
-    }
+
+  .form-checkbox + .form-check-label::before {
+    border-radius: 2px;
+  }
+
+  .form-checkbox:checked + .form-check-label {
+    @include pseudoIcon(checkboxOn);
   }
 }
