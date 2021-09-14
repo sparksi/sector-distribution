@@ -1,4 +1,4 @@
 admin:
   css:
-    theme:
-      css/admin.css: {}
+    component:
+      css/layout.css: {}

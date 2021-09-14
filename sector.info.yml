@@ -112,7 +112,6 @@ dependencies:
  - entity_usage
  - extlink
 themes:
- - bartik
- - seven
+ - claro
  - radix
  - sector_radix_starter

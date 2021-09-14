@@ -26,12 +26,12 @@ function sector_install_tasks() {
  */
 function sector_install_default_content() {
   \Drupal::service('theme_installer')->install(['sector_radix_starter']);
-  \Drupal::service('theme_installer')->install(['seven']);
+  \Drupal::service('theme_installer')->install(['claro']);
   \Drupal::service('module_installer')->install(['sector_default_content'], FALSE);
   \Drupal::configFactory()
     ->getEditable('system.theme')
     ->set('default', 'sector_radix_starter')
-    ->set('admin', 'seven')
+    ->set('admin', 'claro')
     ->save();
 
   // Set default pages.

@@ -1,6 +1,5 @@
 <?php
 
-use Drupal\user\Entity\User;
 use Drupal\Core\Entity\EntityPublishedInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\media\MediaInterface;
@@ -21,20 +20,38 @@ function sector_utils_page_attachments(array &$attachments) {
   $theme = \Drupal::theme()->getActiveTheme()->getName();
   // Lets just keep this for the default admin theme. If people have changed
   // they probably have their own styles/look.
-  if ($theme == 'seven') {
+  if ($theme == 'claro') {
     $attachments['#attached']['library'][] = 'sector_utils/admin';
   }
 }
 
 /**
  * Implements hook_form_alter().
- *
- * Improve page node status checkbox by changing the label
- * from "Publishing status" to "Publish" and removing the description.
- *
- * This should bring it in line with all other content types.
  */
-function sector_utils_form_alter(&$form, $form_state, $form_id) {
+function sector_utils_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  sector_utils_track_entity_usage($form, $form_state, $form_id);
+}
+
+/**
+ * Implements hook_form_node_form_alter().
+ */
+function sector_utils_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $theme = \Drupal::theme()->getActiveTheme()->getName();
+  // Lets just keep this for the default admin theme. If people have changed
+  // they probably have their own styles/look.
+  if ($theme == 'claro') {
+    // Shift the status container from the footer into the meta group.
+    $form['status']['#group'] = 'meta';
+    $form['status']['#markup'] = '<h3>' . t('Publishing') . '</h3>';
+    // Clone the form actions into the meta container.
+    $form['meta']['actions'] = $form['actions'];
+    // Make the original actions inaccessible.
+    $form['actions']['#access'] = FALSE;
+  }
+
+  // Improve page node status checkbox by changing the label
+  // from "Publishing status" to "Publish" and removing the description.
+  // This should bring it in line with all other content types.
   switch ($form_id) {
     case 'node_page_form':
     case 'node_page_edit_form':
@@ -43,14 +60,12 @@ function sector_utils_form_alter(&$form, $form_state, $form_id) {
       $element['#description'] = t('');
       break;
   }
-
-  sector_utils_track_entity_usage($form, $form_state, $form_id);
 }
 
 /**
  * Helper function to add extra text to the media delete form.
  */
-function sector_utils_track_entity_usage(&$form, $form_state, $form_id) {
+function sector_utils_track_entity_usage(&$form, FormStateInterface $form_state, $form_id) {
   if (!\Drupal::moduleHandler()->moduleExists('entity_usage')) {
     // All code below is regarding entity_usage. If the module isn't enabled,
     // exit early to save processing time.
