@@ -7,111 +7,112 @@ version: '9.2.2'
 distribution:
   name: Sector
 
-dependencies:
- - help
- - link
- - linkit
- - menu_block
- - menu_link_content
- - menu_ui
- - media
- - media_library
- - inline_entity_form
- - path
- - pathauto
- - responsive_image
- - sector_blocks
- - shortcut
- - taxonomy
- - term_condition
- - views_ui
- - admin_toolbar
- - admin_toolbar_tools
- - autologout
- - automated_cron
- - allowed_formats
- - antibot
- - block
- - block_class
- - block_content
- - breakpoint
- - ckeditor
- - color
- - config
- - config_update
- - contextual
- - ctools
- - datetime
- - dblog
- - better_normalizers
- - ds
- - ds_extras
- - ds_switch_view_mode
- - dynamic_page_cache
- - editor
- - entityqueue
- - field
- - field_formatter_filter
- - field_group
- - field_group_link
- - field_ui
- - fieldblock
- - file
- - filter
- - hal
- - history
- - image
- - layout_discovery
- - node
- - options
- - page_cache
- - diff
- - sector_utils
- - sector_wysiwyg_utils
- - serialization
- - system
- - text
- - token
- - toolbar
- - update
- - user
- - views
- - admin_ui_toggle
- - password_policy
- - password_policy_character_types
- - password_policy_history
- - password_policy_length
- - metatag
- - metatag_open_graph
- - xmlsitemap
- - xmlsitemap_custom
- - anchor_link
- - admin_toolbar_links_access_filter
- - rabbit_hole
- - rh_node
- - rh_taxonomy
- - wysiwyg_template
- - default_content
- - views_menu_children_filter
- - field_delimiter
- - views_bulk_operations
- - views_bulk_edit
- - view_unpublished
- - actions_permissions
- - video_embed_media
- - video_embed_field
- - search_api
- - search_api_db
- - facets
- - facets_summary
- - redirect
- - redirect_404
- - webform
- - webform_ui
- - username_enumeration_prevention
- - components
- - entity_usage
- - extlink
+install:
+- drupal:automated_cron
+- drupal:block
+- drupal:block_content
+- drupal:breakpoint
+- drupal:ckeditor
+- drupal:color
+- drupal:config
+- drupal:contextual
+- drupal:datetime
+- drupal:dblog
+- drupal:dynamic_page_cache
+- drupal:editor
+- drupal:field
+- drupal:field_ui
+- drupal:file
+- drupal:filter
+- drupal:hal
+- drupal:help
+- drupal:history
+- drupal:image
+- drupal:layout_discovery
+- drupal:link
+- drupal:media
+- drupal:media_library
+- drupal:menu_link_content
+- drupal:menu_ui
+- drupal:node
+- drupal:options
+- drupal:page_cache
+- drupal:path
+- drupal:responsive_image
+- drupal:serialization
+- drupal:shortcut
+- drupal:system
+- drupal:taxonomy
+- drupal:text
+- drupal:toolbar
+- drupal:update
+- drupal:user
+- drupal:views
+- drupal:views_ui
+- actions_permissions:actions_permissions
+- admin_toolbar_links_access_filter:admin_toolbar_links_access_filter
+- admin_toolbar_tools:admin_toolbar_tools
+- admin_toolbar:admin_toolbar
+- allowed_formats:allowed_formats
+- anchor_link:anchor_link
+- antibot:antibot
+- autologout:autologout
+- better_normalizers:better_normalizers
+- block_class:block_class
+- components:components
+- config_update:config_update
+- ctools:ctools
+- default_content:default_content
+- diff:diff
+- ds_extras:ds_extras
+- ds_switch_view_mode:ds_switch_view_mode
+- ds:ds
+- entity_usage:entity_usage
+- entityqueue:entityqueue
+- extlink:extlink
+- facets_summary:facets_summary
+- facets:facets
+- field_delimiter:field_delimiter
+- field_formatter_filter:field_formatter_filter
+- field_group_link:field_group_link
+- field_group:field_group
+- fieldblock:fieldblock
+- inline_entity_form:inline_entity_form
+- linkit:linkit
+- menu_block:menu_block
+- metatag_open_graph:metatag_open_graph
+- metatag:metatag
+- password_policy_character_types:password_policy_character_types
+- password_policy_history:password_policy_history
+- password_policy_length:password_policy_length
+- password_policy:password_policy
+- pathauto:pathauto
+- rabbit_hole:rabbit_hole
+- redirect_404:redirect_404
+- redirect:redirect
+- rh_node:rh_node
+- rh_taxonomy:rh_taxonomy
+- search_api_db:search_api_db
+- search_api:search_api
+- sector:admin_ui_toggle
+- sector:sector_blocks
+- sector:sector_utils
+- sector:sector_wysiwyg_utils
+- term_condition:term_condition
+- token:token
+- username_enumeration_prevention:username_enumeration_prevention
+- video_embed_field:video_embed_field
+- video_embed_media:video_embed_media
+- view_unpublished:view_unpublished
+- views_bulk_edit:views_bulk_edit
+- views_bulk_operations:views_bulk_operations
+- views_menu_children_filter:views_menu_children_filter
+- webform_ui:webform_ui
+- webform:webform
+- wysiwyg_template:wysiwyg_template
+- xmlsitemap_custom:xmlsitemap_custom
+- xmlsitemap:xmlsitemap
+
 themes:
  - claro
  - radix
