@@ -1,6 +1,7 @@
 (function () {
   const MenuSource = document.querySelectorAll('.js-mega-menu-source');
   const MegaMenu = document.querySelector('.navigation--mega-menu');
+  let triggers;
 
   Drupal.behaviors.megaMenu = {
     attach: (context, drupalSettings) => {
@@ -9,8 +10,6 @@
       if (MegaMenu === null || breakpoints === null) {
         return;
       }
-
-      let triggers;
 
       const isSmallDevice = () => (window.matchMedia(breakpoints.xs).matches || window.matchMedia(breakpoints.sm).matches || window.matchMedia(breakpoints.md).matches);
 
@@ -54,9 +53,27 @@
       const { dataset: { drupalLinkSystemPath: id } } = trigger;
       event.preventDefault();
 
-      trigger.classList.toggle('has-opened-mega-menu');
-      MegaMenu.classList.toggle('is-active');
+      // Scan all possible triggers, in case one needs to close another's submenu.
+      triggers.forEach(item => {
+        if (item.dataset.drupalLinkSystemPath === id) {
+          if (item.classList.contains('has-opened-mega-menu')) {
+            item.classList.remove('has-opened-mega-menu');
+            MegaMenu.classList.remove('is-active');
+          } else {
+            item.classList.add('has-opened-mega-menu');
+            MegaMenu.classList.add('is-active');
+          }
+        } else {
+          item.classList.remove('has-opened-mega-menu');
+        }
+      });
 
+      // Remove .is-open from any submenus.
+      const currentOpen = document.querySelectorAll('.menu__link.is-open');
+      currentOpen.forEach(item => {
+        item.classList.remove('is-open');
+      })
+      // Make megamenu active based on match with trigger path.
       const activeMenuItem = MegaMenu.querySelector(`.menu__link[data-drupal-link-system-path="${id}"]`);
       activeMenuItem.classList.add('is-open');
     }
