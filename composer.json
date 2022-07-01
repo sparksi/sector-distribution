@@ -29,7 +29,7 @@
         "drupal/default_content": "2.0.0-alpha1",
         "drupal/diff": "1.0",
         "drupal/ds": "3.13",
-        "drupal/embed": "1.4",
+        "drupal/embed": "1.5",
         "drupal/entity_embed": "1.2",
         "drupal/entity_usage": "2.0-beta6",
         "drupal/entityqueue": "1.2",
@@ -70,7 +70,11 @@
         "drupal/drupal": "*"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true
+        }
     },
     "extra": {
         "installer-paths": {
