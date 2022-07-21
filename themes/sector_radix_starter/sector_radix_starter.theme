@@ -72,14 +72,9 @@ function sector_radix_starter_form_system_theme_settings_alter(&$form, &$form_st
 }
 
 function sector_radix_starter_preprocess_page(&$variables) {
-  $node = ($variables['node']) ?? null;
-  if (!empty($node) && $node instanceof NodeInterface) {
-    //dpm($node);
-  }
-
   // Load the node entity from the current route.
-  $entity = getEntityFromRoute('node');
-  if(!empty($entity)) {
+  $entity = \Drupal::routeMatch()->getParameter('node');
+  if (!empty($entity)) {
     $variables['page']['isPublishedClass'] = $entity->isPublished() ? 'is-published' : 'is-unpublished';
 
     if ($entity->hasField('field_auto_contextual_content')) {
@@ -120,7 +115,7 @@ function sector_radix_starter_preprocess_html(&$variables) {
   $relaventEntities = ['node', 'media'];
   foreach ($relaventEntities as $entityTypeId) {
     // Load the node entity from the current route.
-    $entity = getEntityFromRoute($entityTypeId);
+    $entity = \Drupal::routeMatch()->getParameter($entityTypeId);
     if (!empty($entity)) {
       // Add a class to the <body> if the entity is unpublished.
       if (!$entity->isPublished()) {
@@ -230,44 +225,6 @@ function sector_radix_starter_page_attachments_alter(array &$page) {
   }
 }
 
-
-/**
- * Helper function.
- *
- * Gets the current node from the route.
- *
- * Needed to get the correct node when viewing a revision.
- * Credit for this code goes to Berdir: https://www.drupal.org/u/berdir
- *
- * Taken from https://www.drupal.org/project/drupal/issues/2730631#comment-12667635
- * and adjusted slightly.
- */
-function getEntityFromRoute($entityTypeId) {
-  $entity = NULL;
-  if (\Drupal::routeMatch()->getParameter($entityTypeId)) {
-    $entity = \Drupal::routeMatch()->getParameter($entityTypeId);
-  }
-  // The node revision page does not upcast the node.
-  if (\Drupal::routeMatch()->getParameter($entityTypeId . '_revision')) {
-    $revision_id = \Drupal::routeMatch()->getParameter($entityTypeId . '_revision');
-    if ($revision_id > 0) {
-      return \Drupal::entityTypeManager()->getStorage($entityTypeId)->loadRevision($revision_id);
-    }
-  }
-  switch ($entityTypeId) {
-    case 'node':
-      if ($entity instanceof NodeInterface) {
-        return $entity;
-      }
-      break;
-    case 'media':
-      if ($entity instanceof MediaInterface) {
-        return $entity;
-      }
-      break;
-  }
-}
-
 /**
  * Attach libraries based on CSS classes.
  *
@@ -279,4 +236,3 @@ function _sector_radix_starter_attach_library_by_class(array &$variables, array 
     $variables['#attached']['library'][] = 'sector_radix_starter/' . $library;
   }
 }
-
