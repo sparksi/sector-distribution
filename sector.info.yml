@@ -59,6 +59,7 @@ install:
 - autologout:autologout
 - better_normalizers:better_normalizers
 - block_class:block_class
+- current_page_crumb:current_page_crumb
 - components:components
 - config_update:config_update
 - ctools:ctools
