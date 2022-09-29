@@ -166,9 +166,11 @@ function excludeXmlsitemapNodes() {
   $xmlSitemapLinkStorage = \Drupal::service('xmlsitemap.link_storage');
   foreach ($nids as $nid) {
     $link = $xmlSitemapLinkStorage->load('node', $nid);
-    $link['status'] = "0";
-    $link['status_override'] = "1";
-    $save = $xmlSitemapLinkStorage->save($link);
+    if ($link) {
+      $link['status'] = "0";
+      $link['status_override'] = "1";
+      $xmlSitemapLinkStorage->save($link);
+    }
   }
 }
 
