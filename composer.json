@@ -105,6 +105,9 @@
             ]
         },
         "patches": {
+            "drupal/core": {
+                "Use core patch to resolve bug with 'current date' default": "https://www.drupal.org/files/issues/2022-06-22/2993165-56.patch"
+            },
             "drupal/menu_block": {
                 "No contextual link to edit menu": "https://www.drupal.org/files/issues/2799821-2.menu_block.contextual_links.patch",
                 "Hide menu block title if empty": "https://www.drupal.org/files/issues/2021-05-20/menu_block-hide_block_if_no_links-2757215-18.patch"
