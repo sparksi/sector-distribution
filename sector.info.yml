@@ -2,7 +2,7 @@ name: Sector
 type: profile
 description: 'Sector. Content management made easy.'
 core_version_requirement: '^9'
-version: '9.5.1'
+version: '10.0.x-dev'
 
 distribution:
   name: Sector
@@ -12,7 +12,7 @@ install:
 - drupal:block
 - drupal:block_content
 - drupal:breakpoint
-- drupal:ckeditor
+- drupal:ckeditor5
 - drupal:color
 - drupal:config
 - drupal:contextual
