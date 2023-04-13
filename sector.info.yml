@@ -1,7 +1,7 @@
 name: Sector
 type: profile
 description: 'Sector. Content management made easy.'
-core_version_requirement: '^9'
+core_version_requirement: ^10
 version: '10.0.x-dev'
 
 distribution:
@@ -13,7 +13,6 @@ install:
 - drupal:block_content
 - drupal:breakpoint
 - drupal:ckeditor5
-- drupal:color
 - drupal:config
 - drupal:contextual
 - drupal:datetime
@@ -24,7 +23,6 @@ install:
 - drupal:field_ui
 - drupal:file
 - drupal:filter
-- drupal:hal
 - drupal:help
 - drupal:history
 - drupal:image
@@ -57,7 +55,6 @@ install:
 - anchor_link:anchor_link
 - antibot:antibot
 - autologout:autologout
-- better_normalizers:better_normalizers
 - block_class:block_class
 - current_page_crumb:current_page_crumb
 - components:components
@@ -73,7 +70,6 @@ install:
 - extlink:extlink
 - facets_summary:facets_summary
 - facets:facets
-- field_delimiter:field_delimiter
 - field_formatter_filter:field_formatter_filter
 - field_group_link:field_group_link
 - field_group:field_group
@@ -99,18 +95,15 @@ install:
 - sector:sector_blocks
 - sector:sector_utils
 - sector:sector_wysiwyg_utils
-- term_condition:term_condition
 - token:token
 - username_enumeration_prevention:username_enumeration_prevention
 - video_embed_field:video_embed_field
 - video_embed_media:video_embed_media
-- view_unpublished:view_unpublished
 - views_bulk_edit:views_bulk_edit
 - views_bulk_operations:views_bulk_operations
 - views_menu_children_filter:views_menu_children_filter
 - webform_ui:webform_ui
 - webform:webform
-- wysiwyg_template:wysiwyg_template
 - xmlsitemap_custom:xmlsitemap_custom
 - xmlsitemap:xmlsitemap
 

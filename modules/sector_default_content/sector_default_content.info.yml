@@ -2,7 +2,7 @@ name: Sector default content
 type: module
 description: Provides the default content
 package: Sector
-core_version_requirement: '^9'
+core_version_requirement: ^10
 
 default_content:
     node:

@@ -1,7 +1,7 @@
 name: Sector Radix Starter
 description: A theme based on Radix.
 screenshot: screenshot.png
-core_version_requirement: '^9'
+core_version_requirement: ^10
 engine: twig
 type: theme
 base theme: radix
