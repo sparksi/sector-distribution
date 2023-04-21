@@ -1,8 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: taxonomy_vocabulary_resource_types
-action: page_redirect
-allow_override: 1
-redirect: '/resources?category=[term:tid]'
-redirect_code: 301

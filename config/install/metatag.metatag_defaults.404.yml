@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: '404'
-label: '404 page not found'
-tags:
-  robots: noindex

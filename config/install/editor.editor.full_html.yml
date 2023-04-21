@@ -20,52 +20,39 @@ settings:
             - Superscript
             - Subscript
             - '-'
+            - RemoveFormat
         -
           name: Linking
           items:
             - DrupalLink
             - DrupalUnlink
-            - Anchor
         -
           name: Lists
           items:
             - BulletedList
             - NumberedList
-            - Outdent
-            - Indent
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+            - Table
+            - HorizontalRule
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
         -
           name: Tools
           items:
-            - Undo
-            - Redo
             - ShowBlocks
-            - RemoveFormat
-            - PasteText
-            - PasteFromWord
-            - SpecialChar
-            - Maximize
             - Source
-            - DrupalMediaLibrary
-        -
-          name: 'Custom styles'
-          items:
-            - Blockquote
-            - HorizontalRule
-            - Styles
-            - TemplateSelector
-  plugins:
-    drupallink:
-      linkit_enabled: true
-      linkit_profile: linkit_wysiwyg
-    language:
-      language_list: un
-    stylescombo:
-      styles: "p|Normal text\r\np.lead|Leading text\r\nspan.bg-warning|Highlight text\r\nh2|Heading 2\r\nh3|Heading 3\r\nh4|Heading 4\r\nh5|Heading 5\r\n"
+  plugins: {}
 image_upload:
   status: true
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0

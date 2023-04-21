@@ -1,17 +1,9 @@
 langcode: en
 status: true
-dependencies:
-  module:
-    - menu_ui
-third_party_settings:
-  menu_ui:
-    available_menus:
-      - footer
-      - main-menu
-    parent: 'main-menu:'
-name: Page
+dependencies: {  }
+name: 'Basic page'
 type: page
-description: 'Use <em>Page</em> for hierarchical content e.g. content organised in menus. '
+description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
 help: ''
 new_revision: true
 preview_mode: 1

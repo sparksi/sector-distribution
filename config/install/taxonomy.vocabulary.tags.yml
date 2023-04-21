@@ -3,5 +3,5 @@ status: true
 dependencies: {  }
 name: Tags
 vid: tags
-description: 'Use tags to group articles on similar topics into categories. <em>Terms are rabbit-holed to 403.</em>'
-weight: -8
+description: 'Use tags to group articles on similar topics into categories.'
+weight: 0

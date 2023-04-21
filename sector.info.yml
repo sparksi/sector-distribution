@@ -3,111 +3,112 @@ type: profile
 description: 'Sector. Content management made easy.'
 core_version_requirement: ^10
 version: '10.0.x-dev'
-
 distribution:
   name: Sector
-
 install:
-- drupal:automated_cron
-- drupal:block
-- drupal:block_content
-- drupal:breakpoint
-- drupal:ckeditor5
-- drupal:config
-- drupal:contextual
-- drupal:datetime
-- drupal:dblog
-- drupal:dynamic_page_cache
-- drupal:editor
-- drupal:field
-- drupal:field_ui
-- drupal:file
-- drupal:filter
-- drupal:help
-- drupal:history
-- drupal:image
-- drupal:layout_discovery
-- drupal:link
-- drupal:media
-- drupal:media_library
-- drupal:menu_link_content
-- drupal:menu_ui
-- drupal:node
-- drupal:options
-- drupal:page_cache
-- drupal:path
-- drupal:responsive_image
-- drupal:serialization
-- drupal:shortcut
-- drupal:system
-- drupal:taxonomy
-- drupal:text
-- drupal:toolbar
-- drupal:update
-- drupal:user
-- drupal:views
-- drupal:views_ui
-- actions_permissions:actions_permissions
-- admin_toolbar_links_access_filter:admin_toolbar_links_access_filter
-- admin_toolbar_tools:admin_toolbar_tools
-- admin_toolbar:admin_toolbar
-- allowed_formats:allowed_formats
-- anchor_link:anchor_link
-- antibot:antibot
-- autologout:autologout
-- block_class:block_class
-- current_page_crumb:current_page_crumb
-- components:components
-- config_update:config_update
-- ctools:ctools
-- default_content:default_content
-- diff:diff
-- ds_extras:ds_extras
-- ds_switch_view_mode:ds_switch_view_mode
-- ds:ds
-- entity_usage:entity_usage
-- entityqueue:entityqueue
-- extlink:extlink
-- facets_summary:facets_summary
-- facets:facets
-- field_formatter_filter:field_formatter_filter
-- field_group_link:field_group_link
-- field_group:field_group
-- fieldblock:fieldblock
-- inline_entity_form:inline_entity_form
-- linkit:linkit
-- menu_block:menu_block
-- metatag_open_graph:metatag_open_graph
-- metatag:metatag
-- password_policy_character_types:password_policy_character_types
-- password_policy_history:password_policy_history
-- password_policy_length:password_policy_length
-- password_policy:password_policy
-- pathauto:pathauto
-- rabbit_hole:rabbit_hole
-- redirect_404:redirect_404
-- redirect:redirect
-- rh_node:rh_node
-- rh_taxonomy:rh_taxonomy
-- search_api_db:search_api_db
-- search_api:search_api
-- sector:admin_ui_toggle
-- sector:sector_blocks
-- sector:sector_utils
-- sector:sector_wysiwyg_utils
-- token:token
-- username_enumeration_prevention:username_enumeration_prevention
-- video_embed_field:video_embed_field
-- video_embed_media:video_embed_media
-- views_bulk_edit:views_bulk_edit
-- views_bulk_operations:views_bulk_operations
-- views_menu_children_filter:views_menu_children_filter
-- webform_ui:webform_ui
-- webform:webform
-- xmlsitemap_custom:xmlsitemap_custom
-- xmlsitemap:xmlsitemap
-
+  - drupal:comment
+  - drupal:contact
+  - drupal:search
+  - drupal:tour
+  - drupal:automated_cron
+  - drupal:block
+  - drupal:block_content
+  - drupal:breakpoint
+  - drupal:ckeditor5
+  - drupal:config
+  - drupal:contextual
+  - drupal:datetime
+  - drupal:dblog
+  - drupal:dynamic_page_cache
+  - drupal:editor
+  - drupal:field
+  - drupal:field_ui
+  - drupal:file
+  - drupal:filter
+  - drupal:help
+  - drupal:history
+  - drupal:image
+  - drupal:layout_discovery
+  - drupal:link
+  - drupal:media
+  - drupal:media_library
+  - drupal:menu_link_content
+  - drupal:menu_ui
+  - drupal:node
+  - drupal:options
+  - drupal:page_cache
+  - drupal:path
+  - drupal:responsive_image
+  - drupal:serialization
+  - drupal:shortcut
+  - drupal:system
+  - drupal:taxonomy
+  - drupal:text
+  - drupal:toolbar
+  - drupal:update
+  - drupal:user
+  - drupal:views
+  - drupal:views_ui
+  - actions_permissions:actions_permissions
+  - admin_toolbar_links_access_filter:admin_toolbar_links_access_filter
+  - admin_toolbar_tools:admin_toolbar_tools
+  - admin_toolbar:admin_toolbar
+  - allowed_formats:allowed_formats
+  - anchor_link:anchor_link
+  - antibot:antibot
+  - autologout:autologout
+  - block_class:block_class
+  - current_page_crumb:current_page_crumb
+  - components:components
+  - config_update:config_update
+  - ctools:ctools
+  - default_content:default_content
+  - diff:diff
+  - ds_extras:ds_extras
+  - ds_switch_view_mode:ds_switch_view_mode
+  - ds:ds
+  - entity_usage:entity_usage
+  - entityqueue:entityqueue
+  - extlink:extlink
+  - facets_summary:facets_summary
+  - facets:facets
+  - field_formatter_filter:field_formatter_filter
+  - field_group_link:field_group_link
+  - field_group:field_group
+  - fieldblock:fieldblock
+  - inline_entity_form:inline_entity_form
+  - linkit:linkit
+  - menu_block:menu_block
+  - metatag_open_graph:metatag_open_graph
+  - metatag:metatag
+  - password_policy_character_types:password_policy_character_types
+  - password_policy_history:password_policy_history
+  - password_policy_length:password_policy_length
+  - password_policy:password_policy
+  - pathauto:pathauto
+  - rabbit_hole:rabbit_hole
+  - redirect_404:redirect_404
+  - redirect:redirect
+  - rh_node:rh_node
+  - rh_taxonomy:rh_taxonomy
+  - search_api_db:search_api_db
+  - search_api:search_api
+  - sector:admin_ui_toggle
+  - sector:sector_blocks
+  - sector:sector_utils
+  - sector:sector_wysiwyg_utils
+  - term_condition:term_condition
+  - token:token
+  - username_enumeration_prevention:username_enumeration_prevention
+  - video_embed_field:video_embed_field
+  - video_embed_media:video_embed_media
+  - views_bulk_edit:views_bulk_edit
+  - views_bulk_operations:views_bulk_operations
+  - views_menu_children_filter:views_menu_children_filter
+  - webform_ui:webform_ui
+  - webform:webform
+  - xmlsitemap_custom:xmlsitemap_custom
+  - xmlsitemap:xmlsitemap
 themes:
- - claro
- - radix
- - sector_radix_starter
+  - olivero
+  - claro

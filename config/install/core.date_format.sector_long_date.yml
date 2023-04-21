@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: sector_long_date
-label: 'Sector long date'
-locked: false
-pattern: 'l, j M Y g:ia'

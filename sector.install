@@ -13,12 +13,12 @@ use Drupal\sector\SectorInstallHelpers;
  * Implements hook_install_tasks().
  */
 function sector_install_tasks() {
-  return [
-    'sector_install_default_content' => [
-      'display_name' => t('Sector install default content'),
-      'type' => 'default',
-    ],
-  ];
+  // return [
+  //   'sector_install_default_content' => [
+  //     'display_name' => t('Sector install default content'),
+  //     'type' => 'default',
+  //   ],
+  // ];
 }
 
 /**
@@ -172,99 +172,4 @@ function excludeXmlsitemapNodes() {
       $xmlSitemapLinkStorage->save($link);
     }
   }
-}
-
-/**
- * Add missing oembed providers url into media.settings
- */
-function sector_update_8401() {
-  $data = ["oembed_providers_url" => "https://oembed.com/providers.json"];
-  \Drupal::configFactory()->getEditable('media.settings')->merge($data)->save();
-}
-
-/**
- * Enable the Fakeobjects module
- */
-function sector_update_8501() {
-  if (!\Drupal::moduleHandler()->moduleExists('fakeobjects')) {
-    \Drupal::service('module_installer')->install(['fakeobjects']);
-  }
-}
-
-/**
- * Reset the WYSIWYG template library path.
- */
-function sector_update_8502() {
-  $config = ['library_path' => 'libraries/templates'];
-  if (\Drupal::moduleHandler()->moduleExists('wysiwyg_template')) {
-    \Drupal::configFactory()->getEditable('wysiwyg_template.settings')->merge($config)->save();
-  }
-}
-
-/**
- * Replace Better Formats with Allowed Formats.
- */
-function sector_update_9001() {
-  if (!\Drupal::moduleHandler()->moduleExists('allowed_formats')) {
-    \Drupal::service('module_installer')->install(['allowed_formats']);
-    // Load all field configs.
-    $field_configs = \Drupal::entityTypeManager()->getStorage('field_config')->loadMultiple();
-    $converted = 0;
-    foreach ($field_configs as $field_config) {
-      // Check if a field has better_formats config.
-      $betterFormatsSettings = $field_config->getThirdPartySetting('better_formats', 'allowed_formats') ?? FALSE;
-      if ($betterFormatsSettings) {
-        foreach ($betterFormatsSettings as $format => $betterFormatsSetting) {
-          // Set the allowed_formats config using the better_format config.
-          $field_config->setThirdPartySetting('allowed_formats', $format, $betterFormatsSetting);
-        }
-        // Save.
-        try {
-          $field_config->save();
-        }
-        catch (Drupal\Core\Entity\EntityStorageException $e) {
-          return $e->getMessage();
-        }
-        $converted++;
-      }
-    }
-    // Allow better_formats to remove its own config by uninstalling it.
-    if (\Drupal::moduleHandler()->moduleExists('better_formats')) {
-      \Drupal::service('module_installer')->uninstall(['better_formats']);
-    }
-
-    return t('<p>@count field configs converted. <em>Better Formats</em> has been replaced with <em>Allowed Formats</em> and should be removed:</p><p>composer remove drupal/better_formats</p>', ['@count' => $converted]);
-  }
-}
-
-/**
- * Implements hook_requirements().
- *
- * @param $phase
- * @return array
- */
-function sector_requirements($phase) {
-  $requirements = [];
-  /** @var \Drupal\Core\Extension\ExtensionList $extensionList */
-  $extensionList = \Drupal::service('extension.list.module');
-  $betterFormatsExists = $extensionList->exists('better_formats');
-  // Instruct the user to install Better Formats before continuing with updates.
-  // Remove in 9.2/9.3
-  if ($phase == 'update' && drupal_get_installed_schema_version('sector') < 9001) {
-    if (!$betterFormatsExists) {
-      $requirements['sector']['title'] = 'Sector';
-      $requirements['sector']['description'] = t('<p>Please install <em>Better Formats</em> with composer before continuing with the upgrade:</p><p><code>composer require drupal/better_formats</code></p><p>You will be prompted to remove it again after the update is complete.</p>');
-      $requirements['sector']['severity'] = REQUIREMENT_ERROR;
-    }
-  }
-  // If better formats exists after the D9 upgrade, write a line to the status report instructing the user to remove it.
-  // Remove in 9.2/9.3
-  if ($phase == 'runtime' && drupal_get_installed_schema_version('sector') >= 9001) {
-    if ($betterFormatsExists) {
-      $requirements['sector']['title'] = 'Sector';
-      $requirements['sector']['description'] = t('<p><em>Better Formats</em> has been replaced with <em>Allowed Formats</em> and should be removed:</p><p><code>composer remove drupal/better_formats</code></p>');
-      $requirements['sector']['severity'] = REQUIREMENT_ERROR;
-    }
-  }
-  return $requirements;
 }

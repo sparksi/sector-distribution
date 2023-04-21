@@ -3,8 +3,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.field_last_password_reset
-    - field.field.user.user.field_password_expiration
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -17,15 +15,14 @@ mode: compact
 content:
   user_picture:
     type: image
-    weight: 0
+    label: hidden
     settings:
       image_style: thumbnail
       image_link: content
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
-    label: hidden
+    weight: 0
     region: content
 hidden:
-  field_last_password_reset: true
-  field_password_expiration: true
   member_for: true
-  search_api_excerpt: true

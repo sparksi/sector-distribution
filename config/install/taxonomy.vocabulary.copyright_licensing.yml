@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-name: 'Copyright and Licensing'
-vid: copyright_licensing
-description: 'Optional taxonomy with data fields. Used to assign default copyright settings to content. <em>Terms are rabbit-holed to 403.<em>'
-weight: -4

@@ -5,17 +5,7 @@ dependencies:
     - field.storage.node.body
     - node.type.page
   module:
-    - allowed_formats
     - text
-third_party_settings:
-  allowed_formats:
-    basic_html: basic_html
-    full_html: full_html
-    restricted_basic_html: '0'
-    restricted_html: '0'
-    teaser_display_text: '0'
-    raw_html: '0'
-    plain_text: '0'
 id: node.page.body
 field_name: body
 entity_type: node

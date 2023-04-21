@@ -1,9 +1,0 @@
-langcode: en
-status: true
-dependencies:
-  module:
-    - file
-id: file.collection_carousel
-label: collection_carousel
-targetEntityType: file
-cache: true

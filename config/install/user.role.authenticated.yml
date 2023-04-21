@@ -1,17 +1,25 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - comment
+    - contact
+    - filter
+    - search
+    - shortcut
+    - system
 id: authenticated
-label: 'authenticated user'
+label: 'Authenticated user'
 weight: 1
 is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
   - 'access shortcuts'
-  - 'never autoplay videos'
+  - 'access site-wide contact form'
   - 'post comments'
   - 'search content'
-  - 'submit latitude/longitude'
-  - 'view files'
-  - 'view media'
+  - 'skip comment approval'
+  - 'use text format basic_html'

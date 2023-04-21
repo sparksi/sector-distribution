@@ -1,12 +1,12 @@
-name: Sector
-mail: no-reply@sparksinteractive.co.nz
+langcode: en
+uuid: ''
+name: ''
+mail: ''
 slogan: ''
 page:
-  403: /node/14
-  404: /node/5
-  front: /node/10
+  403: ''
+  404: ''
+  front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-mail_notification: ''

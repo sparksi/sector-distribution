@@ -2,9 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_last_password_reset
-    - field.field.user.user.field_password_expiration
     - field.field.user.user.user_picture
+    - image.style.thumbnail
   module:
     - image
     - user
@@ -17,15 +16,14 @@ content:
     weight: 5
     region: content
   user_picture:
+    type: image
     label: hidden
     settings:
-      image_style: ''
+      image_style: thumbnail
       image_link: content
-    type: image
-    weight: 6
+      image_loading:
+        attribute: lazy
     third_party_settings: {  }
+    weight: 0
     region: content
-hidden:
-  field_last_password_reset: true
-  field_password_expiration: true
-  search_api_excerpt: true
+hidden: {  }

@@ -2,12 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.user.user.field_last_password_reset
-    - field.field.user.user.field_password_expiration
     - field.field.user.user.user_picture
+    - image.style.thumbnail
   module:
-    - datetime
-    - path
+    - image
     - user
 id: user.user.default
 targetEntityType: user
@@ -16,32 +14,22 @@ mode: default
 content:
   account:
     weight: -10
-    settings: {  }
-    third_party_settings: {  }
     region: content
-  field_last_password_reset:
-    type: datetime_default
-    weight: 4
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  field_password_expiration:
-    type: boolean_checkbox
-    weight: 3
-    settings:
-      display_label: true
-    third_party_settings: {  }
+  contact:
+    weight: 5
     region: content
   language:
     weight: 0
-    settings: {  }
-    third_party_settings: {  }
     region: content
-  path:
-    type: path
-    weight: 30
+  timezone:
+    weight: 6
     region: content
-    settings: {  }
+  user_picture:
+    type: image_image
+    weight: -1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
-hidden:
-  user_picture: true
+hidden: {  }

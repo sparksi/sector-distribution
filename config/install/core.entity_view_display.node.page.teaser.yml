@@ -4,92 +4,24 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
-    - field.field.node.page.field_auto_contextual_content
-    - field.field.node.page.field_banner
-    - field.field.node.page.field_last_updated
-    - field.field.node.page.field_metatag
-    - field.field.node.page.field_page_variant
-    - field.field.node.page.field_related_files
-    - field.field.node.page.field_related_links
-    - field.field.node.page.field_subtitle
-    - field.field.node.page.field_teaser
     - node.type.page
   module:
-    - ds
-    - field_formatter_filter
     - text
     - user
-third_party_settings:
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class:
-            slat: slat
-            has-margin-top-base: has-margin-top-base
-            has-border-top-alternate: has-border-top-alternate
-          ds_content: {  }
-    regions:
-      ds_content:
-        - node_title
-        - body
-    fields:
-      node_title:
-        plugin_id: node_title
-        weight: 0
-        label: hidden
-        formatter: default
-        settings:
-          link: true
-          wrapper: h3
-          class: 'slat__title h4 my-0 text-decoration-underline'
-        ft:
-          id: reset
-          settings:
-            lb: ''
 id: node.page.teaser
 targetEntityType: node
 bundle: page
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 100
+    label: hidden
     settings:
-      trim_length: 256
-    third_party_settings:
-      field_formatter_filter:
-        format: teaser_display_text
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            classes:
-              - slat__body
-              - has-margin-top-half
-            lb-col: false
-    region: ds_content
-hidden:
-  field_auto_contextual_content: true
-  field_banner: true
-  field_last_updated: true
-  field_metatag: true
-  field_page_variant: true
-  field_related_files: true
-  field_related_links: true
-  field_subtitle: true
-  field_teaser: true
-  links: true
-  search_api_excerpt: true
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden: {  }

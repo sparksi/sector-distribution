@@ -3,176 +3,23 @@ status: true
 dependencies:
   config:
     - field.field.node.page.body
-    - field.field.node.page.field_auto_contextual_content
-    - field.field.node.page.field_banner
-    - field.field.node.page.field_last_updated
-    - field.field.node.page.field_metatag
-    - field.field.node.page.field_page_variant
-    - field.field.node.page.field_related_files
-    - field.field.node.page.field_related_links
-    - field.field.node.page.field_subtitle
-    - field.field.node.page.field_teaser
     - node.type.page
   module:
-    - ds
-    - field_delimiter
-    - field_group
-    - link
     - text
     - user
-third_party_settings:
-  field_group:
-    group_related_content:
-      children:
-        - field_related_files
-        - field_related_links
-      parent_name: ''
-      weight: 1
-      label: 'Related content'
-      format_type: html_element
-      format_settings:
-        element: div
-        show_label: true
-        label_element: h4
-        label_element_classes: mb-0
-        attributes: ''
-        effect: none
-        speed: fast
-        id: ''
-        classes: 'related mt-5'
-      region: ds_content
-  ds:
-    layout:
-      id: ds_1col
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings:
-        wrappers:
-          ds_content: div
-        outer_wrapper: div
-        attributes: ''
-        link_attribute: ''
-        link_custom: ''
-        classes:
-          layout_class: {  }
-          ds_content: {  }
-    regions:
-      ds_content:
-        - body
-        - group_related_content
-        - field_related_files
-        - field_related_links
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
-    third_party_settings:
-      ds:
-        ft:
-          id: minimal
-          settings:
-            lb: ''
-            classes:
-              - prose
-            lb-col: false
-    region: ds_content
-  field_related_files:
-    type: entity_reference_entity_view
-    weight: 13
-    label: above
-    settings:
-      view_mode: short_teaser
-      link: false
-    third_party_settings:
-      field_delimiter:
-        delimiter: ''
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: h4
-            lbw-cl: 'h5 my-0 card-header'
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: 'mt-4 card'
-            ow-at: ''
-            fis: true
-            fis-el: ul
-            fis-cl: 'list-unstyled mb-0 mt-n2 card-body smooth-text'
-            fis-at: ''
-            fi: true
-            fi-el: li
-            fi-cl: mt-2
-            fi-at: ''
-            suffix: ''
-            lb-col: false
-            ow-def-at: false
-            ow-def-cl: false
-            fis-def-at: false
-            fi-def-at: false
-    region: ds_content
-  field_related_links:
-    weight: 14
-    label: above
-    settings:
-      trim_length: null
-      url_only: false
-      url_plain: false
-      rel: '0'
-      target: '0'
-    third_party_settings:
-      field_delimiter:
-        delimiter: ''
-      ds:
-        ds_limit: ''
-        ft:
-          id: expert
-          settings:
-            lb: ''
-            prefix: ''
-            lbw: true
-            lbw-el: h4
-            lbw-cl: 'h5 my-0 card-header'
-            lbw-at: ''
-            ow: true
-            ow-el: div
-            ow-cl: 'mt-4 card'
-            ow-at: ''
-            ow-def-at: true
-            ow-def-cl: true
-            fis: true
-            fis-el: ul
-            fis-cl: 'list-unstyled mb-0 mt-n2 card-body'
-            fis-at: ''
-            fi: true
-            fi-el: li
-            fi-cl: mt-2
-            fi-at: ''
-            fi-def-at: true
-            suffix: ''
-            lb-col: false
-            fis-def-at: false
-    type: link
-    region: ds_content
-hidden:
-  field_auto_contextual_content: true
-  field_banner: true
-  field_last_updated: true
-  field_metatag: true
-  field_page_variant: true
-  field_subtitle: true
-  field_teaser: true
-  links: true
-  search_api_excerpt: true
+    third_party_settings: {  }
+    weight: 100
+    region: content
+  links:
+    weight: 101
+    region: content
+hidden: {  }

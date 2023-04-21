@@ -1,15 +1,21 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.restricted_html
+  module:
+    - comment
+    - contact
+    - filter
+    - search
+    - system
 id: anonymous
-label: 'anonymous user'
+label: 'Anonymous user'
 weight: 0
 is_admin: false
 permissions:
   - 'access comments'
   - 'access content'
-  - 'never autoplay videos'
-  - 'post comments'
+  - 'access site-wide contact form'
   - 'search content'
-  - 'view files'
-  - 'view media'
+  - 'use text format restricted_html'
