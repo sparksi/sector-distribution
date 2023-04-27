@@ -1,0 +1,6 @@
+services:
+  sector.subtheme.command:
+    class: 'Drush\Commands\sector\SubThemeCommands'
+    tags:
+      -
+        name: 'drush.command'

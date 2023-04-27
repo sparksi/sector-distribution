@@ -1,0 +1,18 @@
+.alert:is([open]) {z-index: 499;display: flex;min-width: 700px;overflow: hidden;border-radius: 0.25rem;--tw-bg-opacity: 1;background-color: rgb(255 255 255 / var(--tw-bg-opacity));padding: 0px;--tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}.alert:is([open]) ul,.alert:is([open]) p {flex: 1 1 0%;padding: 0.75rem;font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size: 0.875rem;line-height: 1.25rem
+}.alert:is([open]) ul > :not([hidden]) ~ :not([hidden]) {--tw-space-y-reverse: 0;margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom: calc(0.75rem * var(--tw-space-y-reverse))
+}.alert:is([open])::-webkit-backdrop {--tw-bg-opacity: 1;background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+}.alert:is([open])::backdrop {--tw-bg-opacity: 1;background-color: rgb(0 0 0 / var(--tw-bg-opacity))
+}.alert:is([open]) p:has(script):has(style),.alert:is([open]) p:empty {display: none
+}@keyframes fadeInUp {from {transform: translateY(1em);opacity: 0
+    }to {transform: translateY(0);opacity: 1
+    }
+}.off-canvas .alert {animation: fadeInUp .35s ease
+}.alert__icon {--tw-bg-opacity: 1;background-color: rgb(74 222 128 / var(--tw-bg-opacity));padding: 0.5rem;font-size: 1.875rem;line-height: 2.25rem;--tw-text-opacity: 1;color: rgb(255 255 255 / var(--tw-text-opacity))
+}.alert__icon-error {--tw-bg-opacity: 1;background-color: rgb(248 113 113 / var(--tw-bg-opacity))
+}.alert__icon-warning {--tw-bg-opacity: 1;background-color: rgb(253 224 71 / var(--tw-bg-opacity))
+}.alert__icon-info {--tw-bg-opacity: 1;background-color: rgb(96 165 250 / var(--tw-bg-opacity))
+}.alert__icon-success {--tw-bg-opacity: 1;background-color: rgb(74 222 128 / var(--tw-bg-opacity))
+}.alert__close {display: flex;height: 2.5rem;width: 2.5rem;align-items: center;justify-content: center;align-self: flex-start
+}.alert__close span {pointer-events: none
+}

@@ -1,0 +1,49 @@
+{
+	"name": "drupal/sector",
+	"description": "sector is a base theme for Drupal. It has Bootstrap, Sass, BrowserSync and Font Awesome built-in.",
+	"type": "drupal-theme",
+	"homepage": "https://www.drupal.org/project/sector",
+	"authors": [
+		{
+			"name": "Arshad Chummun",
+			"email": "arshad@chummun.com",
+			"homepage": "https://arshad.io",
+			"role": "Maintainer"
+		},
+		{
+			"name": "Ng Chin Kiong",
+			"email": "ck@o8.agency",
+			"homepage": "https://www.o8.agency",
+			"role": "Maintainer"
+		},
+		{
+			"name": "Sohail Lajevardi",
+			"email": "doxigo@gmail.com",
+			"role": "Maintainer"
+		}
+	],
+	"support": {
+		"issues": "https://www.drupal.org/project/issues/sector"
+	},
+	"license": "GPL-2.0-or-later",
+	"minimum-stability": "dev",
+	"require-dev": {
+		"consolidation/robo": "^1.1.4 || ^2",
+		"drush/drush": "^11.5"
+	},
+	"require": {
+		"drupal/components": "^3.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Drush\\Commands\\sector\\": "Commands/sector/"
+		}
+	},
+	"extra": {
+		"drush": {
+			"services": {
+				"drush.services.yml": "^11"
+			}
+		}
+	}
+}

@@ -111,5 +111,6 @@ install:
   - xmlsitemap_custom:xmlsitemap_custom
   - xmlsitemap:xmlsitemap
 themes:
-  - olivero
+  - sector_starter
+  - gin
   - claro

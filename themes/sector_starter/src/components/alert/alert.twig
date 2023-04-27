@@ -1,0 +1,44 @@
+{#
+/**
+ * @file
+ * Template for Alert component.
+ *
+ * Available config:
+ * - type: primary | secondary | success | danger | warning | info | light | dark
+ * - heading: string,
+ * - dimissible: true | false
+ * - alert_utility_classes: An array of utility classes.
+ */
+#}
+{% set dismissible = dismissible ?? true %}
+{% set classes = [
+  'alert',
+  type ? 'alert-' ~ type,
+  dismissible ? 'alert-dismissible',
+]|merge(alert_utility_classes ? alert_utility_classes : []) %}
+
+<dialog open class="{{ classes|join(' ') }}" role="alert">
+  {% if type == 'success' %}
+    <span aria-hidden="true" class="material-symbols-sharp alert__icon alert__icon-success">done</span>
+  {% endif %}
+  {% if type == 'warning' %}
+    <span aria-hidden="true" class="material-symbols-sharp alert__icon alert__icon-warning">warning</span>
+  {% endif %}
+  {% if type == 'error' %}
+    <span aria-hidden="true" class="material-symbols-sharp alert__icon alert__icon-error">error</span>
+  {% endif %}
+  {% if heading %}
+    <h4 class="alert-heading">{{ heading }}</h4>
+  {% endif %}
+
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+
+  {% if dismissible %}
+    <button type="button" class="alert__close" aria-label="Close">
+      <span aria-hidden="true" class="material-symbols-sharp">close</span>
+    </button>
+  {% endif %}
+</dialog>
+{{ attach_library('sector_starter/alert')}}

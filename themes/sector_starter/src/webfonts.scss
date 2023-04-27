@@ -1,0 +1,31 @@
+@use "sass:map";
+
+$font-library: (
+  "FjallaOne": (
+    /*"-SemiBold": (style: normal,
+      weight: 600),
+    "-Medium": (style: normal,
+      weight: 500),
+    "-MediumItalic": (style: italic,
+      weight: 500),*/
+    "-Regular": (style: normal,
+      weight: 400),
+    /*"-RegularItalic": (style: italic,
+      weight: 400)),
+  "Inter": ("-Regular": (style: normal,
+      weight: normal)*/
+  )
+);
+
+@each $typeface, $variants in $font-library {
+  @each $variant, $props in $variants {
+    @font-face {
+      font-family: "#{$typeface}";
+      src: url("fonts/#{$typeface}#{$variant}.woff2") format("woff2"),
+      url("fonts/#{$typeface}#{$variant}.woff") format("woff");
+      font-style: #{map.get($props, style)};
+      font-weight: #{map.get($props, weight)};
+      font-display: swap;
+    }
+  }
+}

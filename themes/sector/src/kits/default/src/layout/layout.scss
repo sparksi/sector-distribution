@@ -1,0 +1,7 @@
+html, body {
+    @apply motion-safe:scroll-smooth dark:bg-neutral-950 text-neutral-950 dark:text-neutral-50;
+}
+
+.canvas {
+    @apply antialiased;
+}

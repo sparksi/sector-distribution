@@ -1,0 +1,117 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+{% set page_classes = [
+  'py-5'
+]|merge(page_utility_classes ? page_utility_classes : []) %}
+
+{%
+set layout_classes = [
+'page',
+'canvas',
+page.isPublishedClass,
+  (page.content_prefix|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'page--has-content-prefix' : '',
+  (page.content_suffix|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'page--has-content-suffix' : ''
+]
+%}
+
+<div {{ content_attributes.addClass(layout_classes) }}>
+
+    {% if page.notices %}
+      <div class="page_notices">
+        <div class="container">
+          {{ page.notices }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if page.header %}
+      <header class="page__header">
+        <div class="container">
+          {{ page.header }}
+        </div>
+      </header>
+    {% endif %}
+
+    {% if page.hero %}
+      <div class="page__hero">
+        <div class="container">
+          {{ page.hero }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if page.help %}
+      <div class="page__help">
+        <div class="container">
+          {{ page.help }}
+        </div>
+      </div>
+    {% endif %}
+
+  <div class="zone zone--content">
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    {% if page.content_before %}
+      <div class="page__content-before">
+        <div class="container">
+          {{ page.content_before }}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if page.content %}
+      <main class="page__content">
+        <div class="container">
+          {{ page.content }}
+        </div>
+      </main>
+    {% endif %}
+
+    {% if page.content_prefix %}
+      <aside role="complementary" class="page__content-prefix">
+        <div class="container">
+          {{ page.content_prefix }}
+        </div>
+      </aside>
+    {% endif %}
+
+    {% if page.content_suffix %}
+      <aside role="complementary" class="page__content-suffix">
+        <div class="container">
+          {{ page.content_suffix }}
+        </div>
+      </aside>
+    {% endif %}
+
+
+    {% if page.content_after %}
+      <div class="page__content-after">
+        <div class="container">
+          {{ page.content_after }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  {% if page.footer %}
+    <footer class="page__footer">
+      <div class="container">
+        <div class="d-flex justify-content-md-between align-items-md-center">
+          {{ page.footer }}
+        </div>
+      </div>
+    </footer>
+  {% endif %}
+</div>
+
+{% if page.off_canvas %}
+  <div class="off-canvas">
+    <div class="container">
+      {{ page.off_canvas }}
+    </div>
+  </div>
+{% endif %}

@@ -1,0 +1,19 @@
+@use 'components/prose';
+
+.ck-editor__main {
+    all: initial;
+}
+
+.ck-content {
+    @apply antialiased font-sans;
+    @include prose.prose;
+}
+
+.ck-content.ck-editor__editable {
+    max-width: none;
+    height: var(--wysiwyg-height, 15em);
+}
+
+:where([data-editor-active-text-format="basic_html"], [data-editor-active-text-format="full_html"]) + .ck .ck-editor__editable {
+    --wysiwyg-height: 25em;
+}

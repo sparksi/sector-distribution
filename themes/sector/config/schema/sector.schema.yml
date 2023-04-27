@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Sector theme.
+
+sector.settings:
+  type: theme_settings
+  label: 'Sector settings'

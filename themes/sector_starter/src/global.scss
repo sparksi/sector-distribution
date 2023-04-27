@@ -1,0 +1,14 @@
+:root {
+  --custom-font: FjallaOne, theme(fontFamily.sans);
+}
+
+html,
+body {
+  @apply font-sans motion-safe:focus-within:scroll-smooth;
+}
+
+/*
+.region {
+  @apply border border-dotted border-neutral-600;
+}
+*/

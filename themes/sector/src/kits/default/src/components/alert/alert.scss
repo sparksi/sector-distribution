@@ -1,0 +1,51 @@
+.alert:is([open]) {
+    @apply p-0 bg-white shadow-lg z-[499] min-w-[700px] flex overflow-hidden rounded;
+
+    ul, p {
+        @apply p-3 font-mono flex-1 text-sm;
+    }
+
+    ul {
+        @apply space-y-3;
+    }
+
+    &::backdrop {
+        @apply bg-black;
+    }
+
+    p:has(script):has(style), p:empty {
+        @apply hidden;
+    }
+}
+
+.off-canvas .alert {
+    @apply animate-alert;
+}
+
+.alert__icon {
+    @apply p-2 text-3xl bg-green-400 text-white;
+
+    &-error {
+        @apply bg-red-400;
+    }
+
+    &-warning {
+        @apply bg-yellow-300;
+    }
+
+    &-info {
+        @apply bg-blue-400;
+    }
+
+    &-success {
+        @apply bg-green-400;
+    }
+}
+
+.alert__close {
+    @apply self-start flex items-center justify-center w-10 h-10;
+
+    span {
+        @apply pointer-events-none;
+    }
+}

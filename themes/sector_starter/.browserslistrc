@@ -1,0 +1,5 @@
+# Browsers that sector supports
+# https://github.com/browserslist/browserslist#readme
+>= 1%
+last 2 major version
+not dead

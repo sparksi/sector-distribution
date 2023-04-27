@@ -1,0 +1,40 @@
+name: SECTOR_SUBTHEME_MACHINE_NAME
+description: A theme based on sector.
+screenshot: screenshot.png
+core_version_requirement: ^8.7.7 || ^9.0 || ^10
+# version: VERSION
+engine: twig
+type: theme
+base theme: sector
+
+'interface translation project': SECTOR_SUBTHEME_MACHINE_NAME
+'interface translation server pattern': 'themes/custom/SECTOR_SUBTHEME_MACHINE_NAME/translations/%language.po'
+
+regions:
+  notices: Notices
+  header: Header
+  search: 'Search'
+  navigation: 'Navigation'
+  hero: 'Hero'
+  help: Help
+  content_before: 'Before-Content'
+  main: Main
+  content_prefix: 'Content prefix (sidebar)'
+  content_suffix: 'Content suffix (sidebar)'
+  content_after: 'After-Content'
+  footer: Footer
+  off_canvas: Off-canvas
+
+libraries:
+  - SECTOR_SUBTHEME_MACHINE_NAME/style
+  - SECTOR_SUBTHEME_MACHINE_NAME/layout
+  
+ckeditor5-stylesheets:
+  - dist/webfonts.css
+  - dist/global.css
+  - dist/typekit.css
+  - dist/drupal/wysiwyg.css
+
+components:
+  namespaces:
+    SECTOR_SUBTHEME_MACHINE_NAME: src/components
