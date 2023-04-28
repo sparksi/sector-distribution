@@ -1,6 +1,0 @@
-@import 'bootstrap/custom-bootstrap-variables';
-
-.user-logged-in .entity-status-unpublished {
-  background: repeating-linear-gradient(-45deg, rgba($warning,0.15), rgba($warning,0.15) 0.625rem, rgba($warning,0.1) 0.625rem, rgba($warning,0.1) 1.25rem);
-  border: 1px solid mix($white, $warning, 60%);
-}

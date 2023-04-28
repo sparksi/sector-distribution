@@ -1,1 +1,0 @@
-window.addEventListener("load",(function(){document.querySelectorAll(".node[class*=teaser] a img").forEach((function(e){return e.setAttribute("alt","")}))}));

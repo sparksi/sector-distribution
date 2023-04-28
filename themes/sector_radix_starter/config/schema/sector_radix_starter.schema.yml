@@ -1,5 +1,0 @@
-# Schema for the configuration files of the sector_radix_starter theme.
-
-sector_radix_starter.settings:
-  type: theme_settings
-  label: 'sector_radix_starter settings'

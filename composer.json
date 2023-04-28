@@ -44,7 +44,6 @@
         "drupal/password_policy": "4.0.0",
         "drupal/pathauto": "1.11",
         "drupal/rabbit_hole": "1.0-beta11",
-        "drupal/radix": "5.0.8",
         "drupal/redirect": "1.8",
         "drupal/search_api": "1.28",
         "drupal/sector_tonic": "^1.0",

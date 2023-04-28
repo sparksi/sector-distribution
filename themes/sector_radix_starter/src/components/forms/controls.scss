@@ -1,9 +1,0 @@
-@import 'mixins/forms';
-
-input, 
-select,
-textarea,
-.form-control,
-.custom-select {
-  @include no-appearance;
-}

@@ -1,1 +1,0 @@
-.promotion--information-tiles{position:relative}.promotion--information-tiles::after{content:'';height:100%;display:block;position:absolute;top:0;left:50%;transform:translateX(-50%);background-color:#f8f9fa;z-index:-1}.promotion--information-tiles>*:not(.contextual){position:relative;z-index:1}
