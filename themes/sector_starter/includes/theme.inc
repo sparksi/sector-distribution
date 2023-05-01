@@ -16,14 +16,14 @@ function sector_starter_library_info_build() {
 
   $directories = [
     'base' => [
-      'themes/custom/sector_starter/dist/layout'
+      'profiles/contrib/sector-distribution/themes/sector_starter/dist/layout'
     ],
     'layout' => [
-      'themes/custom/sector_starter/dist/layout/regions'
+      'profiles/contrib/sector-distribution/themes/sector_starter/dist/layout/regions'
     ],
     'component' => [
-      'themes/custom/sector_starter/dist/components',
-      'themes/custom/sector_starter/dist/drupal'
+      'profiles/contrib/sector-distribution/themes/sector_starter/dist/components',
+      'profiles/contrib/sector-distribution/themes/sector_starter/dist/drupal'
     ]
   ];
 
