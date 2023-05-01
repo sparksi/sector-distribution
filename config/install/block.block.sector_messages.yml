@@ -1,0 +1,20 @@
+uuid: 38a7b0c2-e87d-4268-b656-70fd6b45b401
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - sector
+id: sector_messages
+theme: sector
+region: off_canvas
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }
