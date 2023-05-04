@@ -97,6 +97,7 @@ install:
   - sector:sector_utils
   - sector:sector_wysiwyg_utils
   - sector_tonic:sector_tonic
+  - svg_image:svg_image
   - term_condition:term_condition
   - token:token
   - username_enumeration_prevention:username_enumeration_prevention

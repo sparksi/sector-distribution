@@ -47,6 +47,7 @@
         "drupal/redirect": "1.8",
         "drupal/search_api": "1.28",
         "drupal/sector_tonic": "^1.0",
+        "drupal/svg_image": "^3.0",
         "drupal/term_condition": "2.0.x@dev",
         "drupal/token": "1.11",
         "drupal/username_enumeration_prevention": "1.3",
