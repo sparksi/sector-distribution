@@ -27,7 +27,6 @@
         "drupal/current_page_crumb": "1.x@dev",
         "drupal/default_content": "2.0.0-alpha2",
         "drupal/diff": "1.1",
-        "drupal/ds": "3.15",
         "drupal/embed": "1.6",
         "drupal/entity_usage": "2.0-beta11",
         "drupal/entityqueue": "1.6",
@@ -99,6 +98,9 @@
             ]
         },
         "patches": {
+            "drupal/core": {
+                "Permit colons in css classes": "patches/permit_colons_css.patch"
+            },
             "drupal/menu_block": {
                 "No contextual link to edit menu": "https://www.drupal.org/files/issues/2799821-2.menu_block.contextual_links.patch",
                 "Hide menu block title if empty": "https://www.drupal.org/files/issues/2021-05-20/menu_block-hide_block_if_no_links-2757215-18.patch"

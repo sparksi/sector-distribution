@@ -1,0 +1,21 @@
+diff --git a/core/lib/Drupal/Component/Utility/Html.php b/core/lib/Drupal/Component/Utility/Html.php
+index f9bb8e6..2ef3c5c 100644
+--- a/core/lib/Drupal/Component/Utility/Html.php
++++ b/core/lib/Drupal/Component/Utility/Html.php
+@@ -98,6 +98,7 @@ public static function cleanCssIdentifier($identifier, array $filter = [
+     '/' => '-',
+     '[' => '-',
+     ']' => '',
++    ':' => ':'
+   ]) {
+     // We could also use strtr() here but its much slower than str_replace(). In
+     // order to keep '__' to stay '__' we first replace it with a different
+@@ -121,7 +122,7 @@ public static function cleanCssIdentifier($identifier, array $filter = [
+     // - 0-9 (U+0061 - U+007A)
+     // - ISO 10646 characters U+00A1 and higher
+     // We strip out any character not in the above list.
+-    $identifier = preg_replace('/[^\x{002D}\x{0030}-\x{0039}\x{0041}-\x{005A}\x{005F}\x{0061}-\x{007A}\x{00A1}-\x{FFFF}]/u', '', $identifier);
++    $identifier = preg_replace('/[^\x{002D}\x{002E}\x{002F}\x{003A}\x{0030}-\x{005A}\x{005F}\x{0061}-\x{007A}\x{00A1}-\x{FFFF}]/u', '', $identifier);
+     // Identifiers cannot start with a digit, two hyphens, or a hyphen followed by a digit.
+     $identifier = preg_replace([
+       '/^[0-9]/',
