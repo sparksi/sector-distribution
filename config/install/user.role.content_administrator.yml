@@ -8,6 +8,7 @@ is_admin: null
 permissions:
   - 'Use PHP input for field settings (dangerous - grant with care)'
   - 'access administration menu'
+  - 'access entity usage statistics'
   - 'access in-place editing'
   - 'access site reports'
   - 'access workbench'
@@ -84,4 +85,3 @@ permissions:
   - 'view revisions'
   - 'view workbench access information'
   - 'view workbench taxonomy pages'
-  - 'access entity usage statistics'
