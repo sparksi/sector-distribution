@@ -17,27 +17,34 @@
   dismissible ? 'alert-dismissible',
 ]|merge(alert_utility_classes ? alert_utility_classes : []) %}
 
-<dialog open class="{{ classes|join(' ') }}" role="alert">
-  {% if type == 'success' %}
-    <span aria-hidden="true" class="alert__icon alert__icon-success"></span>
-  {% endif %}
-  {% if type == 'warning' %}
-    <span aria-hidden="true" class="alert__icon alert__icon-warning"></span>
-  {% endif %}
-  {% if type == 'error' %}
-    <span aria-hidden="true" class="alert__icon alert__icon-error"></span>
-  {% endif %}
-  {% if heading %}
-    <h4 class="alert-heading">{{ heading }}</h4>
-  {% endif %}
+<dialog class="{{ classes|join(' ') }}" role="alert">
+  <div class="sm:flex sm:items-start">
+    {% if type == 'success' %}
+      <span aria-hidden="true" class="alert__icon alert__icon-success"></span>
+    {% endif %}
+    {% if type == 'warning' %}
+      <span aria-hidden="true" class="alert__icon alert__icon-warning"></span>
+    {% endif %}
+    {% if type == 'error' %}
+      <span aria-hidden="true" class="alert__icon alert__icon-error"></span>
+    {% endif %}
 
-  {% block content %}
-    {{ content }}
-  {% endblock %}
+    <div class="alert__body">
+      {% if heading %}
+        <h4 class="alert__heading">{{ heading }}</h4>
+      {% endif %}
+      
+      {% block content %}
+        {{ content }}
+      {% endblock %}
+    </div>
+  </div>
 
   {% if dismissible %}
-    <button type="button" class="alert__close" aria-label="Close">
-      <span aria-hidden="true"></span>
-    </button>
+    <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block">
+      <button type="button" class="alert__close" aria-label="Close">
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
   {% endif %}
 </dialog>

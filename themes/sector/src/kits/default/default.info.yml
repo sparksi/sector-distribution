@@ -12,18 +12,23 @@ base theme: sector
 
 regions:
   notices: Notices
+  header_pre: Header › Pre
   header: Header
-  search: 'Search'
-  navigation: 'Navigation'
-  hero: 'Hero'
+  header_post: Header › Post
+  search: Header › Search
+  navigation: Header › Navigation
+  hero_pre: Hero › Pre
+  hero: Hero
+  hero_post: Hero › Post
   help: Help
-  content_before: 'Before-Content'
-  main: Main
+  content_pre: Content › Pre
+  content: Content
   content_prefix: 'Content prefix (sidebar)'
   content_suffix: 'Content suffix (sidebar)'
-  content_after: 'After-Content'
+  content_post: Content › Post
+  footer_pre: Footer › Pre
   footer: Footer
-  off_canvas: Off-canvas
+  footer_post: Footer › Post
 
 libraries:
   - SECTOR_SUBTHEME_MACHINE_NAME/style

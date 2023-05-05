@@ -1,18 +1,14 @@
 @use 'mixins/icon';
 
 .alert:is([open]) {
-    @apply p-0 bg-white shadow-lg z-[499] min-w-[700px] flex overflow-hidden rounded;
-
-    ul, p {
-        @apply p-3 font-mono flex-1 text-sm;
-    }
+    @apply relative transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg sm:p-6 gap-x-4;
 
     ul {
-        @apply space-y-3;
+        @apply space-y-2;
     }
 
     &::backdrop {
-        @apply bg-black;
+        @apply bg-gray-500/75;
     }
 
     p:has(script):has(style), p:empty {
@@ -25,7 +21,8 @@
 }
 
 .alert__icon {
-    @apply p-2 text-3xl bg-green-400 text-white;
+    @apply mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10;
+    --icon-size: 66%;
 
     &::before {
         content: "";
@@ -51,14 +48,27 @@
         @apply bg-blue-400;
         &::before { @include icon.pos(4) }
     }
+
+    .alert:has(.sf-dump) & {
+        @apply bg-blue-400;
+        &::before { @include icon.pos(4) }
+    }
+}
+
+.alert__heading {
+    @apply text-base font-semibold leading-6 text-gray-900;
+}
+
+.alert__body {
+    @apply mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left text-sm text-center text-gray-500 mt-3;
 }
 
 .alert__close {
-    @apply self-start flex items-center justify-center w-8 h-8;
+    @apply bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
     --icon-size: 100%;
 
     span {
-        @apply pointer-events-none w-full h-full;
+        @apply pointer-events-none h-6 w-6 block;
 
         &::before {
             content: "";

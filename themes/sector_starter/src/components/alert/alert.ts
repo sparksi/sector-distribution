@@ -1,15 +1,18 @@
 const root = document.querySelector('.canvas')
 
 Drupal.behaviors.alert = {
-    attach: function (context, settings) {
-        this.toggleInert();
+    attach: (context, settings) => {
 
         const dialogs = context.querySelectorAll('dialog.alert');
 
         dialogs.forEach((dialog: HTMLDialogElement) => {
+            dialog.showModal();
+        });
+
+        dialogs.forEach((dialog: HTMLDialogElement) => {
             const close = dialog.querySelector('.alert__close');
             if(close) {
-                close.addEventListener('click', (event:SyntheticEvent) => {
+                close.addEventListener('click', (event: Event) => {
                     dialog.close();
                 })
             }
@@ -18,17 +21,5 @@ Drupal.behaviors.alert = {
                 this.toggleInert();
             });
         });
-
-
-       
-    },
-    toggleInert: () => {
-        const openDialogs = document.querySelectorAll('.off-canvas dialog.alert[open]').length
-        if(openDialogs === 0) {
-            root?.removeAttribute('inert');
-        }
-        else {
-            root?.setAttribute('inert', '');
-        }
-    }
+    }    
 };

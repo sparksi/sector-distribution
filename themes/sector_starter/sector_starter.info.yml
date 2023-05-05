@@ -29,7 +29,6 @@ regions:
   footer_pre: Footer › Pre
   footer: Footer
   footer_post: Footer › Post
-  off_canvas: Off-canvas
 
 libraries:
   - sector_starter/style
