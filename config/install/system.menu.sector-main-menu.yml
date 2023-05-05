@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sector-main-menu
+label: 'Sector › Main menu'
+description: 'Menu for <em>hierarchical content</em> in the main content sections (Sector). '
+locked: false
