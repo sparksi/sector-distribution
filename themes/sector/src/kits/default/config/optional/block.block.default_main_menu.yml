@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sector-main-menu
+  module:
+    - menu_block
+  theme:
+    - SECTOR_SUBTHEME_MACHINE_NAME
+id: SECTOR_SUBTHEME_MACHINE_NAME_main_menu
+theme: SECTOR_SUBTHEME_MACHINE_NAME
+region: navigation
+weight: 0
+provider: null
+plugin: 'menu_block:sector-main-menu'
+settings:
+  id: 'menu_block:sector-main-menu'
+  label: 'Sector › Main menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: true
+  parent: 'sector-main-menu:'
+  suggestion: sector_main_menu
+visibility: {  }
