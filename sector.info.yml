@@ -6,10 +6,7 @@ version: '10.0.x-dev'
 distribution:
   name: Sector
 install:
-  - drupal:comment
-  - drupal:contact
   - drupal:search
-  - drupal:tour
   - drupal:automated_cron
   - drupal:block
   - drupal:block_content
@@ -52,6 +49,7 @@ install:
   - actions_permissions:actions_permissions
   - admin_toolbar_links_access_filter:admin_toolbar_links_access_filter
   - admin_toolbar_tools:admin_toolbar_tools
+  - admin_toolbar_search:admin_toolbar_search
   - admin_toolbar:admin_toolbar
   - allowed_formats:allowed_formats
   - block_class:block_class
