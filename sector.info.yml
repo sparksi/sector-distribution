@@ -6,7 +6,6 @@ version: '10.0.x-dev'
 distribution:
   name: Sector
 install:
-  - drupal:comment
   - drupal:search
   - drupal:automated_cron
   - drupal:block
