@@ -54,8 +54,6 @@ install:
   - admin_toolbar_tools:admin_toolbar_tools
   - admin_toolbar:admin_toolbar
   - allowed_formats:allowed_formats
-  - antibot:antibot
-  - autologout:autologout
   - block_class:block_class
   - components:components
   - config_update:config_update
@@ -102,10 +100,6 @@ install:
   - views_bulk_edit:views_bulk_edit
   - views_bulk_operations:views_bulk_operations
   - views_menu_children_filter:views_menu_children_filter
-  - webform_ui:webform_ui
-  - webform:webform
-  - xmlsitemap_custom:xmlsitemap_custom
-  - xmlsitemap:xmlsitemap
 themes:
   - sector_starter
   - gin

@@ -13,12 +13,11 @@
         "cweagans/composer-patches": "~1.0",
         "drupal/admin_toolbar": "3.3.0",
         "drupal/allowed_formats": "2.0.0",
-        "drupal/autologout": "1.4",
         "drupal/block_class": "2.0.11",
+        "drupal/components": "^3.0@beta",
         "drupal/config_update": "2.0.0-alpha2",
         "drupal/core-recommended": "10.0.7",
         "drupal/ctools": "3.13",
-        "drupal/current_page_crumb": "1.x@dev",
         "drupal/default_content": "2.0.0-alpha2",
         "drupal/diff": "1.1",
         "drupal/embed": "1.6",
@@ -47,8 +46,7 @@
         "drupal/video_embed_field": "2.5",
         "drupal/views_bulk_edit": "2.8",
         "drupal/views_bulk_operations": "4.2.3",
-        "drupal/views_menu_children_filter": "1.0-rc2",
-        "drupal/xmlsitemap": "1.4"
+        "drupal/views_menu_children_filter": "1.0-rc2"
     },
     "conflict": {
         "drupal/drupal": "*"
