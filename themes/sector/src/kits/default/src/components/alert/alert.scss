@@ -48,6 +48,11 @@
         @apply bg-blue-400;
         &::before { @include icon.pos(4) }
     }
+
+    .alert:has(.sf-dump) & {
+        @apply bg-blue-400;
+        &::before { @include icon.pos(4) }
+    }
 }
 
 .alert__heading {
@@ -56,6 +61,10 @@
 
 .alert__body {
     @apply mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left text-sm text-center text-gray-500 mt-3;
+
+    a {
+        @apply underline underline-offset-2;
+    }
 }
 
 .alert__close {
