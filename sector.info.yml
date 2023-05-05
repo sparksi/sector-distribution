@@ -54,7 +54,6 @@ install:
   - admin_toolbar_tools:admin_toolbar_tools
   - admin_toolbar:admin_toolbar
   - allowed_formats:allowed_formats
-  - anchor_link:anchor_link
   - antibot:antibot
   - autologout:autologout
   - block_class:block_class
