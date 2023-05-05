@@ -2,18 +2,18 @@ langcode: en
 status: true
 dependencies:
   module:
-    - system
+    - help
   theme:
     - sector_starter
-id: sector_starter_messages
+id: sector_starter_help
 theme: sector_starter
 region: help
-weight: 0
+weight: 1
 provider: null
-plugin: system_messages_block
+plugin: help_block
 settings:
-  id: system_messages_block
-  label: Messages
+  id: help_block
+  label: Help
   label_display: '0'
-  provider: system
+  provider: help
 visibility: {  }
