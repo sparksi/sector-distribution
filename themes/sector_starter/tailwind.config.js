@@ -5,6 +5,8 @@ module.exports = {
   content: [
     "./templates/**/*.{html,twig}",
     "./src/**/*.{html,twig}",
+    "../sector/templates/**/*.{html,twig}",
+    "../sector/src/**/*.{html,twig}",
     "./safelist.txt"
   ],
   theme: {

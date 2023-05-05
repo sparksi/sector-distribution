@@ -5,11 +5,13 @@
  */
 #}
 {% if primary %}
-  <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
-  <ul class="nav nav-tabs mb-3">{{ primary }}</ul>
+  <nav class="flex space-x-4" aria-label="{{ 'Primary tabs'|t }}">
+    {{ primary }}
+  </nav>
 {% endif %}
 
 {% if secondary %}
-  <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
-  <ul class="nav nav-pills">{{ secondary }}</ul>
+  <nav class="flex space-x-4" aria-label="{{ 'Secondary tabs'|t }}">
+    {{ secondary }}
+  </nav>
 {% endif %}
