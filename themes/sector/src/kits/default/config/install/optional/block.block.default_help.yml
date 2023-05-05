@@ -4,9 +4,9 @@ dependencies:
   module:
     - help
   theme:
-    - sector
-id: sector_help
-theme: sector
+    - SECTOR_SUBTHEME_MACHINE_NAME
+id: SECTOR_SUBTHEME_MACHINE_NAME_help
+theme: SECTOR_SUBTHEME_MACHINE_NAME
 region: help
 weight: 1
 provider: null

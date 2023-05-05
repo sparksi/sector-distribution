@@ -7,19 +7,19 @@ dependencies:
     - block_class
     - menu_block
   theme:
-    - sector_starter
+    - SECTOR_SUBTHEME_MACHINE_NAME
 third_party_settings:
   block_class:
     replaced_id: navigation
-id: sector_main_menu
-theme: sector_starter
+id: SECTOR_SUBTHEME_MACHINE_NAME_main_menu
+theme: SECTOR_SUBTHEME_MACHINE_NAME
 region: navigation
 weight: 0
 provider: null
 plugin: 'menu_block:sector-main-menu'
 settings:
   id: 'menu_block:sector-main-menu'
-  label: 'Sector › Main menu'
+  label: 'SECTOR_SUBTHEME_MACHINE_NAME › Main menu'
   label_display: '0'
   provider: menu_block
   follow: false
@@ -30,5 +30,5 @@ settings:
   depth: 1
   expand_all_items: false
   parent: 'sector-main-menu:'
-  suggestion: sector_main_menu
+  suggestion: SECTOR_SUBTHEME_MACHINE_NAME_main_menu
 visibility: {  }

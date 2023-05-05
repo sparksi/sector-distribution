@@ -4,9 +4,9 @@ dependencies:
   module:
     - system
   theme:
-    - sector
-id: sector_messages
-theme: sector
+    - SECTOR_SUBTHEME_MACHINE_NAME
+id: SECTOR_SUBTHEME_MACHINE_NAME_messages
+theme: SECTOR_SUBTHEME_MACHINE_NAME
 region: help
 weight: 0
 provider: null
