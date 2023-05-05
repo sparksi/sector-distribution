@@ -85,7 +85,6 @@ install:
   - search_api_db:search_api_db
   - search_api:search_api
 #  - sector:admin_ui_toggle
-  - sector:sector_default_content
 #  - sector:sector_blocks
   - sector:sector_utils
   - sector:sector_wysiwyg_utils
