@@ -84,9 +84,9 @@ install:
   - rh_taxonomy:rh_taxonomy
   - search_api_db:search_api_db
   - search_api:search_api
-  - sector:admin_ui_toggle
+#  - sector:admin_ui_toggle
   - sector:sector_default_content
-  - sector:sector_blocks
+#  - sector:sector_blocks
   - sector:sector_utils
   - sector:sector_wysiwyg_utils
   - sector_tonic:sector_tonic
