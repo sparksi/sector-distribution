@@ -1,0 +1,50 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 03ae7a81-5206-4dd6-9b82-b998054281f6
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Content management made easy.'
+  created:
+    -
+      value: 1683325166
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  body:
+    -
+      value: "<h2>Welcome to Sector!</h2><h3>Sector is an open source Drupal distribution that puts your content first.</h3><p>We have built on the best content authoring and site building tools on the market to provide a radically new user experience for editorial teams and marketers.</p><p>You have installed a development branch of our Sector 10 project! You are welcome to follow our project and check in on progress, but this project is in its infancy. <a href=\"https://www.sector.nz/#block-mailchimpsubscription\">Sign-up to our Sector updates at Sector.nz</a> and we will let you know when it's ready to run./p&gt;</p><h2>Get Started</h2><p>The documentation on Sector.nz will&nbsp;<strong>get you going in no time.</strong></p><ul><li>You can start with the <a href=\"//www.sector.nz/documentation/collections/you-start-planning-your-site-and-content\_\"><em>Getting started - Editor's Quick Start Guide</em></a><span>collection.</span></li><li>or<em> </em><a href=\"https://www.sector.nz/documentation/collections/getting-started-sector-sitebuilders\_\"><em>Getting started - Sector for Sitebuilders</em></a></li><li>or this one&gt;<a href=\"https://www.sector.nz/documentation/collections/getting-started-developers-quick-start-guide\"><em>Getting started - Developer's Quick Start Guide</em></a>.&nbsp;</li></ul><p>Drupal Newbie? The Drupal community at <a href=\"https://www.drupal.org/\">Drupal.org</a> offers Drupal training and offers many helpful resources.&nbsp;</p><h2>What’s next?</h2><p>We have many online and offline events planned for the second half of 2023. <a href=\"https://www.sector.nz/#block-mailchimpsubscription\">Stay in touch with all things Sector</a>!</p>"
+      format: basic_html
+      summary: ''

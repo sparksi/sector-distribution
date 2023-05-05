@@ -3,6 +3,8 @@ type: module
 description: Provides the default content
 package: Sector
 core_version_requirement: ^10
+dependencies:
+  - default_content:default_content
 
 default_content:
     node:
