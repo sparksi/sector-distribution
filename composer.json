@@ -9,9 +9,6 @@
         }
     ],
     "require": {
-        "ckeditor-plugin/fakeobjects": "4.16.2",
-        "ckeditor-plugin/link": "4.16.0",
-        "ckeditor-plugin/templates": "4.16.0",
         "composer/installers": "^1.0.20",
         "cweagans/composer-patches": "~1.0",
         "drupal/admin_toolbar": "3.3.0",
@@ -56,9 +53,6 @@
         "drupal/views_menu_children_filter": "1.0-rc2",
         "drupal/webform": "6.2.0-beta5",
         "drupal/xmlsitemap": "1.4"
-    },
-    "replace": {
-        "ckeditor/templates": "*"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -123,42 +117,6 @@
         "asset.packagist": {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        "ckeditor-plugin/templates": {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/templates",
-                "version": "4.16.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/templates/releases/templates_4.16.0.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        "ckeditor-plugin/link": {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/link",
-                "version": "4.16.0",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/link/releases/link_4.16.0.zip",
-                    "type": "zip"
-                }
-            }
-        },
-        "ckeditor-plugin/fakeobjects": {
-            "type": "package",
-            "package": {
-                "name": "ckeditor-plugin/fakeobjects",
-                "version": "4.16.2",
-                "type": "drupal-library",
-                "dist": {
-                    "url": "https://download.ckeditor.com/fakeobjects/releases/fakeobjects_4.16.2.zip",
-                    "type": "zip"
-                }
-            }
         }
     },
     "minimum-stability": "dev",
