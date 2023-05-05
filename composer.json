@@ -99,7 +99,7 @@
         },
         "patches": {
             "drupal/core": {
-                "Permit colons in css classes": "patches/permit_colons_css.patch"
+                "Permit colons in css classes": "./patches/permit_colons_css.patch"
             },
             "drupal/menu_block": {
                 "No contextual link to edit menu": "https://www.drupal.org/files/issues/2799821-2.menu_block.contextual_links.patch",
