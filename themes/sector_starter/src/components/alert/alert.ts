@@ -3,23 +3,21 @@ const root = document.querySelector('.canvas')
 Drupal.behaviors.alert = {
     attach: (context, settings) => {
 
-        const dialogs = context.querySelectorAll('dialog.alert');
+        const dialogs = context.querySelectorAll('.alert--dismissible');
 
-        dialogs.forEach((dialog: HTMLDialogElement) => {
-            dialog.showModal();
-        });
+        /*dialogs.forEach((dialog: HTMLDialogElement) => {
+            //dialog.showModal();
+            dialog.show();
+        });*/
 
-        dialogs.forEach((dialog: HTMLDialogElement) => {
+        dialogs.forEach((dialog: HTMLElement) => {
             const close = dialog.querySelector('.alert__close');
             if(close) {
                 close.addEventListener('click', (event: Event) => {
-                    dialog.close();
+                    //dialog.close();
+                    dialog.remove();
                 })
             }
-
-            dialog.addEventListener("close", (event:Event) => {
-                this.toggleInert();
-            });
         });
     }    
 };
