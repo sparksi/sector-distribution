@@ -1,14 +1,10 @@
 :root {
-  --custom-font: FjallaOne, theme(fontFamily.sans);
+  --custom-font: Inter, theme(fontFamily.sans);
+  --custom-font-alternate: Roboto, theme(fontFamily.sans);
+  --custom-display: FjallaOne, theme(fontFamily.sans);
 }
 
 html,
 body {
-  @apply font-sans motion-safe:focus-within:scroll-smooth;
+  @apply font-custom motion-safe:focus-within:scroll-smooth;
 }
-
-/*
-.region {
-  @apply border border-dotted border-neutral-600;
-}
-*/

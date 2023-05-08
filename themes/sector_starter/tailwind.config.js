@@ -22,7 +22,8 @@ module.exports = {
       },
       fontFamily: {
         'custom': ['var(--custom-font)'],
-        //'custom-alt': ['var(--custom-font-alternate)'],
+        'custom-alt': ['var(--custom-font-alternate)'],
+        'custom-display': ['var(--custom-display)'],
       },
       fontSize: {
         'flexi-1':  'clamp(24px, 10vmax, 52px)'

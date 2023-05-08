@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:list";
 
 $font-library: (
   "FjallaOne": (
@@ -11,9 +12,16 @@ $font-library: (
     "-Regular": (style: normal,
       weight: 400),
     /*"-RegularItalic": (style: italic,
-      weight: 400)),
-  "Inter": ("-Regular": (style: normal,
-      weight: normal)*/
+      weight: 400)),*/
+  )
+);
+$variable-font-library: (
+  "Inter": (
+     "slnt": -10,
+     "wght": 900
+  ),
+  "Roboto": (
+    "wght": 900
   )
 );
 
@@ -27,5 +35,20 @@ $font-library: (
       font-weight: #{map.get($props, weight)};
       font-display: swap;
     }
+  }
+}
+
+
+@each $typeface, $features in $variable-font-library {
+  $settings: ();  
+
+  @each $feature, $props in $features {
+    $settings: list.append($settings, "\"#{$feature}\" #{$props}", "comma");
+  }
+
+  @font-face {
+    font-family: "#{$typeface}";
+    src: url("fonts/#{$typeface}.woff2") format("woff2-variations");
+    font-variation-settings: #{$settings};
   }
 }

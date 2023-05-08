@@ -21,8 +21,7 @@ module.exports = {
         '4xl': '2560px'
       },
       fontFamily: {
-        'custom': ['var(--custom-font)'],
-        //'custom-alt': ['var(--custom-font-alternate)'],
+        'custom': ['var(--custom-font)']
       },
       fontSize: {
         'flexi-1':  'clamp(24px, 10vmax, 52px)'

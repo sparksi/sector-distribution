@@ -14,11 +14,12 @@
 {% set classes = [
   'alert',
   type ? 'alert-' ~ type,
-  dismissible ? 'alert-dismissible',
+  'pointer-events-auto relative w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5',
+  dismissible ? 'alert--dismissible',
 ]|merge(alert_utility_classes ? alert_utility_classes : []) %}
 
-<dialog class="{{ classes|join(' ') }}" role="alert">
-  <div class="sm:flex sm:items-start">
+<div aria-live="assertive" class="{{ classes|join(' ') }}" role="alert">
+  <div class="sm:flex sm:items-start p-4 {{ dismissible ? 'pe-10' }}">
     {% if type == 'success' %}
       <span aria-hidden="true" class="alert__icon alert__icon-success"></span>
     {% endif %}
@@ -47,4 +48,4 @@
       </button>
     </div>
   {% endif %}
-</dialog>
+</div>
