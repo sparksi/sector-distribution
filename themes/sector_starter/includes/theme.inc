@@ -60,8 +60,6 @@ function sector_starter_library_info_build() {
     }
   }
 
-  dpm($libraries);
-
   return $libraries;
 }
 
