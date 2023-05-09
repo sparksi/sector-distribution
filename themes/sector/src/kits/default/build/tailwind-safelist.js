@@ -1,4 +1,10 @@
 export default [
+  'm-{margin}',
+  'my-{margin}',
+  'mx-{margin}',
+  'p-{padding}',
+  'py-{padding}',
+  'px-{padding}',
   'bg-{textColor}',
   'text-{textColor}',
   'font-sans',

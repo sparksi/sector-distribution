@@ -1,1 +1,1 @@
-const root=document.querySelector(".canvas");Drupal.behaviors.alert={attach:(l,n)=>{const t=l.querySelectorAll("dialog.alert");t.forEach(e=>{e.showModal()}),t.forEach(e=>{const o=e.querySelector(".alert__close");o&&o.addEventListener("click",c=>{e.close()}),e.addEventListener("close",c=>{(void 0).toggleInert()})})}};
+const root=document.querySelector(".canvas");Drupal.behaviors.alert={attach:(l,o)=>{l.querySelectorAll(".alert--dismissible").forEach(e=>{const t=e.querySelector(".alert__close");t&&t.addEventListener("click",s=>{e.remove()})})}};

@@ -1,0 +1,13 @@
+@use 'utils';
+
+.prose {
+    @include utils.prose;
+
+    > :is(:first-child:not(.hidden)) {
+        @apply mt-0;
+    }
+
+    > :is(:last-child:not(.hidden)) {
+        @apply mb-0;
+    }
+}

@@ -1,0 +1,27 @@
+@use 'utils';
+
+.prose {
+    @include utils.prose;
+
+    --tw-prose-heading-tracking: theme(letterSpacing.normal);
+    --tw-prose-heading-family: theme(fontFamily.custom-alt);
+    --tw-prose-links-hover-color: theme(colors.sky.600);
+
+    :where(h2,h3,h4,h5,h6) {
+        @apply tracking-[var(--tw-prose-heading-tracking)];
+        font-family: var(--tw-prose-heading-family-override, var(--tw-prose-heading-family));
+    }
+
+    > :is(:first-child:not(.hidden)) {
+        @apply mt-0;
+    }
+
+    > :is(:last-child:not(.hidden)) {
+        @apply mb-0;
+    }
+
+
+    a:not(:where([class="btn"])) {
+        @apply outline-none underline underline-offset-2 decoration-auto hover:text-[var(--tw-prose-links-hover-color)] focus-visible:text-[var(--tw-prose-links-hover-color)] focus-visible:ring-2 focus-visible:ring-sky-400;
+    }
+}

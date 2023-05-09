@@ -1,8 +1,0 @@
-@mixin prose {
-    @apply wysiwyg lg:wysiwyg-lg xl:wysiwyg-xl;
-    @content;
-}
-
-.prose {
-    @include prose;
-}

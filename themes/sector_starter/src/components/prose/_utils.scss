@@ -1,0 +1,4 @@
+@mixin prose {
+    @apply wysiwyg lg:wysiwyg-lg xl:wysiwyg-xl wysiwyg-zinc dark:wysiwyg-invert;
+    @content;
+}

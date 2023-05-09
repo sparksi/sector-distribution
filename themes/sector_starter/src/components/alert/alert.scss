@@ -1,19 +1,5 @@
 @use 'mixins/icon';
 
-.alert:is([open]) {
-    ul {
-        @apply space-y-2;
-    }
-
-    &::backdrop {
-        @apply bg-gray-500/75;
-    }
-
-    p:has(script):has(style), p:empty {
-        @apply hidden;
-    }
-}
-
 .off-canvas .alert {
     @apply animate-alert;
 }
@@ -59,6 +45,22 @@
 
 .alert__body {
     @apply mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left text-sm text-center text-gray-500 mt-3;
+
+    ul {
+        @apply space-y-2;
+    }
+
+    &::backdrop {
+        @apply bg-gray-500/75;
+    }
+
+    p:has(script):has(style), p:empty {
+        @apply hidden;
+    }
+
+    li:has(pre) + li {
+        @apply mt-2;
+    }
 
     a {
         @apply underline underline-offset-2;

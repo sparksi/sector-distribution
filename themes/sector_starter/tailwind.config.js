@@ -6,7 +6,7 @@ module.exports = {
     "./templates/**/*.{html,twig}",
     "./src/**/*.{html,twig}",
     "../sector/templates/**/*.{html,twig}",
-    "../sector/src/**/*.{html,twig}",
+    "../sector/src/components/**/*.{html,twig}",
     "./safelist.txt"
   ],
   theme: {
@@ -47,7 +47,7 @@ module.exports = {
       className: 'wysiwyg',
     }),
     require('tailwind-safelist-generator')({
-      path: 'safelist.txt',
+      path: './safelist.txt',
       patterns: require('./build/tailwind-safelist')
     })
   ],

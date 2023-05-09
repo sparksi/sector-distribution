@@ -1,0 +1,13 @@
+.page-title {
+    font-family: var(--custom-font-alternate);
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 500;
+    letter-spacing: -0.05em
+}
+@media (min-width: 1024px) {
+    .page-title {
+        font-size: 4.5rem;
+        line-height: 1
+    }
+}

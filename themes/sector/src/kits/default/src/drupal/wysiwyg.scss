@@ -1,4 +1,4 @@
-@use 'components/prose';
+@use 'components/prose/utils' as prose_utils;
 
 .ck-editor__main {
     all: initial;
@@ -6,7 +6,7 @@
 
 .ck-content {
     @apply antialiased font-sans;
-    @include prose.prose;
+    @include prose_utils.prose;
 }
 
 .ck-content.ck-editor__editable {

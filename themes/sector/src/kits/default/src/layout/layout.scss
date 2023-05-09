@@ -5,3 +5,10 @@ html, body {
 .canvas {
     @apply antialiased;
 }
+
+.page__container {
+    @apply container;
+    --container-max-width: theme(breakpoints.2xl);
+    
+    max-width: var(--container-max-width-override, var(--container-max-width));
+}
