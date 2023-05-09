@@ -4,9 +4,13 @@ dependencies:
   config:
     - system.menu.sector-main-menu
   module:
+    - block_class
     - menu_block
   theme:
     - sector_starter
+third_party_settings:
+  block_class:
+    replaced_id: navigation
 id: sector_starter_main_menu
 theme: sector_starter
 region: navigation
@@ -26,5 +30,5 @@ settings:
   depth: 1
   expand_all_items: false
   parent: 'sector-main-menu:menu_link_content:3820bee2-d24d-4ef0-9a3f-20a9eb1d6076'
-  suggestion: sector_main_menu
+  suggestion: sector_starter_main_menu
 visibility: {  }
