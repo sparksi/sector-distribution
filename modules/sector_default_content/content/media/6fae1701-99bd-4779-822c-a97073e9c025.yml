@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6fae1701-99bd-4779-822c-a97073e9c025
+  bundle: vector
+  default_langcode: en
+  depends:
+    dbe56cfd-401d-4c7e-bc68-4aab3c6c32f2: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Sector Logo - Colour'
+  created:
+    -
+      value: 1683615698
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: dbe56cfd-401d-4c7e-bc68-4aab3c6c32f2
+      alt: 'Sector Logo - Colour'
+      title: ''
+      width: 251
+      height: 49

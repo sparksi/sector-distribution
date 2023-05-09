@@ -1,7 +1,7 @@
 _meta:
   version: '1.0'
   entity_type: file
-  uuid: 2e560af4-3fe7-4e99-b169-7d8a0b25e930
+  uuid: dbe56cfd-401d-4c7e-bc68-4aab3c6c32f2
   default_langcode: en
 default:
   uid:
@@ -9,10 +9,10 @@ default:
       target_id: 1
   filename:
     -
-      value: sector-print.svg
+      value: sector-color.svg
   uri:
     -
-      value: 'public://2023-05/sector-print.svg'
+      value: 'public://2023-05/sector-color.svg'
   filemime:
     -
       value: image/svg+xml
@@ -24,4 +24,4 @@ default:
       value: true
   created:
     -
-      value: 1683614106
+      value: 1683615721
