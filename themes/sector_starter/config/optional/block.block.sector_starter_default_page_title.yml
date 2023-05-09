@@ -1,8 +1,13 @@
 langcode: en
 status: true
 dependencies:
+  module:
+    - block_class
   theme:
     - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'my-16 lg:my-20'
 id: sector_starter_default_page_title
 theme: sector_starter
 region: content_pre
