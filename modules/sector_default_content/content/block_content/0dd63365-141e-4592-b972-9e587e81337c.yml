@@ -1,0 +1,28 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 0dd63365-141e-4592-b972-9e587e81337c
+  bundle: sector_brand
+  default_langcode: en
+  depends:
+    6fae1701-99bd-4779-822c-a97073e9c025: media
+    fbcb9b2f-37f5-4e49-8f8f-1df0672083ba: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: Sector
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  field_master:
+    -
+      entity: 6fae1701-99bd-4779-822c-a97073e9c025
+  field_master_print:
+    -
+      entity: fbcb9b2f-37f5-4e49-8f8f-1df0672083ba
