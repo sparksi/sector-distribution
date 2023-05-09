@@ -10,10 +10,10 @@ default_content:
     node:
       - 03ae7a81-5206-4dd6-9b82-b998054281f6
       - dd542f54-4b35-436a-a28d-74f624f9a89e
+    file: 
+      - 2e560af4-3fe7-4e99-b169-7d8a0b25e930
+    media:
+      - fbcb9b2f-37f5-4e49-8f8f-1df0672083ba
     menu_link_content:
       - 3820bee2-d24d-4ef0-9a3f-20a9eb1d6076
       - e544759d-a240-4bd6-aef6-ffccef7391c7
-    media:
-      - fbcb9b2f-37f5-4e49-8f8f-1df0672083ba
-    file: 
-      - 2e560af4-3fe7-4e99-b169-7d8a0b25e930
