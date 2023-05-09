@@ -14,7 +14,7 @@
 {% set classes = [
   'alert',
   type ? 'alert-' ~ type,
-  'pointer-events-auto relative w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5',
+  'pointer-events-auto relative w-full overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5',
   dismissible ? 'alert--dismissible',
 ]|merge(alert_utility_classes ? alert_utility_classes : []) %}
 

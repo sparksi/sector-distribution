@@ -44,7 +44,7 @@
 }
 
 .alert__body {
-    @apply mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left text-sm text-center text-gray-500 mt-3;
+    @apply mt-3 text-center sm:mt-0 sm:text-left text-sm text-center text-gray-500 mt-3;
 
     ul {
         @apply space-y-2;
@@ -65,6 +65,10 @@
     a {
         @apply underline underline-offset-2;
     }
+}
+
+.alert__icon + .alert__body {
+    @apply sm:ml-4;
 }
 
 .alert__close {
