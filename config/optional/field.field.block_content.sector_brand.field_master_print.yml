@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sector_brand
+    - field.storage.block_content.field_master_print
+    - media.type.image
+    - media.type.vector
+id: block_content.sector_brand.field_master_print
+field_name: field_master_print
+entity_type: block_content
+bundle: sector_brand
+label: 'Print Master'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      vector: vector
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

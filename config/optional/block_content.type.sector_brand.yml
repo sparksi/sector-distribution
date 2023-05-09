@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sector_brand
+label: Brand
+revision: 0
+description: 'Logo, brandmark'
