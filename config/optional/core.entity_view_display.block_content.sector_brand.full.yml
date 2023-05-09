@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sector_brand
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.sector_brand.field_brand_mark
+    - field.field.block_content.sector_brand.field_master
+    - field.field.block_content.sector_brand.field_master_print
+    - field.field.block_content.sector_brand.field_master_sm
+id: block_content.sector_brand.full
+targetEntityType: block_content
+bundle: sector_brand
+mode: full
+content:
+  field_master:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_master_print:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_master_sm:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: full
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_brand_mark: true
+  search_api_excerpt: true

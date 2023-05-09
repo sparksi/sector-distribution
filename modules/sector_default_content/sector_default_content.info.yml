@@ -19,3 +19,5 @@ default_content:
     menu_link_content:
       - 3820bee2-d24d-4ef0-9a3f-20a9eb1d6076
       - e544759d-a240-4bd6-aef6-ffccef7391c7
+    block_content:
+      - 0dd63365-141e-4592-b972-9e587e81337c
