@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: fbcb9b2f-37f5-4e49-8f8f-1df0672083ba
+  bundle: vector
+  default_langcode: en
+  depends:
+    2e560af4-3fe7-4e99-b169-7d8a0b25e930: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: 'Sector Logo - Black'
+  created:
+    -
+      value: 1683614088
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: 2e560af4-3fe7-4e99-b169-7d8a0b25e930
+      alt: 'Sector Logo - Black'
+      title: ''
+      width: 251
+      height: 49
