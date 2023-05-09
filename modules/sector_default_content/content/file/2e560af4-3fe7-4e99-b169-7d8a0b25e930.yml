@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 2e560af4-3fe7-4e99-b169-7d8a0b25e930
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: sector-print.svg
+  uri:
+    -
+      value: 'public://sector_default_content/sector-print.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 3602
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1683614106
