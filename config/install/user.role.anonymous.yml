@@ -5,6 +5,7 @@ dependencies:
     - filter.format.restricted_html
   module:
     - filter
+    - media
     - search
     - system
 id: anonymous
@@ -15,3 +16,5 @@ permissions:
   - 'access content'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view media'
+  - 'view own unpublished media'
