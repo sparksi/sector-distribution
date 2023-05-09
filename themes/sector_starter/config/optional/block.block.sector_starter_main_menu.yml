@@ -1,4 +1,3 @@
-uuid: ca904073-69ab-4641-97b0-bb40cb17ffe9
 langcode: en
 status: true
 dependencies:
@@ -24,8 +23,8 @@ settings:
   label_link: false
   label_type: block
   level: 1
-  depth: 0
-  expand_all_items: true
-  parent: 'sector-main-menu:'
+  depth: 1
+  expand_all_items: false
+  parent: 'sector-main-menu:menu_link_content:3820bee2-d24d-4ef0-9a3f-20a9eb1d6076'
   suggestion: sector_main_menu
 visibility: {  }

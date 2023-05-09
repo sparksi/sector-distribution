@@ -10,16 +10,28 @@ editor: ckeditor5
 settings:
   toolbar:
     items:
+      - undo
+      - redo
       - heading
+      - style
+      - horizontalLine
+      - '|'
       - bold
       - italic
-      - '|'
+      - strikethrough
+      - superscript
+      - subscript
+      - specialCharacters
       - link
-      - blockQuote
-      - code
+      - '|'
       - bulletedList
       - numberedList
+      - indent
+      - outdent
+      - '|'
+      - blockQuote
       - sourceEditing
+      - removeFormat
   plugins:
     ckeditor5_heading:
       enabled_headings:
@@ -48,6 +60,14 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
+    ckeditor5_style:
+      styles:
+        -
+          label: Lead
+          element: '<p class="lead">'
+        -
+          label: Highlight
+          element: '<span class="highlight">'
     linkit_extension:
       linkit_enabled: false
 image_upload: {  }
