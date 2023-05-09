@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - SECTOR_SUBTHEME_MACHINE_NAME
+id: SECTOR_SUBTHEME_MACHINE_NAME_tabs
+theme: SECTOR_SUBTHEME_MACHINE_NAME
+region: help
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

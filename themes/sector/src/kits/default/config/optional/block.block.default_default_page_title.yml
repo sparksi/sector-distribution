@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - SECTOR_SUBTHEME_MACHINE_NAME
+id: SECTOR_SUBTHEME_MACHINE_NAME_default_page_title
+theme: SECTOR_SUBTHEME_MACHINE_NAME
+region: content_pre
+weight: -1
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }
