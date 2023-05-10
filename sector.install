@@ -21,4 +21,5 @@ function sector_install_tasks() {
  */
 function sector_install_default_content() {
     \Drupal::service('module_installer')->install(['sector_default_content'], FALSE);
+    \Drupal::service('module_installer')->install(['sector_brand'], FALSE);
   }
