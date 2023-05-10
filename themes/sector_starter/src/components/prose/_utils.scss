@@ -3,12 +3,14 @@
 
     --tw-prose-heading-tracking: theme(letterSpacing.normal);
     --tw-prose-heading-family: theme(fontFamily.custom-alt);
+    --tw-prose-heading-weight: theme(fontWeight.medium);
     --tw-prose-links-hover-color: theme(colors.sky.600);
 
     :where(h2,h3,h4,h5,h6) {
         @apply tracking-[var(--tw-prose-heading-tracking)];
         
         font-family: var(--tw-prose-heading-family-override, var(--tw-prose-heading-family));
+        font-weight: var(--tw-prose-heading-weight-override, var(--tw-prose-heading-weight));
     }
 
     > :is(:first-child:not(.hidden)) {
