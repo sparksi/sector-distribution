@@ -86,7 +86,7 @@ install:
   - search_api:search_api
 #  - sector:admin_ui_toggle
 #  - sector:sector_blocks
-  - sector:sector_brand
+#  - sector:sector_brand
   - sector:sector_utils
 #  - sector:sector_wysiwyg_utils
   - sector_tonic:sector_tonic
