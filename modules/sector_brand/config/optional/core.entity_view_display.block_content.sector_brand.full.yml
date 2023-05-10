@@ -17,6 +17,7 @@ third_party_settings:
       children:
         - field_master
         - field_master_sm
+        - field_master_print
       label: Link
       parent_name: ''
       region: content
