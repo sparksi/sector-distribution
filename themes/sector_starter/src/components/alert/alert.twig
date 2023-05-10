@@ -19,7 +19,7 @@
 ]|merge(alert_utility_classes ? alert_utility_classes : []) %}
 
 <div aria-live="assertive" class="{{ classes|join(' ') }}" role="alert">
-  <div class="sm:flex sm:items-start p-4 {{ dismissible ? 'pe-10' }}">
+  <div class="sm:flex sm:items-start p-4 {{ dismissible ? 'pe-16 z-10' }}">
     {% if type == 'success' %}
       <span aria-hidden="true" class="alert__icon alert__icon-success"></span>
     {% endif %}
@@ -42,7 +42,7 @@
   </div>
 
   {% if dismissible %}
-    <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block">
+    <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block z-20">
       <button type="button" class="alert__close" aria-label="Close">
         <span aria-hidden="true"></span>
       </button>

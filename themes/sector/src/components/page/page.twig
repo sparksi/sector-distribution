@@ -29,37 +29,23 @@ page.isPublishedClass,
     {% endif %}
 
     {% if page.header_pre %}
-      <div class="page__header-pre">
+      <div class="page__header header-pre">
         <div class="page__container">
           {{ page.header_pre }}
         </div>
       </div>
     {% endif %}
     {% if page.header %}
-      <header class="page__header">
+      <header class="page__header header" role="banner">
         <div class="page__container">
           {{ page.header }}
         </div>
       </header>
     {% endif %}
     {% if page.header_post %}
-      <div class="page__header-post">
+      <div class="page__header header-post">
         <div class="page__container">
           {{ page.header_post }}
-        </div>
-      </div>
-    {% endif %}
-    {% if page.search %}
-      <div class="page__search">
-        <div class="page__container">
-          {{ page.search }}
-        </div>
-      </div>
-    {% endif %}
-    {% if page.navigation %}
-      <div class="page__navigation">
-        <div class="page__container">
-          {{ page.navigation }}
         </div>
       </div>
     {% endif %}

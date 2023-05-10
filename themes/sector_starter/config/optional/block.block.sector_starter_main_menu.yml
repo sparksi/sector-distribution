@@ -9,8 +9,8 @@ dependencies:
     - sector_starter
 id: sector_starter_main_menu
 theme: sector_starter
-region: navigation
-weight: 0
+region: header
+weight: -1
 provider: null
 plugin: 'menu_block:sector-main-menu'
 settings:

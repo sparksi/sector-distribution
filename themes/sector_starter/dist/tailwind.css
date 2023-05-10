@@ -650,6 +650,14 @@ video {
   top: 0px;
 }
 
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
+}
+
 .order-1 {
   order: 1;
 }
@@ -1417,6 +1425,10 @@ video {
 
 .block {
   display: block;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .flex {
@@ -6197,6 +6209,11 @@ video {
 .pe-10 {
   -webkit-padding-end: 2.5rem;
           padding-inline-end: 2.5rem;
+}
+
+.pe-16 {
+  -webkit-padding-end: 4rem;
+          padding-inline-end: 4rem;
 }
 
 .pr-4 {
