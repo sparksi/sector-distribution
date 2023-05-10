@@ -20,6 +20,11 @@ default:
   revision_translation_affected:
     -
       value: true
+  field_link:
+    -
+      uri: 'internal:/'
+      title: Home
+      options: {  }
   field_master:
     -
       entity: 6fae1701-99bd-4779-822c-a97073e9c025
