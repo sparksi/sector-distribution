@@ -53,6 +53,7 @@ install:
   - admin_toolbar:admin_toolbar
   - allowed_formats:allowed_formats
   - block_class:block_class
+  - blockgroup:blockgroup
   - components:components
   - config_update:config_update
   - ctools:ctools

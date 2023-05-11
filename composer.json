@@ -13,6 +13,7 @@
         "drupal/admin_toolbar": "3.3.0",
         "drupal/allowed_formats": "2.0.0",
         "drupal/block_class": "2.0.11",
+        "drupal/blockgroup": "*",
         "drupal/components": "^3.0@beta",
         "drupal/config_update": "2.0.0-alpha2",
         "drupal/core-recommended": "^10.0",
