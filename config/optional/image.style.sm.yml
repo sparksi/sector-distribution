@@ -1,0 +1,15 @@
+uuid: 988c6270-d9ec-4a93-9891-4dbe63c68f36
+langcode: en
+status: true
+dependencies: {  }
+name: sm
+label: 'Sector › SM'
+effects:
+  311e74ed-c699-4c1c-80c7-35b8907012b9:
+    uuid: 311e74ed-c699-4c1c-80c7-35b8907012b9
+    id: image_scale
+    weight: 1
+    data:
+      width: 767
+      height: 767
+      upscale: false

@@ -1,0 +1,15 @@
+uuid: 77762655-4e4b-41ce-8b37-bb471825c0b1
+langcode: en
+status: true
+dependencies: {  }
+name: md
+label: 'Sector › MD'
+effects:
+  8217d1d0-a598-4fa1-82b8-290c0d08b230:
+    uuid: 8217d1d0-a598-4fa1-82b8-290c0d08b230
+    id: image_scale
+    weight: 1
+    data:
+      width: 1023
+      height: 1023
+      upscale: false

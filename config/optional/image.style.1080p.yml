@@ -1,0 +1,15 @@
+uuid: 27c7bbc8-6c79-4f33-9299-f76b77eb15ca
+langcode: en
+status: true
+dependencies: {  }
+name: 1080p
+label: 1080p
+effects:
+  e2239c39-4df9-45e6-bfc2-2bcc701c1997:
+    uuid: e2239c39-4df9-45e6-bfc2-2bcc701c1997
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1920
+      height: 1080
+      anchor: center-center

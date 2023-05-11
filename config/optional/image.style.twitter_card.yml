@@ -1,0 +1,15 @@
+uuid: f025f5de-02b6-46d6-8de0-5261ef15c6d3
+langcode: en
+status: true
+dependencies: {  }
+name: twitter_card
+label: 'Twitter Card'
+effects:
+  68c635dc-f9d4-44b3-b67d-dd4d4ebf6770:
+    uuid: 68c635dc-f9d4-44b3-b67d-dd4d4ebf6770
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 418
+      anchor: center-center

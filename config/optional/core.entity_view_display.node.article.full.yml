@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.wide
+    - image.style.xl
     - node.type.article
   module:
     - svg_image
@@ -29,7 +29,7 @@ content:
     label: hidden
     settings:
       image_link: ''
-      image_style: wide
+      image_style: xl
       image_loading:
         attribute: lazy
     third_party_settings: {  }

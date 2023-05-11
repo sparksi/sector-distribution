@@ -1,0 +1,15 @@
+uuid: b14b9ec5-b137-4bb4-b658-6eb8766e80e6
+langcode: en
+status: true
+dependencies: {  }
+name: xl
+label: 'Sector › XL'
+effects:
+  520224f5-cec4-420c-b78b-17bfdafb7899:
+    uuid: 520224f5-cec4-420c-b78b-17bfdafb7899
+    id: image_scale
+    weight: 1
+    data:
+      width: 1535
+      height: 1535
+      upscale: false

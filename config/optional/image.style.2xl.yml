@@ -1,0 +1,15 @@
+uuid: 02c9c022-94b0-4d67-a6df-1f33f03169e0
+langcode: en
+status: true
+dependencies: {  }
+name: 2xl
+label: 'Sector › 2XL'
+effects:
+  b43b1c7c-686d-417f-952c-2c8779bbc829:
+    uuid: b43b1c7c-686d-417f-952c-2c8779bbc829
+    id: image_scale
+    weight: 1
+    data:
+      width: 1919
+      height: 1919
+      upscale: false

@@ -1,0 +1,15 @@
+uuid: 6de6b819-6069-4b96-87bb-9a46041be8b0
+langcode: en
+status: true
+dependencies: {  }
+name: 3xl
+label: 'Sector › 3XL'
+effects:
+  6d6160bc-c84a-4c72-826e-7043d42c4538:
+    uuid: 6d6160bc-c84a-4c72-826e-7043d42c4538
+    id: image_scale
+    weight: 1
+    data:
+      width: 2559
+      height: 2559
+      upscale: false

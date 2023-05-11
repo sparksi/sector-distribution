@@ -3,7 +3,7 @@ status: true
 dependencies:
   config:
     - field.field.media.image.field_media_image
-    - image.style.large
+    - image.style.lg
     - media.type.image
   module:
     - image
@@ -16,7 +16,7 @@ content:
     type: image
     label: visually_hidden
     settings:
-      image_style: 'large'
+      image_style: lg
       image_link: ''
       image_loading:
         attribute: lazy

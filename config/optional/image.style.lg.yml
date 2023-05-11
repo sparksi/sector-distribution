@@ -1,0 +1,15 @@
+uuid: 8401ffaf-90cd-43cd-9558-bb5c067f715b
+langcode: en
+status: true
+dependencies: {  }
+name: lg
+label: 'Sector › LG'
+effects:
+  d6a7028c-5648-4119-ab48-80e8fe6a4a1a:
+    uuid: d6a7028c-5648-4119-ab48-80e8fe6a4a1a
+    id: image_scale
+    weight: 1
+    data:
+      width: 1279
+      height: 1279
+      upscale: false

@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.media.vector.field_media_image
-    - image.style.large
+    - image.style.lg
     - media.type.vector
   module:
     - svg_image

@@ -1,0 +1,15 @@
+uuid: 1085bf44-c6d0-4425-953f-d0914d4323b0
+langcode: en
+status: true
+dependencies: {  }
+name: og_image
+label: 'Opengraph Image'
+effects:
+  65d0248a-5fec-400a-a2ea-20fec132ac45:
+    uuid: 65d0248a-5fec-400a-a2ea-20fec132ac45
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 630
+      anchor: center-center

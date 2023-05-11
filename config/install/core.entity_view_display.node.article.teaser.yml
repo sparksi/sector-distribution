@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
-    - image.style.medium
+    - image.style.md
     - node.type.article
   module:
     - image
@@ -29,7 +29,7 @@ content:
     type: image
     label: hidden
     settings:
-      image_style: medium
+      image_style: md
       image_link: content
       image_loading:
         attribute: lazy
