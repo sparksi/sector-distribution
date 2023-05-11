@@ -10,7 +10,8 @@
   error: 'danger',
   info: 'info',
 } %}
-<div role="region" class="my-4 space-y-2 inline-block" {{ attributes|without('role', 'aria-label') }}>
+{% if message_list %}
+<div role="region" class="my-4 space-y-2 inline-block empty:hidden" {{ attributes|without('role', 'aria-label') }}>
 {% for type, messages in message_list %}
     {% embed '@sector_starter/alert/alert.twig' with {
       type: types[type],
@@ -32,4 +33,5 @@
     {% endembed %}
 {% endfor %}
 </div>
+{% endif %}
 {{ attach_library('sector_starter/alert')}}

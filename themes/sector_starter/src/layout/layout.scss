@@ -6,7 +6,7 @@ html, body {
     @apply antialiased;
 }
 
-.page__container {
+.region__container {
     @apply container;
     --container-max-width: theme(breakpoints.2xl);
     

@@ -70,3 +70,7 @@ function sector_preprocess_block_content(&$variables) {
     $variables['content'][$key] = $variables['elements'][$key];
   }
 }
+
+function sector_preprocess_block__system_messages_block(&$variables) {
+  $variables['content']['#include_fallback'] = FALSE;
+}

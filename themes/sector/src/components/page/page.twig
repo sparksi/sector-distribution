@@ -22,7 +22,7 @@ page.isPublishedClass,
 
     {% if page.notices %}
       <div class="page_notices">
-        <div class="page__container">
+        <div class="region__container">
           {{ page.notices }}
         </div>
       </div>
@@ -30,86 +30,85 @@ page.isPublishedClass,
 
     {% if page.header_pre %}
       <div class="page__header header-pre">
-        <div class="page__container">
+        <div class="region__container">
           {{ page.header_pre }}
         </div>
       </div>
     {% endif %}
     {% if page.header %}
       <header class="page__header header" role="banner">
-        <div class="page__container">
+        <div class="region__container">
           {{ page.header }}
         </div>
       </header>
     {% endif %}
     {% if page.header_post %}
       <div class="page__header header-post">
-        <div class="page__container">
+        <div class="region__container">
           {{ page.header_post }}
         </div>
       </div>
     {% endif %}
 
     {% if page.hero_pre %}
-      <div class="page__hero-pre">
-        <div class="page__container">
+      <div class="page__hero hero-pre">
+        <div class="region__container">
           {{ page.hero_pre }}
         </div>
       </div>
     {% endif %}
     {% if page.hero %}
-      <div class="page__hero">
-        <div class="page__container">
+      <div class="page__hero hero">
+        <div class="region__container">
           {{ page.hero }}
         </div>
       </div>
     {% endif %}
     {% if page.hero_post %}
-      <div class="page__hero-post">
-        <div class="page__container">
+      <div class="page__hero hero-post">
+        <div class="region__container">
           {{ page.hero_post }}
         </div>
       </div>
     {% endif %}
 
     {% if page.help %}
-      <div class="page__help">
-        <div class="page__container">
+      <div class="region help">
+        <div class="region__container">
           {{ page.help }}
         </div>
       </div>
     {% endif %}
 
-  <div class="zone zone--content">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     {% if page.content_pre %}
-      <div class="page__content-pre">
-        <div class="page__container">
+      <div class="page__content content-pre">
+        <div class="region__container">
           {{ page.content_pre }}
         </div>
       </div>
     {% endif %}
 
     {% if page.content %}
-      <main class="page__content">
-        <div class="page__container">
+      <main class="page__content content">
+        <div class="region__container">
           {{ page.content }}
         </div>
       </main>
     {% endif %}
 
     {% if page.content_prefix %}
-      <aside role="complementary" class="page__content-prefix">
-        <div class="page__container">
+      <aside role="complementary" class="page__content content-prefix">
+        <div class="region__container">
           {{ page.content_prefix }}
         </div>
       </aside>
     {% endif %}
 
     {% if page.content_suffix %}
-      <aside role="complementary" class="page__content-suffix">
-        <div class="page__container">
+      <aside role="complementary" class="page__content content-suffix">
+        <div class="region__container">
           {{ page.content_suffix }}
         </div>
       </aside>
@@ -117,31 +116,30 @@ page.isPublishedClass,
 
 
     {% if page.content_post %}
-      <div class="page__content-post">
-        <div class="page__container">
+      <div class="page__content content-post">
+        <div class="region__container">
           {{ page.content_post }}
         </div>
       </div>
     {% endif %}
-  </div>
 
   {% if page.footer_pre %}
-    <div class="page__footer-pre">
-      <div class="page__container">
+    <div class="page__footer footer-pre">
+      <div class="region__container">
         {{ page.footer_pre }}
       </div>
     </footer>
   {% endif %}
   {% if page.footer %}
-    <footer class="page__footer">
-      <div class="page__container">
+    <footer class="page__footer footer">
+      <div class="region__container">
         {{ page.footer }}
       </div>
     </footer>
   {% endif %}
   {% if page.footer_post %}
-    <footer class="page__footer-post">
-      <div class="page__container">
+    <footer class="page__footer footer-post">
+      <div class="region__container">
         {{ page.footer_post }}
       </div>
     </footer>
