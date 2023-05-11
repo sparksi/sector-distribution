@@ -2,8 +2,10 @@ uuid: 27c7bbc8-6c79-4f33-9299-f76b77eb15ca
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: Z12JzHYmbuK4AWFg6l7_trauz4DJbmr2xHSqcAWJ1LY
 name: 1080p
-label: 1080p
+label: 'Sector › 1080p'
 effects:
   e2239c39-4df9-45e6-bfc2-2bcc701c1997:
     uuid: e2239c39-4df9-45e6-bfc2-2bcc701c1997

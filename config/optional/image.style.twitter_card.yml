@@ -2,8 +2,10 @@ uuid: f025f5de-02b6-46d6-8de0-5261ef15c6d3
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: xH_0zHzK5bBrrZk2C9qxbuItcaJRNYPQd-Dw-SQVFv0
 name: twitter_card
-label: 'Twitter Card'
+label: 'Sector › Twitter Card'
 effects:
   68c635dc-f9d4-44b3-b67d-dd4d4ebf6770:
     uuid: 68c635dc-f9d4-44b3-b67d-dd4d4ebf6770

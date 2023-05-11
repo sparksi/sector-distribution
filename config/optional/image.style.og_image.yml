@@ -2,8 +2,10 @@ uuid: 1085bf44-c6d0-4425-953f-d0914d4323b0
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: FWoK3aLGJF3mVTcSLOL5EK5NDUupBlNclZKp5-WjStU
 name: og_image
-label: 'Opengraph Image'
+label: 'Sector › Opengraph'
 effects:
   65d0248a-5fec-400a-a2ea-20fec132ac45:
     uuid: 65d0248a-5fec-400a-a2ea-20fec132ac45
