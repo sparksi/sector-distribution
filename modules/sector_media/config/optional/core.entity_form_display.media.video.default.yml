@@ -1,4 +1,4 @@
-uuid: c0745408-09fe-4dbd-8d78-e0ef0609c8e3
+uuid: b9671a28-1365-4da8-87b4-f47ed5932d8f
 langcode: en
 status: true
 dependencies:
@@ -17,12 +17,12 @@ third_party_settings:
   field_group:
     group_accessibility:
       children:
-        - field_subtitle_track
         - field_audio_description
+        - field_subtitle_track
       label: Accessibility
       region: content
       parent_name: ''
-      weight: 3
+      weight: 2
       format_type: details
       format_settings:
         classes: ''
@@ -40,13 +40,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 4
     region: content
     settings: {  }
     third_party_settings: {  }
   field_audio_description:
     type: media_library_widget
-    weight: 8
+    weight: 7
     region: content
     settings:
       media_types: {  }
@@ -67,27 +67,27 @@ content:
     third_party_settings: {  }
   field_subtitle_track:
     type: media_library_widget
-    weight: 7
+    weight: 8
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 7
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 3
     region: content
     settings:
       match_operator: CONTAINS
