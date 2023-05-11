@@ -1,0 +1,42 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: ed53e682-83aa-415a-9287-90a14e26da78
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    3820bee2-d24d-4ef0-9a3f-20a9eb1d6076: menu_link_content
+    62a42acb-a0df-4a6e-b3b5-7c998d7fd496: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Section A'
+  menu_name:
+    -
+      value: sector-main-menu
+  link:
+    -
+      target_uuid: 62a42acb-a0df-4a6e-b3b5-7c998d7fd496
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:3820bee2-d24d-4ef0-9a3f-20a9eb1d6076'
+  revision_translation_affected:
+    -
+      value: true
