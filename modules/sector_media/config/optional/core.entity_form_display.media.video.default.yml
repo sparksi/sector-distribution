@@ -1,4 +1,4 @@
-uuid: b9671a28-1365-4da8-87b4-f47ed5932d8f
+uuid: 1a84737a-bafe-4a46-bca8-84ab32fda0d9
 langcode: en
 status: true
 dependencies:
@@ -9,28 +9,9 @@ dependencies:
     - field.field.media.video.field_subtitle_track
     - media.type.video
   module:
-    - field_group
     - file
     - media_library
     - path
-third_party_settings:
-  field_group:
-    group_accessibility:
-      children:
-        - field_audio_description
-        - field_subtitle_track
-      label: Accessibility
-      region: content
-      parent_name: ''
-      weight: 2
-      format_type: details
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        open: false
-        description: ''
-        required_fields: true
 _core:
   default_config_hash: 0kIIaDTt6dixXy8TZkat2MNGZJ6vkRG8TaBWTy3E1bM
 id: media.video.default
@@ -40,13 +21,13 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 4
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
   field_audio_description:
     type: media_library_widget
-    weight: 7
+    weight: 5
     region: content
     settings:
       media_types: {  }
@@ -60,34 +41,34 @@ content:
     third_party_settings: {  }
   field_poster:
     type: media_library_widget
-    weight: 1
+    weight: 6
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_subtitle_track:
     type: media_library_widget
-    weight: 8
+    weight: 7
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 5
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 6
+    weight: 4
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 1
     region: content
     settings:
       match_operator: CONTAINS
