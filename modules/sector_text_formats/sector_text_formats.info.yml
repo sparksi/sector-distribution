@@ -1,0 +1,8 @@
+name: Sector Text Formats
+type: module
+description: Sets up Sector CKEDitor 5 Text Formats
+package: Sector
+core_version_requirement: ^10
+
+dependencies:
+  - drupal:ckeditor5
