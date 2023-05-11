@@ -1,0 +1,12 @@
+name: Sector Media
+type: module
+description: Provides the default media content and configuration
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - drupal:media
+  - default_content:default_content
+
+default_content:
+  media:
+    - 51204a2a-7ba9-4f35-b7f2-b3bdf902c0ae

@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_audio_description
+    - media.type.video
+id: media.video.field_audio_description
+field_name: field_audio_description
+entity_type: media
+bundle: video
+label: 'Audio Description'
+description: 'Audio description timed text tracks contain textual descriptions of the video component of the media resource, intended for audio synthesis when the visual component is obscured, unavailable, or not usable. The files that contain the actual subtitle data are simple text files that follow a specified format, in this case the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API">Web Video Text Tracks</a> (WebVTT) format.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: media
+      display_name: entity_reference_vtt
+      arguments: {  }
+field_type: entity_reference
