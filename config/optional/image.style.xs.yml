@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: xs
+label: 'Sector › XS'
+effects:
+  535bc435-1728-4350-ad35-2801c19973d6:
+    uuid: 535bc435-1728-4350-ad35-2801c19973d6
+    id: image_scale
+    weight: 1
+    data:
+      width: 639
+      height: 639
+      upscale: false
