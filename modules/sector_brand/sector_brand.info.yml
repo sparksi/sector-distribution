@@ -5,7 +5,6 @@ package: Sector
 core_version_requirement: ^10
 dependencies:
   - default_content:default_content
-  - drupal:media
   - sector:sector_media
 
 default_content:

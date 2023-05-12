@@ -5,6 +5,7 @@ package: Sector
 core_version_requirement: ^10
 dependencies:
   - drupal:media
+  - svg_image:svg_image
   - default_content:default_content
   - sector:sector_text_formats
 
