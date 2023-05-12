@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6965cf9c-6a48-41f0-94de-eee916a6d5ed
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: sector.mp4
+  uri:
+    -
+      value: 'public://2023-05/sector.mp4'
+  filemime:
+    -
+      value: video/mp4
+  filesize:
+    -
+      value: 583019
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1683857723

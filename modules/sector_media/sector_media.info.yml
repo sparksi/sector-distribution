@@ -8,5 +8,7 @@ dependencies:
   - default_content:default_content
 
 default_content:
+  file:
+    - 6965cf9c-6a48-41f0-94de-eee916a6d5ed
   media:
     - 51204a2a-7ba9-4f35-b7f2-b3bdf902c0ae

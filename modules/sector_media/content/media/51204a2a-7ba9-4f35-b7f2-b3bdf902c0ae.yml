@@ -5,7 +5,7 @@ _meta:
   bundle: video
   default_langcode: en
   depends:
-    3df56569-f717-4dfc-973b-c331ab0f40fa: file
+    6965cf9c-6a48-41f0-94de-eee916a6d5ed: file
 default:
   revision_user:
     -
@@ -32,6 +32,6 @@ default:
       pathauto: 0
   field_media_video_file:
     -
-      entity: 3df56569-f717-4dfc-973b-c331ab0f40fa
+      entity: 6965cf9c-6a48-41f0-94de-eee916a6d5ed
       display: true
       description: ''
