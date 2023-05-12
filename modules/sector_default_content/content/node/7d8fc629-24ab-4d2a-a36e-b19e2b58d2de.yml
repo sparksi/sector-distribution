@@ -1,0 +1,50 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7d8fc629-24ab-4d2a-a36e-b19e2b58d2de
+  bundle: page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Access Denied (error 403)'
+  created:
+    -
+      value: 1683856199
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  body:
+    -
+      value: '<h2>Sorry, you are not authorized to access this page or you might be lost.&nbsp;</h2><h3>Most likely causes</h3><p>You might be looking for another page!</p><h2>Most likely causes</h2><ul><li>The page no longer exists or has moved</li><li>The website has recently had a major upgrade so some pages have been moved and a few old ones were deleted.</li><li>It''s also possible the page may have been temporary.</li><li>If you have linked to this page from another site we will ask them to update their link please <a href="/contact-us">contact us</a> and let us&nbsp;where you linked from.</li><li>You may have typed in the incorrect page name.&nbsp;</li></ul><h4>What you can try</h4><p>Make sure the requested URL is correct.</p><p>Or try:&nbsp;</p><ul><li>Using the Search &lt;insert link&gt;</li><li>Using the Sitemap &lt;insert link&gt;</li><li><a href="/contact-us">Contact us</a>&nbsp;to let us know about the error.</li><li>Update your favourites or Bookmark list and links to our site</li></ul><p>{Sample content page}</p>'
+      format: basic_html
+      summary: ''
