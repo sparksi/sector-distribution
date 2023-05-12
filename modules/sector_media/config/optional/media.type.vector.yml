@@ -1,0 +1,16 @@
+uuid: 582b03fb-5643-43b3-b5d2-5cb21ebfeb5f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 36WH-staue3pVBqfsB9Lqg2qR1CN3WwawZbuhPlWS5c
+id: vector
+label: Vector
+description: 'Use local vector graphics for high quality reusable media.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map:
+  name: field_media_image

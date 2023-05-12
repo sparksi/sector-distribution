@@ -6,14 +6,8 @@ core_version_requirement: ^10
 dependencies:
   - default_content:default_content
   - drupal:media
-  - svg_image:svg_image
+  - sector:sector_media
 
 default_content:
-    file: 
-      - 2e560af4-3fe7-4e99-b169-7d8a0b25e930
-      - dbe56cfd-401d-4c7e-bc68-4aab3c6c32f2
-    media:
-      - fbcb9b2f-37f5-4e49-8f8f-1df0672083ba
-      - 6fae1701-99bd-4779-822c-a97073e9c025
     block_content:
       - 0dd63365-141e-4592-b972-9e587e81337c

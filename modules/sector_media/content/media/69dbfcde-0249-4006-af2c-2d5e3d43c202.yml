@@ -18,7 +18,7 @@ default:
       target_id: 1
   name:
     -
-      value: 'Sample PDF'
+      value: 'sample-file.pdf'
   created:
     -
       value: 1683863126

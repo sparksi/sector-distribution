@@ -18,7 +18,7 @@ default:
       target_id: 1
   name:
     -
-      value: 'Sector Promotional Video'
+      value: 'sector.mp4'
   created:
     -
       value: 1683846399

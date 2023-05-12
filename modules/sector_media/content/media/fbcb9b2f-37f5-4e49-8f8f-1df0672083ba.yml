@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: media
-  uuid: 6fae1701-99bd-4779-822c-a97073e9c025
+  uuid: fbcb9b2f-37f5-4e49-8f8f-1df0672083ba
   bundle: vector
   default_langcode: en
   depends:
-    dbe56cfd-401d-4c7e-bc68-4aab3c6c32f2: file
+    2e560af4-3fe7-4e99-b169-7d8a0b25e930: file
 default:
   revision_user:
     -
@@ -18,10 +18,10 @@ default:
       target_id: 1
   name:
     -
-      value: 'Sector Logo - Colour'
+      value: 'sector-print.svg'
   created:
     -
-      value: 1683615698
+      value: 1683614088
   revision_translation_affected:
     -
       value: true
@@ -32,8 +32,8 @@ default:
       pathauto: 0
   field_media_image:
     -
-      entity: dbe56cfd-401d-4c7e-bc68-4aab3c6c32f2
-      alt: 'Sector Logo - Colour'
+      entity: 2e560af4-3fe7-4e99-b169-7d8a0b25e930
+      alt: 'Sector Logo - Black'
       title: ''
       width: 251
       height: 49
