@@ -1,11 +1,13 @@
+_core:
+  default_config_hash: 9GvJI8IeoUeIaa8LEeYuq4qaWVKTOtqLCBJp11p2bOQ
 langcode: en
-uuid: ''
-name: ''
-mail: ''
+uuid: 96b00773-eba4-4160-862e-5a125132b837
+name: test
+mail: admin@example.com
 slogan: ''
 page:
-  403: ''
-  404: ''
+  403: /node/5
+  404: /node/4
   front: /node/1
 admin_compact_mode: false
 weight_select_max: 100
