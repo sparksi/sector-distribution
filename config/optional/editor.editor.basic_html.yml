@@ -32,6 +32,7 @@ settings:
       - blockQuote
       - sourceEditing
       - removeFormat
+      - drupalMedia
   plugins:
     ckeditor5_heading:
       enabled_headings:
@@ -70,4 +71,6 @@ settings:
           element: '<span class="highlight">'
     linkit_extension:
       linkit_enabled: false
+    media_media:
+      allow_view_mode_override: false
 image_upload: {  }

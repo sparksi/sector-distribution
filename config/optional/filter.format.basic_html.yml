@@ -1,8 +1,11 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.full
   module:
     - editor
+    - media
 name: 'Basic HTML'
 format: basic_html
 weight: 0
@@ -13,7 +16,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <span class="highlight"> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol type start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr>'
+      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <span class="highlight"> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol type start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -40,3 +43,17 @@ filters:
     status: true
     weight: 11
     settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: full
+      allowed_view_modes:
+        full: full
+      allowed_media_types:
+        document: document
+        image: image
+        remote_video: remote_video
+        video: video

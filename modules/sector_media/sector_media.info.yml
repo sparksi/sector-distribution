@@ -6,6 +6,7 @@ core_version_requirement: ^10
 dependencies:
   - drupal:media
   - default_content:default_content
+  - sector:sector_text_formats
 
 default_content:
   file:

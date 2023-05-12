@@ -1,4 +1,3 @@
-uuid: 9b085757-fa8d-4db7-85bb-3043e12f1df3
 langcode: en
 status: true
 dependencies:
@@ -8,12 +7,11 @@ dependencies:
     - field.field.media.video.field_media_video_file
     - field.field.media.video.field_poster
     - field.field.media.video.field_subtitle_track
+    - field.field.media.video.field_transcript
     - image.style.thumbnail
     - media.type.video
   module:
     - svg_image
-_core:
-  default_config_hash: _fnkUKwQYHkXO1Ngmq9nE6FqWUNAmkddOxAH1h5aiKg
 id: media.video.media_library
 targetEntityType: media
 bundle: video
@@ -36,6 +34,7 @@ hidden:
   field_media_video_file: true
   field_poster: true
   field_subtitle_track: true
+  field_transcript: true
   name: true
   search_api_excerpt: true
   uid: true
