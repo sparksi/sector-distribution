@@ -5,7 +5,7 @@ use Drupal\Core\Entity\EntityInterface;
 /**
  * Implements hook_ENTITY_TYPE_insert() for node entities.
  */
-function sector_default_content_content_node_insert(EntityInterface $entity) {
+function sector_default_content_node_insert(EntityInterface $entity) {
   
     switch ($entity->uuid()) {
       case '03ae7a81-5206-4dd6-9b82-b998054281f6':
