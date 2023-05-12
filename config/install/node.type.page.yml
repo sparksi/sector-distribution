@@ -1,3 +1,4 @@
+uuid: 43e488f5-428f-4951-a985-ce4974d2d153
 langcode: en
 status: true
 dependencies:
@@ -8,7 +9,9 @@ third_party_settings:
     available_menus:
       - sector-main-menu
     parent: 'sector-main-menu:'
-name: 'Pages (Sector)'
+_core:
+  default_config_hash: 0veKcwTVZ0-EYiT1vqsHPZmtOFkbpuVfWtPrWUvn8jQ
+name: 'Sector > Page'
 type: page
 description: 'Use <em>pages</em> for your hierarchical content in menus.'
 help: ''
