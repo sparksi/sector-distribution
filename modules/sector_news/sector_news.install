@@ -1,0 +1,42 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the profilename install profile.
+ */
+
+/**
+ * Implements hook_install_tasks().
+ */
+function sector_news_install_tasks() {
+  return [
+    'sector_news_install_required_modules' => [
+      'display_name' => t('Sector news install required modules'),
+      'type' => 'default',
+    ],
+  ];
+}
+
+/**
+ * Content install task.
+ */
+function sector_news_install_required_modules() {
+    \Drupal::service('module_installer')->install([
+      'schema_article', 
+      'metatag_twitter_cards'
+    ], FALSE);
+}
+
+/**
+ * Content install task.
+ */
+function sector_news_uninstall() {
+    
+    // Delete all nodes of given content type.
+    $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+    $nodes = $storage_handler->loadByProperties(['type' => 'sector_news']);
+    $storage_handler->delete($nodes);
+
+    // Delete content type.
+    $content_type = \Drupal::entityTypeManager()->getStorage('node_type')->load('sector_news');
+    $content_type->delete();
+}
