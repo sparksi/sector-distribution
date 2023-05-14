@@ -1,0 +1,12 @@
+name: Sector News
+type: module
+description: Provides the default news content and configuration
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - default_content:default_content
+  - sector:sector_media
+  - sector:sector_text_formats
+
+#default_content:
+#    node:

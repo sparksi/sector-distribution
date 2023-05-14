@@ -23,6 +23,7 @@ function sector_install_default_content() {
     \Drupal::service('module_installer')->install([
       'sector_default_content', 
       'sector_media',
-      'sector_brand'
+      'sector_brand',
+      'sector_news'
     ], FALSE);
   }
