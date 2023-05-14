@@ -3,6 +3,8 @@ type: module
 description: Provides the default content and configuration for News content type
 package: Sector
 core_version_requirement: ^10
+install:
+  - drupal:schema_metatag
 dependencies:
   - sector:sector_media
   - sector:sector_text_formats
