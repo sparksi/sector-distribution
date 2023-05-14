@@ -1,0 +1,19 @@
+uuid: c9818467-8e27-4329-9bad-fa668e380917
+langcode: en
+status: true
+dependencies: {  }
+id: node__sector_news
+label: 'Content: News'
+tags:
+  article_published_time: '[node:field_issue_date:date:custom:c]'
+  description: '[node:summary]'
+  og_description: '[node:summary]'
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'
+  og_type: news
+  og_url: '[node:url]'
+  title: '[node:title] | [site:name]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_page_url: '[node:url]'
+  twitter_cards_title: '[node:title]'
+  twitter_cards_type: summary

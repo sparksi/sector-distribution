@@ -4,12 +4,18 @@ description: Provides the default content and configuration for News content typ
 package: Sector
 core_version_requirement: ^10
 install:
-  - drupal:schema_metatag
+  - schema_metatag:schema_metatag
 dependencies:
   - sector:sector_media
   - sector:sector_text_formats
+  - schema_metatag:schema_metatag
+  - drupal:menu_link_content
   - default_content:default_content
 
 default_content:
   node:
     - d6e47575-6c1c-4414-8b1f-1ebeb85d4c1b  
+    - 7aa107da-4318-4696-b649-30c0cbb55daa
+
+  menu_link_content:
+    - 0f80f161-863f-4e05-8537-828e6ca85332
