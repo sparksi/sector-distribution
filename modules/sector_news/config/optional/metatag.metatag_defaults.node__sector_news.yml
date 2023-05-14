@@ -17,3 +17,9 @@ tags:
   twitter_cards_page_url: '[node:url]'
   twitter_cards_title: '[node:title]'
   twitter_cards_type: summary
+  schema_article_date_published: '[node:field_issue_date:date:custom:c]'
+  schema_article_description: '[node:summary]'
+  schema_article_headline: '[node:title]'
+  schema_article_is_accessible_for_free: 'True'
+  schema_article_name: '[node:title]'
+  schema_article_type: NewsArticle

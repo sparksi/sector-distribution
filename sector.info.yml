@@ -83,6 +83,7 @@ install:
   - redirect:redirect
   - rh_node:rh_node
   - rh_taxonomy:rh_taxonomy
+  - schema_metatag:schema_metatag
   - search_api_db:search_api_db
   - search_api:search_api
 #  - sector:admin_ui_toggle

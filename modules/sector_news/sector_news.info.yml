@@ -4,7 +4,8 @@ description: Provides the default content and configuration for News content typ
 package: Sector
 core_version_requirement: ^10
 install:
-  - schema_metatag:schema_metatag
+  - schema_metatag:schema_article
+  - metatag:metatag_twitter_cards
 dependencies:
   - sector:sector_media
   - sector:sector_text_formats
