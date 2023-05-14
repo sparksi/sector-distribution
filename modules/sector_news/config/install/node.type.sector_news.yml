@@ -1,0 +1,17 @@
+uuid: 4048643c-e2f0-4a0e-858c-a41f1c073993
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: News
+type: sector_news
+description: 'Use <em>News</em> for time-sensitive content like news or press releases.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,40 @@
+uuid: 539370c2-082b-4861-af7c-0625e8f94439
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sector_news.body
+    - field.field.node.sector_news.field_issue_date
+    - node.type.sector_news
+  module:
+    - datetime
+    - text
+    - user
+id: node.sector_news.default
+targetEntityType: node
+bundle: sector_news
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_issue_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

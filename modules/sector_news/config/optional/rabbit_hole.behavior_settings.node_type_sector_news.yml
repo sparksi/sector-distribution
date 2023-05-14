@@ -1,0 +1,14 @@
+uuid: 6768ce94-d1f6-43d8-8938-771862d9db3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sector_news
+id: node_type_sector_news
+entity_type_id: node_type
+entity_id: sector_news
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

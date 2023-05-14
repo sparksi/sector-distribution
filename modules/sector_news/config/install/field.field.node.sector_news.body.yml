@@ -1,0 +1,23 @@
+uuid: 9a53a759-d3c4-4971-aa6c-36969acb31f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sector_news
+  module:
+    - text
+id: node.sector_news.body
+field_name: body
+entity_type: node
+bundle: sector_news
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary
