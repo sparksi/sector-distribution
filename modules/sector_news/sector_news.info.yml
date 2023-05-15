@@ -6,6 +6,7 @@ core_version_requirement: ^10
 dependencies:
   - sector:sector_media
   - sector:sector_text_formats
+  - sector:sector_taxonomies
   - schema_metatag:schema_metatag
   - drupal:menu_link_content
   - default_content:default_content

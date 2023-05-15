@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Display options'
+vid: sector_display_options
+description: 'Used to define different displays for a specific group of pages. <em>Terms are rabbit-holed to 403.</em>'
+weight: 0

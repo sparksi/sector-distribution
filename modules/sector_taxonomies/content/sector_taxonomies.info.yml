@@ -1,0 +1,11 @@
+name: Sector Taxonomies
+type: module
+description: Provides the default content and configuration for required Sector vocabularies
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - default_content:default_content
+
+default_content:
+  taxonomy_term:
+    - 89a93419-6690-4fb1-8758-9c5b8eb32536
