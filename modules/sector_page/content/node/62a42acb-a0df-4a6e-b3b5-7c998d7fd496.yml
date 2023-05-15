@@ -1,0 +1,54 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 62a42acb-a0df-4a6e-b3b5-7c998d7fd496
+  bundle: sector_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Section A '
+  created:
+    -
+      value: 1683775066
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  body:
+    -
+      value: '<p class="lead">Sector''s simple layout templates use site builder tools and Drupal taxonomies to keep displays modular and consistent across your site.&nbsp;</p><p>Coming soon ...&nbsp;</p><p class="lead">&nbsp;</p>'
+      format: basic_html
+      summary: ''
+  field_subtitle:
+    -
+      value: '<p>Introducing Sector page display and page content settings.&nbsp;</p>'
+      format: sector_restricted_basic_html

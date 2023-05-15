@@ -1,0 +1,26 @@
+uuid: 52c48068-bcaf-4c8d-8d4f-0aa97a6dd331
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.sector_page
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - sector_restricted_basic_html
+id: node.sector_page.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: sector_page
+label: Subtitle
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,25 @@
+name: Sector Page
+type: module
+description: Provides the default content and configuration for Page content type
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - sector:sector_media
+  - sector:sector_text_formats
+  - schema_metatag:schema_metatag
+  - drupal:menu_link_content
+  - default_content:default_content
+
+default_content:
+    node:
+      - 03ae7a81-5206-4dd6-9b82-b998054281f6
+      - dd542f54-4b35-436a-a28d-74f624f9a89e
+      - 62a42acb-a0df-4a6e-b3b5-7c998d7fd496
+      - 28a742ec-87b6-4dda-82a9-ba9353df64a7
+      - 7d8fc629-24ab-4d2a-a36e-b19e2b58d2de
+    menu_link_content:
+      - 3820bee2-d24d-4ef0-9a3f-20a9eb1d6076
+      - e544759d-a240-4bd6-aef6-ffccef7391c7
+      - ed53e682-83aa-415a-9287-90a14e26da78
+    taxonomy_term:
+      - 89a93419-6690-4fb1-8758-9c5b8eb32536

@@ -1,0 +1,37 @@
+uuid: 847a8610-e0f9-49fa-a709-f56d280d1316
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.sector_page.body
+    - field.field.node.sector_page.field_display_options
+    - field.field.node.sector_page.field_image_hero
+    - field.field.node.sector_page.field_subtitle
+    - node.type.sector_page
+  module:
+    - text
+    - user
+id: node.sector_page.teaser
+targetEntityType: node
+bundle: sector_page
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_display_options: true
+  field_image_hero: true
+  field_subtitle: true
+  search_api_excerpt: true

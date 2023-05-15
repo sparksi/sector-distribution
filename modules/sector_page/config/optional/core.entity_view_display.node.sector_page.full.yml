@@ -1,0 +1,36 @@
+uuid: 5df382ab-6fc6-4924-bde7-b56e99db6d43
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.sector_page.body
+    - field.field.node.sector_page.field_display_options
+    - field.field.node.sector_page.field_image_hero
+    - field.field.node.sector_page.field_subtitle
+    - node.type.sector_page
+  module:
+    - text
+    - user
+id: node.sector_page.full
+targetEntityType: node
+bundle: sector_page
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_display_options: true
+  field_image_hero: true
+  field_subtitle: true
+  search_api_excerpt: true
