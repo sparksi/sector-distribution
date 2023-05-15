@@ -4,6 +4,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.page.body
+    - field.field.node.page.field_alignment
+    - field.field.node.page.field_display_options
+    - field.field.node.page.field_image_hero
     - field.field.node.page.field_subtitle
     - node.type.page
   module:
@@ -25,5 +28,8 @@ content:
     weight: 101
     region: content
 hidden:
+  field_alignment: true
+  field_display_options: true
+  field_image_hero: true
   field_subtitle: true
   search_api_excerpt: true
