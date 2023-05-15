@@ -2,7 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.page
     - taxonomy.vocabulary.tags
   module:
     - contextual
@@ -23,12 +22,8 @@ permissions:
   - 'access files overview'
   - 'access toolbar'
   - 'administer url aliases'
-  - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
-  - 'delete own page content'
-  - 'delete page revisions'
-  - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'
