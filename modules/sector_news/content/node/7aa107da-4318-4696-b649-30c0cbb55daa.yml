@@ -2,7 +2,7 @@ _meta:
   version: '1.0'
   entity_type: node
   uuid: 7aa107da-4318-4696-b649-30c0cbb55daa
-  bundle: page
+  bundle: sector_page
   default_langcode: en
 default:
   revision_uid:
