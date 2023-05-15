@@ -1,4 +1,4 @@
-name: Sector default news content and configuration
+name: Sector News
 type: module
 description: Provides the default content and configuration for News content type
 package: Sector

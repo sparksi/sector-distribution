@@ -4,30 +4,18 @@
  * Install, update and uninstall functions for the profilename install profile.
  */
 
-/**
- * Implements hook_install_tasks().
+/*
+ * Implements hook_install()
  */
-function sector_news_install_tasks() {
-  return [
-    'sector_news_install_required_modules' => [
-      'display_name' => t('Sector news install required modules'),
-      'type' => 'default',
-    ],
-  ];
-}
-
-/**
- * Content install task.
- */
-function sector_news_install_required_modules() {
+function sector_news_install() {
     \Drupal::service('module_installer')->install([
       'schema_article', 
       'metatag_twitter_cards'
     ], FALSE);
 }
 
-/**
- * Content install task.
+/*
+ * Implements hook_uninstall()
  */
 function sector_news_uninstall() {
     
