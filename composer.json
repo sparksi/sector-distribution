@@ -86,6 +86,10 @@
                 "type:drupal-drush"
             ]
         },
+        "enable-patching": true,
+        "patchLevel": {
+          "drupal/core": "-p2"
+        },
         "patches": {
             "drupal/core": {
                 "Permit colons in css classes": "https://www.drupal.org/files/issues/2023-05-12/permit_colons_css.patch"
