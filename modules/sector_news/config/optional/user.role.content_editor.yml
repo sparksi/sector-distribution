@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sector_news
+  module:
+    - contextual
+    - file
+    - node
+    - path
+    - system
+    - taxonomy
+    - toolbar
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'create sector_news content'
+  - 'delete own sector_news content'
+  - 'delete sector_news revisions'
+  - 'edit own sector_news content'
