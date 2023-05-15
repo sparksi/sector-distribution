@@ -4,6 +4,7 @@
  * Install, update and uninstall functions for the profilename install profile.
  */
 use Drupal\user\Entity\Role;
+use Drupal\Core\Entity\EntityInterface;
 
 
 /*
@@ -52,4 +53,32 @@ function sector_news_uninstall() {
     // Delete content type.
     $content_type = \Drupal::entityTypeManager()->getStorage('node_type')->load('sector_news');
     $content_type->delete();
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for node entities.
+ */
+function sector_news_node_insert(EntityInterface $entity) {
+  
+    switch ($entity->uuid()) {
+        case '7aa107da-4318-4696-b649-30c0cbb55daa':
+            
+            $block = Drupal\block\Entity\Block::load('views_block__sector_news_block_default');
+            if(!$block) {
+              return;
+            }
+            
+            $block->setVisibilityConfig('request_path', array('id' => 'request_path',
+                'pages'=> '/node/' . $entity->id(),
+                'negate' => false,
+                )
+            );
+            $block->save();
+    
+            \Drupal::logger('sector_news')->notice('Setting views_block__sector_news_block_default block visibility to appear on #%nid', [
+            '%nid' => $entity->id(),
+            ]);
+        break;
+  
+    }
 }
