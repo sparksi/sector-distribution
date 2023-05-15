@@ -1,0 +1,53 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: c1cbb0e6-0bbd-4ea7-b1b0-8a1f290f7bbb
+  bundle: sector_resource
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Resource content sample'
+  created:
+    -
+      value: 1684115806
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  body:
+    -
+      value: '<p class="lead">The <em>Resource</em> content type is another example of&nbsp;taxonomy (or data) driven content. Resources&nbsp;and news items have similar fieldsets and displays; however their data type and audiences are different. Resources&nbsp;are non-transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).</p><p>The Sector <em>Resource </em>content type&nbsp;is prepared for information&nbsp;or knowledge database content. The ''resource type'' taxonomy allows you to sort and filter resource pages&nbsp;into groups, such as training materials or&nbsp;manuals. The resource archive allows the user to filter by issue date or type.&nbsp;</p><p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource</em>.</p><p>{sample content}</p>'
+      format: basic_html
+      summary: ''
+  field_issue_date:
+    -
+      value: '2023-05-15T01:56:46'

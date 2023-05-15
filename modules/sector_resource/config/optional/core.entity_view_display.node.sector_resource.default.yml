@@ -1,0 +1,40 @@
+uuid: e62a3a69-34e8-4f69-af0f-f779a056d441
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.sector_resource.body
+    - field.field.node.sector_resource.field_issue_date
+    - node.type.sector_resource
+  module:
+    - datetime
+    - text
+    - user
+id: node.sector_resource.default
+targetEntityType: node
+bundle: sector_resource
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_issue_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,19 @@
+name: Sector Resource
+type: module
+description: Provides the default content and configuration for Resource content type
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - sector:sector_media
+  - sector:sector_text_formats
+  - schema_metatag:schema_metatag
+  - drupal:menu_link_content
+  - default_content:default_content
+
+default_content:
+  node:
+    - c1cbb0e6-0bbd-4ea7-b1b0-8a1f290f7bbb
+    - 5d52aa52-3100-4fba-b937-2079f24b8690
+
+  menu_link_content:
+    - 0654d01d-264f-4520-b823-163c7cefd722

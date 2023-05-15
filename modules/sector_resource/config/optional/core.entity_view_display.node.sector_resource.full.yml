@@ -1,0 +1,32 @@
+uuid: ca4a239a-4cf7-48b1-9fd9-a8cff33832d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.sector_resource.body
+    - field.field.node.sector_resource.field_issue_date
+    - node.type.sector_resource
+  module:
+    - text
+    - user
+id: node.sector_resource.full
+targetEntityType: node
+bundle: sector_resource
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_issue_date: true
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: 369ae237-ee81-48a5-9ff3-c0db9dcb741c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sector_resource
+  module:
+    - text
+id: node.sector_resource.body
+field_name: body
+entity_type: node
+bundle: sector_resource
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

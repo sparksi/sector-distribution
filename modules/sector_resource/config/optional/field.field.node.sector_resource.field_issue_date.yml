@@ -1,0 +1,24 @@
+uuid: 9f7b4422-be85-4ea5-934d-38543e4dfb69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issue_date
+    - node.type.sector_resource
+  module:
+    - datetime
+id: node.sector_resource.field_issue_date
+field_name: field_issue_date
+entity_type: node
+bundle: sector_resource
+label: 'Issue date'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,84 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the profilename install profile.
+ */
+use Drupal\user\Entity\Role;
+use Drupal\Core\Entity\EntityInterface;
+
+
+/*
+ * Implements hook_install()
+ */
+function sector_resource_install() {
+    \Drupal::service('module_installer')->install([
+      'schema_article', 
+      'metatag_twitter_cards'
+    ], FALSE);
+
+    $role_object = Role::load('content_editor');
+    $role_object->grantPermission('create sector_resource content');
+    $role_object->grantPermission('delete own sector_resource content');
+    $role_object->grantPermission('delete sector_resource revisions');
+    $role_object->grantPermission('edit own sector_resource content');
+
+    $role_object->save();
+}
+
+/*
+ * Implements hook_uninstall()
+ */
+function sector_resource_uninstall() {
+    
+    // Delete all nodes of given content type.
+    $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+    $nodes = $storage_handler->loadByProperties(['type' => 'sector_resource']);
+    $storage_handler->delete($nodes);
+
+    // Delete view
+    \Drupal::service('config.factory')->getEditable('views.view.sector_resource')->delete();
+
+    // delete menu item
+    $menu_link_content = \Drupal::service('entity.repository')->loadEntityByUuid('menu_link_content', '0654d01d-264f-4520-b823-163c7cefd722');
+    if($menu_link_content) {
+        $menu_link_content->delete();
+    }
+
+    // delete view page
+    $view_page = \Drupal::service('entity.repository')->loadEntityByUuid('node', '5d52aa52-3100-4fba-b937-2079f24b8690');
+    if($view_page) {
+        $view_page->delete();
+    }
+
+    // Delete content type.
+    $content_type = \Drupal::entityTypeManager()->getStorage('node_type')->load('sector_resource');
+    $content_type->delete();
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for node entities.
+ */
+function sector_resource_node_insert(EntityInterface $entity) {
+  
+    switch ($entity->uuid()) {
+        case '5d52aa52-3100-4fba-b937-2079f24b8690':
+            
+            $block = Drupal\block\Entity\Block::load('views_block__sector_resources_block_default');
+            if(!$block) {
+              return;
+            }
+            
+            $block->setVisibilityConfig('request_path', array('id' => 'request_path',
+                'pages'=> '/node/' . $entity->id(),
+                'negate' => false,
+                )
+            );
+            $block->save();
+    
+            \Drupal::logger('sector_resource')->notice('Setting views_block__sector_resources_block_default block visibility to appear on #%nid', [
+            '%nid' => $entity->id(),
+            ]);
+        break;
+  
+    }
+}

@@ -1,0 +1,14 @@
+uuid: 602beacd-4d42-41a4-8df8-3cd7caf6047d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sector_resource
+id: node_type_sector_resource
+entity_type_id: node_type
+entity_id: sector_resource
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

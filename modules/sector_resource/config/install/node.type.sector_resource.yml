@@ -1,0 +1,17 @@
+uuid: df399bef-0509-408b-8e6b-3c86082f529a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Resource
+type: sector_resource
+description: 'Use <em>Resource</em> for single page resources and to add documents.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
