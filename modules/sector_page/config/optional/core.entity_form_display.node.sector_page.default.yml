@@ -1,14 +1,14 @@
-uuid: ba6f0fe3-23e2-4c5e-a29a-3b3dcc2509fd
+uuid: a2af462b-2269-41d9-9f14-689349565e42
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.sector_page.body
-    - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
     - node.type.sector_page
   module:
+    - media_library
     - path
     - text
 id: node.sector_page.default
@@ -18,7 +18,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 11
+    weight: 2
     region: content
     settings:
       rows: 9
@@ -28,29 +28,20 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 4
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_display_options:
-    type: options_buttons
-    weight: 1
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
   field_image_hero:
-    type: entity_reference_autocomplete
-    weight: 10
+    type: media_library_widget
+    weight: 3
     region: content
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
   field_subtitle:
     type: text_textarea
-    weight: 2
+    weight: 1
     region: content
     settings:
       rows: 5
@@ -58,27 +49,27 @@ content:
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 9
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 6
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -93,7 +84,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 3
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -102,7 +93,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
