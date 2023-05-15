@@ -3,6 +3,8 @@
  * @file
  * Install, update and uninstall functions for the profilename install profile.
  */
+use Drupal\user\Entity\Role;
+
 
 /*
  * Implements hook_install()
@@ -12,6 +14,14 @@ function sector_news_install() {
       'schema_article', 
       'metatag_twitter_cards'
     ], FALSE);
+
+    $role_object = Role::load('content_editor');
+    $role_object->grantPermission('create sector_news content');
+    $role_object->grantPermission('delete own sector_news content');
+    $role_object->grantPermission('delete sector_news revisions');
+    $role_object->grantPermission('edit own sector_news content');
+    
+    $role_object->save();
 }
 
 /*
