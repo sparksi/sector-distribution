@@ -2,7 +2,9 @@ uuid: e874d836-7d55-4d0a-b8bb-14b2ed1baafb
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: JeZWJAH4EFbzO_wlQGtIaKnCqJWIjq66NXNbVRkDgck
 name: 'Display options'
 vid: sector_display_options
-description: ''
+description: 'Used to define different displays for a specific group of pages. Terms are rabbit-holed to 404.'
 weight: 0
