@@ -63,7 +63,7 @@ function sector_resource_node_insert(EntityInterface $entity) {
     switch ($entity->uuid()) {
         case '5d52aa52-3100-4fba-b937-2079f24b8690':
             
-            $block = Drupal\block\Entity\Block::load('views_block__sector_resources_block_default');
+            $block = Drupal\block\Entity\Block::load('views_block__sector_resource_block_default');
             if(!$block) {
               return;
             }
@@ -75,7 +75,7 @@ function sector_resource_node_insert(EntityInterface $entity) {
             );
             $block->save();
     
-            \Drupal::logger('sector_resource')->notice('Setting views_block__sector_resources_block_default block visibility to appear on #%nid', [
+            \Drupal::logger('sector_resource')->notice('Setting views_block__sector_resource_block_default block visibility to appear on #%nid', [
             '%nid' => $entity->id(),
             ]);
         break;
