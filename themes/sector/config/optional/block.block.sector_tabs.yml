@@ -1,0 +1,20 @@
+uuid: 0db062ba-2acc-48bb-8219-da15cc832b9c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sector
+id: sector_tabs
+theme: sector
+region: help
+weight: 0
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

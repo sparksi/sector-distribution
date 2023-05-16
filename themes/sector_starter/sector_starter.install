@@ -2,6 +2,10 @@
 
 function sector_starter_install() {
   $block_ids = \Drupal::entityQuery('block')->condition('theme', 'sector')->execute();
+
+
+  \Drupal::logger('sector_starter')->notice('Running theme install', $block_ids);
+
   foreach ($block_ids as $block_id) {
     $parent_block = \Drupal\block\Entity\Block::load($block_id);
   
