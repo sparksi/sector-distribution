@@ -6,9 +6,9 @@ dependencies:
   module:
     - block_content
   theme:
-    - sector_starter
-id: sector_starter_brand_main
-theme: sector_starter
+    - sector
+id: sector_brand_main
+theme: sector
 region: header
 weight: -3
 provider: null
