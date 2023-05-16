@@ -1,17 +1,5 @@
 <?php
 
 function sector_starter_install() {
-  $block_ids = \Drupal::entityQuery('block')->condition('theme', 'sector')->execute();
-
-
-  \Drupal::logger('sector_starter')->notice('Running theme install', $block_ids);
-
-  foreach ($block_ids as $block_id) {
-    $parent_block = \Drupal\block\Entity\Block::load($block_id);
-  
-    $new_id = str_replace('sector', 'sector_starter', $parent_block->get('id'));
-    $child_block = $parent_block->createDuplicateBlock($new_id, 'sector_starter');
-   
-    $child_block->save();
-  }
+    \Drupal::logger('sector_starter')->notice('Sector starter theme installed', [])
 }
