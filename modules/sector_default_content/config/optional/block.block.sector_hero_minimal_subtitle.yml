@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+  module:
+    - fieldblock
+    - text
+  theme:
+    - sector
+id: sector_hero_minimal_subtitle
+theme: sector
+region: hero_minimal
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: Subtitle
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_subtitle
+  formatter_id: text_default
+  formatter_settings: {  }
+visibility: {  }
