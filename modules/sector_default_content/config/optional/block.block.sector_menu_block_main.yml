@@ -1,0 +1,31 @@
+uuid: 85f09abe-f65a-4d26-8642-4b7f9de9b26f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sector-main-menu
+  module:
+    - menu_block
+  theme:
+    - sector
+id: sector_menu_block_main
+theme: sector
+region: navigation
+weight: 0
+provider: null
+plugin: 'menu_block:sector-main-menu'
+settings:
+  id: 'menu_block:sector-main-menu'
+  label: 'Sector › Main menu'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: true
+  parent: 'sector-main-menu:menu_link_content:3820bee2-d24d-4ef0-9a3f-20a9eb1d6076'
+  suggestion: sector_main_menu
+visibility: {  }
