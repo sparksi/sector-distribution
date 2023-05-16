@@ -1,0 +1,25 @@
+uuid: 0a92ae6d-e893-4921-9399-5956d026540b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2994b7ce-7e30-448b-bbaf-0cda09a98810'
+  module:
+    - block_content
+  theme:
+    - sector
+id: sector_copyright
+theme: sector
+region: footer_post
+weight: 0
+provider: null
+plugin: 'block_content:2994b7ce-7e30-448b-bbaf-0cda09a98810'
+settings:
+  id: 'block_content:2994b7ce-7e30-448b-bbaf-0cda09a98810'
+  label: 'Sector › Copyright'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,5 +1,0 @@
-<?php
-
-function sector_starter_install() {
-    \Drupal::logger('sector_starter')->notice('Sector starter theme installed', [])
-}
