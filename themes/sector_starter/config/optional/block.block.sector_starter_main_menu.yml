@@ -1,3 +1,4 @@
+uuid: 670f4077-c241-4a03-8e32-5f617ffee818
 langcode: en
 status: true
 dependencies:
@@ -10,7 +11,7 @@ dependencies:
 id: sector_starter_main_menu
 theme: sector_starter
 region: header
-weight: -1
+weight: 0
 provider: null
 plugin: 'menu_block:sector-main-menu'
 settings:
@@ -23,8 +24,8 @@ settings:
   label_link: false
   label_type: block
   level: 1
-  depth: 1
-  expand_all_items: false
+  depth: 0
+  expand_all_items: true
   parent: 'sector-main-menu:menu_link_content:3820bee2-d24d-4ef0-9a3f-20a9eb1d6076'
   suggestion: sector_main_menu
 visibility: {  }

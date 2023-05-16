@@ -9,8 +9,8 @@
  */
 function sector_install_tasks() {
   return [
-    'sector_install_default_content' => [
-      'display_name' => t('Sector install default content'),
+    'sector_install_required_modules' => [
+      'display_name' => t('Sector install required modules'),
       'type' => 'default',
     ],
   ];
@@ -19,7 +19,7 @@ function sector_install_tasks() {
 /**
  * Content install task.
  */
-function sector_install_default_content() {
+function sector_install_required_modules() {
     \Drupal::service('module_installer')->install([
       'sector_default_content', 
       'sector_media',
