@@ -36,7 +36,7 @@ function sector_install_required_modules() {
 
 
 function sector_copy_default_blocks() {
-  $activeThemeName = \Drupal::service('theme.manager')->getActiveTheme(); 
+  $activeThemeName = \Drupal::service('theme.manager')->getActiveTheme()->getName(); 
 
   $block_ids = \Drupal::entityQuery('block')->condition('theme', 'sector')->execute();
 
