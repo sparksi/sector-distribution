@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.sector_page.body
+    - field.field.node.sector_page.field_content_options
     - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
@@ -12,6 +13,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: C-bUPjBQ6RlV9DdegMRKe-bw2ZH5a-QwErPPMMdN92Y
 id: node.sector_page.teaser
 targetEntityType: node
 bundle: sector_page
@@ -31,6 +34,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_content_options: true
   field_display_options: true
   field_image_hero: true
   field_subtitle: true

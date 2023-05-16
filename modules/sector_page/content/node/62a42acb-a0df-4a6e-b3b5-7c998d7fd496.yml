@@ -4,6 +4,8 @@ _meta:
   uuid: 62a42acb-a0df-4a6e-b3b5-7c998d7fd496
   bundle: sector_page
   default_langcode: en
+  depends:
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
     -
@@ -45,9 +47,12 @@ default:
       value: bundle_default
   body:
     -
-      value: '<p class="lead">Sector''s simple layout templates use site builder tools and Drupal taxonomies to keep displays modular and consistent across your site.&nbsp;</p><p>Coming soon ...&nbsp;</p><p class="lead">&nbsp;</p>'
+      value: '<p class="lead">Sector''s simple layout templates use site builder tools and Drupal taxonomies to keep displays modular and consistent across your site.</p><p>Coming soon …</p>'
       format: basic_html
       summary: ''
+  field_display_options:
+    -
+      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
   field_subtitle:
     -
       value: '<p>Introducing Sector page display and page content settings.&nbsp;</p>'

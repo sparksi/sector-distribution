@@ -1,8 +1,10 @@
+uuid: afe97727-0856-40a2-9f3c-799c6b876338
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.sector_page.body
+    - field.field.node.sector_page.field_content_options
     - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
@@ -17,6 +19,7 @@ third_party_settings:
     group_page_options:
       children:
         - group_display
+        - group_options
       label: 'Page options'
       region: content
       parent_name: ''
@@ -32,7 +35,7 @@ third_party_settings:
       children:
         - field_display_options
         - field_image_hero
-      label: Display
+      label: Hero
       region: content
       parent_name: group_page_options
       weight: 20
@@ -44,6 +47,23 @@ third_party_settings:
         formatter: closed
         description: ''
         required_fields: true
+    group_options:
+      children:
+        - field_content_options
+      label: Options
+      region: content
+      parent_name: group_page_options
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: YHndI7p7FZO0qUE-5HioY07vZNsg0TVPULik_201sLE
 id: node.sector_page.default
 targetEntityType: node
 bundle: sector_page
@@ -51,7 +71,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 3
+    weight: 4
     region: content
     settings:
       rows: 9
@@ -62,6 +82,12 @@ content:
   created:
     type: datetime_timestamp
     weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_options:
+    type: options_buttons
+    weight: 3
     region: content
     settings: {  }
     third_party_settings: {  }

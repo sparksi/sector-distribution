@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.sector_page.body
+    - field.field.node.sector_page.field_content_options
     - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
@@ -11,6 +12,8 @@ dependencies:
   module:
     - text
     - user
+_core:
+  default_config_hash: h-h2WC45mqNnk5E012pDMvXMNHuubxzUZ7n8i7hx6AU
 id: node.sector_page.default
 targetEntityType: node
 bundle: sector_page
@@ -22,6 +25,14 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_content_options:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 105
     region: content
   field_display_options:
     type: entity_reference_label

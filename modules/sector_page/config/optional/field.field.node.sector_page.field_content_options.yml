@@ -1,0 +1,29 @@
+uuid: b07bc7f5-6ba4-456c-817d-8a1b6982ba5a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content_options
+    - node.type.sector_page
+    - taxonomy.vocabulary.sector_content_settings
+id: node.sector_page.field_content_options
+field_name: field_content_options
+entity_type: node
+bundle: sector_page
+label: 'Content options'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      sector_content_settings: sector_content_settings
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
