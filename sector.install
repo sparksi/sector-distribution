@@ -13,6 +13,10 @@ function sector_install_tasks() {
       'display_name' => t('Sector install required modules'),
       'type' => 'default',
     ],
+    'sector_copy_default_blocks' => [
+      'display_name' => t('Sector copy default blocks to starter theme'),
+      'type' => 'default',
+    ],
   ];
 }
 
@@ -28,4 +32,20 @@ function sector_install_required_modules() {
       'sector_page',
       'sector_news'
     ], FALSE);
+}
+
+
+function sector_copy_default_blocks() {
+  $activeThemeName = \Drupal::service('theme.manager')->getActiveTheme(); 
+
+  $block_ids = \Drupal::entityQuery('block')->condition('theme', 'sector')->execute();
+
+  foreach ($block_ids as $block_id) {
+    $parent_block = \Drupal\block\Entity\Block::load($block_id);
+  
+    $new_id = str_replace('sector', $activeThemeName, $parent_block->get('id'));
+    $child_block = $parent_block->createDuplicateBlock($new_id, $activeThemeName);
+   
+    $child_block->save();
   }
+}
