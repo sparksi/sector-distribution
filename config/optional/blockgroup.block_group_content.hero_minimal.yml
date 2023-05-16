@@ -1,0 +1,5 @@
+langcode: en
+status: true
+dependencies: {  }
+id: hero_minimal
+label: 'Hero › Minimal'

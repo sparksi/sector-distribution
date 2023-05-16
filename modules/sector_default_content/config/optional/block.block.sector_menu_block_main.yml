@@ -1,4 +1,3 @@
-uuid: 85f09abe-f65a-4d26-8642-4b7f9de9b26f
 langcode: en
 status: true
 dependencies:
@@ -10,8 +9,8 @@ dependencies:
     - sector
 id: sector_menu_block_main
 theme: sector
-region: navigation
-weight: 0
+region: header
+weight: -2
 provider: null
 plugin: 'menu_block:sector-main-menu'
 settings:

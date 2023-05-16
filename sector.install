@@ -25,9 +25,9 @@ function sector_install_tasks() {
  */
 function sector_install_required_modules() {
     \Drupal::service('module_installer')->install([
+      'sector_taxonomies',
       'sector_default_content', 
       'sector_media',
-      'sector_taxonomies',
       'sector_brand', 
       'sector_page',
       'sector_news'

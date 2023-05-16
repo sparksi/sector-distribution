@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.hero_minimal
+  module:
+    - blockgroup
+    - term_condition
+  theme:
+    - sector
+id: sector_hero_minimal
+theme: sector
+region: hero
+weight: 0
+provider: null
+plugin: 'block_group:hero_minimal'
+settings:
+  id: 'block_group:hero_minimal'
+  label: 'Hero › Minimal'
+  label_display: '0'
+  provider: blockgroup
+visibility:
+  term:
+    id: term
+    tid:
+      - 89a93419-6690-4fb1-8758-9c5b8eb32536
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
