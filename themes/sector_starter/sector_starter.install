@@ -1,0 +1,13 @@
+<?php
+
+function sector_starter_install() {
+  $block_ids = \Drupal::entityQuery('block')->condition('theme', 'sector')->execute();
+  foreach ($block_ids as $block_id) {
+    $parent_block = \Drupal\block\Entity\Block::load($block_id);
+  
+    $new_id = str_replace('sector', 'sector_starter', $parent_block->get('id'));
+    $child_block = $parent_block->createDuplicateBlock($new_id, 'sector_starter');
+   
+    $child_block->save();
+  }
+}
