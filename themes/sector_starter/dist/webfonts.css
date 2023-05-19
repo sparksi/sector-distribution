@@ -1,1 +1,17 @@
-@font-face{font-family:"FjallaOne";src:url("fonts/FjallaOne-Regular.woff2") format("woff2"),url("fonts/FjallaOne-Regular.woff") format("woff");font-style:normal;font-weight:400;font-display:swap}@font-face{font-family:"Inter";src:url("fonts/Inter.woff2") format("woff2-variations");font-variation-settings:"slnt" -10, "wght" 900}@font-face{font-family:"Roboto";src:url("fonts/Roboto.woff2") format("woff2-variations");font-variation-settings:"wght" 900}
+@font-face {
+  font-family: "FjallaOne";
+  src: url("fonts/FjallaOne-Regular.woff2") format("woff2"), url("fonts/FjallaOne-Regular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter.woff2") format("woff2-variations");
+  font-variation-settings: "slnt" -10, "wght" 900;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("fonts/Roboto.woff2") format("woff2-variations");
+  font-variation-settings: "wght" 900;
+}
