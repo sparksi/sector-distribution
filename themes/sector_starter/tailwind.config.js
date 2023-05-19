@@ -3,11 +3,11 @@
 module.exports = {
   mode: 'jit',
   content: [
-    "./templates/**/*.{html,twig}",
-    "./src/**/*.{html,twig}",
-    "../sector/templates/**/*.{html,twig}",
-    "../sector/src/components/**/*.{html,twig}",
-    "./safelist.txt"
+    './templates/**/*.{html,twig}',
+    './src/**/*.{html,twig}',
+    '../sector/templates/**/*.{html,twig}',
+    '../sector/src/components/**/*.{html,twig}',
+    './safelist.txt',
   ],
   theme: {
     container: {
@@ -18,25 +18,25 @@ module.exports = {
       breakpoints: {
         '2xl': '1536px',
         '3xl': '1920px',
-        '4xl': '2560px'
+        '4xl': '2560px',
       },
       fontFamily: {
-        'custom': ['var(--custom-font)'],
+        custom: ['var(--custom-font)'],
         'custom-alt': ['var(--custom-font-alternate)'],
         'custom-display': ['var(--custom-display)'],
       },
       fontSize: {
-        'flexi-1':  'clamp(24px, 10vmax, 52px)'
+        'flexi-1': 'clamp(24px, 10vmax, 52px)',
       },
       keyframes: {
         fadeInUp: {
-          'from': { transform: 'translateY(1em)', opacity: 0},
-          'to': { transform: 'translateY(0)', opacity: 1}
-        }
+          from: { transform: 'translateY(1em)', opacity: 0 },
+          to: { transform: 'translateY(0)', opacity: 1 },
+        },
       },
       animation: {
-        'alert': 'fadeInUp .35s ease'
-      }
+        alert: 'fadeInUp .35s ease',
+      },
     },
   },
   plugins: [
@@ -48,8 +48,7 @@ module.exports = {
     }),
     require('tailwind-safelist-generator')({
       path: './safelist.txt',
-      patterns: require('./build/tailwind-safelist')
-    })
+      patterns: require('./build/tailwind-safelist'),
+    }),
   ],
-}
-
+};
