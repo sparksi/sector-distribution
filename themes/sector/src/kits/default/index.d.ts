@@ -1,11 +1,11 @@
 interface Window {
-    Drupal: any
+  Drupal: any;
 }
 
 declare global {
-    var Drupal: {
-        behaviors: any
-    }
+  var Drupal: {
+    behaviors: any;
+  };
 }
 
-export {}
+export {};
