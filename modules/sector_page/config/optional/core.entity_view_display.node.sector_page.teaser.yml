@@ -1,9 +1,8 @@
-uuid: 847a8610-e0f9-49fa-a709-f56d280d1316
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.full
     - field.field.node.sector_page.body
     - field.field.node.sector_page.field_content_options
     - field.field.node.sector_page.field_display_options
@@ -11,20 +10,55 @@ dependencies:
     - field.field.node.sector_page.field_subtitle
     - node.type.sector_page
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
-_core:
-  default_config_hash: C-bUPjBQ6RlV9DdegMRKe-bw2ZH5a-QwErPPMMdN92Y
-id: node.sector_page.teaser
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          fb475b51-617a-4a65-835a-db7315bd3864:
+            uuid: fb475b51-617a-4a65-835a-db7315bd3864
+            region: content
+            configuration:
+              id: 'extra_field_block:node:sector_page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          16b42e6a-ba4d-4210-97e3-0c7f5c91f39c:
+            uuid: 16b42e6a-ba4d-4210-97e3-0c7f5c91f39c
+            region: content
+            configuration:
+              id: 'field_block:node:sector_page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page
-mode: teaser
+mode: full
 content:
   body:
-    type: text_summary_or_trimmed
+    type: text_default
     label: hidden
-    settings:
-      trim_length: 600
+    settings: {  }
     third_party_settings: {  }
     weight: 101
     region: content

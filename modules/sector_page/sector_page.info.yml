@@ -9,6 +9,7 @@ dependencies:
   - sector:sector_taxonomies
   - schema_metatag:schema_metatag
   - drupal:menu_link_content
+  - drupal:layout_builder
   - default_content:default_content
 
 default_content:
