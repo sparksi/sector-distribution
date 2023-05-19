@@ -2,7 +2,7 @@
 
 [Sector](https://www.sector.nz/) is a Drupal distribution (or install profile) built and maintained by [Sparks Interactive](https://www.sparksinteractive.co.nz).
 
-### Create a New Project with Sector
+## Create a New Project with Sector
 
 When creating a new project with Sector, you can use our [composer project template](https://github.com/sparksi/sector-project).
 
