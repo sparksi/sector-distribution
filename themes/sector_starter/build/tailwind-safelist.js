@@ -69,5 +69,5 @@ export default [
   '{screens}:min-h-{minHeight}',
   'order-{order}',
   '{screens}:order-{order}',
-  'sr-only'
-]
+  'sr-only',
+];
