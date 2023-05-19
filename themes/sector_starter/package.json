@@ -14,8 +14,10 @@
 		"tw": "tailwindcss -i src/tailwind.css -o dist/tailwind.css",
 		"qa": "stylelint src/{**,.,*/**,**/**/}*.scss",
 		"build": "node ./build.js",
-		"sync": "browser-sync start --proxy 'sector10.ddev.site' --files 'dist' '**/*.twig'",
-		"watch": "node ./watch.js development"
+		"watch:sync": "browser-sync start --proxy 'sector10.ddev.site' --files 'dist' '**/*.twig'",
+		"watch:node": "node ./watch.js development",
+		"dev": "pnpm run '/^watch:.*/'"
+
 	},
 	"devDependencies": {
 		"@material-symbols/svg-400": "^0.5.5",
