@@ -10,6 +10,7 @@
 
   &::before {
     content: '';
+
     @include icon.render(
       ('close.svg', 'check.svg', 'error.svg', 'warning.svg', 'info.svg'),
       'fill=white'
@@ -18,6 +19,7 @@
 
   &-success {
     @apply bg-green-400;
+
     &::before {
       @include icon.pos(1, 2);
     }
@@ -25,6 +27,7 @@
 
   &-error {
     @apply bg-red-400;
+
     &::before {
       @include icon.pos(2, 1);
     }
@@ -32,6 +35,7 @@
 
   &-warning {
     @apply bg-yellow-300;
+
     &::before {
       @include icon.pos(3);
     }
@@ -39,6 +43,7 @@
 
   &-info {
     @apply bg-blue-400;
+
     &::before {
       @include icon.pos(4);
     }
@@ -46,6 +51,7 @@
 
   .alert:has(.sf-dump) & {
     @apply bg-blue-400;
+
     &::before {
       @include icon.pos(4);
     }
@@ -94,6 +100,7 @@
 
     &::before {
       content: '';
+
       @include icon.render(('close.svg'), 'fill=black');
     }
   }
