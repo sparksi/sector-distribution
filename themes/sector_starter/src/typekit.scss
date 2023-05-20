@@ -3,13 +3,12 @@
   font-family: var(--display-font-family, theme('fontFamily.custom'));
   font-weight: var(--display-font-weight, theme('fontWeight.semibold'));
 
-  @apply
-    text-2xl
-      lg:text-6xl
-      xl:text-[140px]
+  @apply text-2xl
+    lg:text-6xl
+    xl:text-[140px]
     tracking-wide
     leading-tight
-      lg:leading-snug;
+    lg:leading-snug;
 }
 
 .display-2 {
@@ -17,11 +16,10 @@
   font-family: var(--display-font-family, theme('fontFamily.custom'));
   font-weight: var(--display-font-weight, theme('fontWeight.semibold'));
 
-  @apply
-    text-xl
-      lg:text-5xl
-      xl:text-[110px]
+  @apply text-xl
+    lg:text-5xl
+    xl:text-[110px]
     tracking-wide
     leading-tight
-      lg:leading-snug;
+    lg:leading-snug;
 }

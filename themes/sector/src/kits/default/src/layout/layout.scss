@@ -1,14 +1,15 @@
-html, body {
-    @apply motion-safe:scroll-smooth dark:bg-neutral-950 text-neutral-950 dark:text-neutral-50;
+html,
+body {
+  @apply motion-safe:scroll-smooth dark:bg-neutral-950 text-neutral-950 dark:text-neutral-50;
 }
 
 .canvas {
-    @apply antialiased;
+  @apply antialiased;
 }
 
 .page__container {
-    @apply container;
-    --container-max-width: theme(breakpoints.2xl);
-    
-    max-width: var(--container-max-width-override, var(--container-max-width));
+  @apply container;
+  --container-max-width: theme(breakpoints.2xl);
+
+  max-width: var(--container-max-width-override, var(--container-max-width));
 }

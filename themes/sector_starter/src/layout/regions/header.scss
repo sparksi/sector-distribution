@@ -1,16 +1,15 @@
 .header {
-    --header-region-gap: theme(spacing.8);
+  --header-region-gap: theme(spacing.8);
 
-    @media (min-width: theme('screens.lg')) {
-        --header-region-gap: theme(spacing.12);
-    }
-
+  @media (min-width: theme('screens.lg')) {
+    --header-region-gap: theme(spacing.12);
+  }
 }
 
 .header .region__container {
-    @apply flex flex-wrap justify-between items-center gap-[var(--header-region-gap)];
+  @apply flex flex-wrap justify-between items-center gap-[var(--header-region-gap)];
 }
 
 .page__header:last-of-type {
-    @apply shadow;
+  @apply shadow;
 }

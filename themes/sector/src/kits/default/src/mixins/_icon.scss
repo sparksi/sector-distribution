@@ -1,34 +1,38 @@
 @use 'sass:list';
 
-@mixin render($icons: ("close.svg"), $properties ) {
-    $url_list: ();
+@mixin render(
+  $icons: (
+    'close.svg',
+  ),
+  $properties
+) {
+  $url_list: ();
 
-    @each $icon in $icons {
-        $url_string: svg-load(#{$icon}, #{$properties});
-        $url_list: list.append($url_list, $url_string, comma); 
-    }
+  @each $icon in $icons {
+    $url_string: svg-load(#{$icon}, #{$properties});
+    $url_list: list.append($url_list, $url_string, comma);
+  }
 
-    background-image: $url_list;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center, -1000em -1000em;
-    display: var(--icon-display, block);
-    width: var(--icon-width, var(--icon-size, 1em));
-    height: var(--icon-height, var(--icon-size, 1em));
+  background-image: $url_list;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center, -1000em -1000em;
+  display: var(--icon-display, block);
+  width: var(--icon-width, var(--icon-size, 1em));
+  height: var(--icon-height, var(--icon-size, 1em));
 }
 
-
 @mixin pos($index, $tail-length: 1) {
-    $positions: ();
-    $tail: ();
+  $positions: ();
+  $tail: ();
 
-    @for $i from 1 through $index {
-        $positions: list.append($positions, -1000em -1000em, comma); 
-    }
+  @for $i from 1 through $index {
+    $positions: list.append($positions, -1000em -1000em, comma);
+  }
 
-    @for $i from 1 through $tail-length {
-        $tail: list.append($tail, -1000em -1000em, comma);
-    }
-    
-    background-position: $positions, center, $tail;
+  @for $i from 1 through $tail-length {
+    $tail: list.append($tail, -1000em -1000em, comma);
+  }
+
+  background-position: $positions, center, $tail;
 }
