@@ -68,6 +68,7 @@ install:
   - field_group_link:field_group_link
   - field_group:field_group
   - fieldblock:fieldblock
+  - gin_lb:gin_lb
   - inline_entity_form:inline_entity_form
   - linkit:linkit
   - menu_block:menu_block
