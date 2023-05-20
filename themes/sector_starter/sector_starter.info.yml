@@ -23,8 +23,6 @@ regions:
   help: Help
   content_pre: Content › Pre
   content: Content
-  content_prefix: 'Content prefix (sidebar)'
-  content_suffix: 'Content suffix (sidebar)'
   content_post: Content › Post
   footer_pre: Footer › Pre
   footer: Footer
