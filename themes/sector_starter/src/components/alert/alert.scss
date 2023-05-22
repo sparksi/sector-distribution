@@ -9,12 +9,11 @@
   --icon-size: 66%;
 
   &::before {
-    content: '';
-
-    @include icon.render(
-      ('close.svg', 'check.svg', 'error.svg', 'warning.svg', 'info.svg'),
-      'fill=white'
-    );
+    content: '' @include
+      icon.render(
+        ('close.svg', 'check.svg', 'error.svg', 'warning.svg', 'info.svg'),
+        'fill=white'
+      );
   }
 
   &-success {
