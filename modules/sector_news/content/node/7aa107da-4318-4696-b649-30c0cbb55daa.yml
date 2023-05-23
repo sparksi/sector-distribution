@@ -4,6 +4,8 @@ _meta:
   uuid: 7aa107da-4318-4696-b649-30c0cbb55daa
   bundle: sector_page
   default_langcode: en
+  depends:
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
     -
@@ -26,11 +28,14 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
   path:
     -
-      alias: ''
+      alias: /news
       langcode: en
-      pathauto: 0
+      pathauto: 1
   rh_action:
     -
       value: bundle_default
@@ -40,3 +45,6 @@ default:
   rh_redirect_fallback_action:
     -
       value: bundle_default
+  field_display_options:
+    -
+      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536

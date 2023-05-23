@@ -33,3 +33,8 @@
 {% if html_tag %}
   </{{ html_tag }}>
 {% endif %}
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}

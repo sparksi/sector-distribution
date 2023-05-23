@@ -83,10 +83,10 @@ export const process = async (path, env = 'production') => {
     case '.ts':
       await js(props, dest, env);
       break;
-    case '.woff2':
+    /*case '.woff2':
     case '.ttf':
       await fonts(props, dest);
-      break;
+      break;*/
     default:
       //console.log(props.ext)
       break;
