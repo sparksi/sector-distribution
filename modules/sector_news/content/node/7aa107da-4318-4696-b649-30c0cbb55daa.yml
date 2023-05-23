@@ -18,7 +18,7 @@ default:
       target_id: 1
   title:
     -
-      value: News
+      value: 'Sector News section entry page'
   created:
     -
       value: 1684106033
@@ -45,6 +45,11 @@ default:
   rh_redirect_fallback_action:
     -
       value: bundle_default
+  body:
+    -
+      value: '<p class="lead">Next to hierarchical content in a menu tree, Sector supports taxonomy (or data) driven content. The news section entry page is an example of how to transition from <em>pages</em> to <em>views</em>.</p><p>In this example an simple news listing is embedded into a node of the content type page. A filtered news archive view is preconfigured to act as a <a href="https://demo.sector.nz/news/archive">News archive</a>.</p><p>{Sample content}</p>'
+      format: basic_html
+      summary: ''
   field_display_options:
     -
       entity: 89a93419-6690-4fb1-8758-9c5b8eb32536

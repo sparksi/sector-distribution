@@ -1,0 +1,41 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the profilename install profile.
+ */
+use Drupal\user\Entity\Role;
+use Drupal\Core\Entity\EntityInterface;
+
+/*
+ * Implements hook_uninstall()
+ */
+function sector_search_uninstall() {
+
+    // Delete all nodes of given content type.
+    /*$storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+    $nodes = $storage_handler->loadByProperties(['type' => 'sector_page']);
+    $storage_handler->delete($nodes);
+
+    // Delete content type.
+    $content_type = \Drupal::entityTypeManager()->getStorage('node_type')->load('sector_page');
+    $content_type->delete();*/
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for node entities.
+ */
+function sector_search_node_insert(EntityInterface $entity) {
+
+  switch ($entity->uuid()) {
+    case '3a7d8d6a-7573-411f-86dd-c7551c7d9d4f':
+      \Drupal::configFactory()
+        ->getEditable('system.site')
+        ->set('page.front', '/node/' . $entity->id())
+        ->save();
+
+      \Drupal::logger('sector_default_content')->notice('Homepage path has been set to the example content node #%nid', [
+        '%nid' => $entity->id(),
+      ]);
+    break;
+  }
+}

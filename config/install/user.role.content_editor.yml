@@ -2,6 +2,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - node.type.sector_news
+    - node.type.sector_page
     - taxonomy.vocabulary.tags
   module:
     - contextual
@@ -22,8 +24,16 @@ permissions:
   - 'access files overview'
   - 'access toolbar'
   - 'administer url aliases'
+  - 'create sector_news content'
+  - 'create sector_page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete own sector_news content'
+  - 'delete own sector_page content'
+  - 'delete sector_news revisions'
+  - 'delete sector_page revisions'
+  - 'edit own sector_news content'
+  - 'edit own sector_page content'
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'

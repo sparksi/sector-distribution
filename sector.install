@@ -26,27 +26,28 @@ function sector_install_tasks() {
 function sector_install_required_modules() {
     \Drupal::service('module_installer')->install([
       'sector_taxonomies',
-      'sector_default_content', 
+      'sector_default_content',
       'sector_media',
-      'sector_brand', 
+      'sector_brand',
       'sector_page',
-      'sector_news'
+      'sector_news',
+      'sector_search'
     ], FALSE);
 }
 
 
 function sector_copy_default_blocks() {
-  //$activeThemeName = \Drupal::service('theme.manager')->getActiveTheme()->getName(); 
+  //$activeThemeName = \Drupal::service('theme.manager')->getActiveTheme()->getName();
   $activeThemeName = 'sector_starter';
 
   $block_ids = \Drupal::entityQuery('block')->condition('theme', 'sector')->execute();
 
   foreach ($block_ids as $block_id) {
     $parent_block = \Drupal\block\Entity\Block::load($block_id);
-  
+
     $new_id = str_replace('sector', $activeThemeName, $parent_block->get('id'));
     $child_block = $parent_block->createDuplicateBlock($new_id, $activeThemeName);
-   
+
     $child_block->save();
   }
 }
