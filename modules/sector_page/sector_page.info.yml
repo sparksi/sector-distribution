@@ -11,6 +11,7 @@ dependencies:
   - drupal:menu_link_content
   - drupal:layout_builder
   - default_content:default_content
+  - pathauto:pathauto
 
 default_content:
     node:
@@ -19,6 +20,7 @@ default_content:
       - 62a42acb-a0df-4a6e-b3b5-7c998d7fd496
       - 28a742ec-87b6-4dda-82a9-ba9353df64a7
       - 7d8fc629-24ab-4d2a-a36e-b19e2b58d2de
+      - 9e9e3520-8d1a-4294-80ae-dac00bf57d85
     menu_link_content:
       - 3820bee2-d24d-4ef0-9a3f-20a9eb1d6076
       - e544759d-a240-4bd6-aef6-ffccef7391c7

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sector_news
+label: 'Sector › News'
+type: 'canonical_entities:node'
+pattern: '/news/[node:title]'
+selection_criteria:
+  5a21bcef-adc8-41d0-96ec-877aebfae7ef:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 5a21bcef-adc8-41d0-96ec-877aebfae7ef
+    context_mapping:
+      node: node
+    bundles:
+      sector_news: sector_news
+selection_logic: and
+weight: -5
+relationships: {  }

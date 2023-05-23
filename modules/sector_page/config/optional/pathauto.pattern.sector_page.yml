@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sector_page
+label: 'Sector › Page'
+type: 'canonical_entities:node'
+pattern: '[node:menu-link:parents:join-path]/[node:menu-link]'
+selection_criteria:
+  a9311a64-a791-45f7-b167-48d04dabb2d1:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: a9311a64-a791-45f7-b167-48d04dabb2d1
+    context_mapping:
+      node: node
+    bundles:
+      sector_page: sector_page
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -14,12 +14,12 @@
 {% set classes = [
   'alert',
   type ? 'alert-' ~ type,
-  'pointer-events-auto relative w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5',
+  'pointer-events-auto relative w-full overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5',
   dismissible ? 'alert--dismissible',
 ]|merge(alert_utility_classes ? alert_utility_classes : []) %}
 
-<div aria-live="assertive" class="{{ classes|join(' ') }}" role="alert">
-  <div class="sm:flex sm:items-start p-4 {{ dismissible ? 'pe-10' }}">
+<div aria-live="{{ aria_live ? aria_live : 'assertive' }}" class="{{ classes|join(' ') }}" role="alert">
+  <div class="sm:flex sm:items-start p-4 {{ dismissible ? 'pe-16 z-10' }}">
     {% if type == 'success' %}
       <span aria-hidden="true" class="alert__icon alert__icon-success"></span>
     {% endif %}
@@ -29,12 +29,15 @@
     {% if type == 'error' %}
       <span aria-hidden="true" class="alert__icon alert__icon-error"></span>
     {% endif %}
+    {% if type == 'info' %}
+      <span aria-hidden="true" class="alert__icon alert__icon-info"></span>
+    {% endif %}
 
     <div class="alert__body">
       {% if heading %}
         <h4 class="alert__heading">{{ heading }}</h4>
       {% endif %}
-      
+
       {% block content %}
         {{ content }}
       {% endblock %}
@@ -42,10 +45,15 @@
   </div>
 
   {% if dismissible %}
-    <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block">
+    <div class="absolute right-0 top-0 hidden pr-4 pt-4 sm:block z-20">
       <button type="button" class="alert__close" aria-label="Close">
         <span aria-hidden="true"></span>
       </button>
     </div>
   {% endif %}
 </div>
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}

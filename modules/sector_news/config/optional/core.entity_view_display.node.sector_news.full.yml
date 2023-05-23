@@ -1,4 +1,3 @@
-uuid: 5f21e7c3-6df3-48e5-9b8a-84105de6d846
 langcode: en
 status: true
 dependencies:
@@ -9,8 +8,42 @@ dependencies:
     - node.type.sector_news
   module:
     - datetime
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_threecol_section
+        layout_settings:
+          label: Body
+          context_mapping: {  }
+          column_widths: 25-50-25
+        components:
+          06a74260-d8dc-4a78-9424-daa49151fcd5:
+            uuid: 06a74260-d8dc-4a78-9424-daa49151fcd5
+            region: second
+            configuration:
+              id: 'field_block:node:sector_news:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_filter:
+                    format: '0'
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: node.sector_news.full
 targetEntityType: node
 bundle: sector_news
