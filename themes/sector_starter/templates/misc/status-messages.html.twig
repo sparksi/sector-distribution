@@ -10,11 +10,14 @@
   error: 'danger',
   info: 'info',
 } %}
-{% if message_list %}
-<div role="region" class="my-4 space-y-2 inline-block empty:hidden" {{ attributes|without('role', 'aria-label') }}>
+
 {% for type, messages in message_list %}
-    {% embed '@sector_starter/alert/alert.twig' with {
+  <div role="region" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
+    {% embed '@sector_base/alert/alert.twig' with {
       type: types[type],
+      libraries: [
+        'sector_starter/alert'
+      ]
     } %}
       {% block content %}
         {% if status_headings[type] %}
@@ -27,11 +30,9 @@
             {% endfor %}
           </ul>
         {% else %}
-          <p>{{ messages|first }}</p>
+          {{ messages|first }}
         {% endif %}
       {% endblock %}
     {% endembed %}
+  </div>
 {% endfor %}
-</div>
-{% endif %}
-{{ attach_library('sector_starter/alert')}}

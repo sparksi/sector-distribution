@@ -1427,10 +1427,6 @@ video {
   display: block;
 }
 
-.inline-block {
-  display: inline-block;
-}
-
 .flex {
   display: flex;
 }
@@ -6206,11 +6202,6 @@ video {
   padding-bottom: 1px;
 }
 
-.pe-10 {
-  -webkit-padding-end: 2.5rem;
-          padding-inline-end: 2.5rem;
-}
-
 .pe-16 {
   -webkit-padding-end: 4rem;
           padding-inline-end: 4rem;
@@ -7795,10 +7786,6 @@ video {
       max-width: 1536px;
     }
   }
-}
-
-.empty\:hidden:empty {
-  display: none;
 }
 
 .hover\:text-gray-700:hover {

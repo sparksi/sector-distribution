@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../src/components/alert/alert.ts"],
-  "sourcesContent": ["const root = document.querySelector('.canvas');\n\nDrupal.behaviors.alert = {\n  attach: (context, settings) => {\n    const dialogs = context.querySelectorAll('.alert--dismissible');\n\n    /*dialogs.forEach((dialog: HTMLDialogElement) => {\n            //dialog.showModal();\n            dialog.show();\n        });*/\n\n    dialogs.forEach((dialog: HTMLElement) => {\n      const close = dialog.querySelector('.alert__close');\n      if (close) {\n        close.addEventListener('click', (event: Event) => {\n          //dialog.close();\n          dialog.remove();\n        });\n      }\n    });\n  },\n};\n"],
-  "mappings": "AAAA,MAAM,OAAO,SAAS,cAAc,SAAS;AAE7C,OAAO,UAAU,QAAQ;AAAA,EACvB,QAAQ,CAAC,SAAS,aAAa;AAC7B,UAAM,UAAU,QAAQ,iBAAiB,qBAAqB;AAO9D,YAAQ,QAAQ,CAAC,WAAwB;AACvC,YAAM,QAAQ,OAAO,cAAc,eAAe;AAClD,UAAI,OAAO;AACT,cAAM,iBAAiB,SAAS,CAAC,UAAiB;AAEhD,iBAAO,OAAO;AAAA,QAChB,CAAC;AAAA,MACH;AAAA,IACF,CAAC;AAAA,EACH;AACF;",
-  "names": []
-}

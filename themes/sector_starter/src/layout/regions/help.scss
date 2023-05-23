@@ -1,7 +1,3 @@
-.help {
-  @apply bg-zinc-50 shadow-inner;
-
-  .region__container {
-    @apply space-y-3;
-  }
+.region:where(.help) {
+  @apply bg-zinc-50 shadow-inner py-4;
 }
