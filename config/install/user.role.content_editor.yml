@@ -2,8 +2,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.sector_news
-    - node.type.sector_page
     - taxonomy.vocabulary.tags
   module:
     - contextual
