@@ -10,6 +10,10 @@ base theme: sector
 'interface translation project': sector_starter
 'interface translation server pattern': 'themes/custom/sector_starter/translations/%language.po'
 
+features:
+  logo: false
+  favicon: false
+
 regions:
   notices: Notices
   header_pre: Header › Pre
