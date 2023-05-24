@@ -8,7 +8,7 @@ This is the Sector Distribution base theme, heavily influenced by the great [Rad
 3. [Components module](https://www.drupal.org/project/components)
 
 ## Creating a subtheme
-- Generate subtheme from the starter kit: `drush --include="profiles/contrib/sector-distribution/themes/sector" sector:create SUBTHEME NAME`
+- Generate subtheme from the starter kit: `drush --include="web/profiles/contrib/sector-distribution/themes/sector" sector:create SUBTHEME NAME`
 - Set as default theme: `drush en SUBTHEME_NAME -y; drush config-set system.theme default SUBTHEME_NAME -y`
 - Install required modules: `cd /web/themes/custom/SUBTHEME_NAME; pnpm install`
 
