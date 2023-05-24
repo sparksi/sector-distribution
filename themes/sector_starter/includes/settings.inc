@@ -40,7 +40,7 @@ function sector_starter_form_system_theme_settings_alter(&$form, &$form_state) {
       '#tags' => false,
       '#size' => 30,
       '#maxlength' => 1024,
-        '#default_value' => \Drupal\block_content\Entity\BlockContent::load(theme_get_setting('brand')) ?? null,
+      '#default_value' => theme_get_setting('brand') ? \Drupal\block_content\Entity\BlockContent::load(theme_get_setting('brand')) : null,
     );
 
 
