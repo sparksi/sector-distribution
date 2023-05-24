@@ -6,6 +6,8 @@ dependencies:
     - search_api.index.sector_content_sidewide
   module:
     - search_api
+_core:
+  default_config_hash: SV6YzjFfWIVWeQ5CwcD0fmR7iNRQukyRNQixty3GZX8
 id: sector_search_sitewide
 label: 'Sector › Search › Sitewide'
 module: views
@@ -336,6 +338,7 @@ display:
     position: 1
     display_options:
       display_description: 'Block that appears on /search'
+      exposed_block: true
       display_extenders: {  }
       block_description: 'Sector › Search › Sitewide'
     cache_metadata:

@@ -20,3 +20,32 @@ function sector_search_install() {
   $index = Index::load('sector_content_sidewide');
   $index->reindex();
 }
+
+/**
+ * Implements hook_ENTITY_TYPE_insert() for node entities.
+ */
+function sector_search_node_insert(EntityInterface $entity) {
+
+  switch ($entity->uuid()) {
+    case '3a7d8d6a-7573-411f-86dd-c7551c7d9d4f':
+      // find block
+      $block = Drupal\block\Entity\Block::load('views_block__sector_search_sitewide_sector_page');
+      if(!$block) {
+        return;
+      }
+
+      $block->setVisibilityConfig('request_path', array('id' => 'request_path',
+          'pages'=> '/node/' . $entity->id(),
+          'negate' => false,
+        )
+      );
+      $block->save();
+      $entity->set("path", ["pathauto" => TRUE]);
+      $entity->save();    // make sure alias is set up
+
+      \Drupal::logger('sector_default_content')->notice('Setting search view block to appear on #%nid', [
+        '%nid' => $entity->id(),
+      ]);
+    break;
+  }
+}
