@@ -1,5 +1,4 @@
 <?php
-use Drupal\search_api\Entity\Index;
 use Drupal\node\Entity\Node;
 use Drupal\Core\Entity\EntityInterface;
 
@@ -13,14 +12,6 @@ function sector_search_uninstall() {
   if($results_page) {
     $results_page->delete();
   }
-}
-
-/*
- * Implements hook_install()
- */
-function sector_search_install() {
-  $index = Index::load('sector_content_sidewide');
-  $index->reindex();
 }
 
 /**

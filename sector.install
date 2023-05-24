@@ -3,6 +3,7 @@
  * @file
  * Install, update and uninstall functions for the profilename install profile.
  */
+use Drupal\search_api\Entity\Index;
 
 /**
  * Implements hook_install_tasks().
@@ -17,6 +18,10 @@ function sector_install_tasks() {
       'display_name' => t('Sector copy default blocks to starter theme'),
       'type' => 'default',
     ],
+    'sector_search_api_index' => [
+      'display_name' => t('Build Search API index'),
+      'type' => 'default',
+    ]
   ];
 }
 
@@ -49,5 +54,13 @@ function sector_copy_default_blocks() {
     $child_block = $parent_block->createDuplicateBlock($new_id, $activeThemeName);
 
     $child_block->save();
+  }
+}
+
+
+function sector_search_api_index() {
+  $index = Index::load('sector_content_sidewide');
+  if($index) {
+    $index->reindex();
   }
 }
