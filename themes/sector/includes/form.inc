@@ -69,21 +69,7 @@ function sector_preprocess_form_element(&$variables) {
   }
 }
 
-/**
- * Implements hook_form_FORM_ID_alter().
- */
-function sector_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  // Update the placeholder and size of field.
-  $form['keys']['#title'] = '';
-  $form['keys']['#size'] = 20;
-  $form['keys']['#placeholder'] = t('Search');
-}
-
 function sector_form_alter(&$form, FormStateInterface $form_state) {
-  if (isset($form['actions']['submit']) && (count($form['actions'])) <= 2) {
-    $form['actions']['submit']['#attributes']['class'][] = 'btn btn-primary';
-  }
-
   if (isset($form['#attributes']['class'])) {
     $form['#attributes']['class'][] = 'needs-validation';
   }
@@ -92,7 +78,7 @@ function sector_form_alter(&$form, FormStateInterface $form_state) {
 }
 
 function validateForm(array &$form, FormStateInterface $form_state) {
-  if (!empty($form_state->getErrors())) { 
-    $form['#attributes']['class'][] = 'was-validated'; 
-  } 
+  if (!empty($form_state->getErrors())) {
+    $form['#attributes']['class'][] = 'was-validated';
+  }
 }
