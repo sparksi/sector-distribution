@@ -1,6 +1,7 @@
 <?php
 use Drupal\search_api\Entity\Index;
 use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityInterface;
 
 /*
  * Implements hook_uninstall()
