@@ -1,4 +1,3 @@
-uuid: 1f5d8816-db8e-4a2d-89a2-d34c2fd5d53a
 langcode: en
 status: true
 dependencies:
@@ -17,7 +16,7 @@ plugin: 'views_exposed_filter_block:sector_search_sitewide-sector_page'
 settings:
   id: 'views_exposed_filter_block:sector_search_sitewide-sector_page'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   views_label: 'Sector › Search › Exposed keyword filter'
 visibility: {  }
