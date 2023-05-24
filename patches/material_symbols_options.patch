@@ -1,0 +1,380 @@
+diff --git a/extlink.js b/extlink.js
+index 7d57dc9..a5ea1e3 100644
+--- a/extlink.js
++++ b/extlink.js
+@@ -3,7 +3,7 @@
+  * External links js file.
+  */
+ 
+-(function ($, Drupal, drupalSettings) {
++(function (Drupal, drupalSettings) {
+ 
+   'use strict';
+ 
+@@ -14,7 +14,7 @@
+       return;
+     }
+ 
+-    // Define the jQuery method (either 'append' or 'prepend') of placing the
++    // Define the method (either 'append' or 'prepend') of placing the
+     // icon, defaults to 'append'.
+     var extIconPlacement = 'append';
+     if (drupalSettings.data.extlink.extIconPlacement && drupalSettings.data.extlink.extIconPlacement != '0') {
+@@ -78,25 +78,25 @@
+     // to ftp://, javascript:, etc. other kinds of links.
+     // When operating on the 'this' variable, the host has been appended to
+     // all links by the browser, even local ones.
+-    // In jQuery 1.1 and higher, we'd use a filter method here, but it is not
+-    // available in jQuery 1.0 (Drupal 5 default).
+     var external_links = [];
+     var mailto_links = [];
+-    $('a:not([data-extlink]), area:not([data-extlink])', context).each(function (el) {
++    var extlinks = context.querySelectorAll('a:not([data-extlink]), area:not([data-extlink])');
++    extlinks.forEach(function (el) {
++
+       try {
+         var url = '';
+-        if (typeof this.href == 'string') {
+-          url = this.href.toLowerCase();
++        if (typeof el.href === 'string') {
++          url = el.href.toLowerCase();
+         }
+         // Handle SVG links (xlink:href).
+-        else if (typeof this.href == 'object') {
+-          url = this.href.baseVal;
++        else if (typeof el.href === 'object') {
++          url = el.href.baseVal;
+         }
+         if (url.indexOf('http') === 0
+           && ((!internal_link.test(url) && !(extExclude && extExclude.test(url))) || (extInclude && extInclude.test(url)))
+-          && !(extCssExclude && $(this).is(extCssExclude))
+-          && !(extCssExclude && $(this).parents(extCssExclude).length > 0)
+-          && !(extCssExplicit && $(this).parents(extCssExplicit).length < 1)) {
++          && !(extCssExclude && el.matches(extCssExclude))
++          && !(extCssExclude && el.closest(extCssExclude))
++          && !(extCssExplicit && !el.closest(extCssExplicit))) {
+           var match = false;
+           if (whitelistedDomains) {
+             for (var i = 0; i < whitelistedDomains.length; i++) {
+@@ -107,16 +107,16 @@
+             }
+           }
+           if (!match) {
+-            external_links.push(this);
++            external_links.push(el);
+           }
+         }
+         // Do not include area tags with begin with mailto: (this prohibits
+         // icons from being added to image-maps).
+-        else if (this.tagName !== 'AREA'
++        else if (el.tagName !== 'AREA'
+           && url.indexOf('mailto:') === 0
+-          && !(extCssExclude && $(this).parents(extCssExclude).length > 0)
+-          && !(extCssExplicit && $(this).parents(extCssExplicit).length < 1)) {
+-          mailto_links.push(this);
++          && !(extCssExclude && el.closest(extCssExclude))
++          && !(extCssExplicit && !el.closest(extCssExplicit))) {
++          mailto_links.push(el);
+         }
+       }
+       // IE7 throws errors often when dealing with irregular links, such as:
+@@ -137,39 +137,50 @@
+ 
+     if (drupalSettings.data.extlink.extTarget) {
+       // Apply the target attribute to all links.
+-      $(external_links).filter(function () {
++      external_links = external_links.filter(function (link) {
+         // Filter out links with target set if option specified.
+-        return !(drupalSettings.data.extlink.extTargetNoOverride && $(this).is('a[target]'));
+-      }).attr({target: '_blank'});
++        return !(drupalSettings.data.extlink.extTargetNoOverride && link.matches('a[target]'));
++      });
++
++      // Add target attr to open link in a new tab.
++      external_links.forEach(function(link, i) {
++        external_links[i].setAttribute('target', '_blank');
++      });
+ 
+       // Add noopener rel attribute to combat phishing.
+-      $(external_links).attr('rel', function (i, val) {
++      external_links.forEach(function (link, i) {
++        var val = link.getAttribute('rel');
+         // If no rel attribute is present, create one with the value noopener.
+         if (val === null || typeof val === 'undefined') {
+-          return 'noopener';
++          external_links[i].setAttribute('rel','noopener');
++          return;
+         }
+         // Check to see if rel contains noopener. Add what doesn't exist.
+         if (val.indexOf('noopener') > -1) {
+           if (val.indexOf('noopener') === -1) {
+-            return val + ' noopener';
++            // Add noopener.
++            external_links[i].setAttribute('rel',val + ' noopener');
+           }
+           // Noopener exists. Nothing needs to be added.
+           else {
+-            return val;
++            return;
+           }
+         }
+         // Else, append noopener to val.
+         else {
+-          return val + ' noopener';
++          // Add noopener.
++          external_links[i].setAttribute('rel', val + ' noopener');
+         }
+       });
+     }
+ 
+     if (drupalSettings.data.extlink.extNofollow) {
+-      $(external_links).attr('rel', function (i, val) {
++      external_links.forEach(function (link, i) {
++        var val = link.getAttribute('rel');
+         // When the link does not have a rel attribute set it to 'nofollow'.
+         if (val === null || typeof val === 'undefined') {
+-          return 'nofollow';
++          external_links[i].setAttribute('rel', 'nofollow');
++          return;
+         }
+         var target = 'nofollow';
+         // Change the target, if not overriding follow.
+@@ -177,22 +188,22 @@
+           target = 'follow';
+         }
+         if (val.indexOf(target) === -1) {
+-          return val + ' nofollow';
++          // Add nofollow.
++          external_links[i].setAttribute('rel',val + ' nofollow');
+         }
+-        return val;
+       });
+     }
+ 
+     if (drupalSettings.data.extlink.extNoreferrer) {
+-      $(external_links).attr('rel', function (i, val) {
++      external_links.forEach(function (link, i) {
++        var val = link.getAttribute('rel');
+         // When the link does not have a rel attribute set it to 'noreferrer'.
+         if (val === null || typeof val === 'undefined') {
+-          return 'noreferrer';
+-        }
+-        if (val.indexOf('noreferrer') === -1) {
+-          return val + ' noreferrer';
++          external_links[i].setAttribute('rel','noreferrer');
++          return;
+         }
+-        return val;
++        // Add nofollow.
++        external_links[i].setAttribute('rel', val + ' noreferrer');
+       });
+     }
+ 
+@@ -206,9 +217,14 @@
+       }
+     };
+ 
+-    $(external_links).off("click.extlink");
+-    $(external_links).on("click.extlink", function (e) {
+-      return Drupal.extlink.popupClickHandler(e, this);
++    var _that = this;
++    external_links.forEach(function (val, i) {
++      external_links[i].removeEventListener('click', function() {
++        return Drupal.extlink.popupClickHandler.call(_that);
++      });
++      external_links[i].addEventListener('click', function() {
++        return Drupal.extlink.popupClickHandler.call(_that);
++      });
+     });
+   };
+ 
+@@ -225,38 +241,69 @@
+   Drupal.extlink.applyClassAndSpan = function (links, class_name, icon_placement) {
+     var $links_to_process;
+     if (drupalSettings.data.extlink.extImgClass) {
+-      $links_to_process = $(links);
++      $links_to_process = links;
+     }
+     else {
+-      var links_with_images = $(links).find('img, svg').parents('a');
+-      $links_to_process = $(links).not(links_with_images);
+-    }
+-
+-    if (class_name !== '0') {
+-      $links_to_process.addClass(class_name);
++      // Only text links.
++      $links_to_process = links.filter(function (link) {
++        return link.querySelector('img, svg') === null;
++      });
+     }
+ 
+-    // Add data-extlink attribute.
+-    $links_to_process.attr('data-extlink', '');
+-
+     var i;
+     var length = $links_to_process.length;
+     for (i = 0; i < length; i++) {
+-      var $link = $($links_to_process[i]);
++
++      if (class_name !== '0') {
++        $links_to_process[i].classList.add(class_name);
++      }
++
++      // Add data-extlink attribute.
++      $links_to_process[i].setAttribute('data-extlink', '');
++
++      var $link = $links_to_process[i];
++      // Create an icon element.
++      var iconElement;
+       if (drupalSettings.data.extlink.extUseFontAwesome) {
++        iconElement = document.createElement('span');
++        iconElement.setAttribute('class', 'fa-' + class_name + ' extlink');
++        if (class_name === drupalSettings.data.extlink.mailtoClass) {
++          iconElement.innerHTML = '<span class="' + drupalSettings.data.extlink.extFaMailtoClasses + '" aria-label="' + drupalSettings.data.extlink.mailtoLabel + '"></span>';
++          $link[icon_placement](iconElement);
++        }
++        else {
++          iconElement.innerHTML = '<span class="' + drupalSettings.data.extlink.extFaLinkClasses + '" aria-label="' + drupalSettings.data.extlink.extLabel + '"></span>';
++          $link[icon_placement](iconElement);
++        }
++      }
++      else if (drupalSettings.data.extlink.extUseMaterialSymbols) {
++        iconElement = document.createElement('span');
++        iconElement.setAttribute('class', 'fa-' + class_name + ' extlink');
+         if (class_name === drupalSettings.data.extlink.mailtoClass) {
+-          $link[icon_placement]('<span class="fa-' + class_name + ' extlink"><span class="' + drupalSettings.data.extlink.extFaMailtoClasses + '" aria-label="' + drupalSettings.data.extlink.mailtoLabel + '"></span></span>');
++          iconElement.innerHTML = '<span class="' + drupalSettings.data.extlink.extFaMailtoClasses + '" aria-label="' + drupalSettings.data.extlink.mailtoLabel + '"></span>';
++          $link[icon_placement](iconElement);
+         }
+         else {
+-          $link[icon_placement]('<span class="fa-' + class_name + ' extlink"><span class="' + drupalSettings.data.extlink.extFaLinkClasses + '" aria-label="' + drupalSettings.data.extlink.extLabel + '"></span></span>');
++          iconElement.innerHTML = '<span class="' + drupalSettings.data.extlink.extMSLinkClasses + '" aria-label="' + drupalSettings.data.extlink.extLabel + '">' + (drupalSettings.data.extlink.extMSLinkContent || '') + '</span>';
++          $link[icon_placement](iconElement);
+         }
+       }
+       else {
++        iconElement = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
++        iconElement.setAttribute('focusable', 'false');
++        iconElement.classList.add(class_name);
++        iconElement.setAttribute('role', 'img');
+         if (class_name === drupalSettings.data.extlink.mailtoClass) {
+-          $link[icon_placement]('<svg focusable="false" class="' + class_name + '" role="img" aria-label="' + drupalSettings.data.extlink.mailtoLabel + '" xmlns="http://www.w3.org/2000/svg" viewBox="0 10 70 20"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><sliceSourceBounds y="-8160" x="-8165" width="16389" height="16384" bottomLeftOrigin="true"/><optimizationSettings><targetSettings targetSettingsID="0" fileFormat="PNG24Format"><PNG24Format transparency="true" filtered="false" interlaced="false" noMatteColor="false" matteColor="#FFFFFF"/></targetSettings></optimizationSettings></sfw></metadata><title>' + drupalSettings.data.extlink.mailtoLabel + '</title><path d="M56 14H8c-1.1 0-2 0.9-2 2v32c0 1.1 0.9 2 2 2h48c1.1 0 2-0.9 2-2V16C58 14.9 57.1 14 56 14zM50.5 18L32 33.4 13.5 18H50.5zM10 46V20.3l20.7 17.3C31.1 37.8 31.5 38 32 38s0.9-0.2 1.3-0.5L54 20.3V46H10z"/></svg>');
++          iconElement.setAttribute('aria-label', drupalSettings.data.extlink.mailtoLabel);
++          iconElement.setAttribute('viewBox', '0 10 70 20');
++          iconElement.innerHTML = '<metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><sliceSourceBounds y="-8160" x="-8165" width="16389" height="16384" bottomLeftOrigin="true"/><optimizationSettings><targetSettings targetSettingsID="0" fileFormat="PNG24Format"><PNG24Format transparency="true" filtered="false" interlaced="false" noMatteColor="false" matteColor="#FFFFFF"/></targetSettings></optimizationSettings></sfw></metadata><title>' + drupalSettings.data.extlink.mailtoLabel + '</title><path d="M56 14H8c-1.1 0-2 0.9-2 2v32c0 1.1 0.9 2 2 2h48c1.1 0 2-0.9 2-2V16C58 14.9 57.1 14 56 14zM50.5 18L32 33.4 13.5 18H50.5zM10 46V20.3l20.7 17.3C31.1 37.8 31.5 38 32 38s0.9-0.2 1.3-0.5L54 20.3V46H10z"/>';
++          $link[icon_placement](iconElement);
+         }
+         else {
+-          $link[icon_placement]('<svg focusable="false" class="' + class_name + '" role="img" aria-label="' + drupalSettings.data.extlink.extLabel + '" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 40"><metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><sliceSourceBounds y="-8160" x="-8165" width="16389" height="16384" bottomLeftOrigin="true"/><optimizationSettings><targetSettings targetSettingsID="0" fileFormat="PNG24Format"><PNG24Format transparency="true" filtered="false" interlaced="false" noMatteColor="false" matteColor="#FFFFFF"/></targetSettings></optimizationSettings></sfw></metadata><title>' + drupalSettings.data.extlink.extLabel + '</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"/><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"/></svg>');
++          iconElement.setAttribute('aria-label', drupalSettings.data.extlink.extLabel);
++          iconElement.setAttribute('viewBox', '0 0 80 40');
++          iconElement.innerHTML = '<metadata><sfw xmlns="http://ns.adobe.com/SaveForWeb/1.0/"><sliceSourceBounds y="-8160" x="-8165" width="16389" height="16384" bottomLeftOrigin="true"/><optimizationSettings><targetSettings targetSettingsID="0" fileFormat="PNG24Format"><PNG24Format transparency="true" filtered="false" interlaced="false" noMatteColor="false" matteColor="#FFFFFF"/></targetSettings></optimizationSettings></sfw></metadata><title>' + drupalSettings.data.extlink.extLabel + '</title><path d="M48 26c-1.1 0-2 0.9-2 2v26H10V18h26c1.1 0 2-0.9 2-2s-0.9-2-2-2H8c-1.1 0-2 0.9-2 2v40c0 1.1 0.9 2 2 2h40c1.1 0 2-0.9 2-2V28C50 26.9 49.1 26 48 26z"/><path d="M56 6H44c-1.1 0-2 0.9-2 2s0.9 2 2 2h7.2L30.6 30.6c-0.8 0.8-0.8 2 0 2.8C31 33.8 31.5 34 32 34s1-0.2 1.4-0.6L54 12.8V20c0 1.1 0.9 2 2 2s2-0.9 2-2V8C58 6.9 57.1 6 56 6z"/>';
++          $link[icon_placement](iconElement);
+         }
+       }
+     }
+@@ -274,4 +321,4 @@
+     }
+   };
+ 
+-})(jQuery, Drupal, drupalSettings);
++})(Drupal, drupalSettings);
+diff --git a/extlink.libraries.yml b/extlink.libraries.yml
+index eec416a..fd0396e 100644
+--- a/extlink.libraries.yml
++++ b/extlink.libraries.yml
+@@ -6,7 +6,6 @@ drupal.extlink:
+     theme:
+       extlink.css: { every_page: 1 }
+   dependencies:
+-    - core/jquery
+     - core/drupal
+     - core/drupalSettings
+ 
+diff --git a/extlink.module b/extlink.module
+index eef73b3..f692fcd 100644
+--- a/extlink.module
++++ b/extlink.module
+@@ -86,6 +86,10 @@ function _extlink_get_settings_from_config(Config $config) {
+   $fa_link_classes = $config->get('extlink_font_awesome_classes.links') ?: 'fa fa-external-link';
+   $fa_link_classes = array_map($callback, explode(' ', $fa_link_classes));
+ 
++  $ms_link_classes = $config->get('extlink_material_symbols_classes.links') ?: '';
++  $ms_link_classes = array_map($callback, explode(' ', $ms_link_classes));
++  $ms_link_content = $config->get('extlink_material_symbols_classes.text') ?: '';
++
+   $fa_mailto_classes = $config->get('extlink_font_awesome_classes.mailto') ?: 'fa fa-envelope-o';
+   $fa_mailto_classes = array_map($callback, explode(' ', $fa_mailto_classes));
+ 
+@@ -119,9 +123,12 @@ function _extlink_get_settings_from_config(Config $config) {
+     'mailtoClass'         => ((isset($settings['extlink_mailto_class'])) ? $settings['extlink_mailto_class'] : 'mailto'),
+     'mailtoLabel'         => ((isset($settings['extlink_mailto_label'])) ? Html::escape($settings['extlink_mailto_label']) : t('(link sends email)')),
+     'extUseFontAwesome'   => ((isset($settings['extlink_use_font_awesome'])) ? $settings['extlink_use_font_awesome'] : FALSE),
++    'extUseMaterialSymbols'   => ((isset($settings['extlink_use_material_symbols'])) ? $settings['extlink_use_material_symbols'] : FALSE),
+     'extIconPlacement'    => ((!empty($settings['extlink_icon_placement'])) ? $settings['extlink_icon_placement'] : 'append'),
+     'extFaLinkClasses'    => implode(' ', $fa_link_classes),
+     'extFaMailtoClasses'  => implode(' ', $fa_mailto_classes),
++    'extMSLinkClasses'    => implode(' ', $ms_link_classes),
++    'extMSLinkContent'    => $ms_link_content,
+     'whitelistedDomains'  => $config->get('whitelisted_domains'),
+   ];
+ }
+diff --git a/src/Form/ExtlinkAdminSettingsForm.php b/src/Form/ExtlinkAdminSettingsForm.php
+index 87e64ba..d922b8f 100644
+--- a/src/Form/ExtlinkAdminSettingsForm.php
++++ b/src/Form/ExtlinkAdminSettingsForm.php
+@@ -128,6 +128,44 @@ class ExtlinkAdminSettingsForm extends ConfigFormBase {
+       ],
+     ];
+ 
++    $form['extlink_use_material_symbols'] = [
++      '#type' => 'checkbox',
++      '#title' => $this->t('Use Material Symbols instead of images.'),
++      '#default_value' => $config->get('extlink_use_material_symbols', FALSE),
++      '#description' => $this->t('Add Material Symbols classes to the link as well as an i tag rather than images.'),
++    ];
++
++    $form['extlink_material_symbols_classes'] = [
++      '#type' => 'details',
++      '#title' => $this->t('Material symbols classes'),
++      '#tree' => TRUE,
++      '#states' => [
++        'visible' => [
++          ':input[name="extlink_use_material_symbols"]' => ['checked' => TRUE],
++        ],
++      ],
++    ];
++    $form['extlink_material_symbols_classes']['links'] = [
++      '#type' => 'textfield',
++      '#title' => $this->t('Material symbols classes'),
++      '#default_value' => $config->get('extlink_material_symbols_classes.links') ?: 'material-symbols-sharp',
++      '#states' => [
++        'visible' => [
++          ':input[name="extlink_use_material_symbols"]' => ['checked' => TRUE],
++        ],
++      ],
++    ];
++    $form['extlink_material_symbols_classes']['text'] = [
++      '#type' => 'textfield',
++      '#title' => $this->t('Material symbols icon'),
++      '#default_value' => $config->get('extlink_material_symbols_classes.text') ?: 'open_in_new',
++      '#states' => [
++        'visible' => [
++          ':input[name="extlink_use_material_symbols"]' => ['checked' => TRUE],
++        ],
++      ],
++    ];
++
+     $form['extlink_icon_placement'] = [
+       '#type' => 'select',
+       '#title' => $this->t('Where to place icon in reference to link.'),
+@@ -331,6 +369,9 @@ class ExtlinkAdminSettingsForm extends ConfigFormBase {
+       ->set('extlink_use_font_awesome', $values['extlink_use_font_awesome'])
+       ->set('extlink_font_awesome_classes.links', $values['extlink_font_awesome_classes']['links'])
+       ->set('extlink_font_awesome_classes.mailto', $values['extlink_font_awesome_classes']['mailto'])
++      ->set('extlink_use_material_symbols', $values['extlink_use_material_symbols'])
++      ->set('extlink_material_symbols_classes.text', $values['extlink_material_symbols_classes']['text'])
++      ->set('extlink_material_symbols_classes.links', $values['extlink_material_symbols_classes']['links'])
+       ->set('whitelisted_domains', $whitelisted_domains)
+       ->save();
+ 

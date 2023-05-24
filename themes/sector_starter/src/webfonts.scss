@@ -1,6 +1,11 @@
 @use 'sass:map';
 @use 'sass:list';
 
+@import '@material-symbols/font-400/core';
+
+$material-symbols-font-path: './fonts/';
+@include material-symbols-font('Material Symbols Sharp');
+
 $font-library: (
   'FjallaOne': (
     /*"-SemiBold": (style: normal,

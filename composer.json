@@ -101,6 +101,9 @@
             },
             "drupal/entity_usage": {
                 "Better tracking per entity": "https://www.drupal.org/files/issues/2020-06-16/per-node-tracking_3151920_4.patch"
+            },
+            "drupal/extlink": {
+                "Remove jQuery dependency & provide material symbols options": "https://www.drupal.org/files/issues/2023-05-25/material_symbols_options.patch"
             }
         }
     },

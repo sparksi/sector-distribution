@@ -10,7 +10,7 @@ import { mkdir, rm } from 'node:fs';
 import * as esbuild from 'esbuild';
 
 import outputFile from 'output-file';
-import { fonts } from './fonts.js';
+import { fonts, materialSymbolsFont } from './fonts.js';
 
 export const css = async (source, destination, env) => {
   const pre = await sass
@@ -86,6 +86,7 @@ export const process = async (path, env = 'production') => {
     case '.woff2':
     case '.ttf':
       await fonts(props, dest);
+      await materialSymbolsFont(dest);
       break;
     default:
       //console.log(props.ext)

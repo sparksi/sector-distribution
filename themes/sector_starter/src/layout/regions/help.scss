@@ -1,5 +1,5 @@
 .region:where(.help) {
-  @apply bg-zinc-50 shadow-inner;
+  @apply bg-zinc-50 dark:bg-zinc-800 shadow-inner;
 
   .region__container {
     @apply py-5;
