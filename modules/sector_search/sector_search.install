@@ -1,5 +1,6 @@
 <?php
 use Drupal\search_api\Entity\Index;
+use Drupal\node\Entity\Node;
 
 /*
  * Implements hook_uninstall()
@@ -40,8 +41,10 @@ function sector_search_node_insert(EntityInterface $entity) {
         )
       );
       $block->save();
-      $entity->set("path", ["pathauto" => TRUE]);
-      $entity->save();    // make sure alias is set up
+
+      $node = Node::load($entity->id());
+      $node->set("path", ["pathauto" => TRUE]);
+      $node->save();    // make sure alias is set up
 
       \Drupal::logger('sector_default_content')->notice('Setting search view block to appear on #%nid', [
         '%nid' => $entity->id(),
