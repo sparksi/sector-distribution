@@ -5,6 +5,8 @@ namespace Drupal\sector;
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\node\Entity\Node;
+use Drupal\search_api\Entity\Index;
 
 class SectorInstallHelpers implements ContainerInjectionInterface {
 
@@ -25,12 +27,18 @@ class SectorInstallHelpers implements ContainerInjectionInterface {
     );
   }
 
-  public function addAntibotConfig() {
-    $key = 'form_ids';
-    $antibotConfig = $this->configFactory->getEditable('antibot.settings');
-    $formIds = $antibotConfig->get($key);
-    $formIds[] = 'webform_submission_*';
-    $antibotConfig->set($key, $formIds)
-      ->save();
+  public static function regenerateNodeAliases() {
+    $nodes = Node::loadMultiple();
+    $pathautoGenerator = \Drupal::service('pathauto.generator');
+    foreach ($nodes as $node) {
+      $pathautoGenerator->updateEntityAlias($node, 'insert');
+    }
+  }
+
+  public static function buildSearchIndex($indexName) {
+    $index = Index::load($indexName);
+    if($index) {
+      $index->indexItems();
+    }
   }
 }

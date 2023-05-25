@@ -3,7 +3,9 @@
  * @file
  * Install, update and uninstall functions for the profilename install profile.
  */
-use Drupal\search_api\Entity\Index;
+//use Drupal\search_api\Entity\Index;
+//use Drupal\node\Entity\Node;
+use Drupal\sector\SectorInstallHelpers;
 
 /**
  * Implements hook_install_tasks().
@@ -16,6 +18,10 @@ function sector_install_tasks() {
     ],
     'sector_copy_default_blocks' => [
       'display_name' => t('Sector copy default blocks to starter theme'),
+      'type' => 'default',
+    ],
+    'sector_regenerate_node_aliases' => [
+      'display_name' => t('Rebuild node aliases from new pathauto configuration'),
       'type' => 'default',
     ],
     'sector_search_api_index' => [
@@ -59,8 +65,9 @@ function sector_copy_default_blocks() {
 
 
 function sector_search_api_index() {
-  $index = Index::load('sector_content_sidewide');
-  if($index) {
-    $index->indexItems();
-  }
+  SectorInstallHelpers::buildSearchIndex('sector_content_sidewide');
+}
+
+function sector_regenerate_node_aliases() {
+  SectorInstallHelpers::regenerateNodeAliases();
 }
