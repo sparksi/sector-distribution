@@ -1,5 +1,13 @@
 .footer-post {
   @apply bg-zinc-900 text-white;
+
+  .region__container {
+    @apply flex flex-wrap justify-between py-4;
+  }
+
+  .region--footer + & .region__container {
+    @apply border-t border-zinc-800;
+  }
 }
 
 .footer-post .prose {

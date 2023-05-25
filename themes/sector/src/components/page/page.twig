@@ -10,9 +10,9 @@
 
 {%
 set layout_classes = [
-'page',
-'canvas',
-page.isPublishedClass,
+  'page',
+  'canvas',
+  page.isPublishedClass,
   (page.content_prefix|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'page--has-content-prefix' : '',
   (page.content_suffix|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'page--has-content-suffix' : ''
 ]
@@ -21,7 +21,7 @@ page.isPublishedClass,
 <div {{ content_attributes.addClass(layout_classes) }}>
 
     {% if page.notices %}
-      <div class="page_notices">
+      <div class="region region--notices notices">
         <div class="region__container">
           {{ page.notices }}
         </div>
@@ -29,21 +29,21 @@ page.isPublishedClass,
     {% endif %}
 
     {% if page.header_pre %}
-      <div class="page__header header-pre">
+      <div class="region region--header header-pre">
         <div class="region__container">
           {{ page.header_pre }}
         </div>
       </div>
     {% endif %}
     {% if page.header %}
-      <header class="page__header header" role="banner">
+      <header class="region region--header header" role="banner">
         <div class="region__container">
           {{ page.header }}
         </div>
       </header>
     {% endif %}
     {% if page.header_post %}
-      <div class="page__header header-post">
+      <div class="region region--header header-post">
         <div class="region__container">
           {{ page.header_post }}
         </div>
@@ -51,21 +51,21 @@ page.isPublishedClass,
     {% endif %}
 
     {% if page.hero_pre %}
-      <div class="page__hero hero-pre">
+      <div class="region region--hero hero-pre">
         <div class="region__container">
           {{ page.hero_pre }}
         </div>
       </div>
     {% endif %}
     {% if page.hero %}
-      <div class="page__hero hero">
+      <div class="region region--hero hero">
         <div class="region__container">
           {{ page.hero }}
         </div>
       </div>
     {% endif %}
     {% if page.hero_post %}
-      <div class="page__hero hero-post">
+      <div class="region region--hero hero-post">
         <div class="region__container">
           {{ page.hero_post }}
         </div>
@@ -83,7 +83,7 @@ page.isPublishedClass,
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     {% if page.content_pre %}
-      <div class="page__content content-pre">
+      <div class="region region--content content-pre">
         <div class="region__container">
           {{ page.content_pre }}
         </div>
@@ -91,7 +91,7 @@ page.isPublishedClass,
     {% endif %}
 
     {% if page.content %}
-      <main class="page__content content">
+      <main class="region region--content content">
         <div class="region__container">
           {{ page.content }}
         </div>
@@ -99,7 +99,7 @@ page.isPublishedClass,
     {% endif %}
 
     {% if page.content_prefix %}
-      <aside role="complementary" class="page__content content-prefix">
+      <aside role="complementary" class="region region--content content-prefix">
         <div class="region__container">
           {{ page.content_prefix }}
         </div>
@@ -107,7 +107,7 @@ page.isPublishedClass,
     {% endif %}
 
     {% if page.content_suffix %}
-      <aside role="complementary" class="page__content content-suffix">
+      <aside role="complementary" class="region region--content content-suffix">
         <div class="region__container">
           {{ page.content_suffix }}
         </div>
@@ -116,7 +116,7 @@ page.isPublishedClass,
 
 
     {% if page.content_post %}
-      <div class="page__content content-post">
+      <div class="region region--content content-post">
         <div class="region__container">
           {{ page.content_post }}
         </div>
@@ -124,24 +124,25 @@ page.isPublishedClass,
     {% endif %}
 
   {% if page.footer_pre %}
-    <div class="page__footer footer-pre">
+    <div class="region region--footer footer-pre">
       <div class="region__container">
         {{ page.footer_pre }}
       </div>
     </footer>
   {% endif %}
   {% if page.footer %}
-    <footer class="page__footer footer">
+    <footer class="region region--footer footer" aria-labelledby="footer-heading">
+      <h2 id="footer-heading" class="sr-only">Footer</h2>
       <div class="region__container">
         {{ page.footer }}
       </div>
     </footer>
   {% endif %}
   {% if page.footer_post %}
-    <footer class="page__footer footer-post">
+    <div class="region region--footer footer-post">
       <div class="region__container">
         {{ page.footer_post }}
       </div>
-    </footer>
+    </div>
   {% endif %}
 </div>
