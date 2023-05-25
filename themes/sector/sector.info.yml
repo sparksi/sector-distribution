@@ -36,6 +36,7 @@ components:
   namespaces:
     sector_base:
       - ./src/components
+      - ./src/layout
 
 libraries-override:
   system/base:
