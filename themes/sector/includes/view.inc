@@ -47,7 +47,8 @@ function sector_form_views_exposed_form_alter(&$form, \Drupal\Core\Form\FormStat
       if ($form['#id'] === 'views-exposed-form-sector-search-sitewide-sector-page') {
         if (isset($form['query'])) {
           $form['#action'] = '/search';
-          $form['query']['#attributes'] = [...(array)$form['query']['#attributes'], ...[
+          $attributes = $form['query']['#attributes'] ?? [];
+          $form['query']['#attributes'] = [...$attributes, ...[
             'required' => 'required',
             'type' => 'search',
             'inputmode' => 'search',
