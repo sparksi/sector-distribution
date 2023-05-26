@@ -4,7 +4,6 @@ description: Provides the default content
 package: Sector
 core_version_requirement: ^10
 dependencies:
-  - sector:sector_media
   - drupal:menu_link_content
   - default_content:default_content
 
