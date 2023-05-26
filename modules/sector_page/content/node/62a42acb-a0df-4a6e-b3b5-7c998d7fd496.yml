@@ -45,7 +45,7 @@ default:
   body:
     -
       value: '<p class="lead">Sector''s simple layout templates use site builder tools and Drupal taxonomies to keep displays modular and consistent across your site.</p><p>Coming soon …</p>'
-      format: basic_html
+      format: sector_basic_html
       summary: ''
   field_display_options:
     -

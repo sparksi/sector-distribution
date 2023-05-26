@@ -45,7 +45,7 @@ default:
   body:
     -
       value: '<p class="lead">The sitemap is built from a Drupal menu block and a node of the content type page assigned to the footer menu.</p><p>In this example a Drupal menu block based on the main menu is embedded into a node of the content type page.</p><p>{Sample content}</p>'
-      format: basic_html
+      format: sector_basic_html
       summary: ''
   field_display_options:
     -

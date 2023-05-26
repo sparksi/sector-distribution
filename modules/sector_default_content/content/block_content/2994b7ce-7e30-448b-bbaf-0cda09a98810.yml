@@ -20,5 +20,5 @@ default:
   body:
     -
       value: '<p>© Sector 2018-2023</p>'
-      format: basic_html
+      format: sector_basic_html
       summary: ''
