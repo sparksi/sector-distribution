@@ -1,7 +1,10 @@
+uuid: e61cea4d-8d23-480f-b179-ab6bb10a4872
 langcode: en
 status: true
 dependencies: {  }
-name: 'Restricted Basic HTML (Sector)'
+_core:
+  default_config_hash: 36evQ7PTsd2Lxo0xKAnpErfOFjNTyvqi5g0Oe5S5xBs
+name: 'Sector › Basic HTML (Restricted)'
 format: sector_restricted_basic_html
 weight: 0
 filters:

@@ -1,3 +1,4 @@
+uuid: d9d21a7f-1da0-447d-844d-be6978c30ac7
 langcode: en
 status: true
 dependencies:
@@ -5,6 +6,8 @@ dependencies:
     - filter.format.sector_restricted_basic_html
   module:
     - ckeditor5
+_core:
+  default_config_hash: 8_rTOGDZ01OsBs9rYue2XkRy56tlx8p46G8o_FwKvbs
 format: sector_restricted_basic_html
 editor: ckeditor5
 settings:

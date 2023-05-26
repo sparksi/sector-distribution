@@ -1,0 +1,57 @@
+uuid: dad0c46d-412a-4590-a834-2700dd430056
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.sector_2_sm
+    - core.entity_view_mode.media.sector_3_md
+    - core.entity_view_mode.media.sector_4_lg
+  module:
+    - linkit
+    - media
+name: 'Sector › Basic HTML'
+format: sector_basic_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <a hreflang href data-entity-type data-entity-uuid data-entity-substitution> <blockquote cite> <ul type> <ol type reversed start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: full
+      allowed_view_modes:
+        full: full
+        sector_2_sm: sector_2_sm
+        sector_3_md: sector_3_md
+        sector_4_lg: sector_4_lg
+      allowed_media_types:
+        audio: audio
+        document: document
+        image: image
+        remote_video: remote_video
+        vector: vector
+        video: video
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }

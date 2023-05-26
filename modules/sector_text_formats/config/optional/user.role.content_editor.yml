@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - filter.format.basic_html
+    - filter.format.sector_basic_html
     - filter.format.sector_restricted_basic_html
-    - node.type.article
-    - node.type.page
+    - node.type.sector_news
+    - node.type.sector_page
     - taxonomy.vocabulary.tags
   module:
     - contextual
@@ -27,19 +27,19 @@ permissions:
   - 'access files overview'
   - 'access toolbar'
   - 'administer url aliases'
-  - 'create article content'
-  - 'create page content'
+  - 'create sector_news content'
+  - 'create sector_page content'
   - 'create terms in tags'
   - 'create url aliases'
-  - 'delete article revisions'
-  - 'delete own article content'
-  - 'delete own page content'
-  - 'delete page revisions'
-  - 'edit own article content'
-  - 'edit own page content'
+  - 'delete own sector_news content'
+  - 'delete own sector_page content'
+  - 'delete sector_news revisions'
+  - 'delete sector_page revisions'
+  - 'edit own sector_news content'
+  - 'edit own sector_page content'
   - 'edit terms in tags'
   - 'revert all revisions'
-  - 'use text format basic_html'
+  - 'use text format sector_basic_html'
   - 'use text format sector_restricted_basic_html'
   - 'view all revisions'
   - 'view own unpublished content'

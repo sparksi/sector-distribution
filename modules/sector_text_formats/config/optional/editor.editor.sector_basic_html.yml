@@ -1,0 +1,64 @@
+uuid: 746e8024-f7b6-42bf-9fb7-e69b5278d85e
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.sector_basic_html
+  module:
+    - ckeditor5
+format: sector_basic_html
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - undo
+      - redo
+      - heading
+      - link
+      - bold
+      - italic
+      - strikethrough
+      - bulletedList
+      - numberedList
+      - blockQuote
+      - superscript
+      - subscript
+      - '|'
+      - insertTable
+      - horizontalLine
+      - drupalMedia
+      - sourceEditing
+  plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<cite>'
+        - '<dl>'
+        - '<dt>'
+        - '<dd>'
+        - '<span>'
+        - '<a hreflang>'
+        - '<blockquote cite>'
+        - '<ul type>'
+        - '<ol type>'
+        - '<img src alt height width data-entity-type data-entity-uuid data-align data-caption>'
+        - '<h2 id>'
+        - '<h3 id>'
+        - '<h4 id>'
+        - '<h5 id>'
+        - '<h6 id>'
+    linkit_extension:
+      linkit_enabled: true
+      linkit_profile: default
+    media_media:
+      allow_view_mode_override: false
+image_upload: {  }
