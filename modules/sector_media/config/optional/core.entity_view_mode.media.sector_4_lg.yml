@@ -1,0 +1,10 @@
+uuid: a5708677-525b-4783-84bc-a2d72a5f67c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.sector_4_lg
+label: 'Sector › LG'
+targetEntityType: media
+cache: true

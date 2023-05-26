@@ -1,11 +1,17 @@
+uuid: fed343fa-4879-4f47-b6f3-177ffc308d82
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.sector_2_sm
+    - core.entity_view_mode.media.sector_3_md
+    - core.entity_view_mode.media.sector_4_lg
   module:
     - editor
     - media
+_core:
+  default_config_hash: K1aUJuGSENlOkaYSKKNwr9Z60lN8MQdUEQZiQOSRWa4
 name: 'Basic HTML'
 format: basic_html
 weight: 0
@@ -16,7 +22,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <span class="highlight"> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol type start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <drupal-media data-entity-type data-entity-uuid alt data-caption data-align>'
+      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <span class="highlight"> <cite> <dl> <dt> <dd> <a hreflang href> <blockquote cite> <ul type> <ol type start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-caption data-align>'
       filter_html_help: false
       filter_html_nofollow: false
   filter_align:
@@ -52,6 +58,9 @@ filters:
       default_view_mode: full
       allowed_view_modes:
         full: full
+        sector_2_sm: sector_2_sm
+        sector_3_md: sector_3_md
+        sector_4_lg: sector_4_lg
       allowed_media_types:
         document: document
         image: image

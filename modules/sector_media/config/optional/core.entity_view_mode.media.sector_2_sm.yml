@@ -1,0 +1,10 @@
+uuid: 71ff2f71-6a49-4611-bec9-d3437cc16a77
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.sector_2_sm
+label: 'Sector › SM'
+targetEntityType: media
+cache: true

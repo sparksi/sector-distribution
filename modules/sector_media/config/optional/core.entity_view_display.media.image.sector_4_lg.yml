@@ -1,41 +1,41 @@
-uuid: d5fcdc1d-0c9c-48da-8c31-4a36f2307d42
+uuid: aa92f2cf-23fb-43b9-94ad-4986ac784bed
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.sector_4_lg
     - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
-    - image.style.lg
     - media.type.image
+    - responsive_image.styles.lg
   module:
-    - svg_image
+    - layout_builder
+    - responsive_image
     - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: Qn2topPcM0T6adfUaMVj1swDGcWR9UULzquCk-0autY
-id: media.image.default
+id: media.image.sector_4_lg
 targetEntityType: media
 bundle: image
-mode: default
+mode: sector_4_lg
 content:
   field_caption:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
   field_media_image:
-    type: image
-    label: visually_hidden
+    type: responsive_image
+    label: hidden
     settings:
+      responsive_image_style: lg
       image_link: ''
-      image_style: lg
-      image_loading:
-        attribute: lazy
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
     third_party_settings: {  }
     weight: 1
     region: content
