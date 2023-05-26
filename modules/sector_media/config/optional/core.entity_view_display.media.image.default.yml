@@ -2,22 +2,31 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_caption
     - field.field.media.image.field_media_image
     - image.style.lg
     - media.type.image
   module:
-    - image
+    - svg_image
+    - text
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
+  field_caption:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
   field_media_image:
     type: image
     label: visually_hidden
     settings:
-      image_style: lg
       image_link: ''
+      image_style: lg
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -25,6 +34,7 @@ content:
     region: content
 hidden:
   created: true
+  name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true
-  name: true

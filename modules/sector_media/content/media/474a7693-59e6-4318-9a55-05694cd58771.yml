@@ -1,11 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: media
-  uuid: 69dbfcde-0249-4006-af2c-2d5e3d43c202
-  bundle: document
+  uuid: 474a7693-59e6-4318-9a55-05694cd58771
+  bundle: image
   default_langcode: en
   depends:
-    c7584ae9-cd47-4f9a-ace6-f76c6238d1ca: file
+    58025887-43d9-4865-8635-09e1139d0d0d: file
 default:
   revision_user:
     -
@@ -18,10 +18,10 @@ default:
       target_id: 1
   name:
     -
-      value: sample-file.pdf
+      value: placeholder.jpg
   created:
     -
-      value: 1683863126
+      value: 1685075447
   revision_translation_affected:
     -
       value: true
@@ -32,10 +32,12 @@ default:
       pathauto: 0
   field_caption:
     -
-      value: '<p>A brief description of the attached file.</p>'
+      value: '<p>Black background, white text reading Placeholder</p>'
       format: sector_restricted_basic_html
-  field_media_document:
+  field_media_image:
     -
-      entity: c7584ae9-cd47-4f9a-ace6-f76c6238d1ca
-      display: true
-      description: ''
+      entity: 58025887-43d9-4865-8635-09e1139d0d0d
+      alt: 'Placeholder image'
+      title: ''
+      width: 2000
+      height: 1400
