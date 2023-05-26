@@ -1,4 +1,3 @@
-uuid: fed343fa-4879-4f47-b6f3-177ffc308d82
 langcode: en
 status: true
 dependencies:
@@ -10,8 +9,6 @@ dependencies:
   module:
     - editor
     - media
-_core:
-  default_config_hash: K1aUJuGSENlOkaYSKKNwr9Z60lN8MQdUEQZiQOSRWa4
 name: 'Basic HTML'
 format: basic_html
 weight: 0
