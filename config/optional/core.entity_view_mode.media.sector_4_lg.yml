@@ -1,10 +1,9 @@
-uuid: 64520808-45f1-4344-8afe-94492bf28ad3
 langcode: en
 status: true
 dependencies:
   module:
     - media
-id: media.sector_3_md
-label: 'Sector › MD'
+id: media.sector_4_lg
+label: 'Sector › LG'
 targetEntityType: media
 cache: true
