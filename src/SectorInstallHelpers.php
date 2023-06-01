@@ -38,6 +38,7 @@ class SectorInstallHelpers implements ContainerInjectionInterface {
       $pathautoGenerator->updateEntityAlias($node, 'insert');
       if ($user) {
         $node->setOwnerId($user->id());
+        $node->save();
       }
     }
   }
