@@ -1,0 +1,5 @@
+name: Sector Users
+type: module
+description: Provides user roles, default users for Sector.
+package: Sector
+core_version_requirement: ^10

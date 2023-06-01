@@ -30,8 +30,15 @@ class SectorInstallHelpers implements ContainerInjectionInterface {
   public static function regenerateNodeAliases() {
     $nodes = Node::loadMultiple();
     $pathautoGenerator = \Drupal::service('pathauto.generator');
+
+    // Set author to be Robot.
+    $user = user_load_by_name('Robot');
+
     foreach ($nodes as $node) {
       $pathautoGenerator->updateEntityAlias($node, 'insert');
+      if ($user) {
+        $node->setOwnerId($user->id());
+      }
     }
   }
 
