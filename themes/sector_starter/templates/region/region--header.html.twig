@@ -1,3 +1,10 @@
-{% include '@sector_base/region/header.twig' with {
-    libraries: ['sector_starter/' ~ region|clean_class ]
+{% include '@sector_base/region/region.twig' with {
+    wrapper: 'header',
+    label: 'Header',
+    attributes: attributes.setAttribute('role', 'banner'),
+    libraries: ['sector_starter/' ~ region|clean_class ],
+    utility_classes: [ 'bg-white', 'shadow', 'dark:bg-zinc-900' ],
+    container__attributes: {
+        class: []
+    }
 } %}

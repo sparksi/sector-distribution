@@ -21,128 +21,64 @@ set layout_classes = [
 <div {{ content_attributes.addClass(layout_classes) }}>
 
     {% if page.notices %}
-      <div class="region region--notices notices">
-        <div class="region__container">
-          {{ page.notices }}
-        </div>
-      </div>
+      {{ page.notices }}
     {% endif %}
 
     {% if page.header_pre %}
-      <div class="region region--header header-pre">
-        <div class="region__container">
-          {{ page.header_pre }}
-        </div>
-      </div>
+      {{ page.header_pre }}
     {% endif %}
     {% if page.header %}
-      <header class="region region--header header" role="banner">
-        <div class="region__container">
-          {{ page.header }}
-        </div>
-      </header>
+      {{ page.header }}
     {% endif %}
     {% if page.header_post %}
-      <div class="region region--header header-post">
-        <div class="region__container">
-          {{ page.header_post }}
-        </div>
-      </div>
+      {{ page.header_post }}
     {% endif %}
 
     {% if page.hero_pre %}
-      <div class="region region--hero hero-pre">
-        <div class="region__container">
-          {{ page.hero_pre }}
-        </div>
-      </div>
+      {{ page.hero_pre }}
     {% endif %}
     {% if page.hero %}
-      <div class="region region--hero hero">
-        <div class="region__container">
-          {{ page.hero }}
-        </div>
-      </div>
+      {{ page.hero }}
     {% endif %}
     {% if page.hero_post %}
-      <div class="region region--hero hero-post">
-        <div class="region__container">
-          {{ page.hero_post }}
-        </div>
-      </div>
+      {{ page.hero_post }}
     {% endif %}
 
     {% if page.help %}
-      <div class="region help">
-        <div class="region__container">
-          {{ page.help }}
-        </div>
-      </div>
+      {{ page.help }}
     {% endif %}
 
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
     {% if page.content_pre %}
-      <div class="region region--content content-pre">
-        <div class="region__container">
-          {{ page.content_pre }}
-        </div>
-      </div>
+      {{ page.content_pre }}
     {% endif %}
 
     {% if page.content %}
-      <main class="region region--content content">
-        <div class="region__container">
-          {{ page.content }}
-        </div>
-      </main>
+      {{ page.content }}
     {% endif %}
 
     {% if page.content_prefix %}
-      <aside role="complementary" class="region region--content content-prefix">
-        <div class="region__container">
-          {{ page.content_prefix }}
-        </div>
-      </aside>
+      {{ page.content_prefix }}
     {% endif %}
 
     {% if page.content_suffix %}
-      <aside role="complementary" class="region region--content content-suffix">
-        <div class="region__container">
-          {{ page.content_suffix }}
-        </div>
-      </aside>
+      {{ page.content_suffix }}
     {% endif %}
 
 
     {% if page.content_post %}
-      <div class="region region--content content-post">
-        <div class="region__container">
-          {{ page.content_post }}
-        </div>
-      </div>
+      {{ page.content_post }}
     {% endif %}
 
+  {# Footer regions #}
   {% if page.footer_pre %}
-    <div class="region region--footer footer-pre">
-      <div class="region__container">
-        {{ page.footer_pre }}
-      </div>
-    </footer>
+    {{ page.footer_pre }}
   {% endif %}
   {% if page.footer %}
-    <footer class="region region--footer footer" aria-labelledby="footer-heading">
-      <h2 id="footer-heading" class="sr-only">Footer</h2>
-      <div class="region__container">
-        {{ page.footer }}
-      </div>
-    </footer>
+    {{ page.footer }}
   {% endif %}
   {% if page.footer_post %}
-    <div class="region region--footer footer-post">
-      <div class="region__container">
-        {{ page.footer_post }}
-      </div>
-    </div>
+    {{ page.footer_post }}
   {% endif %}
 </div>

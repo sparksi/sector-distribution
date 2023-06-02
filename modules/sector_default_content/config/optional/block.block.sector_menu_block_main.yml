@@ -5,8 +5,12 @@ dependencies:
     - system.menu.sector-main-menu
   module:
     - menu_block
+    - block_class
   theme:
     - sector
+third_party_settings:
+  block_class:
+    classes: 'lg:ml-auto'
 id: sector_menu_block_main
 theme: sector
 region: header

@@ -1,0 +1,3 @@
+.navigation {
+    @apply text-sm flex flex-wrap gap-x-[var(--menu-item-gap,theme(space.8))];
+}

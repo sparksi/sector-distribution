@@ -6,6 +6,7 @@ core_version_requirement: ^10
 dependencies:
   - drupal:menu_link_content
   - default_content:default_content
+  - block_class:block_class
 
 default_content:
   block_content:
