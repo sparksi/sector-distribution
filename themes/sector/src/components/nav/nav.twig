@@ -24,6 +24,7 @@
           item.is_expanded and item.below ? 'dropdown'
         ] %}
         {% set nav_link_classes = ['menu__link'] %}
+        {% set aria_current = item.is_expanded and item.below ? 'page' : null %}
         {% if item.url.options.attributes.class is iterable %}
           {% set nav_link_classes = nav_link_classes|merge(item.url.options.attributes.class) %}
         {% elseif item.url.options.attributes.class %}
@@ -31,9 +32,14 @@
         {% endif %}
         <li{{ item.attributes.addClass(nav_item_classes) }}>
           {% if item.is_expanded and item.below %}
-            {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['dropdown-toggle']), 'data-bs-toggle': 'dropdown' }) }}
+            <button type="button" aria-expanded="false" class="menu__toggle" aria-controls="{{ 'menu-controls-' ~ item.title|clean_class }}">
+              {{ item.title }}
+              <span class="material-symbols-sharp" aria-hidden="true">expand_more</span>
+            </button>
+            {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['menu__toggle']), 'aria-current': aria_current }) }}
             {% if item.below %}
               {% include '@sector_base/dropdown/dropdown-menu.twig' with {
+                id: 'menu-controls-' ~ item.title|clean_class,
                 items: item.below
               } %}
             {% endif %}
