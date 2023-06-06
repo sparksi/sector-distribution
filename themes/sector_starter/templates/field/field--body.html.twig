@@ -1,1 +1,9 @@
-{% include "@sector_starter/prose/prose.twig" %}
+{% include "@sector_base/prose/prose.twig" with {
+    utility_classes: [
+
+    ],
+    container: '@container/prose',
+    libraries: [
+        'sector_starter/prose'
+    ]
+} %}

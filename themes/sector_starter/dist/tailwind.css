@@ -7992,6 +7992,21 @@ video {
   --tw-ring-opacity: 0.05;
 }
 
+.\@container\/breadcrumb {
+  container-type: inline-size;
+  container-name: breadcrumb;
+}
+
+.\@container\/navigation {
+  container-type: inline-size;
+  container-name: navigation;
+}
+
+.\@container\/prose {
+  container-type: inline-size;
+  container-name: prose;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

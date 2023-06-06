@@ -1,8 +1,5 @@
-.navigation:not(.hidden) {
-    @apply flex;
-}
 
-.navigation {
+.navigation__list {
     @apply text-sm flex-wrap gap-x-[var(--menu-item-gap,theme(space.8))];
 }
 
@@ -34,4 +31,8 @@
     a.menu__toggle {
         @apply lg:hidden;
     }
+}
+
+.navigation__toggle {
+    @apply appearance-none p-0;
 }

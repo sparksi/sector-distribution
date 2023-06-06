@@ -6,4 +6,19 @@
     .menu__item--active-trail > .menu__link {
         @apply border-sky-500 text-zinc-900 dark:text-white;
     }
+
+    .navigation__list {
+        --menu-item-gap: 0;
+
+        @apply hidden @lg/navigation:flex @lg/navigation:justify-end @lg/navigation:[--menu-item-gap:theme(space.8)];
+    }
+
+    .navigation__toggle {
+        @apply @lg/navigation:hidden;
+    }
+}
+
+
+.block--sector-starter-menu-block-main {
+    @apply flex-1;
 }

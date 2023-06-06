@@ -38,21 +38,20 @@
  */
 #}
 {%
-  set classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-    'prose'
-  ]
-%}
-{%
   set title_classes = [
     'field__label',
     label_display == 'visually_hidden' ? 'visually-hidden',
   ]
 %}
+{% set classes = [
+    'field',
+    'field--name-' ~ field_name|clean_class,
+    'field--type-' ~ field_type|clean_class,
+    'field--label-' ~ label_display,
+    'prose'
+  ]|merge(utility_classes ? utility_classes : []) %}
 
+<div class="{{ container ? container : '@container/prose' }}">
 {% if label_hidden %}
   {% if multiple %}
     <div{{ attributes.addClass(classes, 'field__items') }}>
@@ -79,4 +78,9 @@
     {% endif %}
   </div>
 {% endif %}
-{{ attach_library('sector_starter/prose') }}
+</div>
+{% if libraries %}
+    {% for library in libraries %}
+      {{ attach_library(library) }}
+    {% endfor %}
+{% endif %}

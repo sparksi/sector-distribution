@@ -7,13 +7,11 @@
     libraries: [
         'sector_starter/' ~ menu_name|clean_class,
         'sector_starter/navigation',
-        'sector_starter/navigation-lg',
+        'sector_starter/navigation-xs',
     ],
-    attributes: attributes.setAttribute('data-behavior', 'hover'),
-    render_toggle: true,
+    render_toggle: false,
     utility_classes: [
         'navigation',
-        'navigation--lg',
-        '@container/navigation'
+        'navigation--xs'
     ]
 } %}
