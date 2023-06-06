@@ -1,2 +1,5 @@
-{% include "@sector_base/field/field.twig" %}
-{{ attach_library('sector_starter/field' )}}
+{% include "@sector_base/field/field.twig" with {
+    libraries: [
+        'sector_starter/field'
+    ]
+} %}

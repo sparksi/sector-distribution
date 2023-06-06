@@ -31,5 +31,10 @@
       {{ title }}
     {% endif %}
   </{{title_tag}}>
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}
 {% endif %}
 {{ title_suffix }}
