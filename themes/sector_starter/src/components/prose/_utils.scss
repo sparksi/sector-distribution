@@ -1,5 +1,5 @@
 @mixin prose {
-  @apply wysiwyg lg:wysiwyg-lg xl:wysiwyg-xl wysiwyg-zinc dark:wysiwyg-invert;
+  @apply wysiwyg @lg/prose:wysiwyg-lg @xl/prose:wysiwyg-xl wysiwyg-zinc dark:wysiwyg-invert;
 
   --tw-prose-heading-tracking: theme(letterSpacing.normal);
   --tw-prose-heading-family: theme(fontFamily.custom-alt);
