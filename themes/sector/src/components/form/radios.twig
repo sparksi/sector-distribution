@@ -12,3 +12,8 @@
 #}
 {% set radios_classes = ['form-radios']|merge(utility_classes ? utility_classes : []) %}
 <div{{ attributes.addClass(radios_classes) }}>{{ children }}</div>
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}

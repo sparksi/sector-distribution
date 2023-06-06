@@ -16,7 +16,12 @@ function sector_theme_suggestions_form_alter(array &$suggestions, array &$variab
   // Add a suggestion based on the form id name.
   if (isset($element['#form_id'])) {
     $suggestions[] = $variables['theme_hook_original'] . '__' . $element['#form_id'];
+
+    if (isset($element['#view_id'])) {
+      $suggestions[] = $variables['theme_hook_original'] . '__'. $element['#view_id'] . '__' . $element['#form_id'];
+    }
   }
+
 
   // Check to see if the form is layout builder form
   if (isset($element['#layout_builder_element_keys'])) {
