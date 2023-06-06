@@ -45,7 +45,6 @@ libraries-override:
         css/components/align.module.css: false
         css/components/clearfix.module.css: false
         css/components/details.module.css: false
-        css/components/hidden.module.css: false
         css/components/fieldgroup.module.css: false
         css/components/item-list.module.css: false
         css/components/nowrap.module.css: false
