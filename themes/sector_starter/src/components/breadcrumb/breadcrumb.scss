@@ -1,19 +1,23 @@
 .breadcrumb__list {
-    @apply text-sm text-zinc-900 gap-y-1;
+  @apply text-sm text-zinc-900 dark:text-zinc-500 gap-y-1;
 }
 
 .breadcrumb__item {
-    @apply flex items-center;
+  @apply flex items-center;
 
-    &:first-of-type > .material-symbols-sharp {
-      @apply hidden;
-    }
+  &:first-of-type > .material-symbols-sharp {
+    @apply hidden;
+  }
 
-    .material-symbols-sharp {
-      @apply text-zinc-600 text-xs mx-1;
-    }
+  .material-symbols-sharp {
+    @apply text-zinc-600 dark:text-zinc-500 text-xs mx-1;
+  }
+}
+
+.breadcrumb__link {
+@apply hover:text-sky-500 focus-visible:text-sky-500;
 }
 
 .breadcrumb__link:is([aria-current="page"]) {
-    @apply text-zinc-400 cursor-default underline underline-offset-4 decoration-zinc-200;
+  @apply text-zinc-400 cursor-default underline underline-offset-4 decoration-zinc-200 dark:decoration-zinc-400;
 }

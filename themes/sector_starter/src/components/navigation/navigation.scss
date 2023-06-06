@@ -1,3 +1,37 @@
+.navigation:not(.hidden) {
+    @apply flex;
+}
+
 .navigation {
-    @apply text-sm flex flex-wrap gap-x-[var(--menu-item-gap,theme(space.8))];
+    @apply text-sm flex-wrap gap-x-[var(--menu-item-gap,theme(space.8))];
+}
+
+.menu__toggle {
+    @apply inline-flex items-center
+}
+
+.menu__item {
+    @apply relative;
+
+    .menu {
+        @apply lg:absolute;
+    }
+}
+
+.menu[data-behavior="hover"] {
+    button.menu__toggle {
+        @apply lg:hidden;
+    }
+
+    @media (hover:hover) {
+        .menu__item--has-children:hover > .menu {
+            @apply lg:flex;
+        }
+    }
+}
+
+.menu[data-behavior="toggle"] {
+    a.menu__toggle {
+        @apply lg:hidden;
+    }
 }

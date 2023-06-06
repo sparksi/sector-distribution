@@ -15,16 +15,19 @@
 {% set nav_classes = [ 'menu']|merge(utility_classes ? utility_classes : []) %}
 
 {% if items %}
-  <ul{{ attributes.addClass(nav_classes) }}>
+  <ul{{ attributes.addClass(nav_classes) }} id="{{ id }}">
     {% block items %}
       {% for item in items %}
         {% set nav_item_classes = [
-          'menu__item',
-          item.in_active_trail ? 'active',
-          item.is_expanded and item.below ? 'dropdown'
+            'menu__item',
+            'menu__item--' ~ menu_item_type,
+            'menu__item--level-' ~ (menu_level + 1),
+            item.in_active_trail ? 'menu__item--active-trail',
+            item.below ? 'menu__item--has-children',
         ] %}
         {% set nav_link_classes = ['menu__link'] %}
-        {% set aria_current = item.is_expanded and item.below ? 'page' : null %}
+        {% set aria_id = (item.title ~ '-submenu-' ~ loop.index )|clean_id %}
+        {% set aria_current = item.in_active_trail and not item.is_expanded ? 'page' : null %}
         {% if item.url.options.attributes.class is iterable %}
           {% set nav_link_classes = nav_link_classes|merge(item.url.options.attributes.class) %}
         {% elseif item.url.options.attributes.class %}
@@ -32,14 +35,15 @@
         {% endif %}
         <li{{ item.attributes.addClass(nav_item_classes) }}>
           {% if item.is_expanded and item.below %}
-            <button type="button" aria-expanded="false" class="menu__toggle" aria-controls="{{ 'menu-controls-' ~ item.title|clean_class }}">
+            <button type="button" aria-expanded="false" class="menu__toggle" aria-controls="{{ aria_id }}">
               {{ item.title }}
               <span class="material-symbols-sharp" aria-hidden="true">expand_more</span>
             </button>
             {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['menu__toggle']), 'aria-current': aria_current }) }}
             {% if item.below %}
-              {% include '@sector_base/dropdown/dropdown-menu.twig' with {
-                id: 'menu-controls-' ~ item.title|clean_class,
+              {% include '@sector_base/nav/nav.twig' with {
+                id: aria_id,
+                utility_classes: [ 'menu__menu', 'hidden' ],
                 items: item.below
               } %}
             {% endif %}

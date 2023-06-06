@@ -1,8 +1,1 @@
-.navigation {
-    display: flex;
-    flex-wrap: wrap;
-    -moz-column-gap: var(--menu-item-gap,2rem);
-         column-gap: var(--menu-item-gap,2rem);
-    font-size: 0.875rem;
-    line-height: 1.25rem
-}
+.navigation:not(.hidden){display: flex}.navigation{flex-wrap: wrap;-moz-column-gap: var(--menu-item-gap,2rem);column-gap: var(--menu-item-gap,2rem);font-size: 0.875rem;line-height: 1.25rem}.menu__toggle{display: inline-flex;align-items: center}.menu__item{position: relative}@media (min-width: 1024px){.menu__item .menu{position: absolute}.menu[data-behavior=hover] button.menu__toggle{display: none}}@media(hover: hover){@media (min-width: 1024px){.menu[data-behavior=hover] .menu__item--has-children:hover>.menu{display: flex}}}@media (min-width: 1024px){.menu[data-behavior=toggle] a.menu__toggle{display: none}}
