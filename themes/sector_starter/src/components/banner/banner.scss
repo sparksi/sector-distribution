@@ -1,0 +1,3 @@
+.banner {
+    @apply min-h-[var(--banner-min-height,theme(space.72))] bg-white;
+}

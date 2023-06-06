@@ -9,7 +9,7 @@ body {
 
 .region__container {
   @apply container;
-  --container-max-width: theme(breakpoints.2xl);
+  --container-max-width: theme('breakpoints.2xl');
 
   max-width: var(--container-max-width-override, var(--container-max-width));
 

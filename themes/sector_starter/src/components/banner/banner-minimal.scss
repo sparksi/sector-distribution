@@ -11,10 +11,7 @@
     }
 
     .block-group__inner {
-      @apply py-4 min-h-[var(--banner-min-height,theme(space.72))];
-
-
-      @apply grid;
+      @apply grid py-4;
 
       grid-template-areas: "breadcrumb" "banner" "banner" ".";
     }

@@ -1,0 +1,13 @@
+.banner--minimal {background-color:transparent;font-size:1.25rem;line-height:2rem;--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))
+}.banner--minimal .page-title {grid-row-start:2;align-self:flex-end;font-size:1.875rem;line-height:2.25rem;font-weight:700;letter-spacing:-0.025em;--tw-text-opacity:1;color:rgb(24 24 27 / var(--tw-text-opacity))
+}@media (prefers-color-scheme: dark) {.banner--minimal .page-title {--tw-text-opacity:1;color:rgb(244 244 245 / var(--tw-text-opacity))
+}
+}@media (min-width: 640px) {.banner--minimal .page-title {font-size:2.25rem;line-height:2.5rem
+}
+}@media (min-width: 1024px) {.banner--minimal .page-title {font-size:3.75rem;line-height:1
+}
+}.banner--minimal:has(.page-title+.block) .page-title {margin-bottom:1rem
+}@media (min-width: 1024px) {.banner--minimal:has(.page-title+.block) .page-title {margin-bottom:1.25rem
+}
+}.banner--minimal .block-group__inner {display:grid;padding-top:1rem;padding-bottom:1rem;grid-template-areas:"breadcrumb" "banner" "banner" "."
+}
