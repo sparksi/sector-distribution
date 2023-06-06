@@ -6,6 +6,8 @@ dependencies:
     - filter.format.sector_basic_html
   module:
     - ckeditor5
+_core:
+  default_config_hash: Roz3nAR5Tphj7srF_2aonqCjGGsU1rV8ps8VL-Jqhns
 format: sector_basic_html
 editor: ckeditor5
 settings:
@@ -14,6 +16,7 @@ settings:
       - undo
       - redo
       - heading
+      - style
       - link
       - bold
       - italic
@@ -56,6 +59,11 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Leading paragraph'
+          element: '<p class="lead">'
     linkit_extension:
       linkit_enabled: true
       linkit_profile: default
