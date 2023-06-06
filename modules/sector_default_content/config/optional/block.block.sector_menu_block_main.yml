@@ -10,7 +10,7 @@ dependencies:
     - sector
 third_party_settings:
   block_class:
-    classes: 'lg:ml-auto'
+    classes: 'lg:ml-auto lg:flex-1'
 id: sector_menu_block_main
 theme: sector
 region: header
