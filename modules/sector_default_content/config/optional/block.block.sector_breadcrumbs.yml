@@ -2,13 +2,9 @@ langcode: en
 status: true
 dependencies:
   module:
-    - block_class
     - system
   theme:
     - sector
-third_party_settings:
-  block_class:
-    classes: mt-3
 id: sector_breadcrumbs
 theme: sector
 region: hero_minimal

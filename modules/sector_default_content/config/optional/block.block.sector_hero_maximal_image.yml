@@ -1,0 +1,27 @@
+uuid: 547c1065-d7c7-4ef1-bffc-4cd5ee3b5dea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_hero
+  module:
+    - fieldblock
+  theme:
+    - sector
+id: sector_hero_maximal_image
+theme: sector
+region: hero_maximal
+weight: -8
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Hero Image'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_image_hero
+  formatter_id: entity_reference_entity_view
+  formatter_settings:
+    view_mode: sector_4_lg
+visibility: {  }
