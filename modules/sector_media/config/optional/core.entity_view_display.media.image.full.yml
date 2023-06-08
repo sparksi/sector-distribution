@@ -1,0 +1,75 @@
+uuid: 23f5075a-a142-4045-b776-d4dfa9dd8c47
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_media_image
+    - image.style.3xl
+    - media.type.image
+  module:
+    - field_group
+    - layout_builder
+    - svg_image
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  field_group:
+    group_figure:
+      children:
+        - field_media_image
+        - field_caption
+      label: Figure
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        element: figure
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: HV4Ucrdl-NM7xTEIjud3HSTbMxOO83QrDxijqJXKAWc
+id: media.image.full
+targetEntityType: media
+bundle: image
+mode: full
+content:
+  field_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_image:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: 3xl
+      image_loading:
+        attribute: lazy
+      svg_attributes:
+        width: null
+        height: null
+      svg_render_as_image: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

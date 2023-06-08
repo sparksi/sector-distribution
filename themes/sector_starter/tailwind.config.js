@@ -16,6 +16,9 @@ module.exports = {
       padding: 'var(--container-padding, 2rem)',
     },
     extend: {
+      colors: {
+        brand: 'oklch(91.91% 0.22 102.16)'
+      },
       breakpoints: {
         '2xl': '1536px',
         '3xl': '1920px',

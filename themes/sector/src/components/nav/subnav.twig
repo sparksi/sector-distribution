@@ -15,14 +15,7 @@
 {% set nav_classes = [ 'menu' ]|merge(utility_classes ? utility_classes : []) %}
 
 {% if items %}
-  <nav {{ attributes.addClass(nav_classes) }} id="{{ id }}">
-  {% if render_toggle %}
-    <button class="navigation__toggle" type="button">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="material-symbols-sharp" aria-hidden="true">menu</span>
-    </button>
-  {% endif %}
-  <ul class="navigation__list">
+  <ul class="navigation__sub-menu" id="{{ id }}">
     {% block items %}
       {% for item in items %}
         {% set nav_item_classes = [
@@ -66,5 +59,4 @@
       {{ attach_library(library) }}
     {% endfor %}
   {% endif %}
-  </nav>
 {% endif %}
