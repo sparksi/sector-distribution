@@ -1,6 +1,13 @@
 .region:where(.help) {
   @apply bg-zinc-50 dark:bg-zinc-800 shadow-inner;
 
+  --container-max-width: theme('breakpoints.2xl');
+  --container-padding: theme(spacing.4);
+
+  @media (min-width: theme('screens.lg')) {
+    --container-padding: theme(spacing.8);
+  }
+
   .region__container {
     @apply py-5;
   }

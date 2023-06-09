@@ -1,6 +1,13 @@
 .banner--minimal {
   @apply bg-transparent text-xl leading-8 text-gray-600 container;
 
+  --container-max-width: theme('breakpoints.2xl');
+  --container-padding: theme(spacing.4);
+
+  @media (min-width: theme('screens.lg')) {
+    --container-padding: theme(spacing.8);
+  }
+
   .block, .page-title {
     @apply col-start-1 col-end-2;
   }

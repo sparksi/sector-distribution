@@ -1,8 +1,11 @@
 .header {
   --header-region-gap: theme(spacing.8);
+  --container-max-width: theme('breakpoints.2xl');
+  --container-padding: theme(spacing.4);
 
   @media (min-width: theme('screens.lg')) {
     --header-region-gap: theme(spacing.12);
+    --container-padding: theme(spacing.8);
   }
 }
 
