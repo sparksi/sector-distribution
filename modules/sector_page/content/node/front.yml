@@ -5,8 +5,9 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    481f4516-f0c1-4bdc-8cbd-73c32b3ab0d2: user
+    ebd23427-cdb4-44d9-956a-8d67e56a1c86: user
     d7041cb4-2d9f-4235-ba77-d0851431789f: taxonomy_term
+    0ca573cb-dbdb-49ab-8a48-469ce2493ff6: media
 default:
   revision_uid:
     -
@@ -16,7 +17,7 @@ default:
       value: true
   uid:
     -
-      entity: 481f4516-f0c1-4bdc-8cbd-73c32b3ab0d2
+      entity: ebd23427-cdb4-44d9-956a-8d67e56a1c86
   title:
     -
       value: 'Content management made easy.'
@@ -54,3 +55,10 @@ default:
   field_display_options:
     -
       entity: d7041cb4-2d9f-4235-ba77-d0851431789f
+  field_image_hero:
+    -
+      entity: 0ca573cb-dbdb-49ab-8a48-469ce2493ff6
+  field_subtitle:
+    -
+      value: '<p>Built on Tailwind based on the Drupal <a href="https://www.drupal.org/project/radix">Radix theme</a>, the Sector Starter Theme and Base configuration is ready to go and easy to administer.</p>'
+      format: sector_restricted_basic_html
