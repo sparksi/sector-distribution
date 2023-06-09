@@ -71,7 +71,7 @@ install:
   - inline_entity_form:inline_entity_form
   - linkit:linkit
   - layout_builder_styles:layout_builder_styles
-  - layout_builder_restrictions:ayout_builder_restrictions
+  - layout_builder_restrictions:layout_builder_restrictions
   - menu_block:menu_block
   - metatag_open_graph:metatag_open_graph
   - metatag:metatag
