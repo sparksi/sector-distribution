@@ -1,3 +1,4 @@
 .page-title {
-  @apply text-3xl lg:text-7xl tracking-tighter font-medium font-custom-alt;
+  --title-color: inherit;
+  @apply text-3xl lg:text-7xl tracking-tighter font-medium font-custom-alt text-[var(--title-color-override,var(--title-color))];
 }

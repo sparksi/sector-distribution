@@ -1,7 +1,8 @@
 .subtitle {
-    @apply text-neutral-700 dark:text-neutral-300;
+    --subtitle-color: theme(colors.neutral.700);
+    @apply text-[var(--subtitle-color-override,var(--subtitle-color))] dark:text-neutral-300;
 }
 
 .subtitle p {
-    text-wrap: balance;
+  text-wrap: var(--subtitle-text-wrap, balance);
 }
