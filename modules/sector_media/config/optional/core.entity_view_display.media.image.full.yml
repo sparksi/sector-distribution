@@ -44,6 +44,7 @@ id: media.image.full
 targetEntityType: media
 bundle: image
 mode: full
+weight: 0
 content:
   field_caption:
     type: text_default

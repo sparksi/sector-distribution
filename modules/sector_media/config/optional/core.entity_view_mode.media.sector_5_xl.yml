@@ -8,3 +8,4 @@ id: media.sector_5_xl
 label: 'Sector › XL'
 targetEntityType: media
 cache: true
+weight: 4

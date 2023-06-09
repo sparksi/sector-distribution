@@ -1,9 +1,10 @@
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - media
-id: media.full
-label: 'Full content'
+id: media.sector_3_md
+label: 'Sector › MD'
 targetEntityType: media
 cache: true
+weight: 2

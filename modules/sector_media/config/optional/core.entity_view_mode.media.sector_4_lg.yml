@@ -3,7 +3,8 @@ status: true
 dependencies:
   module:
     - media
-id: media.sector_3_md
-label: 'Sector › MD'
+id: media.sector_4_lg
+label: 'Sector › LG'
 targetEntityType: media
 cache: true
+weight: 3

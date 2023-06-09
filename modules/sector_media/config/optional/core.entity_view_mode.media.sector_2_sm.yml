@@ -7,3 +7,4 @@ id: media.sector_2_sm
 label: 'Sector › SM'
 targetEntityType: media
 cache: true
+weight: 1
