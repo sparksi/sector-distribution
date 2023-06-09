@@ -1,0 +1,7 @@
+.region--hero {
+    --container-max-width-override: 100%;
+
+    .region__container {
+      padding-inline: 0;
+    }
+}

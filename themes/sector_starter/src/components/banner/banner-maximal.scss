@@ -1,0 +1,27 @@
+.banner--maximal {
+    .block-group__inner {
+      @apply grid grid-rows-2 gap-y-4;
+
+      grid-template-columns: 1fr minmax(auto, var(--container-max-width)) 1fr;
+    }
+
+    .block--sector-starter-hero-maximal-image {
+      @apply col-span-3 col-start-1 row-end-3 row-start-1;
+    }
+
+    :is(.block, .page-title):not(.block--sector-starter-hero-maximal-image) {
+      @apply col-start-2 col-span-1 container text-center;
+    }
+
+    .page-title {
+      @apply row-start-1 row-span-1 z-10 text-white self-end;
+    }
+
+    .block:has(.subtitle) {
+      @apply row-start-2 row-span-1 z-10 text-white;
+    }
+
+    .subtitle {
+      --subtitle-color-override: theme(colors.neutral.300);
+    }
+  }

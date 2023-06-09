@@ -1,5 +1,5 @@
 .banner--minimal {
-  @apply bg-transparent text-xl leading-8 text-gray-600;
+  @apply bg-transparent text-xl leading-8 text-gray-600 container;
 
   .block, .page-title {
     @apply col-start-1 col-end-2;

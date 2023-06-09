@@ -1,3 +1,1 @@
-.banner {
-    min-height: var(--banner-min-height,18rem)
-}
+.banner{--banner-max-height: 100dvh;max-height: var(--banner-max-height-override,var(--banner-max-height));min-height: var(--banner-min-height,18rem);overflow: hidden}@media (min-width: 1024px){.banner{--banner-max-height: 66vmin}}.banner .media__figure figcaption{display:var(--banner-media-figcaption-override, none)}.banner .media__figure img{height: 100%;max-height: var(--banner-max-height-override,var(--banner-max-height));width: 100%;-o-object-fit: cover;object-fit: cover;-o-object-position: center;object-position: center;vertical-align: top}

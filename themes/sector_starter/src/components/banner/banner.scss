@@ -1,3 +1,17 @@
 .banner {
-    @apply min-h-[var(--banner-min-height,theme(space.72))];
+    --banner-max-height: 100dvh;
+    @apply overflow-hidden min-h-[var(--banner-min-height,theme(space.72))] max-h-[var(--banner-max-height-override,var(--banner-max-height))];
+
+    @screen lg {
+        --banner-max-height: 66vmin;
+    }
+
+
+    .media__figure figcaption {
+        display: var(--banner-media-figcaption-override, none);
+    }
+
+    .media__figure img {
+        @apply object-cover object-center align-top w-full h-full max-h-[var(--banner-max-height-override,var(--banner-max-height))];
+    }
 }
