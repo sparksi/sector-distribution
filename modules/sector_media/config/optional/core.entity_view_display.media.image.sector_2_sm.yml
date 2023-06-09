@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.sector_2_sm
     - field.field.media.image.field_caption
+    - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
     - media.type.image
     - responsive_image.styles.sm
@@ -17,12 +18,11 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: Qn2topPcM0T6adfUaMVj1swDGcWR9UULzquCk-0autY
+  default_config_hash: rKoyGhxUuvP8me4BfW6LX1c3ZPQuOhHlWUJV41oLjjY
 id: media.image.sector_2_sm
 targetEntityType: media
 bundle: image
 mode: sector_2_sm
-weight: 1
 content:
   field_caption:
     type: text_default
@@ -37,11 +37,14 @@ content:
     settings:
       responsive_image_style: sm
       image_link: ''
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
     weight: 1
     region: content
 hidden:
   created: true
+  field_image_options: true
   name: true
   search_api_excerpt: true
   thumbnail: true

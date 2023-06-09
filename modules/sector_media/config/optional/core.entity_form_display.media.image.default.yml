@@ -1,8 +1,10 @@
+uuid: c6aa14f3-1506-4ebf-b8ec-9ecd944fef6d
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.media.image.field_caption
+    - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - media.type.image
@@ -10,6 +12,8 @@ dependencies:
     - path
     - svg_image
     - text
+_core:
+  default_config_hash: 2sInH_-5051G0bLJ9rPubucgDFpvYtUsXTteCi8I-B4
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -29,6 +33,12 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
+  field_image_options:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_media_image:
     type: image_image
     weight: 0
@@ -45,7 +55,7 @@ content:
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 5
+    weight: 6
     region: content
     settings:
       display_label: true

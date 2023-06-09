@@ -5,49 +5,68 @@ dependencies:
   config:
     - core.entity_view_mode.media.sector_6_2xl
     - field.field.media.image.field_caption
+    - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
-    - image.style.lg
     - media.type.image
+    - responsive_image.styles.2xl
   module:
+    - field_group
     - layout_builder
-    - svg_image
+    - responsive_image
     - text
 third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
+  field_group:
+    group_figure:
+      children:
+        - field_media_image
+        - field_caption
+      label: Figure
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: media__figure
+        show_empty_fields: false
+        id: ''
+        element: figure
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
 _core:
-  default_config_hash: HV4Ucrdl-NM7xTEIjud3HSTbMxOO83QrDxijqJXKAWc
+  default_config_hash: TgerSHqFbA-Cbm19HCu55TYmkSSHGS7jsAAw1ODEsww
 id: media.image.sector_6_2xl
 targetEntityType: media
 bundle: image
 mode: sector_6_2xl
-weight: 5
 content:
   field_caption:
     type: text_default
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     weight: 2
     region: content
   field_media_image:
-    type: image
-    label: visually_hidden
+    type: responsive_image
+    label: hidden
     settings:
+      responsive_image_style: 2xl
       image_link: ''
-      image_style: lg
       image_loading:
-        attribute: lazy
-      svg_attributes:
-        width: null
-        height: null
-      svg_render_as_image: true
+        attribute: eager
     third_party_settings: {  }
     weight: 1
     region: content
 hidden:
   created: true
+  field_image_options: true
   name: true
   search_api_excerpt: true
   thumbnail: true

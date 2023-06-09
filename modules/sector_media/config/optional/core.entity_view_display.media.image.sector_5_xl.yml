@@ -5,6 +5,7 @@ dependencies:
   config:
     - core.entity_view_mode.media.sector_5_xl
     - field.field.media.image.field_caption
+    - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
     - image.style.lg
     - media.type.image
@@ -17,12 +18,11 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: HV4Ucrdl-NM7xTEIjud3HSTbMxOO83QrDxijqJXKAWc
+  default_config_hash: B35pE4Hij42Fgt1ciMlXiGJlpoT5jZtkN7ja031G9PI
 id: media.image.sector_5_xl
 targetEntityType: media
 bundle: image
 mode: sector_5_xl
-weight: 4
 content:
   field_caption:
     type: text_default
@@ -48,6 +48,7 @@ content:
     region: content
 hidden:
   created: true
+  field_image_options: true
   name: true
   search_api_excerpt: true
   thumbnail: true

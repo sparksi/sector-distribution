@@ -1,0 +1,21 @@
+uuid: 844d0d5a-d4ce-4355-a0ff-56437c1e6732
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_image_options
+    - media.type.image
+  module:
+    - options
+id: media.image.field_image_options
+field_name: field_image_options
+entity_type: media
+bundle: image
+label: 'Image Options'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

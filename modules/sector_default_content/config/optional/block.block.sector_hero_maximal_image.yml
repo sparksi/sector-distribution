@@ -1,4 +1,4 @@
-uuid: 547c1065-d7c7-4ef1-bffc-4cd5ee3b5dea
+uuid: b2366bd9-2dd1-4c7b-97aa-c074d2dd7722
 langcode: en
 status: true
 dependencies:
@@ -7,9 +7,11 @@ dependencies:
   module:
     - fieldblock
   theme:
-    - sector
-id: sector_hero_maximal_image
-theme: sector
+    - sector_starter
+_core:
+  default_config_hash: BAcuUk_df_xfsTU2lnISB1uVEtVTC3ct_j85i2DmQSQ
+id: sector_starter_hero_maximal_image
+theme: sector_starter
 region: hero_maximal
 weight: -8
 provider: null
@@ -23,5 +25,5 @@ settings:
   field_name: field_image_hero
   formatter_id: entity_reference_entity_view
   formatter_settings:
-    view_mode: sector_4_lg
+    view_mode: sector_6_2xl
 visibility: {  }
