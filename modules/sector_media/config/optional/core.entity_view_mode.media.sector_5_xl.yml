@@ -1,0 +1,10 @@
+uuid: 30c349e3-fc8b-44d2-92d6-efc314da25c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.sector_5_xl
+label: 'Sector › XL'
+targetEntityType: media
+cache: true

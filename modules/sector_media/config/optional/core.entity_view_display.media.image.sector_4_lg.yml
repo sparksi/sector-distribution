@@ -22,6 +22,7 @@ id: media.image.sector_4_lg
 targetEntityType: media
 bundle: image
 mode: sector_4_lg
+weight: 3
 content:
   field_caption:
     type: text_default

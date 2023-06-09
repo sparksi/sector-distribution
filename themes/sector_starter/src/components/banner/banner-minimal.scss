@@ -1,19 +1,22 @@
 .banner--minimal {
   @apply bg-transparent text-xl leading-8 text-gray-600;
 
-  .page-title {
-    @apply text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl lg:text-6xl self-end row-start-2;
+  .block, .page-title {
+    @apply col-start-1 col-end-2;
   }
 
-  // if page-title has a sibling after
-  /*&:has(.page-title + .block) .page-title {
-    @apply mb-4 lg:mb-5;
-  }*/
+  .page-title {
+    @apply text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-4xl lg:text-6xl self-end row-start-2 row-end-3;
+  }
+
+  .block:has(.breadcrumb) {
+    @apply row-start-1 row-end-2;
+  }
 
   .block-group__inner {
     @apply grid py-4 gap-y-2 lg:gap-y-5 min-h-[inherit];
 
     grid-template-areas: "breadcrumb" "banner" "banner";
-    grid-template-rows: auto repeat(2,1fr);
+    grid-template-rows: minmax(1em, auto) repeat(2,1fr);
   }
 }

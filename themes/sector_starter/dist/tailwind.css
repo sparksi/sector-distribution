@@ -3744,6 +3744,10 @@ video {
   border-top-color: rgb(23 37 84 / var(--tw-border-opacity));
 }
 
+.border-t-brand {
+  border-top-color: oklch(91.91% 0.22 102.16);
+}
+
 .border-t-current {
   border-top-color: currentColor;
 }
@@ -4974,6 +4978,10 @@ video {
 .bg-blue-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(23 37 84 / var(--tw-bg-opacity));
+}
+
+.bg-brand {
+  background-color: oklch(91.91% 0.22 102.16);
 }
 
 .bg-current {
@@ -6837,6 +6845,10 @@ video {
 .text-blue-950 {
   --tw-text-opacity: 1;
   color: rgb(23 37 84 / var(--tw-text-opacity));
+}
+
+.text-brand {
+  color: oklch(91.91% 0.22 102.16);
 }
 
 .text-current {

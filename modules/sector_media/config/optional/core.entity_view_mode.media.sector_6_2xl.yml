@@ -1,0 +1,10 @@
+uuid: 7943108a-fb0c-4090-b976-94c86e34dfa9
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.sector_6_2xl
+label: 'Sector › 2XL'
+targetEntityType: media
+cache: true
