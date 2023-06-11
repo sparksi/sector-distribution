@@ -2,11 +2,13 @@
 
 .ck-editor__main {
   all: initial;
+  @apply @container/prose;
 }
 
 .ck-content {
   @apply antialiased font-sans;
   @include prose_utils.prose;
+  @apply wysiwyg-xl;
 }
 
 .ck-content.ck-editor__editable {
@@ -25,4 +27,8 @@
   + .ck
   .ck-editor__editable {
   --wysiwyg-height: 25em;
+}
+
+.ck .drupal-media {
+  @apply ms-0;
 }

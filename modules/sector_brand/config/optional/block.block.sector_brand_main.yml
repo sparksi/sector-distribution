@@ -1,14 +1,21 @@
+uuid: 70483ee0-e428-45a9-9667-c825def141a5
 langcode: en
 status: true
 dependencies:
   content:
     - 'block_content:sector_brand:0dd63365-141e-4592-b972-9e587e81337c'
   module:
+    - block_class
     - block_content
   theme:
-    - sector
-id: sector_brand_main
-theme: sector
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'max-w-fit w-36 md:w-48 mr-auto'
+_core:
+  default_config_hash: nlz-wrJXx4rwwU88PtJbAjGEpj2bVAzEg5FNEATyNb4
+id: sector_starter_brand_main
+theme: sector_starter
 region: header
 weight: -3
 provider: null

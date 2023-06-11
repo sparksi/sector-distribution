@@ -14,7 +14,7 @@
   }
 
   .page-title {
-    @apply row-start-1 row-span-1 z-10 self-end;
+    @apply row-start-1 row-span-1 z-10 self-end font-semibold;
 
     --title-color-override: theme(colors.white);
   }

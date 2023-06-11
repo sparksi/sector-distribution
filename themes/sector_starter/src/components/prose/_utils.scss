@@ -25,5 +25,14 @@
     @apply outline-none underline underline-offset-2 decoration-auto hover:text-[var(--tw-prose-links-hover-color)] focus-visible:text-[var(--tw-prose-links-hover-color)] focus-visible:ring-2 focus-visible:ring-sky-400;
   }
 
+  figure {
+    @apply ms-0 me-0;
+  }
+
+  blockquote {
+    font-synthesis: none;
+    font-variation-settings: 'ital' 1.75;
+  }
+
   @content;
 }

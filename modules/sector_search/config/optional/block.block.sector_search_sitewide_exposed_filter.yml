@@ -1,14 +1,21 @@
+uuid: 55ad79f0-8d82-48be-b235-b2a82ffe5567
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.sector_search_sitewide
   module:
+    - block_class
     - views
   theme:
-    - sector
-id: sector_search_sitewide_exposed_filter
-theme: sector
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'contents lg:block'
+_core:
+  default_config_hash: 25ZMB3UFal7iM_kyQxmB99DIVfQVKVV3nlQCqL0zw2Q
+id: sector_starter_search_sitewide_exposed_filter
+theme: sector_starter
 region: header
 weight: 0
 provider: null

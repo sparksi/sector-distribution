@@ -1,3 +1,4 @@
+uuid: f41d8dbf-da4a-42ad-8ed3-048037f390cc
 langcode: en
 status: true
 dependencies:
@@ -8,6 +9,8 @@ dependencies:
   module:
     - file
     - text
+_core:
+  default_config_hash: LXSkPbnnE3qZqSl5WjJPwq-jHhBrj2Kxxb9y-x4coco
 id: media.document.default
 targetEntityType: media
 bundle: document
@@ -23,7 +26,8 @@ content:
   field_media_document:
     type: file_default
     label: visually_hidden
-    settings: {  }
+    settings:
+      use_description_as_link_text: true
     third_party_settings: {  }
     weight: 1
     region: content
