@@ -15,7 +15,7 @@ third_party_settings:
 _core:
   default_config_hash: 2FFoqzfOJ2MACt6zv-DaPaajxAMxuwbeLFBAXkpdwmI
 id: sector_menu_block_main
-theme: secto
+theme: sector
 region: header
 weight: -2
 provider: null
