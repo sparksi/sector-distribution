@@ -6,7 +6,6 @@ dependencies:
     - core.entity_view_mode.node.full
     - field.field.node.sector_page.body
     - field.field.node.sector_page.field_content_options
-    - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
     - field.field.node.sector_page.layout_builder__layout
@@ -155,7 +154,7 @@ third_party_settings:
             additional: {  }
         third_party_settings: {  }
 _core:
-  default_config_hash: Q7skzXHB7Mb0r7sRrZLxuY5d_RwvcsAYIhy6MS-E9RI
+  default_config_hash: lDESDaPfKJkVFhUhHbWy497YtBC8sH3JQ7jwm1Tw-co
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page
@@ -175,7 +174,6 @@ content:
     region: content
 hidden:
   field_content_options: true
-  field_display_options: true
   field_image_hero: true
   field_subtitle: true
   layout_builder__layout: true
