@@ -31,6 +31,7 @@ third_party_settings:
           label: Hero
           context_mapping: {  }
           layout_builder_styles_style:
+            0: hero_minimal
             contained: contained
             dark: 0
         components:
@@ -84,6 +85,25 @@ third_party_settings:
                     format: '0'
             weight: 1
             additional: {  }
+          614e23f9-9300-445c-9c45-d6efa935ba9d:
+            uuid: 614e23f9-9300-445c-9c45-d6efa935ba9d
+            region: hero
+            configuration:
+              id: 'field_block:node:sector_page:field_image_hero'
+              label: 'Hero Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: sector_6_2xl
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
       -
         layout_id: sector_body
@@ -130,12 +150,12 @@ third_party_settings:
               depth: 0
               expand_all_items: true
               parent: 'sector-main-menu:'
-              suggestion: sector_main_menu
+              suggestion: sector_main_menu_md
             weight: 0
             additional: {  }
         third_party_settings: {  }
 _core:
-  default_config_hash: 47nzvgKh6h8aqsaGWnjKz9a1SJBiVHrGFr_FL2fscv0
+  default_config_hash: Q7skzXHB7Mb0r7sRrZLxuY5d_RwvcsAYIhy6MS-E9RI
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page

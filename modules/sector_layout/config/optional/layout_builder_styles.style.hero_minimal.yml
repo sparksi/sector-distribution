@@ -1,0 +1,13 @@
+uuid: 1ce8d6a6-0819-4d53-a6d1-a90a33154f3f
+langcode: en
+status: true
+dependencies: {  }
+id: hero_minimal
+label: 'Hero › Minimal'
+classes: hero--minimal
+type: section
+group: hero_variant
+block_restrictions: {  }
+layout_restrictions:
+  - sector_hero
+weight: 0

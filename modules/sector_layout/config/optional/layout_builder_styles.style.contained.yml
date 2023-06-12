@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies: {  }
 _core:
-  default_config_hash: wghpRlB6Gx-ssfMgCfA4R07HBNHS3shVsGM1KnasvQk
+  default_config_hash: nvprFpmKF7vS4ddczkJBNGAxBzJ42NKo2UHZI4trqA0
 id: contained
 label: Contained
 classes: container
 type: section
 group: default
+weight: 0
 block_restrictions: {  }
 layout_restrictions:
   - sector_hero
   - sector_body
-weight: 0

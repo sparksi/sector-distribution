@@ -13,7 +13,7 @@ third_party_settings:
   block_class:
     classes: 'lg:ml-auto lg:flex-1 contents lg:block'
 _core:
-  default_config_hash: Jl1LYy-_DGQKGohmQ77T661o-j-vJVQ1ggib2oiFLBM
+  default_config_hash: 2FFoqzfOJ2MACt6zv-DaPaajxAMxuwbeLFBAXkpdwmI
 id: sector_menu_block_main
 theme: sector_starter
 region: header
@@ -33,5 +33,5 @@ settings:
   depth: 0
   expand_all_items: true
   parent: 'sector-main-menu:'
-  suggestion: sector_main_menu
+  suggestion: sector_main_menu_lg
 visibility: {  }
