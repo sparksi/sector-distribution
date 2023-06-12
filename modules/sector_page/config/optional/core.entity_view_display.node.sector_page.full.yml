@@ -11,10 +11,47 @@ dependencies:
     - field.field.node.sector_page.field_subtitle
     - node.type.sector_page
   module:
+    - layout_builder
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          524e2721-c5a0-4788-9004-1c5758f878da:
+            uuid: 524e2721-c5a0-4788-9004-1c5758f878da
+            region: content
+            configuration:
+              id: 'extra_field_block:node:sector_page:links'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            weight: 0
+            additional: {  }
+          6da8d655-abbb-4e8e-9ed8-2c1be21884cc:
+            uuid: 6da8d655-abbb-4e8e-9ed8-2c1be21884cc
+            region: content
+            configuration:
+              id: 'field_block:node:sector_page:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
 _core:
-  default_config_hash: 4A8IZwOepyLorbR40qDEHHfqQVRCVghazAw6a15xkgo
+  default_config_hash: 44o8mhcsrKucAdR_27R9kW1kJj5hS6SujHGJjWpSy14
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page

@@ -1,0 +1,15 @@
+sector_body:
+  label: 'Sector › Body'
+  category: 'Sector'
+  template: templates/sector/body
+  default_region: body
+  library: sector/layout-body
+  icon_map:
+  - [sidebar_left, body, sidebar_right]
+  regions:
+    sidebar_left:
+      label: Sidebar left
+    body:
+      label: Main content
+    sidebar_right:
+      label: Sidebar left

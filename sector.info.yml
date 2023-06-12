@@ -72,6 +72,7 @@ install:
   - linkit:linkit
   - layout_builder_styles:layout_builder_styles
   - layout_builder_restrictions:layout_builder_restrictions
+  - layout_disable:layout_disable
   - menu_block:menu_block
   - metatag_open_graph:metatag_open_graph
   - metatag:metatag

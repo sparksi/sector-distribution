@@ -1,0 +1,7 @@
+name: Sector Layout
+type: module
+description: Provides the default layouts and configuration for layout builder
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - drupal:layout_builder

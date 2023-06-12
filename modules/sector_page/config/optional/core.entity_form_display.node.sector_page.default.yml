@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
+    - field.field.node.sector_page.layout_builder__layout
     - node.type.sector_page
   module:
     - field_group
@@ -63,7 +64,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: YHndI7p7FZO0qUE-5HioY07vZNsg0TVPULik_201sLE
+  default_config_hash: dVUDL8_sNVK6OPvh2LBspi-XtZKruQg93Pip4-laIis
 id: node.sector_page.default
 targetEntityType: node
 bundle: sector_page
@@ -162,4 +163,5 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  layout_builder__layout: true
