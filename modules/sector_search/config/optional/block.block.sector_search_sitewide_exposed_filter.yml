@@ -8,14 +8,14 @@ dependencies:
     - block_class
     - views
   theme:
-    - sector_starter
+    - sector
 third_party_settings:
   block_class:
     classes: 'contents lg:block'
 _core:
   default_config_hash: 25ZMB3UFal7iM_kyQxmB99DIVfQVKVV3nlQCqL0zw2Q
-id: sector_starter_search_sitewide_exposed_filter
-theme: sector_starter
+id: sector_search_sitewide_exposed_filter
+theme: sector
 region: header
 weight: 0
 provider: null

@@ -14,7 +14,7 @@ third_party_settings:
     classes: 'lg:ml-auto lg:flex-1 contents lg:block'
 _core:
   default_config_hash: Jl1LYy-_DGQKGohmQ77T661o-j-vJVQ1ggib2oiFLBM
-id: sector_starter_menu_block_main
+id: sector_menu_block_main
 theme: sector_starter
 region: header
 weight: -2

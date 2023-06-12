@@ -8,14 +8,14 @@ dependencies:
     - block_class
     - block_content
   theme:
-    - sector_starter
+    - sector
 third_party_settings:
   block_class:
     classes: 'max-w-fit w-36 md:w-48 mr-auto'
 _core:
   default_config_hash: nlz-wrJXx4rwwU88PtJbAjGEpj2bVAzEg5FNEATyNb4
-id: sector_starter_brand_main
-theme: sector_starter
+id: sector_brand_main
+theme: sector
 region: header
 weight: -3
 provider: null
