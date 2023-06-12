@@ -1,0 +1,13 @@
+.layout--body {
+    border: 2px hotpink solid;
+    @apply grid grid-cols-12;
+
+
+    .layout__region {
+        @apply col-span-12 lg:col-span-3;
+    }
+
+    .layout__region--body {
+        @apply lg:col-span-6 lg:col-start-4;
+    }
+}
