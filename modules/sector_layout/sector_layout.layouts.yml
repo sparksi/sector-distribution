@@ -5,11 +5,11 @@ sector_body:
   default_region: body
   library: sector/layout-body
   icon_map:
-  - [sidebar_left, body, sidebar_right]
+  - [body_prefix, body, body_suffix]
   regions:
-    sidebar_left:
+    body_prefix:
       label: Sidebar left
     body:
       label: Main content
-    sidebar_right:
+    body_suffix:
       label: Sidebar left

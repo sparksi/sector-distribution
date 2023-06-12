@@ -1,0 +1,13 @@
+uuid: e417780e-e780-4bba-b331-1ea426c31183
+langcode: en
+status: true
+dependencies: {  }
+id: contained
+label: Contained
+classes: container
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions:
+  - sector_body
+weight: 0
