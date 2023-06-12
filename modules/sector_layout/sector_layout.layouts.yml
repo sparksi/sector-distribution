@@ -1,7 +1,22 @@
+sector_hero:
+  label: 'Sector › Hero'
+  category: 'Sector'
+  template: templates/layout--sector-hero
+  default_region: hero
+  library: sector/layout-hero
+  icon_map:
+  - [breadcrumb]
+  - [hero]
+  regions:
+    breadcrumb:
+      label: Breadcrumb
+    hero:
+      label: Hero
+
 sector_body:
   label: 'Sector › Body'
   category: 'Sector'
-  template: templates/sector/body
+  template: templates/layout--sector-body
   default_region: body
   library: sector/layout-body
   icon_map:

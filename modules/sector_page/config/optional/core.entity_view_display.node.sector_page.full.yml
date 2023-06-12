@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - blockgroup.block_group_content.hero_minimal
     - core.entity_view_mode.node.full
     - field.field.node.sector_page.body
     - field.field.node.sector_page.field_content_options
@@ -12,12 +11,13 @@ dependencies:
     - field.field.node.sector_page.field_subtitle
     - field.field.node.sector_page.layout_builder__layout
     - node.type.sector_page
+    - system.menu.sector-main-menu
   module:
-    - blockgroup
     - layout_builder
-    - layout_discovery
+    - menu_block
     - sector
     - sector_layout
+    - system
     - text
     - user
 third_party_settings:
@@ -26,21 +26,63 @@ third_party_settings:
     allow_custom: true
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: sector_hero
         layout_settings:
           label: Hero
           context_mapping: {  }
+          layout_builder_styles_style:
+            contained: contained
+            dark: 0
         components:
-          a112324d-caa7-42b5-8d8c-d127f6029f12:
-            uuid: a112324d-caa7-42b5-8d8c-d127f6029f12
-            region: content
+          4918cca9-94ae-4fd8-a547-7de71a85febc:
+            uuid: 4918cca9-94ae-4fd8-a547-7de71a85febc
+            region: breadcrumb
             configuration:
-              id: 'block_group:hero_minimal'
-              label: 'Hero › Minimal'
+              id: system_breadcrumb_block
+              label: Breadcrumbs
               label_display: '0'
-              provider: blockgroup
+              provider: system
               context_mapping: {  }
             weight: 0
+            additional: {  }
+          db68d415-5c13-4586-88ad-fc6fdfa1a882:
+            uuid: db68d415-5c13-4586-88ad-fc6fdfa1a882
+            region: hero
+            configuration:
+              id: 'field_block:node:sector_page:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          566d7270-4e2c-4a8b-8eec-141caef41db9:
+            uuid: 566d7270-4e2c-4a8b-8eec-141caef41db9
+            region: hero
+            configuration:
+              id: 'field_block:node:sector_page:field_subtitle'
+              label: Subtitle
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_filter:
+                    format: '0'
+            weight: 1
             additional: {  }
         third_party_settings: {  }
       -
@@ -71,9 +113,29 @@ third_party_settings:
                     format: '0'
             weight: 0
             additional: {  }
+          98671fd6-55ae-483c-8eec-e0b06e103e5d:
+            uuid: 98671fd6-55ae-483c-8eec-e0b06e103e5d
+            region: body_prefix
+            configuration:
+              id: 'menu_block:sector-main-menu'
+              label: 'Sector › Main menu'
+              label_display: '0'
+              provider: menu_block
+              context_mapping: {  }
+              follow: true
+              follow_parent: active
+              label_link: false
+              label_type: block
+              level: 2
+              depth: 0
+              expand_all_items: true
+              parent: 'sector-main-menu:'
+              suggestion: sector_main_menu
+            weight: 0
+            additional: {  }
         third_party_settings: {  }
 _core:
-  default_config_hash: jP0SgGp8zNGJizNG5nvCNNbVWqYsjjDC1w7OepfHmHg
+  default_config_hash: 47nzvgKh6h8aqsaGWnjKz9a1SJBiVHrGFr_FL2fscv0
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page

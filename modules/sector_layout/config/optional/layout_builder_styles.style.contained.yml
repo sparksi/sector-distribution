@@ -2,6 +2,8 @@ uuid: e417780e-e780-4bba-b331-1ea426c31183
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: wghpRlB6Gx-ssfMgCfA4R07HBNHS3shVsGM1KnasvQk
 id: contained
 label: Contained
 classes: container
@@ -9,5 +11,6 @@ type: section
 group: default
 block_restrictions: {  }
 layout_restrictions:
+  - sector_hero
   - sector_body
 weight: 0

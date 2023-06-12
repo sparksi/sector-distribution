@@ -1,0 +1,13 @@
+uuid: 5d7aabc0-1878-44ff-804f-6a3f50181a54
+langcode: en
+status: true
+dependencies: {  }
+id: dark
+label: Dark
+classes: dark
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions:
+  - sector_hero
+weight: 0
