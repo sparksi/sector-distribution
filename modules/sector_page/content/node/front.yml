@@ -5,7 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    ebd23427-cdb4-44d9-956a-8d67e56a1c86: user
+    b8d0394b-c464-46dc-9de8-feeff512f776: user
     d7041cb4-2d9f-4235-ba77-d0851431789f: taxonomy_term
     0ca573cb-dbdb-49ab-8a48-469ce2493ff6: media
 default:
@@ -17,7 +17,7 @@ default:
       value: true
   uid:
     -
-      entity: ebd23427-cdb4-44d9-956a-8d67e56a1c86
+      entity: b8d0394b-c464-46dc-9de8-feeff512f776
   title:
     -
       value: 'Content management made easy.'
@@ -62,3 +62,115 @@ default:
     -
       value: '<p>Built on Tailwind based on the Drupal <a href="https://www.drupal.org/project/radix">Radix theme</a>, the Sector Starter Theme and Base configuration is ready to go and easy to administer.</p>'
       format: sector_restricted_basic_html
+  layout_builder__layout:
+    -
+      section:
+        layout_id: sector_hero
+        layout_settings:
+          label: Hero
+          context_mapping: {  }
+          layout_builder_styles_style:
+            contained: 0
+            dark: 0
+        components:
+          4918cca9-94ae-4fd8-a547-7de71a85febc:
+            uuid: 4918cca9-94ae-4fd8-a547-7de71a85febc
+            region: breadcrumb
+            configuration:
+              id: system_breadcrumb_block
+              label: Breadcrumbs
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+            weight: 0
+            additional: {  }
+          db68d415-5c13-4586-88ad-fc6fdfa1a882:
+            uuid: db68d415-5c13-4586-88ad-fc6fdfa1a882
+            region: hero
+            configuration:
+              id: 'field_block:node:sector_page:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          566d7270-4e2c-4a8b-8eec-141caef41db9:
+            uuid: 566d7270-4e2c-4a8b-8eec-141caef41db9
+            region: hero
+            configuration:
+              id: 'field_block:node:sector_page:field_subtitle'
+              label: Subtitle
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_filter:
+                    format: '0'
+            weight: 1
+            additional: {  }
+        third_party_settings: {  }
+    -
+      section:
+        layout_id: sector_body
+        layout_settings:
+          label: Body
+          context_mapping: {  }
+          layout_builder_styles_style:
+            contained: contained
+        components:
+          7c00a1d4-a644-4704-860d-6979c0ef3a2a:
+            uuid: 7c00a1d4-a644-4704-860d-6979c0ef3a2a
+            region: body
+            configuration:
+              id: 'field_block:node:sector_page:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings:
+                  field_formatter_filter:
+                    format: '0'
+            weight: 0
+            additional: {  }
+          98671fd6-55ae-483c-8eec-e0b06e103e5d:
+            uuid: 98671fd6-55ae-483c-8eec-e0b06e103e5d
+            region: body_prefix
+            configuration:
+              id: 'menu_block:sector-main-menu'
+              label: 'Sector › Main menu'
+              label_display: '0'
+              provider: menu_block
+              context_mapping: {  }
+              follow: true
+              follow_parent: active
+              label_link: false
+              label_type: block
+              level: 2
+              depth: 0
+              expand_all_items: true
+              parent: 'sector-main-menu:'
+              suggestion: sector_main_menu
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
