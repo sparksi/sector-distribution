@@ -18,21 +18,21 @@
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
 
-    {% if content.body_prefix %}
+    {% if content.body_prefix|render|striptags('<drupal-render-placeholder>')|trim is not empty %}
       <div {{ region_attributes.body_prefix.addClass('layout__region', 'layout__region--body-prefix') }}>
-        {{ content.body_prefix }}
+        {{- content.body_prefix -}}
       </div>
     {% endif %}
 
-    {% if content.body %}
+    {% if content.body|render|striptags('<drupal-render-placeholder>')|trim is not empty %}
       <div {{ region_attributes.body.addClass('layout__region', 'layout__region--body') }}>
-        {{ content.body }}
+        {{- content.body -}}
       </div>
     {% endif %}
 
-    {% if content.body_suffix %}
+    {% if content.body_suffix|render|striptags('<drupal-render-placeholder>')|trim is not empty %}
       <div {{ region_attributes.body_suffix.addClass('layout__region', 'layout__region--body-suffix') }}>
-        {{ content.body_suffix }}
+        {{- content.body_suffix -}}
       </div>
     {% endif %}
 

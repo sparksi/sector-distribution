@@ -6,8 +6,8 @@
 #}
 {% set utility_classes = [
     'layout--body',
-    content.body_prefix ? 'layout--has-prefix',
-    content.body_suffix ? 'layout--has-suffix',
+    content.body_prefix|render|striptags('<drupal-render-placeholder>')|trim is not empty ? 'layout--has-prefix',
+    content.body_suffix|render|striptags('<drupal-render-placeholder>')|trim is not empty ? 'layout--has-suffix',
 ] %}
 
 {% include '@sector_base/layout/body.twig' with {

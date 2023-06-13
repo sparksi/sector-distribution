@@ -18,15 +18,15 @@
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
 
-    {% if content.breadcrumb %}
+    {% if content.breadcrumb|render|striptags('<drupal-render-placeholder>')|trim is not empty %}
       <div {{ region_attributes.breadcrumb.addClass('layout__region', 'layout__region--breadcrumb') }}>
-        {{ content.breadcrumb }}
+        {{- content.breadcrumb -}}
       </div>
     {% endif %}
 
-    {% if content.hero %}
+    {% if content.hero|render|striptags('<drupal-render-placeholder>')|trim is not empty %}
       <div {{ region_attributes.hero.addClass('layout__region', 'layout__region--hero') }}>
-        {{ content.hero }}
+        {{- content.hero -}}
       </div>
     {% endif %}
 

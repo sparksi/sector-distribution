@@ -47,12 +47,12 @@
 
 {% if label_hidden %}
     {% for item in items %}
-      <figcaption{{ attributes.addClass(classes) }}>{{ item.content }}</figcaption>
+      <figcaption{{ attributes.addClass(classes) }}>{{- item.content -}}</figcaption>
     {% endfor %}
 {% else %}
-    <div{{ title_attributes.addClass('sr-only') }}>{{ label }}</div>
+    <div{{ title_attributes.addClass('sr-only') }}>{{- label -}}</div>
     {% for item in items %}
-      <figcaption{{ attributes.addClass(classes) }}>{{ item.content }}</figcaption>
+      <figcaption{{ attributes.addClass(classes) }}>{{- item.content -}}</figcaption>
     {% endfor %}
 {% endif %}
 {% if libraries %}
