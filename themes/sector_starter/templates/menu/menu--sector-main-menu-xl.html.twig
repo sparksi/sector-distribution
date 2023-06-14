@@ -1,0 +1,18 @@
+{#
+/**
+ * Template for a menu.
+ */
+#}
+{% include '@sector_base/nav/nav.twig' with {
+    libraries: [
+        'sector_starter/' ~ menu_name|clean_class,
+        'sector_starter/navigation',
+        'sector_starter/navigation-xl',
+    ],
+    render_toggle: false,
+    utility_classes: [
+        'navigation',
+        'navigation--xl',
+        '@container/navigation'
+    ]
+} %}

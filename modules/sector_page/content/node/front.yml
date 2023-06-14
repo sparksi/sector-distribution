@@ -5,8 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    644d14b3-d67a-4b04-ae2d-29ca06c149d7: user
-    d7041cb4-2d9f-4235-ba77-d0851431789f: taxonomy_term
+    e044c5a2-d562-40f4-b97b-742469fa6328: user
     0ca573cb-dbdb-49ab-8a48-469ce2493ff6: media
 default:
   revision_uid:
@@ -17,7 +16,7 @@ default:
       value: true
   uid:
     -
-      entity: 644d14b3-d67a-4b04-ae2d-29ca06c149d7
+      entity: e044c5a2-d562-40f4-b97b-742469fa6328
   title:
     -
       value: 'Content management made easy.'
@@ -52,9 +51,6 @@ default:
       value: "<h2>Welcome to Sector!</h2><h3>Sector is an open source Drupal distribution that puts your content first.</h3><p>We have built on the best content authoring and site building tools on the market to provide a radically new user experience for editorial teams and marketers.</p><p>You have installed a development branch of our Sector 10 project! You are welcome to follow our project and check in on progress, but this project is in its infancy. <a href=\"https://www.sector.nz/#block-mailchimpsubscription\">Sign-up to our Sector updates at Sector.nz</a> and we will let you know when it's ready to run.</p><h2>Get Started</h2><p>The documentation on Sector.nz will <strong>get you going in no time.</strong></p><ul><li>You can start with the <a href=\"//www.sector.nz/documentation/collections/you-start-planning-your-site-and-content\_\"><em>Getting started - Editor's Quick Start Guide</em></a><span>collection.</span></li><li>or<em> </em><a href=\"https://www.sector.nz/documentation/collections/getting-started-sector-sitebuilders\_\"><em>Getting started - Sector for Sitebuilders</em></a></li><li>or this one&gt;<a href=\"https://www.sector.nz/documentation/collections/getting-started-developers-quick-start-guide\"><em>Getting started - Developer's Quick Start Guide</em></a>.</li></ul><p>Drupal Newbie? The Drupal community at <a href=\"https://www.drupal.org/\">Drupal.org</a> offers Drupal training and offers many helpful resources.</p><h2>What’s next?</h2><p>We have many online and offline events planned for the second half of 2023. <a href=\"https://www.sector.nz/#block-mailchimpsubscription\">Stay in touch with all things Sector</a>!</p>"
       format: sector_basic_html
       summary: ''
-  field_display_options:
-    -
-      entity: d7041cb4-2d9f-4235-ba77-d0851431789f
   field_image_hero:
     -
       entity: 0ca573cb-dbdb-49ab-8a48-469ce2493ff6
@@ -72,6 +68,7 @@ default:
           layout_builder_styles_style:
             0: hero_maximal
             dark: dark
+            margin_bottom: margin_bottom
             contained: 0
         components:
           4918cca9-94ae-4fd8-a547-7de71a85febc:
@@ -152,6 +149,7 @@ default:
           context_mapping: {  }
           layout_builder_styles_style:
             contained: contained
+            margin_bottom: margin_bottom
         components:
           7c00a1d4-a644-4704-860d-6979c0ef3a2a:
             uuid: 7c00a1d4-a644-4704-860d-6979c0ef3a2a

@@ -31,6 +31,7 @@ third_party_settings:
           context_mapping: {  }
           layout_builder_styles_style:
             0: hero_minimal
+            margin_bottom: margin_bottom
             contained: 0
             dark: 0
         components:
@@ -111,6 +112,7 @@ third_party_settings:
           context_mapping: {  }
           layout_builder_styles_style:
             contained: contained
+            margin_bottom: margin_bottom
         components:
           7c00a1d4-a644-4704-860d-6979c0ef3a2a:
             uuid: 7c00a1d4-a644-4704-860d-6979c0ef3a2a
@@ -138,13 +140,13 @@ third_party_settings:
             configuration:
               id: 'menu_block:sector-main-menu'
               label: 'Sector › Main menu'
-              label_display: '0'
+              label_display: visible
               provider: menu_block
               context_mapping: {  }
               follow: true
               follow_parent: active
               label_link: false
-              label_type: block
+              label_type: menu
               level: 2
               depth: 0
               expand_all_items: true
@@ -154,7 +156,7 @@ third_party_settings:
             additional: {  }
         third_party_settings: {  }
 _core:
-  default_config_hash: HHfJGDY_YG2jR3Qkk6rToA0h5PDB2xgKqAiK01qJdyA
+  default_config_hash: JM6GcFaNFlvwHs_2kL9CfJ_Dta-cfb2tzCON3mLEcTs
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page
