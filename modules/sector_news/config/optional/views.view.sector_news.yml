@@ -1,12 +1,16 @@
+uuid: 9d91900f-3bf4-4630-a4f2-1d35322f3ef5
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.teaser
     - node.type.sector_news
   module:
     - datetime
     - node
     - user
+_core:
+  default_config_hash: uFBh0gfNrMY56Dm4Eh6EyOOlfcB3K1uAX3lwCvdvVlQ
 id: sector_news
 label: 'Sector › News'
 module: views
@@ -170,9 +174,12 @@ display:
           default_row_class: true
           type: ul
           wrapper_class: item-list
-          class: ''
+          class: 'listing listing--with-divides'
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: teaser
       query:
         type: views_query
         options:

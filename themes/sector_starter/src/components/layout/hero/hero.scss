@@ -1,3 +1,10 @@
+@mixin dark {
+    @apply text-zinc-50;
+    --hero-bg-override: theme('colors.zinc.800');
+    --text-color-override: theme('colors.zinc.50');
+    @content;
+}
+
 .hero {
     --banner-max-height: 100dvh;
     @apply overflow-hidden min-h-[var(--banner-min-height,theme(space.72))] max-h-[var(--banner-max-height-override,var(--banner-max-height))];
@@ -5,7 +12,6 @@
     @screen lg {
         --banner-max-height: 66vmin;
     }
-
 
     .media__figure figcaption {
         display: var(--banner-media-figcaption-override, none);
@@ -15,9 +21,11 @@
         @apply object-cover object-center align-top w-full h-full max-h-[var(--banner-max-height-override,var(--banner-max-height))];
     }
 
+    @media (prefers-color-scheme: dark) {
+        @include dark;
+    }
     &:is(.dark) {
-        @apply bg-zinc-600 text-zinc-50;
-        --text-color-override: theme('colors.zinc.50');
+        @include dark;
     }
 
     &:is(.centered) {

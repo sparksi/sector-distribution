@@ -31,7 +31,7 @@ regions:
 
 libraries:
   - sector_starter/style
-  - sector_starter/layout
+  - sector_starter/global
 
 ckeditor5-stylesheets:
   - dist/webfonts.css

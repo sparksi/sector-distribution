@@ -1,0 +1,12 @@
+uuid: 29e64713-6e77-42cd-82b0-e29c88a43634
+langcode: en
+status: true
+dependencies: {  }
+id: margin_bottom
+label: 'Margin bottom'
+classes: apply-margin-bottom
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0

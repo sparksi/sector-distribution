@@ -1,0 +1,11 @@
+.layout {
+    &:where(.apply-margin-bottom) {
+        --layout-mb: theme('spacing.10');
+
+        @screen lg {
+            --layout-mb: theme('spacing.24');
+        }
+
+        margin-bottom: var(--layout-mb-override, var(--layout-mb));
+    }
+}

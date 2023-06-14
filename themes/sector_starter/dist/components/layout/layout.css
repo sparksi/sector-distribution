@@ -1,0 +1,1 @@
+.layout:where(.apply-margin-bottom){--layout-mb: 2.5rem;margin-bottom:var(--layout-mb-override, var(--layout-mb))}@media (min-width: 1024px){.layout:where(.apply-margin-bottom){--layout-mb: 6rem}}

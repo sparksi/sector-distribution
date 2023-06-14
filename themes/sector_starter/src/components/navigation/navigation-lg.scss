@@ -1,3 +1,7 @@
+@mixin dark {
+    --nav-list-bg-override: theme('colors.white');
+}
+
 .navigation--lg {
     :where(.menu__link, button.menu__toggle) {
         @apply lg:h-16 inline-flex items-center border-transparent border-b-4 px-1 pt-1 text-sm font-medium text-zinc-500 hover:border-zinc-300 hover:text-zinc-700 dark:hover:text-zinc-400;
@@ -15,7 +19,7 @@
         --menu-item-gap: 0;
 
         @apply divide-y lg:divide-none;
-        @apply absolute lg:static top-12 left-0 bg-white hidden @lg/navigation:flex @lg/navigation:justify-end @lg/navigation:[--menu-item-gap:theme(space.8)] w-full;
+        @apply absolute lg:static top-12 left-0 bg-[var(--nav-list-bg-override)] lg:bg-transparent hidden @lg/navigation:flex @lg/navigation:justify-end @lg/navigation:[--menu-item-gap:theme(space.8)] w-full;
     }
 
     .navigation__toggle {

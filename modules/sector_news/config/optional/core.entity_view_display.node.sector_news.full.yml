@@ -28,7 +28,8 @@ third_party_settings:
           context_mapping: {  }
           layout_builder_styles_style:
             0: hero_minimal
-            contained: contained
+            margin_bottom: margin_bottom
+            contained: 0
             dark: 0
         components:
           0bc8ef78-853b-483f-901d-c27b1d481c74:
@@ -69,6 +70,7 @@ third_party_settings:
           context_mapping: {  }
           layout_builder_styles_style:
             contained: contained
+            margin_bottom: margin_bottom
         components:
           088d19cd-8871-4904-b85e-d7c2132e6461:
             uuid: 088d19cd-8871-4904-b85e-d7c2132e6461
@@ -101,7 +103,7 @@ third_party_settings:
       allowlisted_blocks: {  }
       restricted_categories: {  }
 _core:
-  default_config_hash: Wk6sYRqaUz3GNSL3wXYFOw_N-vwU7u3CeLoK5WY1rkk
+  default_config_hash: _B2z2HSFjY5oZ3_i_g0ZHT9ec7f-gEvobml51ms_16w
 id: node.sector_news.full
 targetEntityType: node
 bundle: sector_news

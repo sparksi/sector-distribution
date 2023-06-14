@@ -1,6 +1,6 @@
 .hero--minimal {
-  @apply bg-zinc-50 py-4 text-xl leading-8 text-gray-600;
-
+  @apply bg-[var(--hero-bg-override,var(--hero-bg))] py-4 text-xl leading-8 text-gray-600;
+  --hero-bg: theme('colors.zinc.50');
   --container-max-width: theme('breakpoints.2xl');
   --container-padding: theme(spacing.4);
 
