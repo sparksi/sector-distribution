@@ -35,7 +35,7 @@
 		"postcss": "^8.4.24",
 		"postcss-inline-svg": "^6.0.0",
 		"rimraf": "^5.0.1",
-		"sass": "^1.62.1",
+		"sass": "^1.63.3",
 		"stylelint": "^15.7.0",
 		"stylelint-config-standard-scss": "^9.0.0",
 		"tailwind-safelist-generator": "^1.0.0",

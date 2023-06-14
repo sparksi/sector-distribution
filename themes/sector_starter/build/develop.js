@@ -1,5 +1,5 @@
 import p from 'node:path';
-import sass from 'sass';
+import * as sass from 'sass';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 import inlineSVG from 'postcss-inline-svg';

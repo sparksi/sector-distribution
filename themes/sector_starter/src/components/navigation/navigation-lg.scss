@@ -14,7 +14,7 @@
     .navigation__list {
         --menu-item-gap: 0;
 
-        @apply divide-y;
+        @apply divide-y lg:divide-none;
         @apply absolute lg:static top-12 left-0 bg-white hidden @lg/navigation:flex @lg/navigation:justify-end @lg/navigation:[--menu-item-gap:theme(space.8)] w-full;
     }
 
