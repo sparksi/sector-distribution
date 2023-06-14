@@ -1,5 +1,5 @@
 .layout--body {
-    @apply grid grid-cols-12;
+    @apply grid grid-cols-12 lg:gap-x-8;
 
     .layout__region {
         @apply col-start-1 col-end-13;
@@ -10,7 +10,7 @@
     }
 
     .layout__region--body-suffix {
-        @apply lg:col-start-8;
+        @apply lg:col-start-10;
     }
 
     &:has(.layout__region--body-prefix),
@@ -20,6 +20,6 @@
 
     &:has(.layout__region--body-suffix),
     &:where(.layout--has-suffix) .layout__region--body {
-        @apply lg:col-end-8;
+        @apply lg:col-end-10;
     }
 }

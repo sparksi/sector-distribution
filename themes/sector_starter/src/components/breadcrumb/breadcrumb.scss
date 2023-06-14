@@ -1,5 +1,6 @@
 .breadcrumb__list {
-  @apply text-sm text-zinc-900 dark:text-zinc-500 gap-y-1;
+  --text-color: var(--text-color-override, theme('colors.zinc.900'));
+  @apply text-sm text-[var(--text-color)] dark:text-zinc-500 gap-y-1;
 }
 
 .breadcrumb__item {

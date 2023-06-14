@@ -16,7 +16,8 @@
     }
 
     &:is(.dark) {
-        @apply bg-zinc-950 text-white;
+        @apply bg-zinc-600 text-zinc-50;
+        --text-color-override: theme('colors.zinc.50');
     }
 
     &:is(.centered) {

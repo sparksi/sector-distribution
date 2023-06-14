@@ -5,7 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    e54725c0-4e4c-4824-976b-3311c7e62c8b: user
+    68d03c8b-7781-4f44-a562-27afa4719148: user
 default:
   revision_uid:
     -
@@ -15,7 +15,7 @@ default:
       value: true
   uid:
     -
-      entity: e54725c0-4e4c-4824-976b-3311c7e62c8b
+      entity: 68d03c8b-7781-4f44-a562-27afa4719148
   title:
     -
       value: Search
@@ -54,8 +54,8 @@ default:
           context_mapping: {  }
           layout_builder_styles_style:
             0: hero_minimal
-            contained: contained
-            dark: 0
+            dark: dark
+            contained: 0
         components:
           4918cca9-94ae-4fd8-a547-7de71a85febc:
             uuid: 4918cca9-94ae-4fd8-a547-7de71a85febc

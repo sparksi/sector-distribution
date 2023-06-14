@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 _core:
-  default_config_hash: iG48g8quSKMznKbd50fU0FaK4V7flGucuwspz1xQvik
+  default_config_hash: gnWnHlfLnAdUeMRk45alUWKLzPVsKjTjYw6aAtweXaM
 id: sector_search_sitewide
 label: 'Sector › Search › Sitewide'
 module: views
@@ -62,7 +62,7 @@ display:
             preserve_tags: ''
             html: false
           element_type: h3
-          element_class: search-result__title
+          element_class: 'search-result__title card__title'
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
@@ -301,11 +301,11 @@ display:
         type: html_list
         options:
           grouping: {  }
-          row_class: search-result
+          row_class: 'search-result card'
           default_row_class: false
           type: ol
           wrapper_class: search-results__wrapper
-          class: search-results__list
+          class: 'search-results__list listing listing--with-divides'
       row:
         type: fields
       query:

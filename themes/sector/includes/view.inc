@@ -4,6 +4,7 @@
  * @file
  * Theme and preprocess functions for views.
  */
+use Drupal\Core\Template\AttributeArray;
 
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
@@ -36,6 +37,27 @@ function sector_theme_suggestions_views_view_unformatted_alter(array &$suggestio
   $display = $view->current_display;
   $suggestions[] = 'views_view_unformatted__' . $name . '__' . $display;
 }
+
+/**
+ * Implements hook_preprocess_views_view_list().
+ *
+ * Attach libraries based on CSS class attached to view display.
+ * Currently only supporting HTML List.
+ */
+function sector_preprocess_views_view_list(&$variables) {
+  $css_classes = $variables['attributes']['class'] ?? [];
+  $list_css_classes = $variables['list']['attributes']['class'] ?? [];
+  $theme = \Drupal::config('system.theme')->get('default');
+
+  if ($list_css_classes instanceof AttributeArray) {
+    $css_classes = [...$css_classes, ...$list_css_classes->value()];
+  }
+
+  foreach ($css_classes as $class) {
+    $variables['#attached']['library'][] = $theme . '/' . $class;
+  }
+}
+
 
 /**
  * Implements hook_form_alter().

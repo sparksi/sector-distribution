@@ -31,7 +31,7 @@ third_party_settings:
           context_mapping: {  }
           layout_builder_styles_style:
             0: hero_minimal
-            contained: contained
+            contained: 0
             dark: 0
         components:
           4918cca9-94ae-4fd8-a547-7de71a85febc:
@@ -154,7 +154,7 @@ third_party_settings:
             additional: {  }
         third_party_settings: {  }
 _core:
-  default_config_hash: lDESDaPfKJkVFhUhHbWy497YtBC8sH3JQ7jwm1Tw-co
+  default_config_hash: HHfJGDY_YG2jR3Qkk6rToA0h5PDB2xgKqAiK01qJdyA
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page

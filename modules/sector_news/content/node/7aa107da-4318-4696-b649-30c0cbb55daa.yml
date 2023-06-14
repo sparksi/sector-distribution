@@ -5,7 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    cb010214-ed56-40cc-a365-bbbfac3c9b5e: user
+    68d03c8b-7781-4f44-a562-27afa4719148: user
 default:
   revision_uid:
     -
@@ -15,7 +15,7 @@ default:
       value: true
   uid:
     -
-      entity: cb010214-ed56-40cc-a365-bbbfac3c9b5e
+      entity: 68d03c8b-7781-4f44-a562-27afa4719148
   title:
     -
       value: 'Sector News section entry page'
@@ -59,7 +59,7 @@ default:
           context_mapping: {  }
           layout_builder_styles_style:
             0: hero_minimal
-            contained: contained
+            contained: 0
             dark: 0
         components:
           4918cca9-94ae-4fd8-a547-7de71a85febc:
