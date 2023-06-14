@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 _core:
-  default_config_hash: 4De8EqU2-EKYP9EyabGhEFcpc2IoGGSQ2xCX_c2GDS0
+  default_config_hash: iG48g8quSKMznKbd50fU0FaK4V7flGucuwspz1xQvik
 id: sector_search_sitewide
 label: 'Sector › Search › Sitewide'
 module: views
@@ -337,6 +337,10 @@ display:
     display_plugin: block
     position: 1
     display_options:
+      cache:
+        type: none
+      defaults:
+        cache: false
       display_description: 'Block that appears on /search'
       exposed_block: true
       display_extenders: {  }

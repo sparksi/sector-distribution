@@ -5,7 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    ba33ae7a-2d4a-4131-bf83-fe949a98f8e7: user
+    e54725c0-4e4c-4824-976b-3311c7e62c8b: user
 default:
   revision_uid:
     -
@@ -15,7 +15,7 @@ default:
       value: true
   uid:
     -
-      entity: ba33ae7a-2d4a-4131-bf83-fe949a98f8e7
+      entity: e54725c0-4e4c-4824-976b-3311c7e62c8b
   title:
     -
       value: Search
@@ -167,6 +167,17 @@ default:
               views_label: ''
               items_per_page: none
               context_mapping: {  }
-            weight: 1
+            weight: 2
+            additional: {  }
+          94c62d26-4957-4ca8-a715-45e7c2074da0:
+            uuid: 94c62d26-4957-4ca8-a715-45e7c2074da0
+            region: body_suffix
+            configuration:
+              id: 'facet_block:sector_sitewide_search_content_type'
+              label: 'Filter by type'
+              label_display: visible
+              provider: facets
+              context_mapping: {  }
+            weight: 0
             additional: {  }
         third_party_settings: {  }
