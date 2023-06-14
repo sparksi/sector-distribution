@@ -1,14 +1,1 @@
-.breadcrumb__list {row-gap: 0.25rem;font-size: 0.875rem;line-height: 1.25rem;--tw-text-opacity: 1;color: rgb(24 24 27 / var(--tw-text-opacity))
-}@media (prefers-color-scheme: dark) {.breadcrumb__list {--tw-text-opacity: 1;color: rgb(113 113 122 / var(--tw-text-opacity))
-    }
-}.breadcrumb__item {display: flex;align-items: center
-}.breadcrumb__item:first-of-type>.material-symbols-sharp {display: none
-}.breadcrumb__item .material-symbols-sharp {margin-left: 0.25rem;margin-right: 0.25rem;font-size: 0.75rem;line-height: 1rem;--tw-text-opacity: 1;color: rgb(82 82 91 / var(--tw-text-opacity))
-}@media (prefers-color-scheme: dark) {.breadcrumb__item .material-symbols-sharp {--tw-text-opacity: 1;color: rgb(113 113 122 / var(--tw-text-opacity))
-    }
-}.breadcrumb__link:hover {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
-}.breadcrumb__link:focus-visible {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
-}.breadcrumb__link:is([aria-current=page]) {cursor: default;--tw-text-opacity: 1;color: rgb(161 161 170 / var(--tw-text-opacity));text-decoration-line: underline;text-decoration-color: #e4e4e7;text-underline-offset: 4px
-}@media (prefers-color-scheme: dark) {.breadcrumb__link:is([aria-current=page]) {text-decoration-color: #a1a1aa
-    }
-}
+.breadcrumb__list{--text-color: var(--text-color-override, #18181b);row-gap: 0.25rem;font-size: 0.875rem;line-height: 1.25rem;color: var(--text-color)}@media (prefers-color-scheme: dark){.breadcrumb__list{--tw-text-opacity: 1;color: rgb(113 113 122 / var(--tw-text-opacity))}}.breadcrumb__item{display: flex;align-items: center}.breadcrumb__item:first-of-type>.material-symbols-sharp{display: none}.breadcrumb__item .material-symbols-sharp{margin-left: 0.25rem;margin-right: 0.25rem;font-size: 0.75rem;line-height: 1rem;--tw-text-opacity: 1;color: rgb(82 82 91 / var(--tw-text-opacity))}@media (prefers-color-scheme: dark){.breadcrumb__item .material-symbols-sharp{--tw-text-opacity: 1;color: rgb(113 113 122 / var(--tw-text-opacity))}}.breadcrumb__link:hover{--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))}.breadcrumb__link:focus-visible{--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))}.breadcrumb__link:is([aria-current=page]){cursor: default;--tw-text-opacity: 1;color: rgb(161 161 170 / var(--tw-text-opacity));text-decoration-line: underline;text-decoration-color: #e4e4e7;text-underline-offset: 4px}@media (prefers-color-scheme: dark){.breadcrumb__link:is([aria-current=page]){text-decoration-color: #a1a1aa}}
