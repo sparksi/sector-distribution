@@ -1,70 +1,18 @@
-uuid: afe97727-0856-40a2-9f3c-799c6b876338
+uuid: 96658bd0-792e-4802-b597-53bd70696665
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.node.sector_page.body
     - field.field.node.sector_page.field_content_options
-    - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
     - field.field.node.sector_page.layout_builder__layout
     - node.type.sector_page
   module:
-    - field_group
     - media_library
     - path
     - text
-third_party_settings:
-  field_group:
-    group_page_options:
-      children:
-        - group_display
-        - group_options
-      label: 'Page options'
-      region: content
-      parent_name: ''
-      weight: 2
-      format_type: tabs
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        direction: horizontal
-        width_breakpoint: 640
-    group_display:
-      children:
-        - field_display_options
-        - field_image_hero
-      label: Hero
-      region: content
-      parent_name: group_page_options
-      weight: 20
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-    group_options:
-      children:
-        - field_content_options
-      label: Options
-      region: content
-      parent_name: group_page_options
-      weight: 21
-      format_type: tab
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-_core:
-  default_config_hash: dVUDL8_sNVK6OPvh2LBspi-XtZKruQg93Pip4-laIis
 id: node.sector_page.default
 targetEntityType: node
 bundle: sector_page
@@ -72,7 +20,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 2
     region: content
     settings:
       rows: 9
@@ -92,15 +40,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_display_options:
-    type: options_buttons
-    weight: 0
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_image_hero:
     type: media_library_widget
-    weight: 1
+    weight: 4
     region: content
     settings:
       media_types: {  }
