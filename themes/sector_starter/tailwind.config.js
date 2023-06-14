@@ -8,7 +8,7 @@ module.exports = {
     '../sector/src/layout/*/*.{html,twig}',
     '../sector/templates/**/*.{html,twig}',
     '../sector/src/components/**/*.{html,twig}',
-    './safelist.txt',
+    './node_modules/safelist.txt',
   ],
   theme: {
     container: {
@@ -52,7 +52,7 @@ module.exports = {
       className: 'wysiwyg',
     }),
     require('tailwind-safelist-generator')({
-      path: './safelist.txt',
+      path: 'node_modules/safelist.txt',
       patterns: require('./build/tailwind-safelist'),
     }),
   ],
