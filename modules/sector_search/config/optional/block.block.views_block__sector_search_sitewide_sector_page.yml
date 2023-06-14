@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - views.view.sector_search_sitewide
+    - node.type.sector_page
   module:
     - system
     - views

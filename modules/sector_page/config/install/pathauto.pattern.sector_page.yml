@@ -1,6 +1,8 @@
 langcode: en
 status: true
 dependencies:
+  config:
+    - node.type.sector_page
   module:
     - node
 id: sector_page
