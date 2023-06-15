@@ -13,4 +13,8 @@
         position: var(--is-sticky-position-override, sticky);
         top: calc(var(--is-sticky-top-override, theme('spacing.6')) + var(--gin-toolbar-y-offset, 0rem));
     }
+
+    &:where(.is-centered) {
+        --text-align: var(--text-align-override, center);
+    }
 }

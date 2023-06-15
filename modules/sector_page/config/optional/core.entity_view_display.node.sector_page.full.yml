@@ -103,7 +103,9 @@ third_party_settings:
                   view_mode: sector_6_2xl
                 third_party_settings: {  }
             weight: 2
-            additional: {  }
+            additional:
+              layout_builder_styles_style:
+                contains_media: contains_media
         third_party_settings: {  }
       -
         layout_id: sector_body
@@ -158,7 +160,7 @@ third_party_settings:
                 sticky: sticky
         third_party_settings: {  }
 _core:
-  default_config_hash: GcOyu5K8DSwie74dy-_bvIEWaFjpZ_LMcLfiJlMkkp8
+  default_config_hash: gobKuD67L5jNU1PAvuFlY7E4nWOooI-1FuuaBeZp71Q
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page

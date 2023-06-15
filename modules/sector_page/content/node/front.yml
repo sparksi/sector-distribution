@@ -5,7 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    e044c5a2-d562-40f4-b97b-742469fa6328: user
+    3587cb9f-400e-4186-8724-fc666863a5d1: user
     0ca573cb-dbdb-49ab-8a48-469ce2493ff6: media
 default:
   revision_uid:
@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      entity: e044c5a2-d562-40f4-b97b-742469fa6328
+      entity: 3587cb9f-400e-4186-8724-fc666863a5d1
   title:
     -
       value: 'Content management made easy.'
@@ -69,6 +69,7 @@ default:
             0: hero_maximal
             dark: dark
             margin_bottom: margin_bottom
+            centered: centered
             contained: 0
         components:
           4918cca9-94ae-4fd8-a547-7de71a85febc:
@@ -139,7 +140,9 @@ default:
                 entity: layout_builder.entity
                 view_mode: view_mode
             weight: 2
-            additional: {  }
+            additional:
+              layout_builder_styles_style:
+                contains_media: contains_media
         third_party_settings: {  }
     -
       section:

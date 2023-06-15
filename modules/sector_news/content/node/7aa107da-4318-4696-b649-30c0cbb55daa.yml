@@ -5,7 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    68d03c8b-7781-4f44-a562-27afa4719148: user
+    3587cb9f-400e-4186-8724-fc666863a5d1: user
 default:
   revision_uid:
     -
@@ -15,7 +15,7 @@ default:
       value: true
   uid:
     -
-      entity: 68d03c8b-7781-4f44-a562-27afa4719148
+      entity: 3587cb9f-400e-4186-8724-fc666863a5d1
   title:
     -
       value: 'Sector News section entry page'
@@ -59,6 +59,8 @@ default:
           context_mapping: {  }
           layout_builder_styles_style:
             0: hero_minimal
+            margin_bottom: margin_bottom
+            centered: 0
             contained: 0
             dark: 0
         components:
@@ -140,6 +142,7 @@ default:
           context_mapping: {  }
           layout_builder_styles_style:
             contained: contained
+            margin_bottom: margin_bottom
         components:
           7c00a1d4-a644-4704-860d-6979c0ef3a2a:
             uuid: 7c00a1d4-a644-4704-860d-6979c0ef3a2a

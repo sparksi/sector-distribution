@@ -1,5 +1,5 @@
 .hero--maximal {
-  @apply bg-[var(--hero-bg-override,var(--hero-bg))] text-xl leading-8 text-gray-600;
+  @apply bg-[var(--hero-bg-override,var(--hero-bg))] text-xl leading-8 text-[var(--text-color-override)];
 
     .page-title {
       @apply z-10 self-end font-semibold;
