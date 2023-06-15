@@ -1,42 +1,63 @@
 {
-	"name": "SECTOR_SUBTHEME_MACHINE_NAME",
-	"description": "My custom sector subtheme",
-	"type": "module",
-	"private": true,
-	"engineStrict": true,
-	"engines": {
-	  "node": ">=18.0.0"
-	},
-	"scripts": {
-		"postinstall": "find node_modules/ -name '*.info' -type f -delete",
-		"prebuild": "pnpm rimraf dist && pnpm tw && pnpm qa",
-		"fonts": "node ./build/fonts.js",
-		"tw": "tailwindcss -i src/tailwind.css -o dist/tailwind.css",
-		"qa": "stylelint src/{**,.,*/**,**/**/}*.scss",
-		"build": "node ./build.js",
-		"watch:sync": "browser-sync start --proxy 'sector10.ddev.site' --files 'dist' '**/*.twig'",
-		"watch:node": "node ./watch.js development",
-		"dev": "pnpm run '/^watch:.*/'"
-	},
-	"devDependencies": {
-		"@material-symbols/svg-400": "^0.5.5",
-		"@tailwindcss/forms": "^0.5.3",
-		"@tailwindcss/typography": "^0.5.9",
-		"autoprefixer": "^10.4.14",
-		"browser-sync": "^2.29.1",
-		"chalk": "^5.2.0",
-		"chokidar": "^3.5.3",
-		"esbuild": "^0.17.17",
-		"fontmin": "^0.9.9",
-		"glob": "^10.2.1",
-		"output-file": "^2.0.2",
-		"postcss": "^8.4.22",
-		"postcss-inline-svg": "^6.0.0",
-		"rimraf": "^5.0.0",
-		"sass": "^1.62.0",
-		"stylelint": "^15.5.0",
-		"stylelint-config-standard-scss": "^8.0.0",
-		"tailwind-safelist-generator": "^1.0.0",
-		"tailwindcss": "^3.3.1"
-	}
+  "name": "SECTOR_SUBTHEME_MACHINE_NAME",
+  "description": "My custom sector subtheme",
+  "type": "module",
+  "private": true,
+  "engineStrict": true,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete",
+    "prebuild": "pnpm rimraf dist && pnpm tw && pnpm qa",
+    "fonts": "node ./build/fonts.js",
+    "tw": "tailwindcss -i src/tailwind.css -o dist/tailwind.css",
+    "qa": "stylelint src/{**,.,*/**,**/**/}*.scss",
+    "stylefix": "stylelint --fix src/{**,.,*/**,**/**/}*.scss",
+    "build": "node ./build.js",
+    "watch:sync": "browser-sync start --proxy 'sector10.ddev.site' --files 'dist' '**/*.twig'",
+    "watch:node": "node ./watch.js development",
+    "dev": "pnpm run '/^watch:.*/'"
+  },
+  "devDependencies": {
+    "@material-symbols/svg-400": "^0.5.5",
+    "@tailwindcss/forms": "^0.5.3",
+    "@tailwindcss/typography": "^0.5.9",
+    "autoprefixer": "^10.4.14",
+    "browser-sync": "^2.29.1",
+    "chalk": "^5.2.0",
+    "chokidar": "^3.5.3",
+    "esbuild": "^0.17.18",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "fontmin": "^0.9.9",
+    "glob": "^10.2.2",
+    "lint-staged": "^13.2.2",
+    "output-file": "^2.0.2",
+    "postcss": "^8.4.23",
+    "postcss-inline-svg": "^6.0.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0",
+    "sass": "^1.62.1",
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard-scss": "^8.0.0",
+    "tailwind-safelist-generator": "^1.0.0",
+    "tailwindcss": "^3.3.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint —-fix",
+      "prettier --write"
+    ],
+    "*.{css,scss}": [
+      "stylelint --fix"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 80,
+    "tabWidth": 2
+  }
 }
