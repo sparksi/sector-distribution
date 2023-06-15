@@ -7,6 +7,9 @@ sector_hero:
   icon_map:
   - [breadcrumb]
   - [hero]
+  - [hero]
+  - [hero]
+  - [hero]
   regions:
     breadcrumb:
       label: Breadcrumb
@@ -20,7 +23,7 @@ sector_body:
   default_region: body
   library: sector/layout-body
   icon_map:
-  - [body_prefix, body, body_suffix]
+  - [body_prefix, body, body, body_suffix]
   regions:
     body_prefix:
       label: Sidebar left

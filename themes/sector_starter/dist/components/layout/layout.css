@@ -1,1 +1,1 @@
-.layout:where(.apply-margin-bottom){--layout-mb: 2.5rem;margin-bottom:var(--layout-mb-override, var(--layout-mb))}@media (min-width: 1024px){.layout:where(.apply-margin-bottom){--layout-mb: 6rem}}
+.layout:where(.apply-margin-bottom){--layout-mb: 2.5rem;margin-bottom:var(--layout-mb-override, var(--layout-mb))}@media (min-width: 1024px){.layout:where(.apply-margin-bottom){--layout-mb: 6rem}}.layout .is-sticky{position:var(--is-sticky-position-override, sticky);top:calc(var(--is-sticky-top-override, 1.5rem) + var(--gin-toolbar-y-offset, 0rem))}

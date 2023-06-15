@@ -145,18 +145,20 @@ third_party_settings:
               context_mapping: {  }
               follow: true
               follow_parent: active
-              label_link: false
-              label_type: menu
+              label_link: true
+              label_type: root
               level: 2
               depth: 0
               expand_all_items: true
               parent: 'sector-main-menu:'
               suggestion: sector_main_menu_md
             weight: 0
-            additional: {  }
+            additional:
+              layout_builder_styles_style:
+                sticky: sticky
         third_party_settings: {  }
 _core:
-  default_config_hash: JM6GcFaNFlvwHs_2kL9CfJ_Dta-cfb2tzCON3mLEcTs
+  default_config_hash: GcOyu5K8DSwie74dy-_bvIEWaFjpZ_LMcLfiJlMkkp8
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page

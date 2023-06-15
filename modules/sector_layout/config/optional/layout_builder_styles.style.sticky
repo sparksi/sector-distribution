@@ -1,0 +1,12 @@
+uuid: 30a9f1c6-0315-4c80-8f82-6f3e99f892fa
+langcode: en
+status: true
+dependencies: {  }
+id: sticky
+label: Sticky
+classes: is-sticky
+type: component
+group: default
+block_restrictions: {  }
+layout_restrictions: {  }
+weight: 0
