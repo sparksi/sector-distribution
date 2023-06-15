@@ -5,8 +5,8 @@
   "editor.tabSize": 2,
   "editor.autoIndent": "full",
   "editor.insertSpaces": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
   "editor.renderWhitespace": "boundary",
   "editor.wordWrapColumn": 80,
   "editor.wordWrap": "off",
@@ -33,5 +33,45 @@
   "telemetry.telemetryLevel": "off",
   "emptyIndent.removeIndent": true,
   "emptyIndent.highlightIndent": false,
-  "emptyIndent.highlightColor": "rgba(246,36,89,0.6)"
+  "emptyIndent.highlightColor": "rgba(246,36,89,0.6)",
+  "[scss]": {
+    "editor.formatOnPaste": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "stylelint.configOverrides": {
+    "rules": {
+      "at-rule-no-unknown": [
+        true,
+        {
+          "ignoreAtRules": [
+            "extend",
+            "ignores",
+            "include",
+            "media",
+            "if",
+            "else",
+            "mixin",
+            "for",
+            "each",
+            "function",
+            "return",
+            "warn",
+            "apply",
+          ]
+        }
+      ]
+    }
+  },
+  "eslint.enable": true,
+  "stylelint.autoFixOnSave": false,
+  "eslint.codeActionsOnSave.rules": null,
+  "editor.minimap.enabled": false,
+  "editor.codeActionsOnSave": {
+    // For ESLint
+    "source.fixAll.eslint": true,
+    // For TSLint
+    "source.fixAll.tslint": true,
+    // For Stylelint
+    "source.fixAll.stylelint": true
+  },
 }
