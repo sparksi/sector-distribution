@@ -21,6 +21,7 @@
 
 .alert__icon {
   @apply mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10;
+
   --icon-size: 66%;
 
   &::before {
@@ -87,6 +88,7 @@
 
 .alert__close {
   @apply bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2;
+
   --icon-size: 100%;
 
   span {
