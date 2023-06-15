@@ -1,21 +1,19 @@
 .hero--maximal {
   @apply bg-[var(--hero-bg-override,var(--hero-bg))] text-xl leading-8 text-[var(--text-color-override)];
+  --hero-bg: theme('colors.zinc.50');
+  --subtitle-color-override: var(--text-color-override, inherit);
 
-    .page-title {
-      @apply z-10 self-end font-semibold;
-    }
+  .page-title {
+    @apply z-10 self-end font-semibold;
+  }
 
-    .block:has(.subtitle) {
-      @apply row-start-2 row-span-1 z-10 text-white;
-    }
+  .block:has(.subtitle) {
+    @apply row-start-2 row-span-1 z-10 text-white;
+  }
 
-    .subtitle {
-      --subtitle-color-override: theme(colors.neutral.300);
-    }
-
-    .layout__block {
-        @apply relative z-10;
-    }
+  .layout__block {
+    @apply relative z-10;
+  }
 
     .contains-media {
         @apply row-start-1 row-end-3 z-0 col-start-1 col-span-3 absolute inset-0;

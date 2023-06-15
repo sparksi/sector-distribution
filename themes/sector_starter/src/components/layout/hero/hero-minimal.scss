@@ -2,13 +2,7 @@
   @apply bg-[var(--hero-bg-override,var(--hero-bg))] text-xl leading-8 text-[var(--text-color-override)];
   --hero-bg: theme('colors.zinc.50');
   --container-max-width: theme('breakpoints.2xl');
-  --container-padding: theme(spacing.4);
-  --banner-max-height-override: 100%;
   --subtitle-color-override: var(--text-color-override, inherit);
-
-  @media (min-width: theme('screens.lg')) {
-    --container-padding: theme(spacing.8);
-  }
 
   .page-title {
     @apply text-3xl font-semibold tracking-tight sm:text-4xl lg:text-6xl self-end row-start-2 row-end-3;

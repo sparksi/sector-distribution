@@ -55,15 +55,16 @@
     button.menu__toggle {
         @apply order-2 flex-none;
     }
-}
 
-.navigation__sub-menu {
-    @apply hidden order-3 w-full lg:w-auto lg:absolute bg-white dark:bg-zinc-900 shadow divide-y dark:divide-zinc-700;
+    .navigation__sub-menu {
+        @apply hidden order-3 w-full lg:w-auto lg:absolute bg-white dark:bg-zinc-900 shadow divide-y dark:divide-zinc-700;
 
-    .menu__link {
-        @apply min-w-[19ch] px-4;
+        .menu__link {
+            @apply min-w-[19ch] px-4;
 
-        text-wrap: balance;
+            text-wrap: balance;
+        }
     }
-}
 
+
+}

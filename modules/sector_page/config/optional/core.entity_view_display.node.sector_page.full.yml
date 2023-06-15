@@ -145,7 +145,7 @@ third_party_settings:
               label_display: visible
               provider: menu_block
               context_mapping: {  }
-              follow: true
+              follow: false
               follow_parent: active
               label_link: true
               label_type: root
@@ -160,7 +160,7 @@ third_party_settings:
                 sticky: sticky
         third_party_settings: {  }
 _core:
-  default_config_hash: gobKuD67L5jNU1PAvuFlY7E4nWOooI-1FuuaBeZp71Q
+  default_config_hash: 0rrTYCCMFI2uHIK3TyLE3OqcfLyT2TUAOt4ThiXyZCs
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page

@@ -35,11 +35,13 @@
         {% endif %}
         <li{{ item.attributes.addClass(nav_item_classes) }}>
           {% if item.is_expanded and item.below %}
+            {% if render_submenu_toggle %}
             <button type="button" aria-expanded="false" class="menu__toggle" aria-controls="{{ aria_id }}">
               {{ item.title }}
               <span class="material-symbols-sharp" aria-hidden="true">expand_more</span>
             </button>
-            {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['menu__toggle']), 'aria-current': aria_current }) }}
+            {% endif %}
+            {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['menu__toggle-link']), 'aria-current': aria_current }) }}
             {% if item.below %}
               {% include '@sector_base/nav/subnav.twig' with {
                 id: aria_id,
