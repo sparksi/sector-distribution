@@ -1,50 +1,66 @@
 .hero--minimal {
-  @apply bg-[var(--hero-bg-override,var(--hero-bg))] py-4 text-xl leading-8 text-gray-600;
+  @apply bg-[var(--hero-bg-override,var(--hero-bg))] text-xl leading-8 text-gray-600;
   --hero-bg: theme('colors.zinc.50');
   --container-max-width: theme('breakpoints.2xl');
   --container-padding: theme(spacing.4);
+  --banner-max-height-override: 100%;
+  --subtitle-color-override: var(--text-color-override, inherit);
 
   @media (min-width: theme('screens.lg')) {
     --container-padding: theme(spacing.8);
   }
 
-  .block, .page-title {
-    @apply col-start-1 col-end-2;
-  }
+
 
   .page-title {
     @apply text-3xl font-semibold tracking-tight sm:text-4xl lg:text-6xl self-end row-start-2 row-end-3;
   }
 
-  .block:has(.breadcrumb) {
-    @apply row-start-1 row-end-2;
+  .layout__block {
+      @apply relative z-10;
   }
 
-  /*.block-group__inner {
-    @apply grid py-4 gap-y-2 lg:gap-y-5 min-h-[inherit];
+  .contains-media {
+    @apply row-start-1 row-end-3 z-0 col-start-1 col-span-3 absolute inset-0;
+  }
 
-    grid-template-areas: "breadcrumb" "banner" "banner";
-    grid-template-rows: minmax(1em, auto) repeat(2,1fr);
-  }*/
-
-
-  @apply grid gap-y-2 lg:gap-y-5 min-h-[inherit];
+  @apply grid gap-y-2 lg:gap-y-5 min-h-[inherit] relative;
   grid-template-areas: "breadcrumb" "body";
   grid-template-rows: auto 1fr;
 
   .layout__region {
-      @apply col-start-1;
-  }
+    @apply col-start-1 row-start-1 row-span-1;
+}
 
   .layout__region--breadcrumb {
-      @apply row-start-1 row-span-1;
+      @apply row-start-1 row-span-1 z-10 relative container py-4;
   }
 
   .layout__region--hero {
-      @apply lg:row-start-1 lg:row-span-2 flex flex-col gap-y-2 lg:gap-y-5 justify-center;
+      @apply lg:row-start-1 lg:row-span-2 grid grid-cols-1 justify-center overflow-hidden gap-y-4 py-10 lg:py-20 2xl:py-24;
+
+      .layout__block:not(:is(.contains-media)) {
+        @apply row-start-1 col-start-1 container self-end;
+
+        + .layout__block:not(:is(.contains-media)) {
+          @apply row-start-2 self-start;
+        }
+      }
   }
 }
 
 .hero--minimal:not([class*="container"]) > .layout__region {
-  @apply container;
+ // @apply container;
+}
+
+
+
+.hero--minimal:is(.layout--preview) {
+  --banner-min-height: 40rem;
+
+  @apply gap-y-0;
+
+  .layout__region--hero {
+    @apply row-start-2 row-span-1;
+  }
 }

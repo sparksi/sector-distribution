@@ -4,5 +4,9 @@
 }
 
 .subtitle p {
-text-wrap: var(--subtitle-text-wrap, balance);
+  text-wrap: var(--subtitle-text-wrap, balance);
+
+  a {
+    @apply underline underline-offset-4;
+  }
 }
