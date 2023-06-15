@@ -1,0 +1,6 @@
+uuid: 5866bf10-5944-4f45-954e-eea4302dc3da
+langcode: en
+status: true
+dependencies: {  }
+id: hero_maximal
+label: 'Hero › Maximal'

@@ -12,16 +12,27 @@ use Drupal\Core\Render\Element;
  */
 function sector_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   // Check for BlockContent.
-  if ($variables['elements']['#configuration']['provider'] != 'block_content' || empty($variables['elements']['content']['#block_content'])) {
+  $allow = ['block_content', 'fieldblock'];
+
+  if(!in_array($variables['elements']['#configuration']['provider'], $allow)) {
     return;
   }
 
-  // Get the block bundle.
-  $block_content = $variables['elements']['content']['#block_content'];
-  $bundle = $block_content->bundle();
+  if (!empty($variables['elements']['content']['#block_content'])) {
+    // Get the block bundle.
+    $block_content = $variables['elements']['content']['#block_content'];
+    $bundle = $block_content->bundle();
 
-  // Add to theme suggestions.
-  $suggestions[] = 'block__block_content__' . $bundle;
+    // Add to theme suggestions.
+    $suggestions[] = 'block__block_content__' . $bundle;
+    return;
+  }
+
+  if (!empty($variables['elements']['content']['field'])) {
+    $suggestions[] = 'block__fieldblock__' . $variables['elements']['content']['field']['#field_name'];
+    return;
+  }
+
 }
 
 /**
@@ -29,7 +40,7 @@ function sector_theme_suggestions_block_alter(array &$suggestions, array $variab
  */
 function sector_preprocess_block(&$variables) {
 
-  
+
   // Add id to template.
   if (isset($variables['elements']['#id'])) {
     $variables['id'] = str_replace('_', '-', $variables['elements']['#id']);
@@ -54,7 +65,7 @@ function sector_preprocess_block(&$variables) {
 
   $theme = \Drupal::config('system.theme')->get('default');
   $classes = $variables['attributes']['class'] ?? [];
-  
+
   foreach ($classes as $class) {
     $variables['#attached']['library'][] = $theme . '/' . $class;
   }

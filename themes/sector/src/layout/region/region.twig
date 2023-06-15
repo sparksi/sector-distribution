@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Template for a region.
+ */
+#}
+{% set group_class = group ? 'region--' ~ group : 'region--' ~ region|clean_class %}
+{% set wrapping_element = wrapper ? wrapper : 'div' %}
+{% set aria_label = label ? 'aria-labelledby="' ~ region|clean_class ~ '-heading"' : '' %}
+{% set other_classes = utility_classes ? utility_classes : [] %}
+{% set container = create_attribute() %}
+{% if content %}
+
+  <{{wrapping_element}} {{ attributes.addClass([
+    'region',
+    group_class,
+    region|clean_class
+  ] | merge(other_classes))}} {{ aria_label|raw}}>
+    {% if label %}
+      <h2 id="{{ region }}-heading" class="sr-only">{{label}}</h2>
+    {% endif %}
+    <div {{ container.addClass(['region__container'] | merge(container__classes)) }}>
+      {{ content }}
+    </div>
+  </{{wrapping_element}}>
+{% endif %}
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}

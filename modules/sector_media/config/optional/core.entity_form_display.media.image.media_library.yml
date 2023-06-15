@@ -1,13 +1,18 @@
+uuid: 9a1ccf9f-5182-4709-9a54-c15f12f19b64
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
     - image.style.thumbnail
     - media.type.image
   module:
-    - image
+    - svg_image
+_core:
+  default_config_hash: 5nWpSHAWcrd-wBvLanUIJ5dgBpJNSSd_ZkZaQ-1lhfc
 id: media.image.media_library
 targetEntityType: media
 bundle: image
@@ -23,6 +28,8 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_caption: true
+  field_image_options: true
   name: true
   path: true
   status: true

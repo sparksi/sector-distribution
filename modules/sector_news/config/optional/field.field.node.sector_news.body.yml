@@ -6,7 +6,15 @@ dependencies:
     - field.storage.node.body
     - node.type.sector_news
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - sector_basic_html
+      - sector_full_html
+_core:
+  default_config_hash: 7E0hFMqrY1spFt3eVphfO3rAnNQnZO0W6ZEZFgwVTNY
 id: node.sector_news.body
 field_name: body
 entity_type: node

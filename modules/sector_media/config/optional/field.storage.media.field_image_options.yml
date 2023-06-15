@@ -1,0 +1,30 @@
+uuid: f5159573-f346-4ea1-8edd-a887da3c6fc2
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - options
+id: media.field_image_options
+field_name: field_image_options
+entity_type: media
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: dark
+      label: 'Image subject is dark, apply provision for lighter overlays if required'
+    -
+      value: eager
+      label: 'Eager loading'
+    -
+      value: high
+      label: 'High fetch priority'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

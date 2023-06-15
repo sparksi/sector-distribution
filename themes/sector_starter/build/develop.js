@@ -1,5 +1,5 @@
 import p from 'node:path';
-import sass from 'sass';
+import * as sass from 'sass';
 import postcss from 'postcss';
 import autoprefixer from 'autoprefixer';
 import inlineSVG from 'postcss-inline-svg';
@@ -10,7 +10,6 @@ import { mkdir, rm } from 'node:fs';
 import * as esbuild from 'esbuild';
 
 import outputFile from 'output-file';
-import { fonts } from './fonts.js';
 
 export const css = async (source, destination, env) => {
   const pre = await sass
@@ -82,10 +81,6 @@ export const process = async (path, env = 'production') => {
     case '.tsx':
     case '.ts':
       await js(props, dest, env);
-      break;
-    case '.woff2':
-    case '.ttf':
-      await fonts(props, dest);
       break;
     default:
       //console.log(props.ext)

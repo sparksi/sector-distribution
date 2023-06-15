@@ -3,6 +3,9 @@
  * @file
  * Install, update and uninstall functions for the profilename install profile.
  */
+//use Drupal\search_api\Entity\Index;
+//use Drupal\node\Entity\Node;
+use Drupal\sector\SectorInstallHelpers;
 
 /**
  * Implements hook_install_tasks().
@@ -17,6 +20,14 @@ function sector_install_tasks() {
       'display_name' => t('Sector copy default blocks to starter theme'),
       'type' => 'default',
     ],
+    'sector_regenerate_node_aliases' => [
+      'display_name' => t('Rebuild node aliases from new pathauto configuration'),
+      'type' => 'default',
+    ],
+    'sector_search_api_index' => [
+      'display_name' => t('Build Search API index'),
+      'type' => 'default',
+    ]
   ];
 }
 
@@ -24,29 +35,41 @@ function sector_install_tasks() {
  * Content install task.
  */
 function sector_install_required_modules() {
-    \Drupal::service('module_installer')->install([
-      'sector_taxonomies',
-      'sector_default_content', 
-      'sector_media',
-      'sector_brand', 
-      'sector_page',
-      'sector_news'
-    ], FALSE);
+  \Drupal::service('module_installer')->install([
+    'sector_layout',
+    'sector_users',
+    'sector_taxonomies',
+    'sector_default_content',
+    'sector_media',
+    'sector_brand',
+    'sector_page',
+    'sector_news',
+    'sector_search'
+  ], FALSE);
 }
 
 
 function sector_copy_default_blocks() {
-  //$activeThemeName = \Drupal::service('theme.manager')->getActiveTheme()->getName(); 
+  //$activeThemeName = \Drupal::service('theme.manager')->getActiveTheme()->getName();
   $activeThemeName = 'sector_starter';
 
   $block_ids = \Drupal::entityQuery('block')->condition('theme', 'sector')->execute();
 
   foreach ($block_ids as $block_id) {
     $parent_block = \Drupal\block\Entity\Block::load($block_id);
-  
+
     $new_id = str_replace('sector', $activeThemeName, $parent_block->get('id'));
     $child_block = $parent_block->createDuplicateBlock($new_id, $activeThemeName);
-   
+
     $child_block->save();
   }
+}
+
+
+function sector_search_api_index() {
+  SectorInstallHelpers::buildSearchIndex('sector_content_sidewide');
+}
+
+function sector_regenerate_node_aliases() {
+  SectorInstallHelpers::regenerateNodeAliases();
 }

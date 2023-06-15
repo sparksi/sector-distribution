@@ -1,0 +1,74 @@
+<?php
+use Drupal\user\Entity\User;
+
+
+/*
+ * Implements hook_uninstall()
+ */
+function sector_users_uninstall() {
+
+  $users = [
+    'Content Editor',
+    'Content Administrator',
+    'Support Agent',
+    'Robot'
+  ];
+
+  foreach ($users as $username) {
+    $user = user_load_by_name($username);
+    $user->delete();
+  }
+}
+
+
+
+/*
+ * Implements hook_install()
+ */
+function sector_users_install() {
+
+  $users = [
+    'Content Editor' => 'content_editor',
+    'Content Administrator' => ['content_administrator', 'content_editor'],
+    'Support Agent' => 'administrator',
+    'Robot' => 'robot',
+  ];
+
+  $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+  foreach ($users as $username => $role) {
+    // delete if exists already
+    $exists = user_load_by_name($username);
+    if($exists) {
+      $exists->delete();
+    }
+
+    $user = User::create();
+
+    $randomPassword = \Drupal::service('password_generator')->generate();
+    //Mandatory settings
+    $user->setPassword($randomPassword);
+    $user->enforceIsNew();
+    $user->setUsername($username);
+    if (isset($role)) {
+      if (is_array($role)) {
+        foreach ($role as $r) {
+          $user->addRole($r);
+        }
+      }
+      else {
+        $user->addRole($role);
+      }
+    }
+    $user->set("init", 'email');
+    $user->set("langcode", $language);
+    $user->set("preferred_langcode", $language);
+    $user->set("preferred_admin_langcode", $language);
+    $user->block();
+    //Save user
+    $res = $user->save();
+
+    \Drupal::logger('sector_users')->notice('Added user %username', [
+        '%username' => $username,
+    ]);
+  }
+}

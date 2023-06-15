@@ -18,7 +18,7 @@ default:
       target_id: 1
   name:
     -
-      value: 'sample-file.pdf'
+      value: sample-file.pdf
   created:
     -
       value: 1683863126
@@ -30,6 +30,10 @@ default:
       alias: ''
       langcode: en
       pathauto: 0
+  field_caption:
+    -
+      value: '<p>A brief description of the attached file.</p>'
+      format: sector_restricted_basic_html
   field_media_document:
     -
       entity: c7584ae9-cd47-4f9a-ace6-f76c6238d1ca

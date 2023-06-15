@@ -1,0 +1,67 @@
+uuid: 737ce5fa-00ba-4972-9972-4e5dc086e9e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.document.field_caption
+    - field.field.media.document.field_media_document
+    - media.type.document
+  module:
+    - field_group
+    - file
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  field_group:
+    group_figure:
+      children:
+        - field_media_document
+        - field_caption
+      label: Figure
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: media__figure
+        show_empty_fields: false
+        id: ''
+        element: figure
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: LXSkPbnnE3qZqSl5WjJPwq-jHhBrj2Kxxb9y-x4coco
+id: media.document.full
+targetEntityType: media
+bundle: document
+mode: full
+content:
+  field_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_document:
+    type: file_default
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

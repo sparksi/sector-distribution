@@ -1,0 +1,52 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 9e9e3520-8d1a-4294-80ae-dac00bf57d85
+  bundle: sector_page
+  default_langcode: en
+  depends:
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Site map'
+  created:
+    -
+      value: 1684875287
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /site-map
+      langcode: en
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  body:
+    -
+      value: '<p class="lead">The sitemap is built from a Drupal menu block and a node of the content type page assigned to the footer menu.</p><p>In this example a Drupal menu block based on the main menu is embedded into a node of the content type page.</p><p>{Sample content}</p>'
+      format: sector_basic_html
+      summary: ''
+  field_display_options:
+    -
+      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536

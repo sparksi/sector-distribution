@@ -1,0 +1,39 @@
+.search--lg {
+    @apply text-sm grid items-center;
+
+    --toggled-display-override: grid;
+
+    grid-template-columns: 1fr auto;
+
+    > .form-item {
+        @apply col-span-2 row-start-1 col-start-1
+    }
+
+    > .form-actions {
+        @apply col-start-2 col-span-1 z-10 row-start-1 -mr-px;
+    }
+
+    .form-input {
+        @apply rounded-3xl text-sm ps-4 bg-no-repeat;
+
+        background-size: auto 70%;
+        background-position: left theme('spacing.3') center;
+        background-image: svg-load('search.svg', 'fill:#aaa');
+    }
+
+    .form-submit {
+        @apply rounded-full w-10 h-10 border-neutral-900;
+
+        text-indent: -5000em;
+    }
+}
+
+.search__toggle {
+    &[aria-expanded="false"] + .search {
+        @apply hidden;
+    }
+
+    &[aria-expanded="true"] + .search {
+        display: var(--toggled-display-override, block);
+    }
+}

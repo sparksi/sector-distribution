@@ -1,6 +1,5 @@
-.footer {
-    --tw-bg-opacity: 1;
-    background-color: rgb(2 6 23 / var(--tw-bg-opacity));
-    --tw-text-opacity: 1;
-    color: rgb(248 250 252 / var(--tw-text-opacity))
+.footer {--tw-bg-opacity: 1;background-color: rgb(24 24 27 / var(--tw-bg-opacity));--tw-text-opacity: 1;color: rgb(255 255 255 / var(--tw-text-opacity))
+}.footer .region__container {display: flex;flex-wrap: wrap;justify-content: space-between;padding-top: 1rem;padding-bottom: 1rem
+}@media (min-width: 1024px) {.footer .region__container {padding-top: 4rem;padding-bottom: 4rem
+    }
 }

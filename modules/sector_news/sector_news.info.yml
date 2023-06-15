@@ -11,10 +11,11 @@ dependencies:
   - schema_metatag:schema_metatag
   - drupal:menu_link_content
   - default_content:default_content
+  - pathauto:pathauto
 
 default_content:
   node:
-    - d6e47575-6c1c-4414-8b1f-1ebeb85d4c1b  
+    - d6e47575-6c1c-4414-8b1f-1ebeb85d4c1b
     - 7aa107da-4318-4696-b649-30c0cbb55daa
 
   menu_link_content:

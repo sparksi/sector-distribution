@@ -12,7 +12,7 @@
         "declaration-block-no-shorthand-property-overrides": null,
         "no-descending-specificity": null,
         "function-no-unknown": [true, {
-            "ignoreFunctions": ["theme", "list.append", "svg-inline"]
+            "ignoreFunctions": ["theme", "list.append", "append", "svg-inline", "svg-load"]
         }],
         "value-keyword-case": null
     }

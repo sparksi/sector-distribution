@@ -5,6 +5,7 @@ _meta:
   bundle: sector_brand
   default_langcode: en
   depends:
+    07d50088-3853-4248-832d-8f0d47070dc7: media
     6fae1701-99bd-4779-822c-a97073e9c025: media
     fbcb9b2f-37f5-4e49-8f8f-1df0672083ba: media
 default:
@@ -20,6 +21,9 @@ default:
   revision_translation_affected:
     -
       value: true
+  field_brand_mark:
+    -
+      entity: 07d50088-3853-4248-832d-8f0d47070dc7
   field_link:
     -
       uri: 'internal:/'

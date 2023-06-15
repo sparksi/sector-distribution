@@ -1,3 +1,4 @@
-{% include '@sector_base/content/region.twig' with {
-    libraries: ['sector_starter/' ~ region|clean_class ]
+{% include '@sector_base/region/region.twig' with {
+    libraries: ['sector_starter/' ~ region|clean_class ],
+    container__classes: []
 } %}

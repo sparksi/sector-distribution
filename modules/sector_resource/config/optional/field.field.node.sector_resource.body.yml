@@ -6,7 +6,15 @@ dependencies:
     - field.storage.node.body
     - node.type.sector_resource
   module:
+    - allowed_formats
     - text
+third_party_settings:
+  allowed_formats:
+    allowed_formats:
+      - sector_basic_html
+      - sector_full_html
+_core:
+  default_config_hash: pgViaGAWbOkbccUKirFQZ2m_NRxlUrtbFXbcyFWIgMw
 id: node.sector_resource.body
 field_name: body
 entity_type: node

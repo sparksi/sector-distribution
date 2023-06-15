@@ -1,0 +1,12 @@
+uuid: 2d4023b7-c522-4871-8cad-1b7b62f37753
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__sector_search_sitewide__sector_page
+name: 'search_api:views_block__sector_search_sitewide__sector_page'
+filter_key: ''
+url_processor: query_string
+breadcrumb:
+  active: false
+  before: true
+  group: false

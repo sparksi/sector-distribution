@@ -4,6 +4,8 @@ _meta:
   uuid: 28a742ec-87b6-4dda-82a9-ba9353df64a7
   bundle: sector_page
   default_langcode: en
+  depends:
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
     -
@@ -31,9 +33,9 @@ default:
       value: true
   path:
     -
-      alias: ''
+      alias: /page-not-found-error-404
       langcode: en
-      pathauto: 0
+      pathauto: 1
   rh_action:
     -
       value: bundle_default
@@ -46,5 +48,8 @@ default:
   body:
     -
       value: '<h2>Sorry, we couldn''t find what you were looking for.</h2><h3>Most likely causes</h3><ul><li>The page no longer exists or has moved</li><li>The website has recently had a major upgrade so some pages have been moved and a few old ones were deleted.</li><li>It''s also possible the page may have been temporary.</li><li>If you have linked to this page from another site we will ask them to update their link please <a href="/contact-us">contact us</a> and let us&nbsp;where you linked from.</li><li>You may have typed in the incorrect page name.&nbsp;</li></ul><h4>What you can try</h4><p>Make sure the requested URL is correct.</p><p>Or try:&nbsp;</p><ul><li>Using the Search &lt;insert link&gt;</li><li>Using the Sitemap &lt;insert link&gt;</li><li><a href="/contact-us">Contact us</a>&nbsp;to let us know about the error.</li><li>Update your favourites or Bookmark list and links to our site</li></ul><p>{Sample content page}</p>'
-      format: basic_html
+      format: sector_basic_html
       summary: ''
+  field_display_options:
+    -
+      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536

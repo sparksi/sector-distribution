@@ -1,13 +1,18 @@
+uuid: 03644624-5651-47a6-bbb5-801c03ab5a26
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
     - image.style.md
     - media.type.image
   module:
-    - image
+    - svg_image
+_core:
+  default_config_hash: Lgp_wPAhFMwwlblm8pfiUZzbAgIMig-IKqA8T0hLopw
 id: media.image.media_library
 targetEntityType: media
 bundle: image
@@ -17,8 +22,8 @@ content:
     type: image
     label: hidden
     settings:
-      image_style: md
       image_link: ''
+      image_style: md
       image_loading:
         attribute: lazy
     third_party_settings: {  }
@@ -26,6 +31,9 @@ content:
     region: content
 hidden:
   created: true
+  field_caption: true
+  field_image_options: true
   field_media_image: true
   name: true
+  search_api_excerpt: true
   uid: true

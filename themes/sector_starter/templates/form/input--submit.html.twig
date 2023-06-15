@@ -11,8 +11,13 @@
  * @see template_preprocess_input()
  */
 #}
-{% include '@sector_base/form/input.twig' with {
-  attributes: attributes.removeClass('button'),
-  remove_form_control: true,
-  utility_classes: ['btn', 'btn-primary']
+{% include '@sector_base/button/button.twig' with {
+  type: 'submit',
+  button_utility_classes: [],
+  libraries: [
+    'sector_starter/button'
+  ],
+  attributes: attributes,
+  button_content: attributes.value
 } %}
+{{ children }}

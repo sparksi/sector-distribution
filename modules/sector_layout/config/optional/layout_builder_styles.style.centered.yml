@@ -1,0 +1,13 @@
+uuid: ce1ab254-a1dc-44ca-a7d8-9b0f76f6e6d6
+langcode: en
+status: true
+dependencies: {  }
+id: centered
+label: Centered
+classes: is-centered
+type: section
+group: default
+block_restrictions: {  }
+layout_restrictions:
+  - sector_hero
+weight: 0

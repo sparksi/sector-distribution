@@ -1,5 +1,5 @@
 @mixin prose {
-  @apply wysiwyg lg:wysiwyg-lg xl:wysiwyg-xl wysiwyg-zinc dark:wysiwyg-invert;
+  @apply wysiwyg @lg/prose:wysiwyg-lg @xl/prose:wysiwyg-xl wysiwyg-zinc dark:wysiwyg-invert;
 
   --tw-prose-heading-tracking: theme(letterSpacing.normal);
   --tw-prose-heading-family: theme(fontFamily.custom-alt);
@@ -9,14 +9,8 @@
   :where(h2, h3, h4, h5, h6) {
     @apply tracking-[var(--tw-prose-heading-tracking)];
 
-    font-family: var(
-      --tw-prose-heading-family-override,
-      var(--tw-prose-heading-family)
-    );
-    font-weight: var(
-      --tw-prose-heading-weight-override,
-      var(--tw-prose-heading-weight)
-    );
+    font-family: var(--tw-prose-heading-family-override, var(--tw-prose-heading-family));
+    font-weight: var(--tw-prose-heading-weight-override, var(--tw-prose-heading-weight));
   }
 
   > :is(:first-child:not(.hidden)) {
@@ -29,6 +23,15 @@
 
   a:not(:where([class='btn'])) {
     @apply outline-none underline underline-offset-2 decoration-auto hover:text-[var(--tw-prose-links-hover-color)] focus-visible:text-[var(--tw-prose-links-hover-color)] focus-visible:ring-2 focus-visible:ring-sky-400;
+  }
+
+  figure {
+    @apply ms-0 me-0;
+  }
+
+  blockquote {
+    font-synthesis: none;
+    font-variation-settings: 'ital' 1.75;
   }
 
   @content;

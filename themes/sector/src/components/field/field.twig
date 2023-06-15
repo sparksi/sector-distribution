@@ -37,14 +37,12 @@
  * @see template_preprocess_field()
  */
 #}
-{%
-  set classes = [
+{% set classes = [
     'field',
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-  ]
-%}
+    'field--label-' ~ label_display
+  ]|merge(utility_classes ? utility_classes : []) %}
 {%
   set title_classes = [
     'field__label',
@@ -77,4 +75,9 @@
       </div>
     {% endif %}
   </div>
+{% endif %}
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
 {% endif %}

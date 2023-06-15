@@ -1,11 +1,16 @@
+uuid: fceb519c-2204-4898-be6a-f7d37a524747
 langcode: en
 status: true
 dependencies:
   config:
     - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_transcript
     - media.type.remote_video
   module:
     - media
+    - text
+_core:
+  default_config_hash: zQoBQ0BtnMM_rlDdgftyu6eI4AVs9mo5K8xq7NFO2Zc
 id: media.remote_video.default
 targetEntityType: media
 bundle: remote_video
@@ -20,8 +25,16 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_transcript:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   created: true
   name: true
+  search_api_excerpt: true
   thumbnail: true
   uid: true

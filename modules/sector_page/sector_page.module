@@ -1,0 +1,21 @@
+<?php
+use Drupal\menu_link_content\Entity\MenuLinkContent;
+use Drupal\pathauto\PathautoPatternInterface;
+
+/**
+ * Implements hook_pathauto_pattern_alter().
+ */
+function sector_page_pathauto_pattern_alter(PathautoPatternInterface $pattern, array $context) {
+  // Set up pathauto fallback to node title if no menu item is generated
+
+  if (isset($context['data']) && isset($context['data']['node'])) {
+    if (isset($context['data']['node']->menu) && isset($context['data']['node']->menu['enabled'])) {
+      $menu_link_manager = \Drupal::service('plugin.manager.menu.link');
+      $result = $menu_link_manager->loadLinksByRoute('entity.node.canonical', array('node' => $context['data']['node']->id()));
+
+      if(count($result) === 0) {
+        $pattern->setPattern('[node:title]');
+      }
+    }
+  }
+}

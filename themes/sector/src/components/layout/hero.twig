@@ -1,0 +1,39 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% set classes = [
+  'layout',
+  in_preview ? 'layout--preview'
+]|merge(utility_classes ? utility_classes : []) %}
+{% if content %}
+  <div{{ attributes.addClass(classes) }}>
+
+    {% if content.breadcrumb|render|striptags('<drupal-render-placeholder>')|trim is not empty %}
+      <div {{ region_attributes.breadcrumb.addClass('layout__region', 'layout__region--breadcrumb') }}>
+        {{- content.breadcrumb -}}
+      </div>
+    {% endif %}
+
+    {% if content.hero|render|striptags('<drupal-render-placeholder>')|trim is not empty %}
+      <div {{ region_attributes.hero.addClass('layout__region', 'layout__region--hero') }}>
+        {{- content.hero -}}
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}

@@ -38,7 +38,7 @@
       required ? 'form-required',
     ]
   %}
-  
+
   {% if title_display != 'none' %}
     <legend{{ legend.attributes.addClass(legend_classes) }}>
       {{ legend.title }}
@@ -69,3 +69,8 @@
     {% endif %}
   </div>
 </fieldset>
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}

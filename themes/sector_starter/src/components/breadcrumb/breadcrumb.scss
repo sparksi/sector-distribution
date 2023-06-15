@@ -1,0 +1,24 @@
+.breadcrumb__list {
+  --text-color: var(--text-color-override, theme('colors.zinc.900'));
+  @apply text-sm text-[var(--text-color)] dark:text-zinc-400 gap-y-1;
+}
+
+.breadcrumb__item {
+  @apply flex items-center;
+
+  &:first-of-type > .material-symbols-sharp {
+    @apply hidden;
+  }
+
+  .material-symbols-sharp {
+    @apply text-zinc-600 dark:text-zinc-400 text-xs mx-1;
+  }
+}
+
+.breadcrumb__link {
+  @apply hover:text-sky-500 focus-visible:text-sky-500;
+}
+
+.breadcrumb__link:is([aria-current="page"]) {
+  @apply cursor-default;
+}

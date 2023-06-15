@@ -1,0 +1,10 @@
+.layout--body {display: grid;grid-template-columns: repeat(12, minmax(0, 1fr))
+}@media (min-width: 1024px) {.layout--body {-moz-column-gap: 2rem;column-gap: 2rem
+    }
+}.layout--body .layout__region {grid-column-start: 1;grid-column-end: 13
+}@media (min-width: 1024px) {.layout--body .layout__region--body-prefix {grid-column-end: 4
+    }.layout--body .layout__region--body-suffix {grid-column-start: 10
+    }.layout--body:has(.layout__region--body-prefix),.layout--body:where(.layout--has-prefix) .layout__region--body {grid-column-start: 4
+    }.layout--body:has(.layout__region--body-suffix),.layout--body:where(.layout--has-suffix) .layout__region--body {grid-column-end: 10
+    }
+}

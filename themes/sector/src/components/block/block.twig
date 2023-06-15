@@ -21,7 +21,7 @@
   {{ title_prefix }}
   {% if label %}
     {% block label %}
-      <h2{{ title_attributes }}>{{ label }}</h2>
+      <{{ title_tag|default('h2') }}{{ title_attributes.addClass('block__title') }}>{{ label }}</{{ title_tag|default('h2') }}>
     {% endblock %}
   {% endif %}
   {{ title_suffix }}
@@ -32,4 +32,9 @@
 
 {% if html_tag %}
   </{{ html_tag }}>
+{% endif %}
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
 {% endif %}

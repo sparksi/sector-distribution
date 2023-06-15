@@ -1,0 +1,50 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 474a7693-59e6-4318-9a55-05694cd58771
+  bundle: image
+  default_langcode: en
+  depends:
+    58025887-43d9-4865-8635-09e1139d0d0d: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: placeholder.jpg
+  created:
+    -
+      value: 1685075447
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_caption:
+    -
+      value: '<p><a href="https://unsplash.com/photos/QhpxFyjiAo0">Phil Botha, Fern, New Zealand, Autumn 2020</a></p>'
+      format: sector_restricted_basic_html
+  field_image_options:
+    -
+      value: dark
+    -
+      value: eager
+    -
+      value: high
+  field_media_image:
+    -
+      entity: 58025887-43d9-4865-8635-09e1139d0d0d
+      alt: 'Placeholder image'
+      title: ''
+      width: 2000
+      height: 1400

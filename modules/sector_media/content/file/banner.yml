@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: bb036d05-6656-46f4-a845-bbc7a3807613
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: banner.jpg
+  uri:
+    -
+      value: 'public://2023-06/banner.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 64480
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1686270522

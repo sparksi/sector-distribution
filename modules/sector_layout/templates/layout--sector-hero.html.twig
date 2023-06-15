@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a two-column layout.
+ *
+ * Available variables:
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content for this layout.
+ * - attributes: HTML attributes for the layout <div>.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if content %}
+  <div{{ attributes.addClass(['grid']) }}>
+
+    {% if content.breadcrumb %}
+      <div {{ region_attributes.breadcrumb.addClass('layout__region', 'layout__region--breadcrumb') }}>
+        {{ content.breadcrumb }}
+      </div>
+    {% endif %}
+
+    {% if content.hero %}
+      <div {{ region_attributes.hero.addClass('layout__region', 'layout__region--hero') }}>
+        {{ content.hero }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endif %}

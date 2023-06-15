@@ -1,0 +1,50 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 0ca573cb-dbdb-49ab-8a48-469ce2493ff6
+  bundle: image
+  default_langcode: en
+  depends:
+    bb036d05-6656-46f4-a845-bbc7a3807613: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: banner.jpg
+  created:
+    -
+      value: 1686270522
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_caption:
+    -
+      value: '<p>Example placeholder image</p>'
+      format: sector_restricted_basic_html
+  field_image_options:
+    -
+      value: dark
+    -
+      value: eager
+    -
+      value: high
+  field_media_image:
+    -
+      entity: bb036d05-6656-46f4-a845-bbc7a3807613
+      alt: 'Placeholder banner'
+      title: ''
+      width: 3200
+      height: 1800

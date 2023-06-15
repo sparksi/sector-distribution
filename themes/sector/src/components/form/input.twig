@@ -16,8 +16,13 @@
 #}
 {%
   set input_classes = [
-  remove_form_control ? '' : 'form-control',
-]|merge(utility_classes ? utility_classes : [])
+    'form-input',
+    remove_form_control ? '' : 'form-control',
+  ]|merge(utility_classes ? utility_classes : [])
 %}
-
 <input{{ attributes.addClass(input_classes) }} />{{ children }}
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}

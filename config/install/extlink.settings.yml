@@ -17,9 +17,13 @@ extlink_css_exclude: .remove-ext-link-icon
 extlink_css_explicit: '.prose, .apply-ext-link-icon'
 extlink_mailto_class: '0'
 extlink_mailto_label: '(link sends email)'
-extlink_use_font_awesome: true
+extlink_use_font_awesome: false
 extlink_font_awesome_classes:
   links: 'icon icon--external-link'
   mailto: 'fa fa-envelope-o'
 extlink_icon_placement: append
 whitelisted_domains: {  }
+extlink_use_material_symbols: 1
+extlink_material_symbols_classes:
+  text: open_in_new
+  links: material-symbols-sharp

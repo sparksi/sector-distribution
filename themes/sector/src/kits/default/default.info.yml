@@ -17,15 +17,8 @@ regions:
   header_post: Header › Post
   search: Header › Search
   navigation: Header › Navigation
-  hero_pre: Hero › Pre
-  hero: Hero
-  hero_post: Hero › Post
   help: Help
-  content_pre: Content › Pre
   content: Content
-  content_prefix: 'Content prefix (sidebar)'
-  content_suffix: 'Content suffix (sidebar)'
-  content_post: Content › Post
   footer_pre: Footer › Pre
   footer: Footer
   footer_post: Footer › Post
@@ -33,7 +26,7 @@ regions:
 libraries:
   - SECTOR_SUBTHEME_MACHINE_NAME/style
   - SECTOR_SUBTHEME_MACHINE_NAME/layout
-  
+
 ckeditor5-stylesheets:
   - dist/webfonts.css
   - dist/global.css

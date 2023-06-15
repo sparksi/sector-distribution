@@ -5,8 +5,9 @@ module.exports = {
   content: [
     './templates/**/*.{html,twig}',
     './src/**/*.{html,twig}',
-    '../sector/templates/**/*.{html,twig}',
-    '../sector/src/**/*.{html,twig}',
+    '../../../profiles/contrib/sector-distribution/themes/sector/src/layout/*/*.{html,twig}',
+    '../../../profiles/contrib/sector-distribution/themes/sector/templates/**/*.{html,twig}',
+    '../../../profiles/contrib/sector-distribution/themes/sector/sector/src/**/*.{html,twig}',
     './safelist.txt',
   ],
   theme: {
@@ -45,7 +46,7 @@ module.exports = {
       className: 'wysiwyg',
     }),
     require('tailwind-safelist-generator')({
-      path: 'safelist.txt',
+      path: './safelist.txt',
       patterns: require('./build/tailwind-safelist'),
     }),
   ],

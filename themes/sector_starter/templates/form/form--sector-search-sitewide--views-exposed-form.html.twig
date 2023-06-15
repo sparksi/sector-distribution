@@ -1,0 +1,19 @@
+<button type="button" class="search__toggle w-12 h-12 flex place-items-center" aria-expanded="false" aria-controls="{{ attributes.id }}">
+    <span class="sr-only">Show search</span>
+    {% include "@sector_base/icon/icon.twig" with {
+        icon: 'search',
+    } %}
+</button>
+
+{% include "@sector_base/form/form.twig" with {
+    utility_classes: [
+        'form',
+        'search',
+        'search--lg'
+    ],
+    libraries: [
+        'sector_starter/form',
+        'sector_starter/search',
+        'sector_starter/search-lg'
+    ]
+} %}

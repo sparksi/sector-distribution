@@ -1,0 +1,3 @@
+*:not(:empty, [hidden], .hidden)+.block--local-tasks {
+  @apply mt-4;
+}

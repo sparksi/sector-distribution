@@ -1,0 +1,15 @@
+uuid: 5d7aabc0-1878-44ff-804f-6a3f50181a54
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: WuTg-W9TLd7SuSHbL4tB7W779QgMDNdBZuVHd4XFEto
+id: dark
+label: Dark
+classes: dark
+type: section
+group: default
+weight: 0
+block_restrictions: {  }
+layout_restrictions:
+  - sector_hero

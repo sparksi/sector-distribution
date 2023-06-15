@@ -5,9 +5,10 @@ module.exports = {
   content: [
     './templates/**/*.{html,twig}',
     './src/**/*.{html,twig}',
+    '../sector/src/layout/*/*.{html,twig}',
     '../sector/templates/**/*.{html,twig}',
     '../sector/src/components/**/*.{html,twig}',
-    './safelist.txt',
+    './node_modules/safelist.txt',
   ],
   theme: {
     container: {
@@ -15,6 +16,9 @@ module.exports = {
       padding: 'var(--container-padding, 2rem)',
     },
     extend: {
+      colors: {
+        brand: 'oklch(91.91% 0.22 102.16)'
+      },
       breakpoints: {
         '2xl': '1536px',
         '3xl': '1920px',
@@ -40,6 +44,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('@tailwindcss/container-queries'),
     require('@tailwindcss/forms')({
       strategy: 'class',
     }),
@@ -47,7 +52,7 @@ module.exports = {
       className: 'wysiwyg',
     }),
     require('tailwind-safelist-generator')({
-      path: './safelist.txt',
+      path: 'node_modules/safelist.txt',
       patterns: require('./build/tailwind-safelist'),
     }),
   ],

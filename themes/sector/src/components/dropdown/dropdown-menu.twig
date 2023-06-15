@@ -4,7 +4,7 @@
  * Template for a Dropdown menu component.
  */
 #}
-<div class="dropdown-menu">
+<ul class="dropdown-menu" id="{{ id }}">
   {% for item in items %}
     {% set nav_link_classes = [
       'dropdown-item',
@@ -15,6 +15,8 @@
     {% elseif item.url.options.attributes.class %}
       {% set nav_link_classes = nav_link_classes|merge([item.url.options.attributes.class]) %}
     {% endif %}
+    <li>
     {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
+    </li>
   {% endfor %}
-</div>
+</ul>

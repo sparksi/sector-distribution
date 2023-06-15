@@ -1,0 +1,15 @@
+<?php
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityInterface;
+
+/*
+ * Implements hook_uninstall()
+ */
+function sector_search_uninstall() {
+
+  // delete results page
+  $results_page = \Drupal::service('entity.repository')->loadEntityByUuid('node', '3a7d8d6a-7573-411f-86dd-c7551c7d9d4f');
+  if($results_page) {
+    $results_page->delete();
+  }
+}

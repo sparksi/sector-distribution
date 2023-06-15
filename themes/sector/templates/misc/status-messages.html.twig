@@ -15,6 +15,7 @@
   <div role="region" aria-label="{{ status_headings[type] }}"{{ attributes|without('role', 'aria-label') }}>
     {% embed '@sector_base/alert/alert.twig' with {
       type: types[type],
+      libraries: []
     } %}
       {% block content %}
         {% if status_headings[type] %}

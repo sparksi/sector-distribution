@@ -1,0 +1,10 @@
+uuid: 2a729c6b-1e84-403f-bef6-edb702735a02
+langcode: en
+status: true
+dependencies: {  }
+id: hero_variant
+label: 'Hero Variant'
+multiselect: single
+form_type: multiple-select
+required: true
+weight: 0

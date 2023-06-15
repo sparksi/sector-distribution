@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Template for a block.
+ */
+#}
+{% embed '@sector_base/alert/alert.twig' with {
+    type: 'info',
+    libraries: []
+} %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}

@@ -43,3 +43,8 @@ set description_classes = [
     </small>
   {% endif %}
 </div>
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}

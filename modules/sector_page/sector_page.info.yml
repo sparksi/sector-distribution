@@ -9,7 +9,9 @@ dependencies:
   - sector:sector_taxonomies
   - schema_metatag:schema_metatag
   - drupal:menu_link_content
+  - drupal:layout_builder
   - default_content:default_content
+  - pathauto:pathauto
 
 default_content:
     node:
@@ -18,7 +20,16 @@ default_content:
       - 62a42acb-a0df-4a6e-b3b5-7c998d7fd496
       - 28a742ec-87b6-4dda-82a9-ba9353df64a7
       - 7d8fc629-24ab-4d2a-a36e-b19e2b58d2de
+      - 9e9e3520-8d1a-4294-80ae-dac00bf57d85
+      - 79cf4091-961e-47d8-a06c-711aa265374f
+      - 904652d4-22e7-4924-99fa-5d9d15fc23d4
+      - c9e057b5-ceef-4ad9-a2d3-0851b80c388e
     menu_link_content:
       - 3820bee2-d24d-4ef0-9a3f-20a9eb1d6076
       - e544759d-a240-4bd6-aef6-ffccef7391c7
       - ed53e682-83aa-415a-9287-90a14e26da78
+      - dba2a4ce-7232-48a1-a892-cb6fbc7c7489
+      - cd584243-23bc-42d9-ba21-d2f907f09543
+      - 08ac497e-59d5-4437-bd3a-546c49036e7c
+      - 978f132b-a02f-4e8c-8907-1b159f4f41d6
+      - 2d3d718d-d48d-47a5-92c1-098237db066f

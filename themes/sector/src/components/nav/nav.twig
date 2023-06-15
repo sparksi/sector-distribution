@@ -12,31 +12,30 @@
 #}
 {% import _self as menus %}
 
-{% if alignment == 'right' %}
-  {% set alignment = 'justify-content-end' %}
-{% elseif alignment == 'center' %}
-  {% set alignment = 'justify-content-center' %}
-{% elseif alignment == 'vertical' %}
-  {% set alignment = 'flex-column' %}
-{% else %}
-  {% set alignment = '' %}
-{% endif %}
-
-{% set style = style ? 'nav-' ~ style : '' %}
-{% set fill = fill ? 'nav-' ~ fill : '' %}
-
-{% set nav_classes = [ 'nav', style, alignment, fill]|merge(utility_classes ? utility_classes : []) %}
+{% set nav_classes = [ 'menu' ]|merge(utility_classes ? utility_classes : []) %}
 
 {% if items %}
-  <ul{{ attributes.addClass(nav_classes) }}>
+  <nav {{ attributes.addClass(nav_classes) }}>
+  {% if render_toggle %}
+    <button aria-expanded="false" class="navigation__toggle" type="button" aria-controls="{{ id }}">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="material-symbols-sharp" data-action="open" aria-hidden="true">menu</span>
+      <span class="material-symbols-sharp" data-action="close" aria-hidden="true">close</span>
+    </button>
+  {% endif %}
+  <ul class="navigation__list" id="{{ id }}">
     {% block items %}
       {% for item in items %}
         {% set nav_item_classes = [
-          'nav-item',
-          item.in_active_trail ? 'active',
-          item.is_expanded and item.below ? 'dropdown'
+            'menu__item',
+            'menu__item--' ~ menu_item_type,
+            'menu__item--level-' ~ (menu_level + 1),
+            item.in_active_trail ? 'menu__item--active-trail',
+            item.below ? 'menu__item--has-children',
         ] %}
-        {% set nav_link_classes = ['nav-link'] %}
+        {% set nav_link_classes = ['menu__link'] %}
+        {% set aria_id = (item.title ~ '-submenu-' ~ loop.index )|clean_id %}
+        {% set aria_current = item.in_active_trail and not item.is_expanded ? 'page' : null %}
         {% if item.url.options.attributes.class is iterable %}
           {% set nav_link_classes = nav_link_classes|merge(item.url.options.attributes.class) %}
         {% elseif item.url.options.attributes.class %}
@@ -44,10 +43,19 @@
         {% endif %}
         <li{{ item.attributes.addClass(nav_item_classes) }}>
           {% if item.is_expanded and item.below %}
-            {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['dropdown-toggle']), 'data-bs-toggle': 'dropdown' }) }}
+            {% if render_submenu_toggle %}
+            <button type="button" aria-expanded="false" class="menu__toggle" aria-controls="{{ aria_id }}">
+              {{ item.title }}
+              <span class="material-symbols-sharp" aria-hidden="true">expand_more</span>
+            </button>
+            {% endif %}
+            {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['menu__toggle-link']), 'aria-current': aria_current }) }}
             {% if item.below %}
-              {% include '@sector_base/dropdown/dropdown-menu.twig' with {
-                items: item.below
+              {% include '@sector_base/nav/subnav.twig' with {
+                id: aria_id,
+                utility_classes: [ 'menu__menu', 'hidden' ],
+                items: item.below,
+                render_submenu_toggle: render_submenu_toggle
               } %}
             {% endif %}
           {% else %}
@@ -57,5 +65,10 @@
       {% endfor %}
     {% endblock %}
   </ul>
+  {% if libraries %}
+    {% for library in libraries %}
+      {{ attach_library(library) }}
+    {% endfor %}
+  {% endif %}
+  </nav>
 {% endif %}
-

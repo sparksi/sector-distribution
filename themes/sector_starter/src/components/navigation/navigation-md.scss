@@ -1,0 +1,18 @@
+.navigation--md {
+    .block__title ~ & {
+        @apply mt-6;
+    }
+
+    .navigation__list {
+        @apply text-base font-normal divide-y divide-zinc-200 border-y border-zinc-200 lg:max-w-[28ch];
+        @apply dark:border-zinc-700 dark:divide-zinc-700
+    }
+
+    .menu__link {
+        @apply flex py-3 leading-snug hover:text-sky-500 focus-visible:text-sky-500;
+    }
+
+    button.menu__toggle {
+        @apply hidden;
+    }
+}

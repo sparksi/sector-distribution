@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: sector-tertiary
+label: 'Sector › Tertiary'
+description: 'Copyright, privacy statement, sitemap links'
+locked: false

@@ -1,10 +1,14 @@
+uuid: 1c518f0d-3037-4677-a979-05c942b1a76d
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
     - field.field.media.remote_video.field_media_oembed_video
+    - field.field.media.remote_video.field_transcript
     - media.type.remote_video
+_core:
+  default_config_hash: TBgPW-uaXRaICBwLaVc16rXpRiLSknDIdF9q0XL7qso
 id: media.remote_video.media_library
 targetEntityType: media
 bundle: remote_video
@@ -13,6 +17,7 @@ content: {  }
 hidden:
   created: true
   field_media_oembed_video: true
+  field_transcript: true
   name: true
   path: true
   status: true

@@ -1,0 +1,4 @@
+toastify_loading: composer
+enable_preview_regions: true
+hide_discard_revert_buttons: true
+save_behavior: default

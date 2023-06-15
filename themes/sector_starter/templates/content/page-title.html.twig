@@ -4,4 +4,8 @@
  * Template for the page title.
  */
 #}
-{% include "@sector_starter/page-title/page-title.twig" %}
+{% include "@sector_base/title/page-title.twig" with {
+    libraries: [
+        'sector_starter/page-title'
+    ]
+} %}

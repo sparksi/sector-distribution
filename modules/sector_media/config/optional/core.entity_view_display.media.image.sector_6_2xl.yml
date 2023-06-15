@@ -1,0 +1,73 @@
+uuid: 17289927-10e8-4376-8458-185c613a0b4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.sector_6_2xl
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_image_options
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.2xl
+  module:
+    - field_group
+    - layout_builder
+    - responsive_image
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+  field_group:
+    group_figure:
+      children:
+        - field_media_image
+        - field_caption
+      label: Figure
+      parent_name: ''
+      region: content
+      weight: 0
+      format_type: html_element
+      format_settings:
+        classes: media__figure
+        show_empty_fields: false
+        id: ''
+        element: figure
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+_core:
+  default_config_hash: TgerSHqFbA-Cbm19HCu55TYmkSSHGS7jsAAw1ODEsww
+id: media.image.sector_6_2xl
+targetEntityType: media
+bundle: image
+mode: sector_6_2xl
+content:
+  field_caption:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_media_image:
+    type: responsive_image
+    label: hidden
+    settings:
+      responsive_image_style: 2xl
+      image_link: ''
+      image_loading:
+        attribute: eager
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_image_options: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

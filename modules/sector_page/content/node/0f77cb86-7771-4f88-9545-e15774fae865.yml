@@ -1,0 +1,47 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 0f77cb86-7771-4f88-9545-e15774fae865
+  bundle: sector_page
+  default_langcode: en
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Sector standard pages'
+  created:
+    -
+      value: 1686802177
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  path:
+    -
+      alias: /section-entry/sector-standard-page
+      langcode: en
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  body:
+    -
+      value: "<p class=\"lead\">Sector supports a variety of Information Architecture principles - one is to organise your content hierarchically.&nbsp;Hierarchical content is stored in page, with the pages&nbsp;organised in a menu tree.</p><p>This&nbsp;sample page is a node of the content type <em>Page</em> added in&nbsp;Level 2&nbsp;under Section A&nbsp;in the&nbsp;main menu. It&nbsp;is displayed using&nbsp;the 'standard&nbsp;page' page variant.&nbsp;</p><p>Most hierarchical pages in your Sector site will use the standard page variant and menus.</p><p><strong>The concept works well with:</strong></p><ul><li>Linear content structure and user movements (book like content - navigating from&nbsp;A to B to C)</li><li>'Layered'&nbsp;information architecture (information about information in promotional or introductory top layers).</li></ul><p><strong>Known limitations:</strong></p><ul><li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.</li><li>Hierarchical content assumes the principal of 'one page, one position'. This often does not work in a web context - if the principle is broken, context for the page is lost.</li></ul><p>{sample content}</p>"
+      format: sector_basic_html
+      summary: ''

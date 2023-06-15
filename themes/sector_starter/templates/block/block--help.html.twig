@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Template for a block.
+ */
+#}
+{% embed '@sector_base/alert/alert.twig' with {
+    type: 'info',
+    aria_live: 'polite',
+    libraries: [
+        'sector_starter/alert'
+    ]
+} %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
