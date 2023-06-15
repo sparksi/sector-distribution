@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Running Linters. If ther's an error we can't fix automagically, the process will stop for you to fix issue."
+echo "Running StyleLint --fix and ESLint via LintStaged"
+pnpx lint-staged
