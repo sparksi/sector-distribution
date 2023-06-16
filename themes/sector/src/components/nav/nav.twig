@@ -8,6 +8,7 @@
  * - style: tabs | pills
  * - fill: fill | justify
  * - utility_classes: An array of utility classes.
+ * - render_toggle: boolean (which effects attributes: data-behavior: toggle)
  */
 #}
 {% import _self as menus %}
@@ -49,13 +50,17 @@
               <span class="material-symbols-sharp" aria-hidden="true">expand_more</span>
             </button>
             {% endif %}
+
             {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['menu__toggle-link']), 'aria-current': aria_current }) }}
+
             {% if item.below %}
               {% include '@sector_base/nav/subnav.twig' with {
                 id: aria_id,
                 utility_classes: [ 'menu__menu', 'hidden' ],
                 items: item.below,
-                render_submenu_toggle: render_submenu_toggle
+                render_submenu_toggle: render_submenu_toggle,
+                parent_item: link(item.title, item.url, { 'class': ['menu__link']}),
+                menu_level: menu_level + 1
               } %}
             {% endif %}
           {% else %}
