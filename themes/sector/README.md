@@ -12,11 +12,12 @@ This is the Sector Distribution base theme, heavily influenced by the great [Rad
 - Set as default theme: `drush en SUBTHEME_NAME -y; drush config-set system.theme default SUBTHEME_NAME -y`
 - Install required modules: `cd /web/themes/custom/SUBTHEME_NAME; pnpm install`
 
-
 ### Development
-- Watch `pnpm watch`
+- `pnpm dev`
+
+  * will run `watch` and `browsersync` in parallel
 
 #### Use BrowserSync
 
 - Update the `sector10.ddev.site` value in `package.json` with your local site url.
-- Run `pnpm sync` (separately to your `watch` task).
+
