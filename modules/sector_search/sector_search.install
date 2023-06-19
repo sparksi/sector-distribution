@@ -44,13 +44,6 @@ function sector_search_node_insert(EntityInterface $entity) {
       );
       $block->save();
 
-      $node = Node::load($entity->id());
-      $node->set("path", ["pathauto" => TRUE]);
-
-      $pathautoGenerator = \Drupal::service('pathauto.generator');
-      $pathautoGenerator->updateEntityAlias($node, 'insert');
-      $node->save();    // make sure alias is set up
-
       \Drupal::logger('sector_default_content')->notice('Setting search view block to appear on #%nid', [
         '%nid' => $entity->id(),
       ]);
