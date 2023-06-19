@@ -41,7 +41,7 @@ class SectorInstallHelpers implements ContainerInjectionInterface {
         $node->save();
 
         \Drupal::logger('sector')->notice('Regenerated node alias for #%title', [
-          '%title' => $node->title(),
+          '%title' => $node->getTitle(),
         ]);
       }
     }
