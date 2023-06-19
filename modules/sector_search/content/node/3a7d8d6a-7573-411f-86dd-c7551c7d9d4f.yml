@@ -5,7 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    66224be3-8df7-4084-868b-eb396f85db43: user
+    1516457d-4dad-48e9-aee9-beb771f97a9b: user
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
@@ -16,7 +16,7 @@ default:
       value: true
   uid:
     -
-      entity: 66224be3-8df7-4084-868b-eb396f85db43
+      entity: 1516457d-4dad-48e9-aee9-beb771f97a9b
   title:
     -
       value: Search
@@ -37,7 +37,7 @@ default:
       value: published
   path:
     -
-      alias: ''
+      alias: /search
       langcode: en
       pathauto: 1
   rh_action:

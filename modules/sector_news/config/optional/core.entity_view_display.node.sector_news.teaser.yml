@@ -6,13 +6,14 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.sector_news.body
     - field.field.node.sector_news.field_display_options
+    - field.field.node.sector_news.field_image_hero
     - field.field.node.sector_news.field_issue_date
     - node.type.sector_news
   module:
     - text
     - user
 _core:
-  default_config_hash: th5UNU9N-kcKaFqGIhMoDDHUtulCNiDXTO7Iw0Hfrko
+  default_config_hash: LYH0Ge0vYcePj28hhravAdvBVxkjyNPYwF6Mxa_YHAs
 id: node.sector_news.teaser
 targetEntityType: node
 bundle: sector_news
@@ -38,5 +39,6 @@ content:
     region: content
 hidden:
   field_display_options: true
+  field_image_hero: true
   field_issue_date: true
   search_api_excerpt: true

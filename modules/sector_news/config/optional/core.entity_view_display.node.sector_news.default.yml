@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.sector_news.body
     - field.field.node.sector_news.field_display_options
+    - field.field.node.sector_news.field_image_hero
     - field.field.node.sector_news.field_issue_date
     - node.type.sector_news
   module:
@@ -12,7 +13,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: uwBC10gW9RIMQUtoJLfRkRHds0lcnUQRm3WphokHSOQ
+  default_config_hash: qH__U0h_jJeDg0zRkB7eGTvNqAdN5jyMWCKVJCKOujw
 id: node.sector_news.default
 targetEntityType: node
 bundle: sector_news
@@ -37,6 +38,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_image_hero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
     region: content
   field_issue_date:
     type: datetime_default
