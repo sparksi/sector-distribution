@@ -14,6 +14,8 @@ dependencies:
     - media_library
     - path
     - text
+_core:
+  default_config_hash: 5dqP48lwHyo90_QHruvlpGk8F58kFCzvmcGmbGm2p78
 id: node.sector_page.default
 targetEntityType: node
 bundle: sector_page
@@ -36,24 +38,16 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_content_options:
-    type: entity_reference_autocomplete
+    type: options_buttons
     weight: 2
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_display_options:
-    type: entity_reference_autocomplete
+    type: options_buttons
     weight: 3
     region: content
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
   field_image_hero:
     type: media_library_widget

@@ -5,8 +5,9 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    66224be3-8df7-4084-868b-eb396f85db43: user
-    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
+    c3aff566-62fa-41cd-afa3-84c0fd20ee91: user
+    0505a7d0-1283-4435-9aae-06e6c9f0005e: taxonomy_term
+    d7041cb4-2d9f-4235-ba77-d0851431789f: taxonomy_term
 default:
   revision_uid:
     -
@@ -16,7 +17,7 @@ default:
       value: true
   uid:
     -
-      entity: 66224be3-8df7-4084-868b-eb396f85db43
+      entity: c3aff566-62fa-41cd-afa3-84c0fd20ee91
   title:
     -
       value: 'Sector section entry pages'
@@ -54,9 +55,12 @@ default:
       value: "<p class=\"lead\">Sector's simple layout templates use sitebuilder tools and Drupal taxonomies to keep displays modular and consistent across your site.</p><p>This sample page is a node of the content type <em>Page</em> added to Level 1 in the main menu. It is displayed using the 'section entry page' page variant.</p><p>The flexible Drupal content type architecture allows site builders to create a new content type for each design template. But using content types to distinguish between layouts can lead to a large number of content types, with the risk of inconsistent displays and hard to maintain sites.</p><p>Sector's concept of page layout variants and page content settings allows us to build and manage a variety of design templates per content type. This way, content types can be used to distinguish between data types, not design requirements - leading to a lean and simple content architecture and grouping.</p><p>{sample content}</p>"
       format: sector_basic_html
       summary: ''
+  field_content_options:
+    -
+      entity: 0505a7d0-1283-4435-9aae-06e6c9f0005e
   field_display_options:
     -
-      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
+      entity: d7041cb4-2d9f-4235-ba77-d0851431789f
   field_subtitle:
     -
       value: '<p>Introducing Sector page display options via page layout variants and page content settings.</p>'
