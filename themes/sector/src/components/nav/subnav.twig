@@ -16,6 +16,12 @@
 
 {% if items %}
   <ul class="navigation__sub-menu" id="{{ id }}">
+    {% if menu_level < 2 %}
+     <li{{ item.attributes.addClass('menu__item','menu__item--parent', item.in_active_trail ? 'menu__item--active-trail') }}>
+        {{ parent_item }}
+      </li>
+    {% endif %}
+
     {% block items %}
       {% for item in items %}
         {% set nav_item_classes = [
@@ -41,12 +47,15 @@
               <span class="material-symbols-sharp" aria-hidden="true">expand_more</span>
             </button>
             {% endif %}
+
             {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['menu__toggle-link']), 'aria-current': aria_current }) }}
+
             {% if item.below %}
               {% include '@sector_base/nav/subnav.twig' with {
                 id: aria_id,
                 utility_classes: [ 'menu__menu', 'hidden' ],
-                items: item.below
+                items: item.below,
+                menu_level: menu_level + 1
               } %}
             {% endif %}
           {% else %}
