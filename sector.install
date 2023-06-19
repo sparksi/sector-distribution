@@ -38,13 +38,13 @@ function sector_install_required_modules() {
   \Drupal::service('module_installer')->install([
     'sector_layout',
     'sector_users',
-    'sector_workflow',
     'sector_taxonomies',
     'sector_default_content',
     'sector_media',
     'sector_brand',
     'sector_page',
     'sector_news',
+    'sector_workflow',
     'sector_search'
   ], FALSE);
 }
