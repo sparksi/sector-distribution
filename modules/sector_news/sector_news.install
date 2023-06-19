@@ -12,24 +12,26 @@ use Drupal\Core\Entity\EntityInterface;
  */
 function sector_news_install() {
     \Drupal::service('module_installer')->install([
-      'schema_article', 
+      'schema_article',
       'metatag_twitter_cards'
     ], FALSE);
 
     $role_object = Role::load('content_editor');
-    $role_object->grantPermission('create sector_news content');
-    $role_object->grantPermission('delete own sector_news content');
-    $role_object->grantPermission('delete sector_news revisions');
-    $role_object->grantPermission('edit own sector_news content');
+    if($role_object) {
+        $role_object->grantPermission('create sector_news content');
+        $role_object->grantPermission('delete own sector_news content');
+        $role_object->grantPermission('delete sector_news revisions');
+        $role_object->grantPermission('edit own sector_news content');
 
-    $role_object->save();
+        $role_object->save();
+    }
 }
 
 /*
  * Implements hook_uninstall()
  */
 function sector_news_uninstall() {
-    
+
     // Delete all nodes of given content type.
     $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
     $nodes = $storage_handler->loadByProperties(['type' => 'sector_news']);
@@ -59,26 +61,26 @@ function sector_news_uninstall() {
  * Implements hook_ENTITY_TYPE_insert() for node entities.
  */
 function sector_news_node_insert(EntityInterface $entity) {
-  
+
     switch ($entity->uuid()) {
         case '7aa107da-4318-4696-b649-30c0cbb55daa':
-            
+
             $block = Drupal\block\Entity\Block::load('views_block__sector_news_block_default');
             if(!$block) {
               return;
             }
-            
+
             $block->setVisibilityConfig('request_path', array('id' => 'request_path',
                 'pages'=> '/node/' . $entity->id(),
                 'negate' => false,
                 )
             );
             $block->save();
-    
+
             \Drupal::logger('sector_news')->notice('Setting views_block__sector_news_block_default block visibility to appear on #%nid', [
             '%nid' => $entity->id(),
             ]);
         break;
-  
+
     }
 }

@@ -12,19 +12,21 @@ use Drupal\Core\Entity\EntityInterface;
  */
 function sector_page_install() {
     $role_object = Role::load('content_editor');
-    $role_object->grantPermission('create sector_page content');
-    $role_object->grantPermission('delete own sector_page content');
-    $role_object->grantPermission('delete sector_page revisions');
-    $role_object->grantPermission('edit own sector_page content');
+    if($role_object) {
+        $role_object->grantPermission('create sector_page content');
+        $role_object->grantPermission('delete own sector_page content');
+        $role_object->grantPermission('delete sector_page revisions');
+        $role_object->grantPermission('edit own sector_page content');
 
-    $role_object->save();
+        $role_object->save();
+    }
 }
 
 /*
  * Implements hook_uninstall()
  */
 function sector_page_uninstall() {
-    
+
     // Delete all nodes of given content type.
     $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
     $nodes = $storage_handler->loadByProperties(['type' => 'sector_page']);
@@ -39,25 +41,25 @@ function sector_page_uninstall() {
  * Implements hook_ENTITY_TYPE_insert() for node entities.
  */
 function sector_page_node_insert(EntityInterface $entity) {
-  
+
     switch ($entity->uuid()) {
         case '03ae7a81-5206-4dd6-9b82-b998054281f6':
             \Drupal::configFactory()
             ->getEditable('system.site')
             ->set('page.front', '/node/' . $entity->id())
             ->save();
-    
+
             \Drupal::logger('sector_default_content')->notice('Homepage path has been set to the example content node #%nid', [
             '%nid' => $entity->id(),
             ]);
         break;
-  
+
         case '28a742ec-87b6-4dda-82a9-ba9353df64a7':
             \Drupal::configFactory()
             ->getEditable('system.site')
             ->set('page.404', '/node/' . $entity->id())
             ->save();
-    
+
             \Drupal::logger('sector_default_content')->notice('Page not found path has been set to the example content node #%nid', [
             '%nid' => $entity->id(),
             ]);
@@ -68,7 +70,7 @@ function sector_page_node_insert(EntityInterface $entity) {
               ->getEditable('system.site')
               ->set('page.403', '/node/' . $entity->id())
               ->save();
-      
+
             \Drupal::logger('sector_default_content')->notice('Access denied path has been set to the example content node #%nid', [
               '%nid' => $entity->id(),
             ]);
