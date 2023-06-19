@@ -5,15 +5,13 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.sector_news.body
+    - field.field.node.sector_news.field_display_options
     - field.field.node.sector_news.field_issue_date
     - node.type.sector_news
   module:
     - datetime
     - layout_builder
     - layout_builder_restrictions
-    - sector
-    - sector_layout
-    - system
     - text
     - user
 third_party_settings:
@@ -28,7 +26,7 @@ third_party_settings:
       allowlisted_blocks: {  }
       restricted_categories: {  }
 _core:
-  default_config_hash: scaSMP7bXxb-MsDPI_BEjud3jJGTzodMUz8ykXJE6sk
+  default_config_hash: ug19uHy5k13cjeJo1EdoGoXH9t2KQBYL_iMrMNbmL7Y
 id: node.sector_news.full
 targetEntityType: node
 bundle: sector_news
@@ -41,6 +39,11 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
   field_issue_date:
     type: datetime_default
     label: above
@@ -51,5 +54,6 @@ content:
     weight: 0
     region: content
 hidden:
+  field_display_options: true
   links: true
   search_api_excerpt: true

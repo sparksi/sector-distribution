@@ -1,0 +1,8 @@
+uuid: 51a20346-2f9e-45db-9aba-c70ece690be7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Display options'
+vid: sector_display_options
+description: 'Used to define different displays for a specific group of pages. Terms are rabbit-holed to 404.'
+weight: 0
