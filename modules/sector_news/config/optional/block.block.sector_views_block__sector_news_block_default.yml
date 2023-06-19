@@ -1,0 +1,24 @@
+uuid: 1951593e-6c13-4a41-be4a-133de93dfe70
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_news
+  module:
+    - views
+  theme:
+    - sector
+id: sector_views_block__sector_news_block_default
+theme: sector
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:sector_news-block_default'
+settings:
+  id: 'views_block:sector_news-block_default'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility: {  }

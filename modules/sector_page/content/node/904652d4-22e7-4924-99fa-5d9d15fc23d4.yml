@@ -4,6 +4,9 @@ _meta:
   uuid: 904652d4-22e7-4924-99fa-5d9d15fc23d4
   bundle: sector_page
   default_langcode: en
+  depends:
+    66224be3-8df7-4084-868b-eb396f85db43: user
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
     -
@@ -13,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 1
+      entity: 66224be3-8df7-4084-868b-eb396f85db43
   title:
     -
       value: 'Level 2 page'
@@ -29,6 +32,9 @@ default:
   revision_translation_affected:
     -
       value: true
+  moderation_state:
+    -
+      value: published
   path:
     -
       alias: /section-entry/level-2-page
@@ -48,3 +54,6 @@ default:
       value: '<p class="lead">As part of this distribution we have preconfigured one branch of your menu&nbsp;to showcase how your readers can move through your&nbsp;hierarchical content. This is a&nbsp;Level 2 page.&nbsp;</p><p>Make sure the content of the page is relevant to the title and that the structure is clear and logical to the reader. All building blocks on your sites - the page content as a whole, as well as paragraphs and sentences - should be <a href="http://www.webcredible.com/blog/content-usability-writing-web/">front-loaded</a>&nbsp;with the important information at the beginning.</p><p>{sample content}</p>'
       format: sector_basic_html
       summary: ''
+  field_display_options:
+    -
+      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
