@@ -10,6 +10,4 @@ id: content_moderator
 label: 'Content moderator'
 weight: -7
 is_admin: null
-permissions:
-  - 'use sector_editorial transition publish'
-  - 'use sector_editorial transition unpublish'
+permissions: {  }
