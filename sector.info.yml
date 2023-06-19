@@ -35,6 +35,7 @@ install:
   - drupal:page_cache
   - drupal:path
   - drupal:responsive_image
+  - drupal:sdc
   - drupal:serialization
   - drupal:shortcut
   - drupal:system
