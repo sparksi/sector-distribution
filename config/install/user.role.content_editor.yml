@@ -3,10 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - node.type.sector_news
-    - node.type.sector_page
     - taxonomy.vocabulary.tags
-    - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - contextual
@@ -33,8 +30,6 @@ permissions:
   - 'create url aliases'
   - 'edit terms in tags'
   - 'revert all revisions'
-  - 'use sector_editorial transition create_new_draft'
-  - 'use sector_editorial transition submit_for_review'
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view latest version'
