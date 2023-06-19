@@ -103,9 +103,6 @@
             },
             "drupal/extlink": {
                 "Remove jQuery dependency & provide material symbols options": "https://www.drupal.org/files/issues/2023-05-25/material_symbols_options.patch"
-            },
-            "drupal/default_content": {
-                "Fix for default_content with layout builder": "https://www.drupal.org/files/issues/2022-12-06/default_content-3160146-53.patch"
             }
         }
     },

@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
     - node.type.sector_page
-    - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - media_library
