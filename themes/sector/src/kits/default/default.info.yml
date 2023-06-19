@@ -17,6 +17,9 @@ regions:
   header_post: Header › Post
   search: Header › Search
   navigation: Header › Navigation
+  hero_pre: Hero › Pre
+  hero: Hero
+  hero_post: Hero › Post
   help: Help
   content: Content
   footer_pre: Footer › Pre

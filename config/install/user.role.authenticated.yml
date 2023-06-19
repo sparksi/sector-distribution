@@ -1,3 +1,4 @@
+uuid: 8eb4f2e3-2aa2-497b-98eb-bdd465267bf2
 langcode: en
 status: true
 dependencies:
@@ -8,9 +9,11 @@ dependencies:
     - media
     - shortcut
     - system
+_core:
+  default_config_hash: aCiXTvGS9Xg1_V-mTONy-3RnfScpWY2aT7V77_AXJT0
 id: authenticated
 label: 'Authenticated user'
-weight: 1
+weight: -9
 is_admin: false
 permissions:
   - 'access content'

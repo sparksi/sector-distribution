@@ -1,9 +1,14 @@
+uuid: 29c1d817-2588-4380-bda2-d28e5bd7bf74
 langcode: en
 status: true
 dependencies:
   config:
+    - node.type.sector_news
+    - node.type.sector_page
     - taxonomy.vocabulary.tags
+    - workflows.workflow.sector_editorial
   module:
+    - content_moderation
     - contextual
     - file
     - node
@@ -11,9 +16,11 @@ dependencies:
     - system
     - taxonomy
     - toolbar
+_core:
+  default_config_hash: q47UViENT_bOKvqEDzyFLIw64Jls0Fpx4P2Dri3uSl4
 id: content_editor
 label: 'Content editor'
-weight: 2
+weight: -8
 is_admin: false
 permissions:
   - 'access administration pages'
@@ -22,10 +29,22 @@ permissions:
   - 'access files overview'
   - 'access toolbar'
   - 'administer url aliases'
+  - 'create sector_news content'
+  - 'create sector_page content'
   - 'create terms in tags'
   - 'create url aliases'
+  - 'delete own sector_news content'
+  - 'delete own sector_page content'
+  - 'delete sector_news revisions'
+  - 'delete sector_page revisions'
+  - 'edit own sector_news content'
+  - 'edit own sector_page content'
   - 'edit terms in tags'
   - 'revert all revisions'
+  - 'use sector_editorial transition create_new_draft'
+  - 'use sector_editorial transition submit_for_review'
   - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
   - 'view own unpublished content'
   - 'view the administration theme'
