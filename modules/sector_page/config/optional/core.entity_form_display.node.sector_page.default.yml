@@ -1,4 +1,4 @@
-uuid: 0a302087-0a7b-4e41-b665-a8a7883ea44d
+uuid: 283c3ce1-d164-423f-bdfb-447c97c4e269
 langcode: en
 status: true
 dependencies:
@@ -37,16 +37,24 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_content_options:
-    type: options_buttons
+    type: entity_reference_autocomplete
     weight: 2
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_display_options:
-    type: options_buttons
+    type: entity_reference_autocomplete
     weight: 3
     region: content
-    settings: {  }
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_image_hero:
     type: media_library_widget
