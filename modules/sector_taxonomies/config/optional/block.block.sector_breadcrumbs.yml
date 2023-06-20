@@ -1,0 +1,31 @@
+uuid: f6a2d280-24bb-4b3b-b4f4-256d31b5cdca
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - term_condition
+  theme:
+    - sector
+_core:
+  default_config_hash: t9FNuQGXUbbgWdhDSZbuysNg9sU0QdR2jGo4opUzy78
+id: sector_starter_breadcrumbs
+theme: sector
+region: hero
+weight: -9
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility:
+  term:
+    id: term
+    tid:
+      - d7041cb4-2d9f-4235-ba77-d0851431789f
+      - 89a93419-6690-4fb1-8758-9c5b8eb32536
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

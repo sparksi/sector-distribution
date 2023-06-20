@@ -5,6 +5,7 @@ package: Sector
 core_version_requirement: ^10
 dependencies:
   - default_content:default_content
+  - term_condition:term_condition
 
 default_content:
   taxonomy_term:

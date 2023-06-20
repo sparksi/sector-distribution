@@ -1,0 +1,27 @@
+uuid: ffd0b157-7b90-4c93-9344-5ddb5daeca0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_hero
+  module:
+    - fieldblock
+  theme:
+    - sector
+id: sector_hero_media
+theme: sector
+region: hero
+weight: -8
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: Media
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_image_hero
+  formatter_id: entity_reference_entity_view
+  formatter_settings:
+    view_mode: sector_6_2xl
+visibility: {  }
