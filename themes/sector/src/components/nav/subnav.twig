@@ -21,12 +21,10 @@
         {{ parent_item }}
       </li>
     {% endif %}
-
     {% block items %}
       {% for item in items %}
         {% set nav_item_classes = [
             'menu__item',
-            'menu__item--' ~ menu_item_type,
             'menu__item--level-' ~ (menu_level + 1),
             item.in_active_trail ? 'menu__item--active-trail',
             item.below ? 'menu__item--has-children',
