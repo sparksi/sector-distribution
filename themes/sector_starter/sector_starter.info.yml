@@ -27,7 +27,9 @@ regions:
   hero: Hero
   hero_post: Hero › Post
   help: Help
+  content_pre: Content › Pre
   content: Content
+  content_post: Content › Post
   footer_pre: Footer › Pre
   footer: Footer
   footer_post: Footer › Post

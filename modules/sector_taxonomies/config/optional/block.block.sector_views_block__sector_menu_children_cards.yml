@@ -11,7 +11,7 @@ dependencies:
     - sector
 id: sector_views_block__sector_menu_children_cards
 theme: sector
-region: content
+region: content_post
 weight: -4
 provider: null
 plugin: 'views_block:sector_menu-children_cards'
