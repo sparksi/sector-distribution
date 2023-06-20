@@ -7,34 +7,12 @@
 {% include '@sector_base/layout/hero.twig' with {
   html_tag: 'div',
   utility_classes: [
-    'hero',
     'layout--hero'
   ],
   libraries: [
     'sector_starter/layout',
-    'sector_starter/hero',
-    'sector_starter/hero-minimal',
-    'sector_starter/hero-maximal',
+    'sector_starter/layout-hero',
+    'sector_starter/layout-hero-minimal',
+    'sector_starter/layout-hero-maximal',
   ]
-} %}
-{#
-/**
- * Template for a menu.
- */
-#}
-{% include '@sector_base/nav/nav.twig' with {
-    libraries: [
-        'sector_starter/' ~ menu_name|clean_class,
-        'sector_starter/navigation',
-        'sector_starter/navigation-lg',
-    ],
-    attributes: attributes.setAttribute('data-behavior', 'toggle'),
-    render_toggle: true,
-    utility_classes: [
-        'contents',
-        'lg:block',
-        'navigation',
-        'navigation--lg',
-        '@container/navigation'
-    ]
 } %}

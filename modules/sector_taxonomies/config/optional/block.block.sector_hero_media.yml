@@ -1,17 +1,23 @@
-uuid: ffd0b157-7b90-4c93-9344-5ddb5daeca0d
+uuid: 0738bb42-aa78-456a-a717-a86af965e8db
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_image_hero
   module:
+    - block_class
     - fieldblock
   theme:
     - sector
+third_party_settings:
+  block_class:
+    classes: hero__wallpaper
+_core:
+  default_config_hash: y-NSix1-19RfRFEvbh3B52pxqO-9EFUZm6jNSwAf6ps
 id: sector_hero_media
 theme: sector
 region: hero
-weight: -8
+weight: -10
 provider: null
 plugin: 'fieldblock:node'
 settings:

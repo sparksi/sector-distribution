@@ -1,3 +1,13 @@
+.breadcrumb {
+  .hero-post & {
+    @apply bg-zinc-200 py-4;
+
+    .breadcrumb__list {
+      @apply container;
+    }
+  }
+}
+
 .breadcrumb__list {
   --text-color: var(--text-color-override, theme('colors.zinc.900'));
   @apply text-sm text-[var(--text-color)] dark:text-zinc-400 gap-y-1;

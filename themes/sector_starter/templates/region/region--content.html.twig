@@ -1,0 +1,12 @@
+{% include '@sector_base/region/region.twig' with {
+    libraries: ['sector_starter/' ~ region|clean_class ],
+    utility_classes: [
+        'container',
+        'mb-10',
+        'lg:mb-24',
+        'mt-10',
+        'lg:mt-24'
+    ],
+    container__classes: [
+    ]
+} %}

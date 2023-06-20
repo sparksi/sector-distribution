@@ -1,0 +1,27 @@
+uuid: 98398013-f5be-4f18-a831-c43a4c3604f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+  module:
+    - fieldblock
+    - text
+  theme:
+    - sector_starter
+id: sector_hero_maximal_subtitle
+theme: sector_starter
+region: hero_maximal
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: Subtitle
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: true
+  field_name: field_subtitle
+  formatter_id: text_default
+  formatter_settings: {  }
+visibility: {  }

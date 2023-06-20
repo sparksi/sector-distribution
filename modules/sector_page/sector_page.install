@@ -75,5 +75,24 @@ function sector_page_node_insert(EntityInterface $entity) {
               '%nid' => $entity->id(),
             ]);
         break;
+
+        case '9e9e3520-8d1a-4294-80ae-dac00bf57d85' :
+            $block = Drupal\block\Entity\Block::load('sector_site_map');
+
+            if(!$block) {
+                return;
+            }
+
+            $block->setVisibilityConfig('request_path', array('id' => 'request_path',
+                  'pages'=> '/node/' . $entity->id(),
+                  'negate' => false,
+                )
+            );
+            $block->save();
+
+            \Drupal::logger('sector_page')->notice('Setting sitemap menu block to appear on #%nid', [
+                '%nid' => $entity->id(),
+            ]);
+        break;
     }
 }

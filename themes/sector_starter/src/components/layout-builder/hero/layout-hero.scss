@@ -5,7 +5,7 @@
     @content;
 }
 
-.hero {
+.layout--hero {
     --banner-max-height: 100dvh;
     @apply overflow-hidden min-h-[var(--banner-min-height,theme(space.72))] max-h-[var(--banner-max-height-override,var(--banner-max-height))];
     text-align: var(--text-align, left);

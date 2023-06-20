@@ -8,10 +8,10 @@ dependencies:
   theme:
     - sector
 _core:
-  default_config_hash: t9FNuQGXUbbgWdhDSZbuysNg9sU0QdR2jGo4opUzy78
-id: sector_starter_breadcrumbs
+  default_config_hash: AwssZrbuLd-df3rwuNtMZ7UXWCmwY7Oo0FcThSQ9yFw
+id: sector_breadcrumbs
 theme: sector
-region: hero
+region: hero_post
 weight: -9
 provider: null
 plugin: system_breadcrumb_block

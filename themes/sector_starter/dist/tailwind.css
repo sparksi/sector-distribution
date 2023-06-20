@@ -1459,6 +1459,10 @@ video {
   margin-bottom: 0px;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-3 {
   margin-bottom: 0.75rem;
 }
@@ -1758,6 +1762,10 @@ video {
 
 .mr-px {
   margin-right: 1px;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
 }
 
 .mt-2 {
@@ -8026,11 +8034,6 @@ video {
   --tw-ring-opacity: 0.05;
 }
 
-.\@container\/breadcrumb {
-  container-type: inline-size;
-  container-name: breadcrumb;
-}
-
 .\@container\/navigation {
   container-type: inline-size;
   container-name: navigation;
@@ -13208,6 +13211,10 @@ video {
     grid-row-start: auto;
   }
 
+  .lg\:mb-24 {
+    margin-bottom: 6rem;
+  }
+
   .lg\:ml-0 {
     margin-left: 0px;
   }
@@ -13494,6 +13501,10 @@ video {
 
   .lg\:mr-px {
     margin-right: 1px;
+  }
+
+  .lg\:mt-24 {
+    margin-top: 6rem;
   }
 
   .lg\:block {
@@ -15292,6 +15303,16 @@ video {
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .lg\:py-16 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .lg\:py-48 {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
 
   .lg\:text-2xl {
@@ -19927,5 +19948,10 @@ video {
     --tw-space-y-reverse: 0;
     margin-top: calc(1px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1px * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:py-64 {
+    padding-top: 16rem;
+    padding-bottom: 16rem;
   }
 }
