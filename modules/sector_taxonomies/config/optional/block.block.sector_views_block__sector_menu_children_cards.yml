@@ -1,14 +1,20 @@
-uuid: ec3557a1-e215-4f65-88fb-9675faedb6bf
+uuid: 1b1a9306-6d8f-4d62-b355-7aed0ef24c58
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.sector_menu
   module:
+    - block_class
     - term_condition
     - views
   theme:
     - sector
+third_party_settings:
+  block_class:
+    classes: 'container mb-10 lg:mb-24'
+_core:
+  default_config_hash: DqFpSXEqFXo-husAWIz923GBArdDl6M8Fmg9K4iMxIc
 id: sector_views_block__sector_menu_children_cards
 theme: sector
 region: content_post

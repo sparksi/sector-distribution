@@ -1,15 +1,21 @@
-uuid: 18cc6f62-f74f-451f-bd84-311867049aab
+uuid: dd8e07fe-cc5b-4519-9924-f6a939e04118
 langcode: en
 status: true
 dependencies:
   content:
     - 'block_content:sector_brand:0dd63365-141e-4592-b972-9e587e81337c'
   module:
+    - block_class
     - block_content
   theme:
-    - sector
-id: sector_brand_main_footer
-theme: sector
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'lg:ml-auto lg:self-end max-w-fit w-36 md:w-48'
+_core:
+  default_config_hash: rb3EA0ReXP4ljFS3X7PAIwNdAMWVoUce-SHEbxTrI18
+id: sector_starter_brand_main_footer
+theme: sector_starter
 region: footer
 weight: 0
 provider: null
