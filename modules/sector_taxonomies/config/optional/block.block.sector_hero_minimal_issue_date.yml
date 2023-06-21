@@ -1,0 +1,37 @@
+uuid: 45ad6203-19b7-4d32-b8a5-7d1717bda7d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_issue_date
+  module:
+    - datetime
+    - fieldblock
+    - node
+  theme:
+    - sector
+id: sector_hero_minimal_issue_date
+theme: sector
+region: hero_minimal
+weight: -9
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Issue date'
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: true
+  field_name: field_issue_date
+  formatter_id: datetime_default
+  formatter_settings:
+    timezone_override: ''
+    format_type: sector_date_short
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      sector_news: sector_news

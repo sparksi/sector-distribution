@@ -1,0 +1,8 @@
+uuid: fc37e60d-49be-447e-94b5-03a6af13ad2b
+langcode: en
+status: true
+dependencies: {  }
+id: sector_datetime_short
+label: 'Sector › Date/Time › Short'
+locked: false
+pattern: 'j F Y g:ia'

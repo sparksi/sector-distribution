@@ -1,0 +1,8 @@
+uuid: f60a41a8-94eb-499d-afaf-a6945eb195ec
+langcode: en
+status: true
+dependencies: {  }
+id: sector_date_short
+label: 'Sector › Date › Short'
+locked: false
+pattern: 'j F Y'

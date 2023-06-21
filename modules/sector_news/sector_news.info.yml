@@ -17,6 +17,7 @@ default_content:
   node:
     - d6e47575-6c1c-4414-8b1f-1ebeb85d4c1b
     - 7aa107da-4318-4696-b649-30c0cbb55daa
+    - 10749f65-4bbd-4ff9-942f-f720be783d69
 
   menu_link_content:
     - 0f80f161-863f-4e05-8537-828e6ca85332

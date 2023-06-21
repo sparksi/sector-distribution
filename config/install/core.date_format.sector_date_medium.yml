@@ -1,0 +1,8 @@
+uuid: 19ec5d98-b7f8-4026-8dc9-ed0bc9b13a0f
+langcode: en
+status: true
+dependencies: {  }
+id: sector_date_medium
+label: 'Sector › Date › Medium'
+locked: false
+pattern: 'D j F Y'
