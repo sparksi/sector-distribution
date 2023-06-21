@@ -1,0 +1,25 @@
+uuid: 18cc6f62-f74f-451f-bd84-311867049aab
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sector_brand:0dd63365-141e-4592-b972-9e587e81337c'
+  module:
+    - block_content
+  theme:
+    - sector
+id: sector_brand_main_footer
+theme: sector
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:0dd63365-141e-4592-b972-9e587e81337c'
+settings:
+  id: 'block_content:0dd63365-141e-4592-b972-9e587e81337c'
+  label: 'Sector › Main Brand (footer)'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

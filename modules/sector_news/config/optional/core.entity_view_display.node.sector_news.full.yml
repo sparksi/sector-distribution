@@ -10,7 +10,6 @@ dependencies:
     - field.field.node.sector_news.field_issue_date
     - node.type.sector_news
   module:
-    - datetime
     - layout_builder
     - layout_builder_restrictions
     - text
@@ -27,7 +26,7 @@ third_party_settings:
       allowlisted_blocks: {  }
       restricted_categories: {  }
 _core:
-  default_config_hash: skmTzuAg30gtUc004TCCjhhHLEXGht2N6h5XtA0J5fQ
+  default_config_hash: kZajmlkc5zubX5ML_tJxjuArtb1GsMB-TA66HCEurWI
 id: node.sector_news.full
 targetEntityType: node
 bundle: sector_news
@@ -43,19 +42,11 @@ content:
   content_moderation_control:
     settings: {  }
     third_party_settings: {  }
-    weight: -20
-    region: content
-  field_issue_date:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
-    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
   field_display_options: true
   field_image_hero: true
+  field_issue_date: true
   links: true
   search_api_excerpt: true
