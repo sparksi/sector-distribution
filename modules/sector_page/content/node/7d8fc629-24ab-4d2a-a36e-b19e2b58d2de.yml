@@ -5,6 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
+    66224be3-8df7-4084-868b-eb396f85db43: user
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
@@ -15,7 +16,7 @@ default:
       value: true
   uid:
     -
-      target_id: 1
+      entity: 66224be3-8df7-4084-868b-eb396f85db43
   title:
     -
       value: 'Access Denied (error 403)'
@@ -28,9 +29,15 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
   path:
     -
-      alias: /access-denied-error-403
+      alias: ''
       langcode: en
       pathauto: 1
   rh_action:

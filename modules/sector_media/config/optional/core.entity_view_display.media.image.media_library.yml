@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.media_library
+    - field.field.media.image.field_brightness
     - field.field.media.image.field_caption
     - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
@@ -12,7 +13,7 @@ dependencies:
   module:
     - svg_image
 _core:
-  default_config_hash: Lgp_wPAhFMwwlblm8pfiUZzbAgIMig-IKqA8T0hLopw
+  default_config_hash: MdKXK9awza8zoivXqgWWjhsnc5-S1szMaCJBy9aU5_Q
 id: media.image.media_library
 targetEntityType: media
 bundle: image
@@ -31,6 +32,7 @@ content:
     region: content
 hidden:
   created: true
+  field_brightness: true
   field_caption: true
   field_image_options: true
   field_media_image: true

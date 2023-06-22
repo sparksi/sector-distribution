@@ -1,0 +1,27 @@
+uuid: 2194489d-7317-4fe8-8105-ebccd89a0eac
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - options
+id: media.field_brightness
+field_name: field_brightness
+entity_type: media
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: dark
+      label: Dark
+    -
+      value: light
+      label: Light
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

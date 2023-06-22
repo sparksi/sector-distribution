@@ -5,7 +5,9 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
+    fb27ffaf-76c2-4231-93f4-92088aa7dfe7: user
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
+    0ca573cb-dbdb-49ab-8a48-469ce2493ff6: media
 default:
   revision_uid:
     -
@@ -15,7 +17,7 @@ default:
       value: true
   uid:
     -
-      target_id: 1
+      entity: fb27ffaf-76c2-4231-93f4-92088aa7dfe7
   title:
     -
       value: 'Section A '
@@ -28,6 +30,12 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
   path:
     -
       alias: /section
@@ -50,6 +58,9 @@ default:
   field_display_options:
     -
       entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
+  field_image_hero:
+    -
+      entity: 0ca573cb-dbdb-49ab-8a48-469ce2493ff6
   field_subtitle:
     -
       value: '<p>Introducing Sector page display and page content settings.&nbsp;</p>'

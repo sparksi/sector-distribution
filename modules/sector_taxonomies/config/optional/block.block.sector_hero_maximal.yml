@@ -1,0 +1,30 @@
+uuid: d259a236-8d53-4b8d-81ff-321438988c03
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.hero_maximal
+  module:
+    - blockgroup
+    - term_condition
+  theme:
+    - sector
+id: sector_hero_maximal
+theme: sector
+region: hero
+weight: 0
+provider: null
+plugin: 'block_group:hero_maximal'
+settings:
+  id: 'block_group:hero_maximal'
+  label: 'Hero › Maximal'
+  label_display: '0'
+  provider: blockgroup
+visibility:
+  term:
+    id: term
+    tid:
+      - d7041cb4-2d9f-4235-ba77-d0851431789f
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

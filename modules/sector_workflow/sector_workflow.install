@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the profilename install profile.
+ */
+use Drupal\user\Entity\Role;
+//use Drupal\Core\Entity\EntityInterface;
+
+
+/*
+ * Implements hook_install()
+ */
+function sector_workflow_install() {
+
+    $editor_role_object = Role::load('content_editor');
+    if($editor_role_object) {
+      $editor_role_object->grantPermission('use sector_editorial transition create_new_draft');
+      $editor_role_object->grantPermission('use sector_editorial transition submit_for_review');
+
+      $editor_role_object->save();
+    }
+
+    $moderator_role_object = Role::load('content_moderator');
+    if($moderator_role_object) {
+      $moderator_role_object->grantPermission('use sector_editorial transition publish');
+      $moderator_role_object->grantPermission('use sector_editorial transition unpublish');
+
+      $moderator_role_object->save();
+    }
+}

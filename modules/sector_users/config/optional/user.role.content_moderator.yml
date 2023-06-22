@@ -1,0 +1,13 @@
+uuid: 4aa646d3-53a1-451d-8ae5-c441e1ee3759
+langcode: en
+status: true
+dependencies:
+  config:
+    - workflows.workflow.sector_editorial
+  module:
+    - content_moderation
+id: content_moderator
+label: 'Content moderator'
+weight: -7
+is_admin: null
+permissions: {  }

@@ -5,7 +5,8 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    3587cb9f-400e-4186-8724-fc666863a5d1: user
+    fb27ffaf-76c2-4231-93f4-92088aa7dfe7: user
+    d7041cb4-2d9f-4235-ba77-d0851431789f: taxonomy_term
     0ca573cb-dbdb-49ab-8a48-469ce2493ff6: media
 default:
   revision_uid:
@@ -16,7 +17,7 @@ default:
       value: true
   uid:
     -
-      entity: 3587cb9f-400e-4186-8724-fc666863a5d1
+      entity: fb27ffaf-76c2-4231-93f4-92088aa7dfe7
   title:
     -
       value: 'Content management made easy.'
@@ -32,6 +33,9 @@ default:
   revision_translation_affected:
     -
       value: true
+  moderation_state:
+    -
+      value: published
   path:
     -
       alias: /home
@@ -51,6 +55,9 @@ default:
       value: "<h2>Welcome to Sector!</h2><h3>Sector is an open source Drupal distribution that puts your content first.</h3><p>We have built on the best content authoring and site building tools on the market to provide a radically new user experience for editorial teams and marketers.</p><p>You have installed a development branch of our Sector 10 project! You are welcome to follow our project and check in on progress, but this project is in its infancy. <a href=\"https://www.sector.nz/#block-mailchimpsubscription\">Sign-up to our Sector updates at Sector.nz</a> and we will let you know when it's ready to run.</p><h2>Get Started</h2><p>The documentation on Sector.nz will <strong>get you going in no time.</strong></p><ul><li>You can start with the <a href=\"//www.sector.nz/documentation/collections/you-start-planning-your-site-and-content\_\"><em>Getting started - Editor's Quick Start Guide</em></a><span>collection.</span></li><li>or<em> </em><a href=\"https://www.sector.nz/documentation/collections/getting-started-sector-sitebuilders\_\"><em>Getting started - Sector for Sitebuilders</em></a></li><li>or this one&gt;<a href=\"https://www.sector.nz/documentation/collections/getting-started-developers-quick-start-guide\"><em>Getting started - Developer's Quick Start Guide</em></a>.</li></ul><p>Drupal Newbie? The Drupal community at <a href=\"https://www.drupal.org/\">Drupal.org</a> offers Drupal training and offers many helpful resources.</p><h2>What’s next?</h2><p>We have many online and offline events planned for the second half of 2023. <a href=\"https://www.sector.nz/#block-mailchimpsubscription\">Stay in touch with all things Sector</a>!</p>"
       format: sector_basic_html
       summary: ''
+  field_display_options:
+    -
+      entity: d7041cb4-2d9f-4235-ba77-d0851431789f
   field_image_hero:
     -
       entity: 0ca573cb-dbdb-49ab-8a48-469ce2493ff6
@@ -58,120 +65,3 @@ default:
     -
       value: '<p>Built on Tailwind based on the Drupal <a href="https://www.drupal.org/project/radix">Radix theme</a>, the Sector Starter Theme and Base configuration is ready to go and easy to administer.</p>'
       format: sector_restricted_basic_html
-  layout_builder__layout:
-    -
-      section:
-        layout_id: sector_hero
-        layout_settings:
-          label: Hero
-          context_mapping: {  }
-          layout_builder_styles_style:
-            0: hero_maximal
-            dark: dark
-            margin_bottom: margin_bottom
-            centered: centered
-            contained: 0
-        components:
-          4918cca9-94ae-4fd8-a547-7de71a85febc:
-            uuid: 4918cca9-94ae-4fd8-a547-7de71a85febc
-            region: breadcrumb
-            configuration:
-              id: system_breadcrumb_block
-              label: Breadcrumbs
-              label_display: '0'
-              provider: system
-              context_mapping: {  }
-            weight: 0
-            additional: {  }
-          db68d415-5c13-4586-88ad-fc6fdfa1a882:
-            uuid: db68d415-5c13-4586-88ad-fc6fdfa1a882
-            region: hero
-            configuration:
-              id: 'field_block:node:sector_page:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          566d7270-4e2c-4a8b-8eec-141caef41db9:
-            uuid: 566d7270-4e2c-4a8b-8eec-141caef41db9
-            region: hero
-            configuration:
-              id: 'field_block:node:sector_page:field_subtitle'
-              label: Subtitle
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings:
-                  field_formatter_filter:
-                    format: '0'
-            weight: 1
-            additional: {  }
-          87f38090-9a27-4fe5-a2ae-83690e8b01af:
-            uuid: 87f38090-9a27-4fe5-a2ae-83690e8b01af
-            region: hero
-            configuration:
-              id: 'field_block:node:sector_page:field_image_hero'
-              label: 'Hero Image'
-              label_display: 0
-              provider: layout_builder
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: sector_6_2xl
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            weight: 2
-            additional:
-              layout_builder_styles_style:
-                contains_media: contains_media
-        third_party_settings: {  }
-    -
-      section:
-        layout_id: sector_body
-        layout_settings:
-          label: Body
-          context_mapping: {  }
-          layout_builder_styles_style:
-            contained: contained
-            margin_bottom: margin_bottom
-        components:
-          7c00a1d4-a644-4704-860d-6979c0ef3a2a:
-            uuid: 7c00a1d4-a644-4704-860d-6979c0ef3a2a
-            region: body
-            configuration:
-              id: 'field_block:node:sector_page:body'
-              label: Body
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings:
-                  field_formatter_filter:
-                    format: '0'
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }

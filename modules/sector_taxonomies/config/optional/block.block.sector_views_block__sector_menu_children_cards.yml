@@ -1,0 +1,39 @@
+uuid: 1b1a9306-6d8f-4d62-b355-7aed0ef24c58
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_menu
+  module:
+    - block_class
+    - term_condition
+    - views
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: 'container mb-10 lg:mb-24'
+_core:
+  default_config_hash: DqFpSXEqFXo-husAWIz923GBArdDl6M8Fmg9K4iMxIc
+id: sector_views_block__sector_menu_children_cards
+theme: sector
+region: content_post
+weight: -4
+provider: null
+plugin: 'views_block:sector_menu-children_cards'
+settings:
+  id: 'views_block:sector_menu-children_cards'
+  label: 'In this section'
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: 'In this section'
+  items_per_page: none
+visibility:
+  term:
+    id: term
+    tid:
+      - 0505a7d0-1283-4435-9aae-06e6c9f0005e
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

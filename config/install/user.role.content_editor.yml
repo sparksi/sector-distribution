@@ -1,9 +1,11 @@
+uuid: 29c1d817-2588-4380-bda2-d28e5bd7bf74
 langcode: en
 status: true
 dependencies:
   config:
     - taxonomy.vocabulary.tags
   module:
+    - content_moderation
     - contextual
     - file
     - node
@@ -11,9 +13,11 @@ dependencies:
     - system
     - taxonomy
     - toolbar
+_core:
+  default_config_hash: q47UViENT_bOKvqEDzyFLIw64Jls0Fpx4P2Dri3uSl4
 id: content_editor
 label: 'Content editor'
-weight: 2
+weight: -8
 is_admin: false
 permissions:
   - 'access administration pages'
@@ -27,5 +31,7 @@ permissions:
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
   - 'view own unpublished content'
   - 'view the administration theme'

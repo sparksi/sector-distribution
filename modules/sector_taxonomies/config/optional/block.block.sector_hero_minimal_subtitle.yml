@@ -1,0 +1,33 @@
+uuid: 564fa5cb-cd42-413f-baa0-1422a93d6735
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+  module:
+    - block_class
+    - fieldblock
+    - text
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: mt-4
+_core:
+  default_config_hash: 1hNNrdx0H2bxsQ8Kl1wwxSW-3MMTSzRV_sYUijm37RI
+id: sector_hero_minimal_subtitle
+theme: sector
+region: hero_minimal
+weight: 0
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: Subtitle
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: true
+  field_name: field_subtitle
+  formatter_id: text_default
+  formatter_settings: {  }
+visibility: {  }

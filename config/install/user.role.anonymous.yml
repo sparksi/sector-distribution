@@ -1,3 +1,4 @@
+uuid: a2b1f6de-23b9-4cb7-b487-c809bbbd70c1
 langcode: en
 status: true
 dependencies:
@@ -7,9 +8,11 @@ dependencies:
     - filter
     - media
     - system
+_core:
+  default_config_hash: lBd14Zu59tZkqdScyKKnHlZegZ1zP7wDpHxS1_3Goao
 id: anonymous
 label: 'Anonymous user'
-weight: 0
+weight: -10
 is_admin: false
 permissions:
   - 'access content'

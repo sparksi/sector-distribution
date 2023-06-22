@@ -14,7 +14,7 @@
         <li class="breadcrumb__item {{ not item.url ? 'active' }}">
           <span aria-hidden="true" class="material-symbols-sharp">chevron_right</span>
           {% if item.url %}
-            <a class="breadcrumb__link truncate" {% for attr, value in item.attributes %} {{ attr }}="{{ value }}" {% endfor %} href="{{ item.url }}">{{ item.text }}</a>
+            <a class="breadcrumb__link md:truncate" {% for attr, value in item.attributes %} {{ attr }}="{{ value }}" {% endfor %} href="{{ item.url }}">{{ item.text }}</a>
           {% else %}
             {{ item.text }}
           {% endif %}

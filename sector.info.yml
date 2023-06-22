@@ -12,6 +12,7 @@ install:
   - drupal:breakpoint
   - drupal:ckeditor5
   - drupal:config
+  - drupal:content_moderation
   - drupal:contextual
   - drupal:datetime
   - drupal:dblog
@@ -35,6 +36,7 @@ install:
   - drupal:page_cache
   - drupal:path
   - drupal:responsive_image
+  - drupal:sdc
   - drupal:serialization
   - drupal:shortcut
   - drupal:system
@@ -45,6 +47,7 @@ install:
   - drupal:user
   - drupal:views
   - drupal:views_ui
+  - drupal:workflows
   - actions_permissions:actions_permissions
   - admin_toolbar_links_access_filter:admin_toolbar_links_access_filter
   - admin_toolbar_tools:admin_toolbar_tools

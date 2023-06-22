@@ -8,8 +8,6 @@ body {
 }
 
 .region__container {
-  max-width: var(--container-max-width-override, var(--container-max-width));
-
   &:not(:has(*)) {
     display: none;
   }

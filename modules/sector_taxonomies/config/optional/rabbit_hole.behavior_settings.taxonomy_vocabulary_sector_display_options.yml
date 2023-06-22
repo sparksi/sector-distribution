@@ -1,0 +1,14 @@
+uuid: 2736ba38-f8c0-43c4-9e3b-1969c4d2c799
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sector_display_options
+id: taxonomy_vocabulary_sector_display_options
+entity_type_id: taxonomy_vocabulary
+entity_id: sector_display_options
+action: page_not_found
+allow_override: 0
+redirect: ''
+redirect_code: 301
+redirect_fallback_action: access_denied

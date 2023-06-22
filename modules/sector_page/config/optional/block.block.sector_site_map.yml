@@ -1,0 +1,40 @@
+uuid: 77e9b256-43f4-484f-a3da-5ceb4e55c9af
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sector-main-menu
+  module:
+    - block_class
+    - menu_block
+    - system
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: 'container mb-10 lg:mb-24'
+id: sector_site_map
+theme: sector
+region: content_post
+weight: 0
+provider: null
+plugin: 'menu_block:sector-main-menu'
+settings:
+  id: 'menu_block:sector-main-menu'
+  label: 'Sector › Site map'
+  label_display: '0'
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: block
+  level: 1
+  depth: 0
+  expand_all_items: true
+  parent: 'sector-main-menu:'
+  suggestion: sector_main_menu_xl
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /site-map

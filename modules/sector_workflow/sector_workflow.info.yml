@@ -1,0 +1,5 @@
+name: Sector Workflow
+type: module
+description: Provides workflows for Sector.
+package: Sector
+core_version_requirement: ^10

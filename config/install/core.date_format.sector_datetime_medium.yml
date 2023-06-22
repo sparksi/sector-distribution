@@ -1,0 +1,8 @@
+uuid: 95db5417-8c32-49fd-baeb-c2d2306f8675
+langcode: en
+status: true
+dependencies: {  }
+id: sector_datetime_medium
+label: 'Sector › Date/Time › Medium'
+locked: false
+pattern: 'D j F Y g:ia'

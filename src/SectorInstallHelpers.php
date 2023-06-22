@@ -39,6 +39,10 @@ class SectorInstallHelpers implements ContainerInjectionInterface {
       if ($user) {
         $node->setOwnerId($user->id());
         $node->save();
+
+        \Drupal::logger('sector')->notice('Regenerated node alias for #%title', [
+          '%title' => $node->getTitle(),
+        ]);
       }
     }
   }

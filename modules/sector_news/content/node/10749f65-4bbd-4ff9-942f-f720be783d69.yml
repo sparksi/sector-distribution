@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 10749f65-4bbd-4ff9-942f-f720be783d69
+  bundle: sector_news
+  default_langcode: en
+  depends:
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'News content sample with a long descriptive title'
+  created:
+    -
+      value: 1687314855
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /news/news-content-sample-long-descriptive-title
+      langcode: en
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
+  body:
+    -
+      value: '<p class="lead">Regular news keeps your site alive. Most website content strategies emphasise the need to publish news and updates regularly and to share new content across all channels.</p><p>Break up long news stories with subheadings, but remember that subheadings add to the text - they’re not part of it. The text should still make sense with the subheadings removed.</p><p>Tips for writing effective body copy:</p><ul><li>The first paragraph should lead on from the summary paragraph, not repeat the information</li><li>Use the ‘inverted pyramid’ approach with the most important information at the top, then tapering down to less important details</li><li>Paragraphs should have no more than 5 sentences each</li><li>Ensure copy includes keywords to boost natural search rankings</li><li>Use video and images</li></ul><p>{sample content}</p>'
+      format: sector_basic_html
+      summary: ''
+  field_display_options:
+    -
+      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
+  field_issue_date:
+    -
+      value: '2023-06-21T02:34:15'

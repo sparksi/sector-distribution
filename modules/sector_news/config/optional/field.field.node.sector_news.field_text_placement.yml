@@ -1,0 +1,23 @@
+uuid: afb009f3-90b7-4bee-95a9-7c2a56da98a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_placement
+    - node.type.sector_news
+  module:
+    - options
+id: node.sector_news.field_text_placement
+field_name: field_text_placement
+entity_type: node
+bundle: sector_news
+label: 'Text placement'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: text-center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

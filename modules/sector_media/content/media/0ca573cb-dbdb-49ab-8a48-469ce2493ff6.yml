@@ -30,6 +30,9 @@ default:
       alias: ''
       langcode: en
       pathauto: 0
+  field_brightness:
+    -
+      value: dark
   field_caption:
     -
       value: '<p>Example placeholder image</p>'
@@ -47,4 +50,4 @@ default:
       alt: 'Placeholder banner'
       title: ''
       width: 3200
-      height: 1800
+      height: 2133

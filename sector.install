@@ -44,6 +44,7 @@ function sector_install_required_modules() {
     'sector_brand',
     'sector_page',
     'sector_news',
+    'sector_workflow',
     'sector_search'
   ], FALSE);
 }
@@ -65,9 +66,11 @@ function sector_copy_default_blocks() {
   }
 }
 
-
 function sector_search_api_index() {
-  SectorInstallHelpers::buildSearchIndex('sector_content_sidewide');
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('sector_search')) {
+    SectorInstallHelpers::buildSearchIndex('sector_content_sidewide');
+  }
 }
 
 function sector_regenerate_node_aliases() {

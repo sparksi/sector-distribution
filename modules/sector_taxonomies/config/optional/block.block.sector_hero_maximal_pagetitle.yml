@@ -1,0 +1,18 @@
+uuid: 18f8e706-d564-4e89-900c-acf75d5ce781
+langcode: en
+status: true
+dependencies:
+  theme:
+    - sector
+id: sector_hero_maximal_pagetitle
+theme: sector
+region: hero_maximal
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

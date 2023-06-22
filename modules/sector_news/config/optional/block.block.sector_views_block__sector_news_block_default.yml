@@ -1,0 +1,35 @@
+uuid: 7a5161cf-5bf6-4bd8-8b8c-ef154419f44f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_news
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: 'container mb-10 lg:mb-24'
+_core:
+  default_config_hash: 24WszrnLXRcNy6EfcS5mGmd7DF678ACatcmY7KhCjy4
+id: sector_views_block__sector_news_block_default
+theme: sector
+region: content_post
+weight: 0
+provider: null
+plugin: 'views_block:sector_news-block_default'
+settings:
+  id: 'views_block:sector_news-block_default'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/12

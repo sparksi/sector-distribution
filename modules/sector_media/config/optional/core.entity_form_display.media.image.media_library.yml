@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_form_mode.media.media_library
+    - field.field.media.image.field_brightness
     - field.field.media.image.field_caption
     - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
@@ -12,7 +13,7 @@ dependencies:
   module:
     - svg_image
 _core:
-  default_config_hash: 5nWpSHAWcrd-wBvLanUIJ5dgBpJNSSd_ZkZaQ-1lhfc
+  default_config_hash: knUVqcVk0tVKA_wQexHk4nepROz6KVzRha4TZYQtBfI
 id: media.image.media_library
 targetEntityType: media
 bundle: image
@@ -28,6 +29,7 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_brightness: true
   field_caption: true
   field_image_options: true
   name: true

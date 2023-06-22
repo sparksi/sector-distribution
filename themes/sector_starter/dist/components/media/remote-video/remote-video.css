@@ -1,0 +1,8 @@
+.media--type-remote-video :where(iframe,embed) {
+    aspect-ratio: 16 / 9;
+    height: auto;
+    width: 100%;
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+    vertical-align: top
+}

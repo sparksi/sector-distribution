@@ -1,3 +1,5 @@
+_core:
+  default_config_hash: OvbjR7mlIhYxVYeM28zNNECVW2cxKC4hXU9Q2Yjqwgg
 favicon:
   use_default: true
 features:
@@ -10,7 +12,7 @@ logo:
 preset_accent_color: light_blue
 preset_focus_color: gin
 enable_darkmode: '0'
-classic_toolbar: horizontal
+classic_toolbar: vertical
 secondary_toolbar_frontend: true
 high_contrast_mode: false
 accent_color: ''

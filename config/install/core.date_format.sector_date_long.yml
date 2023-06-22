@@ -1,0 +1,8 @@
+uuid: 290770d8-c221-40e1-af11-588304830c4e
+langcode: en
+status: true
+dependencies: {  }
+id: sector_date_long
+label: 'Sector › Date › Long'
+locked: false
+pattern: 'l, j F Y'

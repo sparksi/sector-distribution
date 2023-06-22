@@ -7,6 +7,8 @@ dependencies:
     - node.type.sector_resource
   module:
     - datetime
+_core:
+  default_config_hash: sHwFRKJfcGWZU5Q4XhXbmQh_i5edSOZ3n5gZtpi8zY4
 id: node.sector_resource.field_issue_date
 field_name: field_issue_date
 entity_type: node

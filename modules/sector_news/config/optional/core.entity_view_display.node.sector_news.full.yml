@@ -5,105 +5,29 @@ dependencies:
   config:
     - core.entity_view_mode.node.full
     - field.field.node.sector_news.body
+    - field.field.node.sector_news.field_display_options
+    - field.field.node.sector_news.field_image_hero
     - field.field.node.sector_news.field_issue_date
+    - field.field.node.sector_news.field_text_placement
     - node.type.sector_news
   module:
-    - datetime
     - layout_builder
     - layout_builder_restrictions
-    - sector
-    - sector_layout
-    - system
     - text
     - user
 third_party_settings:
   layout_builder:
-    enabled: true
+    enabled: false
     allow_custom: false
-    sections:
-      -
-        layout_id: sector_hero
-        layout_settings:
-          label: Hero
-          context_mapping: {  }
-          layout_builder_styles_style:
-            0: hero_minimal
-            margin_bottom: margin_bottom
-            contained: 0
-            dark: 0
-        components:
-          0bc8ef78-853b-483f-901d-c27b1d481c74:
-            uuid: 0bc8ef78-853b-483f-901d-c27b1d481c74
-            region: hero
-            configuration:
-              id: 'field_block:node:sector_news:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
-          ca3e7245-7459-42b6-bad5-ef5ca7b20d88:
-            uuid: ca3e7245-7459-42b6-bad5-ef5ca7b20d88
-            region: breadcrumb
-            configuration:
-              id: system_breadcrumb_block
-              label: Breadcrumbs
-              label_display: '0'
-              provider: system
-              context_mapping: {  }
-            weight: 1
-            additional: {  }
-        third_party_settings: {  }
-      -
-        layout_id: sector_body
-        layout_settings:
-          label: Body
-          context_mapping: {  }
-          layout_builder_styles_style:
-            contained: contained
-            margin_bottom: margin_bottom
-        components:
-          088d19cd-8871-4904-b85e-d7c2132e6461:
-            uuid: 088d19cd-8871-4904-b85e-d7c2132e6461
-            region: body
-            configuration:
-              id: 'field_block:node:sector_news:body'
-              label: Body
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings:
-                  field_formatter_filter:
-                    format: '0'
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
-      allowed_layouts:
-        - sector_hero
-        - sector_body
+      allowed_layouts: {  }
       denylisted_blocks: {  }
       allowlisted_blocks: {  }
       restricted_categories: {  }
 _core:
-  default_config_hash: _B2z2HSFjY5oZ3_i_g0ZHT9ec7f-gEvobml51ms_16w
+  default_config_hash: '-_I1KHp6c8Jfpj9xy7KMreNWQWfPLYt8HZW62E1Yqew'
 id: node.sector_news.full
 targetEntityType: node
 bundle: sector_news
@@ -116,15 +40,15 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_issue_date:
-    type: datetime_default
-    label: above
-    settings:
-      timezone_override: ''
-      format_type: medium
+  content_moderation_control:
+    settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content
 hidden:
+  field_display_options: true
+  field_image_hero: true
+  field_issue_date: true
+  field_text_placement: true
   links: true
   search_api_excerpt: true

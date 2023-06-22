@@ -1,5 +1,5 @@
 <?php
-
+use Drupal\block\Entity\Block;
 /**
  * @file
  * Theme and preprocess functions for block.
@@ -12,10 +12,18 @@ use Drupal\Core\Render\Element;
  */
 function sector_theme_suggestions_block_alter(array &$suggestions, array $variables) {
   // Check for BlockContent.
-  $allow = ['block_content', 'fieldblock'];
+  $allow = ['block_content', 'fieldblock', 'system'];
+
 
   if(!in_array($variables['elements']['#configuration']['provider'], $allow)) {
     return;
+  }
+
+  if($variables['elements']['#configuration']['provider'] === 'system') {
+    $block = Block::load($variables['elements']['#id']);
+    $region = $block->getRegion();
+    $suggestions[] = 'block__' . $variables['elements']['#id'] . '__' . $region;
+    $suggestions[] = 'block__' . $variables['elements']['#configuration']['id'] . '__' . $region;
   }
 
   if (!empty($variables['elements']['content']['#block_content'])) {

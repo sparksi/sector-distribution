@@ -13,7 +13,7 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: 'var(--container-padding, 2rem)',
+      padding: 'var(--container-padding, 20px)',
     },
     extend: {
       colors: {

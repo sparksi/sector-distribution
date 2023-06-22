@@ -5,7 +5,9 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    ce351a5b-dc99-4050-8bb3-1647d785f779: user
+    c3aff566-62fa-41cd-afa3-84c0fd20ee91: user
+    0505a7d0-1283-4435-9aae-06e6c9f0005e: taxonomy_term
+    d7041cb4-2d9f-4235-ba77-d0851431789f: taxonomy_term
 default:
   revision_uid:
     -
@@ -15,7 +17,7 @@ default:
       value: true
   uid:
     -
-      entity: ce351a5b-dc99-4050-8bb3-1647d785f779
+      entity: c3aff566-62fa-41cd-afa3-84c0fd20ee91
   title:
     -
       value: 'Sector section entry pages'
@@ -31,6 +33,9 @@ default:
   revision_translation_affected:
     -
       value: true
+  moderation_state:
+    -
+      value: published
   path:
     -
       alias: /section-entry
@@ -50,146 +55,13 @@ default:
       value: "<p class=\"lead\">Sector's simple layout templates use sitebuilder tools and Drupal taxonomies to keep displays modular and consistent across your site.</p><p>This sample page is a node of the content type <em>Page</em> added to Level 1 in the main menu. It is displayed using the 'section entry page' page variant.</p><p>The flexible Drupal content type architecture allows site builders to create a new content type for each design template. But using content types to distinguish between layouts can lead to a large number of content types, with the risk of inconsistent displays and hard to maintain sites.</p><p>Sector's concept of page layout variants and page content settings allows us to build and manage a variety of design templates per content type. This way, content types can be used to distinguish between data types, not design requirements - leading to a lean and simple content architecture and grouping.</p><p>{sample content}</p>"
       format: sector_basic_html
       summary: ''
+  field_content_options:
+    -
+      entity: 0505a7d0-1283-4435-9aae-06e6c9f0005e
+  field_display_options:
+    -
+      entity: d7041cb4-2d9f-4235-ba77-d0851431789f
   field_subtitle:
     -
       value: '<p>Introducing Sector page display options via page layout variants and page content settings.</p>'
       format: sector_restricted_basic_html
-  layout_builder__layout:
-    -
-      section:
-        layout_id: sector_hero
-        layout_settings:
-          label: Hero
-          context_mapping: {  }
-          layout_builder_styles_style:
-            0: hero_maximal
-            margin_bottom: margin_bottom
-            centered: 0
-            contained: 0
-            dark: 0
-        components:
-          4918cca9-94ae-4fd8-a547-7de71a85febc:
-            uuid: 4918cca9-94ae-4fd8-a547-7de71a85febc
-            region: breadcrumb
-            configuration:
-              id: system_breadcrumb_block
-              label: Breadcrumbs
-              label_display: '0'
-              provider: system
-              context_mapping: {  }
-            weight: 0
-            additional: {  }
-          db68d415-5c13-4586-88ad-fc6fdfa1a882:
-            uuid: db68d415-5c13-4586-88ad-fc6fdfa1a882
-            region: hero
-            configuration:
-              id: 'field_block:node:sector_page:title'
-              label: Title
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: string
-                label: hidden
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          566d7270-4e2c-4a8b-8eec-141caef41db9:
-            uuid: 566d7270-4e2c-4a8b-8eec-141caef41db9
-            region: hero
-            configuration:
-              id: 'field_block:node:sector_page:field_subtitle'
-              label: Subtitle
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings:
-                  field_formatter_filter:
-                    format: '0'
-            weight: 1
-            additional: {  }
-          614e23f9-9300-445c-9c45-d6efa935ba9d:
-            uuid: 614e23f9-9300-445c-9c45-d6efa935ba9d
-            region: hero
-            configuration:
-              id: 'field_block:node:sector_page:field_image_hero'
-              label: 'Hero Image'
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: sector_6_2xl
-                third_party_settings: {  }
-            weight: 2
-            additional:
-              layout_builder_styles_style:
-                contains_media: contains_media
-        third_party_settings: {  }
-    -
-      section:
-        layout_id: sector_body
-        layout_settings:
-          label: Body
-          context_mapping: {  }
-          layout_builder_styles_style:
-            contained: contained
-            margin_bottom: margin_bottom
-        components:
-          7c00a1d4-a644-4704-860d-6979c0ef3a2a:
-            uuid: 7c00a1d4-a644-4704-860d-6979c0ef3a2a
-            region: body
-            configuration:
-              id: 'field_block:node:sector_page:body'
-              label: Body
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_default
-                label: hidden
-                settings: {  }
-                third_party_settings:
-                  field_formatter_filter:
-                    format: '0'
-            weight: 0
-            additional: {  }
-          98671fd6-55ae-483c-8eec-e0b06e103e5d:
-            uuid: 98671fd6-55ae-483c-8eec-e0b06e103e5d
-            region: body_prefix
-            configuration:
-              id: 'menu_block:sector-main-menu'
-              label: 'Sector › Main menu'
-              label_display: visible
-              provider: menu_block
-              context_mapping: {  }
-              follow: true
-              follow_parent: active
-              label_link: true
-              label_type: root
-              level: 2
-              depth: 0
-              expand_all_items: true
-              parent: 'sector-main-menu:'
-              suggestion: sector_main_menu_md
-            weight: 0
-            additional:
-              layout_builder_styles_style:
-                sticky: sticky
-        third_party_settings: {  }

@@ -1,0 +1,33 @@
+uuid: 0738bb42-aa78-456a-a717-a86af965e8db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_hero
+  module:
+    - block_class
+    - fieldblock
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: hero__wallpaper
+_core:
+  default_config_hash: y-NSix1-19RfRFEvbh3B52pxqO-9EFUZm6jNSwAf6ps
+id: sector_hero_media
+theme: sector
+region: hero
+weight: -10
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: Media
+  label_display: '0'
+  provider: fieldblock
+  label_from_field: false
+  field_name: field_image_hero
+  formatter_id: entity_reference_entity_view
+  formatter_settings:
+    view_mode: sector_6_2xl
+visibility: {  }
