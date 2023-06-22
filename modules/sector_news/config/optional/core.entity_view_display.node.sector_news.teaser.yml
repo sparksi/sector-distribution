@@ -8,12 +8,13 @@ dependencies:
     - field.field.node.sector_news.field_display_options
     - field.field.node.sector_news.field_image_hero
     - field.field.node.sector_news.field_issue_date
+    - field.field.node.sector_news.field_text_placement
     - node.type.sector_news
   module:
     - text
     - user
 _core:
-  default_config_hash: LYH0Ge0vYcePj28hhravAdvBVxkjyNPYwF6Mxa_YHAs
+  default_config_hash: CkwpBNqeardQ75TAzd22JM7NJLncE44IlCSKgf9Z8v0
 id: node.sector_news.teaser
 targetEntityType: node
 bundle: sector_news
@@ -41,4 +42,5 @@ hidden:
   field_display_options: true
   field_image_hero: true
   field_issue_date: true
+  field_text_placement: true
   search_api_excerpt: true

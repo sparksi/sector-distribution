@@ -1,0 +1,23 @@
+uuid: df62455d-491f-4184-b1ea-0342bfe9beae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_placement
+    - node.type.sector_resource
+  module:
+    - options
+id: node.sector_resource.field_text_placement
+field_name: field_text_placement
+entity_type: node
+bundle: sector_resource
+label: 'Text placement'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: text-center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

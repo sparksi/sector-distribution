@@ -1,19 +1,17 @@
-uuid: 56955c12-f360-468a-a077-e7ec84af40b1
+uuid: 9a041fa0-6a52-4d11-9d39-fd0ca57dca12
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_display_options
-    - node.type.sector_news
+    - node.type.sector_resource
     - taxonomy.vocabulary.sector_display_options
   content:
     - 'taxonomy_term:sector_display_options:89a93419-6690-4fb1-8758-9c5b8eb32536'
-_core:
-  default_config_hash: 2qLa5FxXwxVqYcSJ4637fTKS4y2kAxYwWr7xaa5fvCo
-id: node.sector_news.field_display_options
+id: node.sector_resource.field_display_options
 field_name: field_display_options
 entity_type: node
-bundle: sector_news
+bundle: sector_resource
 label: 'Hero options'
 description: ''
 required: true
