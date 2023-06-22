@@ -8,9 +8,13 @@ dependencies:
     - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
+    - field.field.node.sector_page.field_text_placement
     - node.type.sector_page
   module:
+    - options
     - user
+_core:
+  default_config_hash: ipIbFPf4mpSzrWuZIxF0sMQC3uMLM0yi8YAxTw5oRDc
 id: node.sector_page.default
 targetEntityType: node
 bundle: sector_page
@@ -28,6 +32,13 @@ content:
       link: true
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_text_placement:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
     region: content
   links:
     settings: {  }

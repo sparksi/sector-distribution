@@ -8,11 +8,13 @@ dependencies:
     - taxonomy.vocabulary.sector_display_options
   content:
     - 'taxonomy_term:sector_display_options:89a93419-6690-4fb1-8758-9c5b8eb32536'
+_core:
+  default_config_hash: DwgBxSbzjbNvfbWmTWt0fXdhA6oGklYTin8anO1r7Z8
 id: node.sector_page.field_display_options
 field_name: field_display_options
 entity_type: node
 bundle: sector_page
-label: 'Display options'
+label: 'Hero options'
 description: ''
 required: true
 translatable: false
