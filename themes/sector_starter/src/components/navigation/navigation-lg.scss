@@ -25,7 +25,7 @@
     --menu-item-gap: 0;
 
     @apply divide-y lg:divide-none;
-    @apply absolute lg:static top-12 left-0 bg-[var(--nav-list-bg-override)] bg-white lg:bg-transparent hidden @lg/navigation:flex @lg/navigation:justify-end @lg/navigation:[--menu-item-gap:theme(space.8)] w-full;
+    @apply absolute lg:static top-12 left-0 bg-[var(--nav-list-bg-override)] bg-white dark:bg-black lg:bg-transparent hidden @lg/navigation:flex @lg/navigation:justify-end @lg/navigation:[--menu-item-gap:theme(space.8)] w-full;
   }
 
   .navigation__toggle {
@@ -33,20 +33,6 @@
 
     .material-symbols-sharp {
       @apply w-full;
-    }
-  }
-
-  &:where([data-behavior='hover']) {
-    @media (hover: hover) {
-      .menu__item:hover > .navigation__sub-menu {
-        @apply block;
-      }
-    }
-  }
-
-  &:where([data-behavior='toggle']) {
-    .menu__toggle.is-open ~ .navigation__sub-menu {
-      @apply block;
     }
   }
 
@@ -69,6 +55,48 @@
       @apply min-w-[19ch] px-4;
 
       text-wrap: balance;
+    }
+  }
+
+  &:where([data-behavior='hover']) {
+    @media (hover: hover) {
+      .menu__item:hover > .navigation__sub-menu {
+        @apply block;
+      }
+    }
+
+    .navigation__list .menu__item--level-2 > .navigation__sub-menu {
+      @apply hidden;
+    }
+
+    .navigation__list .menu__item--level-2 a.menu__toggle-link {
+      @apply inline-flex;
+    }
+
+    .menu__item--level-2 button.menu__toggle {
+      @apply ml-4 hidden;
+    }
+
+    .menu__toggle.is-open ~ .navigation__sub-menu {
+      @apply block xl:hidden;
+
+      button.menu__toggle {
+        @apply ml-4;
+      }
+    }
+  }
+
+  &:where([data-behavior='toggle']) {
+    .menu__toggle.is-open ~ .navigation__sub-menu {
+      @apply block;
+    }
+
+    .menu__item--level-2 button.menu__toggle {
+      @apply hidden;
+    }
+
+    .menu__item--level-2 .menu__link.menu__toggle-link {
+      @apply xl:inline-flex;
     }
   }
 }

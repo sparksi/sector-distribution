@@ -20,13 +20,18 @@
      <li{{ item.attributes.addClass('menu__item','menu__item--parent', item.in_active_trail ? 'menu__item--active-trail') }}>
         {{ parent_item }}
       </li>
-    {% endif %}
 
+    {% elseif menu_level < 3 %}
+
+      <li{{ item.attributes.addClass('menu__item','menu__item--parent', item.in_active_trail ? 'menu__item--active-trail') }}>
+        {{ sub_parent_item }}
+      </li>
+
+    {% endif %}
     {% block items %}
       {% for item in items %}
         {% set nav_item_classes = [
             'menu__item',
-            'menu__item--' ~ menu_item_type,
             'menu__item--level-' ~ (menu_level + 1),
             item.in_active_trail ? 'menu__item--active-trail',
             item.below ? 'menu__item--has-children',
@@ -55,7 +60,8 @@
                 id: aria_id,
                 utility_classes: [ 'menu__menu', 'hidden' ],
                 items: item.below,
-                menu_level: menu_level + 1
+                menu_level: menu_level + 1,
+                sub_parent_item: link(item.title, item.url, { 'class': ['menu__link']}),
               } %}
             {% endif %}
           {% else %}

@@ -24,11 +24,11 @@
 
 .menu[data-behavior='hover'] {
   button.menu__toggle {
-    @apply lg:hidden;
+    @apply xl:hidden;
   }
 
-  .navigation__list .menu__item--level-2 > .navigation__sub-menu {
-    @apply lg:hidden;
+  .navigation__list .menu__item--level-1 > a.menu__toggle-link {
+    @apply hidden xl:inline-flex;
   }
 }
 
@@ -39,10 +39,6 @@
 
   .navigation__list .menu__item--level-1 > a.menu__toggle-link {
     @apply hidden;
-  }
-
-  .menu__item--level-2 button.menu__toggle {
-    @apply lg:hidden;
   }
 }
 
