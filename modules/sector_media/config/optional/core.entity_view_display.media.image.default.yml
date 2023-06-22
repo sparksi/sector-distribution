@@ -3,20 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_brightness
     - field.field.media.image.field_caption
+    - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
     - image.style.lg
     - media.type.image
   module:
+    - options
     - svg_image
     - text
 _core:
-  default_config_hash: Qn2topPcM0T6adfUaMVj1swDGcWR9UULzquCk-0autY
+  default_config_hash: HV4Ucrdl-NM7xTEIjud3HSTbMxOO83QrDxijqJXKAWc
 id: media.image.default
 targetEntityType: media
 bundle: image
 mode: default
 content:
+  field_brightness:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
   field_caption:
     type: text_default
     label: above
@@ -41,6 +51,7 @@ content:
     region: content
 hidden:
   created: true
+  field_image_options: true
   name: true
   search_api_excerpt: true
   thumbnail: true

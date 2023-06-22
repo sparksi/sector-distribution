@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
+    - field.field.media.image.field_brightness
     - field.field.media.image.field_caption
+    - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
     - image.style.3xl
     - media.type.image
@@ -39,12 +41,11 @@ third_party_settings:
         effect: none
         speed: fast
 _core:
-  default_config_hash: HV4Ucrdl-NM7xTEIjud3HSTbMxOO83QrDxijqJXKAWc
+  default_config_hash: nu1uucEih_gip6EWK-BOf2EQI9x-dAqk-HBpTfuSnhM
 id: media.image.full
 targetEntityType: media
 bundle: image
 mode: full
-weight: 0
 content:
   field_caption:
     type: text_default
@@ -70,6 +71,8 @@ content:
     region: content
 hidden:
   created: true
+  field_brightness: true
+  field_image_options: true
   name: true
   search_api_excerpt: true
   thumbnail: true

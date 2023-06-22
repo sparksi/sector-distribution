@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.media.image.field_brightness
     - field.field.media.image.field_caption
     - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
@@ -13,7 +14,7 @@ dependencies:
     - svg_image
     - text
 _core:
-  default_config_hash: 2sInH_-5051G0bLJ9rPubucgDFpvYtUsXTteCi8I-B4
+  default_config_hash: EkRYM8uEjKOakoAPqm50D41zPntuZHIB2_6oQdqJSpE
 id: media.image.default
 targetEntityType: media
 bundle: image
@@ -25,6 +26,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_brightness:
+    type: options_buttons
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_caption:
     type: text_textarea
     weight: 1
@@ -32,12 +39,6 @@ content:
     settings:
       rows: 5
       placeholder: ''
-    third_party_settings: {  }
-  field_image_options:
-    type: options_buttons
-    weight: 5
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_media_image:
     type: image_image
@@ -71,4 +72,5 @@ content:
       placeholder: ''
     third_party_settings: {  }
 hidden:
+  field_image_options: true
   name: true

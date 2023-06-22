@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.sector_6_2xl
+    - field.field.media.image.field_brightness
     - field.field.media.image.field_caption
     - field.field.media.image.field_image_options
     - field.field.media.image.field_media_image
@@ -40,7 +41,7 @@ third_party_settings:
         effect: none
         speed: fast
 _core:
-  default_config_hash: TgerSHqFbA-Cbm19HCu55TYmkSSHGS7jsAAw1ODEsww
+  default_config_hash: p8lhxtLKISGa4eJA_ylFqTztGSTqNzZxfJ8MtKMnJEM
 id: media.image.sector_6_2xl
 targetEntityType: media
 bundle: image
@@ -66,6 +67,7 @@ content:
     region: content
 hidden:
   created: true
+  field_brightness: true
   field_image_options: true
   name: true
   search_api_excerpt: true

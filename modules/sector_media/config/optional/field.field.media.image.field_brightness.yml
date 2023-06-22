@@ -1,0 +1,23 @@
+uuid: fd1b8322-eaeb-40c9-a885-35f962beb150
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_brightness
+    - media.type.image
+  module:
+    - options
+id: media.image.field_brightness
+field_name: field_brightness
+entity_type: media
+bundle: image
+label: Brightness
+description: 'Choose the brightness of the Image subject'
+required: false
+translatable: false
+default_value:
+  -
+    value: dark
+default_value_callback: ''
+settings: {  }
+field_type: list_string
