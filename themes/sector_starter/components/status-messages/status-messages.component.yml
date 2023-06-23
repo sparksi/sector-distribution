@@ -4,9 +4,6 @@ status: stable
 libraryDependencies:
   - core/once
 
-props:
-  type: object
-
 slots:
   content:
     title: Block content
