@@ -1,0 +1,17 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Local tasks
+status: stable
+libraryDependencies:
+  - core/once
+
+props:
+  type: object
+  required:
+    - primary
+  properties:
+    primary:
+      type: object
+      title: primary
+    secondary:
+      type: object
+      title: secondary

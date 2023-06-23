@@ -1,0 +1,12 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Status messages
+status: stable
+libraryDependencies:
+  - core/once
+
+props:
+  type: object
+
+slots:
+  content:
+    title: Block content
