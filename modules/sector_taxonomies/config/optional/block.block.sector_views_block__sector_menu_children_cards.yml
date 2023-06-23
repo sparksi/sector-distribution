@@ -32,8 +32,10 @@ settings:
 visibility:
   term:
     id: term
-    tid:
-      - 0505a7d0-1283-4435-9aae-06e6c9f0005e
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    term_uuids:
+      - 0505a7d0-1283-4435-9aae-06e6c9f0005e
+    tid:
+      - 0505a7d0-1283-4435-9aae-06e6c9f0005e
