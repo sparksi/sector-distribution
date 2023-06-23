@@ -8,14 +8,14 @@ dependencies:
     - block_class
     - block_content
   theme:
-    - sector_starter
+    - sector
 third_party_settings:
   block_class:
     classes: 'lg:ml-auto lg:self-end max-w-fit w-36 md:w-48'
 _core:
   default_config_hash: rb3EA0ReXP4ljFS3X7PAIwNdAMWVoUce-SHEbxTrI18
-id: sector_starter_brand_main_footer
-theme: sector_starter
+id: sector_brand_main_footer
+theme: sector
 region: footer
 weight: 0
 provider: null
