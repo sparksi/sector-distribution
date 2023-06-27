@@ -15,7 +15,7 @@ export const css = async (source, destination, env) => {
   const pre = await sass
     .compileAsync([source.dir, source.base].join('/'), {
       style: env === 'development' ? 'expanded' : 'compressed',
-      loadPaths: ['src', 'node_modules'],
+      loadPaths: ['src', 'node_modules', 'components'],
       sourceMap: env === 'development' ? true : false,
       //sourceMapIncludeSources: env === 'development' ? true : false,
     })

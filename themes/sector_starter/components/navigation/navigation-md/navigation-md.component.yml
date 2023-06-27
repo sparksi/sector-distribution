@@ -1,5 +1,5 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
-name: Prose
+name: Navigation (medium)
 status: stable
 libraryDependencies:
   - core/once
@@ -17,3 +17,7 @@ props:
       type: Drupal\Core\Template\Attribute
     attributes:
       type: Drupal\Core\Template\Attribute
+
+slots:
+  items:
+    title: Menu items

@@ -6,8 +6,10 @@ import { Worker, workerData } from 'node:worker_threads'
 
 (async () => {
   const files = await glob('src/**');
+  const components = await glob('components/**');
 
   Promise.allSettled(([
+    components.map(async (path) => await process(path)),
     files.map(async (path) => await process(path)),
     new Promise(async (resolve, reject) => {
       const worker = new Worker('./.fonts.js', {

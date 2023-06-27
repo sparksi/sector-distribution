@@ -3,18 +3,15 @@
  * Template for a menu.
  */
 #}
-{% include '@sector_base/nav/nav.twig' with {
+{{ include('sector_starter:navigation-xl', {
     libraries: [
         'sector_starter/' ~ menu_name|clean_class,
         'sector_starter/navigation',
-        'sector_starter/navigation-md',
-        'sector_starter/block-title'
     ],
-    attributes: attributes.setAttribute('data-behavior', 'toggle'),
     render_toggle: false,
     utility_classes: [
         'navigation',
-        'navigation--md',
+        'navigation--xl',
         '@container/navigation'
     ]
-} %}
+}) }}

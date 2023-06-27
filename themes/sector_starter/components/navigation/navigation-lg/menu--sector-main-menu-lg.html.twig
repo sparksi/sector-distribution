@@ -3,7 +3,7 @@
  * Template for a menu.
  */
 #}
-{% include '@sector_base/nav/nav.twig' with {
+{{ include('sector_starter:navigation-lg', {
     libraries: [
         'sector_starter/' ~ menu_name|clean_class,
         'sector_starter/navigation',
@@ -19,4 +19,4 @@
         'navigation--lg',
         '@container/navigation'
     ]
-} %}
+}) }}
