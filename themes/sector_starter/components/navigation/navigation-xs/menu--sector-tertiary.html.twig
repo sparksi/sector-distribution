@@ -3,7 +3,7 @@
  * Template for a menu.
  */
 #}
-{% include '@sector_base/nav/nav.twig' with {
+{{ include('sector_starter:navigation-xs', {
     libraries: [
         'sector_starter/' ~ menu_name|clean_class,
         'sector_starter/navigation',
@@ -14,4 +14,4 @@
         'navigation',
         'navigation--xs'
     ]
-} %}
+}) }}

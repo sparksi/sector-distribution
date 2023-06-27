@@ -4,10 +4,10 @@
  * Template for the breadcrumb.
  */
 #}
-{% include '@sector_base/breadcrumb/breadcrumb.twig' with {
+{{ include('sector_starter:breadcrumb', {
   breadcrumb: breadcrumb,
   utility_classes: [ 'breadcrumb' ],
   libraries: [
     'sector_starter/breadcrumb'
   ]
-} %}
+}) }}
