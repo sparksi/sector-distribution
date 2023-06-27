@@ -1,0 +1,31 @@
+uuid: 684c6148-37f1-47f8-9fd6-b13f561fd986
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sector-main-menu
+  module:
+    - menu_block
+  theme:
+    - sector
+id: sector_menu_block_secondary
+theme: sector
+region: content_prefix
+weight: 0
+provider: null
+plugin: 'menu_block:sector-main-menu'
+settings:
+  id: 'menu_block:sector-main-menu'
+  label: 'Sector › Main menu'
+  label_display: visible
+  provider: menu_block
+  follow: true
+  follow_parent: active
+  label_link: true
+  label_type: root
+  level: 2
+  depth: 0
+  expand_all_items: false
+  parent: 'sector-main-menu:'
+  suggestion: sector_main_menu_md
+visibility: {  }

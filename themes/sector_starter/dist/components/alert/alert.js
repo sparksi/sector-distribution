@@ -1,1 +1,0 @@
-const root=document.querySelector(".canvas");Drupal.behaviors.alert={attach:(l,o)=>{l.querySelectorAll(".alert--dismissible").forEach(e=>{const t=e.querySelector(".alert__close");t&&t.addEventListener("click",s=>{e.remove()})})}};

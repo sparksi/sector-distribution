@@ -1,6 +1,0 @@
-.navigation--xs {flex: 1 1 0%
-}.navigation--xs .navigation__list {display: flex
-}.navigation--xs .menu__link {white-space: nowrap
-}.navigation--xs .menu__link:hover {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
-}.navigation--xs .menu__link:focus-visible {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
-}
