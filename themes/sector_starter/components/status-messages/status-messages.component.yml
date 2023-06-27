@@ -3,6 +3,12 @@ name: Status messages
 status: stable
 libraryDependencies:
   - core/once
+props:
+  type: object
+  properties:
+    message_list:
+      type: array
+      title: Message list
 
 slots:
   content:

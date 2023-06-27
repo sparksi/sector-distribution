@@ -1,5 +1,5 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
-name: Status messages
+name: Prose
 status: stable
 libraryDependencies:
   - core/once
@@ -7,9 +7,12 @@ libraryDependencies:
 props:
   type: object
   properties:
-    message_list:
+    label_display:
+      type: string
+      title: Show label
+    utility_classes:
       type: array
-      title: Message list
+      title: Utility classes
 
 slots:
   content:
