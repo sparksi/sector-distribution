@@ -11,7 +11,7 @@ dependencies:
     - sector
 third_party_settings:
   block_class:
-    classes: 'contents lg:block'
+    classes: 'contents xl:block'
 _core:
   default_config_hash: 25ZMB3UFal7iM_kyQxmB99DIVfQVKVV3nlQCqL0zw2Q
 id: sector_search_sitewide_exposed_filter
@@ -26,4 +26,4 @@ settings:
   label_display: '0'
   provider: views
   views_label: 'Sector › Search › Exposed keyword filter'
-visibility: {  }
+visibility: {}

@@ -1,39 +1,86 @@
 .search--lg {
-    @apply text-sm grid items-center;
+  @apply text-sm grid items-center;
 
-    --toggled-display-override: grid;
+  --toggled-display-override: grid;
 
-    grid-template-columns: 1fr auto;
+  grid-template-columns: 1fr auto;
 
-    > .form-item {
-        @apply col-span-2 row-start-1 col-start-1
+  > .form-item {
+    @apply col-span-2 row-start-1 col-start-1;
+  }
+
+  > .form-actions {
+    @apply col-start-2 col-span-1 z-10 row-start-1 -mr-px;
+  }
+
+  .form-input {
+    @apply rounded-3xl text-sm ps-4 bg-no-repeat;
+  }
+
+  // label
+  .form-item-query {
+    @apply relative my-2 md:my-0;
+
+    label {
+      @apply absolute left-4 top-2 z-10 text-zinc-500;
     }
 
-    > .form-actions {
-        @apply col-start-2 col-span-1 z-10 row-start-1 -mr-px;
+    &:focus,
+    &:hover,
+    &:focus-within,
+    &:has(input:focus, input:valid) {
+      label {
+        @apply top-1 text-white;
+
+        @media (prefers-reduced-motion: no-preference) {
+          @apply left-4 top-0 text-[4px] text-zinc-200 transition-all ease-in-out;
+        }
+      }
     }
+  }
 
-    .form-input {
-        @apply rounded-3xl text-sm ps-4 bg-no-repeat;
+  .form-textfield.form-input.form-control {
+    @apply text-black font-light w-full;
 
-        background-size: auto 70%;
-        background-position: left theme('spacing.3') center;
-        background-image: svg-load('search.svg', 'fill:#aaa');
+    &:valid,
+    &:focus {
+      // Firefox doesn't understand :has yet, so can't move label. Grief!!
+      position: relative;
+      z-index: 10;
     }
+  }
 
-    .form-submit {
-        @apply rounded-full w-10 h-10 border-neutral-900;
+  .form-submit {
+    @apply rounded-full w-10 h-10 border-neutral-900;
 
-        text-indent: -5000em;
+    background-position: center;
+    background-image: svg-load('search.svg', 'fill:#aaa');
+    text-indent: -5000em;
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    transition: background-image 0.2s ease-in-out;
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      @apply border-neutral-950;
+
+      background-image: svg-load('search.svg', 'fill:#000');
+      outline-style: solid;
+      outline-width: 2px;
     }
+  }
 }
 
+// Search Toggle with sibling Search form
 .search__toggle {
-    &[aria-expanded="false"] + .search {
-        @apply hidden;
-    }
+  @apply xl:hidden;
 
-    &[aria-expanded="true"] + .search {
-        display: var(--toggled-display-override, block);
-    }
+  &[aria-expanded='false'] + .search {
+    @apply hidden xl:grid;
+  }
+
+  &[aria-expanded='true'] + .search {
+    display: var(--toggled-display-override, block);
+  }
 }
