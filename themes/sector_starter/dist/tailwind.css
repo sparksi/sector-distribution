@@ -15158,6 +15158,11 @@ video {
     grid-row-start: auto;
   }
 
+  .lg\:my-24 {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+
   .lg\:mb-0 {
     margin-bottom: 0px;
   }

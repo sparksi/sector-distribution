@@ -7,7 +7,7 @@ import { process } from './build/develop.js';
 
 const dir = 'src';
 
-const watcher = chokidar.watch(dir, {
+const watcher = chokidar.watch([dir,'components'], {
   ignored: /(^|[\/\\])\../, // ignore dotfiles
   persistent: true,
   ignoreInitial: true,
