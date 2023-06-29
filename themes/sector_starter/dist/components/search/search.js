@@ -1,0 +1,1 @@
+const root=document.querySelector(".canvas");Drupal.behaviors.search={attach:r=>{r.querySelector(".region--header.header .search__toggle").addEventListener("click",({target:e})=>{e&&e.setAttribute("aria-expanded",e.getAttribute("aria-expanded")==="false"?"true":"false")})}};

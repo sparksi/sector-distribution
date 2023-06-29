@@ -6,6 +6,8 @@ style:
       dist/global.css: {}
       dist/tailwind.css: {}
       dist/typekit.css: {}
+  js:
+    dist/polyfills.js: { attributes: { defer: true }}
   dependencies:
     - core/drupal
 

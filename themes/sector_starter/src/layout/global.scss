@@ -8,7 +8,9 @@ body {
 }
 
 .region__container {
-  &:not(:has(*)) {
-    display: none;
+  @supports (selector(:has(*))) {
+    &:not(:has(*)) {
+      display: none;
+    }
   }
 }
