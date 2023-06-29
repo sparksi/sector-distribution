@@ -32,6 +32,7 @@ function sector_users_install() {
     'Content Administrator' => ['content_administrator', 'content_editor'],
     'Support Agent' => 'administrator',
     'Robot' => 'robot',
+    'Content Moderator' => ['content_moderator', 'content_editor'],
   ];
 
   $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
