@@ -16,4 +16,13 @@ function sector_text_formats_install() {
 
         $editor_role_object->save();
     }
+
+    $moderator_role_object = Role::load('content_moderator');
+    if($moderator_role_object) {
+        $moderator_role_object->grantPermission('use text format sector_basic_html');
+        $moderator_role_object->grantPermission('use text format sector_full_html');
+        $moderator_role_object->grantPermission('use text format sector_restricted_basic_html');
+
+        $moderator_role_object->save();
+    }
 }
