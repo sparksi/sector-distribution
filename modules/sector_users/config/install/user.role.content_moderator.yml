@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - content_moderation
+    - file
 id: content_moderator
 label: 'Content moderator'
 weight: -7
@@ -11,3 +12,5 @@ is_admin: null
 permissions:
   - 'delete all revisions'
   - 'revert all revisions'
+  - 'delete any file'
+  - 'access files overview'
