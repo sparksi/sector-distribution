@@ -6,5 +6,10 @@
 
 html,
 body {
-  @apply font-custom motion-safe:focus-within:scroll-smooth;
+  @apply font-custom font-normal motion-safe:focus-within:scroll-smooth;
+	font-variation-settings: 'slnt' 0;
+}
+
+i, em, .italic {
+	font-variation-settings: 'ital' 1;
 }

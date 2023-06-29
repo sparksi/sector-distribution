@@ -56,6 +56,6 @@ $variable-font-library: (
   @font-face {
     font-family: '#{$typeface}';
     src: url('fonts/#{$typeface}.woff2') format('woff2-variations');
-    font-variation-settings: #{$settings};
+    //font-variation-settings: #{$settings};
   }
 }
