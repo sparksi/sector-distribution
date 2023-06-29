@@ -40,4 +40,19 @@ function sector_media_install() {
         $editor_role_object->save();
     }
 
+
+    $moderator_role_object = Role::load('content_moderator');
+    if($moderator_role_object) {
+        $moderator_role_object->grantPermission('delete any audio media');
+        $moderator_role_object->grantPermission('delete any document media');
+        $moderator_role_object->grantPermission('delete any image media');
+        $moderator_role_object->grantPermission('delete any media');
+        $moderator_role_object->grantPermission('delete any remote_video media');
+        $moderator_role_object->grantPermission('delete any vector media');
+        $moderator_role_object->grantPermission('delete any video media');
+        $moderator_role_object->grantPermission('view all media revisions');
+
+        $moderator_role_object->save();
+    }
+
 }
