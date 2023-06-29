@@ -22,6 +22,7 @@ function sector_news_install() {
         $editor_role_object->grantPermission('delete own sector_news content');
         $editor_role_object->grantPermission('delete sector_news revisions');
         $editor_role_object->grantPermission('edit own sector_news content');
+        $editor_role_object->grantPermission('edit any sector_news content');
 
         $editor_role_object->save();
     }

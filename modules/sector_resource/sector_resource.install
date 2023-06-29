@@ -22,6 +22,7 @@ function sector_resource_install() {
         $editor_role_object->grantPermission('delete own sector_resource content');
         $editor_role_object->grantPermission('delete sector_resource revisions');
         $editor_role_object->grantPermission('edit own sector_resource content');
+        $editor_role_object->grantPermission('edit any sector_resource content');
 
         $editor_role_object->save();
     }

@@ -16,6 +16,7 @@ function sector_page_install() {
         $editor_role_object->grantPermission('create sector_page content');
         $editor_role_object->grantPermission('delete own sector_page content');
         $editor_role_object->grantPermission('delete sector_page revisions');
+        $editor_role_object->grantPermission('edit any sector_page content');
         $editor_role_object->grantPermission('edit own sector_page content');
 
         $editor_role_object->save();
