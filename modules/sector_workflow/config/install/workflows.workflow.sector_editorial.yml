@@ -7,6 +7,8 @@ dependencies:
     - node.type.sector_page
   module:
     - content_moderation
+_core:
+  default_config_hash: JcvatykMUJbLoD8fYGI_m8Iv24ddf9Aw3SLpsPAXvUM
 id: sector_editorial
 label: 'Sector editorial'
 type: content_moderation
@@ -39,12 +41,19 @@ type_settings:
         - draft
         - published
       to: draft
-      weight: -2
+      weight: -3
+    feedback:
+      label: Feedback
+      from:
+        - ready_for_review
+      to: draft
+      weight: -1
     publish:
       label: Publish
       from:
         - draft
         - published
+        - ready_for_review
       to: published
       weight: 0
     submit_for_review:
@@ -52,7 +61,7 @@ type_settings:
       from:
         - draft
       to: ready_for_review
-      weight: -1
+      weight: -2
     unpublish:
       label: Unpublish
       from:

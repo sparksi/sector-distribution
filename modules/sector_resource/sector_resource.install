@@ -12,24 +12,35 @@ use Drupal\Core\Entity\EntityInterface;
  */
 function sector_resource_install() {
     \Drupal::service('module_installer')->install([
-      'schema_article', 
+      'schema_article',
       'metatag_twitter_cards'
     ], FALSE);
 
-    $role_object = Role::load('content_editor');
-    $role_object->grantPermission('create sector_resource content');
-    $role_object->grantPermission('delete own sector_resource content');
-    $role_object->grantPermission('delete sector_resource revisions');
-    $role_object->grantPermission('edit own sector_resource content');
+    $editor_role_object = Role::load('content_editor');
+    if($editor_role_object) {
+        $editor_role_object->grantPermission('create sector_resource content');
+        $editor_role_object->grantPermission('delete own sector_resource content');
+        $editor_role_object->grantPermission('delete sector_resource revisions');
+        $editor_role_object->grantPermission('edit own sector_resource content');
 
-    $role_object->save();
+        $editor_role_object->save();
+    }
+
+    $moderator_role_object = Role::load('content_moderator');
+    if($moderator_role_object) {
+        $moderator_role_object->grantPermission('delete any sector_resource content');
+        $moderator_role_object->grantPermission('revert sector_resource revisions');
+        $moderator_role_object->grantPermission('view sector_resource revisions');
+
+        $editor_role_object->save();
+    }
 }
 
 /*
  * Implements hook_uninstall()
  */
 function sector_resource_uninstall() {
-    
+
     // Delete all nodes of given content type.
     $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
     $nodes = $storage_handler->loadByProperties(['type' => 'sector_resource']);
@@ -59,26 +70,26 @@ function sector_resource_uninstall() {
  * Implements hook_ENTITY_TYPE_insert() for node entities.
  */
 function sector_resource_node_insert(EntityInterface $entity) {
-  
+
     switch ($entity->uuid()) {
         case '5d52aa52-3100-4fba-b937-2079f24b8690':
-            
+
             $block = Drupal\block\Entity\Block::load('views_block__sector_resource_block_default');
             if(!$block) {
               return;
             }
-            
+
             $block->setVisibilityConfig('request_path', array('id' => 'request_path',
                 'pages'=> '/node/' . $entity->id(),
                 'negate' => false,
                 )
             );
             $block->save();
-    
+
             \Drupal::logger('sector_resource')->notice('Setting views_block__sector_resource_block_default block visibility to appear on #%nid', [
             '%nid' => $entity->id(),
             ]);
         break;
-  
+
     }
 }

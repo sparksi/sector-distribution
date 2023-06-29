@@ -11,14 +11,23 @@ use Drupal\Core\Entity\EntityInterface;
  * Implements hook_install()
  */
 function sector_page_install() {
-    $role_object = Role::load('content_editor');
-    if($role_object) {
-        $role_object->grantPermission('create sector_page content');
-        $role_object->grantPermission('delete own sector_page content');
-        $role_object->grantPermission('delete sector_page revisions');
-        $role_object->grantPermission('edit own sector_page content');
+    $editor_role_object = Role::load('content_editor');
+    if($editor_role_object) {
+        $editor_role_object->grantPermission('create sector_page content');
+        $editor_role_object->grantPermission('delete own sector_page content');
+        $editor_role_object->grantPermission('delete sector_page revisions');
+        $editor_role_object->grantPermission('edit own sector_page content');
 
-        $role_object->save();
+        $editor_role_object->save();
+    }
+
+    $moderator_role_object = Role::load('content_moderator');
+    if($moderator_role_object) {
+        $moderator_role_object->grantPermission('delete any sector_page content');
+        $moderator_role_object->grantPermission('revert sector_page revisions');
+        $moderator_role_object->grantPermission('view sector_page revisions');
+
+        $editor_role_object->save();
     }
 }
 
