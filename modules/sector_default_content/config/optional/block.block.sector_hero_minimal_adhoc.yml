@@ -1,0 +1,27 @@
+uuid: 969dfe9d-d17b-4526-85db-3473d5a84492
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.hero_minimal
+  module:
+    - blockgroup
+    - system
+  theme:
+    - sector
+id: sector_hero_minimal_adhoc
+theme: sector
+region: hero
+weight: 0
+provider: null
+plugin: 'block_group:hero_minimal'
+settings:
+  id: 'block_group:hero_minimal'
+  label: 'Hero › Minimal › Ad-hoc placement'
+  label_display: '0'
+  provider: blockgroup
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/user/*'
