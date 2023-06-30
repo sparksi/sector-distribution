@@ -11,16 +11,16 @@ dependencies:
     - sector
 third_party_settings:
   block_class:
-    classes: "flex flex-row items-center"
+    classes: 'flex flex-row items-center'
 id: sector_followus
 theme: sector
 region: footer_post
-weight: -10
+weight: 100
 provider: null
-plugin: "menu_block:sector-follow-menu"
+plugin: 'menu_block:sector-follow-menu'
 settings:
-  id: "menu_block:sector-follow-menu"
-  label: "Follow Us"
+  id: 'menu_block:sector-follow-menu'
+  label: 'Follow Us'
   label_display: visible
   provider: menu_block
   follow: false
@@ -30,6 +30,6 @@ settings:
   level: 1
   depth: 1
   expand_all_items: false
-  parent: "sector-follow-menu:"
+  parent: 'sector-follow-menu:'
   suggestion: sector_follow_menu
 visibility: {}
