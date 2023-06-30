@@ -9,7 +9,7 @@ dependencies:
     - system
   theme:
     - sector
-id: sector_facet_search_contenttype
+id: sector_search_facet_contenttype
 theme: sector
 region: content_prefix
 weight: -12
@@ -21,7 +21,7 @@ settings:
   label_display: visible
   provider: facets
   context_mapping: {  }
-  block_id: sector_facet_search_contenttype
+  block_id: sector_search_facet_contenttype
 visibility:
   request_path:
     id: request_path
