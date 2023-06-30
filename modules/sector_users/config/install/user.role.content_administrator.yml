@@ -1,0 +1,15 @@
+uuid: e0640a34-452c-4226-87df-c8d8f8756bd6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: XMJDy7c-fB3uGa4UdSNBo64pNqT8DyWn6y2U72wDjQk
+id: content_administrator
+label: 'Content administrator'
+weight: -6
+is_admin: null
+permissions:
+  - 'delete all revisions'
+  - 'revert all revisions'

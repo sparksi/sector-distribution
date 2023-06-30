@@ -16,6 +16,7 @@ function sector_workflow_install() {
     if($editor_role_object) {
       $editor_role_object->grantPermission('use sector_editorial transition create_new_draft');
       $editor_role_object->grantPermission('use sector_editorial transition submit_for_review');
+      $editor_role_object->grantPermission('use sector_editorial transition feedback');
 
       $editor_role_object->save();
     }
@@ -24,6 +25,7 @@ function sector_workflow_install() {
     if($moderator_role_object) {
       $moderator_role_object->grantPermission('use sector_editorial transition publish');
       $moderator_role_object->grantPermission('use sector_editorial transition unpublish');
+      $moderator_role_object->grantPermission('use sector_editorial transition feedback');
 
       $moderator_role_object->save();
     }

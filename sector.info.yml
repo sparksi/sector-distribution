@@ -96,7 +96,7 @@ install:
 #  - sector:sector_blocks
 #  - sector:sector_brand
 #  - sector:sector_utils
-  - sector:sector_text_formats
+#  - sector:sector_text_formats
 #  - sector:sector_wysiwyg_utils
   - sector_tonic:sector_tonic
   - svg_image:svg_image

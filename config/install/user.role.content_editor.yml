@@ -7,14 +7,15 @@ dependencies:
   module:
     - content_moderation
     - contextual
-    - file
+    - filter
+    - media
     - node
     - path
     - system
     - taxonomy
     - toolbar
 _core:
-  default_config_hash: q47UViENT_bOKvqEDzyFLIw64Jls0Fpx4P2Dri3uSl4
+  default_config_hash: Jqi9LFaTqQftWJX0iZHJrkw9HsZ8ErPkOG9AeeNrGEw
 id: content_editor
 label: 'Content editor'
 weight: -8
@@ -23,13 +24,12 @@ permissions:
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
-  - 'access files overview'
+  - 'access media overview'
   - 'access toolbar'
   - 'administer url aliases'
   - 'create terms in tags'
   - 'create url aliases'
   - 'edit terms in tags'
-  - 'revert all revisions'
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view latest version'

@@ -1,9 +1,0 @@
-uuid: e0640a34-452c-4226-87df-c8d8f8756bd6
-langcode: en
-status: true
-dependencies: {  }
-id: content_administrator
-label: 'Content administrator'
-weight: -6
-is_admin: null
-permissions: {  }

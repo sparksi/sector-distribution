@@ -1,0 +1,58 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the profilename install profile.
+ */
+use Drupal\user\Entity\Role;
+
+
+/*
+ * Implements hook_install()
+ */
+function sector_media_install() {
+    $editor_role_object = Role::load('content_editor');
+    if($editor_role_object) {
+        $editor_role_object->grantPermission('create audio media');
+        $editor_role_object->grantPermission('create document media');
+        $editor_role_object->grantPermission('create image media');
+        $editor_role_object->grantPermission('create remote_video media');
+        $editor_role_object->grantPermission('create vector media');
+        $editor_role_object->grantPermission('create video media');
+        $editor_role_object->grantPermission('delete own audio media');
+        $editor_role_object->grantPermission('delete own document media');
+        $editor_role_object->grantPermission('delete own image media');
+        $editor_role_object->grantPermission('delete own remote_video media');
+        $editor_role_object->grantPermission('delete own vector media');
+        $editor_role_object->grantPermission('delete own video media');
+        $editor_role_object->grantPermission('edit any audio media');
+        $editor_role_object->grantPermission('edit any document media');
+        $editor_role_object->grantPermission('edit any image media');
+        $editor_role_object->grantPermission('edit any remote_video media');
+        $editor_role_object->grantPermission('edit any vector media');
+        $editor_role_object->grantPermission('edit any video media');
+        $editor_role_object->grantPermission('edit own audio media');
+        $editor_role_object->grantPermission('edit own document media');
+        $editor_role_object->grantPermission('edit own image media');
+        $editor_role_object->grantPermission('edit own remote_video media');
+        $editor_role_object->grantPermission('edit own vector media');
+        $editor_role_object->grantPermission('edit own video media');
+
+        $editor_role_object->save();
+    }
+
+
+    $moderator_role_object = Role::load('content_moderator');
+    if($moderator_role_object) {
+        $moderator_role_object->grantPermission('delete any audio media');
+        $moderator_role_object->grantPermission('delete any document media');
+        $moderator_role_object->grantPermission('delete any image media');
+        $moderator_role_object->grantPermission('delete any media');
+        $moderator_role_object->grantPermission('delete any remote_video media');
+        $moderator_role_object->grantPermission('delete any vector media');
+        $moderator_role_object->grantPermission('delete any video media');
+        $moderator_role_object->grantPermission('view all media revisions');
+
+        $moderator_role_object->save();
+    }
+
+}
