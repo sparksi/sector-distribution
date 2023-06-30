@@ -11,12 +11,28 @@ use Drupal\node\NodeInterface;
  * Implements sector_preprocess_page().
  */
 function sector_preprocess_page(&$variables) {
-  // Add the site name to the page. 
+  // Add the site name to the page.
   $variables['site_name'] = \Drupal::config('system.site')->get('name');
 
   $entity = \Drupal::routeMatch()->getParameter('node');
   if (!empty($entity)) {
     $variables['page']['isPublishedClass'] = $entity->isPublished() ? 'page--is-published' : 'page--is-unpublished';
+
+    if ($entity->hasField('field_content_options')) {
+      $node_content_options = $entity->get('field_content_options')->referencedEntities();
+
+      // Loops through each taxonomy term checking if the name of the term is
+      // the same as $taxonomy_name
+      $taxonomy_uuid = 'ce6a9fe6-0d6b-4ea4-afe8-7d505a7fe57b';
+      foreach($node_content_options as $key => $value) {
+        if($value->uuid() == $taxonomy_uuid) {
+          // remove the sidebars from the page.
+          unset($variables['page']['content_prefix']);
+          unset($variables['page']['content_suffix']);
+          break;
+        }
+      }
+    }
   }
 }
 
