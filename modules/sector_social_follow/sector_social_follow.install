@@ -1,0 +1,27 @@
+<?php
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityInterface;
+
+/*
+ * Implements hook_uninstall()
+ */
+function sector_social_follow_uninstall() {
+
+  // Delete blocks
+  $blocks_to_remove = [ 'fbc74a51-ee71-4549-ae04-3361e29ebcd6' ];
+  foreach($blocks_to_remove as $uuid) {
+    $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
+    $block_content->delete();
+  }
+
+  // delete menu items
+  $menu_items_to_remove = ['4c5ea571-715f-4fd6-9c3d-aad94bdf2ef2', 'd4601337-be2b-47c4-8acd-fae6ce61a22c', '95d3647d-0d85-458f-a836-32714b1c0320', '09118261-0d7f-4e14-a6f8-8f32bbee109c'];
+
+  foreach($menu_items_to_remove as $menuID) {
+
+    $menu_link_content = \Drupal::service('entity.repository')->loadEntityByUuid('menu_link_content', menuID);
+    if($menu_link_content) {
+        $menu_link_content->delete();
+    }
+  }
+}

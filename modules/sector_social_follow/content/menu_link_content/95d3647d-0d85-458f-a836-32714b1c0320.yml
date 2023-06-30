@@ -1,0 +1,29 @@
+_meta:
+  version: "1.0"
+  entity_type: menu_link_content
+  uuid: 95d3647d-0d85-458f-a836-32714b1c0320
+  bundle: menu_link_content
+  default_langcode: en
+default:
+  enabled:
+    - value: true
+  title:
+    - value: "Drupal Sector"
+  description:
+    - value: "Drupal Sector"
+  menu_name:
+    - value: sector-follow-menu
+  link:
+    - uri: "https://www.drupal.org/project/sector"
+      title: ""
+      options: {}
+  external:
+    - value: false
+  rediscover:
+    - value: false
+  weight:
+    - value: -49
+  expanded:
+    - value: false
+  revision_translation_affected:
+    - value: true

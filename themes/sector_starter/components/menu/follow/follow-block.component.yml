@@ -1,5 +1,5 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
-name: Block
+name: Follow
 status: stable
 libraryDependencies:
   - core/once
@@ -21,5 +21,3 @@ props:
 slots:
   content:
     title: Block Content
-  label:
-    title: Block Label

@@ -1,0 +1,35 @@
+uuid: fbc74a51-ee71-4549-ae04-3361e29ebcd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sector-follow-menu
+  module:
+    - block_class
+    - menu_block
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: 'flex flex-row items-center'
+id: sector_followus
+theme: sector
+region: footer_post
+weight: 100
+provider: null
+plugin: 'menu_block:sector-follow-menu'
+settings:
+  id: 'menu_block:sector-follow-menu'
+  label: 'Follow Us'
+  label_display: visible
+  provider: menu_block
+  follow: false
+  follow_parent: child
+  label_link: false
+  label_type: menu
+  level: 1
+  depth: 1
+  expand_all_items: false
+  parent: 'sector-follow-menu:'
+  suggestion: sector_follow_menu
+visibility: {}
