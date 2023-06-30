@@ -33,7 +33,11 @@ export const css = async (source, destination, env) => {
   const post = await postcss([
     autoprefixer,
     inlineSVG({
-      paths: ['src/', 'node_modules/@material-symbols/svg-400/sharp'],
+      paths: [
+        'src/',
+        'components',
+        'node_modules/@material-symbols/svg-400/sharp',
+      ],
     }),
     tailwind(),
   ]).process(pre, {
