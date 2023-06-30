@@ -1,4 +1,4 @@
-uuid: 684c6148-37f1-47f8-9fd6-b13f561fd986
+uuid: be824093-36a3-497e-8a66-d6ea58666067
 langcode: en
 status: true
 dependencies:
@@ -8,6 +8,8 @@ dependencies:
     - menu_block
   theme:
     - sector
+_core:
+  default_config_hash: kDomm1w29Lo4HFMXSafPhR9fZ1-VXi7n8j9yfJUrJRA
 id: sector_menu_block_secondary
 theme: sector
 region: content_prefix
@@ -19,8 +21,8 @@ settings:
   label: 'Sector › Main menu'
   label_display: visible
   provider: menu_block
-  follow: true
-  follow_parent: active
+  follow: false
+  follow_parent: child
   label_link: true
   label_type: root
   level: 2
