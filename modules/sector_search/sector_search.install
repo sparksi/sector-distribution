@@ -2,6 +2,7 @@
 use Drupal\node\Entity\Node;
 use Drupal\Core\Entity\EntityInterface;
 
+
 /*
  * Implements hook_uninstall()
  */
@@ -42,7 +43,7 @@ function sector_search_node_insert(EntityInterface $entity) {
         $block->save();
       }
 
-      $facet_content_type = Drupal\block\Entity\Block::load('d62d4404-2b8b-4a02-89f1-89313115a187');
+      $facet_content_type = Drupal\block\Entity\Block::load('sector_search_facet_contenttype');
       if($facet_content_type) {
         $facet_content_type->setVisibilityConfig('request_path', array('id' => 'request_path',
             'pages'=> '/node/' . $entity->id(),
