@@ -10,7 +10,7 @@ dependencies:
     - sector
 id: sector_views_block__sector_search_sitewide_sector_page
 theme: sector
-region: content_post
+region: content
 weight: 0
 provider: null
 plugin: 'views_block:sector_search_sitewide-sector_page'

@@ -1,0 +1,29 @@
+uuid: d62d4404-2b8b-4a02-89f1-89313115a187
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.sector_sitewide_search_content_type
+  module:
+    - facets
+    - system
+  theme:
+    - sector
+id: sector_facet_search_contenttype
+theme: sector
+region: content_prefix
+weight: -12
+provider: null
+plugin: 'facet_block:sector_sitewide_search_content_type'
+settings:
+  id: 'facet_block:sector_sitewide_search_content_type'
+  label: 'Filter by type'
+  label_display: visible
+  provider: facets
+  context_mapping: {  }
+  block_id: sector_facet_search_contenttype
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /#

@@ -33,16 +33,24 @@ function sector_search_node_insert(EntityInterface $entity) {
     case '3a7d8d6a-7573-411f-86dd-c7551c7d9d4f':
       // find block
       $block = Drupal\block\Entity\Block::load('sector_views_block__sector_search_sitewide_sector_page');
-      if(!$block) {
-        return;
+      if($block) {
+        $block->setVisibilityConfig('request_path', array('id' => 'request_path',
+            'pages'=> '/node/' . $entity->id(),
+            'negate' => false,
+          )
+        );
+        $block->save();
       }
 
-      $block->setVisibilityConfig('request_path', array('id' => 'request_path',
-          'pages'=> '/node/' . $entity->id(),
-          'negate' => false,
-        )
-      );
-      $block->save();
+      $facet_content_type = Drupal\block\Entity\Block::load('d62d4404-2b8b-4a02-89f1-89313115a187');
+      if($facet_content_type) {
+        $facet_content_type->setVisibilityConfig('request_path', array('id' => 'request_path',
+            'pages'=> '/node/' . $entity->id(),
+            'negate' => false,
+          )
+        );
+        $facet_content_type->save();
+      }
 
       \Drupal::logger('sector_default_content')->notice('Setting search view block to appear on #%nid', [
         '%nid' => $entity->id(),
