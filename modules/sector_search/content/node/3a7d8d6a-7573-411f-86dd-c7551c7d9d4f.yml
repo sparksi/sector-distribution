@@ -37,7 +37,7 @@ default:
       value: published
   path:
     -
-      alias: /search
+      alias: /search-page
       langcode: en
       pathauto: 1
   rh_action:
