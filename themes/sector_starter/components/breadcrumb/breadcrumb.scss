@@ -1,6 +1,6 @@
 .breadcrumb {
   .hero-post & {
-    @apply bg-zinc-200 py-4;
+    @apply bg-zinc-200 dark:bg-zinc-800 py-4;
 
     .breadcrumb__list {
       @apply container;
