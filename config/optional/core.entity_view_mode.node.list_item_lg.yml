@@ -4,7 +4,7 @@ status: true
 dependencies:
   module:
     - node
-id: node.card_lg
-label: 'Card › Standard'
+id: node.list_item_lg
+label: 'List item › Standard'
 targetEntityType: node
 cache: true
