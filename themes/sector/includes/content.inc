@@ -36,5 +36,8 @@ function sector_preprocess_ds_entity_view(&$variables) {
   }
 }
 
-
-  
+function sector_preprocess_node(&$variables) {
+  if($variables['page'] === false) {
+    $variables['title_link_attributes'] = new Attribute();
+  }
+}
