@@ -1,8 +1,9 @@
-uuid: e62a3a69-34e8-4f69-af0f-f779a056d441
+uuid: 90c443da-553f-4857-b1c1-a1090a52a9a6
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.card_lg
     - field.field.node.sector_resource.body
     - field.field.node.sector_resource.field_display_options
     - field.field.node.sector_resource.field_image_hero
@@ -11,15 +12,20 @@ dependencies:
     - node.type.sector_resource
   module:
     - datetime
+    - layout_builder
     - options
     - text
     - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 _core:
   default_config_hash: qAxdW7gtteDI5gtMmwPje2PKE_owsbADv5GhQ6Q3jf8
-id: node.sector_resource.default
+id: node.sector_resource.card_lg
 targetEntityType: node
 bundle: sector_resource
-mode: default
+mode: card_lg
 content:
   body:
     type: text_default

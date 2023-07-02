@@ -1,6 +1,6 @@
 uuid: 9fd16857-7a45-45bc-84d0-a4db4e14e1bf
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
@@ -14,7 +14,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: CkwpBNqeardQ75TAzd22JM7NJLncE44IlCSKgf9Z8v0
+  default_config_hash: 2ra7S8xUCTAw8FydFHUxVZHqYHc4biUnngSDuUu44ko
 id: node.sector_news.teaser
 targetEntityType: node
 bundle: sector_news

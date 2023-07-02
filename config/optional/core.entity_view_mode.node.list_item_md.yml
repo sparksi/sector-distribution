@@ -1,0 +1,10 @@
+uuid: d6478b94-d1ae-4f8d-ae78-9117ea691b85
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.list_item_md
+label: 'List item › Minimal'
+targetEntityType: node
+cache: true

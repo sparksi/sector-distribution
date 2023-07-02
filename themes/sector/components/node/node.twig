@@ -12,7 +12,17 @@
   not node.isPublished() ? 'node--unpublished',
   node.bundle|clean_class,
   node.bundle|clean_class ~ '--' ~ view_mode|clean_class,
-]
+]|merge(utility_classes ? utility_classes : [])
+%}
+{%
+    set title_classes = [
+        'node__title'
+    ]|merge(title_classes ? title_classes : [])
+%}
+{%
+    set title_link_classes = [
+        'node__title-link'
+    ]|merge(title_link_classes ? title_link_classes : [])
 %}
 <article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
@@ -20,9 +30,9 @@
 
   {% block content %}
     {% if not page %}
-      <h2{{ title_attributes }}>
-        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-      </h2>
+      <{{ title_tag|default('h2') }}{{ title_attributes.addClass(title_classes) }}>
+        <a href="{{ url }}" {{ title_link_attributes.addClass(title_link_classes) }}>{{ label }}</a>
+      </{{ title_tag|default('h2') }}>
     {% endif %}
 
     {% if display_submitted %}
@@ -35,7 +45,7 @@
       </footer>
     {% endif %}
 
-    <div{{ content_attributes }}>
+    <div{{ content_attributes.addClass('node__content') }}>
       {{ content }}
     </div>
   {% endblock %}

@@ -3,14 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.teaser
+    - core.entity_view_mode.node.list_item_lg
     - node.type.sector_news
   module:
     - datetime
     - node
     - user
 _core:
-  default_config_hash: FKvqFcwk6OrmxFRX1xKgQlRgrynksfEYSSHsbLbgUco
+  default_config_hash: FHoI1TEOcc0KN3p43dis97-zWhGf5G9bw7-KU3iNem0
 id: sector_news
 label: 'Sector › News'
 module: views
@@ -207,7 +207,7 @@ display:
         type: 'entity:node'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: list_item_lg
       query:
         type: views_query
         options:

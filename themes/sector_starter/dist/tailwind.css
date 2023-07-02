@@ -2415,6 +2415,10 @@ video {
   display: contents;
 }
 
+.list-item {
+  display: list-item;
+}
+
 .hidden {
   display: none;
 }
@@ -7258,12 +7262,21 @@ video {
   padding-top: 1rem;
 }
 
+.font-custom-alt {
+  font-family: var(--custom-font-alternate);
+}
+
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .font-sans {
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-base {
@@ -8655,9 +8668,19 @@ video {
   --tw-ring-opacity: 0.05;
 }
 
+.\@container\/list-item {
+  container-type: inline-size;
+  container-name: list-item;
+}
+
 .\@container\/navigation {
   container-type: inline-size;
   container-name: navigation;
+}
+
+.\@container\/node {
+  container-type: inline-size;
+  container-name: node;
 }
 
 .\@container\/prose {
@@ -8895,6 +8918,11 @@ video {
   color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
+.hover\:text-sky-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
 .focus\:not-sr-only:focus {
   position: static;
   width: auto;
@@ -8924,6 +8952,11 @@ video {
 
 .focus\:ring-offset-2:focus {
   --tw-ring-offset-width: 2px;
+}
+
+.focus-visible\:text-sky-500:focus-visible {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity));
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17922,6 +17955,11 @@ video {
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 

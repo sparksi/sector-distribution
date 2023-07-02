@@ -27,10 +27,9 @@
  * @todo Delete as part of https://www.drupal.org/node/3015623
  */
 #}
-{% set title_tag = title_tag ?? 'h1' %}
+{% set title_tag = title_tag ?? 'span' %}
 {% set title_classes = [
-  'page-title',
-  display_size ? 'display-' ~ display_size
+  'title',
 ]|merge(title_utility_classes ? title_utility_classes : []) %}
 {% if not is_inline %}
   {% include "sector:field" %}

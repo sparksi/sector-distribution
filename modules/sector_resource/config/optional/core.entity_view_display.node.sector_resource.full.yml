@@ -14,7 +14,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: _RkDmhULsb4P4Q2aqE1_RGVYQjlDO9F1DiLgYUGNbQI
+  default_config_hash: OuCBIyb0JHLIuqnDAFSb2Zf4haBXR0tnnkL0KWqM7HQ
 id: node.sector_resource.full
 targetEntityType: node
 bundle: sector_resource
