@@ -1,0 +1,19 @@
+<?php
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityInterface;
+
+/*
+ * Implements hook_uninstall()
+ */
+function sector_social_share_uninstall() {
+  // Delete blocks
+  $blocks_to_remove = [ '6b828d3a-8182-4a9e-9be9-ef884d6ae1da' ];
+  foreach($blocks_to_remove as $uuid) {
+    $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
+    $block_content->delete();
+  }
+
+  // Delete addtoany config
+  \Drupal::service('config.factory')->getEditable('addtoany.settings.yml')->delete();
+
+}

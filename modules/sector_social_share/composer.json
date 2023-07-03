@@ -1,0 +1,28 @@
+{
+  "name": "sector/social-share",
+  "type": "project",
+  "description": "A composer-based Drupal project template using Sector.",
+  "homepage": "https://www.sector.org.nz",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Sparks Interactive",
+      "role": "Development"
+    }
+  ],
+  "require": {
+    "drupal/addtoany": "^2.0"
+  },
+  "repositories": {
+    "packagist.drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "asset.packagist": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
