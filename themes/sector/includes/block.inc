@@ -54,6 +54,14 @@ function sector_preprocess_block(&$variables) {
     $variables['id'] = str_replace('_', '-', $variables['elements']['#id']);
   }
 
+  if($variables['elements']['#configuration']['provider'] === 'menu_block') {
+    if(!isset($variables['elements']['content']['#items'])) {
+      $variables['content'] = [];
+      $variables['label'] = [];
+      return;
+    }
+  }
+
   // Check for BlockContent.
   if ($variables['elements']['#configuration']['provider'] != 'block_content' || empty($variables['elements']['content']['#block_content'])) {
     return;

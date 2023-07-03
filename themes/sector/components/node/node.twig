@@ -24,6 +24,11 @@
         'node__title-link'
     ]|merge(title_link_classes ? title_link_classes : [])
 %}
+{%
+    set content_classes  = [
+        'node__content'
+    ]|merge(content_classes ? content_classes : [])
+%}
 <article{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {{ title_suffix }}
@@ -45,7 +50,7 @@
       </footer>
     {% endif %}
 
-    <div{{ content_attributes.addClass('node__content') }}>
+    <div{{ content_attributes.addClass(content_classes) }}>
       {{ content }}
     </div>
   {% endblock %}

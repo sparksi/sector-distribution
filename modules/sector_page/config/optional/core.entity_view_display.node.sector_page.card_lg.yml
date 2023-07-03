@@ -1,0 +1,48 @@
+uuid: d333f048-c3f9-4965-9323-6148373643fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card_lg
+    - field.field.node.sector_page.body
+    - field.field.node.sector_page.field_content_options
+    - field.field.node.sector_page.field_display_options
+    - field.field.node.sector_page.field_image_hero
+    - field.field.node.sector_page.field_subtitle
+    - field.field.node.sector_page.field_text_placement
+    - node.type.sector_page
+  module:
+    - field_formatter_filter
+    - layout_builder
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: TLdo9gb3OCzvzgN1Iwt2BsXTqApsm-OrEI-Pykj4w5s
+id: node.sector_page.card_lg
+targetEntityType: node
+bundle: sector_page
+mode: card_lg
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 256
+    third_party_settings:
+      field_formatter_filter:
+        format: sector_restricted_basic_html
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  field_content_options: true
+  field_display_options: true
+  field_image_hero: true
+  field_subtitle: true
+  field_text_placement: true
+  links: true
+  search_api_excerpt: true
