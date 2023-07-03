@@ -26,7 +26,7 @@
 }
 
 .breadcrumb__link {
-  @apply hover:text-sky-500 focus-visible:text-sky-500;
+  @apply hover:text-sky-500 focus-visible:text-sky-500 outline-sky-500;
 }
 
 .breadcrumb__link:is([aria-current="page"]) {
