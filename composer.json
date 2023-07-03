@@ -10,6 +10,7 @@
     ],
     "require": {
         "cweagans/composer-patches": "~1.0",
+        "drupal/addtoany": "^2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/allowed_formats": "2.0.0",
         "drupal/block_class": "2.0.11",
@@ -92,7 +93,7 @@
         },
         "enable-patching": true,
         "patchLevel": {
-          "drupal/core": "-p2"
+            "drupal/core": "-p2"
         },
         "patches": {
             "drupal/core": {
