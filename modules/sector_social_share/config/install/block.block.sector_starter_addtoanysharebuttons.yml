@@ -1,0 +1,26 @@
+uuid: 6b828d3a-8182-4a9e-9be9-ef884d6ae1da
+langcode: en
+status: true
+dependencies:
+  module:
+    - addtoany
+  theme:
+    - sector_starter
+id: sector_starter_addtoanysharebuttons
+theme: sector_starter
+region: content
+weight: 100
+provider: null
+plugin: addtoany_block
+settings:
+  id: addtoany_block
+  label: "AddToAny share buttons"
+  label_display: "0"
+  provider: addtoany
+  context_mapping:
+    node: "@node.node_route_context:node"
+  link_url: ""
+  link_title: ""
+  buttons_size: ""
+  addtoany_html: ""
+visibility: {}
