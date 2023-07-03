@@ -1,0 +1,7 @@
+name: Sector Social Share
+type: module
+description: Provides AddToAny share buttons from https://www.drupal.org/project/addtoany
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - addtoany:addtoany
