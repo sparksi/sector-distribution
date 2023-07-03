@@ -2,6 +2,18 @@
 use Drupal\node\Entity\Node;
 use Drupal\Core\Entity\EntityInterface;
 
+
+/*
+ * Implements hook_install()
+ */
+function sector_social_share_install() {
+  $config = \Drupal::service('config.factory')->getEditable('addtoany.settings');
+
+  // Set and save new message value.
+  $config->set('additional_html', '<a class=\"a2a_button_linkedin\"></a>\r\n<a class=\"a2a_button_twitter\"></a>\r\n<a class=\"a2a_button_email\"></a>')->save();
+  $config->set('additional_js', 'a2a_config.icon_color = "#000";')->save();
+}
+
 /*
  * Implements hook_uninstall()
  */
@@ -15,5 +27,4 @@ function sector_social_share_uninstall() {
 
   // Delete addtoany config
   \Drupal::service('config.factory')->getEditable('addtoany.settings.yml')->delete();
-
 }
