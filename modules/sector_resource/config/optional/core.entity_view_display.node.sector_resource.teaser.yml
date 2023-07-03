@@ -1,4 +1,3 @@
-uuid: 9fd16857-7a45-45bc-84d0-a4db4e14e1bf
 langcode: en
 status: false
 dependencies:
@@ -13,8 +12,6 @@ dependencies:
   module:
     - text
     - user
-_core:
-  default_config_hash: 2ra7S8xUCTAw8FydFHUxVZHqYHc4biUnngSDuUu44ko
 id: node.sector_resource.teaser
 targetEntityType: node
 bundle: sector_resource
