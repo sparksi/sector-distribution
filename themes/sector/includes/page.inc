@@ -33,6 +33,14 @@ function sector_preprocess_page(&$variables) {
         }
       }
     }
+
+    if ($entity->hasField('field_text_placement')) {
+      $text_placement_classes = $entity->get('field_text_placement')->getValue();
+      if ($text_placement_classes) {
+        foreach($text_placement_classes as $text_placement_class)
+        $variables['page_utility_classes'][] = 'text-placement--' . $text_placement_class['value'];
+      }
+    }
   }
 }
 

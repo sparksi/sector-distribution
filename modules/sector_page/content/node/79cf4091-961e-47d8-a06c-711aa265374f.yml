@@ -65,3 +65,6 @@ default:
     -
       value: '<p>Introducing Sector page display options via page layout variants and page content settings.</p>'
       format: sector_restricted_basic_html
+  field_text_placement:
+    -
+      value: text-left

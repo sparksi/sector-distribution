@@ -5,7 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    fb27ffaf-76c2-4231-93f4-92088aa7dfe7: user
+    a97cea67-9e3c-4f79-82ad-221d7b9ed742: user
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
     0ca573cb-dbdb-49ab-8a48-469ce2493ff6: media
 default:
@@ -17,7 +17,7 @@ default:
       value: true
   uid:
     -
-      entity: fb27ffaf-76c2-4231-93f4-92088aa7dfe7
+      entity: a97cea67-9e3c-4f79-82ad-221d7b9ed742
   title:
     -
       value: 'Section A '
@@ -63,5 +63,8 @@ default:
       entity: 0ca573cb-dbdb-49ab-8a48-469ce2493ff6
   field_subtitle:
     -
-      value: '<p>Introducing Sector page display and page content settings.&nbsp;</p>'
+      value: '<p>Introducing Sector page display and page content settings.</p>'
       format: sector_restricted_basic_html
+  field_text_placement:
+    -
+      value: text-center

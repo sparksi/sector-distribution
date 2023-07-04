@@ -8697,6 +8697,11 @@ video {
   container-name: prose;
 }
 
+.\@container\/search-result {
+  container-type: inline-size;
+  container-name: search-result;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
