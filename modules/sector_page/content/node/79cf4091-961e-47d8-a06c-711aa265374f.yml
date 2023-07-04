@@ -5,9 +5,10 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    c3aff566-62fa-41cd-afa3-84c0fd20ee91: user
+    205aa29d-68c7-4684-8345-7226fb341f9c: user
     0505a7d0-1283-4435-9aae-06e6c9f0005e: taxonomy_term
     d7041cb4-2d9f-4235-ba77-d0851431789f: taxonomy_term
+    db013814-ff50-496a-b29e-1bef4adee12d: media
 default:
   revision_uid:
     -
@@ -17,7 +18,7 @@ default:
       value: true
   uid:
     -
-      entity: c3aff566-62fa-41cd-afa3-84c0fd20ee91
+      entity: 205aa29d-68c7-4684-8345-7226fb341f9c
   title:
     -
       value: 'Sector section entry pages'
@@ -61,6 +62,9 @@ default:
   field_display_options:
     -
       entity: d7041cb4-2d9f-4235-ba77-d0851431789f
+  field_image_hero:
+    -
+      entity: db013814-ff50-496a-b29e-1bef4adee12d
   field_subtitle:
     -
       value: '<p>Introducing Sector page display options via page layout variants and page content settings.</p>'
