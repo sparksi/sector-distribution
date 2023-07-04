@@ -1,3 +1,4 @@
+uuid: 52909a34-94bc-40bd-9256-9f571c56f264
 langcode: en
 status: true
 dependencies:
@@ -11,6 +12,9 @@ dependencies:
     - media.type.video
   module:
     - file
+    - text
+_core:
+  default_config_hash: tMCOIsCubIJqU_TwNxZh--wlHEj_hp-fFIdXgHY78_Y
 id: media.video.full
 targetEntityType: media
 bundle: video
@@ -25,17 +29,23 @@ content:
       loop: false
       multiple_file_display_type: tags
       muted: false
-      width: 640
-      height: 480
+      width: 1920
+      height: 1080
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_transcript:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   created: true
   field_audio_description: true
   field_poster: true
   field_subtitle_track: true
-  field_transcript: true
   name: true
   search_api_excerpt: true
   thumbnail: true
