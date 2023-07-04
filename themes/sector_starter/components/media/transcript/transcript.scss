@@ -1,0 +1,20 @@
+
+details.transcript > summary::-webkit-details-marker {
+    @apply hidden;
+}
+
+.transcript__label {
+    @apply flex items-center gap-x-2 cursor-pointer font-semibold;
+
+    details:not([open]) & [data-icon="less"] {
+        @apply hidden;
+    }
+    details:is([open]) & [data-icon="more"] {
+        @apply hidden;
+    }
+}
+
+.transcript__body {
+    @apply space-y-4 bg-zinc-50 p-3 mt-3;
+}
+

@@ -1,5 +1,6 @@
 <?php
-
+use Drupal\media\Entity\Media;
+use Drupal\Core\Template\Attribute;
 /**
  * @file
  * Theme and preprocess functions for fields.
@@ -19,6 +20,25 @@ function sector_preprocess_field(&$variables) {
   // Add a clean field name without the field_BUNDLE_ prefix.
   $safe_field_name_prefix = 'field_' . $bundle . '_';
   $variables['field_name_clean'] = str_replace($safe_field_name_prefix, '', $field_name);
+
+  switch($variables['field_name_clean']) {
+    case 'field_media_video_file' :
+      $entity = $element['#object'] ?? null;
+
+      if($entity->hasField('field_poster')) {
+        $poster = $entity->get('field_poster')->getString();
+        if($poster) {
+          $poster_entity = Media::load($poster);
+          $uri = $poster_entity->field_media_image->entity->getFileUri();
+          $poster = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+          $variables['items'] = array_map(function($item) use ($poster) {
+            $item['content']['#attributes']->setAttribute('poster', $poster);
+            return $item;
+          }, $variables['items']);
+        }
+      }
+      break;
+  }
 }
 
 /**
