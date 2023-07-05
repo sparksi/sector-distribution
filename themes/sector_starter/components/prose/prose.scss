@@ -1,5 +1,7 @@
 @use 'utils';
+@use 'tables';
 
 .prose {
   @include utils.prose;
+  @include tables.prose;
 }
