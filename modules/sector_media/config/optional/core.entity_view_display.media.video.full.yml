@@ -14,7 +14,7 @@ dependencies:
     - file
     - text
 _core:
-  default_config_hash: tMCOIsCubIJqU_TwNxZh--wlHEj_hp-fFIdXgHY78_Y
+  default_config_hash: jwYfSEJifXa7N399gtI4iXoMklfppIuKqiZfWsbA_Y4
 id: media.video.full
 targetEntityType: media
 bundle: video
@@ -22,7 +22,7 @@ mode: full
 content:
   field_media_video_file:
     type: file_video
-    label: visually_hidden
+    label: hidden
     settings:
       controls: true
       autoplay: false
