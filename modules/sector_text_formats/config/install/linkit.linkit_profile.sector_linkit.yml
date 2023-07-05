@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - node
+_core:
+  default_config_hash: YU3r9JinyuUeoh6Uytcg0AwySmku6XuN3eDBf-dJ1lg
 label: 'Sector › Linkit'
 id: sector_linkit
 description: ''
@@ -12,7 +14,7 @@ matchers:
     id: 'entity:node'
     uuid: 7d3c877a-b51a-42a2-a0b7-704a90051e37
     settings:
-      metadata: 'ID [node:id] | [node:changed:sector_datetime_short]'
+      metadata: '[node:url:path] ([node:nid])'
       bundles: {  }
       group_by_bundle: false
       substitution_type: canonical
