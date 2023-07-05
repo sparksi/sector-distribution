@@ -6,3 +6,9 @@ core_version_requirement: ^10
 
 dependencies:
   - drupal:block
+  - default_content:default_content
+  - term_condition:term_condition
+
+default_content:
+  taxonomy_term:
+    - 382a97ea-f873-46e7-b827-e9603edb5a17

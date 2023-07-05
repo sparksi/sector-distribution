@@ -1,0 +1,6 @@
+<?php
+
+function sector_toc_uninstall() {
+    $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('sector_toc', '6930bbb6-7bd5-45d3-8689-f9b8bbbe2fa9');
+    $block_content->delete();
+}
