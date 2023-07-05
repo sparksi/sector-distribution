@@ -23,4 +23,7 @@
   {% for file in files %}
     <source {{ file.source_attributes }} />
   {% endfor %}
+  {% if attributes['data-subtitle'] is defined %}
+    <track default src="{{ attributes['data-subtitle'] }}" />
+  {% endif %}
 </video>

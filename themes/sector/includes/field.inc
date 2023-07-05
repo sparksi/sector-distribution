@@ -37,6 +37,20 @@ function sector_preprocess_field(&$variables) {
           }, $variables['items']);
         }
       }
+
+      if($entity->hasField('field_subtitle_track')) {
+        $subtitle = $entity->get('field_subtitle_track')->getString();
+        if($subtitle) {
+          $subtitle_entity = Media::load($subtitle);
+          $uri = $subtitle_entity->field_media_document->entity->getFileUri();
+          $subtitle = \Drupal::service('file_url_generator')->generateAbsoluteString($uri);
+          $variables['items'] = array_map(function($item) use ($subtitle) {
+            $item['content']['#attributes']->setAttribute('data-subtitle', $subtitle);
+            return $item;
+          }, $variables['items']);
+        }
+      }
+
       break;
   }
 }
