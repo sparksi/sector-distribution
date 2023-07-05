@@ -4,13 +4,6 @@ namespace Drupal\sector_toc\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Cache\Cache;
-use Drupal\Core\Field\FieldItemListInterface;
-use Drupal\Core\Template\Attribute;
-use Drupal\Core\TypedData\Exception\MissingDataException;
-use Drupal\node\Entity\Node;
-use Drupal\node\NodeInterface;
-use Illuminate\Support\Arr;
-use Drupal\Core\Url;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
