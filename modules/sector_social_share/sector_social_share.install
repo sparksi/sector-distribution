@@ -24,6 +24,7 @@ function sector_social_share_uninstall() {
     $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
     if(isset($block_content)) {
       $block_content->delete();
+      // TODO: Make this uninstall of block placement work.
     }
   }
 }

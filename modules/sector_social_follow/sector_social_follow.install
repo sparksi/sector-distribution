@@ -12,6 +12,7 @@ function sector_social_follow_uninstall() {
   foreach($blocks_to_remove as $uuid) {
     $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
     $block_content->delete();
+    // TODO: Make this uninstall of block placement work.
   }
 
   // delete menu items
