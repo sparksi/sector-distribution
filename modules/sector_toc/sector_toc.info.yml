@@ -1,0 +1,8 @@
+name: Table of contents
+type: module
+description: Provides a block containing content table of contents
+package: Sector
+core_version_requirement: ^10
+
+dependencies:
+  - drupal:block
