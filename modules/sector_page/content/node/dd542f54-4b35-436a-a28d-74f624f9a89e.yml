@@ -57,3 +57,6 @@ default:
   field_display_options:
     -
       entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
+  field_text_placement:
+    -
+      value: text-left

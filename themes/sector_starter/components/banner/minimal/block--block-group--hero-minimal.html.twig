@@ -4,21 +4,20 @@
  * Template for a block.
  */
 #}
-{% include '@sector_base/block/group.twig' with {
+{{ include('sector_starter:banner-minimal', {
   html_tag: 'div',
   utility_classes: [
     'banner',
-    'banner--maximal',
+    'banner--minimal',
     'container',
     'relative',
     'z-10',
-    'py-24',
-    'lg:py-48',
-    '2xl:py-64'
+    'py-10',
+    'lg:py-16'
   ],
   libraries: [
     'sector_starter/block-group',
     'sector_starter/banner',
-    'sector_starter/banner-maximal',
+    'sector_starter/banner-minimal',
   ]
-} %}
+}) }}

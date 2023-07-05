@@ -4,10 +4,6 @@
  * Template for the main page.
  */
 #}
-{% set page_classes = [
-  'py-5'
-]|merge(page_utility_classes ? page_utility_classes : []) %}
-
 {%
 set layout_classes = [
   'page',
@@ -15,7 +11,7 @@ set layout_classes = [
   page.isPublishedClass,
   (page.content_prefix|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'page--has-content-prefix' : '',
   (page.content_suffix|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'page--has-content-suffix' : ''
-]
+]|merge(page_utility_classes ? page_utility_classes : [])
 %}
 
 <div {{ content_attributes.addClass(layout_classes) }}>

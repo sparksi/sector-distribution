@@ -1,0 +1,75 @@
+uuid: 8848de28-9127-48c2-9507-f610fba919d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_result
+    - field.field.node.sector_resource.body
+    - field.field.node.sector_resource.field_display_options
+    - field.field.node.sector_resource.field_image_hero
+    - field.field.node.sector_resource.field_issue_date
+    - field.field.node.sector_resource.field_text_placement
+    - node.type.sector_resource
+  module:
+    - datetime
+    - layout_builder
+    - options
+    - text
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: iYGLwhcAV8ZGJy02Z1XOwDZ5TqVhV1o-RTzFTRR0GUQ
+id: node.sector_resource.search_result
+targetEntityType: node
+bundle: sector_resource
+mode: search_result
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_display_options:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_image_hero:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_issue_date:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_text_placement:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  search_api_excerpt: true

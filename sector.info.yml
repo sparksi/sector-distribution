@@ -61,6 +61,7 @@ install:
   - ctools:ctools
   - default_content:default_content
   - diff:diff
+  - editor_advanced_link:editor_advanced_link
   - entity_usage:entity_usage
   - entityqueue:entityqueue
   - extlink:extlink

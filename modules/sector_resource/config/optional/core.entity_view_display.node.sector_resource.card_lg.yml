@@ -21,7 +21,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: qAxdW7gtteDI5gtMmwPje2PKE_owsbADv5GhQ6Q3jf8
+  default_config_hash: dTGiWb2KDWOu3jB-tb1NvaFzYeAc0JtX8BmtFQieAPI
 id: node.sector_resource.card_lg
 targetEntityType: node
 bundle: sector_resource

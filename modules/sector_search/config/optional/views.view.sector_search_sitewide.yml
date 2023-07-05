@@ -7,7 +7,7 @@ dependencies:
   module:
     - search_api
 _core:
-  default_config_hash: 48h1CquYcGjlh_5hsDcZ1X7VqurYnCWNj8p8FqepUh0
+  default_config_hash: NR5NlvTeaRnYOxMrR_DXa0AtqU8w1uOVCDRWBawt98E
 id: sector_search_sitewide
 label: 'Sector › Search › Sitewide'
 module: views
@@ -364,7 +364,12 @@ display:
           wrapper_class: search-results__wrapper
           class: 'search-results__list listing listing--with-divides'
       row:
-        type: fields
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              sector_news: search_result
+              sector_page: search_result
       query:
         type: search_api_query
         options:

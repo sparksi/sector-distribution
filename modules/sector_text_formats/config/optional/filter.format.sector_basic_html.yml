@@ -11,7 +11,7 @@ dependencies:
     - linkit
     - media
 _core:
-  default_config_hash: p7IzNIHRIQ6viGEqINu5upvTQPSyskik-LO01yta7uI
+  default_config_hash: ctyuPtF-F4re63FcmOStngdyxlQrLJFYwi79Efb9OBI
 name: 'Sector › Basic HTML'
 format: sector_basic_html
 weight: 0
@@ -22,7 +22,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <a hreflang href data-entity-type data-entity-uuid data-entity-substitution> <blockquote cite> <ul type> <ol type reversed start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt>'
+      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <a hreflang href data-entity-type data-entity-uuid data-entity-substitution aria-label class id target="_blank" rel> <blockquote cite> <ul type> <ol type reversed start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt>'
       filter_html_help: true
       filter_html_nofollow: false
   linkit:

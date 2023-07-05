@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: db8de7e3-eaaa-4c10-a035-66692ae73983
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: sector.vtt
+  uri:
+    -
+      value: 'public://2023-07/sector.vtt'
+  filemime:
+    -
+      value: text/vtt
+  filesize:
+    -
+      value: 41
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1688523589

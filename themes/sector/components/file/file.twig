@@ -13,11 +13,20 @@
  * @ingroup themeable
  */
 #}
-<span{{ attributes.addClass(['flex', 'items-center', 'gap-x-2']) }}>
+{%
+    set classes = [
+        'flex', 'items-center', 'gap-x-2'
+    ]|merge(utility_classes ? utility_classes : [])
+%}
+<span{{ attributes.addClass(classes) }}>
 <span class="material-symbols-sharp">
 download_for_offline
 </span>{{ link }}</span>
 {% if file_size %}
   <span>({{ file_size }})</span>
 {% endif %}
-{{ attach_library('sector_starter/file-link')}}
+{% if libraries %}
+  {% for library in libraries %}
+    {{ attach_library(library) }}
+  {% endfor %}
+{% endif %}

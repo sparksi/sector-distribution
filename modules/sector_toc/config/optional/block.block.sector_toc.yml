@@ -1,0 +1,32 @@
+uuid: 6930bbb6-7bd5-45d3-8689-f9b8bbbe2fa9
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_class
+    - term_condition
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: mb-8
+id: sector_toc
+theme: sector
+region: content
+weight: -13
+provider: null
+plugin: sector_toc_default
+settings:
+  id: sector_toc_default
+  label: 'Sector › Table of contents'
+  label_display: visible
+  provider: sector_toc
+  selectors: h2
+visibility:
+  term:
+    id: term
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    term_uuids:
+      - 382a97ea-f873-46e7-b827-e9603edb5a17

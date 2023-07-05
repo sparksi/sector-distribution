@@ -6,6 +6,8 @@ _meta:
   default_langcode: en
   depends:
     6965cf9c-6a48-41f0-94de-eee916a6d5ed: file
+    474a7693-59e6-4318-9a55-05694cd58771: media
+    84a03929-bf21-4f87-aae8-4a27ee1dbce9: media
 default:
   revision_user:
     -
@@ -18,7 +20,7 @@ default:
       target_id: 1
   name:
     -
-      value: 'sector.mp4'
+      value: sector.mp4
   created:
     -
       value: 1683846399
@@ -35,3 +37,13 @@ default:
       entity: 6965cf9c-6a48-41f0-94de-eee916a6d5ed
       display: true
       description: ''
+  field_poster:
+    -
+      entity: 474a7693-59e6-4318-9a55-05694cd58771
+  field_subtitle_track:
+    -
+      entity: 84a03929-bf21-4f87-aae8-4a27ee1dbce9
+  field_transcript:
+    -
+      value: '<p>0:00 - Test transcript</p>'
+      format: sector_restricted_basic_html

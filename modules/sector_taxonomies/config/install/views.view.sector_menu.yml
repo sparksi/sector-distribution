@@ -2,10 +2,14 @@ uuid: b7f8b7a5-2641-4b09-8601-763902bcd055
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.node.card_lg
   module:
     - node
     - user
     - views_menu_children_filter
+_core:
+  default_config_hash: '--SWhw_5b2BTWMvNQTl-8rALNyORnhSxges-hUhdFAg'
 id: sector_menu
 label: 'Sector › Menu'
 module: views
@@ -202,8 +206,18 @@ display:
             group_items: {  }
       style:
         type: html_list
+        options:
+          row_class: ''
+          default_row_class: true
+          uses_fields: false
+          type: ul
+          wrapper_class: item-list
+          class: 'grid lg:grid-cols-3 gap-8'
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: card_lg
       query:
         type: views_query
         options:
@@ -213,6 +227,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: mt-5
       header: {  }
       footer: {  }
       display_extenders: {  }

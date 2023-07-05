@@ -7236,6 +7236,10 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.pb-5 {
+  padding-bottom: 1.25rem;
+}
+
 .pe-16 {
   -webkit-padding-end: 4rem;
           padding-inline-end: 4rem;
@@ -8668,6 +8672,11 @@ video {
   --tw-ring-opacity: 0.05;
 }
 
+.\@container\/card {
+  container-type: inline-size;
+  container-name: card;
+}
+
 .\@container\/list-item {
   container-type: inline-size;
   container-name: list-item;
@@ -8686,6 +8695,11 @@ video {
 .\@container\/prose {
   container-type: inline-size;
   container-name: prose;
+}
+
+.\@container\/search-result {
+  container-type: inline-size;
+  container-name: search-result;
 }
 
 @media (min-width: 640px) {
@@ -11967,9 +11981,32 @@ video {
     align-self: center;
   }
 
+  .sm\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  .sm\:p-6 {
+    padding: 1.5rem;
+  }
+
   .sm\:px-4 {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .sm\:pt-0 {
+    padding-top: 0px;
+  }
+
+  .sm\:shadow {
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
 
@@ -14951,6 +14988,11 @@ video {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 

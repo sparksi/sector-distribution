@@ -1,23 +1,20 @@
-uuid: 9fd16857-7a45-45bc-84d0-a4db4e14e1bf
 langcode: en
 status: false
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.sector_news.body
-    - field.field.node.sector_news.field_display_options
-    - field.field.node.sector_news.field_image_hero
-    - field.field.node.sector_news.field_issue_date
-    - field.field.node.sector_news.field_text_placement
-    - node.type.sector_news
+    - field.field.node.sector_resource.body
+    - field.field.node.sector_resource.field_display_options
+    - field.field.node.sector_resource.field_image_hero
+    - field.field.node.sector_resource.field_issue_date
+    - field.field.node.sector_resource.field_text_placement
+    - node.type.sector_resource
   module:
     - text
     - user
-_core:
-  default_config_hash: 2ra7S8xUCTAw8FydFHUxVZHqYHc4biUnngSDuUu44ko
-id: node.sector_news.teaser
+id: node.sector_resource.teaser
 targetEntityType: node
-bundle: sector_news
+bundle: sector_resource
 mode: teaser
 content:
   body:
