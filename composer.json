@@ -21,6 +21,7 @@
         "drupal/ctools": "^4.0",
         "drupal/default_content": "2.0.x-dev@dev",
         "drupal/diff": "1.1",
+        "drupal/editor_advanced_link": "^2.2",
         "drupal/embed": "1.6",
         "drupal/entity_usage": "^2.0@beta",
         "drupal/entityqueue": "1.6",
