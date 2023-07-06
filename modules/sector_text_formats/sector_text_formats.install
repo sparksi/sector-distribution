@@ -9,6 +9,14 @@ use Drupal\user\Entity\Role;
  * Implements hook_install()
  */
 function sector_text_formats_install() {
+
+    $admin_role_object = Role::load('content_administrator');
+    if($admin_role_object) {
+        $admin_role_object->grantPermission('use text format sector_full_html');
+
+        $admin_role_object->save();
+    }
+
     $editor_role_object = Role::load('content_editor');
     if($editor_role_object) {
         $editor_role_object->grantPermission('use text format sector_basic_html');

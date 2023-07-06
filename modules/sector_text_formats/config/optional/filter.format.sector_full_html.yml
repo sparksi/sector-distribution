@@ -9,6 +9,8 @@ dependencies:
     - core.entity_view_mode.media.sector_4_lg
   module:
     - media
+_core:
+  default_config_hash: PCvteMZXhMSp5cJKB3iwlElOHeJxY9ye2ysc5T8PcIo
 name: 'Sector › Full HTML'
 format: sector_full_html
 weight: 0
@@ -16,10 +18,10 @@ filters:
   filter_html:
     id: filter_html
     provider: filter
-    status: false
+    status: true
     weight: -10
     settings:
-      allowed_html: ''
+      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <a hreflang href aria-label class id target="_blank" rel data-entity-type data-entity-uuid data-entity-substitution> <blockquote cite> <ul type> <ol type reversed start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt>'
       filter_html_help: true
       filter_html_nofollow: false
   media_embed:
@@ -35,3 +37,9 @@ filters:
         sector_3_md: sector_3_md
         sector_4_lg: sector_4_lg
       allowed_media_types: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
