@@ -39,7 +39,7 @@ default:
     -
       alias: /search
       langcode: en
-      pathauto: 1
+      pathauto: 0
   rh_action:
     -
       value: bundle_default
