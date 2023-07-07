@@ -4,7 +4,7 @@ details.transcript > summary::-webkit-details-marker {
 }
 
 .transcript__label {
-    @apply flex items-center gap-x-2 cursor-pointer font-semibold outline-sky-500 focus-visible:text-sky-500;
+    @apply flex text-sm items-center gap-x-2 cursor-pointer font-semibold outline-sky-500 focus-visible:text-sky-500;
 
     details:not([open]) & [data-icon="less"] {
         @apply hidden;

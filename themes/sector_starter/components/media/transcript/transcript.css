@@ -1,6 +1,6 @@
 details.transcript>summary::-webkit-details-marker {display: none
 }*:not(details.transcript>summary::-webkit-details-marker)+.transcript {margin-top: var(--media-transcript-space,1rem)
-}.transcript__label {display: flex;cursor: pointer;align-items: center;-moz-column-gap: 0.5rem;column-gap: 0.5rem;font-weight: 600;outline-color: #0ea5e9
+}.transcript__label {display: flex;cursor: pointer;align-items: center;-moz-column-gap: 0.5rem;column-gap: 0.5rem;font-size: 0.875rem;line-height: 1.25rem;font-weight: 600;outline-color: #0ea5e9
 }.transcript__label:focus-visible {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
 }details:not([open]) .transcript__label [data-icon=less] {display: none
 }*:not(details:not([open]) .transcript__label [data-icon=less])+.transcript {margin-top: var(--media-transcript-space,1rem)

@@ -7,7 +7,7 @@ dependencies:
   module:
     - ckeditor5
 _core:
-  default_config_hash: TuQdcDa54faqo3F_ARstjhHvApxm88SCS3pvdTjeUmc
+  default_config_hash: 1kPxyBMKlzn8UDfyvtb0T5JGgsnz4x7rzfd4CIaDlWo
 format: sector_basic_html
 editor: ckeditor5
 settings:
@@ -77,5 +77,5 @@ settings:
       linkit_enabled: true
       linkit_profile: sector_linkit
     media_media:
-      allow_view_mode_override: false
+      allow_view_mode_override: true
 image_upload: {  }

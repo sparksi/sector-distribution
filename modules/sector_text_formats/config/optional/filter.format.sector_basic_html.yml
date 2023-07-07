@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.media.full
+    - core.entity_view_mode.media.sector_1_xs
     - core.entity_view_mode.media.sector_2_sm
     - core.entity_view_mode.media.sector_3_md
     - core.entity_view_mode.media.sector_4_lg
@@ -11,7 +12,7 @@ dependencies:
     - linkit
     - media
 _core:
-  default_config_hash: 9ctc8_K5oGbnGPbDXhof7JZgzn1tEQ6pTdazyfa3lJ4
+  default_config_hash: '-qmlRvbN25O82QmB43LVZ0GQHHo4KuZCFIM9b02-gyo'
 name: 'Sector › Basic HTML'
 format: sector_basic_html
 weight: 0
@@ -22,7 +23,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <a hreflang href aria-label class id target="_blank" rel data-entity-type data-entity-uuid data-entity-substitution> <blockquote cite> <ul type> <ol type reversed start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt>'
+      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <a hreflang href aria-label class id target="_blank" rel data-entity-type data-entity-uuid data-entity-substitution> <blockquote cite> <ul type> <ol type reversed start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode>'
       filter_html_help: true
       filter_html_nofollow: false
   linkit:
@@ -41,6 +42,7 @@ filters:
       default_view_mode: full
       allowed_view_modes:
         full: full
+        sector_1_xs: sector_1_xs
         sector_2_sm: sector_2_sm
         sector_3_md: sector_3_md
         sector_4_lg: sector_4_lg

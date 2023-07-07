@@ -1,0 +1,10 @@
+uuid: d59ea505-2a88-4fed-8e2b-5d7db63d7d62
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.sector_1_xs
+label: 'Sector › XS'
+targetEntityType: media
+cache: true
