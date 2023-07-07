@@ -32,4 +32,5 @@ function sector_social_share_uninstall() {
   $module_data = \Drupal::config('core.extension')->get('module');
   unset($module_data['addtoany']);
   \Drupal::configFactory()->getEditable('core.extension')->set('module', $module_data)->save();
+  \Drupal::configFactory()->getEditable('addtoany.settings')->delete();
 }

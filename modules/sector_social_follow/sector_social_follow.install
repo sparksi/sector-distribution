@@ -7,12 +7,9 @@ use Drupal\Core\Entity\EntityInterface;
  */
 function sector_social_follow_uninstall() {
 
-  // Delete blocks
-  $blocks_to_remove = [ 'fbc74a51-ee71-4549-ae04-3361e29ebcd6' ];
-  foreach($blocks_to_remove as $uuid) {
-    $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
-    $block_content->delete();
-    // TODO: Make this uninstall of block placement work.
+  $menu_block = \Drupal::service('entity.repository')->loadEntityByUuid('block', 'fbc74a51-ee71-4549-ae04-3361e29ebcd6');
+  if ($menu_block) {
+    $menu_block->delete();
   }
 
   // delete menu items
@@ -20,7 +17,8 @@ function sector_social_follow_uninstall() {
 
   foreach($menu_items_to_remove as $menuID) {
 
-    $menu_link_content = \Drupal::service('entity.repository')->loadEntityByUuid('menu_link_content', menuID);
+    $menu_link_content = \Drupal::service('entity.repository')->loadEntityByUuid('menu_link_content', $menuID);
+
     if($menu_link_content) {
         $menu_link_content->delete();
     }
