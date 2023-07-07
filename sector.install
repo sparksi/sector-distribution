@@ -44,9 +44,9 @@ function sector_install_required_modules() {
     'sector_media',
     'sector_brand',
     'sector_page',
+    'sector_search',
     'sector_news',
     'sector_workflow',
-    'sector_search',
     'sector_social_follow',
   ], FALSE);
 }
