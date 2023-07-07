@@ -53,6 +53,16 @@ function sector_search_node_insert(EntityInterface $entity) {
         $facet_content_type->save();
       }
 
+      $facet_summary = Drupal\block\Entity\Block::load('block.block.sector_sectorsearchsitewidesummary');
+      if($facet_summary) {
+        $facet_summary->setVisibilityConfig('request_path', array('id' => 'request_path',
+            'pages'=> '/node/' . $entity->id(),
+            'negate' => false,
+          )
+        );
+        $facet_summary->save();
+      }
+
       \Drupal::logger('sector_default_content')->notice('Setting search view block to appear on #%nid', [
         '%nid' => $entity->id(),
       ]);

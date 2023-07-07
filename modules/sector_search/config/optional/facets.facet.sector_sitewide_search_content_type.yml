@@ -7,6 +7,8 @@ dependencies:
     - views.view.sector_search_sitewide
   module:
     - search_api
+_core:
+  default_config_hash: bglz8dJ75SF8UraVIXhV5QaKHMViAG8cemYAD_i2Les
 id: sector_sitewide_search_content_type
 name: 'Content type'
 weight: 0
@@ -29,7 +31,7 @@ enable_parent_when_child_gets_disabled: true
 widget:
   type: checkbox
   config:
-    show_numbers: false
+    show_numbers: true
     soft_limit: 0
     show_reset_link: false
     reset_text: 'Show all'

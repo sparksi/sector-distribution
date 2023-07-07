@@ -5,7 +5,8 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    66224be3-8df7-4084-868b-eb396f85db43: user
+    b2ab4b26-b114-48ea-9a2b-da96e49671c2: user
+    a2c525ae-fb40-42ba-991f-d358a6152f8d: taxonomy_term
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
@@ -16,7 +17,7 @@ default:
       value: true
   uid:
     -
-      entity: 66224be3-8df7-4084-868b-eb396f85db43
+      entity: b2ab4b26-b114-48ea-9a2b-da96e49671c2
   title:
     -
       value: 'Access Denied (error 403)'
@@ -37,7 +38,7 @@ default:
       value: published
   path:
     -
-      alias: ''
+      alias: /access-denied-error-403
       langcode: en
       pathauto: 1
   rh_action:
@@ -54,6 +55,9 @@ default:
       value: '<h2>Sorry, you are not authorized to access this page or you might be lost.&nbsp;</h2><h3>Most likely causes</h3><p>You might be looking for another page!</p><h2>Most likely causes</h2><ul><li>The page no longer exists or has moved</li><li>The website has recently had a major upgrade so some pages have been moved and a few old ones were deleted.</li><li>It''s also possible the page may have been temporary.</li><li>If you have linked to this page from another site we will ask them to update their link please <a href="/contact-us">contact us</a> and let us&nbsp;where you linked from.</li><li>You may have typed in the incorrect page name.&nbsp;</li></ul><h4>What you can try</h4><p>Make sure the requested URL is correct.</p><p>Or try:&nbsp;</p><ul><li>Using the Search &lt;insert link&gt;</li><li>Using the Sitemap &lt;insert link&gt;</li><li><a href="/contact-us">Contact us</a>&nbsp;to let us know about the error.</li><li>Update your favourites or Bookmark list and links to our site</li></ul><p>{Sample content page}</p>'
       format: sector_basic_html
       summary: ''
+  field_content_options:
+    -
+      entity: a2c525ae-fb40-42ba-991f-d358a6152f8d
   field_display_options:
     -
       entity: 89a93419-6690-4fb1-8758-9c5b8eb32536

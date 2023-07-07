@@ -5,7 +5,8 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
-    1516457d-4dad-48e9-aee9-beb771f97a9b: user
+    b2ab4b26-b114-48ea-9a2b-da96e49671c2: user
+    a2c525ae-fb40-42ba-991f-d358a6152f8d: taxonomy_term
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
@@ -16,7 +17,7 @@ default:
       value: true
   uid:
     -
-      entity: 1516457d-4dad-48e9-aee9-beb771f97a9b
+      entity: b2ab4b26-b114-48ea-9a2b-da96e49671c2
   title:
     -
       value: Search
@@ -49,6 +50,12 @@ default:
   rh_redirect_fallback_action:
     -
       value: bundle_default
+  field_content_options:
+    -
+      entity: a2c525ae-fb40-42ba-991f-d358a6152f8d
   field_display_options:
     -
       entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
+  field_text_placement:
+    -
+      value: text-left

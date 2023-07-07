@@ -4,11 +4,14 @@ status: true
 dependencies:
   config:
     - field.storage.node.body
+    - field.storage.node.field_content_options
     - field.storage.node.field_subtitle
     - search_api.server.sector_default
   module:
     - node
     - search_api
+_core:
+  default_config_hash: Mw_hkoiMfiXgUFoUUDZ8Pc-vPa3r5ojyFidQlY0OknY
 id: sector_content_sidewide
 name: 'Sector content (sidewide)'
 description: 'Site-wide content index'
@@ -22,6 +25,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.body
+  field_content_options:
+    label: 'Content options'
+    datasource_id: 'entity:node'
+    property_path: field_content_options
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_content_options
   field_subtitle:
     label: Subtitle
     datasource_id: 'entity:node'
@@ -39,7 +50,7 @@ field_settings:
     type_locked: true
     hidden: true
   status:
-    label: null
+    label: status
     datasource_id: 'entity:node'
     property_path: status
     type: boolean
@@ -65,7 +76,7 @@ field_settings:
       module:
         - node
   uid:
-    label: null
+    label: uid
     datasource_id: 'entity:node'
     property_path: uid
     type: integer

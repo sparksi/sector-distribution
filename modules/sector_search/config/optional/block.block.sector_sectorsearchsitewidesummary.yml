@@ -1,0 +1,28 @@
+uuid: ebff4fea-b3ae-457b-8087-6ea019cacb09
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets_summary.facets_summary.sector_search_sitewide_summary
+  module:
+    - facets_summary
+    - system
+  theme:
+    - sector
+id: sector_sectorsearchsitewidesummary
+theme: sector
+region: content
+weight: -12
+provider: null
+plugin: 'facets_summary_block:sector_search_sitewide_summary'
+settings:
+  id: 'facets_summary_block:sector_search_sitewide_summary'
+  label: 'Sector › Search › Sitewide, summary'
+  label_display: '0'
+  provider: facets_summary
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search
