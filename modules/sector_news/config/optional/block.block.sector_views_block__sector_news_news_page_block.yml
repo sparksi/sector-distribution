@@ -1,0 +1,29 @@
+uuid: 2830250c-8ac8-42c5-97e6-cce53ac62f10
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_news
+  module:
+    - system
+    - views
+  theme:
+    - sector
+id: sector_views_block__sector_news_news_page_block
+theme: sector
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:sector_news-news_page_block'
+settings:
+  id: 'views_block:sector_news-news_page_block'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /news

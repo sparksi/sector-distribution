@@ -12,6 +12,7 @@ dependencies:
   - drupal:menu_link_content
   - default_content:default_content
   - pathauto:pathauto
+  - search_api:search_api
 
 default_content:
   node:

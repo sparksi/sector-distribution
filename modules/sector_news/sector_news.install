@@ -84,7 +84,7 @@ function sector_news_node_insert(EntityInterface $entity) {
     switch ($entity->uuid()) {
         case '7aa107da-4318-4696-b649-30c0cbb55daa':
 
-            $block = Drupal\block\Entity\Block::load('sector_views_block__sector_news_block_default');
+            $block = Drupal\block\Entity\Block::load('sector_views_block__sector_news_news_page_block');
             if(!$block) {
               return;
             }
@@ -96,7 +96,7 @@ function sector_news_node_insert(EntityInterface $entity) {
             );
             $block->save();
 
-            \Drupal::logger('sector_news')->notice('Setting sector_views_block__sector_news_block_default block visibility to appear on #%nid', [
+            \Drupal::logger('sector_news')->notice('Setting sector_views_block__sector_news_news_page_block block visibility to appear on #%nid', [
                 '%nid' => $entity->id(),
             ]);
         break;

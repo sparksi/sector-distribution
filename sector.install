@@ -73,6 +73,16 @@ function sector_search_api_index() {
   if ($moduleHandler->moduleExists('sector_search')) {
     SectorInstallHelpers::buildSearchIndex('sector_content_sidewide');
   }
+
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('sector_news')) {
+    SectorInstallHelpers::buildSearchIndex('sector_news');
+  }
+
+  $moduleHandler = \Drupal::service('module_handler');
+  if ($moduleHandler->moduleExists('sector_resource')) {
+    SectorInstallHelpers::buildSearchIndex('sector_resource');
+  }
 }
 
 function sector_regenerate_node_aliases() {

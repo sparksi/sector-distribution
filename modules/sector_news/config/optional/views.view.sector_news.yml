@@ -1,23 +1,20 @@
-uuid: 9d91900f-3bf4-4630-a4f2-1d35322f3ef5
+uuid: 3b0243a7-a22e-4adc-8fff-08e4203e183f
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.list_item_lg
-    - node.type.sector_news
+    - field.storage.node.body
+    - search_api.index.sector_news
   module:
-    - datetime
-    - node
-    - user
-_core:
-  default_config_hash: FHoI1TEOcc0KN3p43dis97-zWhGf5G9bw7-KU3iNem0
+    - search_api
+    - text
 id: sector_news
 label: 'Sector › News'
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: search_api_index_sector_news
+base_field: search_api_id
 display:
   default:
     id: default
@@ -27,14 +24,16 @@ display:
     display_options:
       title: 'Sector › News'
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        body:
+          id: body
+          table: search_api_index_sector_news
+          field: body
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -77,9 +76,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -90,11 +88,18 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
       pager:
         type: full
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 15
           total_pages: null
           id: 0
           tags:
@@ -122,50 +127,64 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: none
+        options: {  }
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       sorts:
-        field_issue_date_value:
-          id: field_issue_date_value
-          table: node__field_issue_date
-          field: field_issue_date_value
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_sector_news
+          field: search_api_relevance
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: datetime
+          plugin_id: search_api
           order: DESC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: minute
-      arguments: {  }
-      filters:
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            sector_news: sector_news
-        status_extra:
-          id: status_extra
-          table: node_field_data
-          field: status_extra
+        sticky:
+          id: sticky
+          table: search_api_index_sector_news
+          field: sticky
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          plugin_id: node_status
+          plugin_id: search_api
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        field_issue_date:
+          id: field_issue_date
+          table: search_api_index_sector_news
+          field: field_issue_date
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: search_api_index_sector_news
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_boolean
           operator: '='
-          value: false
+          value: '1'
           group: 1
           exposed: false
           expose:
@@ -194,27 +213,69 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_sector_news
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_fulltext
+          operator: or
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: 'Search news'
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: keywords
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              content_moderator: '0'
+              content_administrator: '0'
+              administrator: '0'
+            expose_fields: false
+            placeholder: 'Search keywords...'
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: 3
+          fields: {  }
       style:
         type: html_list
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
-          type: ul
-          wrapper_class: item-list
-          class: 'listing listing--with-divides'
       row:
-        type: 'entity:node'
+        type: search_api
         options:
-          relationship: none
-          view_mode: list_item_lg
+          view_modes:
+            'entity:node':
+              sector_news: list_item_lg
       query:
-        type: views_query
+        type: search_api_query
         options:
-          query_comment: ''
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
           query_tags: {  }
       relationships: {  }
       use_ajax: true
@@ -226,25 +287,30 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_default:
-    id: block_default
-    display_title: Block
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:search_api.index.sector_news'
+        - 'search_api_list:sector_news'
+  news_page_block:
+    id: news_page_block
+    display_title: 'News Page Block'
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:search_api.index.sector_news'
+        - 'search_api_list:sector_news'
