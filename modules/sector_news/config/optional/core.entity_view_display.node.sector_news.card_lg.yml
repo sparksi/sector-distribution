@@ -12,8 +12,8 @@ dependencies:
     - node.type.sector_news
   module:
     - datetime
+    - field_formatter_filter
     - layout_builder
-    - options
     - text
     - user
 third_party_settings:
@@ -21,60 +21,35 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: wmxT9z2uAfMfyMUcEDjUOAH6oZQiShUTX1pKsGNL4O8
+  default_config_hash: AyhObu6lFO9QXXrcmoghsJZqeWD2BU6A0bOcrVY8C5A
 id: node.sector_news.card_lg
 targetEntityType: node
 bundle: sector_news
 mode: card_lg
 content:
   body:
-    type: text_default
+    type: text_summary_or_trimmed
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  content_moderation_control:
-    settings: {  }
-    third_party_settings: {  }
-    weight: -20
-    region: content
-  field_display_options:
-    type: entity_reference_label
-    label: above
     settings:
-      link: true
-    third_party_settings: {  }
-    weight: 101
-    region: content
-  field_image_hero:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 103
+      trim_length: 255
+    third_party_settings:
+      field_formatter_filter:
+        format: sector_restricted_basic_html
+    weight: 1
     region: content
   field_issue_date:
     type: datetime_default
-    label: above
+    label: hidden
     settings:
-      timezone_override: ''
-      format_type: medium
+      timezone_override: Pacific/Auckland
+      format_type: sector_date_short
     third_party_settings: {  }
-    weight: 102
-    region: content
-  field_text_placement:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
-    region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 100
+    weight: 0
     region: content
 hidden:
+  content_moderation_control: true
+  field_display_options: true
+  field_image_hero: true
+  field_text_placement: true
+  links: true
   search_api_excerpt: true

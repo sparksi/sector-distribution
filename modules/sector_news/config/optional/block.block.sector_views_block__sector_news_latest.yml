@@ -1,0 +1,29 @@
+uuid: 359dc812-ed5f-4de1-a81d-5da15659152f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_news
+  module:
+    - system
+    - views
+  theme:
+    - sector
+id: sector_views_block__sector_news_latest
+theme: sector
+region: content_post
+weight: 0
+provider: null
+plugin: 'views_block:sector_news-latest'
+settings:
+  id: 'views_block:sector_news-latest'
+  label: 'Latest news'
+  label_display: visible
+  provider: views
+  views_label: 'Latest news'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

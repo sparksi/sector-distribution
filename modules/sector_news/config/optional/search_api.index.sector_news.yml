@@ -9,6 +9,8 @@ dependencies:
   module:
     - node
     - search_api
+_core:
+  default_config_hash: Bc09f0C-ezLhYDYuKMEuhwCOBlPNMb-2pr47P6cICL4
 id: sector_news
 name: 'Sector News'
 description: ''
@@ -58,7 +60,8 @@ field_settings:
     label: Title
     datasource_id: 'entity:node'
     property_path: title
-    type: string
+    type: text
+    boost: 1.5
     dependencies:
       module:
         - node
