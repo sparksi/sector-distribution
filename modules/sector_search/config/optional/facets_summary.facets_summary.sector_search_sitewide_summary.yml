@@ -1,0 +1,50 @@
+uuid: af5fe0cc-227e-4198-a5c3-3db16bd4cbdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.sector_content_sidewide
+    - views.view.sector_search_sitewide
+  module:
+    - search_api
+id: sector_search_sitewide_summary
+name: 'Sector › Search › Sitewide, summary'
+facet_source_id: 'search_api:views_block__sector_search_sitewide__sector_page'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+  reset_facets:
+    processor_id: reset_facets
+    weights:
+      build: '30'
+    settings:
+      link_text: ''
+      position: after
+  show_count:
+    processor_id: show_count
+    weights:
+      build: '5'
+    settings: {  }
+  show_summary:
+    processor_id: show_summary
+    weights:
+      build: '20'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '10'
+    settings:
+      text:
+        value: 'No results found.'
+        format: plain_text
+facets:
+  sector_sitewide_search_content_type:
+    checked: true
+    label: 'Content type'
+    separator: ', '
+    show_count: false
+    weight: 0
