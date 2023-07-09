@@ -9,7 +9,7 @@ dependencies:
     - search_api
     - text
 _core:
-  default_config_hash: G7tmUiV9mvQE0-7fmb449UQlyE1LRkhZbwlfBHbR28k
+  default_config_hash: '-aAPnQfptwI0AzotOqjil1VkZlai6trKkBCvHY3tamU'
 id: sector_news
 label: 'Sector › News'
 module: views
@@ -313,7 +313,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 3
+          items_per_page: 2
       sorts:
         search_api_relevance:
           id: search_api_relevance
@@ -422,7 +422,7 @@ display:
           default_row_class: false
           uses_fields: false
           type: ul
-          wrapper_class: 'container px-4'
+          wrapper_class: ''
           class: 'grid lg:grid-cols-3 gap-4'
       row:
         type: search_api
@@ -432,6 +432,11 @@ display:
               sector_news: list_item_md
       defaults:
         pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
         style: false
         row: false
         sorts: false
@@ -439,6 +444,11 @@ display:
         filters: false
         filter_groups: false
       display_description: ''
+      use_more: true
+      use_more_always: true
+      use_more_text: 'Read more news'
+      link_display: custom_url
+      link_url: /news
       display_extenders: {  }
     cache_metadata:
       max-age: -1
