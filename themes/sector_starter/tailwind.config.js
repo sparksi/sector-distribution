@@ -1,5 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 
+import { DefaultColors } from 'tailwindcss/types/generated/colors';
+
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   content: [
@@ -19,7 +23,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        brand: 'oklch(91.91% 0.22 102.16)'
+        brand: 'oklch(91.91% 0.22 102.16)',
+        'ss-primary': `var(--primary, ${colors.sky['500']})`
       },
       breakpoints: {
         '2xl': '1536px',

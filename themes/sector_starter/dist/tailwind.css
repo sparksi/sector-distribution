@@ -5222,6 +5222,10 @@ video {
   border-top-color: rgb(2 6 23 / var(--tw-border-opacity));
 }
 
+.border-t-ss-primary {
+  border-top-color: var(--primary, #0ea5e9);
+}
+
 .border-t-stone-100 {
   --tw-border-opacity: 1;
   border-top-color: rgb(245 245 244 / var(--tw-border-opacity));
@@ -6456,6 +6460,10 @@ video {
 .bg-slate-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(2 6 23 / var(--tw-bg-opacity));
+}
+
+.bg-ss-primary {
+  background-color: var(--primary, #0ea5e9);
 }
 
 .bg-stone-100 {
@@ -8347,6 +8355,10 @@ video {
   color: rgb(2 6 23 / var(--tw-text-opacity));
 }
 
+.text-ss-primary {
+  color: var(--primary, #0ea5e9);
+}
+
 .text-stone-100 {
   --tw-text-opacity: 1;
   color: rgb(245 245 244 / var(--tw-text-opacity));
@@ -8937,6 +8949,10 @@ video {
   color: rgb(14 165 233 / var(--tw-text-opacity));
 }
 
+.hover\:text-ss-primary:hover {
+  color: var(--primary, #0ea5e9);
+}
+
 .focus\:not-sr-only:focus {
   position: static;
   width: auto;
@@ -8971,6 +8987,10 @@ video {
 .focus-visible\:text-sky-500:focus-visible {
   --tw-text-opacity: 1;
   color: rgb(14 165 233 / var(--tw-text-opacity));
+}
+
+.focus-visible\:text-ss-primary:focus-visible {
+  color: var(--primary, #0ea5e9);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18002,6 +18022,10 @@ video {
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .lg\:leading-tight {
+    line-height: 1.25;
   }
 }
 

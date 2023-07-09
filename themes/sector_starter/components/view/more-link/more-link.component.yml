@@ -1,0 +1,18 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Title
+status: stable
+
+props:
+  type: object
+  properties:
+    utility_classes:
+      type: array
+      title: Utility classes
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    has_parent:
+      type: boolean
+
+slots:
+  children:
+    title: More link children
