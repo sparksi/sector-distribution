@@ -10,7 +10,7 @@ dependencies:
     - node
     - search_api
 _core:
-  default_config_hash: Bc09f0C-ezLhYDYuKMEuhwCOBlPNMb-2pr47P6cICL4
+  default_config_hash: yPLeqaJtqo_dZBq0Y9GGEQ2pw6EWUxll9xhAKv-roO4
 id: sector_news
 name: 'Sector News'
 description: ''
@@ -32,6 +32,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_issue_date
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
   promote:
     label: 'Promoted to front page'
     datasource_id: 'entity:node'

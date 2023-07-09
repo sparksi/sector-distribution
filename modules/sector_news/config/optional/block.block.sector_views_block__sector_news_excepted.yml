@@ -1,0 +1,32 @@
+uuid: e8514a71-8657-4915-b1b8-585a42434fa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_news
+  module:
+    - node
+    - views
+  theme:
+    - sector
+id: block.block.sector_views_block__sector_news_excepted
+theme: sector
+region: content_suffix
+weight: 0
+provider: null
+plugin: 'views_block:sector_news-excepted'
+settings:
+  id: 'views_block:sector_news-excepted'
+  label: 'Latest News'
+  label_display: visible
+  provider: views
+  views_label: 'Latest News'
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      sector_news: sector_news
