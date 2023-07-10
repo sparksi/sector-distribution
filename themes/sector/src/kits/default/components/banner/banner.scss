@@ -1,0 +1,8 @@
+.region:has(.hero__wallpaper .media.dark) {
+    --title-color-override: theme('colors.zinc.50');
+    --subtitle-color-override: theme('colors.zinc.50');
+}
+
+.banner {
+    text-align: var(--text-placement, left);
+}

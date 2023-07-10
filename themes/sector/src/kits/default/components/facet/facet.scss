@@ -1,0 +1,41 @@
+.facet > ul {
+    @apply space-y-2 text-sm font-medium;
+}
+
+.facet-item {
+    @apply flex items-center gap-x-2;
+
+    :where(label, input) {
+        @apply cursor-pointer hover:text-sky-500 focus-visible:text-sky-500 outline-sky-500;
+    }
+}
+
+.facets-checkbox {
+    @apply w-4 h-4 accent-sky-500;
+}
+
+
+.facet-summary-item--facet {
+    @apply flex flex-wrap gap-1 text-base;
+
+    > a {
+        @apply flex font-medium items-center gap-x-1 hover:text-sky-500 focus-visible:text-sky-500;
+
+        &:hover, &:focus-visible {
+            [data-toggle="on"] {
+                @apply hidden;
+            }
+            [data-toggle="off"] {
+                @apply block;
+            }
+        }
+    }
+
+    [data-toggle="off"] {
+        @apply hidden;
+    }
+}
+
+.facet-item__status {
+    @apply flex items-center gap-x-2;
+}

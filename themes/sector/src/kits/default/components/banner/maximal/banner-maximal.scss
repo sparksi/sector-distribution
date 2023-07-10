@@ -1,0 +1,12 @@
+.banner--maximal {
+    .page:where(.text-placement--text-center) & {
+        --text-placement: center;
+    }
+    .page:where(.text-placement--text-left) & {
+        --text-placement: left;
+    }
+    .page:where(.text-placement--text-right) & {
+        --text-placement: right;
+    }
+}
+
