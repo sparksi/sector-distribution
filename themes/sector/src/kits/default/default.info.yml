@@ -22,7 +22,9 @@ regions:
   hero_post: Hero › Post
   help: Help
   content_pre: Content › Pre
+  content_prefix: Content › Sidebar A
   content: Content
+  content_suffix: Content › Sidebar B
   content_post: Content › Post
   footer_pre: Footer › Pre
   footer: Footer
