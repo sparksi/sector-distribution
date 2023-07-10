@@ -74,7 +74,7 @@
 
 // Search Toggle with sibling Search form
 .search__toggle {
-  @apply xl:hidden;
+  @apply flex xl:hidden;
 
   &[aria-expanded='false'] + .search {
     @apply hidden xl:grid;
