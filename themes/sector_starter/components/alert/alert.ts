@@ -1,5 +1,3 @@
-const root = document.querySelector('.canvas');
-
 Drupal.behaviors.alert = {
   attach: (context, settings) => {
     const dialogs = context.querySelectorAll('.alert--dismissible');
