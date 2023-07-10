@@ -1,7 +1,29 @@
 .region:where(.help) {
-  @apply bg-zinc-50 shadow-inner;
+  @apply bg-neutral-100 bg-opacity-80 shadow-inner;
+
+  --container-max-width: theme('breakpoints.2xl');
+  --container-padding: theme(spacing.4);
+
+  @media (min-width: theme('screens.lg')) {
+    --container-padding: theme(spacing.8);
+  }
 
   .region__container {
     @apply py-5;
+  }
+
+  // yolo
+  position: fixed;
+  z-index: 9999;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  backdrop-filter: blur(5px);
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+
+  .alert {
+    max-height: 50vh;
+    overflow: auto;
   }
 }

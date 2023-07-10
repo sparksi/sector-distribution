@@ -5,8 +5,8 @@
  */
 #}
 <div class="@container/list-item">
-{{ include("sector_starter:list-item-standard", {
-    libraries: ['sector_starter/' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class ],
+{{ include("SECTOR_SUBTHEME_MACHINE_NAME:list-item-standard", {
+    libraries: ['SECTOR_SUBTHEME_MACHINE_NAME/' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class ],
     title_classes: [ 'text-2xl', 'lg:text-3xl', 'font-semibold' ],
     title_link_attributes: title_link_attributes.setAttribute('rel', 'bookmark'),
     title_link_classes: [ ],

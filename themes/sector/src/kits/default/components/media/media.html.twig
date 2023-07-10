@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Template for a general use media.
+ */
+#}
+{{ include("SECTOR_SUBTHEME_MACHINE_NAME:media", {
+    utility_classes: [],
+    libraries: [
+        'SECTOR_SUBTHEME_MACHINE_NAME/' ~ media.bundle()|replace({"_": "-"})|clean_class,
+        'SECTOR_SUBTHEME_MACHINE_NAME/media-' ~ view_mode,
+        'SECTOR_SUBTHEME_MACHINE_NAME/' ~ media.bundle()|replace({"_": "-"})|clean_class ~ '-' ~ view_mode
+    ]
+}) }}

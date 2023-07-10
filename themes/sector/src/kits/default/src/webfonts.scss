@@ -1,23 +1,7 @@
 @use 'sass:map';
 @use 'sass:list';
 
-$font-library: (
-  'FjallaOne': (
-    /*"-SemiBold": (style: normal,
-      weight: 600),
-    "-Medium": (style: normal,
-      weight: 500),
-    "-MediumItalic": (style: italic,
-      weight: 500),*/
-      '-Regular':
-      (
-        style: normal,
-        weight: 400,
-      ),
-    /*"-RegularItalic": (style: italic,
-      weight: 400)),*/
-  ),
-);
+$font-library: ( );
 $variable-font-library: (
   'Inter': (
     'slnt': -10,

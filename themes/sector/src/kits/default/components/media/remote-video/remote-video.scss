@@ -1,0 +1,6 @@
+.media--type-remote-video {
+
+    :where(iframe, embed) {
+        @apply bg-black align-top aspect-video w-full h-auto;
+    }
+}

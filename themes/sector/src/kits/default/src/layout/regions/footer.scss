@@ -1,3 +1,7 @@
-.page__footer {
-  @apply bg-slate-950 text-slate-50;
+.footer {
+  @apply bg-zinc-900 text-white;
+
+  .region__container {
+    @apply flex flex-wrap justify-between py-4 lg:py-16;
+  }
 }

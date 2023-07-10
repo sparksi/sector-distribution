@@ -7,21 +7,7 @@ $material-symbols-font-path: './fonts/';
 @include material-symbols-font('Material Symbols Sharp');
 
 $font-library: (
-  'FjallaOne': (
-    /*"-SemiBold": (style: normal,
-      weight: 600),
-    "-Medium": (style: normal,
-      weight: 500),
-    "-MediumItalic": (style: italic,
-      weight: 500),*/
-      '-Regular':
-      (
-        style: normal,
-        weight: 400,
-      ),
-    /*"-RegularItalic": (style: italic,
-      weight: 400)),*/
-  ),
+
 );
 $variable-font-library: (
   'Inter': (
