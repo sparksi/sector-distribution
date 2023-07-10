@@ -25,19 +25,7 @@ module.exports = {
       },
       fontFamily: {
         custom: ['var(--custom-font)'],
-      },
-      fontSize: {
-        'flexi-1': 'clamp(24px, 10vmax, 52px)',
-      },
-      keyframes: {
-        fadeInUp: {
-          from: { transform: 'translateY(1em)', opacity: 0 },
-          to: { transform: 'translateY(0)', opacity: 1 },
-        },
-      },
-      animation: {
-        alert: 'fadeInUp .35s ease',
-      },
+      }
     },
   },
   plugins: [

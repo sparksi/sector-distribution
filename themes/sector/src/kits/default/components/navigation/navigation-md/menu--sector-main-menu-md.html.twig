@@ -1,0 +1,20 @@
+{#
+/**
+ * Template for a menu.
+ */
+#}
+{{ include('SECTOR_SUBTHEME_MACHINE_NAME:navigation-md', {
+    libraries: [
+        'SECTOR_SUBTHEME_MACHINE_NAME/' ~ menu_name|clean_class,
+        'SECTOR_SUBTHEME_MACHINE_NAME/navigation',
+        'SECTOR_SUBTHEME_MACHINE_NAME/navigation-md',
+        'SECTOR_SUBTHEME_MACHINE_NAME/block-title'
+    ],
+    attributes: attributes.setAttribute('data-behavior', 'toggle'),
+    render_toggle: false,
+    utility_classes: [
+        'navigation',
+        'navigation--md',
+        '@container/navigation'
+    ]
+}) }}

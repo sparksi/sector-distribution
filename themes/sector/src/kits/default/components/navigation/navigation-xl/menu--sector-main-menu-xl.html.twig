@@ -1,0 +1,17 @@
+{#
+/**
+ * Template for a menu.
+ */
+#}
+{{ include('SECTOR_SUBTHEME_MACHINE_NAME:navigation-xl', {
+    libraries: [
+        'SECTOR_SUBTHEME_MACHINE_NAME/' ~ menu_name|clean_class,
+        'SECTOR_SUBTHEME_MACHINE_NAME/navigation',
+    ],
+    render_toggle: false,
+    utility_classes: [
+        'navigation',
+        'navigation--xl',
+        '@container/navigation'
+    ]
+}) }}
