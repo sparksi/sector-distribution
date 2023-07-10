@@ -41,7 +41,7 @@
   set classes = [
     'brand__master',
     print ? 'brand__master--print hidden print:block dark:block dark:invert' : 'block dark:hidden print:hidden'
-  ]
+  ]|merge(utility_classes ? utility_classes : [])
 %}
 {%
   set title_classes = [
