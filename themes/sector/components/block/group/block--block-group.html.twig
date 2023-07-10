@@ -4,7 +4,7 @@
  * Template for a block.
  */
 #}
-{% include '@sector_base/block/group.twig' with {
+{{ include('sector:block-group', {
   html_tag: 'div',
   libraries: []
-} %}
+}) }}

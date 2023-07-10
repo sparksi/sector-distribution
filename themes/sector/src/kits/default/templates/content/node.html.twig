@@ -1,9 +1,0 @@
-{#
-/**
- * @file
- * Template for a Node.
- */
-#}
-{% include "@sector_base/content/node.twig" with {
-  libraries: ['SECTOR_SUBTHEME_MACHINE_NAME/node', 'SECTOR_SUBTHEME_MACHINE_NAME/' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class ]
-} %}

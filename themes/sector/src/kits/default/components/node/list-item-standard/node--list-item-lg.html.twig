@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Template for a Node.
+ */
+#}
+<div class="@container/list-item">
+{{ include("sector_starter:list-item-standard", {
+    libraries: ['sector_starter/' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class ],
+    title_classes: [ 'text-2xl', 'lg:text-3xl', 'font-semibold' ],
+    title_link_attributes: title_link_attributes.setAttribute('rel', 'bookmark'),
+    title_link_classes: [ ],
+    utility_classes: [
+        'list-item',
+        'list-item--standard'
+    ]
+})}}
+</div>

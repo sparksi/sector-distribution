@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Template for a Node.
+ */
+#}
+<div class="@container/node">
+{{ include("sector:node", {
+    title_link_attributes: title_link_attributes.setAttribute('rel', 'bookmark'),
+})}}
+</div>

@@ -1,0 +1,23 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: List Item Standard
+status: stable
+libraryDependencies:
+  - core/once
+
+props:
+  type: object
+  properties:
+    label_display:
+      type: string
+      title: Show label
+    utility_classes:
+      type: array
+      title: Utility classes
+    title_attributes:
+      type: Drupal\Core\Template\Attribute
+    attributes:
+      type: Drupal\Core\Template\Attribute
+
+slots:
+  content:
+    title: Node content

@@ -1,0 +1,5 @@
+.node {
+  &:where(.node--unpublished) {
+    @apply bg-yellow-100;
+  }
+}

@@ -1,4 +1,10 @@
 {% include '@sector_base/region/region.twig' with {
     libraries: ['sector_starter/' ~ region|clean_class ],
-    container__classes: []
+    utility_classes: [
+        'relative',
+        'overflow-hidden'
+    ],
+    container__classes: [
+
+    ]
 } %}

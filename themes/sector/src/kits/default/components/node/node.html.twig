@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Template for a Node.
+ */
+#}
+<div class="@container/node">
+{{ include("SECTOR_SUBTHEME_MACHINE_NAME:node", {
+    libraries: ['SECTOR_SUBTHEME_MACHINE_NAME/' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class ],
+    title_link_attributes: title_link_attributes.setAttribute('rel', 'bookmark'),
+    utility_classes: [
+
+    ]
+})}}
+</div>
