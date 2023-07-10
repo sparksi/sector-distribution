@@ -6,6 +6,7 @@ namespace Drupal\sector;
 
 use Symfony\Component\Filesystem\Filesystem;
 use Symfony\Component\Finder\Finder;
+use Drupal\sector\SectorInstallHelpers;
 
 /**
  * Class SubThemeGenerator. Generate sector subtheme.
@@ -131,6 +132,14 @@ class SubThemeGenerator {
   public function setDescription(string $description) {
     $this->description = $description;
 
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function copyBlocks() {
+    SectorInstallHelpers::copySectorDefaultBlocks($this->machineName);
     return $this;
   }
 

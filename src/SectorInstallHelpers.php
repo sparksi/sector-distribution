@@ -53,4 +53,17 @@ class SectorInstallHelpers implements ContainerInjectionInterface {
       $index->indexItems();
     }
   }
+
+  public static function copySectorDefaultBlocks($activeThemeName = 'sector_starter') {
+    $block_ids = \Drupal::entityQuery('block')->condition('theme', 'sector')->execute();
+
+    foreach ($block_ids as $block_id) {
+      $parent_block = \Drupal\block\Entity\Block::load($block_id);
+
+      $new_id = str_replace('sector', $activeThemeName, $parent_block->get('id'));
+      $child_block = $parent_block->createDuplicateBlock($new_id, $activeThemeName);
+
+      $child_block->save();
+    }
+  }
 }

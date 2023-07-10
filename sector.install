@@ -53,19 +53,7 @@ function sector_install_required_modules() {
 
 
 function sector_copy_default_blocks() {
-  //$activeThemeName = \Drupal::service('theme.manager')->getActiveTheme()->getName();
-  $activeThemeName = 'sector_starter';
-
-  $block_ids = \Drupal::entityQuery('block')->condition('theme', 'sector')->execute();
-
-  foreach ($block_ids as $block_id) {
-    $parent_block = \Drupal\block\Entity\Block::load($block_id);
-
-    $new_id = str_replace('sector', $activeThemeName, $parent_block->get('id'));
-    $child_block = $parent_block->createDuplicateBlock($new_id, $activeThemeName);
-
-    $child_block->save();
-  }
+  SectorInstallHelpers::copySectorDefaultBlocks('sector_starter');
 }
 
 function sector_search_api_index() {
