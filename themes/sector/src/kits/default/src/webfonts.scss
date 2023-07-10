@@ -1,16 +1,13 @@
 @use 'sass:map';
 @use 'sass:list';
+@import '@material-symbols/font-400/core';
+
+$material-symbols-font-path: './fonts/';
+
+@include material-symbols-font('Material Symbols Sharp');
 
 $font-library: ( );
-$variable-font-library: (
-  'Inter': (
-    'slnt': -10,
-    'wght': 900,
-  ),
-  'Roboto': (
-    'wght': 900,
-  ),
-);
+$variable-font-library: ( );
 
 @each $typeface, $variants in $font-library {
   @each $variant, $props in $variants {
@@ -35,6 +32,5 @@ $variable-font-library: (
   @font-face {
     font-family: '#{$typeface}';
     src: url('fonts/#{$typeface}.woff2') format('woff2-variations');
-    font-variation-settings: #{$settings};
   }
 }

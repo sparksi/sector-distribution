@@ -1,10 +1,16 @@
 :root {
-  --custom-font: Inter, theme(fontFamily.sans);
-  --custom-font-alternate: Roboto, theme(fontFamily.sans);
-  --custom-display: FjallaOne, theme(fontFamily.sans);
+  --custom-font: theme(fontFamily.sans);
+  --custom-font-alternate: theme(fontFamily.sans);
+  --custom-display: theme(fontFamily.serif);
 }
 
 html,
 body {
-  @apply font-custom motion-safe:focus-within:scroll-smooth;
+  @apply font-custom font-normal motion-safe:focus-within:scroll-smooth;
+
+	font-variation-settings: 'slnt' 0;
+}
+
+i, em, .italic {
+	font-variation-settings: 'ital' 1;
 }

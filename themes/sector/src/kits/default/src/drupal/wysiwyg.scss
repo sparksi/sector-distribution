@@ -1,17 +1,24 @@
-@use 'components/prose/utils' as prose_utils;
+@use 'prose/utils' as prose_utils;
 
 .ck-editor__main {
   all: initial;
+
+  @apply @container/prose;
 }
 
 .ck-content {
   @apply antialiased font-sans;
   @include prose_utils.prose;
+  @apply wysiwyg-xl;
 }
 
 .ck-content.ck-editor__editable {
   max-width: none;
   height: var(--wysiwyg-height, 15em);
+
+  .ck.ck-editor__main > & {
+    @apply dark:bg-neutral-950 text-neutral-950 dark:text-neutral-50;
+  }
 }
 
 :where(
@@ -21,4 +28,8 @@
   + .ck
   .ck-editor__editable {
   --wysiwyg-height: 25em;
+}
+
+.ck .drupal-media {
+  @apply ms-0;
 }

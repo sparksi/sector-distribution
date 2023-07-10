@@ -1,12 +1,13 @@
 import { parentPort, workerData } from 'node:worker_threads'
 import chalk from 'chalk';
 import Fontmin from 'fontmin';
-import { copyFile } from 'node:fs/promises';
+import { copyFile, mkdir } from 'node:fs/promises';
 import p from 'node:path';
 import { glob } from 'glob';
 
 const fonts = async (fontSourceDirectory) => {
   const files = await glob(fontSourceDirectory)
+  await mkdir(`${process.cwd()}/dist/fonts`, { recursive: true });
 
     return await Promise.all(files.map(async path => {
       const source = p.parse(path);
@@ -41,7 +42,8 @@ const fonts = async (fontSourceDirectory) => {
   };
 
 fonts(workerData).then(async (response) => {
-    await copyFile('./node_modules/@material-symbols/font-400/material-symbols-sharp.woff2', `./dist/fonts/material-symbols-sharp.woff2`).catch(e => console.error(e)),
+
+    await copyFile(`${process.cwd()}/node_modules/@material-symbols/font-400/material-symbols-sharp.woff2`, `${process.cwd()}/dist/fonts/material-symbols-sharp.woff2`).catch(e => console.error(e)),
     parentPort.postMessage(response)
 }).catch(error => {
   console.log(error);

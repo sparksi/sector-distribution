@@ -1,14 +1,12 @@
 @use 'sass:map';
 @use 'sass:list';
-
 @import '@material-symbols/font-400/core';
 
 $material-symbols-font-path: './fonts/';
+
 @include material-symbols-font('Material Symbols Sharp');
 
-$font-library: (
-
-);
+$font-library: ( );
 $variable-font-library: (
   'Inter': (
     'slnt': -10,

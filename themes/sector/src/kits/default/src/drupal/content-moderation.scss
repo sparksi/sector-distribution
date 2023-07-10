@@ -1,0 +1,9 @@
+.content-moderation-entity-moderation-form {
+    .entity-moderation-form {
+        @apply my-0 text-sm flex gap-x-6 gap-y-3 p-4;
+    }
+
+    .entity-moderation-form__item, .form-item {
+        @apply m-0;
+    }
+}
