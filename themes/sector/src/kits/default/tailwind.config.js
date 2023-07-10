@@ -10,6 +10,10 @@ module.exports = {
     '../sector/templates/**/*.{html,twig}',
     '../sector/src/components/**/*.{html,twig}',
     '../sector/components/**/*.{html,twig}',
+    '../../../profiles/contrib/sector-distribution/themes/sector/src/components/**/*.{html,twig}',
+    '../../../profiles/contrib/sector-distribution/themes/sector/components/**/*.{html,twig}',
+    '../../../profiles/contrib/sector-distribution/themes/sector/src/layout/*/*.{html,twig}',
+    '../../../profiles/contrib/sector-distribution/themes/sector/templates/**/*.{html,twig}',
     './node_modules/safelist.txt',
   ],
   theme: {
