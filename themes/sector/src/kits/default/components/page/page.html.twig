@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+{%
+set layout_classes = [
+  'page',
+  'canvas',
+  page.isPublishedClass,
+  (page.content_prefix|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'page--has-content-prefix' : '',
+  (page.content_suffix|render|striptags('<drupal-render-placeholder>')|trim is not empty) ? 'page--has-content-suffix' : ''
+]|merge(page_utility_classes ? page_utility_classes : [])
+%}
+
+<div {{ content_attributes.addClass(layout_classes) }}>
+
+    {% if page.notices %}
+      {{ page.notices }}
+    {% endif %}
+
+    {% if page.header_pre %}
+      {{ page.header_pre }}
+    {% endif %}
+    {% if page.header %}
+      {{ page.header }}
+    {% endif %}
+    {% if page.header_post %}
+      {{ page.header_post }}
+    {% endif %}
+
+    {% if page.hero_pre %}
+      {{ page.hero_pre }}
+    {% endif %}
+    {% if page.hero %}
+      {{ page.hero }}
+    {% endif %}
+    {% if page.hero_post %}
+      {{ page.hero_post }}
+    {% endif %}
+
+    {% if page.help %}
+      {{ page.help }}
+    {% endif %}
+
+    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+
+    {% if page.content_pre %}
+      {{ page.content_pre }}
+    {% endif %}
+
+    {{ include('SECTOR_SUBTHEME_MACHINE_NAME:body-grid', {
+      utility_classes: ['my-10', 'lg:my-24', 'container', 'grid', 'grid-cols-12']
+    })}}
+
+    {% if page.content_post %}
+      {{ page.content_post }}
+    {% endif %}
+
+  {# Footer regions #}
+  {% if page.footer_pre %}
+    {{ page.footer_pre }}
+  {% endif %}
+  {% if page.footer %}
+    {{ page.footer }}
+  {% endif %}
+  {% if page.footer_post %}
+    {{ page.footer_post }}
+  {% endif %}
+</div>
