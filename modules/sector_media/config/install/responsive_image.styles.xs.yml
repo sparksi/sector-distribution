@@ -4,10 +4,10 @@ status: true
 dependencies:
   config:
     - image.style.xs
-  theme:
-    - sector
+  module:
+    - sector_media
 id: xs
 label: 'Sector › XS'
 image_style_mappings: {  }
-breakpoint_group: sector
+breakpoint_group: sector_media
 fallback_image_style: xs

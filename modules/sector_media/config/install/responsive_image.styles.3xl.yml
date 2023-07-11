@@ -10,9 +10,9 @@ dependencies:
     - image.style.sm
     - image.style.xl
     - image.style.xs
-  theme:
-    - sector
-id: sector_3xl
+  module:
+    - sector_media
+id: 3xl
 label: 'Sector › 3XL'
 image_style_mappings:
   -
@@ -45,5 +45,5 @@ image_style_mappings:
     image_mapping: sm
     breakpoint_id: default.sm
     multiplier: 1x
-breakpoint_group: sector
+breakpoint_group: sector_media
 fallback_image_style: xs
