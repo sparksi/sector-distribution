@@ -1,0 +1,49 @@
+uuid: 55006edb-0189-4339-8935-c21ce0a30973
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.2xl
+    - image.style.3xl
+    - image.style.lg
+    - image.style.md
+    - image.style.sm
+    - image.style.xl
+    - image.style.xs
+  theme:
+    - SECTOR_SUBTHEME_MACHINE_NAME
+id: sector_3xl
+label: 'Sector › 3XL'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: 3xl
+    breakpoint_id: default.3xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: 2xl
+    breakpoint_id: default.2xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: xl
+    breakpoint_id: default.xl
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: lg
+    breakpoint_id: default.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: md
+    breakpoint_id: default.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: sm
+    breakpoint_id: default.sm
+    multiplier: 1x
+breakpoint_group: SECTOR_SUBTHEME_MACHINE_NAME
+fallback_image_style: xs

@@ -1,0 +1,19 @@
+uuid: e855cc26-ad22-4ee7-8bce-68d72eaf1813
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.sm
+    - image.style.xs
+  theme:
+    - sector_starter
+id: sm
+label: 'Sector › SM'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: sm
+    breakpoint_id: default.sm
+    multiplier: 1x
+breakpoint_group: sector_starter
+fallback_image_style: xs

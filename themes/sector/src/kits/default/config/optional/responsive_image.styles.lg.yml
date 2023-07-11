@@ -1,0 +1,31 @@
+uuid: 88ce4c4f-0b80-4d3a-a917-d7840a3c3c1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.lg
+    - image.style.md
+    - image.style.sm
+    - image.style.xs
+  theme:
+    - SECTOR_SUBTHEME_MACHINE_NAME
+id: lg
+label: 'Sector › LG'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: lg
+    breakpoint_id: default.lg
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: md
+    breakpoint_id: default.md
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: sm
+    breakpoint_id: default.sm
+    multiplier: 1x
+breakpoint_group: SECTOR_SUBTHEME_MACHINE_NAME
+fallback_image_style: xs

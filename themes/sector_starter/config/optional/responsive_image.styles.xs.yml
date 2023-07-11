@@ -1,0 +1,13 @@
+uuid: 62237522-0d85-4e3b-aa57-fcf4f3ebb3d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.xs
+  theme:
+    - sector_starter
+id: xs
+label: 'Sector › XS'
+image_style_mappings: {  }
+breakpoint_group: sector_starter
+fallback_image_style: xs
