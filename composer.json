@@ -105,9 +105,6 @@
             },
             "drupal/extlink": {
                 "Remove jQuery dependency & provide material symbols options": "https://www.drupal.org/files/issues/2023-05-25/material_symbols_options.patch"
-            },
-            "drupal/term_condition": {
-                "Add update hook that converts tid to uuid": "https://www.drupal.org/files/issues/2023-06-15/term_condition-3363916-20.patch"
             }
         }
     },
