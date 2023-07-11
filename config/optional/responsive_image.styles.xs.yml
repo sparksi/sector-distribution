@@ -5,9 +5,9 @@ dependencies:
   config:
     - image.style.xs
   theme:
-    - sector_starter
+    - sector
 id: xs
 label: 'Sector › XS'
 image_style_mappings: {  }
-breakpoint_group: sector_starter
+breakpoint_group: sector
 fallback_image_style: xs

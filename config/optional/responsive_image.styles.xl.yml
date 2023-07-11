@@ -9,7 +9,7 @@ dependencies:
     - image.style.xl
     - image.style.xs
   theme:
-    - sector_starter
+    - sector
 id: xl
 label: 'Sector › XL'
 image_style_mappings:
@@ -33,5 +33,5 @@ image_style_mappings:
     image_mapping: sm
     breakpoint_id: default.sm
     multiplier: 1x
-breakpoint_group: sector_starter
+breakpoint_group: sector
 fallback_image_style: xs
