@@ -55,6 +55,7 @@ function sector_preprocess_block(&$variables) {
   }
 
   if($variables['elements']['#configuration']['provider'] === 'menu_block') {
+    $variables['#cache']['max-age'] = 0;
     if(!isset($variables['elements']['content']['#items'])) {
       $variables['content'] = [];
       $variables['label'] = [];
