@@ -34,24 +34,24 @@
   {{ title_suffix }}
 
   {% block content %}
-    {% if not page %}
+    {% if not page and label %}
       <{{ title_tag|default('h2') }}{{ title_attributes.addClass(title_classes) }}>
-        <a href="{{ url }}" {{ title_link_attributes.addClass(title_link_classes) }}>{{ label }}</a>
+        <a href="{{ url }}" {{ title_link_attributes.addClass(title_link_classes) }}>{{- label -}}</a>
       </{{ title_tag|default('h2') }}>
     {% endif %}
 
     {% if display_submitted %}
       <footer>
-        {{ author_picture }}
+        {{- author_picture -}}
         <div{{ author_attributes }}>
           {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
-          {{ metadata }}
+          {{- metadata -}}
         </div>
       </footer>
     {% endif %}
 
     <div{{ content_attributes.addClass(content_classes) }}>
-      {{ content }}
+      {{- content -}}
     </div>
   {% endblock %}
 </article>
