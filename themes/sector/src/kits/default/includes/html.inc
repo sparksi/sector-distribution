@@ -1,4 +1,7 @@
 <?php
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
 
 /**
  * @file
