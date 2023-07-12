@@ -13,9 +13,7 @@
   id ? 'block--' ~ id|replace({"_": "-"})|clean_class,
 ]|merge(utility_classes ? utility_classes : []) %}
 
-{% if html_tag %}
-  <{{ html_tag }}{{ attributes|without('id').addClass(classes) }}>
-{% endif %}
+  <{{ html_tag|default('div') }}{{ attributes|without('id').addClass(classes) }}>
 
   {{ title_prefix }}
   {% if label %}
@@ -29,9 +27,7 @@
     {{ content }}
   {% endblock %}
 
-{% if html_tag %}
-  </{{ html_tag }}>
-{% endif %}
+  </{{ html_tag|default('div') }}>
 {% if libraries %}
   {% for library in libraries %}
     {{ attach_library(library) }}

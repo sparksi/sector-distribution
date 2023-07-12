@@ -31,15 +31,11 @@
 {% set title_classes = [
   'title',
 ]|merge(title_utility_classes ? title_utility_classes : []) %}
-{% if not is_inline %}
-  {% include "sector:field" %}
-{% else %}
 <{{title_tag}} {{ attributes.addClass(title_classes) }}>
   {%- for item in items -%}
     {{ item.content }}
   {%- endfor -%}
 </{{title_tag}}>
-{% endif %}
 {% if libraries %}
   {% for library in libraries %}
     {{ attach_library(library) }}
