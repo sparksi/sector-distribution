@@ -1,4 +1,5 @@
 <?php
+use Drupal\Core\Template\Attribute;
 
 /**
  * @file
