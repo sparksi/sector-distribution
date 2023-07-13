@@ -13,11 +13,13 @@
   bundle ? 'block-group--' ~ bundle|clean_class,
   id ? 'block-group--' ~ id|replace({"_": "-"})|clean_class,
 ]|merge(utility_classes ? utility_classes : []) %}
+{% set blockgroup_content_classes = [
+  'block-group__inner'
+]|merge(blockgroup_content_classes ? blockgroup_content_classes : []) %}
 
-{% if html_tag %}
-  <{{ html_tag }}{{ attributes|without('id').addClass(classes) }}>
-{% endif %}
-  <div class="block-group__inner">
+<{{ html_tag|default('div') }}{{ attributes|without('id').addClass(classes) }}>
+
+  <div {{ blockgroup_content_attributes.addClass(blockgroup_content_classes)}}>
   {{ title_prefix }}
   {% if label %}
     {% block label %}
@@ -30,9 +32,7 @@
     {{ content }}
   {% endblock %}
   </div>
-{% if html_tag %}
-  </{{ html_tag }}>
-{% endif %}
+</{{ html_tag|default('div') }}>
 {% if libraries %}
   {% for library in libraries %}
     {{ attach_library(library) }}

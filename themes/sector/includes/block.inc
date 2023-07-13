@@ -68,6 +68,11 @@ function sector_preprocess_block(&$variables) {
     return;
   }
 
+  // Add blockgroup inner div attribute set
+  if($variables['elements']['#configuration']['provider'] === 'blockgroup') {
+    $variables['blockgroup_content_attributes'] = new Attribute();
+  }
+
   // Get the block bundle.
   $block_content = $variables['elements']['content']['#block_content'];
 
