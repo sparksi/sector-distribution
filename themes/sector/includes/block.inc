@@ -64,14 +64,14 @@ function sector_preprocess_block(&$variables) {
     $variables['#cache']['max-age'] = 0;
   }
 
-  // Check for BlockContent.
-  if ($variables['elements']['#configuration']['provider'] != 'block_content' || empty($variables['elements']['content']['#block_content'])) {
-    return;
-  }
-
   // Add blockgroup inner div attribute set
   if($variables['elements']['#configuration']['provider'] === 'blockgroup') {
     $variables['blockgroup_content_attributes'] = new Attribute();
+  }
+
+  // Check for BlockContent.
+  if ($variables['elements']['#configuration']['provider'] != 'block_content' || empty($variables['elements']['content']['#block_content'])) {
+    return;
   }
 
   // Get the block bundle.
