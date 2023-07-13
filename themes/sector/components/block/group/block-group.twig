@@ -20,10 +20,16 @@
 <{{ html_tag|default('div') }}{{ attributes|without('id').addClass(classes) }}>
 
   <div {{ blockgroup_content_attributes.addClass(blockgroup_content_classes)}}>
+
   {{ title_prefix }}
   {% if label %}
     {% block label %}
-      <h2{{ title_attributes }}>{{ label }}</h2>
+      {{ include('sector:block-title', {
+        attributes: title_attributes,
+        classes: ['block__title']|merge(title_classes ? title_classes : []),
+        title_tag: title_tag|default('h2'),
+        label: label
+      }) }}
     {% endblock %}
   {% endif %}
   {{ title_suffix }}

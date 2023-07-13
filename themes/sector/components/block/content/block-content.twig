@@ -23,7 +23,12 @@
   {{ title_prefix }}
   {% if label %}
     {% block label %}
-      <{{ title_tag|default('h2') }}{{ title_attributes.addClass('block__title') }}>{{ label }}</{{ title_tag|default('h2') }}>
+      {{ include('sector:block-title', {
+        attributes: title_attributes,
+        classes: ['block__title']|merge(title_classes ? title_classes : []),
+        title_tag: title_tag|default('h2'),
+        label: label
+      }) }}
     {% endblock %}
   {% endif %}
   {{ title_suffix }}
