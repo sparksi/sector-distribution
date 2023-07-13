@@ -4,6 +4,8 @@ _meta:
   uuid: 5d52aa52-3100-4fba-b937-2079f24b8690
   bundle: sector_page
   default_langcode: en
+  depends:
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
     -
@@ -29,11 +31,14 @@ default:
   revision_translation_affected:
     -
       value: true
+  moderation_state:
+    -
+      value: published
   path:
     -
-      alias: ''
+      alias: /resources
       langcode: en
-      pathauto: 0
+      pathauto: 1
   rh_action:
     -
       value: bundle_default
@@ -43,3 +48,9 @@ default:
   rh_redirect_fallback_action:
     -
       value: bundle_default
+  field_display_options:
+    -
+      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
+  field_text_placement:
+    -
+      value: text-left

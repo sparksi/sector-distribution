@@ -5,7 +5,7 @@
  */
 use Drupal\user\Entity\Role;
 use Drupal\Core\Entity\EntityInterface;
-
+use Drupal\sector\SectorInstallHelpers;
 
 /*
  * Implements hook_install()
@@ -44,6 +44,8 @@ function sector_resource_install() {
 
         $moderator_role_object->save();
     }
+
+    SectorInstallHelpers::buildSearchIndex('sector_resource');
 }
 
 /*

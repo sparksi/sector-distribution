@@ -1,23 +1,20 @@
-uuid: d9b6148d-629a-4ce8-a2e3-cb862d85726b
+uuid: cef75474-64ae-4a25-8012-f5ea29359d5c
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.node.list_item_lg
-    - node.type.sector_resource
+    - field.storage.node.body
+    - search_api.index.sector_resources
   module:
-    - datetime
-    - node
-    - user
-_core:
-  default_config_hash: B9nf2vvOJYgkSBcAmyzbOWZr_KxTptiP-mH2DPjZ3Y4
+    - search_api
+    - text
 id: sector_resource
 label: 'Sector › Resource'
 module: views
 description: ''
 tag: ''
-base_table: node_field_data
-base_field: nid
+base_table: search_api_index_sector_resources
+base_field: search_api_id
 display:
   default:
     id: default
@@ -27,14 +24,16 @@ display:
     display_options:
       title: 'Sector › Resource'
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        body:
+          id: body
+          table: search_api_index_sector_resources
+          field: body
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: field
+          entity_type: null
+          entity_field: null
+          plugin_id: search_api_field
           label: ''
           exclude: false
           alter:
@@ -77,9 +76,8 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: string
-          settings:
-            link_to_entity: true
+          type: text_default
+          settings: {  }
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -90,11 +88,18 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
       pager:
         type: full
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 15
           total_pages: null
           id: 0
           tags:
@@ -122,41 +127,51 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
-        options:
-          perm: 'access content'
+        type: none
+        options: {  }
       cache:
-        type: tag
+        type: none
         options: {  }
       empty: {  }
       sorts:
-        field_issue_date_value:
-          id: field_issue_date_value
-          table: node__field_issue_date
-          field: field_issue_date_value
+        search_api_relevance:
+          id: search_api_relevance
+          table: search_api_index_sector_resources
+          field: search_api_relevance
           relationship: none
           group_type: group
           admin_label: ''
-          plugin_id: datetime
+          plugin_id: search_api
           order: DESC
           expose:
             label: ''
             field_identifier: ''
           exposed: false
-          granularity: minute
-      arguments: {  }
-      filters:
-        status_extra:
-          id: status_extra
-          table: node_field_data
-          field: status_extra
+        field_issue_date:
+          id: field_issue_date
+          table: search_api_index_sector_resources
+          field: field_issue_date
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          plugin_id: node_status
+          plugin_id: search_api
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      arguments: {  }
+      filters:
+        status:
+          id: status
+          table: search_api_index_sector_resources
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_boolean
           operator: '='
-          value: false
+          value: '1'
           group: 1
           exposed: false
           expose:
@@ -185,37 +200,78 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-        type:
-          id: type
-          table: node_field_data
-          field: type
-          entity_type: node
-          entity_field: type
-          plugin_id: bundle
-          value:
-            sector_resource: sector_resource
+        search_api_fulltext:
+          id: search_api_fulltext
+          table: search_api_index_sector_resources
+          field: search_api_fulltext
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_fulltext
+          operator: or
+          value: ''
           group: 1
-      filter_groups:
-        operator: AND
-        groups:
-          1: AND
+          exposed: true
+          expose:
+            operator_id: search_api_fulltext_op
+            label: 'Search resources'
+            description: ''
+            use_operator: false
+            operator: search_api_fulltext_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: keywords
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              content_moderator: '0'
+              content_administrator: '0'
+              administrator: '0'
+            expose_fields: false
+            placeholder: 'Search keywords...'
+            searched_fields_id: search_api_fulltext_searched_fields
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          parse_mode: terms
+          min_length: null
+          fields: {  }
       style:
         type: html_list
+        options:
+          row_class: 'pt-6 border-t'
+          default_row_class: true
+          uses_fields: false
+          type: ul
+          wrapper_class: mt-10
+          class: space-y-6
       row:
-        type: 'entity:node'
+        type: search_api
         options:
-          relationship: none
-          view_mode: list_item_lg
+          view_modes:
+            'entity:node':
+              sector_resource: list_item_lg
       query:
-        type: views_query
+        type: search_api_query
         options:
-          query_comment: ''
-          disable_sql_rewrite: false
-          distinct: false
-          replica: false
+          bypass_access: false
+          skip_access: false
+          preserve_facet_query_args: false
           query_tags: {  }
       relationships: {  }
-      use_ajax: true
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -224,25 +280,68 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
-  block_default:
-    id: block_default
-    display_title: Block
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:search_api.index.sector_resources'
+        - 'search_api_list:sector_resources'
+  latest_resources_block:
+    id: latest_resources_block
+    display_title: ' Latest Resources Block'
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
-        - user.permissions
-      tags: {  }
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:search_api.index.sector_resources'
+        - 'search_api_list:sector_resources'
+  resources_page_block:
+    id: resources_page_block
+    display_title: 'Resources Page Block'
+    display_plugin: block
+    position: 1
+    display_options:
+      style:
+        type: html_list
+        options:
+          row_class: 'pt-6 border-t'
+          default_row_class: true
+          uses_fields: false
+          type: ul
+          wrapper_class: mt-10
+          class: space-y-6
+      row:
+        type: search_api
+        options:
+          view_modes:
+            'entity:node':
+              sector_resource: list_item_lg
+      defaults:
+        style: false
+        row: false
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'user.node_grants:view'
+      tags:
+        - 'config:field.storage.node.body'
+        - 'config:search_api.index.sector_resources'
+        - 'search_api_list:sector_resources'
