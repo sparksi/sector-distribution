@@ -8,7 +8,6 @@
  * - style: tabs | pills
  * - fill: fill | justify
  * - utility_classes: An array of utility classes.
- * - render_toggle: boolean (which effects attributes: data-behavior: toggle)
  */
 #}
 {% import _self as menus %}
@@ -16,20 +15,16 @@
 {% set nav_classes = [ 'menu' ]|merge(utility_classes ? utility_classes : []) %}
 
 {% if items %}
-  <nav {{ attributes.addClass(nav_classes) }}>
-  {% if render_toggle %}
-    <button aria-expanded="false" class="navigation__toggle" type="button" aria-controls="{{ id }}">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="material-symbols-sharp" data-action="open" aria-hidden="true">menu</span>
-      <span class="material-symbols-sharp" data-action="close" aria-hidden="true">close</span>
-    </button>
-  {% endif %}
-  <ul class="navigation__list" id="{{ id }}">
+  <ul class="navigation__sub-menu" id="{{ id }}">
+    {% if render_submenu_toggle %}
+     <li{{ item.attributes.addClass('menu__item','menu__item--parent', item.in_active_trail ? 'menu__item--active-trail') }}>
+        {{ parent_item }}
+      </li>
+    {% endif %}
     {% block items %}
       {% for item in items %}
         {% set nav_item_classes = [
             'menu__item',
-            'menu__item--' ~ menu_item_type,
             'menu__item--level-' ~ (menu_level + 1),
             item.in_active_trail ? 'menu__item--active-trail',
             item.below ? 'menu__item--has-children',
@@ -54,14 +49,13 @@
             {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['menu__toggle-link']), 'aria-current': aria_current }) }}
 
             {% if item.below %}
-              {{ include('sector:subnav', {
+              {% include '@sector_base/nav/subnav.twig' with {
                 id: aria_id,
                 utility_classes: [ 'menu__menu', 'hidden' ],
                 items: item.below,
-                render_submenu_toggle: render_submenu_toggle,
-                parent_item: link(item.title, item.url, { 'class': ['menu__link']}),
-                menu_level: menu_level + 1
-              }) }}
+                menu_level: menu_level + 1,
+                sub_parent_item: link(item.title, item.url, { 'class': ['menu__link']}),
+              } %}
             {% endif %}
           {% else %}
             {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
@@ -75,5 +69,4 @@
       {{ attach_library(library) }}
     {% endfor %}
   {% endif %}
-  </nav>
 {% endif %}
