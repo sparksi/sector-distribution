@@ -1,4 +1,4 @@
-uuid: 526210dd-8a7b-479b-ad81-9b69b9012064
+uuid: ed341c02-57f2-47dd-a065-faac642be838
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - views
   theme:
     - sector
-id: views_block__sector_resource_block_default
+id: sector_views_block__sector_resource_resources_page_block
 theme: sector
 region: content
 weight: 0
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /resources
+    pages: /node/16

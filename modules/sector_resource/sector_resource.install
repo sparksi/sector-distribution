@@ -86,7 +86,7 @@ function sector_resource_node_insert(EntityInterface $entity) {
     switch ($entity->uuid()) {
         case '5d52aa52-3100-4fba-b937-2079f24b8690':
 
-            $block = Drupal\block\Entity\Block::load('views_block__sector_resource_block_default');
+            $block = Drupal\block\Entity\Block::load('sector_views_block__sector_resource_resources_page_block');
             if(!$block) {
               return;
             }
@@ -98,7 +98,13 @@ function sector_resource_node_insert(EntityInterface $entity) {
             );
             $block->save();
 
-            \Drupal::logger('sector_resource')->notice('Setting views_block__sector_resource_block_default block visibility to appear on #%nid', [
+            $activeThemeName = \Drupal::config('system.theme')->get('default');
+            $new_id = str_replace('sector', $activeThemeName, $block->get('id'));
+
+            $child_block = $block->createDuplicateBlock($new_id, $activeThemeName);
+            $child_block->save();
+
+            \Drupal::logger('sector_resource')->notice('Setting sector_views_block__sector_resource_resources_page_block block visibility to appear on #%nid', [
             '%nid' => $entity->id(),
             ]);
         break;
