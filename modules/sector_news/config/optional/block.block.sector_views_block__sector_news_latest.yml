@@ -1,18 +1,22 @@
-uuid: 359dc812-ed5f-4de1-a81d-5da15659152f
+uuid: 582d40eb-8087-448a-812d-a1b6ad15c91e
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.sector_news
   module:
+    - block_class
     - system
     - views
   theme:
     - sector
+third_party_settings:
+  block_class:
+    classes: 'mb-10 lg:mb-24 col-span-12 md:col-span-6'
 id: sector_views_block__sector_news_latest
 theme: sector
-region: content_post
-weight: 0
+region: view_group
+weight: -15
 provider: null
 plugin: 'views_block:sector_news-latest'
 settings:

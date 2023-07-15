@@ -1,0 +1,26 @@
+uuid: 7f1d97b5-442b-4e22-9098-3cbdebfd6875
+langcode: en
+status: true
+dependencies:
+  config:
+    - blockgroup.block_group_content.view_group
+  module:
+    - block_class
+    - blockgroup
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: 'my-10 lg:my-24'
+id: sector_viewgroup
+theme: sector
+region: content
+weight: 0
+provider: null
+plugin: 'block_group:view_group'
+settings:
+  id: 'block_group:view_group'
+  label: 'View group'
+  label_display: '0'
+  provider: blockgroup
+visibility: {  }

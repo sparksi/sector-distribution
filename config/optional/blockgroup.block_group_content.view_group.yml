@@ -1,0 +1,6 @@
+uuid: 53746085-446b-4292-9145-f74864e4aa67
+langcode: en
+status: true
+dependencies: {  }
+id: view_group
+label: 'View group'

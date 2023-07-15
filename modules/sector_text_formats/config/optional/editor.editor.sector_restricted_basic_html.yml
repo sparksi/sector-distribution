@@ -7,7 +7,7 @@ dependencies:
   module:
     - ckeditor5
 _core:
-  default_config_hash: 8_rTOGDZ01OsBs9rYue2XkRy56tlx8p46G8o_FwKvbs
+  default_config_hash: rPAoifxa9G1k0sSnBn2sHA321o-G2YiF6-F1Ep7aMn0
 format: sector_restricted_basic_html
 editor: ckeditor5
 settings:
@@ -19,9 +19,28 @@ settings:
       - bold
       - italic
       - '|'
+      - bulletedList
+      - numberedList
       - specialCharacters
       - link
+      - style
   plugins:
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Centred paragraph'
+          element: '<p class="text-center">'
+    editor_advanced_link_link:
+      enabled_attributes:
+        - aria-label
+        - class
+        - id
+        - rel
+        - target
     linkit_extension:
-      linkit_enabled: false
+      linkit_enabled: true
+      linkit_profile: sector_linkit
 image_upload: {  }
