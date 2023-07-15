@@ -4,10 +4,10 @@
  * Template for the main content block.
  */
 #}
-{% include '@sector_base/block/block.twig' with {
+{{ include("sector:block", {
   html_tag: 'div',
   title_tag: 'h2',
   utility_classes: [
     'block--system-main',
   ],
-} %}
+})}}
