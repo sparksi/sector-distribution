@@ -4,9 +4,10 @@
  * Template for a block.
  */
 #}
-{% embed '@sector_base/alert/alert.twig' with {
+{% embed 'sector:alert' with {
     type: 'info',
-    libraries: []
+    aria_live: 'polite',
+    libraries: [ ]
 } %}
   {% block content %}
     {{ content }}

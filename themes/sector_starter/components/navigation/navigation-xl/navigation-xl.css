@@ -11,5 +11,5 @@
 }.navigation--xl .navigation__sub-menu {font-size: 1rem;line-height: 1.5rem;--tw-text-opacity: 1;color: rgb(113 113 122 / var(--tw-text-opacity))
 }.navigation--xl .navigation__sub-menu .menu__link {padding-top: 0.5rem;padding-bottom: 0.5rem
 }.navigation--xl .navigation__sub-menu .navigation__sub-menu {border-top-width: 1px;--tw-border-opacity: 1;border-color: rgb(228 228 231 / var(--tw-border-opacity));font-size: 0.875rem;line-height: 1.25rem
-}.navigation--xl .navigation__sub-menu .navigation__sub-menu .menu__link {-webkit-padding-start: 0.75rem;padding-inline-start: 0.75rem
+}.navigation--xl .navigation__sub-menu .navigation__sub-menu .menu__link {padding-inline-start: 0.75rem
 }

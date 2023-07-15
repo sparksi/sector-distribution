@@ -4,6 +4,6 @@
  * Template for a block.
  */
 #}
-{% include '@sector_base/block/block.twig' with {
-  html_tag: 'div',
-} %}
+{{ include("sector:block", {
+  html_tag: 'div'
+})}}
