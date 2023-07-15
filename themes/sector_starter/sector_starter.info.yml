@@ -9,7 +9,6 @@ base theme: sector
 dependencies:
   - components:components
   - drupal:sdc
-  - sector:sector_brand
 
 'interface translation project': sector_starter
 'interface translation server pattern': 'themes/custom/sector_starter/translations/%language.po'
