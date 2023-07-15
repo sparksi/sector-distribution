@@ -4,8 +4,8 @@
  * Template for a block.
  */
 #}
-{% include '@sector_base/block/layout-block.twig' with {
+{{ include('sector:layout-block', {
   html_tag: 'div',
   utility_classes: [],
   libraries: []
-} %}
+})}}

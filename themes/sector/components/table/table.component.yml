@@ -1,0 +1,25 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Table
+status: stable
+
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    caption:
+      type: string
+    sticky:
+      type: boolean
+
+slots:
+  header:
+    title: Table header
+  colgroups:
+    title: Table column groups
+  rows:
+    title: Table rows
+  empty:
+    title: Table empty
+  footer:
+    title: View footer

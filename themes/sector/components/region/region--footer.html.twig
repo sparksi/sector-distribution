@@ -1,6 +1,6 @@
-{% include '@sector_base/region/region.twig' with {
+{{ include('sector:region', {
     wrapper: 'footer',
     label: 'Footer',
     attributes: attributes.setAttribute('role', 'banner'),
     libraries: [ ]
-} %}
+}) }}

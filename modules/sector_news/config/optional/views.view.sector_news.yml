@@ -9,7 +9,7 @@ dependencies:
     - search_api
     - text
 _core:
-  default_config_hash: iSmBvreFqeQM3olW4xrV6fBhsmQObbI_a2I-LWrGkEY
+  default_config_hash: mriVFw5m8jcRRHBSK-Js8TUVBfLh43Tzuf1zEwC12Vk
 id: sector_news
 label: 'Sector › News'
 module: views
@@ -568,12 +568,12 @@ display:
       style:
         type: html_list
         options:
-          row_class: ''
+          row_class: 'pt-6 border-t'
           default_row_class: false
           uses_fields: false
           type: ul
-          wrapper_class: ''
-          class: ''
+          wrapper_class: mt-10
+          class: space-y-6
       row:
         type: search_api
         options:

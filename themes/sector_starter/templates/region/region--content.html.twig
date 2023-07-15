@@ -1,7 +1,7 @@
-{% include '@sector_base/region/region.twig' with {
+{{ include('sector:region', {
     wrapper: 'main',
     libraries: ['sector_starter/' ~ region|clean_class ],
     utility_classes: [ ],
     container__classes: [
     ]
-} %}
+}) }}

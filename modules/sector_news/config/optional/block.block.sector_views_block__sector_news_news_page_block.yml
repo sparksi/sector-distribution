@@ -1,16 +1,20 @@
-uuid: 2830250c-8ac8-42c5-97e6-cce53ac62f10
+uuid: 5fd0df8e-d5cf-47c1-90f3-bdcbfc2783c4
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.sector_news
   module:
+    - block_class
     - system
     - views
   theme:
-    - sector
-id: sector_views_block__sector_news_news_page_block
-theme: sector
+    - sector_starter
+third_party_settings:
+  block_class:
+    classes: 'mt-10 lg:mt-16'
+id: sector_starter_views_block__sector_starter_news_news_page_block
+theme: sector_starter
 region: content
 weight: 0
 provider: null
@@ -26,4 +30,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /news
+    pages: /node/13
