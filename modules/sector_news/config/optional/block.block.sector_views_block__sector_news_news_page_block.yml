@@ -9,12 +9,12 @@ dependencies:
     - system
     - views
   theme:
-    - sector_starter
+    - sector
 third_party_settings:
   block_class:
     classes: 'mt-10 lg:mt-16'
-id: sector_starter_views_block__sector_starter_news_news_page_block
-theme: sector_starter
+id: sector_views_block__sector_news_news_page_block
+theme: sector
 region: content
 weight: 0
 provider: null
