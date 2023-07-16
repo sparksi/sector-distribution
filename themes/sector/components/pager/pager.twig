@@ -19,8 +19,10 @@
   {% set alignment = '' %}
 {% endif %}
 
+{% set attributes = create_attribute() %}
+
 {% if items %}
-  <nav class="{{ utility_classes|join(' ') }}" role="navigation" aria-label="{{ 'Pagination'|t }}">
+  <nav {{ attributes.addClass(utility_classes|join(' '))}} role="navigation" aria-label="{{ 'Pagination'|t }}">
     <ul class="pagination pager__items js-pager__items {{ size ? 'pagination-' ~ size }} {{ alignment }}">
       {# Print first item if we are not on the first page. #}
       {% if items.first %}
@@ -94,4 +96,9 @@
       {% endif %}
     </ul>
   </nav>
+    {% if libraries %}
+    {% for library in libraries %}
+        {{ attach_library(library) }}
+    {% endfor %}
+    {% endif %}
 {% endif %}
