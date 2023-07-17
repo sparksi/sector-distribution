@@ -9,7 +9,7 @@ dependencies:
     - search_api
     - text
 _core:
-  default_config_hash: fupm_NucdxfIMVfupEBTkRGsZwVzoLvRqV0YQVcSRfc
+  default_config_hash: PZyRJ0DpKBfi_STjXDpVJx3To0g-ncQ-bdcyeP21VTs
 id: sector_resource
 label: 'Sector › Resource'
 module: views
@@ -360,11 +360,21 @@ display:
               sector_resource: list_item_md
       defaults:
         pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
         style: false
         row: false
         filters: false
         filter_groups: false
       display_description: ''
+      use_more: true
+      use_more_always: true
+      use_more_text: 'More resources'
+      link_display: custom_url
+      link_url: /resources
       display_extenders: {  }
     cache_metadata:
       max-age: -1

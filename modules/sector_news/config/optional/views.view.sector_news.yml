@@ -9,7 +9,7 @@ dependencies:
     - search_api
     - text
 _core:
-  default_config_hash: mriVFw5m8jcRRHBSK-Js8TUVBfLh43Tzuf1zEwC12Vk
+  default_config_hash: 7i2JbElx4ju3M1tK0BxQGF8yOQHfiHDFouz1jWAjYEM
 id: sector_news
 label: 'Sector › News'
 module: views
@@ -544,10 +544,20 @@ display:
           1: AND
       defaults:
         pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        link_display: false
+        link_url: false
         sorts: false
         filters: false
         filter_groups: false
       display_description: ''
+      use_more: true
+      use_more_always: true
+      use_more_text: 'More news'
+      link_display: custom_url
+      link_url: /news
       display_extenders: {  }
     cache_metadata:
       max-age: -1
