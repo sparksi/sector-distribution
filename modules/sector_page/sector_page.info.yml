@@ -5,9 +5,9 @@ package: Sector
 core_version_requirement: ^10
 dependencies:
   - sector:sector_media
-  - sector:sector_text_formats
   - sector:sector_taxonomies
   - sector:sector_users
+  - sector_text_formats:sector_text_formats
   - schema_metatag:schema_metatag
   - drupal:menu_link_content
   - drupal:layout_builder

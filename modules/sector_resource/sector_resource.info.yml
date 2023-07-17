@@ -5,10 +5,10 @@ package: Sector
 core_version_requirement: ^10
 dependencies:
   - sector:sector_media
-  - sector:sector_text_formats
   - sector:sector_taxonomies
   - sector:sector_page
   - schema_metatag:schema_metatag
+  - sector_text_formats:sector_text_formats
   - drupal:menu_link_content
   - default_content:default_content
   - pathauto:pathauto
