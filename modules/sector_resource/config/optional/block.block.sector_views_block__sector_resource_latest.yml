@@ -1,0 +1,33 @@
+uuid: f6ad8a73-0218-4312-8681-e5d640ae21d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_resource
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: 'mb-10 lg:mb-24 col-span-12 md:col-span-6'
+id: sector_views_block__sector_resource_latest
+theme: sector
+region: view_group
+weight: 0
+provider: null
+plugin: 'views_block:sector_resource-latest'
+settings:
+  id: 'views_block:sector_resource-latest'
+  label: 'Latest resources'
+  label_display: visible
+  provider: views
+  views_label: 'Latest resources'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
