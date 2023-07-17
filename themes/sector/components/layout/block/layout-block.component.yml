@@ -15,3 +15,9 @@ props:
       type: Drupal\Core\Template\Attribute
     attributes:
       type: Drupal\Core\Template\Attribute
+
+slots:
+  content:
+    title: Layout Block Content
+  label:
+    title: Layout Block Label
