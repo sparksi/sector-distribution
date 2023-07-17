@@ -5,7 +5,6 @@ package: Sector
 core_version_requirement: ^10
 dependencies:
   - drupal:layout_builder
+  - drupal:layout_discovery
   - layout_builder_styles:layout_builder_styles
 
-install:
-  - drupal:layout_discovery
