@@ -1,8 +1,0 @@
-uuid: 1c4bca26-44ce-4cb7-bf90-55552124796f
-langcode: en
-status: true
-dependencies: {}
-id: sector-follow-menu
-label: "Follow Us"
-description: 'Social links "Follow" menu'
-locked: false
