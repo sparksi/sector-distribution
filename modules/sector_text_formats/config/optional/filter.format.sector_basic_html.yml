@@ -12,7 +12,7 @@ dependencies:
     - linkit
     - media
 _core:
-  default_config_hash: '-qmlRvbN25O82QmB43LVZ0GQHHo4KuZCFIM9b02-gyo'
+  default_config_hash: qgfQ3N5z3DgHRy2GTFjm4MxrwpZvAYeGV9XPsQ2LUn4
 name: 'Sector › Basic HTML'
 format: sector_basic_html
 weight: 0
@@ -23,7 +23,7 @@ filters:
     status: true
     weight: -10
     settings:
-      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <cite> <dl> <dt> <dd> <span> <a hreflang href aria-label class id target="_blank" rel data-entity-type data-entity-uuid data-entity-substitution> <blockquote cite> <ul type> <ol type reversed start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode>'
+      allowed_html: '<br> <p class="lead"> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <mark class> <cite> <dl> <dt> <dd> <span> <a hreflang href aria-label class id target="_blank" rel data-entity-type data-entity-uuid data-entity-substitution> <blockquote cite> <ul type> <ol type reversed start> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <strong> <em> <s> <sub> <sup> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode>'
       filter_html_help: true
       filter_html_nofollow: false
   linkit:

@@ -7,7 +7,7 @@ dependencies:
   module:
     - ckeditor5
 _core:
-  default_config_hash: 1kPxyBMKlzn8UDfyvtb0T5JGgsnz4x7rzfd4CIaDlWo
+  default_config_hash: 0TW2_39X5v35kFPJ2597ahDKWE0Nv5ImzGhiGNxYvl0
 format: sector_basic_html
 editor: ckeditor5
 settings:
@@ -61,11 +61,15 @@ settings:
         - '<h4 id>'
         - '<h5 id>'
         - '<h6 id>'
+        - '<mark class>'
     ckeditor5_style:
       styles:
         -
           label: 'Leading paragraph'
           element: '<p class="lead">'
+        -
+          label: Highlight
+          element: '<mark class="highlight">'
     editor_advanced_link_link:
       enabled_attributes:
         - aria-label

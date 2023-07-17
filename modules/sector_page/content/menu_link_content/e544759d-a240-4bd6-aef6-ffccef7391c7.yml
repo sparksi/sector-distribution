@@ -13,7 +13,7 @@ default:
       value: true
   title:
     -
-      value: 'Content elements'
+      value: 'Styles and design components'
   menu_name:
     -
       value: sector-main-menu

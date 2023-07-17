@@ -20,7 +20,7 @@ function sector_preprocess_menu(&$variables, $hook) {
   $items = $variables['items'];
   foreach ($items as $key => $item) {
     // If path is current_path, set active to li.
-    if ($item['url']->toString() == $current_path || str_contains($current_path, $item['url']->toString())) {
+    if ($item['url']->toString() == $current_path) {
       // Add active link.
       $variables['items'][$key]['in_active_trail'] = TRUE;
     }
