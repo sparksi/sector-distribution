@@ -1,0 +1,23 @@
+uuid: c7becdc4-4cd4-4c14-8a24-cfab20cb438a
+langcode: en
+status: true
+dependencies:
+  module:
+    - term_condition
+label: 'Show Children'
+name: show_children
+group: 'Content settings'
+description: ''
+requireAllConditions: true
+disabled: false
+conditions:
+  term:
+    id: term
+    negate: false
+    uuid: 59db74eb-0553-4a5c-b2ff-a7abe0acf08f
+    context_mapping:
+      node: '@node.node_route_context:node'
+    term_uuids:
+      - 0505a7d0-1283-4435-9aae-06e6c9f0005e
+reactions: {  }
+weight: 0
