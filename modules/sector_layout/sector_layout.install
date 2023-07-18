@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_install().
+ */
+function sector_layout_install() {
+
+    \Drupal::service('module_installer')->install([
+        'layout_builder',
+        'layout_discovery',
+        'layout_builder_restrictions',
+        'layout_builder_styles',
+        'layout_disable',
+        'gin_lb'
+    ], FALSE);
+
+}
