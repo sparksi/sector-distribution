@@ -9,7 +9,7 @@
  */
 function sector_layout_install() {
 
-    \Drupal::service('module_installer')->install([
+    /*\Drupal::service('module_installer')->install([
         'layout_builder',
         'layout_discovery',
         'layout_builder_restrictions',
@@ -17,6 +17,6 @@ function sector_layout_install() {
         'layout_disable',
         'layout_builder_context',
         'gin_lb'
-    ], FALSE);
+    ], FALSE);*/
 
 }
