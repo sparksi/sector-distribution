@@ -31,7 +31,6 @@
         "drupal/field_group": "3.4",
         "drupal/field_group_link": "3.1",
         "drupal/fieldblock": "2.2",
-        "drupal/gin_lb": "^1.0@RC",
         "drupal/inline_entity_form": "1.0-rc15",
         "drupal/layout_builder_restrictions": "^2.18",
         "drupal/layout_builder_styles": "^2.0",

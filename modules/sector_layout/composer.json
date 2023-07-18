@@ -12,7 +12,8 @@
 
     "require": {
         "drupal/context": "^5.0@RC",
-        "drupal/layout_builder_context": "^1.0"
+        "drupal/layout_builder_context": "^1.0",
+        "drupal/gin_lb": "^1.0@RC"
     },
     "repositories": {
         "packagist.drupal": {
