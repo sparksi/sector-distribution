@@ -8,8 +8,7 @@
     "support": {
         "issues": "https://www.drupal.org/project/issues/sector_layout",
         "source": "https://git.drupalcode.org/project/sector_layout"
-      },
-
+    },
     "require": {
         "drupal/context": "^5.0@RC",
         "drupal/gin_lb": "^1.0@RC",

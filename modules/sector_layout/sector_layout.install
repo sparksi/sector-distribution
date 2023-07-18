@@ -10,8 +10,6 @@
 function sector_layout_install() {
 
     \Drupal::service('module_installer')->install([
-        'context',
-        'context_ui',
         'layout_builder',
         'layout_discovery',
         'layout_builder_restrictions',

@@ -4,10 +4,7 @@ description: Provides the default layouts and configuration for layout builder
 package: Sector
 core_version_requirement: ^10
 dependencies:
+  - context:context
   - drupal:layout_builder
   - drupal:layout_discovery
   - layout_builder_styles:layout_builder_styles
-
-install:
-  - context:context
-  - context_ui:context_ui
