@@ -10,11 +10,14 @@
 function sector_layout_install() {
 
     \Drupal::service('module_installer')->install([
+        'context',
+        'context_ui',
         'layout_builder',
         'layout_discovery',
         'layout_builder_restrictions',
         'layout_builder_styles',
         'layout_disable',
+        'layout_builder_context',
         'gin_lb'
     ], FALSE);
 
