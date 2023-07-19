@@ -43,6 +43,7 @@
         "drupal/search_api": "^1.29",
         "drupal/sector_layout": "1.0.x-dev@dev",
         "drupal/sector_text_formats": "1.0.x-dev@dev",
+        "drupal/sector_social_share": "1.0.x-dev@dev",
         "drupal/sector_tonic": "^1.0",
         "drupal/svg_image": "^3.0",
         "drupal/term_condition": "^2",
