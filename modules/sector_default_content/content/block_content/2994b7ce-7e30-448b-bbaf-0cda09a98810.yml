@@ -1,24 +1,24 @@
+---
 _meta:
-  version: '1.0'
+  version: "1.0"
   entity_type: block_content
   uuid: 2994b7ce-7e30-448b-bbaf-0cda09a98810
   bundle: basic
   default_langcode: en
 default:
   status:
-    -
-      value: true
+    - value: true
   info:
-    -
-      value: 'Sector › Copyright'
+    - value: Sector › Copyright
   reusable:
-    -
-      value: true
+    - value: true
   revision_translation_affected:
-    -
-      value: true
+    - value: true
   body:
-    -
-      value: '<p>© Sector is brought to you by <a href="https://www.sparksinteractive.co.nz/">Sparks Interactive</a> under <a href="https://www.drupal.org/about/trademark">Drupal\'s</a> <a href="https://www.drupal.org/about/licensing#drupal-license">GNU General Public License</a>.</p>'
+    - value: <p>&copy; Sector is brought to you by <a
+        href="https://www.sparksinteractive.co.nz/">Sparks Interactive</a> under
+        <a href="https://www.drupal.org/about/trademark">Drupal's</a> <a
+        href="https://www.drupal.org/about/licensing#drupal-license">GNU General
+        Public License</a>.</p>
       format: sector_basic_html
-      summary: ''
+      summary: ""
