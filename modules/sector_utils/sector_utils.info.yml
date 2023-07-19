@@ -1,5 +1,0 @@
-name: Sector Utilities
-type: module
-description: Provides utilities, UX, and UI improvements for Sector.
-package: Sector
-core_version_requirement: ^10
