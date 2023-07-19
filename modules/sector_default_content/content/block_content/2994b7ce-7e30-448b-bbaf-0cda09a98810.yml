@@ -19,6 +19,6 @@ default:
       value: true
   body:
     -
-      value: '<p>© Sector is brought to you by <a href="https://www.sparksinteractive.co.nz/">Sparks Interactive</a> under <a href="https://www.drupal.org/about/trademark">Drupal's</a> <a href="https://www.drupal.org/about/licensing#drupal-license">GNU General Public License</a>.</p>'
+      value: '<p>© Sector is brought to you by <a href="https://www.sparksinteractive.co.nz/">Sparks Interactive</a> under <a href="https://www.drupal.org/about/trademark">Drupal\'s</a> <a href="https://www.drupal.org/about/licensing#drupal-license">GNU General Public License</a>.</p>'
       format: sector_basic_html
       summary: ''
