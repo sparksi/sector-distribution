@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
     - field.field.node.sector_page.field_text_placement
+    - field.field.node.sector_page.field_title_caption
     - node.type.sector_page
   module:
     - layout_builder
@@ -20,7 +21,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: p_aLw-yjDfjzA-aHlvrLR7Qj6EXZzEihJ7vGefUAs0s
+  default_config_hash: ShvyIK_VHiF-vIucHTcwQyoIPLUTIplvT6kLeHlVryM
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page
@@ -44,5 +45,6 @@ hidden:
   field_image_hero: true
   field_subtitle: true
   field_text_placement: true
+  field_title_caption: true
   links: true
   search_api_excerpt: true
