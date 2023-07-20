@@ -1,0 +1,28 @@
+@media (min-width: 61rem) {
+  /* Provide a sticky sidebar as the user scrolls. */
+  .layout-node-form .layout-region--node-secondary {
+    position: sticky;
+    top: 5rem;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .layout-node-form .layout-region--node-secondary .entity-meta {
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 1px;
+    margin-top: 2vh;
+  }
+
+  /* Force both columns to take up all available width. */
+  .layout-node-form .layout-region--node-main {
+    width: 75%;
+  }
+  .layout-node-form .layout-region--node-main .layout-region__content {
+    max-width: 100%;
+  }
+
+  .layout-node-form .layout-region--node-secondary {
+    width: 25%;
+  }
+}

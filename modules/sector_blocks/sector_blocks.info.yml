@@ -1,0 +1,5 @@
+name: Sector blocks
+type: module
+description: Provides custom blocks for Sector
+package: Sector
+core_version_requirement: ^9 || ^10

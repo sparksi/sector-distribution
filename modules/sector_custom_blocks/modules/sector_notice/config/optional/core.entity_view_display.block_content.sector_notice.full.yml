@@ -1,0 +1,29 @@
+uuid: 277dc706-8acf-44ba-bd18-bc9874cfbe7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sector_notice
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.sector_notice.body
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: block_content.sector_notice.full
+targetEntityType: block_content
+bundle: sector_notice
+mode: full
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
