@@ -11,7 +11,6 @@ dependencies:
     - field.field.node.sector_page.field_text_placement
     - field.field.node.sector_page.field_title_caption
     - node.type.sector_page
-    - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - field_group
