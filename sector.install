@@ -47,6 +47,7 @@ function sector_install_required_modules() {
     'sector_search',
     'sector_news',
     'sector_workflow',
+    'sector_custom_blocks'
   ], FALSE);
 }
 

@@ -1,0 +1,8 @@
+name: Sector notice block
+type: module
+description: Provides notice block for Sector sites
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - sector:sector_custom_blocks
+  - color_field/color_field

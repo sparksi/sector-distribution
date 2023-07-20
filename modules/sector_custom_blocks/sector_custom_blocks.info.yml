@@ -1,0 +1,8 @@
+name: Sector custom block
+type: module
+description: Provides various custom blocks for Sector sites
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - drupal:block
+  - block_class:block_class
