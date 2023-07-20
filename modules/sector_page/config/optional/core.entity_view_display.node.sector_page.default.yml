@@ -9,9 +9,11 @@ dependencies:
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
     - field.field.node.sector_page.field_text_placement
+    - field.field.node.sector_page.field_title_caption
     - node.type.sector_page
   module:
     - options
+    - text
     - user
 _core:
   default_config_hash: ipIbFPf4mpSzrWuZIxF0sMQC3uMLM0yi8YAxTw5oRDc
@@ -39,6 +41,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 102
+    region: content
+  field_title_caption:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
     region: content
   links:
     settings: {  }

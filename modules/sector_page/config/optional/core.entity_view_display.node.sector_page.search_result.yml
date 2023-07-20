@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
     - field.field.node.sector_page.field_text_placement
+    - field.field.node.sector_page.field_title_caption
     - node.type.sector_page
   module:
     - layout_builder
@@ -38,4 +39,5 @@ hidden:
   field_image_hero: true
   field_subtitle: true
   field_text_placement: true
+  field_title_caption: true
   links: true
