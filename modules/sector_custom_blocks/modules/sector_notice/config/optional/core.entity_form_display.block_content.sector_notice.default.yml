@@ -5,8 +5,11 @@ dependencies:
   config:
     - block_content.type.sector_notice
     - field.field.block_content.sector_notice.body
+    - field.field.block_content.sector_notice.field_theme
   module:
     - text
+_core:
+  default_config_hash: 9SkQxbSklbqbrL60Nn2kk_GpIiFBszdr6g2_bI25SXE
 id: block_content.sector_notice.default
 targetEntityType: block_content
 bundle: sector_notice
@@ -21,6 +24,12 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
+    third_party_settings: {  }
+  field_theme:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
     third_party_settings: {  }
   info:
     type: string_textfield
