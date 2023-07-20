@@ -5,4 +5,4 @@ package: Sector
 core_version_requirement: ^10
 dependencies:
   - sector:sector_custom_blocks
-  - color_field/color_field
+  - color_field:color_field
