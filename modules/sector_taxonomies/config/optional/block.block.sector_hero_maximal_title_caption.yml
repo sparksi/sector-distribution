@@ -1,4 +1,4 @@
-uuid: 02baf061-4921-4cfb-bbc1-497707482b5e
+uuid: 26325822-b995-4c64-b89b-c5c1e05a8843
 langcode: en
 status: true
 dependencies:
@@ -9,7 +9,7 @@ dependencies:
     - text
   theme:
     - sector
-id: sector_hero_maximal_caption
+id: sector_hero_maximal_title_caption
 theme: sector
 region: hero_maximal
 weight: -15
