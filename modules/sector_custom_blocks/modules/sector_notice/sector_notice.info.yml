@@ -6,3 +6,9 @@ core_version_requirement: ^10
 dependencies:
   - sector:sector_custom_blocks
   - color_field:color_field
+
+default_content:
+  taxonomy_term:
+    - 326542d9-ac6b-466c-8208-bca34caac21d
+    - a5ee2a43-73a2-4176-b202-4770e9f184e2
+    - 12c778e2-8d1c-4753-8372-58f8562319bf

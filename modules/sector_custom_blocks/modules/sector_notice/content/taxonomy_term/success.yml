@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 12c778e2-8d1c-4753-8372-58f8562319bf
+  bundle: themes
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Success
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
+  field_colour:
+    -
+      color: '#22C55E'
+      opacity: 0.0
+Execution time: 2.18s

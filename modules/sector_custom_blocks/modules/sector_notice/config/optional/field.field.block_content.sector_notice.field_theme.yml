@@ -1,0 +1,29 @@
+uuid: 3099198d-e4cf-47e3-8642-b7347313ed6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sector_notice
+    - field.storage.block_content.field_theme
+    - taxonomy.vocabulary.themes
+id: block_content.sector_notice.field_theme
+field_name: field_theme
+entity_type: block_content
+bundle: sector_notice
+label: Theme
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      themes: themes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -7,6 +7,8 @@ dependencies:
     - taxonomy.vocabulary.themes
   module:
     - color_field
+_core:
+  default_config_hash: b-6K212J-PoOnygyLWd7ddtsONzMgxjiijQN-sjKxCI
 id: taxonomy_term.themes.field_colour
 field_name: field_colour
 entity_type: taxonomy_term
