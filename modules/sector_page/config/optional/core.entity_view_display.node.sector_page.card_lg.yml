@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.sector_page.field_image_hero
     - field.field.node.sector_page.field_subtitle
     - field.field.node.sector_page.field_text_placement
+    - field.field.node.sector_page.field_title_caption
     - node.type.sector_page
   module:
     - field_formatter_filter
@@ -31,10 +32,10 @@ content:
     type: text_summary_or_trimmed
     label: hidden
     settings:
-      trim_length: 256
+      trim_length: 128
     third_party_settings:
       field_formatter_filter:
-        format: sector_restricted_basic_html
+        format: plain_text
     weight: 0
     region: content
 hidden:
@@ -44,5 +45,6 @@ hidden:
   field_image_hero: true
   field_subtitle: true
   field_text_placement: true
+  field_title_caption: true
   links: true
   search_api_excerpt: true
