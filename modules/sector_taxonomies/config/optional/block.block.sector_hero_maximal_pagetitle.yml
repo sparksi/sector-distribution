@@ -1,13 +1,15 @@
-uuid: 18f8e706-d564-4e89-900c-acf75d5ce781
+uuid: 62bfbbc6-6da8-4e35-bc95-377f9e33a042
 langcode: en
 status: true
 dependencies:
   theme:
     - sector
+_core:
+  default_config_hash: bbMQcn0bypnGcczh_Eqcwzt1vVLUS7XoIV5QK2WpMmo
 id: sector_hero_maximal_pagetitle
 theme: sector
 region: hero_maximal
-weight: 0
+weight: -14
 provider: null
 plugin: page_title_block
 settings:

@@ -1,4 +1,4 @@
-uuid: 3f9d1d9b-b20d-439d-9254-10f1b0ebd666
+uuid: 02baf061-4921-4cfb-bbc1-497707482b5e
 langcode: en
 status: true
 dependencies:
@@ -12,15 +12,15 @@ dependencies:
 id: sector_hero_maximal_caption
 theme: sector
 region: hero_maximal
-weight: -17
+weight: -15
 provider: null
 plugin: 'fieldblock:node'
 settings:
   id: 'fieldblock:node'
-  label: 'Title caption'
+  label: 'Title Caption'
   label_display: '0'
   provider: fieldblock
-  label_from_field: false
+  label_from_field: true
   field_name: field_title_caption
   formatter_id: text_default
   formatter_settings: {  }

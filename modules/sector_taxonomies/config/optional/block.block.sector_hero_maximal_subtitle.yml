@@ -1,4 +1,4 @@
-uuid: 98398013-f5be-4f18-a831-c43a4c3604f9
+uuid: 25da9dc8-4340-4241-a144-ffe6d1081a17
 langcode: en
 status: true
 dependencies:
@@ -14,11 +14,11 @@ third_party_settings:
   block_class:
     classes: mt-4
 _core:
-  default_config_hash: MDySfrxTdUaz2fQ-Aal1JnzHCs-ngdLX6ltNnRlvUPQ
+  default_config_hash: SwpG8RyGYmgGtAqgEIQyQdVnLOnGtibG83R0hn867YA
 id: sector_hero_maximal_subtitle
 theme: sector
 region: hero_maximal
-weight: 0
+weight: -13
 provider: null
 plugin: 'fieldblock:node'
 settings:
