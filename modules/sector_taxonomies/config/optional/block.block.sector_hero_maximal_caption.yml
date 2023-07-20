@@ -8,9 +8,9 @@ dependencies:
     - fieldblock
     - text
   theme:
-    - sector_starter
-id: sector_starter_contentfield
-theme: sector_starter
+    - sector
+id: sector_hero_maximal_caption
+theme: sector
 region: hero_maximal
 weight: -17
 provider: null
