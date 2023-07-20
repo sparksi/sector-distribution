@@ -16,7 +16,7 @@ dependencies:
     - text
     - user
 _core:
-  default_config_hash: TLdo9gb3OCzvzgN1Iwt2BsXTqApsm-OrEI-Pykj4w5s
+  default_config_hash: ipIbFPf4mpSzrWuZIxF0sMQC3uMLM0yi8YAxTw5oRDc
 id: node.sector_page.default
 targetEntityType: node
 bundle: sector_page

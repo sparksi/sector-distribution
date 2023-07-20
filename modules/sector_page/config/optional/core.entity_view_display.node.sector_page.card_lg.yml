@@ -22,7 +22,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: RZlytZ9omK0s9zZe_E6rD595E2qd4JC7DKmZsShjf_Q
+  default_config_hash: TLdo9gb3OCzvzgN1Iwt2BsXTqApsm-OrEI-Pykj4w5s
 id: node.sector_page.card_lg
 targetEntityType: node
 bundle: sector_page

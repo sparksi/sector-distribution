@@ -20,7 +20,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: tKuAxoqlBLZHkvXdx6leojUoKWfFwB1HYGe9Z7LugNs
+  default_config_hash: TLdo9gb3OCzvzgN1Iwt2BsXTqApsm-OrEI-Pykj4w5s
 id: node.sector_page.search_result
 targetEntityType: node
 bundle: sector_page
