@@ -22,8 +22,8 @@ plugin: 'fieldblock:node'
 settings:
   id: 'fieldblock:node'
   label: 'Last Updated'
-  provider: fieldblock
   label_display: visible
+  provider: fieldblock
   label_from_field: true
   field_name: field_last_updated
   formatter_id: datetime_default
@@ -33,9 +33,8 @@ settings:
 visibility:
   term:
     id: term
-    tid:
-      -
-        target_id: '5'
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    term_uuids:
+      - 5c37c396-6772-4884-adab-e3a420f486c0

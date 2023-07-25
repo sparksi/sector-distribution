@@ -21,8 +21,8 @@ plugin: 'fieldblock:node'
 settings:
   id: 'fieldblock:node'
   label: 'Banner (default)'
-  provider: fieldblock
   label_display: '0'
+  provider: fieldblock
   label_from_field: false
   field_name: field_banner
   formatter_id: entity_reference_entity_view
@@ -31,9 +31,8 @@ settings:
 visibility:
   term:
     id: term
-    tid:
-      -
-        target_id: '4'
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'
+    term_uuids:
+      - 61cfac98-8d22-416a-bcbe-7a1a83904b67
