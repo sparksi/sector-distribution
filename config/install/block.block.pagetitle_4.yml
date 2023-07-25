@@ -18,14 +18,13 @@ plugin: page_title_block
 settings:
   id: page_title_block
   label: 'Page title'
-  provider: core
   label_display: '0'
+  provider: core
 visibility:
   term:
     id: term
-    tid:
-      -
-        target_id: '4'
     negate: true
     context_mapping:
       node: '@node.node_route_context:node'
+    term_uuids:
+      - 61cfac98-8d22-416a-bcbe-7a1a83904b67

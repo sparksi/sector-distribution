@@ -22,8 +22,8 @@ plugin: 'fieldblock:node'
 settings:
   id: 'fieldblock:node'
   label: 'Subtitle (alternate 1)'
-  provider: fieldblock
   label_display: '0'
+  provider: fieldblock
   label_from_field: true
   field_name: field_subtitle
   formatter_id: text_trimmed
@@ -32,11 +32,9 @@ settings:
 visibility:
   term:
     id: term
-    tid:
-      -
-        target_id: '7'
-      -
-        target_id: '6'
     negate: false
     context_mapping:
       node: '@node.node_route_context:node'
+    term_uuids:
+      - 9498b3c0-08f9-4971-8abc-cd112fdb9099
+      - fd9a1a20-c2a0-454b-8b57-b2981e3affc2

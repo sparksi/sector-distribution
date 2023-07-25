@@ -21,17 +21,16 @@ plugin: 'views_block:sector_sub_menu_pages-block_1'
 settings:
   id: 'views_block:sector_sub_menu_pages-block_1'
   label: ''
-  provider: views
   label_display: visible
+  provider: views
+  context_mapping: {  }
   views_label: ''
   items_per_page: none
-  context_mapping: {  }
 visibility:
   term:
     id: term
     negate: false
-    tid:
-      -
-        target_id: '26'
     context_mapping:
       node: '@node.node_route_context:node'
+    term_uuids:
+      - c37defa1-f9c9-4576-b62c-fe07323ca436
