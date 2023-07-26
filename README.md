@@ -6,7 +6,7 @@
 
 When creating a new project with Sector, you can use our [composer project template](https://github.com/sparksi/sector-project).
 
-    composer create-project sparksinteractive/sector-project {project-name}
+    composer create-project sector/sector-project {project-name}
 
 ## Getting Started
 
@@ -26,7 +26,7 @@ Sector Distribution aims to be lean and only includes core features that we feel
 
 ## Updating Sector and Drupal
 
-Sector will be updated when you run `composer update`, but you can specifically update Sector and all its dependencies with `composer update sparksinteractive/sector-distribution -W`. Release notes and specific changes per update will be posted on [sector.nz](https://www.sector.nz)
+Sector will be updated when you run `composer update`, but you can specifically update Sector and all its dependencies with `composer update sector/sector-distribution -W`. Release notes and specific changes per update will be posted on [sector.nz](https://www.sector.nz)
 
 ## Server Requirements
 
