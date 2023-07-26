@@ -1,5 +1,5 @@
 {
-    "name": "sparksinteractive/sector-distribution",
+    "name": "sector/sector-distribution",
     "type": "drupal-profile",
     "description": "Sector is a distribution for Drupal 10.",
     "license": "GPL-2.0-or-later",
