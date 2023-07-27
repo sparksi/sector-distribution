@@ -1,0 +1,8 @@
+uuid: 7110d4c0-8a83-453b-b404-6a0b017a7036
+langcode: en
+status: true
+dependencies: {  }
+id: sector_notice
+label: Notice
+revision: 0
+description: 'Dismissible notice banner with optional icon, colour, and dismiss expiry.'

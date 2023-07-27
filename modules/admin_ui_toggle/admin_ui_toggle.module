@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function admin_ui_toggle_theme($existing, $type, $theme, $path) {
+  return [
+    'admin_ui_toggle' => [
+      'render element' => 'element',
+    ],
+  ];
+}

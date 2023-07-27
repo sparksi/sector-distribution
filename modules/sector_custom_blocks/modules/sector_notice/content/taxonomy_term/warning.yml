@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 326542d9-ac6b-466c-8208-bca34caac21d
+  bundle: themes
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Warning
+  weight:
+    -
+      value: 0
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
+  field_colour:
+    -
+      color: '#FACC15'
+      opacity: 0.0
+Execution time: 1.71s

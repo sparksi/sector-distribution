@@ -1,0 +1,7 @@
+name: Admin UI Toggle
+type: module
+description: 'Provides the Admin UI Toggle block'
+package: Sector
+core_version_requirement: ^9 || ^10
+dependencies:
+  - drupal:block

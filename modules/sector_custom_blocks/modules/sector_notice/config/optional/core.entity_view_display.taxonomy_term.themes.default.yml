@@ -1,0 +1,33 @@
+uuid: c8e43e82-5cfe-4a36-a363-160dca20466c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.themes.field_colour
+    - taxonomy.vocabulary.themes
+  module:
+    - color_field
+    - text
+id: taxonomy_term.themes.default
+targetEntityType: taxonomy_term
+bundle: themes
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_colour:
+    type: color_field_formatter_text
+    label: above
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

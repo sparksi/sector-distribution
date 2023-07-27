@@ -1,0 +1,41 @@
+uuid: d7ed9791-c081-4e2f-88e9-d4b929f6eb03
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.themes.field_colour
+    - taxonomy.vocabulary.themes
+  module:
+    - color_field
+_core:
+  default_config_hash: WdU1n0NzWqzxeJplJmz7QHFnhDIMIjV9lFopRRhnoeU
+id: taxonomy_term.themes.default
+targetEntityType: taxonomy_term
+bundle: themes
+mode: default
+content:
+  field_colour:
+    type: color_field_widget_box
+    weight: 1
+    region: content
+    settings:
+      default_colors: '#22c55e,#facc15,#ef4444'
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 2
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

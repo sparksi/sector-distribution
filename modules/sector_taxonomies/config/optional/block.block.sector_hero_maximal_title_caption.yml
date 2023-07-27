@@ -1,33 +1,27 @@
-uuid: 25da9dc8-4340-4241-a144-ffe6d1081a17
+uuid: 26325822-b995-4c64-b89b-c5c1e05a8843
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_subtitle
+    - field.storage.node.field_title_caption
   module:
-    - block_class
     - fieldblock
     - text
   theme:
     - sector
-third_party_settings:
-  block_class:
-    classes: mt-4
-_core:
-  default_config_hash: SwpG8RyGYmgGtAqgEIQyQdVnLOnGtibG83R0hn867YA
-id: sector_hero_maximal_subtitle
+id: sector_hero_maximal_title_caption
 theme: sector
 region: hero_maximal
-weight: -13
+weight: -15
 provider: null
 plugin: 'fieldblock:node'
 settings:
   id: 'fieldblock:node'
-  label: Subtitle
+  label: 'Title Caption'
   label_display: '0'
   provider: fieldblock
   label_from_field: true
-  field_name: field_subtitle
+  field_name: field_title_caption
   formatter_id: text_default
   formatter_settings: {  }
 visibility: {  }

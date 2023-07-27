@@ -8,7 +8,7 @@ dependencies:
     - views
   theme:
     - sector
-id: block.block.sector_views_block__sector_news_excepted
+id: sector_views_block__sector_news_excepted
 theme: sector
 region: content_suffix
 weight: 0

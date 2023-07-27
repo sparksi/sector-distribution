@@ -1,0 +1,25 @@
+uuid: 7519926c-8029-4797-936d-651beb379387
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:sector_notice:b0588852-4045-4f39-bd8e-1daef3934193'
+  module:
+    - block_content
+  theme:
+    - sector
+id: sector_notice_introduction
+theme: sector
+region: notices
+weight: 0
+provider: null
+plugin: 'block_content:b0588852-4045-4f39-bd8e-1daef3934193'
+settings:
+  id: 'block_content:b0588852-4045-4f39-bd8e-1daef3934193'
+  label: 'Sector 10 Introduction'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

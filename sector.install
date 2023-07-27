@@ -48,6 +48,11 @@ function sector_install_required_modules() {
     'sector_news',
     'sector_workflow',
   ], FALSE);
+
+  // enable dependencies
+  \Drupal::service('module_installer')->install([
+    'sector_notice'
+  ]);
 }
 
 

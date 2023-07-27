@@ -1,0 +1,11 @@
+admin-ui-toggle:
+  version: VERSION
+  css:
+    component:
+      css/admin-ui-toggle.css: {}
+  js:
+    js/admin_ui_toggle.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal

@@ -1,0 +1,42 @@
+uuid: 1e014048-8893-4e6d-a97c-ad165502c34f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sector_notice
+    - field.field.block_content.sector_notice.body
+    - field.field.block_content.sector_notice.field_theme
+  module:
+    - text
+_core:
+  default_config_hash: 9SkQxbSklbqbrL60Nn2kk_GpIiFBszdr6g2_bI25SXE
+id: block_content.sector_notice.default
+targetEntityType: block_content
+bundle: sector_notice
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_theme:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }
