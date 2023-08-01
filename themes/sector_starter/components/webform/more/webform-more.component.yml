@@ -1,0 +1,7 @@
+name: Webform more
+status: experimental
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
