@@ -1,0 +1,8 @@
+name: Form Element Label
+status: experimental
+description: Form Element Label
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
