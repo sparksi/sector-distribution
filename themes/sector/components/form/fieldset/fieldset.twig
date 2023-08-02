@@ -22,21 +22,20 @@
 #}
 {%
   set classes = [
+    'fieldset',
     'js-form-item',
     'form-item',
     'js-form-wrapper',
     'form-wrapper',
-    'mb-3',
-  ]
+  ]|merge(utility_classes ? utility_classes : [])
 %}
 <fieldset{{ attributes.addClass(classes) }}>
   {%
     set legend_classes = [
-      'fieldset-legend',
-      'm-0',
+      'fieldset__legend',
       required ? 'js-form-required',
       required ? 'form-required',
-    ]
+    ]|merge(legend_classes ? legend_classes : [])
   %}
 
   {% if title_display != 'none' %}
@@ -48,7 +47,7 @@
     </legend>
   {% endif %}
 
-  <div class="fieldset-wrapper">
+  <div class="fieldset__wrapper">
     {% if description_display == 'before' and description.content %}
       <small{{ description.attributes.addClass('description', 'form-text', 'text-muted') }}>{{ description.content }}</small>
     {% endif %}

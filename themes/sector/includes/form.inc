@@ -32,12 +32,17 @@ function sector_theme_suggestions_form_alter(array &$suggestions, array &$variab
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  */
-function sector_theme_suggestions_form_element_alter(array &$suggestions, array &$variables) {
+function sector_theme_suggestions_form_element_alter(array &$suggestions, array &$variables, $hook) {
   $element = $variables['element'];
 
   // Add a suggestion based on the element type.
   if (isset($element['#type'])) {
     $suggestions[] = $variables['theme_hook_original'] . '__' . $element['#type'];
+  }
+
+  if (isset($element['#webform'])) {
+    $suggestions[] = $hook . '__webform';
+    $suggestions[] = $hook . '__' . $element['#type'];
   }
 }
 
@@ -80,6 +85,15 @@ function sector_form_alter(&$form, FormStateInterface $form_state) {
   }
 
   $form['#validate'][] = 'validateForm';
+}
+
+function sector_theme_suggestions_fieldset_alter(array &$suggestions, array $variables, $hook) {
+  $element = $variables['element'];
+
+  if (isset($element['#webform'])) {
+    $suggestions[] = $hook . '__webform';
+    $suggestions[] = $hook . '__' . $element['#type'];
+  }
 }
 
 function validateForm(array &$form, FormStateInterface $form_state) {
