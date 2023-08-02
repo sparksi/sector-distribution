@@ -1,0 +1,12 @@
+content_moderation.my_edits:
+  path: '/admin/content/my-edits'
+  defaults:
+    _title: 'My edits'
+  requirements:
+    _permission: 'access my edits page'
+content_moderation.needs_review:
+  path: '/admin/content/needs-review'
+  defaults:
+    _title: 'Needs review'
+  requirements:
+    _permission: 'access my edits page'

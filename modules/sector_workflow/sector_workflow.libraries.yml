@@ -1,0 +1,7 @@
+sector_workflow.general:
+  version: 1.x
+  css:
+    theme:
+      css/admin.css: {}
+  js:
+    js/admin.js: {}
