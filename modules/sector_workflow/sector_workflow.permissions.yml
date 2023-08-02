@@ -1,0 +1,10 @@
+
+access revision history page:
+  title: 'Access revision history page'
+  description: 'Allow access to the revision history page'
+access my edits page:
+  title: 'Access my edits page'
+  description: 'Allow access to the my edits page'
+access needs review page:
+  title: 'Access neeeds review page'
+  description: 'Allow access to the needs review page'

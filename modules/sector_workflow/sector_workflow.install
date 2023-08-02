@@ -18,6 +18,9 @@ function sector_workflow_install() {
       $editor_role_object->grantPermission('use sector_editorial transition submit_for_review');
       $editor_role_object->grantPermission('use sector_editorial transition feedback');
 
+      $editor_role_object->grantPermission('access my edits page');
+      $editor_role_object->grantPermission('access needs review page');
+
       $editor_role_object->save();
     }
 
@@ -27,6 +30,18 @@ function sector_workflow_install() {
       $moderator_role_object->grantPermission('use sector_editorial transition unpublish');
       $moderator_role_object->grantPermission('use sector_editorial transition feedback');
 
+      $moderator_role_object->grantPermission('access my edits page');
+      $moderator_role_object->grantPermission('access needs review page');
+      $moderator_role_object->grantPermission('access revision history page');
+
       $moderator_role_object->save();
+    }
+
+    $administrator_role_object = Role::load('content_administrator');
+    if($administrator_role_object) {
+      $administrator_role_object->grantPermission('access my edits page');
+      $administrator_role_object->grantPermission('access needs review page');
+
+      $administrator_role_object->save();
     }
 }
