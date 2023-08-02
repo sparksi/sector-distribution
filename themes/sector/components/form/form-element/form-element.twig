@@ -57,7 +57,7 @@
     disabled == 'disabled' ? 'form-disabled disabled',
     errors ? 'form-item--error has-error',
     'form-group',
-  ]
+  ]|merge(utility_classes ? utility_classes : [])
 %}
 {%
   set description_classes = [

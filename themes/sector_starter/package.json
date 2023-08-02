@@ -19,8 +19,8 @@
 		"dev": "pnpm run '/^watch:.*/'"
 	},
 	"devDependencies": {
-		"@material-symbols/font-400": "^0.5.5",
-		"@material-symbols/svg-400": "^0.5.5",
+		"@material-symbols/font-400": "^0.10.2",
+		"@material-symbols/svg-400": "^0.10.2",
 		"@tailwindcss/container-queries": "^0.1.1",
 		"@tailwindcss/forms": "^0.5.4",
 		"@tailwindcss/typography": "^0.5.9",
@@ -28,16 +28,16 @@
 		"browser-sync": "^2.29.3",
 		"chalk": "^5.3.0",
 		"chokidar": "^3.5.3",
-		"esbuild": "^0.17.19",
+		"esbuild": "^0.18.17",
 		"fontmin": "^0.9.9",
 		"glob": "^10.3.3",
 		"output-file": "^2.0.2",
-		"postcss": "^8.4.26",
+		"postcss": "^8.4.27",
 		"postcss-inline-svg": "^6.0.0",
 		"rimraf": "^5.0.1",
-		"sass": "^1.63.6",
-		"stylelint": "^15.10.1",
-		"stylelint-config-standard-scss": "^9.0.0",
+		"sass": "^1.64.2",
+		"stylelint": "^15.10.2",
+		"stylelint-config-standard-scss": "^10.0.0",
 		"tailwind-safelist-generator": "^1.0.0",
 		"tailwindcss": "^3.3.3"
 	}

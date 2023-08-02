@@ -1,0 +1,20 @@
+@use 'mixins/details';
+
+
+.webform-more__sumamry {
+    @include details.removeDetailsArrow;
+
+    @apply cursor-pointer inline-flex items-center hover:text-ss-primary focus-visible:text-ss-primary;
+}
+
+.webform-more__indicator {
+    @apply text-[inherit] leading-none transform;
+
+    [open] & {
+        @apply rotate-180;
+    }
+}
+
+.webform-more__content {
+    @apply bg-neutral-50 p-4 mt-1;
+}

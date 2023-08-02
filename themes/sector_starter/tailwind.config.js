@@ -53,7 +53,7 @@ module.exports = {
   plugins: [
     require('@tailwindcss/container-queries'),
     require('@tailwindcss/forms')({
-      strategy: 'class',
+      strategy: 'base',
     }),
     require('@tailwindcss/typography')({
       className: 'wysiwyg',
