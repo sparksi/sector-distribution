@@ -1,0 +1,19 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Button
+status: stable
+
+libraryDependencies:
+  # Once you add a key in the overrides, you take control of it. What you type
+  # here is what will end up in the library component.
+  dependencies:
+    - sector_starter/style
+    - core/drupal
+    - core/once
+
+libraryOverrides:
+  # Once you add a key in the overrides, you take control of it. What you type
+  # here is what will end up in the library component.
+  dependencies:
+    - sector_starter/style
+    - core/drupal
+    - core/once

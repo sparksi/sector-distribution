@@ -1,5 +1,9 @@
-@use 'utils';
-@use 'tables';
+@use "utils";
+@use "tables";
+@use "mixins/icon";
+
+// gotta be a better way to do this
+@import "dependencies";
 
 .prose {
   @include utils.prose;
