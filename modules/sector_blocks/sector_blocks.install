@@ -1,0 +1,20 @@
+<?php
+
+use Symfony\Component\Yaml\Yaml;
+
+/**
+ * Place the Release Notes Block 
+ */
+function sector_blocks_update_8001() {
+  $message = NULL;
+
+  
+  $config_path = drupal_get_path('module', 'sector') . '/config/install/block.block.sectorblockssectorreleasenotesblock.yml';
+  $data = Yaml::parseFile($config_path);
+  \Drupal::configFactory()->getEditable('block.block.sectorblockssectorreleasenotesblock')->setData($data)->save(TRUE);
+  $message = 'The Release notes block has been placed.';
+  
+ 
+ 
+  return $message;
+}

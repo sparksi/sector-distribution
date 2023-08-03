@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - sector_blocks
+  theme:
+    - claro
+id: sectorblockssectorreleasenotesblock
+theme: claro
+region: highlighted
+weight: 0
+provider: null
+plugin: sector_release_notes
+settings:
+  id: sector_release_notes
+  label: 'Sector Release Notes'
+  label_display: '0'
+  provider: sector_blocks
+visibility: {  }
