@@ -1,0 +1,137 @@
+@use 'mixins/icon';
+
+:where(a, button).btn {
+  @apply relative my-2 inline-block whitespace-nowrap rounded-md px-6 py-3 text-base font-bold no-underline decoration-0 shadow-sm ring-1 ring-inset duration-300 ease-in-out hover:cursor-pointer focus-visible:outline-primary;
+
+  text-decoration: none !important;
+}
+
+* ~ .btn,
+.btn ~ .btn {
+  @apply ml-4;
+}
+
+:is(a, button).btn--primary {
+  @apply bg-ss-primary text-white ring-0 hover:bg-sky-700 hover:text-white;
+}
+
+.btn--light {
+  @apply border border-white bg-white text-black ring-2 ring-black hover:bg-black hover:text-white;
+
+  .prose & {
+    @apply border border-white bg-white text-black ring-2 ring-black hover:bg-black hover:text-white;
+  }
+}
+
+.btn--dark {
+  @apply border border-white bg-black text-white ring-2 ring-black hover:bg-white hover:text-black;
+
+  .prose & {
+    @apply border border-white bg-black text-white ring-2 ring-black hover:bg-white hover:text-black;
+  }
+}
+
+.btn--primary--arrow,
+.btn--light--arrow,
+.btn--dark--arrow {
+  @apply pr-12 after:absolute after:right-5 after:inline-block after:duration-300 after:ease-in-out motion-safe:hover:after:right-4;
+
+  &::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=white');
+
+    display: inline-block !important;
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+    top: 12px;
+  }
+}
+
+.btn--light.btn--light--arrow {
+  &::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=black');
+  }
+
+  &.light-outline::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=white');
+  }
+
+  &:hover::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=white');
+  }
+
+  &.light-outline:hover::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=white');
+  }
+}
+
+.btn--dark.btn--dark--arrow {
+  &::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=white');
+  }
+
+  &.dark-outline::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=black');
+  }
+
+  &:hover::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=black');
+  }
+
+  &.dark-outline:hover::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=black');
+  }
+}
+
+.btn--primary.btn--primary--arrow {
+  &::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=white');
+  }
+
+  &.primary-outline::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=#0284c7');
+  }
+
+  &:hover::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=white');
+  }
+
+  &.primary-outline:hover::after {
+    @include icon.render(('icons/arrow-forward.svg'), 'fill=#0284c7');
+  }
+}
+
+.rounded {
+  @apply rounded-full;
+}
+
+.btn.bg-ghost-50 {
+  @apply bg-opacity-50;
+}
+
+.btn.bg-ghost-25 {
+  @apply bg-opacity-25;
+}
+
+.primary-outline {
+  @apply bg-opacity-0 text-base font-bold text-primary ring-1 ring-primary hover:bg-opacity-50 hover:text-sky-700;
+}
+
+.light-outline {
+  @apply bg-opacity-0 text-base font-bold text-white ring-1 ring-white hover:bg-opacity-50;
+}
+
+.dark-outline {
+  @apply bg-opacity-0 text-base font-bold text-black ring-1 ring-black hover:bg-opacity-50;
+}
+
+// This is more for a <p> tag that needs to have a button type look, but is more like a long pill.
+.magnet {
+  @apply inline-block rounded-full bg-opacity-0 px-4 py-2 text-base text-[var(--magnet-color)] antialiased ring-1 ring-white ring-opacity-50;
+
+  --magnet-color: var(--magnet-color-override, theme('colors.gray.300'));
+  --magnet-hl-color: var(--magnet-hl-color-override, theme('colors.sky.600'));
+
+  a:not(.btn, [class*='promo']) {
+    @apply text-[var(--magnet-hl-color)];
+  }
+}
