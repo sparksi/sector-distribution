@@ -24,7 +24,10 @@ module.exports = {
     extend: {
       colors: {
         brand: 'oklch(91.91% 0.22 102.16)',
-        'ss-primary': `var(--primary, ${colors.sky['500']})`
+        'ss-primary': `var(--primary, ${colors.sky['500']})`,
+        alert: `var(--alert, ${colors.orange["800"]})`,
+        notice: `var(--alert, ${colors.amber["700"]})`,
+        highlight: `var(--alert, ${colors.amber["100"]})`,
       },
       breakpoints: {
         '2xl': '1536px',
