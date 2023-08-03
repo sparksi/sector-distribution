@@ -1,0 +1,5 @@
+.button-link > :is(a, button) {
+  // inherit this from the mixin
+  @apply relative my-2 rounded-md px-6 py-3 text-sm font-semibold no-underline decoration-0 shadow-sm ring-1 ring-inset duration-300 ease-in-out hover:cursor-pointer focus-visible:outline-ss-primary;
+  @apply block truncate bg-ss-primary text-white ring-0 hover:bg-sky-700 md:inline-block;
+}
