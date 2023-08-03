@@ -1,0 +1,242 @@
+<?php
+
+use Drupal\Core\Cache\RefinableCacheableDependencyInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\sector_workflow\WorkflowExtraBase;
+use Drupal\Core\Cache\Cache;
+use Drupal\Core\StringTranslation\TranslatableMarkup;
+use Drupal\Core\Url;
+use Drupal\node\NodeInterface;
+use Drupal\user\Entity\User;
+
+const NEW_DRAFT_FROM_LIVE = 'New draft of live content.';
+const NEW_DRAFT = 'New draft.';
+const NEW_DRAFT_FROM_REVISION = 'New draft from latest revision.';
+/**
+ * @file
+ * Contains sector_workflow.module.
+ */
+
+/**
+ * Implements hook_menu_local_tasks_alter().
+ *
+ * Changing the titles for some of the view/edit content tabs.
+ *
+ * @param $local_tasks
+ */
+function sector_workflow_menu_local_tasks_alter(&$data, $route_name, RefinableCacheableDependencyInterface &$cacheability) {
+  $workflowExtraBase = new WorkflowExtraBase();
+  // Tabs to change,
+  $changingTabs = [
+    'content_moderation.workflows:node.latest_version_tab',
+    'entity.node.edit_form',
+    'entity.node.canonical',
+  ];
+  foreach ($changingTabs as $tab) {
+    if (isset($data['tabs'][0][$tab])) {
+      // Get the new title text.
+      $newTitle = $workflowExtraBase->getNewTextForLocalTask($tab);
+      $data['tabs'][0][$tab]['#link']['title'] = $newTitle;
+    }
+  }
+  // Stop the local tasks caching.
+  $cacheability->setCacheMaxAge(0);
+}
+
+/**
+ *
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Altering the revision overview form to make it closer match the D7
+ * workbench moderation interface.
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function sector_workflow_form_revision_overview_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $workflowExtraBase = new WorkflowExtraBase();
+  $form['#attached']['library'][] = 'sector_workflow/sector_workflow.general';
+  foreach ($form['node_revisions_table'] as $key => &$row) {
+    // Many fields here. Revisions are numerically keyed, so ignore
+    // everything else.
+    if (is_numeric($key) && isset($row['select_column_two'])) {
+      $revisionId = $row['select_column_two']['#return_value'];
+      // Get the revision referenced in this particular row.
+      $revision = \Drupal::entityTypeManager()
+        ->getStorage('node')
+        ->loadRevision($revisionId);
+      // Get the current entity.
+      $node = $workflowExtraBase->getEntityFromRoute('node');
+      $valid_node_and_revision = (!empty($node) && !empty($revision));
+      if (
+        $valid_node_and_revision &&
+        $node->get('vid')->getValue() == $revision->get('vid')->getValue() &&
+        !$node->isPublished()
+      ) {
+        // Add a class for CSS targeting.
+        $row['#attributes']['class'][] = 'revision-current';
+        // Add some extra help text to the row.
+        $additionalPrefix = "<strong>This is the latest revision</strong><br>";
+        $existingPrefix = $row['operations']['#prefix'];
+        $row['operations']['#prefix'] = $additionalPrefix . $existingPrefix;
+        return;
+      }
+      if ($valid_node_and_revision && $node->get('vid')->getValue() == $revision->get('vid')->getValue()) {
+        $revisionAuthor = $workflowExtraBase->getRevisionAuthor($node);
+        $revisionDate = $workflowExtraBase->getRevisionDate($node);
+        // Add a class for CSS targeting.
+        $row['#attributes']['class'][] = 'revision-published';
+        // Add some extra help text to the row.
+        $additionalPrefix = "<strong>This is the published revision</strong><br>";
+        $additionalPrefix .= "Last change made by $revisionAuthor on $revisionDate <br>";
+        $existingPrefix = $row['operations']['#prefix'];
+        $row['operations']['#prefix'] = $additionalPrefix . $existingPrefix;
+      }
+      if ($valid_node_and_revision && $node->get('vid')->getValue() !== $revision->get('vid')->getValue() && $revision->isLatestRevision()) {
+        $revisionAuthor = $workflowExtraBase->getRevisionAuthor($revision);
+        $revisionDate = $workflowExtraBase->getRevisionDate($revision);
+        // Add a class for CSS targeting.
+        $row['#attributes']['class'][] = 'revision-current';
+        $moderationState = $revision->get('moderation_state')->getString();
+        // Add some extra help text to the row.
+        $additionalPrefix = "<strong>This is the latest revision. The current state is <i>" . $moderationState . " .</i></strong><br>";
+        $additionalPrefix .= "Last change made by $revisionAuthor on $revisionDate <br>";
+        $existingPrefix = (isset($row['operations']['#prefix'])) ? $row['operations']['#prefix'] : NULL;
+        $row['operations']['#prefix'] = $additionalPrefix . $existingPrefix;
+      }
+    }
+    else {
+      // Add a class for CSS targeting.
+      if (isset($row['#attributes']['class'])) {
+        // Get the current entity.
+        $node = $workflowExtraBase->getEntityFromRoute('node');
+        if ($node && $node->isPublished())
+        $row['#attributes']['class'] = 'revision-published';
+      }
+      //$row['#attributes']['class'] = 'revision-published';
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Alter the node add, node edit and node delete forms to make the UX
+ * nicer.
+ *
+ * @param $form
+ * @param $form_state
+ * @param $form_id
+ * @throws \Drupal\Component\Plugin\Exception\InvalidPluginDefinitionException
+ * @throws \Drupal\Component\Plugin\Exception\PluginNotFoundException
+ */
+function sector_workflow_form_alter(&$form, $form_state, $form_id) {
+  $callback_object = $form_state->getBuildInfo()['callback_object'];
+  // Get the entity referenced from the form.
+  // TODO lets do this better
+  $entity = (method_exists($callback_object, 'getEntity')) ? $callback_object->getEntity() : NULL;
+  // Check this entity is valid and has the getType function.
+  // TODO - Maybe could use typeof NodeInterface instead?
+  // TODO lets do this better
+  if ($entity && $entity instanceof NodeInterface) {
+    // Get the node type.
+    $type = (is_string($entity->getType())) ? $entity->getType() : '';
+    switch ($form_id) {
+      case 'node_' . $type . '_form':
+      case 'node_' . $type . '_edit_form':
+        $user = \Drupal::currentUser();
+        $typePermission = 'delete ' . $type . 'revisions';
+        $access = FALSE;
+        // Do access checks to see if the current user should be able to see
+        // the "Delete this draft" button created below.
+        $access = ($user->hasPermission('delete all revisions') || $user->hasPermission($typePermission)) ? TRUE : FALSE;
+        if (!empty($entity->id()) && $entity->get('moderation_state')->getString() != 'published') {
+          $nodeId = $entity->id();
+          $revisionId = $entity->get('vid')->getString();
+          $liveEntity = \Drupal::entityTypeManager()->getStorage('node')->load($nodeId);
+          // If their is a published version of this entity and the user is
+          // currently viewing a draft, add the delete draft button.
+          if ($liveEntity->isPublished()) {
+            $form['actions']['delete_draft'] = [
+              '#type' => 'link',
+              '#title' => new TranslatableMarkup('Delete this draft'),
+              '#attributes' => [
+                'class' => [
+                  'button',
+                  'button--danger',
+                ]
+              ],
+              '#access' => $access,
+              '#url' => Url::fromRoute('node.revision_delete_confirm', [
+                'node' => $nodeId,
+                'node_revision' => $revisionId
+              ]),
+              '#weight' => '99',
+              '#button_type' => 'danger',
+            ];
+          }
+        }
+
+        $form['actions']['delete']['#title'] = new TranslatableMarkup('Delete node');
+        $form['#attached']['library'][] = 'sector_workflow/sector_workflow.general';
+        // Custom form submit - Removes the messages from this module on form submit.
+        $form['actions']['submit']['#submit'][]  = '_sector_workflow_form_submit';
+        // Add the warning messages for revisions. Similar to workbench in D7.
+        if ($entity->id() == NULL) {
+          \Drupal::messenger()->addWarning(NEW_DRAFT);
+          return;
+        }
+        $state = $entity->get('moderation_state')->getString();
+        if (!empty($state) && $state != 'draft') {
+          \Drupal::messenger()->addWarning(NEW_DRAFT_FROM_LIVE);
+          return;
+        }
+        if (!empty($state) && $state == 'draft') {
+          \Drupal::messenger()->addWarning(NEW_DRAFT_FROM_REVISION);
+          return;
+        }
+        break;
+      case 'node_' . $type . '_delete_form':
+        // Extra helper text on the delete form.
+        $markup = "<p>Are you sure you want to delete <strong>" . $entity->getTitle() . "?</strong></p>";
+        $markup .= "<p><strong>NOTE: This will delete the node and it's revisions</strong></p>";
+        $markup .= "<p>This action cannot be undone.</p>";
+        $form['description']['#markup'] = new TranslatableMarkup($markup);
+        break;
+      case 'node_revision_delete_confirm':
+        break;
+    }
+  }
+}
+
+/**
+ * Custom Submit handler.
+ *
+ * Removes the messages from this module on form submit.
+ *
+ * @param array $form
+ * @param FormStateInterface $form_state
+ */
+function _sector_workflow_form_submit(array $form, FormStateInterface $form_state) {
+  // Save the warnings to add back later.
+  $messages = Drupal::messenger()->all();
+  // Delete all warnings.
+  \Drupal::messenger()->deleteByType('warning');
+  $searches = [
+    NEW_DRAFT,
+    NEW_DRAFT_FROM_LIVE,
+    NEW_DRAFT_FROM_REVISION
+  ];
+  if (!empty($messages['warning'])) {
+    // Re add the missing messages.
+    foreach ($messages['warning'] as $key => $message) {
+      if (!in_array($message, $searches)) {
+        Drupal::messenger()->addWarning($message);
+      }
+    }
+  }
+}
+

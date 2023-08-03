@@ -3,3 +3,7 @@ type: module
 description: Provides workflows for Sector.
 package: Sector
 core_version_requirement: ^10
+dependencies:
+  - drupal:diff
+  - drupal:content_moderation
+  - drupal:workflows

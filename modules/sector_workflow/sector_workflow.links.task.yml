@@ -1,0 +1,11 @@
+content_moderation.task_my_edits:
+  title: 'My edits'
+  route_name: content_moderation.my_edits
+  parent_id: system.admin_content
+  weight: 2
+
+content_moderation.task_needs_review:
+  title: 'Needs review'
+  route_name: content_moderation.needs_review
+  parent_id: system.admin_content
+  weight: 3

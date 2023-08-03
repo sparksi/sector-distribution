@@ -1,0 +1,7 @@
+tr[data-drupal-selector="edit-node-revisions-table-0"] {
+  background-color: #faafbe;
+}
+
+.revision-published {
+  background-color: #aaffaa!important;
+}
