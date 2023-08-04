@@ -87,6 +87,16 @@ function sector_form_alter(&$form, FormStateInterface $form_state) {
   $form['#validate'][] = 'validateForm';
 }
 
+function sector_theme_suggestions_label_alter(array &$suggestions, array $variables, $hook) {
+  $element = $variables['element'];
+
+  if (isset($element['#webform'])) {
+    $suggestions[] = $hook . '__webform';
+    $suggestions[] = $hook . '__' . $element['#type'];
+  }
+
+}
+
 function sector_theme_suggestions_fieldset_alter(array &$suggestions, array $variables, $hook) {
   $element = $variables['element'];
 
