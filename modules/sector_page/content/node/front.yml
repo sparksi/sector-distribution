@@ -74,5 +74,5 @@ default:
       value: text-center
   field_title_caption:
     -
-      value: '<p><a href="https://www.sector.nz/blog/sector-10-release-pipeline-2023">Status: Under Active Development</a> <a class="link--promo--light--arrow" href="https://www.sector.nz/blog/sector-ecosystem-contribution-and-governance-model">Get involved</a></p>'
+      value: '<p class="magnet"><a href="https://www.sector.nz/blog/sector-10-release-pipeline-2023">Status: Under Active Development</a> <a class="link--promo--light--arrow" href="https://www.sector.nz/blog/sector-ecosystem-contribution-and-governance-model">Get involved</a></p>'
       format: sector_restricted_basic_html
