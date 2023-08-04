@@ -1,7 +1,7 @@
 @use 'mixins/icon';
 
 :where(a, button).btn {
-  @apply relative my-2 inline-block whitespace-nowrap rounded-md px-6 py-3 text-base font-bold no-underline decoration-0 shadow-sm ring-1 ring-inset duration-300 ease-in-out hover:cursor-pointer focus-visible:outline-primary;
+  @apply relative my-2 inline-block whitespace-nowrap rounded-md px-6 py-3 text-base font-bold no-underline decoration-0 shadow-sm ring-1 ring-inset duration-300 ease-in-out hover:cursor-pointer focus-visible:outline-ss-primary;
 
   text-decoration: none !important;
 }
@@ -12,14 +12,18 @@
 }
 
 :is(a, button).btn--primary {
-  @apply bg-ss-primary text-white ring-0 hover:bg-sky-700 hover:text-white;
+  @apply bg-ss-primary text-white ring-0 hover:bg-sky-700 hover:text-white font-bold;
+
+  .prose & {
+    @apply hover:text-white;
+  }
 }
 
 .btn--light {
   @apply border border-white bg-white text-black ring-2 ring-black hover:bg-black hover:text-white;
 
   .prose & {
-    @apply border border-white bg-white text-black ring-2 ring-black hover:bg-black hover:text-white;
+    @apply border border-white bg-white text-black ring-2 ring-black hover:bg-black hover:text-white font-bold;
   }
 }
 
@@ -27,14 +31,14 @@
   @apply border border-white bg-black text-white ring-2 ring-black hover:bg-white hover:text-black;
 
   .prose & {
-    @apply border border-white bg-black text-white ring-2 ring-black hover:bg-white hover:text-black;
+    @apply border border-white bg-black text-white ring-2 ring-black hover:bg-white hover:text-black font-bold;
   }
 }
 
 .btn--primary--arrow,
 .btn--light--arrow,
 .btn--dark--arrow {
-  @apply pr-12 after:absolute after:right-5 after:inline-block after:duration-300 after:ease-in-out motion-safe:hover:after:right-4;
+  @apply pr-12 after:absolute after:right-5 after:inline-block after:duration-300 after:ease-in-out motion-safe:hover:after:right-4 font-bold;;
 
   &::after {
     @include icon.render(('icons/arrow-forward.svg'), 'fill=white');
@@ -113,7 +117,7 @@
 }
 
 .primary-outline {
-  @apply bg-opacity-0 text-base font-bold text-primary ring-1 ring-primary hover:bg-opacity-50 hover:text-sky-700;
+  @apply bg-opacity-0 text-base font-bold text-ss-primary ring-1 ring-ss-primary hover:bg-opacity-50 hover:text-sky-700;
 }
 
 .light-outline {
@@ -132,6 +136,6 @@
   --magnet-hl-color: var(--magnet-hl-color-override, theme('colors.sky.600'));
 
   a:not(.btn, [class*='promo']) {
-    @apply text-[var(--magnet-hl-color)];
+    @apply text-[var(--magnet-color)];
   }
 }
