@@ -48,12 +48,13 @@
     </legend>
   {% endif %}
 
-  <div class="fieldset__wrapper">
+  <div {{ wrapper_attributes.addClass(['fieldset__wrapper']|merge(wrapper_classes ? wrapper_classes : []))}}>
     {% if description_display == 'before' and description.content %}
       <small{{ description.attributes.addClass('description', 'form-text', 'text-muted') }}>{{ description.content }}</small>
     {% endif %}
     {% if errors %}
       <div {{ error_attributes.addClass(['webform__errors']|merge(error_classes ? error_classes : []))}}>
+        <span aria-hidden="true" class="material-symbols-sharp">error</span>
         {{ errors }}
       </div>
     {% endif %}

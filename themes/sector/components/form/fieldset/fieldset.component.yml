@@ -8,3 +8,7 @@ props:
       type: Drupal\Core\Template\Attribute
     utility_classes:
       type: array
+    wrapper_classes:
+      type: array
+    legend_classes:
+      type: array

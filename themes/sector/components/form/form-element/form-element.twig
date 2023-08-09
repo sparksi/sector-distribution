@@ -103,6 +103,7 @@
 
   {% if errors %}
     <div {{ error_attributes.addClass(['webform__errors']|merge(error_classes ? error_classes : []))}}>
+      <span aria-hidden="true" class="material-symbols-sharp">error</span>
       {{ errors }}
     </div>
   {% endif %}
