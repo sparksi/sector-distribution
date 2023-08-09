@@ -754,8 +754,8 @@ select {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: var(--container-padding, 20px);
-  padding-left: var(--container-padding, 20px);
+  padding-right: var(--container-padding, 2rem);
+  padding-left: var(--container-padding, 2rem);
 }
 
 @media (min-width: 640px) {
@@ -4309,6 +4309,10 @@ select {
   border-top-width: 1px;
 }
 
+.border-t-alert {
+  border-top-color: var(--alert, #9a3412);
+}
+
 .border-t-amber-100 {
   --tw-border-opacity: 1;
   border-top-color: rgb(254 243 199 / var(--tw-border-opacity));
@@ -4707,6 +4711,10 @@ select {
   border-top-color: rgb(5 46 22 / var(--tw-border-opacity));
 }
 
+.border-t-highlight {
+  border-top-color: var(--alert, #fef3c7);
+}
+
 .border-t-indigo-100 {
   --tw-border-opacity: 1;
   border-top-color: rgb(224 231 255 / var(--tw-border-opacity));
@@ -4874,6 +4882,10 @@ select {
 .border-t-neutral-950 {
   --tw-border-opacity: 1;
   border-top-color: rgb(10 10 10 / var(--tw-border-opacity));
+}
+
+.border-t-notice {
+  border-top-color: var(--alert, #b45309);
 }
 
 .border-t-orange-100 {
@@ -5549,6 +5561,10 @@ select {
   border-top-color: rgb(9 9 11 / var(--tw-border-opacity));
 }
 
+.bg-alert {
+  background-color: var(--alert, #9a3412);
+}
+
 .bg-amber-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(254 243 199 / var(--tw-bg-opacity));
@@ -5947,6 +5963,10 @@ select {
   background-color: rgb(5 46 22 / var(--tw-bg-opacity));
 }
 
+.bg-highlight {
+  background-color: var(--alert, #fef3c7);
+}
+
 .bg-indigo-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(224 231 255 / var(--tw-bg-opacity));
@@ -6114,6 +6134,10 @@ select {
 .bg-neutral-950 {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 10 / var(--tw-bg-opacity));
+}
+
+.bg-notice {
+  background-color: var(--alert, #b45309);
 }
 
 .bg-orange-100 {
@@ -7564,6 +7588,10 @@ select {
   line-height: 1.25;
 }
 
+.text-alert {
+  color: var(--alert, #9a3412);
+}
+
 .text-amber-100 {
   --tw-text-opacity: 1;
   color: rgb(254 243 199 / var(--tw-text-opacity));
@@ -7962,6 +7990,10 @@ select {
   color: rgb(5 46 22 / var(--tw-text-opacity));
 }
 
+.text-highlight {
+  color: var(--alert, #fef3c7);
+}
+
 .text-indigo-100 {
   --tw-text-opacity: 1;
   color: rgb(224 231 255 / var(--tw-text-opacity));
@@ -8129,6 +8161,10 @@ select {
 .text-neutral-950 {
   --tw-text-opacity: 1;
   color: rgb(10 10 10 / var(--tw-text-opacity));
+}
+
+.text-notice {
+  color: var(--alert, #b45309);
 }
 
 .text-orange-100 {
@@ -8899,8 +8935,8 @@ select {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: var(--container-padding, 20px);
-    padding-left: var(--container-padding, 20px);
+    padding-right: var(--container-padding, 2rem);
+    padding-left: var(--container-padding, 2rem);
   }
 
   @media (min-width: 640px) {
@@ -8939,8 +8975,8 @@ select {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: var(--container-padding, 20px);
-    padding-left: var(--container-padding, 20px);
+    padding-right: var(--container-padding, 2rem);
+    padding-left: var(--container-padding, 2rem);
   }
 
   @media (min-width: 640px) {
@@ -8979,8 +9015,8 @@ select {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: var(--container-padding, 20px);
-    padding-left: var(--container-padding, 20px);
+    padding-right: var(--container-padding, 2rem);
+    padding-left: var(--container-padding, 2rem);
   }
 
   @media (min-width: 640px) {
@@ -9019,8 +9055,8 @@ select {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: var(--container-padding, 20px);
-    padding-left: var(--container-padding, 20px);
+    padding-right: var(--container-padding, 2rem);
+    padding-left: var(--container-padding, 2rem);
   }
 
   @media (min-width: 640px) {
@@ -9059,8 +9095,8 @@ select {
     width: 100%;
     margin-right: auto;
     margin-left: auto;
-    padding-right: var(--container-padding, 20px);
-    padding-left: var(--container-padding, 20px);
+    padding-right: var(--container-padding, 2rem);
+    padding-left: var(--container-padding, 2rem);
   }
 
   @media (min-width: 640px) {
@@ -9141,11 +9177,9 @@ select {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .dark\:bg-zinc-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(24 24 27 / var(--tw-bg-opacity));
-  }
+:is(.dark .dark\:bg-zinc-900) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(24 24 27 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 640px) {
