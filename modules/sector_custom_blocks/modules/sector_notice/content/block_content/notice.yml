@@ -19,6 +19,6 @@ default:
       value: true
   body:
     -
-      value: '<p>Welcome to our <strong>Sector 10</strong><em><strong> </strong></em><strong>Preview. </strong>Sector 10 is currently in active development. <a class="btn btn--primary" href="https://www.sector.nz/" target="_blank"><strong>Learn more at Sector.nz</strong></a></p>'
+      value: '<p>Welcome to our <strong>Sector 10</strong><em><strong> </strong></em><strong>Preview. </strong>Sector 10 is currently in active development. <a class="btn btn--primary" href="https://www.sector.nz/" target="_blank">Learn more at Sector.nz</a></p>'
       format: sector_restricted_basic_html
       summary: ''

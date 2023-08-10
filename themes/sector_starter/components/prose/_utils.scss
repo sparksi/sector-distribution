@@ -27,7 +27,7 @@
     @apply mb-0;
   }
 
-  a:not(:where([class='btn'])) {
+  a:not(:where([class*="btn"])) {
     @apply underline decoration-auto underline-offset-2 outline-none hover:text-[var(--tw-prose-links-hover-color)] focus-visible:text-[var(--tw-prose-links-hover-color)] focus-visible:ring-2 focus-visible:ring-gray-400;
   }
 

@@ -60,7 +60,7 @@
   }
 }
 
-* ~ .link--promo--light--arrow,
-* ~ .link--promo--dark--arrow {
-  @apply ml-4;
+
+*:has(:where(.link--promo--light--arrow, .link--promo--dark--arrow) + :where(.link--promo--light--arrow, .link--promo--dark--arrow)) :where(.link--promo--light--arrow, .link--promo--dark--arrow) {
+  @apply me-4;
 }

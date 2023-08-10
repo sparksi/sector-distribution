@@ -3,9 +3,16 @@
 @use "mixins/icon";
 
 // gotta be a better way to do this
-@import "dependencies";
 
 .prose {
   @include utils.prose;
   @include tables.prose;
+}
+
+.prose .btn {
+  @apply no-underline;
+}
+
+.prose *:has(.btn + .btn) > .btn {
+  @apply me-2;
 }

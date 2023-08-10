@@ -3,12 +3,7 @@
 :where(a, button).btn {
   @apply relative my-2 inline-block whitespace-nowrap rounded-md px-6 py-3 text-base font-bold no-underline decoration-0 shadow-sm ring-1 ring-inset duration-300 ease-in-out hover:cursor-pointer focus-visible:outline-ss-primary;
 
-  text-decoration: none !important;
-}
-
-* ~ .btn,
-.btn ~ .btn {
-  @apply ml-4;
+  //text-decoration: var(--btn-decoration-override, none) !important;
 }
 
 :is(a, button).btn--primary {
@@ -126,16 +121,4 @@
 
 .dark-outline {
   @apply bg-opacity-0 text-base font-bold text-black ring-1 ring-black hover:bg-opacity-50;
-}
-
-// This is more for a <p> tag that needs to have a button type look, but is more like a long pill.
-.magnet {
-  @apply inline-block rounded-full bg-opacity-0 px-4 py-2 text-base text-[var(--magnet-color)] antialiased ring-1 ring-white ring-opacity-50;
-
-  --magnet-color: var(--magnet-color-override, theme('colors.gray.300'));
-  --magnet-hl-color: var(--magnet-hl-color-override, theme('colors.sky.600'));
-
-  a:not(.btn, [class*='promo']) {
-    @apply text-[var(--magnet-color)];
-  }
 }
