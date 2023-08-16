@@ -1,0 +1,5 @@
+# Schema for the configuration files of the sector_starterkit theme.
+
+sector_starterkit.settings:
+  type: theme_settings
+  label: 'sector_starterkit settings'

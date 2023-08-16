@@ -8,9 +8,9 @@ use Drupal\file\Entity\File;
  * Theme and preprocess functions for html wrapper.
  */
 
-function SECTOR_SUBTHEME_MACHINE_NAME_preprocess_html(&$variables) {
+function sector_starterkit_preprocess_html(&$variables) {
     if (!\Drupal::currentUser()->isAnonymous()) {
-        $variables['#attached']['library'][] = 'SECTOR_SUBTHEME_MACHINE_NAME/contextual';
+        $variables['#attached']['library'][] = 'sector_starterkit/contextual';
     }
 
     // theme_get_setting('apply_glitter')

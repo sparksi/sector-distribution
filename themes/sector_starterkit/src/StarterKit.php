@@ -4,6 +4,7 @@ namespace Drupal\sector_starterkit;
 
 use Drupal\Component\Serialization\Yaml;
 use Drupal\Core\Theme\StarterKitInterface;
+use Drupal\Core\File\FileSystemInterface;
 
 final class StarterKit implements StarterKitInterface {
 
@@ -16,29 +17,27 @@ final class StarterKit implements StarterKitInterface {
     $info['interface translation project'] = $machine_name;
     $info['interface translation server pattern'] = $machine_name;
 
-    $info['components']['namespaces'][$machine_name] = $info['components']['namespaces']['sector_starterkit'];
-    unset($info['components']['namespaces']['sector_starterkit']);
     unset($info['hidden']);
     file_put_contents($info_file, Yaml::encode($info));
 
 
-    $fs = new Filesystem();
-    $fs->rename("$working_dir/config/schema/sector_starterkit.schema.yml", "$working_dir/config/schema/$machine_name.schema.yml");
-    $schema_file = "$working_dir/config/schema/$machine_name.schema.yml";
-    $schema = Yaml::decode(file_get_contents($schema_file));
-    $schema["$machine_name.settings"] = $schema['sector_starterkit.settings'];
-    unset($schema['sector_starterkit.settings']);
-    $schema["$machine_name.settings"]['label'] = "$machine_name settings";
-    file_put_contents($schema_file, Yaml::encode($schema));
+    if(rename("$working_dir/config/schema/sector_starterkit.schema.yml", "$working_dir/config/schema/$machine_name.schema.yml")) {
+      $schema_file = "$working_dir/config/schema/$machine_name.schema.yml";
+      $schema = Yaml::decode(file_get_contents($schema_file));
+      $schema["$machine_name.settings"] = $schema['sector_starterkit.settings'];
+      unset($schema['sector_starterkit.settings']);
+      $schema["$machine_name.settings"]['label'] = "$machine_name settings";
+      file_put_contents($schema_file, Yaml::encode($schema));
+    }
 
     // Rename references to libraries in templates.
-    $iterator = new TemplateDirIterator(new \RegexIterator(
+    $iterator = new \Twig\Util\TemplateDirIterator(new \RegexIterator(
       new \RecursiveIteratorIterator(
-        new \RecursiveDirectoryIterator("$working_dir/src/components/"), \RecursiveIteratorIterator::LEAVES_ONLY
+        new \RecursiveDirectoryIterator("$working_dir/components/"), \RecursiveIteratorIterator::LEAVES_ONLY
       ), '/' . preg_quote('.twig') . '$/'
     ));
     foreach ($iterator as $template_file => $contents) {
-      $new_template_content = preg_replace("/(attach_library\(['\")])sector_starterkit(\/.*['\"]\))/", "$1$machine_name$2", $contents);
+      $new_template_content = str_replace("sector_starterkit", "$machine_name", $contents);
       if (!file_put_contents($template_file, $new_template_content)) {
         echo "The template file $template_file could not be written.";
       }

@@ -6,7 +6,7 @@
  *
  * https://www.drupal.org/node/177868
  *
- * /admin/appearance/settings/SECTOR_SUBTHEME_MACHINE_NAME
+ * /admin/appearance/settings/sector_starterkit
  *
  * This mimics what Bootstrap does in its own form_alter.
  * Beware, removing Bootstrap may break assumptions about the theme form made here.
@@ -16,9 +16,9 @@
  *
  * Implements hook_form_alter().
  */
-function SECTOR_SUBTHEME_MACHINE_NAME_form_system_theme_settings_alter(&$form, &$form_state) {
+function sector_starterkit_form_system_theme_settings_alter(&$form, &$form_state) {
     // Vertical tab.
-    $form['SECTOR_SUBTHEME_MACHINE_NAME'] = array(
+    $form['sector_starterkit'] = array(
       '#type' => 'vertical_tabs',
       '#prefix' => '<h2><small>Sector settings</small></h2>',
       '#weight' => -20,
@@ -27,7 +27,7 @@ function SECTOR_SUBTHEME_MACHINE_NAME_form_system_theme_settings_alter(&$form, &
     $form['customizations'] = array(
       '#type' => 'details',
       '#title' => t('Primary Brand'),
-      '#group' => 'SECTOR_SUBTHEME_MACHINE_NAME',
+      '#group' => 'sector_starterkit',
     );
 
     // Textarea for user to enter the svg_logo_source.
@@ -47,6 +47,6 @@ function SECTOR_SUBTHEME_MACHINE_NAME_form_system_theme_settings_alter(&$form, &
     $form['manifest'] = array(
         '#type' => 'details',
         '#title' => t('Manifest'),
-        '#group' => 'SECTOR_SUBTHEME_MACHINE_NAME',
+        '#group' => 'sector_starterkit',
     );
   }
