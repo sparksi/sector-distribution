@@ -55,7 +55,6 @@ install:
   - allowed_formats:allowed_formats
   - block_class:block_class
   - blockgroup:blockgroup
-  - components:components
   - config_update:config_update
   - ctools:ctools
   - default_content:default_content
