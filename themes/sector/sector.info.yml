@@ -5,7 +5,6 @@ description: Responsive base theme for Drupal.
 screenshot: screenshot.png
 core_version_requirement: ^8.7.7 || ^9.0 || ^10
 dependencies:
-  - components:components
   - drupal:sdc
 
 stylesheets-remove:

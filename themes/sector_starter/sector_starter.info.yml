@@ -7,7 +7,6 @@ engine: twig
 type: theme
 base theme: sector
 dependencies:
-  - components:components
   - drupal:sdc
 
 'interface translation project': sector_starter
