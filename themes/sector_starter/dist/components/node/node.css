@@ -1,4 +1,0 @@
-.node:where(.node--unpublished) {
-    --tw-bg-opacity: 1;
-    background-color: rgb(254 249 195 / var(--tw-bg-opacity))
-}

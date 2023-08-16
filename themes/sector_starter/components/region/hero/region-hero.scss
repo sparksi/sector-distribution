@@ -1,0 +1,23 @@
+.region--hero {
+  --container-max-width-override: 100%;
+
+  .block:not(.hero__wallpaper) {
+    @apply z-20;
+  }
+}
+
+.hero__wallpaper {
+  @apply absolute top-1/2 left-1/2 z-0 w-full h-full transform -translate-x-1/2 -translate-y-1/2 h-full w-full;
+
+  > .field *:not(.contextual) {
+    @apply w-full h-full;
+  }
+
+  img {
+    @apply w-full h-full object-cover object-center;
+  }
+
+  figcaption {
+    @apply hidden;
+  }
+}

@@ -1,9 +1,0 @@
-.listing {
-    --listing-space: var(--listing-space-override, theme('spacing.8'));
-
-    @apply flex flex-col;
-}
-
-.listing--with-divides {
-    @apply divide-y divide-[var(--divide-color-override,theme('colors.zinc.300'))] pt-[var(--listing-space)];
-}

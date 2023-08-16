@@ -1,0 +1,24 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Region footer
+status: stable
+
+props:
+  type: object
+  properties:
+    group:
+      type: string
+    wrapper:
+      type: string
+    label:
+      type: string
+    region:
+      type: string
+    libraries:
+      type: array
+    utility_classes:
+      type: array
+      title: Utility classes
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    container__classes:
+      type: array

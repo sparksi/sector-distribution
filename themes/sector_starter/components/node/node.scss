@@ -1,6 +1,6 @@
 .node {
   &:where(.node--unpublished) {
-    @apply bg-yellow-100;
+    @apply bg-amber-50;
   }
 }
 

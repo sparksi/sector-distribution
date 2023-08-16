@@ -49,13 +49,13 @@
             {{ link(item.title, item.url, { 'class': nav_link_classes|merge(['menu__toggle-link']), 'aria-current': aria_current }) }}
 
             {% if item.below %}
-              {% include '@sector_base/nav/subnav.twig' with {
+              {{ include("sector:subnav", {
                 id: aria_id,
                 utility_classes: [ 'menu__menu', 'hidden' ],
                 items: item.below,
                 menu_level: menu_level + 1,
                 sub_parent_item: link(item.title, item.url, { 'class': ['menu__link']}),
-              } %}
+              })}}
             {% endif %}
           {% else %}
             {{ link(item.title, item.url, { 'class': nav_link_classes }) }}

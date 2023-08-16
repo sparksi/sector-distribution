@@ -52,6 +52,6 @@ ckeditor5-stylesheets:
   - components/media/transcript/transcript.css
   - components/media/remote-video/remote-video.css
 
-components:
-  namespaces:
-    sector_starter: src/components
+#components:
+#  namespaces:
+#    sector_starter: src/components

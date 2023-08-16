@@ -1,0 +1,39 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: View
+status: stable
+
+props:
+  type: object
+  properties:
+    label_display:
+      type: string
+      title: Show label
+    utility_classes:
+      type: array
+      title: Utility classes
+    title_attributes:
+      type: Drupal\Core\Template\Attribute
+    attributes:
+      type: Drupal\Core\Template\Attribute
+
+slots:
+  header:
+    title: View header
+  exposed:
+    title: View filters
+  attachment_before:
+    title: View attachment before
+  rows:
+    title: View rows
+  empty:
+    title: View empty
+  title:
+    title: View title
+  pager:
+    title: View pager
+  more:
+    title: View more
+  footer:
+    title: View footer
+  feed_icons:
+    title: View feed icons

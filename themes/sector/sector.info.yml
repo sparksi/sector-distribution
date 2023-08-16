@@ -33,11 +33,11 @@ regions:
   footer: Footer
   footer_post: Footer › Post
 
-components:
-  namespaces:
-    sector_base:
-      - ./src/components
-      - ./src/layout
+#components:
+#  namespaces:
+#    sector_base:
+#      - ./src/components
+#      - ./src/layout
 
 libraries-override:
   system/base:
