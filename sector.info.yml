@@ -70,7 +70,6 @@ install:
   - field_group_link:field_group_link
   - field_group:field_group
   - fieldblock:fieldblock
-  - inline_entity_form:inline_entity_form
   - linkit:linkit
   - menu_block:menu_block
   - metatag_open_graph:metatag_open_graph
