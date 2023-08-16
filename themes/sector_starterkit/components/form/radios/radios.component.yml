@@ -1,0 +1,10 @@
+name: Radio group
+status: experimental
+description: Radio group
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    utility_classes:
+      type: array

@@ -1,0 +1,58 @@
+@use "mixins/icon";
+
+.block--menu-social--follow {
+  @apply my-2 md:my-0 mx-auto sm:mx-0;
+
+  .block--title--social--follow {
+    @apply inline-block font-semibold uppercase mr-4;
+  }
+
+  > nav.menu:not(.contextual-links) {
+    @apply inline-block;
+
+    ul.navigation__list:not(.contextual-links) {
+      li {
+        @apply inline-block mr-2;
+      }
+
+      li a {
+        @apply indent-[9999px] text-[transparent] relative w-6 h-6 overflow-hidden block;
+
+        --icon-size: 1.5rem;
+
+        &::before {
+          content: "";
+
+          @apply text-black dark:text-white absolute z-20 transition ease-in-out;
+        }
+
+        &:hover::before {
+          opacity: 0.7;
+        }
+
+        &[href*="facebook"]::before {
+          @include icon.render(
+            ("menu/follow/icons/facebook.svg"),
+            "fill=white"
+          );
+        }
+
+        &[href*="twitter"]::before {
+          @include icon.render(("menu/follow/icons/twitter.svg"), "fill=white");
+        }
+
+        &[href*="drupal.org"]::before {
+          @include icon.render(("menu/follow/icons/drupal.svg"), "fill=white");
+        }
+
+        &[href*="sector.nz"]::before {
+          @include icon.render(("menu/follow/icons/globe.svg"), "fill=white");
+        }
+
+        &[href*="slack"]::before {
+          @include icon.render(("menu/follow/icons/slack.svg"), "fill=white");
+        }
+      }
+    }
+  }
+}

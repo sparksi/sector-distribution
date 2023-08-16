@@ -1,0 +1,15 @@
+.callout {
+  @apply block border border-l-8 border-l-ss-primary p-4 leading-normal text-neutral-600 shadow-sm dark:border-neutral-600 dark:border-l-ss-primary dark:text-neutral-100;
+
+  &.callout--primary {
+    @apply border-l-ss-primary dark:border-l-ss-primary;
+  }
+
+  &.callout--alert {
+    @apply border-l-alert dark:border-l-alert;
+  }
+
+  &.callout--notice {
+    @apply border-l-notice dark:border-l-notice;
+  }
+}

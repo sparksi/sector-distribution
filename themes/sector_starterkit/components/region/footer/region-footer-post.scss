@@ -1,0 +1,20 @@
+.footer-post {
+  --container-max-width: theme('breakpoints.2xl');
+  --container-padding: theme(spacing.4);
+
+  @media (min-width: theme('screens.lg')) {
+    --container-padding: theme(spacing.8);
+  }
+
+  .region__container {
+    @apply flex flex-wrap justify-between py-4;
+  }
+
+  .region--footer + & .region__container {
+    @apply border-t border-gray-600;
+  }
+}
+
+.footer-post .prose {
+  --tw-prose-body: theme(colors.white);
+}

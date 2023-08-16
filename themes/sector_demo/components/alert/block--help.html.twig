@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Template for a block.
+ */
+#}
+{% embed 'sector_demo:alert' with {
+    type: 'info',
+    aria_live: 'polite',
+    libraries: [
+        'sector_demo/alert'
+    ]
+} %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}

@@ -1,0 +1,22 @@
+{#
+/**
+ * Template for a menu.
+ */
+#}
+{{ include('sector_starterkit:navigation-lg', {
+    libraries: [
+        'sector_starterkit/' ~ menu_name|clean_class,
+        'sector_starterkit/navigation',
+        'sector_starterkit/navigation-lg',
+    ],
+    attributes: attributes.setAttribute('data-behavior', 'toggle'),
+    render_toggle: true,
+    render_submenu_toggle: true,
+    utility_classes: [
+        'contents',
+        'lg:block',
+        'navigation',
+        'navigation--lg',
+        '@container/navigation'
+    ]
+}) }}

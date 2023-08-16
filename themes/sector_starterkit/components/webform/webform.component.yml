@@ -1,0 +1,19 @@
+'$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
+name: Webform
+status: stable
+libraryDependencies:
+  - drupal/webform
+
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    container:
+      type: string
+    utility_classes:
+      type: array
+      title: Utility classes
+    libraries:
+      type: array
+      title: Libraries

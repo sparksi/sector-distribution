@@ -1,0 +1,18 @@
+<button type="button" class="search__toggle w-12 h-12 place-items-center" aria-expanded="false" aria-controls="{{ attributes.id }}">
+    <span class="sr-only">Show search</span>
+    {{ include('sector:icon', {
+        icon: 'search'
+    })}}
+</button>
+{{ include('sector_starterkit:search-form', {
+    utility_classes: [
+        'form',
+        'search',
+        'search--lg'
+    ],
+    libraries: [
+        'sector_starterkit/form',
+        'sector_starterkit/search',
+        'sector_starterkit/search-lg'
+    ]
+} )}}

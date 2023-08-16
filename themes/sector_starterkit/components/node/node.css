@@ -1,0 +1,3 @@
+.node:where(.node--unpublished) {--tw-bg-opacity: 1;background-color: rgb(255 251 235 / var(--tw-bg-opacity))
+}.node__title-link {outline-color: var(--primary, #0ea5e9)
+}

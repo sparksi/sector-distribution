@@ -1,1 +1,0 @@
-.subtitle{--subtitle-color: #404040;color: var(--subtitle-color-override,var(--subtitle-color))}@media (prefers-color-scheme: dark){.subtitle{--tw-text-opacity: 1;color: rgb(212 212 212 / var(--tw-text-opacity))}}.subtitle p{text-wrap:var(--subtitle-text-wrap, balance)}.subtitle p a{text-decoration-line: underline;text-underline-offset: 4px}

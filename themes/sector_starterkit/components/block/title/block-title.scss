@@ -1,0 +1,7 @@
+.block__title {
+    @apply text-2xl font-semibold font-custom-alt;
+
+    a {
+        @apply text-inherit hover:text-sky-500 focus-visible:text-sky-500;
+    }
+}

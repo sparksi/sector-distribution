@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * Template for a general use media.
+ */
+#}
+{{ include("sector_starterkit:media", {
+    utility_classes: [],
+    libraries: [
+        'sector_starterkit/' ~ media.bundle()|replace({"_": "-"})|clean_class,
+        'sector_starterkit/media-' ~ view_mode,
+        'sector_starterkit/' ~ media.bundle()|replace({"_": "-"})|clean_class ~ '-' ~ view_mode
+    ]
+}) }}

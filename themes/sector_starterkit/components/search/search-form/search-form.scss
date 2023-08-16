@@ -1,0 +1,86 @@
+@use "mixins/a11y";
+
+.search--lg {
+  @apply text-sm grid items-center;
+
+  --toggled-display-override: grid;
+
+  grid-template-columns: 1fr auto;
+
+  > .form-item {
+    @apply col-span-2 row-start-1 col-start-1;
+  }
+
+  > .form-actions {
+    @apply col-start-2 col-span-1 z-10 row-start-1 mr-[3px];
+  }
+
+  .form-input {
+    @apply rounded-3xl text-sm ps-4 bg-no-repeat;
+  }
+
+  // label
+  .form-item-query {
+    @apply relative my-2 md:my-0;
+
+    label {
+      @apply absolute left-4 top-2 z-10 text-zinc-500;
+    }
+
+    &:focus,
+    &:hover,
+    &:focus-within,
+    &:has(input:focus, input:valid) {
+      label {
+        @apply top-1 text-white;
+
+        @media (prefers-reduced-motion: no-preference) {
+          @apply left-4 top-0 text-[4px] text-zinc-200 transition-all ease-in-out;
+        }
+      }
+    }
+  }
+
+  .form-textfield.form-input.form-control {
+    @apply text-black font-light w-full focus-visible:border-sky-500 focus:border-sky-500;
+
+    &:valid,
+    &:focus {
+      // Firefox doesn't understand :has yet, so can't move label. Grief!!
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  .form-submit {
+    @apply rounded-full w-8 h-8 border-0 transition-all duration-300 ease-in-out bg-transparent hover:bg-transparent;
+
+    background-position: center;
+    background-image: svg-load("search.svg", "fill:#aaa");
+    text-indent: -5000em;
+    background-size: 1.5rem;
+    background-repeat: no-repeat;
+    box-shadow: none;
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+      @apply outline outline-2 outline-zinc-300/50 transition duration-300 ease-in-out;
+
+      background-image: svg-load("search.svg", "fill:#000");
+    }
+  }
+}
+
+// Search Toggle with sibling Search form
+.search__toggle {
+  @apply flex xl:hidden;
+
+  &[aria-expanded="false"] + .search {
+    @apply hidden xl:grid;
+  }
+
+  &[aria-expanded="true"] + .search {
+    display: var(--toggled-display-override, block);
+  }
+}

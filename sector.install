@@ -57,7 +57,7 @@ function sector_install_required_modules() {
 
 
 function sector_copy_default_blocks() {
-  SectorInstallHelpers::copySectorDefaultBlocks('sector_starter');
+  SectorInstallHelpers::copySectorDefaultBlocks('sector_demo');
 }
 
 function sector_search_api_index() {

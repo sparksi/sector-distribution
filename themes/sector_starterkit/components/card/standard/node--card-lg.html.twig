@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Template for a Node.
+ */
+#}
+<div class="@container/card">
+{{ include("sector_starterkit:card-standard", {
+    libraries: ['sector_starterkit/' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class ],
+    title_classes: [ 'text-xl', 'md:text-2xl', 'font-custom-alt', 'font-semibold', 'bg-white px-4 py-5 sm:px-6' ],
+    title_link_attributes: title_link_attributes.setAttribute('rel', 'bookmark'),
+    title_link_classes: ['hover:text-sky-500', 'focus-visible:text-sky-500'],
+    utility_classes: [
+        'card',
+        'card--standard',
+        'overflow-hidden',
+        'bg-white',
+        'sm:rounded-lg',
+        'sm:shadow'
+    ],
+    content_classes: [
+        'px-4 pb-5 sm:p-6 sm:pt-0'
+    ]
+})}}
+</div>

@@ -1,0 +1,16 @@
+.facet>ul > :not([hidden]) ~ :not([hidden]) {--tw-space-y-reverse: 0;margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom: calc(0.5rem * var(--tw-space-y-reverse))
+}.facet>ul {font-size: 0.875rem;line-height: 1.25rem;font-weight: 500
+}.facet-item {display: flex;align-items: center;-moz-column-gap: 0.5rem;column-gap: 0.5rem
+}.facet-item :where(label,input) {cursor: pointer;outline-color: #0ea5e9
+}.facet-item :where(label,input):hover {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
+}.facet-item :where(label,input):focus-visible {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
+}.facets-checkbox {height: 1rem;width: 1rem;accent-color: #0ea5e9
+}.facet-summary-item--facet {display: flex;flex-wrap: wrap;gap: 0.25rem;font-size: 1rem;line-height: 1.5rem
+}.facet-summary-item--facet>a {display: flex;align-items: center;-moz-column-gap: 0.25rem;column-gap: 0.25rem;font-weight: 500
+}.facet-summary-item--facet>a:hover {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
+}.facet-summary-item--facet>a:focus-visible {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
+}.facet-summary-item--facet>a:hover [data-toggle=on],.facet-summary-item--facet>a:focus-visible [data-toggle=on] {display: none
+}.facet-summary-item--facet>a:hover [data-toggle=off],.facet-summary-item--facet>a:focus-visible [data-toggle=off] {display: block
+}.facet-summary-item--facet [data-toggle=off] {display: none
+}.facet-item__status {display: flex;align-items: center;-moz-column-gap: 0.5rem;column-gap: 0.5rem
+}

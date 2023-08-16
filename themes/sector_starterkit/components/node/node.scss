@@ -1,0 +1,9 @@
+.node {
+  &:where(.node--unpublished) {
+    @apply bg-amber-50;
+  }
+}
+
+.node__title-link {
+  @apply outline-ss-primary;
+}

@@ -1,9 +1,0 @@
-.more-link {
-    * + & {
-        @apply mt-5 border-t border-gray-200 pt-5;
-    }
-
-    > a {
-        @apply hover:text-gray-500 focus-visible:text-gray-500;
-    }
-}

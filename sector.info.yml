@@ -103,6 +103,6 @@ install:
 #  - views_bulk_operations:views_bulk_operations
   - views_menu_children_filter:views_menu_children_filter
 themes:
-  - sector_starter
+  - sector_demo
   - gin
   - claro

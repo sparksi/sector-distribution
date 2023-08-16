@@ -1,0 +1,14 @@
+name: Textarea
+status: stable
+description: Give textual form controls <input>s an upgrade with custom styles, sizing, focus states, and more.
+props:
+  type: object
+  properties:
+    form_control:
+      type: boolean
+      title: Form Control
+      description: Have class .form-control related to input type.
+    attributes:
+      type: Drupal\Core\Template\Attribute
+    libraries:
+      type: array

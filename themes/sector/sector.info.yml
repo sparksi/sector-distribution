@@ -1,5 +1,6 @@
 name: Sector
 type: theme
+version: 0.1
 base theme: false
 description: Responsive base theme for Drupal.
 screenshot: screenshot.png

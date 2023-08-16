@@ -1,0 +1,8 @@
+name: Form Element 
+status: experimental
+description: Form Element
+props:
+  type: object
+  properties:
+    attributes:
+      type: Drupal\Core\Template\Attribute

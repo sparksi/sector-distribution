@@ -1,0 +1,20 @@
+{#
+/**
+ * Template for a menu.
+ */
+#}
+{{ include('sector_demo:navigation-md', {
+    libraries: [
+        'sector_demo/' ~ menu_name|clean_class,
+        'sector_demo/navigation',
+        'sector_demo/navigation-md',
+        'sector_demo/block-title'
+    ],
+    attributes: attributes.setAttribute('data-behavior', 'toggle'),
+    render_toggle: false,
+    utility_classes: [
+        'navigation',
+        'navigation--md',
+        '@container/navigation'
+    ]
+}) }}
