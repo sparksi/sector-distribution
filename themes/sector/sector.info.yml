@@ -2,6 +2,7 @@ name: Sector
 type: theme
 version: 0.1
 base theme: false
+hidden: true
 description: Responsive base theme for Drupal.
 screenshot: screenshot.png
 core_version_requirement: ^8.7.7 || ^9.0 || ^10
