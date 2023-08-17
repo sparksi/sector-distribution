@@ -1,36 +1,43 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.restricted_basic_html
+    - filter.format.teaser_display_text
+    - node.type.article
+    - node.type.page
+    - node.type.resource
+  module:
+    - contextual
+    - entity_usage
+    - entityqueue
+    - filter
+    - media
+    - metatag
+    - node
+    - path
+    - shortcut
+    - system
+    - toolbar
 id: content_editor
 label: 'Content Editor'
 weight: 3
 is_admin: null
 permissions:
-  - 'access administration menu'
   - 'access administration pages'
   - 'access content overview'
   - 'access contextual links'
   - 'access entity usage statistics'
-  - 'access in-place editing'
   - 'access media overview'
   - 'access site in maintenance mode'
   - 'access toolbar'
   - 'access user profiles'
-  - 'access workbench'
-  - 'access workbench access by role'
-  - 'add media from remote sources'
-  - 'administer files'
   - 'administer menu'
-  - 'administer menu attributes'
   - 'administer meta tags'
   - 'administer nodes'
-  - 'bypass rh_file'
-  - 'bypass rh_node'
-  - 'bypass rh_taxonomy'
-  - 'bypass rh_user'
   - 'change own username'
   - 'create article content'
-  - 'create files'
   - 'create media'
   - 'create page content'
   - 'create promotion content'
@@ -43,69 +50,34 @@ permissions:
   - 'delete any resource content'
   - 'delete media'
   - 'delete own article content'
-  - 'delete own audio files'
-  - 'delete own document files'
-  - 'delete own image files'
   - 'delete own page content'
   - 'delete own promotion content'
   - 'delete own resource content'
-  - 'delete own video files'
-  - 'delete terms in 5'
-  - 'download any audio files'
-  - 'download any document files'
-  - 'download any image files'
-  - 'download any video files'
-  - 'download own audio files'
-  - 'download own document files'
-  - 'download own image files'
-  - 'download own video files'
   - 'edit any article content'
   - 'edit any page content'
   - 'edit any promotion content'
   - 'edit any resource content'
-  - 'edit meta tags'
   - 'edit own article content'
-  - 'edit own audio files'
-  - 'edit own document files'
-  - 'edit own image files'
   - 'edit own page content'
   - 'edit own promotion content'
   - 'edit own resource content'
-  - 'edit own video files'
-  - 'edit terms in 5'
-  - 'hide format tips'
-  - 'hide more format tips link'
   - 'manipulate all entityqueues'
   - 'manipulate entityqueues'
-  - 'moderate content from draft to needs_review'
   - 'revert all revisions'
   - 'revert article revisions'
   - 'revert page revisions'
   - 'revert promotion revisions'
   - 'revert resource revisions'
-  - 'revert revisions'
-  - 'show format selection for node'
-  - 'show more format tips link'
   - 'update any media'
   - 'update media'
   - 'update promotional_tiles entityqueue'
-  - 'use media wysiwyg'
   - 'use text format basic_html'
   - 'use text format restricted_basic_html'
   - 'use text format teaser_display_text'
-  - 'use workbench_moderation my drafts tab'
   - 'view all revisions'
-  - 'view all unpublished content'
   - 'view article revisions'
-  - 'view files'
-  - 'view moderation history'
-  - 'view moderation messages'
-  - 'view own private files'
   - 'view own unpublished content'
   - 'view page revisions'
   - 'view promotion revisions'
   - 'view resource revisions'
-  - 'view revisions'
   - 'view the administration theme'
-  - 'view workbench access information'
-  - 'view workbench taxonomy pages'

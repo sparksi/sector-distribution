@@ -1,87 +1,32 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - block
+    - block_class
+    - entity_usage
+    - filter
+    - media
+    - redirect
+    - system
+    - taxonomy
+    - view_unpublished
+    - xmlsitemap
 id: content_administrator
 label: 'Content Administrator'
 weight: 2
 is_admin: null
 permissions:
-  - 'Use PHP input for field settings (dangerous - grant with care)'
-  - 'access administration menu'
   - 'access entity usage statistics'
-  - 'access in-place editing'
   - 'access site reports'
-  - 'access workbench'
-  - 'access workbench access by role'
-  - 'add media from remote sources'
   - 'administer block classes'
   - 'administer blocks'
-  - 'administer files'
-  - 'administer menu attributes'
-  - 'administer menu_token'
   - 'administer redirect settings'
   - 'administer redirects'
-  - 'administer search'
   - 'administer taxonomy'
   - 'administer xmlsitemap'
-  - 'batch update workbench access'
-  - 'bypass rh_file'
-  - 'bypass rh_node'
-  - 'bypass rh_taxonomy'
-  - 'bypass rh_user'
-  - 'create files'
-  - 'delete any audio files'
-  - 'delete any document files'
-  - 'delete any image files'
   - 'delete any media'
-  - 'delete any video files'
-  - 'delete own audio files'
-  - 'delete own document files'
-  - 'delete own image files'
-  - 'delete own video files'
-  - 'delete revisions'
-  - 'delete terms in 5'
-  - 'download any audio files'
-  - 'download any document files'
-  - 'download any image files'
-  - 'download any video files'
-  - 'download own audio files'
-  - 'download own document files'
-  - 'download own image files'
-  - 'download own video files'
-  - 'edit any audio files'
-  - 'edit any document files'
-  - 'edit any image files'
-  - 'edit any video files'
-  - 'edit meta tags'
-  - 'edit own audio files'
-  - 'edit own document files'
-  - 'edit own image files'
-  - 'edit own video files'
-  - 'edit terms in 5'
-  - 'execute auto_entitylabel_entity_update_action'
-  - 'execute sector_workbench_access_change_editorial_group'
-  - 'execute workbench_moderation_set_state_action'
-  - 'moderate content from draft to needs_review'
-  - 'moderate content from draft to published'
-  - 'moderate content from needs_review to draft'
-  - 'moderate content from needs_review to published'
-  - 'moderate content from published to draft'
-  - 'revert revisions'
-  - 'show format selection for node'
-  - 'show more format tips link'
-  - 'use PHP for label patterns'
-  - 'use advancedform'
-  - 'use media wysiwyg'
   - 'use text format full_html'
-  - 'use workbench_moderation my drafts tab'
-  - 'use workbench_moderation needs review tab'
-  - 'view all unpublished content'
   - 'view any unpublished content'
-  - 'view files'
-  - 'view moderation history'
-  - 'view moderation messages'
-  - 'view own private files'
-  - 'view revisions'
-  - 'view workbench access information'
-  - 'view workbench taxonomy pages'

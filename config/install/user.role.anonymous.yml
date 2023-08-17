@@ -1,15 +1,15 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
+    - system
+    - video_embed_field
 id: anonymous
 label: 'anonymous user'
 weight: 0
 is_admin: false
 permissions:
-  - 'access comments'
   - 'access content'
   - 'never autoplay videos'
-  - 'post comments'
-  - 'search content'
-  - 'view files'
   - 'view media'
