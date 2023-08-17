@@ -28,3 +28,4 @@ processor_configs:
       build: '50'
     settings:
       link_text: Reset
+      position: before
