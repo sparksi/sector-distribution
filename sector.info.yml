@@ -2,7 +2,7 @@ name: Sector
 type: profile
 description: 'Sector. Content management made easy.'
 core_version_requirement: '^9'
-version: '9.5.4'
+version: '9.5.6'
 
 distribution:
   name: Sector
