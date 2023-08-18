@@ -4,7 +4,7 @@
 .webform-more__sumamry {
     @include details.removeDetailsArrow;
 
-    @apply cursor-pointer inline-flex items-center hover:text-ss-primary focus-visible:text-ss-primary;
+    @apply cursor-pointer inline-flex items-center hover:text-primary focus-visible:text-primary;
 }
 
 .webform-more__indicator {

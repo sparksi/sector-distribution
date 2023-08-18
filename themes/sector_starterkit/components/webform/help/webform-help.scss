@@ -2,7 +2,7 @@
     @apply align-baseline;
 
     > button {
-        @apply flex items-center text-base outline-none hover:text-ss-primary focus-visible:text-ss-primary;
+        @apply flex items-center text-base outline-none hover:text-primary focus-visible:text-primary;
     }
 
     dialog {
@@ -20,5 +20,5 @@
 }
 
 .webform-help__close {
-    @apply absolute top-2 right-2 text-base outline-none hover:text-ss-primary focus-visible:text-ss-primary;
+    @apply absolute top-2 right-2 text-base outline-none hover:text-primary focus-visible:text-primary;
 }

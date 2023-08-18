@@ -2,7 +2,7 @@
 
 @mixin render {
   :where(a, button).btn {
-    @apply relative my-2 inline-block whitespace-nowrap rounded-md px-6 py-3 text-base font-bold no-underline decoration-0 shadow-sm ring-1 ring-inset duration-300 ease-in-out hover:cursor-pointer focus-visible:outline-ss-primary;
+    @apply relative my-2 inline-block whitespace-nowrap rounded-md px-6 py-3 text-base font-bold no-underline decoration-0 shadow-sm ring-1 ring-inset duration-300 ease-in-out hover:cursor-pointer focus-visible:outline-primary;
 
     text-decoration: none !important;
   }
@@ -13,7 +13,7 @@
   }
 
   :is(a, button).btn--primary {
-    @apply bg-ss-primary text-white ring-0 hover:bg-sky-700 hover:text-white font-bold;
+    @apply bg-primary text-white ring-0 hover:bg-sky-700 hover:text-white font-bold;
 
     .prose & {
       @apply hover:text-white;
@@ -118,7 +118,7 @@
   }
 
   .primary-outline {
-    @apply bg-opacity-0 text-base font-bold text-ss-primary ring-1 ring-ss-primary hover:bg-opacity-50 hover:text-sky-700;
+    @apply bg-opacity-0 text-base font-bold text-primary ring-1 ring-primary hover:bg-opacity-50 hover:text-sky-700;
   }
 
   .light-outline {

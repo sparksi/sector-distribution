@@ -1,11 +1,11 @@
 .webform-help {vertical-align:baseline
 }.webform-help>button {display:flex;align-items:center;font-size:1rem;line-height:1.5rem;outline:2px solid transparent;outline-offset:2px
-}.webform-help>button:hover {color:var(--primary, #0ea5e9)
-}.webform-help>button:focus-visible {color:var(--primary, #0ea5e9)
+}.webform-help>button:hover {color:var(--primary, #6b7280)
+}.webform-help>button:focus-visible {color:var(--primary, #6b7280)
 }.webform-help dialog {left:50%;--tw-translate-x:-50%;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));border-radius:0.25rem;border-width:1px;--tw-border-opacity:1;border-color:rgb(229 229 229 / var(--tw-border-opacity));padding:0.5rem;font-size:0.875rem;line-height:1.25rem;--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);min-width:clamp(15ch,25ch,90vw)
 }.webform-help dialog strong {margin-bottom:0.25rem;display:block
 }.webform-help dialog:has(.webform-help__close) {padding-right:2.5rem
 }.webform-help__close {position:absolute;top:0.5rem;right:0.5rem;font-size:1rem;line-height:1.5rem;outline:2px solid transparent;outline-offset:2px
-}.webform-help__close:hover {color:var(--primary, #0ea5e9)
-}.webform-help__close:focus-visible {color:var(--primary, #0ea5e9)
+}.webform-help__close:hover {color:var(--primary, #6b7280)
+}.webform-help__close:focus-visible {color:var(--primary, #6b7280)
 }
