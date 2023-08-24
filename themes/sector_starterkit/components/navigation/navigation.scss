@@ -42,6 +42,7 @@
   }
 
 
+  .region--content-prefix &,
   .region--content-suffix & {
     .navigation__list .menu__item--level-1 > a.menu__toggle-link {
       @apply flex;
