@@ -40,6 +40,12 @@
   .navigation__list .menu__item--level-1 > a.menu__toggle-link {
     @apply hidden;
   }
+
+  .region--content-suffix & {
+    .navigation__list .menu__item--level-1 > a.menu__toggle-link {
+      @apply flex;
+    }
+  }
 }
 
 .navigation__toggle {
