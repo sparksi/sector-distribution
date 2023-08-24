@@ -1,5 +1,5 @@
 {
-    "name": "sector_media",
+    "name": "sector/sector_media",
     "description": "Modules required for Sector Media",
     "keywords": ["Drupal"],
     "license": "GPL-2.0+",
@@ -10,7 +10,7 @@
         "source": "https://git.drupalcode.org/project/sector"
     },
     "require": {
-        "drupal/material_icons": "^2.0"
+        "drupal/material_icons": "^2.0@dev"
     },
     "repositories": {
         "packagist.drupal": {
