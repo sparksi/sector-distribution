@@ -1,0 +1,52 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: a8f2502e-c26c-4f9e-9259-a49561ab89e8
+  bundle: sector_page
+  default_langcode: en
+  depends:
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Hierarchical content in menus'
+  created:
+    -
+      value: 1692835231
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  moderation_state:
+    -
+      value: published
+  path:
+    -
+      alias: /get-started/hierarchical-content-menus
+      langcode: en
+      pathauto: 1
+  body:
+    -
+      value: '<p class="lead">Sector supports a variety of Information Architecture principles, and one is to organise your content hierarchically–both in menu trees and on your pages.&nbsp;</p><p>Hierarchical content is stored in pages and organised in a menu tree. For example, this sample page is a node of the content type <em>Page</em> added to Level 2 in the main menu.</p><p><strong>The concept works well with:</strong></p><ul><li>Linear content structure and user movements (book like content - navigating from&nbsp;A to B to C)</li><li>''Layered''&nbsp;information architecture (<em>''information about information''</em> in promotional or introductory top layers).</li></ul><p><strong>Known limitations:</strong></p><ul><li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.</li><li>Hierarchical content assumes the principal of ''one page, one position''. This often does not work in a web context - if the principle is broken, context for the page is lost.</li></ul><h2>Supporting content hierarchies on a page&nbsp;</h2><p class="lead">Organising content hierarchically does not stop with your menu, and is even more important while organising the content on your page.&nbsp;</p><p>Sector''s Display options and our <a href="/node/10" data-entity-type="node" data-entity-uuid="dd542f54-4b35-436a-a28d-74f624f9a89e" data-entity-substitution="canonical">Styles and design components</a> allow editors to structure content on a page in a visual hierarchy. For example, both the <a href="/node/1" data-entity-type="node" data-entity-uuid="03ae7a81-5206-4dd6-9b82-b998054281f6" data-entity-substitution="canonical">homepage</a> and this page are nodes of the content type <em>Page</em>, but we have chosen very different display options.&nbsp;</p><p>The homepage uses a <strong>maximal hero</strong> area with a background banner, centred text, title captions, subtitles and call to action buttons <strong>for maximal visual impact</strong>. This page<strong> focuses on informational content, using a minimal Hero</strong> with left-centred text, and no banner, subtitle or title captions to allow the reader to concentrate on the text. Again, all settings the editor can choose from <em>Sector''s Display options.&nbsp;</em></p><p>&nbsp;</p><p><span>{ - sample content - }</span></p>'
+      format: sector_basic_html
+      summary: 'Sector supports a variety of Information Architecture principles, and one is to organise your content hierarchically–both in menu trees and on your pages. '
+  field_display_options:
+    -
+      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
+  field_text_placement:
+    -
+      value: text-left

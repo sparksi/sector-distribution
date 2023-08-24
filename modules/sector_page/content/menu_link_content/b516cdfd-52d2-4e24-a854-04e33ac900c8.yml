@@ -1,25 +1,25 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 08ac497e-59d5-4437-bd3a-546c49036e7c
+  uuid: b516cdfd-52d2-4e24-a854-04e33ac900c8
   bundle: menu_link_content
   default_langcode: en
   depends:
-    cd584243-23bc-42d9-ba21-d2f907f09543: menu_link_content
-    0f77cb86-7771-4f88-9545-e15774fae865: node
+    abf9544b-fbd4-4741-a38d-0aae0fc6f392: menu_link_content
+    a8f2502e-c26c-4f9e-9259-a49561ab89e8: node
 default:
   enabled:
     -
       value: true
   title:
     -
-      value: 'Sector standard page'
+      value: 'Hierarchical content in menus'
   menu_name:
     -
       value: sector-main-menu
   link:
     -
-      target_uuid: 0f77cb86-7771-4f88-9545-e15774fae865
+      target_uuid: a8f2502e-c26c-4f9e-9259-a49561ab89e8
       title: ''
       options: {  }
   external:
@@ -30,13 +30,13 @@ default:
       value: false
   weight:
     -
-      value: -48
+      value: 0
   expanded:
     -
       value: false
   parent:
     -
-      value: 'menu_link_content:cd584243-23bc-42d9-ba21-d2f907f09543'
+      value: 'menu_link_content:abf9544b-fbd4-4741-a38d-0aae0fc6f392'
   revision_translation_affected:
     -
       value: true

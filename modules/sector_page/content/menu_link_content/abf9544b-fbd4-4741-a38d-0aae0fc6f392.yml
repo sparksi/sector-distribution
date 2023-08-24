@@ -1,25 +1,24 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: e544759d-a240-4bd6-aef6-ffccef7391c7
+  uuid: abf9544b-fbd4-4741-a38d-0aae0fc6f392
   bundle: menu_link_content
   default_langcode: en
   depends:
-    cd584243-23bc-42d9-ba21-d2f907f09543: menu_link_content
-    dd542f54-4b35-436a-a28d-74f624f9a89e: node
+    99e6cd0e-ce91-4aa8-8556-64719bb433ae: node
 default:
   enabled:
     -
       value: true
   title:
     -
-      value: 'Styles and design components'
+      value: 'Get started'
   menu_name:
     -
       value: sector-main-menu
   link:
     -
-      target_uuid: dd542f54-4b35-436a-a28d-74f624f9a89e
+      target_uuid: 99e6cd0e-ce91-4aa8-8556-64719bb433ae
       title: ''
       options: {  }
   external:
@@ -30,13 +29,10 @@ default:
       value: false
   weight:
     -
-      value: -50
+      value: -49
   expanded:
     -
       value: false
-  parent:
-    -
-      value: 'menu_link_content:cd584243-23bc-42d9-ba21-d2f907f09543'
   revision_translation_affected:
     -
       value: true
