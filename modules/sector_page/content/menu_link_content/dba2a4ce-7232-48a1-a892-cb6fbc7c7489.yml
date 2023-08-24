@@ -1,25 +1,24 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: 5961b2b9-0b4d-4ab2-ac59-bdff875cc875
+  uuid: dba2a4ce-7232-48a1-a892-cb6fbc7c7489
   bundle: menu_link_content
   default_langcode: en
   depends:
-    b516cdfd-52d2-4e24-a854-04e33ac900c8: menu_link_content
-    a52afcdb-c9a7-4748-8b5d-d442e0db11d1: node
+    9e9e3520-8d1a-4294-80ae-dac00bf57d85: node
 default:
   enabled:
     -
       value: true
   title:
     -
-      value: 'Level 3 page'
+      value: 'Site map'
   menu_name:
     -
-      value: sector-main-menu
+      value: sector-tertiary
   link:
     -
-      target_uuid: a52afcdb-c9a7-4748-8b5d-d442e0db11d1
+      target_uuid: 9e9e3520-8d1a-4294-80ae-dac00bf57d85
       title: ''
       options: {  }
   external:
@@ -34,9 +33,6 @@ default:
   expanded:
     -
       value: false
-  parent:
-    -
-      value: 'menu_link_content:b516cdfd-52d2-4e24-a854-04e33ac900c8'
   revision_translation_affected:
     -
       value: true
