@@ -1,18 +1,36 @@
 .navigation--md {
-    .block__title ~ & {
-        @apply mt-6;
-    }
+  .block__title ~ & {
+    @apply mt-6;
+  }
 
-    .navigation__list {
-        @apply text-base font-normal divide-y divide-zinc-200 border-y border-zinc-200 lg:max-w-[28ch];
-        @apply dark:border-zinc-700 dark:divide-zinc-700
-    }
+  .navigation__list {
+    @apply text-base font-normal divide-y divide-zinc-200 border-y border-zinc-200 lg:max-w-[28ch] dark:border-zinc-700 dark:divide-zinc-700;
+  }
 
-    .menu__link {
-        @apply flex py-3 leading-snug hover:text-sky-500 focus-visible:text-sky-500;
-    }
+  .menu__link {
+    @apply flex py-3 leading-snug hover:text-sky-500 focus-visible:text-sky-500;
 
-    button.menu__toggle {
-        @apply hidden;
+    &:is(.is-active) {
+      @apply font-bold;
     }
+  }
+
+  button.menu__toggle {
+    @apply hidden;
+  }
+
+  .menu__item:has(
+      > .menu__link ~ .navigation__sub-menu .menu__link:is(.is-active)
+  )
+    > .menu__link {
+    @apply font-bold;
+  }
+
+  .navigation__sub-menu {
+    @apply border-t border-gray-200 bg-gray-50 text-sm dark:bg-gray-900;
+  }
+
+  .navigation__sub-menu .menu__link {
+    @apply ps-3;
+  }
 }
