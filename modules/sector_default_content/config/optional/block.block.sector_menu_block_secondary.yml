@@ -12,7 +12,7 @@ _core:
   default_config_hash: kDomm1w29Lo4HFMXSafPhR9fZ1-VXi7n8j9yfJUrJRA
 id: sector_menu_block_secondary
 theme: sector
-region: content_prefix
+region: content_suffix
 weight: 0
 provider: null
 plugin: 'menu_block:sector-main-menu'
