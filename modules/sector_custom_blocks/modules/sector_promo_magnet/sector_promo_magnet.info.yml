@@ -1,0 +1,8 @@
+name: Sector Custom Blocks › Promo magnet
+type: module
+description: Promotional magnets
+package: Sector
+core_version_requirement: ^10
+dependencies:
+  - sector:sector_custom_blocks
+  - material_icons:material_icons
