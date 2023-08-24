@@ -1,10 +1,11 @@
 _meta:
   version: '1.0'
   entity_type: node
-  uuid: a52afcdb-c9a7-4748-8b5d-d442e0db11d1
+  uuid: c9e057b5-ceef-4ad9-a2d3-0851b80c388e
   bundle: sector_page
   default_langcode: en
   depends:
+    66224be3-8df7-4084-868b-eb396f85db43: user
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
@@ -15,13 +16,13 @@ default:
       value: true
   uid:
     -
-      target_id: 1
+      entity: 66224be3-8df7-4084-868b-eb396f85db43
   title:
     -
       value: 'Level 3 page'
   created:
     -
-      value: 1692835915
+      value: 1686802291
   promote:
     -
       value: false
@@ -36,12 +37,21 @@ default:
       value: published
   path:
     -
-      alias: /get-started/hierarchical-content-menus/level-3-page
+      alias: /section-entry/level-2-page/level-3-page
       langcode: en
       pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  rh_redirect_fallback_action:
+    -
+      value: bundle_default
   body:
     -
-      value: '<p class="lead">As part of this distribution we have preconfigured one branch of your menu to showcase how your readers can move through your hierarchical content. This is a Level 3 page.&nbsp;</p><p>{ sample content }</p>'
+      value: '<p class="lead">This is a&nbsp;Level 3 page.</p><p>{sample content}</p>'
       format: sector_basic_html
       summary: ''
   field_display_options:
