@@ -8,6 +8,7 @@ dependencies:
   - svg_image:svg_image
   - default_content:default_content
   - sector_text_formats:sector_text_formats
+  - material_icons:material_icons
 
 default_content:
   file:
