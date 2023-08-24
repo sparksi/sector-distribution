@@ -1,24 +1,24 @@
 _meta:
   version: '1.0'
   entity_type: menu_link_content
-  uuid: cd584243-23bc-42d9-ba21-d2f907f09543
+  uuid: 0f80f161-863f-4e05-8537-828e6ca85332
   bundle: menu_link_content
   default_langcode: en
   depends:
-    79cf4091-961e-47d8-a06c-711aa265374f: node
+    7aa107da-4318-4696-b649-30c0cbb55daa: node
 default:
   enabled:
     -
       value: true
   title:
     -
-      value: 'Section Entry'
+      value: News
   menu_name:
     -
       value: sector-main-menu
   link:
     -
-      target_uuid: 79cf4091-961e-47d8-a06c-711aa265374f
+      target_uuid: 7aa107da-4318-4696-b649-30c0cbb55daa
       title: ''
       options: {  }
   external:
@@ -29,7 +29,7 @@ default:
       value: false
   weight:
     -
-      value: -49
+      value: -45
   expanded:
     -
       value: false
