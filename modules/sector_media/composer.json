@@ -1,0 +1,25 @@
+{
+    "name": "sector_media",
+    "description": "Modules required for Sector Media",
+    "keywords": ["Drupal"],
+    "license": "GPL-2.0+",
+    "homepage": "https://www.drupal.org/project/sector",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.drupal.org/project/issues/sector",
+        "source": "https://git.drupalcode.org/project/sector"
+    },
+    "require": {
+        "drupal/material_icons": "^2.0"
+    },
+    "repositories": {
+        "packagist.drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "asset.packagist": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    }
+}
