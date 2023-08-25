@@ -5,7 +5,7 @@ _meta:
   bundle: sector_promo_magnet
   default_langcode: en
   depends:
-    79bfe1a6-7000-4e53-941d-80f05758d277: media
+    af32c292-d72a-45c0-8e78-6fa671797808: media
 default:
   status:
     -
@@ -26,7 +26,7 @@ default:
       summary: ''
   field_custom_icon:
     -
-      entity: 79bfe1a6-7000-4e53-941d-80f05758d277
+      entity: af32c292-d72a-45c0-8e78-6fa671797808
   field_link:
     -
       uri: 'https://tailwindcss.com/'

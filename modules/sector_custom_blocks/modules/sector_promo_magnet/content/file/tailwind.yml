@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: e5c07b66-c20a-4e95-ba3e-d5ee51b0b2d3
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: tailwind.svg
+  uri:
+    -
+      value: 'public://2023-08/tailwind.svg'
+  filemime:
+    -
+      value: image/svg+xml
+  filesize:
+    -
+      value: 1103
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1692925822
