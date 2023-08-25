@@ -51,7 +51,8 @@ function sector_install_required_modules() {
 
   // enable dependencies
   \Drupal::service('module_installer')->install([
-    'sector_notice'
+    'sector_notice',
+    'sector_promo_magnet'
   ]);
 }
 
