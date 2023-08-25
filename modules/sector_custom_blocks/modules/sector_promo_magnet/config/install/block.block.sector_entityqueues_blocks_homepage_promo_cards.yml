@@ -1,0 +1,33 @@
+uuid: 345038f8-f5c0-4648-9e66-64c3cbf71bbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.sector_entityqueues_blocks
+  module:
+    - block_class
+    - system
+    - views
+  theme:
+    - sector
+third_party_settings:
+  block_class:
+    classes: 'py-10 lg:py-24 bg-gray-100 dark:bg-gray-900'
+id: sector_entityqueues_blocks_homepage_promo_cards
+theme: sector_demo
+region: content_pre
+weight: 0
+provider: null
+plugin: 'views_block:sector_entityqueues_blocks-homepage_promo_cards'
+settings:
+  id: 'views_block:sector_entityqueues_blocks-homepage_promo_cards'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
