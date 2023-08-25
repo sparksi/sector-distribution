@@ -1,0 +1,19 @@
+uuid: 09f89705-216a-4c0e-98ed-70a2723a3b0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sector_promo_magnet
+    - field.storage.block_content.field_title
+id: block_content.sector_promo_magnet.field_title
+field_name: field_title
+entity_type: block_content
+bundle: sector_promo_magnet
+label: 'Promo title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

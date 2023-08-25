@@ -1,0 +1,29 @@
+uuid: 56359893-9cd2-4c8d-b1f8-8c270130af3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sector_promo_magnet
+    - field.storage.block_content.field_custom_icon
+    - media.type.vector
+id: block_content.sector_promo_magnet.field_custom_icon
+field_name: field_custom_icon
+entity_type: block_content
+bundle: sector_promo_magnet
+label: 'Custom icon'
+description: 'Add a custom icon using a vector file. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      vector: vector
+    sort:
+      field: created
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

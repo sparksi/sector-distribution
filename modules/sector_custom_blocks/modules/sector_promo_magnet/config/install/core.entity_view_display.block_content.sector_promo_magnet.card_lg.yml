@@ -1,0 +1,170 @@
+uuid: b55e5687-386e-434a-bf95-2084a7e359e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.sector_promo_magnet
+    - core.entity_view_mode.block_content.card_lg
+    - field.field.block_content.sector_promo_magnet.body
+    - field.field.block_content.sector_promo_magnet.field_custom_icon
+    - field.field.block_content.sector_promo_magnet.field_icon
+    - field.field.block_content.sector_promo_magnet.field_link
+    - field.field.block_content.sector_promo_magnet.field_title
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_discovery
+    - link
+    - material_icons
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings:
+          label: ''
+        components:
+          1e4cbab4-d24f-4c70-9af0-335317b0fa5a:
+            uuid: 1e4cbab4-d24f-4c70-9af0-335317b0fa5a
+            region: content
+            configuration:
+              id: 'field_block:block_content:sector_promo_magnet:body'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          a457a157-ed1a-42de-a7bd-a1853b3a749a:
+            uuid: a457a157-ed1a-42de-a7bd-a1853b3a749a
+            region: content
+            configuration:
+              id: 'field_block:block_content:sector_promo_magnet:field_custom_icon'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          12017d9a-31be-4cfb-9798-6703d4cfd567:
+            uuid: 12017d9a-31be-4cfb-9798-6703d4cfd567
+            region: content
+            configuration:
+              id: 'field_block:block_content:sector_promo_magnet:field_icon'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: material_icons
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          262cff2b-21d9-4b8c-9c17-cef869235df6:
+            uuid: 262cff2b-21d9-4b8c-9c17-cef869235df6
+            region: content
+            configuration:
+              id: 'field_block:block_content:sector_promo_magnet:field_link'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: link
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          73597293-d84c-4acd-acb6-731432b3fc15:
+            uuid: 73597293-d84c-4acd-acb6-731432b3fc15
+            region: content
+            configuration:
+              id: 'field_block:block_content:sector_promo_magnet:field_title'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
+        third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
+id: block_content.sector_promo_magnet.card_lg
+targetEntityType: block_content
+bundle: sector_promo_magnet
+mode: card_lg
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_custom_icon:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_icon:
+    type: material_icons
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  search_api_excerpt: true
