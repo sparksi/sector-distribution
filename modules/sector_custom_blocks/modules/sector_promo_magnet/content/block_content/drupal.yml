@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 58a7f20e-651c-4821-b5f8-0b469a5d0291
+  bundle: sector_promo_magnet
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Drupal promo'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>Sector is built on Drupal - an open source content management system supported by a large worldwide community.</p>'
+      format: basic_html
+      summary: ''
+  field_icon:
+    -
+      icon: launch
+      family: sharp
+      classes: ''
+  field_link:
+    -
+      uri: 'https://www.acquia.com/resources/guide/the-ultimate-guide-drupal-10'
+      title: 'The Ultimate Guide to Drupal 10 by Acquia'
+      options: {  }
+  field_title:
+    -
+      value: 'Drupal - Build something amazing'

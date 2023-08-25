@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 26441a99-98ec-4b96-a85b-81255116541b
+  bundle: sector_promo_magnet
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Sector.nz promo'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>Learn more about Sector with our Sector guides for designers, content wranglers, site builders and developers.</p>'
+      format: basic_html
+      summary: ''
+  field_icon:
+    -
+      icon: rocket_launch
+      family: sharp
+      classes: ''
+  field_link:
+    -
+      uri: 'https://www.sector.nz/'
+      title: 'Visit the Sector Docs on Sector.nz'
+      options: {  }
+  field_title:
+    -
+      value: 'Dive right in!'

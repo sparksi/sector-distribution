@@ -6,3 +6,8 @@ core_version_requirement: ^10
 dependencies:
   - sector:sector_custom_blocks
   - material_icons:material_icons
+default_content:
+  block_content:
+    - 4adddefb-9f1f-4ee5-af7d-a12b257ddf34
+    - 58a7f20e-651c-4821-b5f8-0b469a5d0291
+    - 26441a99-98ec-4b96-a85b-81255116541b
