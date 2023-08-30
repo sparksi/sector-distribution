@@ -1,1 +1,2 @@
-{% extends 'sector:node' %}
+{% set tpl = 'sector:' ~ entity|default('node') %}
+{% extends tpl %}

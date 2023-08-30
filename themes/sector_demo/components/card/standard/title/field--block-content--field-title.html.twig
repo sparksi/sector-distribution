@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * Template for the page title.
+ */
+#}
+{% include "sector_demo:card-title" with {
+  title_tag: 'h2',
+  title_utility_classes: [
+    'text-xl',
+    '@md/card:text-2xl',
+    'font-bold'
+  ],
+  libraries: [
+    'health/page-title'
+  ]
+} %}

@@ -1,0 +1,12 @@
+.card-icon {
+  --icon-size: theme('fontSize.5xl');
+
+  @screen xl {
+    --icon-size: theme('fontSize.7xl');
+  }
+
+  .media img {
+    width: var(--icon-size, 24px);
+    height: var(--icon-size, 24px);
+  }
+}
