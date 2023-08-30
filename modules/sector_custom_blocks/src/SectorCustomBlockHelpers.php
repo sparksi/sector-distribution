@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\sector;
+namespace Drupal\sector_custom_block;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
