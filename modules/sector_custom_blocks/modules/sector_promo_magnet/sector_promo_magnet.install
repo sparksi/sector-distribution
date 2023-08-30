@@ -1,0 +1,82 @@
+<?php
+use Drupal\entityqueue\Entity\EntityQueueItem;
+use Drupal\block_content\Entity\BlockContent;
+use Drupal\block_content\Entity\BlockContentType;
+use Drupal\entityqueue\Entity\EntitySubqueue;
+
+function sector_promo_magnet_install() {
+  // The ID of the entity queue you want to add the entity to.
+  $queue_id = 'homepage_promotion_cards';
+
+  // Load the entity queue.
+  $entity_queue = \Drupal::entityTypeManager()->getStorage('entity_queue')->load($queue_id);
+
+  if ($entity_queue) {
+    $block_ids = [
+      '58a7f20e-651c-4821-b5f8-0b469a5d0291',
+      '26441a99-98ec-4b96-a85b-81255116541b',
+      '4adddefb-9f1f-4ee5-af7d-a12b257ddf34'
+    ];
+
+    $subqueue = EntitySubqueue::load($queue_id);
+
+    foreach($block_ids as $block_id) {
+
+      // Load the entity you want to add to the queue (replace 'your_entity_type' and 'your_entity_id' with actual values).
+      //$block_content = BlockContent::loadByProperties(['uuid' => $block_id]);
+      $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $block_id);
+
+      if ($block_content) {
+        $subqueue->addItem($block_content);
+        $subqueue->save();
+      }
+      else {
+        \Drupal::logger('sector_promo_magnet')->error('Entity not found.');
+      }
+    }
+  }
+  else {
+    \Drupal::logger('sector_promo_magnet')->error('Entity queue not found.');
+  }
+
+
+}
+
+
+function sector_promo_magnet_uninstall() {
+
+  // Delete blocks
+  $blocks_to_remove = [
+    '58a7f20e-651c-4821-b5f8-0b469a5d0291',
+    '26441a99-98ec-4b96-a85b-81255116541b',
+    '4adddefb-9f1f-4ee5-af7d-a12b257ddf34'
+  ];
+  foreach($blocks_to_remove as $uuid) {
+    $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
+    $block_content->delete();
+  }
+
+  // Delete entityqueue
+  $queue_id = 'homepage_promotion_cards';
+  $entity_queue = \Drupal::entityTypeManager()->getStorage('entity_queue')->load($queue_id);
+  if ($entity_queue) {
+    $entity_queue->delete();
+  }
+
+  // Delete view
+  \Drupal::service('config.factory')->getEditable('views.view.sector_entityqueues_blocks')->delete();
+
+  $blockTypeMachineName = 'sector_promo_magnet';
+
+  // Load the block content type entity.
+  $blockType = BlockContentType::load($blockTypeMachineName);
+
+  if ($blockType) {
+    // Delete the block content type.
+    $blockType->delete();
+  }
+  else {
+    \Drupal::logger('sector_promo_magnet')->error(t('The block type %type could not be found.', array('%type' => $blockTypeMachineName)));
+  }
+
+}
