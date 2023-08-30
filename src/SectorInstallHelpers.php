@@ -7,6 +7,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\node\Entity\Node;
 use Drupal\search_api\Entity\Index;
+use Drupal\entityqueue\Entity\EntitySubqueue;
 
 class SectorInstallHelpers implements ContainerInjectionInterface {
 
