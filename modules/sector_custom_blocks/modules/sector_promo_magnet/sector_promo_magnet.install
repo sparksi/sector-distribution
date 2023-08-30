@@ -11,6 +11,11 @@ function sector_promo_magnet_install() {
   // Load the entity queue.
   $entity_queue = \Drupal::entityTypeManager()->getStorage('entity_queue')->load($queue_id);
 
+
+  if (!\Drupal::isConfigSyncing()) {
+    \Drupal::service('default_content.importer')->importContent('sector_promo_magnet');
+  }
+
   if ($entity_queue) {
     $block_ids = [
       '58a7f20e-651c-4821-b5f8-0b469a5d0291',
@@ -21,9 +26,6 @@ function sector_promo_magnet_install() {
     $subqueue = EntitySubqueue::load($queue_id);
 
     foreach($block_ids as $block_id) {
-
-      // Load the entity you want to add to the queue (replace 'your_entity_type' and 'your_entity_id' with actual values).
-      //$block_content = BlockContent::loadByProperties(['uuid' => $block_id]);
       $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $block_id);
 
       if ($block_content) {
