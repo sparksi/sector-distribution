@@ -4,7 +4,17 @@ use Drupal\block_content\Entity\BlockContent;
 use Drupal\block_content\Entity\BlockContentType;
 use Drupal\entityqueue\Entity\EntitySubqueue;
 
-function sector_promo_magnet_install() {
+
+function sector_promo_magnet_install_tasks() {
+  return [
+    'sector_promo_magnet_setup_queue' => [
+      'display_name' => t('Add blocks to entityqueue'),
+      'type' => 'default',
+    ],
+  ];
+}
+
+function sector_promo_magnet_setup_queue() {
   // The ID of the entity queue you want to add the entity to.
   $queue_id = 'homepage_promotion_cards';
 
@@ -38,8 +48,6 @@ function sector_promo_magnet_install() {
   else {
     \Drupal::logger('sector_promo_magnet')->error('Entity queue not found.');
   }
-
-
 }
 
 
