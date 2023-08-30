@@ -6,7 +6,7 @@
 //use Drupal\search_api\Entity\Index;
 //use Drupal\node\Entity\Node;
 use Drupal\sector\SectorInstallHelpers;
-use Drupal\sector\SectorPromoMagnetHelpers;
+use Drupal\sector_custom_blocks\SectorPromoMagnetHelpers;
 
 /**
  * Implements hook_install_tasks().
