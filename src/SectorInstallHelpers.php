@@ -78,9 +78,9 @@ class SectorInstallHelpers implements ContainerInjectionInterface {
 
     if ($entity_queue) {
         $block_ids = [
-            '58a7f20e-651c-4821-b5f8-0b469a5d0291',
             '26441a99-98ec-4b96-a85b-81255116541b',
-            '4adddefb-9f1f-4ee5-af7d-a12b257ddf34'
+            '4adddefb-9f1f-4ee5-af7d-a12b257ddf34',
+            '58a7f20e-651c-4821-b5f8-0b469a5d0291',
         ];
 
         $subqueue = EntitySubqueue::load($queue_id);
