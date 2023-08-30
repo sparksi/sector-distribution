@@ -40,24 +40,7 @@ third_party_settings:
                 label: hidden
                 settings: {  }
                 third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          a457a157-ed1a-42de-a7bd-a1853b3a749a:
-            uuid: a457a157-ed1a-42de-a7bd-a1853b3a749a
-            region: content
-            configuration:
-              id: 'field_block:block_content:sector_promo_magnet:field_custom_icon'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_entity_view
-                label: above
-                settings:
-                  view_mode: default
-                  link: false
-                third_party_settings: {  }
-            weight: 1
+            weight: -1
             additional: {  }
           12017d9a-31be-4cfb-9798-6703d4cfd567:
             uuid: 12017d9a-31be-4cfb-9798-6703d4cfd567
@@ -72,7 +55,7 @@ third_party_settings:
                 label: above
                 settings: {  }
                 third_party_settings: {  }
-            weight: 2
+            weight: -3
             additional: {  }
           262cff2b-21d9-4b8c-9c17-cef869235df6:
             uuid: 262cff2b-21d9-4b8c-9c17-cef869235df6
@@ -92,7 +75,7 @@ third_party_settings:
                   rel: ''
                   target: ''
                 third_party_settings: {  }
-            weight: 3
+            weight: 2
             additional: {  }
           73597293-d84c-4acd-acb6-731432b3fc15:
             uuid: 73597293-d84c-4acd-acb6-731432b3fc15
@@ -108,7 +91,24 @@ third_party_settings:
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-            weight: 4
+            weight: 1
+            additional: {  }
+          a457a157-ed1a-42de-a7bd-a1853b3a749a:
+            uuid: a457a157-ed1a-42de-a7bd-a1853b3a749a
+            region: content
+            configuration:
+              id: 'field_block:block_content:sector_promo_magnet:field_custom_icon'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: -2
             additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
@@ -118,6 +118,8 @@ third_party_settings:
       denylisted_blocks: {  }
       allowlisted_blocks: {  }
       restricted_categories: {  }
+_core:
+  default_config_hash: 4eR4WJbOfGPMqJX40-8y2mB7nGfKL0swiDNkDddOER8
 id: block_content.sector_promo_magnet.card_lg
 targetEntityType: block_content
 bundle: sector_promo_magnet
