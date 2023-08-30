@@ -4,17 +4,20 @@ use Drupal\block_content\Entity\BlockContent;
 use Drupal\block_content\Entity\BlockContentType;
 use Drupal\entityqueue\Entity\EntitySubqueue;
 
-function sector_promo_magnet_install() {
+function sector_promo_magnet_install_tasks_alter(&$tasks, $install_state) {
+
+  // Replace the "Choose language" installation task provided by Drupal core
+  // with a custom callback function defined by this installation profile.
+  $tasks['install_select_locale']['function'] = 'setup_entityqueue';
+}
+
+
+function setup_entityqueue() {
   // The ID of the entity queue you want to add the entity to.
   $queue_id = 'homepage_promotion_cards';
 
   // Load the entity queue.
   $entity_queue = \Drupal::entityTypeManager()->getStorage('entity_queue')->load($queue_id);
-
-
-  if (!\Drupal::isConfigSyncing()) {
-    \Drupal::service('default_content.importer')->importContent('sector_promo_magnet');
-  }
 
   if ($entity_queue) {
     $block_ids = [
