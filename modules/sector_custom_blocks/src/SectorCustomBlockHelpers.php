@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\sector_custom_blocks;
+namespace Drupal\sector;
 
 use Drupal\Core\DependencyInjection\ContainerInjectionInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\entityqueue\Entity\EntitySubqueue;
 
-class SectorPromoMagnetHelpers implements ContainerInjectionInterface {
+class SectorCustomBlockHelpers implements ContainerInjectionInterface {
 
   /**
    * The Config factory service.

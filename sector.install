@@ -6,7 +6,7 @@
 //use Drupal\search_api\Entity\Index;
 //use Drupal\node\Entity\Node;
 use Drupal\sector\SectorInstallHelpers;
-use Drupal\sector_custom_blocks\SectorPromoMagnetHelpers;
+use Drupal\sector\SectorCustomBlockHelpers;
 
 /**
  * Implements hook_install_tasks().
@@ -88,5 +88,5 @@ function sector_regenerate_node_aliases() {
 }
 
 function sector_setup_custom_blocks() {
-  SectorPromoMagnetHelpers::setupEntityqueue();
+  SectorCustomBlockHelpers::setupEntityqueue();
 }

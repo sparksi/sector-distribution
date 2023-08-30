@@ -4,14 +4,8 @@ use Drupal\block_content\Entity\BlockContent;
 use Drupal\block_content\Entity\BlockContentType;
 use Drupal\entityqueue\Entity\EntitySubqueue;
 
-function sector_promo_magnet_install_tasks_alter(&$tasks, $install_state) {
 
-  // Replace the "Choose language" installation task provided by Drupal core
-  // with a custom callback function defined by this installation profile.
-  $tasks['install_select_locale']['function'] = 'setup_entityqueue';
-}
-
-
+/*
 function setup_entityqueue() {
   // The ID of the entity queue you want to add the entity to.
   $queue_id = 'homepage_promotion_cards';
@@ -46,7 +40,7 @@ function setup_entityqueue() {
 
 
 }
-
+*/
 
 function sector_promo_magnet_uninstall() {
 
