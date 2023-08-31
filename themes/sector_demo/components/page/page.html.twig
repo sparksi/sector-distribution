@@ -16,10 +16,13 @@ set layout_classes = [
 
 <div {{ content_attributes.addClass(layout_classes) }}>
 
-    {% if page.notices %}
+  {% if page.notices %}
+    <div role="complementary">
       {{ page.notices }}
-    {% endif %}
+    </div>
+  {% endif %}
 
+  <header>
     {% if page.header_pre %}
       {{ page.header_pre }}
     {% endif %}
@@ -39,7 +42,9 @@ set layout_classes = [
     {% if page.hero_post %}
       {{ page.hero_post }}
     {% endif %}
+  </header>
 
+  <main>
     {% if page.help %}
       {{ page.help }}
     {% endif %}
@@ -57,15 +62,18 @@ set layout_classes = [
     {% if page.content_post %}
       {{ page.content_post }}
     {% endif %}
+  </main>
 
   {# Footer regions #}
-  {% if page.footer_pre %}
-    {{ page.footer_pre }}
-  {% endif %}
-  {% if page.footer %}
-    {{ page.footer }}
-  {% endif %}
-  {% if page.footer_post %}
-    {{ page.footer_post }}
-  {% endif %}
+  <footer>
+    {% if page.footer_pre %}
+      {{ page.footer_pre }}
+    {% endif %}
+    {% if page.footer %}
+      {{ page.footer }}
+    {% endif %}
+    {% if page.footer_post %}
+      {{ page.footer_post }}
+    {% endif %}
+  </footer>
 </div>
