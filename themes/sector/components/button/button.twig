@@ -19,7 +19,9 @@
   ]|merge(utility_classes ? utility_classes : [])
 %}
 {% set button_value = attributes.value ? attributes.value : null %}
-<button{{ attributes.removeAttribute('value').addClass(input_classes) }}>{{ button_value }}{{ children }}</button>
+{% if children or button_value %}
+  <button{{ attributes.removeAttribute('value').addClass(input_classes) }}>{{ button_value }}{{ children }}</button>
+{% endif %}
 {% if libraries %}
   {% for library in libraries %}
     {{ attach_library(library) }}
