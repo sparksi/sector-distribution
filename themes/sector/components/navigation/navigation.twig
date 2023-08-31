@@ -16,7 +16,7 @@
 {% set nav_classes = [ 'menu' ]|merge(utility_classes ? utility_classes : []) %}
 
 {% if items %}
-  <nav {{ attributes.addClass(nav_classes) }}>
+  <nav {{ attributes.addClass(nav_classes) }} aria-label="{{ id }}" id="{{ 'nav-' ~ id }}">
   {% if render_toggle %}
     <button aria-expanded="false" class="navigation__toggle" type="button" aria-controls="{{ id }}">
       <span class="sr-only">Toggle navigation</span>
@@ -55,7 +55,7 @@
 
             {% if item.below %}
               {{ include('sector:subnav', {
-                id: aria_id,
+                id: 'sub-nav-' ~ aria_id,
                 utility_classes: [ 'menu__menu', 'hidden' ],
                 items: item.below,
                 render_submenu_toggle: render_submenu_toggle,
