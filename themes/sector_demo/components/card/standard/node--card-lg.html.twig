@@ -6,17 +6,20 @@
 #}
 <div class="@container/card">
 {{ include("sector_demo:card-standard", {
+    entity: 'node',
     libraries: ['sector_demo/' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class ],
-    title_classes: [ 'text-xl', 'md:text-2xl', 'font-custom-alt', 'font-semibold', 'bg-white px-4 py-5 sm:px-6' ],
+    title_classes: [ 'text-xl', 'md:text-2xl', 'font-custom-alt', 'font-semibold', 'bg-transparent', 'px-4 py-5 sm:px-6' ],
     title_link_attributes: title_link_attributes.setAttribute('rel', 'bookmark'),
-    title_link_classes: ['hover:text-sky-500', 'focus-visible:text-sky-500'],
+    title_link_classes: ['hover:text-sky-700', 'focus-visible:text-ss-primary'],
     utility_classes: [
         'card',
         'card--standard',
         'overflow-hidden',
         'bg-white',
-        'sm:rounded-lg',
-        'sm:shadow'
+        'rounded-lg',
+        'shadow',
+        'dark:bg-gray-800',
+        'dark:text-white'
     ],
     content_classes: [
         'px-4 pb-5 sm:p-6 sm:pt-0'

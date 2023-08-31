@@ -7,8 +7,6 @@ props:
   properties:
     attributes:
       type: Drupal\Core\Template\Attribute
-    caption:
-      type: string
     sticky:
       type: boolean
 
@@ -23,3 +21,11 @@ slots:
     title: Table empty
   footer:
     title: View footer
+  table:
+    title: Table
+  caption:
+    title: Table caption
+  colgroup:
+    title: Table colgroup
+  body:
+    title: Table body

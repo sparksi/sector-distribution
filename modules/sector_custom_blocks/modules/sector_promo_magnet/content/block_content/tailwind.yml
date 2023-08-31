@@ -1,0 +1,37 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 4adddefb-9f1f-4ee5-af7d-a12b257ddf34
+  bundle: sector_promo_magnet
+  default_langcode: en
+  depends:
+    af32c292-d72a-45c0-8e78-6fa671797808: media
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Tailwind promo'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>Build your new frontend even faster with Sector 10 and Tailwind.</p>'
+      format: basic_html
+      summary: ''
+  field_custom_icon:
+    -
+      entity: af32c292-d72a-45c0-8e78-6fa671797808
+  field_link:
+    -
+      uri: 'https://tailwindcss.com/'
+      title: 'Find out more on tailwindcss.com'
+      options: {  }
+  field_title:
+    -
+      value: 'Introducing Tailwind'

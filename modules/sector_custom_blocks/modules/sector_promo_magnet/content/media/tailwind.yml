@@ -1,0 +1,39 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: af32c292-d72a-45c0-8e78-6fa671797808
+  bundle: vector
+  default_langcode: en
+  depends:
+    e5c07b66-c20a-4e95-ba3e-d5ee51b0b2d3: file
+default:
+  revision_user:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: tailwind.svg
+  created:
+    -
+      value: 1692925782
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_media_image:
+    -
+      entity: e5c07b66-c20a-4e95-ba3e-d5ee51b0b2d3
+      alt: 'Tailwind Icon'
+      title: ''
+      width: 51
+      height: 51

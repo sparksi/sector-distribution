@@ -1,0 +1,1 @@
+.card-icon{--icon-size: 3rem}@media (min-width: 1280px){.card-icon{--icon-size: 4.5rem}}.card-icon .media img{width:var(--icon-size, 24px);height:var(--icon-size, 24px)}

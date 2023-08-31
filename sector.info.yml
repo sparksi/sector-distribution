@@ -26,6 +26,7 @@ install:
   - drupal:history
   - drupal:image
   - drupal:link
+  - material_icons:material_icons
   - drupal:media
   - drupal:media_library
   - drupal:menu_link_content

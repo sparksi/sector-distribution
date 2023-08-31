@@ -1,0 +1,8 @@
+uuid: 84fc7ded-1877-48d7-9e7b-478555c9e088
+langcode: en
+status: true
+dependencies: {  }
+id: sector_promo_magnet
+label: 'Sector promo magnet'
+revision: 0
+description: 'A simple promotional block that can be displayed in a sidebar or a grid.  '
