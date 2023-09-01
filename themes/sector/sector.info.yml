@@ -63,3 +63,4 @@ libraries-override:
         css/components/github.module.css: false
         css/components/reset-appearance.module.css: false
   core/picturefill: false
+  material_icons/sharp: false
