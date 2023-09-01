@@ -2,7 +2,6 @@
 
 .ck-editor__main {
   all: initial;
-
   @apply @container/prose;
 }
 
@@ -14,7 +13,7 @@
 
 .ck-content.ck-editor__editable {
   max-width: none;
-  height: var(--wysiwyg-height, 15em);
+  min-height: var(--wysiwyg-min-height, 15em);
 
   .ck.ck-editor__main > & {
     @apply dark:bg-neutral-950 text-neutral-950 dark:text-neutral-50;
@@ -27,7 +26,7 @@
   )
   + .ck
   .ck-editor__editable {
-  --wysiwyg-height: 25em;
+  --wysiwyg-min-height: 25em;
 }
 
 .ck .drupal-media {
