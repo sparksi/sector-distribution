@@ -2,58 +2,18 @@ uuid: 4aa646d3-53a1-451d-8ae5-c441e1ee3759
 langcode: en
 status: true
 dependencies:
-  config:
-    - filter.format.sector_basic_html
-    - filter.format.sector_full_html
-    - filter.format.sector_restricted_basic_html
-    - media.type.audio
-    - media.type.document
-    - media.type.image
-    - media.type.remote_video
-    - media.type.vector
-    - media.type.video
-    - node.type.sector_news
-    - node.type.sector_page
-    - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - file
     - filter
     - media
     - node
-    - sector_workflow
-_core:
-  default_config_hash: n63jmitk2cxcY2YMrEIu4x1PLYPj4K4ks6dY2b09XZ0
 id: content_moderator
 label: 'Content moderator'
 weight: -7
 is_admin: null
 permissions:
-  - 'access files overview'
-  - 'access my edits page'
-  - 'access needs review page'
-  - 'access revision history page'
-  - 'administer nodes'
   - 'delete all revisions'
-  - 'delete any audio media'
-  - 'delete any document media'
-  - 'delete any file'
-  - 'delete any image media'
-  - 'delete any media'
-  - 'delete any remote_video media'
-  - 'delete any sector_news content'
-  - 'delete any sector_page content'
-  - 'delete any vector media'
-  - 'delete any video media'
   - 'revert all revisions'
-  - 'revert sector_news revisions'
-  - 'revert sector_page revisions'
-  - 'use sector_editorial transition feedback'
-  - 'use sector_editorial transition publish'
-  - 'use sector_editorial transition unpublish'
-  - 'use text format sector_basic_html'
-  - 'use text format sector_full_html'
-  - 'use text format sector_restricted_basic_html'
-  - 'view all media revisions'
-  - 'view sector_news revisions'
-  - 'view sector_page revisions'
+  - 'delete any file'
+  - 'access files overview'

@@ -24,7 +24,6 @@ permissions:
   - 'access content overview'
   - 'access contextual links'
   - 'access media overview'
-  - 'access my edits page'
   - 'access toolbar'
   - 'administer menu'
   - 'administer meta tags'
