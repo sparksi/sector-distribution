@@ -1,17 +1,20 @@
-uuid: 69fb8968-b5b2-49fe-9ecc-ca63b60dd7ec
+uuid: b7f2dfd6-3af7-4f6d-81d3-24bc131df6e6
 langcode: en
 status: true
 dependencies:
   config:
     - views.view.sector_search_sitewide
   module:
+    - system
     - views
   theme:
     - sector
+_core:
+  default_config_hash: oFumeaK2zCOhdsMIkulPV6rxL5PXGEU9gYJQlapYBEI
 id: sector_views_block__sector_search_sitewide_sector_page
 theme: sector
 region: content
-weight: 0
+weight: -12
 provider: null
 plugin: 'views_block:sector_search_sitewide-sector_page'
 settings:
@@ -21,4 +24,8 @@ settings:
   provider: views
   views_label: ''
   items_per_page: none
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /node/9

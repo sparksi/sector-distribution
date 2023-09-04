@@ -1,0 +1,19 @@
+uuid: cf66fd5d-781f-4ce0-9d82-032f8fda3aa9
+langcode: en
+status: true
+dependencies: {  }
+id: node
+label: Content
+tags:
+  canonical_url: '[node:url]'
+  description: '[node:summary]'
+  og_description: "\t[node:summary]"
+  og_site_name: '[site:name]'
+  og_title: '[node:title]'
+  og_type: website
+  og_url: '[node:url]'
+  title: '[node:title] | [site:name]'
+  twitter_cards_description: '[node:summary]'
+  twitter_cards_page_url: '[node:url]'
+  twitter_cards_title: '[node:title] | [site:name]'
+  twitter_cards_type: summary

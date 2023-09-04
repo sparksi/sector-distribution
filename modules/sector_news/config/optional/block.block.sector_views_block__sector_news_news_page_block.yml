@@ -1,4 +1,4 @@
-uuid: 5fd0df8e-d5cf-47c1-90f3-bdcbfc2783c4
+uuid: d4416147-46ec-461a-944b-60264d04bbd4
 langcode: en
 status: true
 dependencies:
@@ -16,7 +16,7 @@ third_party_settings:
 id: sector_views_block__sector_news_news_page_block
 theme: sector
 region: content
-weight: 0
+weight: -13
 provider: null
 plugin: 'views_block:sector_news-news_page_block'
 settings:
@@ -30,4 +30,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /node/13
+    pages: /node/12

@@ -1,0 +1,37 @@
+uuid: ded1f2bb-1cbb-444a-b132-d66483e284b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_updated
+  module:
+    - datetime
+    - fieldblock
+    - term_condition
+  theme:
+    - sector
+id: sector_last_updated
+theme: sector_demo
+region: content
+weight: -15
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Sector › Page: Last updated'
+  label_display: visible
+  provider: fieldblock
+  label_from_field: true
+  field_name: field_last_updated
+  formatter_id: datetime_default
+  formatter_settings:
+    timezone_override: ''
+    format_type: sector_date_short
+visibility:
+  term:
+    id: term
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    term_uuids:
+      - cb1a21ce-f835-4682-b027-34f80c86c4e8

@@ -1,4 +1,4 @@
-uuid: ebff4fea-b3ae-457b-8087-6ea019cacb09
+uuid: 7b22e6cd-11c4-4075-bb81-b3c5bb79eae2
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,12 @@ dependencies:
     - system
   theme:
     - sector
-id: sector_sectorsearchsitewidesummary
+_core:
+  default_config_hash: nooAA8UtfiDr9JWRvwIdhEq9rcU-H-3Cw1lVj5kmAcU
+id: sector_sector_demosearchsitewidesummary
 theme: sector
 region: content
-weight: -12
+weight: -16
 provider: null
 plugin: 'facets_summary_block:sector_search_sitewide_summary'
 settings:

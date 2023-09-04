@@ -1,0 +1,21 @@
+uuid: afce6961-88b2-4c05-8069-2bc09fa3c210
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.sector_page
+  module:
+    - metatag
+id: node.sector_page.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: sector_page
+label: 'Meta tags'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

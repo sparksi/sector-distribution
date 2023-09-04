@@ -1,4 +1,4 @@
-uuid: 7f1d97b5-442b-4e22-9098-3cbdebfd6875
+uuid: d02a6978-359c-4fb7-bbd2-eb28ae62076c
 langcode: en
 status: true
 dependencies:
@@ -15,7 +15,7 @@ third_party_settings:
 id: sector_viewgroup
 theme: sector
 region: content
-weight: 0
+weight: -11
 provider: null
 plugin: 'block_group:view_group'
 settings:

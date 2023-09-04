@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_content_options
     - node.type.sector_page
     - taxonomy.vocabulary.sector_content_settings
+  content:
+    - 'taxonomy_term:sector_content_settings:cb1a21ce-f835-4682-b027-34f80c86c4e8'
 id: node.sector_page.field_content_options
 field_name: field_content_options
 entity_type: node
@@ -14,7 +16,9 @@ label: 'Content options'
 description: ''
 required: false
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: cb1a21ce-f835-4682-b027-34f80c86c4e8
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'

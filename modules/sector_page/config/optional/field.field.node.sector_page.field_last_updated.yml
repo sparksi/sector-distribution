@@ -1,0 +1,24 @@
+uuid: 4e65ec7e-5887-471f-ad24-b13663707e14
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_updated
+    - node.type.sector_page
+  module:
+    - datetime
+id: node.sector_page.field_last_updated
+field_name: field_last_updated
+entity_type: node
+bundle: sector_page
+label: 'Last updated'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

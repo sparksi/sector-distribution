@@ -8,6 +8,10 @@ dependencies:
     - field.field.node.sector_page.field_content_options
     - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
+    - field.field.node.sector_page.field_last_updated
+    - field.field.node.sector_page.field_meta_tags
+    - field.field.node.sector_page.field_related_documents
+    - field.field.node.sector_page.field_related_links
     - field.field.node.sector_page.field_subtitle
     - field.field.node.sector_page.field_text_placement
     - field.field.node.sector_page.field_title_caption
@@ -20,8 +24,6 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-_core:
-  default_config_hash: TLdo9gb3OCzvzgN1Iwt2BsXTqApsm-OrEI-Pykj4w5s
 id: node.sector_page.list_item_lg
 targetEntityType: node
 bundle: sector_page
@@ -56,6 +58,10 @@ hidden:
   body: true
   field_content_options: true
   field_image_hero: true
+  field_last_updated: true
+  field_meta_tags: true
+  field_related_documents: true
+  field_related_links: true
   field_subtitle: true
   field_title_caption: true
   search_api_excerpt: true
