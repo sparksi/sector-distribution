@@ -5,42 +5,26 @@ use Drupal\block_content\Entity\BlockContentType;
 use Drupal\entityqueue\Entity\EntitySubqueue;
 
 
-/*
-function setup_entityqueue() {
-  // The ID of the entity queue you want to add the entity to.
-  $queue_id = 'homepage_promotion_cards';
+function sector_promo_magnet_install() {
+  $editor_role_object = Role::load('content_editor');
+  if($editor_role_object) {
+    $editor_role_object->grantPermission('delete any sector_promo_magnet block content');
+    $editor_role_object->grantPermission('create sector_promo_magnet block content');
+    $editor_role_object->grantPermission('delete any sector_promo_magnet block content');
+    $editor_role_object->grantPermission('edit any sector_promo_magnet block content');
+    $editor_role_object->grantPermission('update homepage_promotion_cards entityqueue');
+    $editor_role_object->grantPermission('revert any sector_promo_magnet block content revisions');
+    $editor_role_object->grantPermission('view any sector_promo_magnet block content history');
 
-  // Load the entity queue.
-  $entity_queue = \Drupal::entityTypeManager()->getStorage('entity_queue')->load($queue_id);
-
-  if ($entity_queue) {
-    $block_ids = [
-      '58a7f20e-651c-4821-b5f8-0b469a5d0291',
-      '26441a99-98ec-4b96-a85b-81255116541b',
-      '4adddefb-9f1f-4ee5-af7d-a12b257ddf34'
-    ];
-
-    $subqueue = EntitySubqueue::load($queue_id);
-
-    foreach($block_ids as $block_id) {
-      $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $block_id);
-
-      if ($block_content) {
-        $subqueue->addItem($block_content);
-        $subqueue->save();
-      }
-      else {
-        \Drupal::logger('sector_promo_magnet')->error('Entity not found.');
-      }
-    }
-  }
-  else {
-    \Drupal::logger('sector_promo_magnet')->error('Entity queue not found.');
+    $editor_role_object->save();
   }
 
-
+  $moderator_role_object = Role::load('content_moderator');
+  if($moderator_role_object) {
+    $moderator_role_object->grantPermission('delete any sector_promo_magnet block content revisions');
+    $moderator_role_object->save();
+  }
 }
-*/
 
 function sector_promo_magnet_uninstall() {
 
@@ -56,7 +40,7 @@ function sector_promo_magnet_uninstall() {
   }
 
   // Delete entityqueue
-  $queue_id = 'homepage_promotion_cards';
+  $queue_id = 'homepage_promo_magnets';
   $entity_queue = \Drupal::entityTypeManager()->getStorage('entity_queue')->load($queue_id);
   if ($entity_queue) {
     $entity_queue->delete();

@@ -71,7 +71,7 @@ class SectorInstallHelpers implements ContainerInjectionInterface {
   // I wanted to put this in sector_custom_blocks module :-(
   public static function setupCustomBlockQueue() {
 
-    $queue_id = 'homepage_promotion_cards';
+    $queue_id = 'homepage_promo_magnets';
 
     // Load the entity queue.
     $entity_queue = \Drupal::entityTypeManager()->getStorage('entity_queue')->load($queue_id);

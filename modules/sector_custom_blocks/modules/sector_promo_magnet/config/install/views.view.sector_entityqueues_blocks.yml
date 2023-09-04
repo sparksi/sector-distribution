@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.block_content.card_lg
-    - entityqueue.entity_queue.homepage_promotion_cards
+    - entityqueue.entity_queue.homepage_promo_magnets
   module:
     - block_content
     - entityqueue
@@ -210,7 +210,7 @@ display:
           entity_type: block_content
           plugin_id: entity_queue
           required: true
-          limit_queue: homepage_promotion_cards
+          limit_queue: homepage_promo_magnets
       css_class: container
       header: {  }
       footer: {  }
@@ -221,7 +221,7 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags:
-        - 'config:entityqueue.entity_queue.homepage_promotion_cards'
+        - 'config:entityqueue.entity_queue.homepage_promo_magnets'
         - entity_field_info
         - views_data
   homepage_promo_cards:
@@ -238,6 +238,6 @@ display:
         - 'languages:language_content'
         - 'languages:language_interface'
       tags:
-        - 'config:entityqueue.entity_queue.homepage_promotion_cards'
+        - 'config:entityqueue.entity_queue.homepage_promo_magnets'
         - entity_field_info
         - views_data
