@@ -11,7 +11,7 @@ dependencies:
     - sector
 _core:
   default_config_hash: nooAA8UtfiDr9JWRvwIdhEq9rcU-H-3Cw1lVj5kmAcU
-id: sector_sector_searchsitewidesummary
+id: sector_sectorsearchsitewidesummary
 theme: sector
 region: content
 weight: -16
