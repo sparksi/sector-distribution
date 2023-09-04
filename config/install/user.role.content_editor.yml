@@ -12,7 +12,6 @@ dependencies:
     - metatag
     - node
     - path
-    - sector_workflow
     - system
     - taxonomy
     - toolbar
@@ -27,6 +26,8 @@ permissions:
   - 'access media overview'
   - 'access my edits page'
   - 'access toolbar'
+  - 'administer menu'
+  - 'administer meta tags'
   - 'administer url aliases'
   - 'create terms in tags'
   - 'create url aliases'
