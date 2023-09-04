@@ -8,6 +8,8 @@ dependencies:
   module:
     - block_content
     - entityqueue
+_core:
+  default_config_hash: 7BWPWcE9vwGca774_Fe3uhohj4yoIPMnHuuSewdXNrU
 id: sector_entityqueues_blocks
 label: 'Sector › Entityqueues › Blocks'
 module: views
@@ -110,7 +112,21 @@ display:
         type: tag
         options: {  }
       empty: {  }
-      sorts: {  }
+      sorts:
+        entityqueue_relationship:
+          id: entityqueue_relationship
+          table: block_content_field_data
+          field: entityqueue_relationship
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: block_content
+          plugin_id: entity_queue_position
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       arguments: {  }
       filters:
         reusable:
@@ -210,10 +226,11 @@ display:
         - views_data
   homepage_promo_cards:
     id: homepage_promo_cards
-    display_title: Block
+    display_title: 'Homepage Promo Cards'
     display_plugin: block
     position: 1
     display_options:
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
