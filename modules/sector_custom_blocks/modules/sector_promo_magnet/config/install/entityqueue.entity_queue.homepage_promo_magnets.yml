@@ -4,8 +4,6 @@ status: true
 dependencies:
   module:
     - block_content
-_core:
-  default_config_hash: iw4N42WUNPl1HNHzbbtYwAfV2u_YlyUvidfJABbl_ew
 id: homepage_promo_magnets
 label: 'Homepage promo magnets'
 handler: simple

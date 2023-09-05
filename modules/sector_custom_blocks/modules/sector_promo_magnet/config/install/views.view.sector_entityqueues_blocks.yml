@@ -8,8 +8,6 @@ dependencies:
   module:
     - block_content
     - entityqueue
-_core:
-  default_config_hash: 7BWPWcE9vwGca774_Fe3uhohj4yoIPMnHuuSewdXNrU
 id: sector_entityqueues_blocks
 label: 'Sector › Entityqueues › Blocks'
 module: views
@@ -24,7 +22,7 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Home Promo Cards'
+      title: 'Home Promo Magnets'
       fields:
         info:
           id: info
@@ -44,7 +42,7 @@ display:
             make_link: false
             path: ''
             absolute: false
-            external: false
+            external: false./
             replace_spaces: false
             path_case: none
             trim_whitespace: false
@@ -224,9 +222,9 @@ display:
         - 'config:entityqueue.entity_queue.homepage_promo_magnets'
         - entity_field_info
         - views_data
-  homepage_promo_cards:
-    id: homepage_promo_cards
-    display_title: 'Homepage Promo Cards'
+  homepage_promo_magnets:
+    id: homepage_promo_magnets
+    display_title: 'Homepage Promo Magnets'
     display_plugin: block
     position: 1
     display_options:
