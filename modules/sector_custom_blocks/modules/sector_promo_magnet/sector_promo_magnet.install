@@ -13,7 +13,7 @@ function sector_promo_magnet_install() {
     $editor_role_object->grantPermission('create sector_promo_magnet block content');
     $editor_role_object->grantPermission('delete any sector_promo_magnet block content');
     $editor_role_object->grantPermission('edit any sector_promo_magnet block content');
-    $editor_role_object->grantPermission('update homepage_promotion_cards entityqueue');
+    $editor_role_object->grantPermission('update homepage_promo_magnets entityqueue');
     $editor_role_object->grantPermission('revert any sector_promo_magnet block content revisions');
     $editor_role_object->grantPermission('view any sector_promo_magnet block content history');
 
