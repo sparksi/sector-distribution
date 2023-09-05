@@ -13,14 +13,14 @@ dependencies:
 third_party_settings:
   block_class:
     classes: 'py-10 lg:py-24 bg-gray-100 dark:bg-gray-900'
-id: sector_entityqueues_blocks_homepage_promo_cards
+id: sector_entityqueues_blocks_homepage_promo_magnets
 theme: sector_demo
 region: content_pre
 weight: 0
 provider: null
-plugin: 'views_block:sector_entityqueues_blocks-homepage_promo_cards'
+plugin: 'views_block:sector_entityqueues_blocks-homepage_promo_magnets'
 settings:
-  id: 'views_block:sector_entityqueues_blocks-homepage_promo_cards'
+  id: 'views_block:sector_entityqueues_blocks-homepage_promo_magnets'
   label: ''
   label_display: '0'
   provider: views
