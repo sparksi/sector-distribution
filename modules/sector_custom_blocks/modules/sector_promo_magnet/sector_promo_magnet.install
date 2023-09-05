@@ -1,8 +1,9 @@
 <?php
-use Drupal\entityqueue\Entity\EntityQueueItem;
 use Drupal\block_content\Entity\BlockContent;
 use Drupal\block_content\Entity\BlockContentType;
+use Drupal\entityqueue\Entity\EntityQueueItem;
 use Drupal\entityqueue\Entity\EntitySubqueue;
+use Drupal\user\Entity\User;
 
 
 function sector_promo_magnet_install() {
