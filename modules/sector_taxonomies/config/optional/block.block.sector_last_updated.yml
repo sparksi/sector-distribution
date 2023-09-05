@@ -10,6 +10,9 @@ dependencies:
     - term_condition
   theme:
     - sector
+third_party_settings:
+  block_class:
+    classes: mb-4
 id: sector_last_updated
 theme: sector_demo
 region: content
