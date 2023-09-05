@@ -7,22 +7,13 @@ dependencies:
     - field.field.node.sector_page.field_content_options
     - field.field.node.sector_page.field_display_options
     - field.field.node.sector_page.field_image_hero
-    - field.field.node.sector_page.field_last_updated
-    - field.field.node.sector_page.field_meta_tags
-    - field.field.node.sector_page.field_related_documents
-    - field.field.node.sector_page.field_related_links
     - field.field.node.sector_page.field_subtitle
     - field.field.node.sector_page.field_text_placement
     - field.field.node.sector_page.field_title_caption
     - node.type.sector_page
-    - workflows.workflow.sector_editorial
   module:
-    - content_moderation
-    - datetime
     - field_group
-    - linkit
     - media_library
-    - metatag
     - path
     - text
 third_party_settings:
@@ -36,7 +27,7 @@ third_party_settings:
       label: 'Display options'
       region: content
       parent_name: ''
-      weight: 3
+      weight: 4
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -53,38 +44,7 @@ third_party_settings:
       label: 'Title surrounds'
       region: content
       parent_name: ''
-      weight: 1
-      format_type: details
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        open: false
-        description: ''
-        required_fields: true
-    group_metadata:
-      children:
-        - field_last_updated
-      label: Metadata
-      region: content
-      parent_name: ''
-      weight: 2
-      format_type: details
-      format_settings:
-        classes: ''
-        show_empty_fields: false
-        id: ''
-        open: false
-        description: ''
-        required_fields: true
-    group_related_content:
-      children:
-        - field_related_documents
-        - field_related_links
-      label: 'Related content'
-      region: content
-      parent_name: ''
-      weight: 5
+      weight: 3
       format_type: details
       format_settings:
         classes: ''
@@ -102,7 +62,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 4
+    weight: 5
     region: content
     settings:
       rows: 9
@@ -124,7 +84,7 @@ content:
     third_party_settings: {  }
   field_display_options:
     type: options_buttons
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -134,37 +94,6 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
-  field_last_updated:
-    type: datetime_default
-    weight: 8
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  field_meta_tags:
-    type: metatag_firehose
-    weight: 12
-    region: content
-    settings:
-      sidebar: true
-      use_details: true
-    third_party_settings: {  }
-  field_related_documents:
-    type: media_library_widget
-    weight: 12
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
-  field_related_links:
-    type: linkit
-    weight: 13
-    region: content
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-      linkit_profile: sector_linkit
-      linkit_auto_link_text: true
     third_party_settings: {  }
   field_subtitle:
     type: text_textarea
