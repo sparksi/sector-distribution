@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 85f38fe8-7e53-4dc4-817a-325330aeaa3d
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    fcdd9f0c-ffd0-4008-aed8-78947c3e23f5: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Section B'
+  menu_name:
+    -
+      value: main-menu
+  link:
+    -
+      target_uuid: fcdd9f0c-ffd0-4008-aed8-78947c3e23f5
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -49
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  id:
+    -
+      value: 8

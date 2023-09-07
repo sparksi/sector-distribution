@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: cf6a24fd-dda3-47e7-88c7-b29ed1f2782d
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Sector Sample Block (demo only) - Copyright'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: '<p>&copy; 2021 - Sector is brought to you by <a href="https://www.sparksinteractive.co.nz/">Sparks Interactive</a></p>'
+      format: basic_html
+      summary: ''
+  id:
+    -
+      value: 40

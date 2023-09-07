@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 3aa78e0e-4475-480d-9cb5-e2bdbafb2b43
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Sector Sample Block - Search help'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: |
+        <ul class="list-unstyled list--basic-links">
+        	<li><a href="/">Sitewide search</a></li>
+        	<li><a href="/">News archive</a></li>
+        	<li><a href="/">Resource archive</a></li>
+        	<li><a href="/">Other links</a></li>
+        </ul>
+      format: basic_html
+      summary: ''
+  id:
+    -
+      value: 31

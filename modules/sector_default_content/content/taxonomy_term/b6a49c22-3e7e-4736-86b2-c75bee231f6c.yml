@@ -1,0 +1,43 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: b6a49c22-3e7e-4736-86b2-c75bee231f6c
+  bundle: copyright_licensing
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: 'Public Domain Work'
+  weight:
+    -
+      value: 8
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
+  field_cc_code:
+    -
+      value: PD
+      format: teaser_display_text
+  field_cc_licence_long:
+    -
+      value: 'Public Domain'
+      format: teaser_display_text
+  field_copyright_link:
+    -
+      uri: 'https://creativecommons.org/publicdomain/mark/1.0/'
+      title: 'Public domain'
+      options: {  }
+  tid:
+    -
+      value: 20

@@ -1,0 +1,43 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 03b6f403-dc86-49a8-87be-7d796191633c
+  bundle: copyright_licensing
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Attribution-NonCommercial-ShareAlike
+  weight:
+    -
+      value: 4
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
+  field_cc_code:
+    -
+      value: 'CC BY-NC-SA'
+      format: teaser_display_text
+  field_cc_licence_long:
+    -
+      value: 'Creative Commons Attribution-Noncommercial-Share Alike 4.0 International Licence'
+      format: teaser_display_text
+  field_copyright_link:
+    -
+      uri: 'https://creativecommons.org/licenses/by-nc-sa/3.0/nz'
+      title: 'Some right reserved (CC BY-NC-SA)'
+      options: {  }
+  tid:
+    -
+      value: 18

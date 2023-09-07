@@ -41,6 +41,8 @@ function sector_install_default_content() {
     ->set('page.front', '/node/10')
     ->save(TRUE);
 
+  _sector_set_default_pages();
+
   // Cleanup functions.
   // TODO - Move these to InstallHelpers.
   createEntityqueues();
@@ -53,6 +55,34 @@ function sector_install_default_content() {
   node_access_rebuild();
 }
 
+
+
+function _sector_set_default_pages() {
+  $page_403_uuid = 'e5bfd72c-0f7b-4e37-89a3-c238384ce7bd';
+  $page_404_uuid = '07b023c8-f0a1-40c7-a13f-5f00852ce486';
+  $page_front_uuid = '664f3787-54cf-4b59-9756-940e8c30fbfb';
+  $entity_type_manager = \Drupal::entityTypeManager();
+  $storage = $entity_type_manager->getStorage('node');
+  $config = \Drupal::configFactory()->getEditable('system.site');
+
+  $query = $storage->getQuery();
+  if ($page_403 = $query->condition('uuid', $page_403_uuid)->execute()) {
+    $config->set('page.403', '/node/' . array_shift($page_403));
+  }
+
+  $query = $storage->getQuery();
+  if ($page_404 = $query->condition('uuid', $page_404_uuid)->execute()) {
+    $config->set('page.404', '/node/' . array_shift($page_404));
+  }
+
+  $query = $storage->getQuery();
+  if ($page_front = $query->condition('uuid', $page_front_uuid)->execute()) {
+    $config->set('page.front', '/node/' . array_shift($page_front));
+  }
+  $config->save(TRUE);
+}
+
+
 /**
  * Loads the two entityqueues on the front page and adds the content to them.
  *
@@ -61,49 +91,35 @@ function sector_install_default_content() {
 function createEntityqueues() {
   // Load entityqueue. Need to load items next.
   $queueStorage = \Drupal::entityTypeManager()->getStorage('entity_subqueue');
-  $informationalQueue = $queueStorage->load('information_tiles');
-  $promotionalLinksQueue = $queueStorage->load('promotional_links');
-  $promotionalTilesQueue = $queueStorage->load('promotional_tiles');
-  $InformationTileEntityIds = [
-    '8',
-    '11',
-    '4',
-  ];
-  $promotionalLinksEntityIds = [
-    '8',
-    '6',
-    '4',
-    '7',
-    '11',
-    '19',
-  ];
-  $promotionalTilesEntityIds = [
-    '23',
-    '24',
-    '25',
-  ];
-  $items = [];
   $nodeStorage = \Drupal::entityTypeManager()->getStorage('node');
-  foreach ($InformationTileEntityIds as $id) {
-    $node = $nodeStorage->load($id);
-    $items[] = $node;
+
+  $queues = [
+    'information_tiles' => [
+      '1a98019e-14f4-4278-8191-325f6b591e2a',
+      '93dd2d72-4682-4690-a39a-4072edeeb69c',
+      'a269bf31-4228-450c-92e2-b9f2070ff9ac',
+    ],
+    'promotional_links' => [
+      '1a98019e-14f4-4278-8191-325f6b591e2a',
+      'bbc90cf0-2b5c-4d18-95c9-c579d9f07f28',
+      'a269bf31-4228-450c-92e2-b9f2070ff9ac',
+      '852fad3c-0ee8-4b9e-8eba-96bf7bdca7eb',
+      '93dd2d72-4682-4690-a39a-4072edeeb69c',
+      '3555ec5b-3739-4017-8b97-e4788c100b9d',
+    ],
+    'promotional_tiles' => [
+      '32abb570-0e4a-400f-8278-664dbbae4843',
+      '1a1f5eec-3cee-498e-a597-82b59334afdf',
+      '645ad6b1-eae2-43cc-8c24-ec6425020692',
+    ],
+  ];
+
+  foreach ($queues as $queue_name => $items) {
+    $nodes = $nodeStorage->loadByProperties(['uuid' => $items]);
+    $queue = $queueStorage->load($queue_name);
+    $queue->set('items', $nodes);
+    $queue->save();
   }
-  $informationalQueue->set('items', $items);
-  $informationalQueue->save();
-  $items = [];
-  foreach ($promotionalLinksEntityIds as $id) {
-    $node = $nodeStorage->load($id);
-    $items[] = $node;
-  }
-  $promotionalLinksQueue->set('items', $items);
-  $promotionalLinksQueue->save();
-  $items = [];
-  foreach ($promotionalTilesEntityIds as $id) {
-    $node = $nodeStorage->load($id);
-    $items[] = $node;
-  }
-  $promotionalTilesQueue->set('items', $items);
-  $promotionalTilesQueue->save();
 }
 
 /**

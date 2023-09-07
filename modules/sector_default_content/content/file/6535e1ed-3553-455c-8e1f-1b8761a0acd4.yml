@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 6535e1ed-3553-455c-8e1f-1b8761a0acd4
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: sample-image-landscape.jpg
+  uri:
+    -
+      value: 'public://2018-05/sample-image-landscape_20.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 32967
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1527741166

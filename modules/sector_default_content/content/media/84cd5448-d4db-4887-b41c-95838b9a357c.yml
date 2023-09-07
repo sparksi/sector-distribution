@@ -1,0 +1,57 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 84cd5448-d4db-4887-b41c-95838b9a357c
+  bundle: file
+  default_langcode: en
+  depends:
+    9f4970ac-be32-49aa-bca6-acf388878a16: file
+    418e1b06-d479-4b5e-8876-d5564fe1a64c: taxonomy_term
+    09fda341-01a6-4a7e-a4c5-eca9219b6234: taxonomy_term
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: sample-file.pdf
+  created:
+    -
+      value: 1524103441
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /file/sample-file-pdf
+      langcode: en
+      pathauto: 1
+  field_credit_or_caption:
+    -
+      value: "<p>Use the <em>credit or caption</em>&nbsp;field to add&nbsp;your copyright or credit notice.</p>\r\n"
+      format: restricted_basic_html
+  field_filesize:
+    -
+      value: '301141'
+  field_media_file:
+    -
+      entity: 9f4970ac-be32-49aa-bca6-acf388878a16
+      display: true
+      description: ''
+  field_mimetype:
+    -
+      value: application/pdf
+  field_tags:
+    -
+      entity: 418e1b06-d479-4b5e-8876-d5564fe1a64c
+    -
+      entity: 09fda341-01a6-4a7e-a4c5-eca9219b6234
+  field_title:
+    -
+      value: 'Sample file pdf'
+  mid:
+    -
+      value: 4

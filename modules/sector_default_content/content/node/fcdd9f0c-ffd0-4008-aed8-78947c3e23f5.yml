@@ -1,0 +1,61 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: fcdd9f0c-ffd0-4008-aed8-78947c3e23f5
+  bundle: page
+  default_langcode: und
+  depends:
+    9498b3c0-08f9-4971-8abc-cd112fdb9099: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Section B - section entry page'
+  created:
+    -
+      value: 1337828645
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /section-b
+      langcode: und
+      pathauto: 1
+  body:
+    -
+      value: |
+        <p class="lead">The opening paragraph on every page should contain a concise introduction to the contents of the page. This way your reader&nbsp;can instantly gain an understanding of what the page is about and decide whether they want to read on or not.</p>
+
+        <p>Make sure the content of the page is relevant to the title and that the structure is clear and logical to the reader. All building blocks on your site&nbsp;should be <a href="http://www.webcredible.com/blog/content-usability-writing-web/">front-loaded</a>&nbsp;(whether it's the page&nbsp;content, paragraphs, or sentences)&nbsp;with the important information at the beginning.</p>
+
+        <p>{sample content}</p>
+      format: basic_html
+      summary: ''
+  field_last_updated:
+    -
+      value: '2017-10-24'
+  field_page_variant:
+    -
+      entity: 9498b3c0-08f9-4971-8abc-cd112fdb9099
+  field_subtitle:
+    -
+      value: 'This sample page is a node of the ''page'' content type added to Level 1 in the main menu. It is displayed using the ''section entry page'' page variant.'
+      format: teaser_display_text
+  nid:
+    -
+      value: 12

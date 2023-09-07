@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 9d30c8e8-a7f3-480c-9c2c-4e6cb0d9ab3e
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    b07e8c0c-8142-45c5-8061-66f87292dc3a: menu_link_content
+    852fad3c-0ee8-4b9e-8eba-96bf7bdca7eb: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Sector Standard page - wide'
+  menu_name:
+    -
+      value: main-menu
+  link:
+    -
+      target_uuid: 852fad3c-0ee8-4b9e-8eba-96bf7bdca7eb
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: -47
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:b07e8c0c-8142-45c5-8061-66f87292dc3a'
+  revision_translation_affected:
+    -
+      value: true
+  id:
+    -
+      value: 6

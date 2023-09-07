@@ -1,0 +1,83 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 07b023c8-f0a1-40c7-a13f-5f00852ce486
+  bundle: page
+  default_langcode: und
+  depends:
+    ca376547-fdf7-433f-a889-a4e0cb136bf4: taxonomy_term
+    fd9a1a20-c2a0-454b-8b57-b2981e3affc2: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Page not found (error 404)'
+  created:
+    -
+      value: 1337832806
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: und
+      pathauto: 1
+  body:
+    -
+      value: |
+        <h2>Sorry, we couldn't find what you were looking for.</h2>
+
+        <h3>Most likely causes</h3>
+
+        <ul>
+        	<li>You might be looking for another page!</li>
+        	<li>The page no longer exists or has moved</li>
+        	<li>The website has recently had a major upgrade so some pages have been moved and a few old ones were deleted</li>
+        	<li>It's also possible the page may have been temporary</li>
+        	<li>If you have linked to this page from another site we will ask them to update their link - please contact us and let us&nbsp;where you were linked from</li>
+        	<li>You may have typed in the incorrect page name.</li>
+        </ul>
+
+        <h3>What you can try</h3>
+
+        <p>Make sure the requested URL is correct.</p>
+
+        <p>Or try:&nbsp;</p>
+
+        <ul>
+        	<li>Using the <a href="/search">Search</a></li>
+        	<li>Using the <a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="4cba65b5-1c66-4a24-892f-96f31c2c4527" href="/node/3">Sitemap</a></li>
+        	<li>Contacting us&nbsp;to let us know about the error</li>
+        	<li>Updating&nbsp;your favourites or bookmarks&nbsp;which&nbsp;link&nbsp;to our site</li>
+        </ul>
+
+        <p>{sample content page}</p>
+      format: basic_html
+      summary: ''
+  field_auto_contextual_content:
+    -
+      entity: ca376547-fdf7-433f-a889-a4e0cb136bf4
+  field_last_updated:
+    -
+      value: '2020-03-04'
+  field_page_variant:
+    -
+      entity: fd9a1a20-c2a0-454b-8b57-b2981e3affc2
+  nid:
+    -
+      value: 5

@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 49421dce-93f4-4ba8-af72-29927e79699e
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: io92rbtkNqtfCxtW0QXGyc3EqC6zUoadFhFc6r-BGFU.jpg
+  uri:
+    -
+      value: 'public://oembed_thumbnails/io92rbtkNqtfCxtW0QXGyc3EqC6zUoadFhFc6r-BGFU.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 3819
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1693272532

@@ -1,0 +1,43 @@
+_meta:
+  version: '1.0'
+  entity_type: taxonomy_term
+  uuid: 3e279a22-ce1c-4525-ac47-a968c8efefad
+  bundle: copyright_licensing
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  name:
+    -
+      value: Attribution
+  weight:
+    -
+      value: 1
+  parent:
+    -
+      target_id: 0
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
+  field_cc_code:
+    -
+      value: 'CC BY'
+      format: teaser_display_text
+  field_cc_licence_long:
+    -
+      value: 'Creative Commons Attribution 4.0 International Licence'
+      format: teaser_display_text
+  field_copyright_link:
+    -
+      uri: 'https://creativecommons.org/licenses/by/3.0/nz'
+      title: 'Some right reserved (CC BY)'
+      options: {  }
+  tid:
+    -
+      value: 17

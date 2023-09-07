@@ -1,0 +1,33 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: c3f5dcc2-c52f-41ab-9301-ae7a48a9a317
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Sector Sample Block - Related resources'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: |
+        <ul class="list-unstyled list--basic-links">
+        	<li><a href="/">Link to internal content</a></li>
+        	<li><a href="/">Link to internal content</a></li>
+        	<li><a href="http://www.drupal.org/">Link to external content</a></li>
+        	<li><a href="http://www.drupal.org/">Link to external content</a></li>
+        </ul>
+      format: basic_html
+      summary: ''
+  id:
+    -
+      value: 39

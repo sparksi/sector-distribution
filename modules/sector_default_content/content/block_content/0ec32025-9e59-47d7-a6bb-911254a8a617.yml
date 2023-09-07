@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: 0ec32025-9e59-47d7-a6bb-911254a8a617
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Sector Sample Block - Section promotion'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: |
+        <p>This sample block is shared across sidebars of the content types page to promote internal or external content inside a section.</p>
+
+        <p><a class="btn btn-sm btn-default" href="/">Read more</a></p>
+      format: full_html
+      summary: ''
+  id:
+    -
+      value: 30

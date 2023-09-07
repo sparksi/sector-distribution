@@ -1,0 +1,65 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 664f3787-54cf-4b59-9756-940e8c30fbfb
+  bundle: page
+  default_langcode: und
+  depends:
+    922afa45-cc8b-474a-8192-42c5423bb35b: taxonomy_term
+    7ed52640-1055-4a02-8167-d5bc111335ad: media
+    61cfac98-8d22-416a-bcbe-7a1a83904b67: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Content management made easy.'
+  created:
+    -
+      value: 1364176447
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: und
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  field_auto_contextual_content:
+    -
+      entity: 922afa45-cc8b-474a-8192-42c5423bb35b
+  field_banner:
+    -
+      entity: 7ed52640-1055-4a02-8167-d5bc111335ad
+  field_last_updated:
+    -
+      value: '2020-03-04'
+  field_page_variant:
+    -
+      entity: 61cfac98-8d22-416a-bcbe-7a1a83904b67
+  field_subtitle:
+    -
+      value: 'Built on the Drupal Radix theme, the Sector Starter Theme and base configuration is ready to go and easy to administer.'
+      format: teaser_display_text
+  nid:
+    -
+      value: 10

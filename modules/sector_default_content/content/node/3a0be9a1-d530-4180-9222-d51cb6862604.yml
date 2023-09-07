@@ -1,0 +1,80 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3a0be9a1-d530-4180-9222-d51cb6862604
+  bundle: article
+  default_langcode: en
+  depends:
+    c4fcdd7d-b313-4aef-94d0-abd36273b170: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'News content sample with a long descriptive title'
+  created:
+    -
+      value: 1509574075
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /news/news-content-sample-long-descriptive-title
+      langcode: en
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  body:
+    -
+      value: |
+        <p class="lead">Regular news keeps your site alive.&nbsp;Most website content strategies emphasise the need to publish news and updates regularly and to share new content across all channels. &nbsp; &nbsp;</p>
+
+        <div aria-label="Information" class="note note--primary" role="note">
+        <p>This sample page is a node of the News&nbsp;content type.</p>
+        </div>
+
+        <p>Break up long news stories with subheadings,&nbsp;but&nbsp;remember that subheadings add to the text -&nbsp;they’re not part of it.&nbsp;The text should still make sense with the subheadings removed.</p>
+
+        <p>Tips for writing effective body copy:</p>
+
+        <ul>
+        	<li>The first paragraph should lead on from the summary paragraph, not repeat the information</li>
+        	<li>Use the ‘inverted pyramid’ approach with the most important information at the top, then tapering down to less important&nbsp;details</li>
+        	<li>Paragraphs should have no more than 5 sentences each</li>
+        	<li>Ensure copy includes keywords to boost natural search rankings</li>
+        	<li>Use video and images</li>
+        </ul>
+
+        <p>{sample content}</p>
+      format: basic_html
+      summary: ''
+  field_article_type:
+    -
+      entity: c4fcdd7d-b313-4aef-94d0-abd36273b170
+  field_issue_date:
+    -
+      value: '2020-03-04'
+  field_last_updated:
+    -
+      value: '2020-03-04'
+  nid:
+    -
+      value: 20

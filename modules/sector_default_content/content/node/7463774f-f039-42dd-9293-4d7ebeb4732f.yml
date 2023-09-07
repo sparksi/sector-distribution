@@ -1,0 +1,58 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 7463774f-f039-42dd-9293-4d7ebeb4732f
+  bundle: page
+  default_langcode: und
+  depends:
+    fd9a1a20-c2a0-454b-8b57-b2981e3affc2: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Level 4 page'
+  created:
+    -
+      value: 1418181514
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /section/level-2-page/level-3-page/level-4-page
+      langcode: und
+      pathauto: 1
+  body:
+    -
+      value: |
+        <p class="lead">As part of this distribution we have preconfigured one branch of your menu&nbsp;to showcase how your readers can move through your&nbsp;hierarchical content. This is your Level 4 page.</p>
+
+        <p>{sample content}</p>
+      format: basic_html
+      summary: ''
+  field_auto_contextual_content:
+    -
+      target_id: 3
+  field_last_updated:
+    -
+      value: '2020-03-04'
+  field_page_variant:
+    -
+      entity: fd9a1a20-c2a0-454b-8b57-b2981e3affc2
+  nid:
+    -
+      value: 15

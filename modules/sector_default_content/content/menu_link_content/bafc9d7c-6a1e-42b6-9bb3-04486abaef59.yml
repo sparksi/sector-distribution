@@ -1,0 +1,45 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: bafc9d7c-6a1e-42b6-9bb3-04486abaef59
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    41cdd8f1-a4c9-4233-9be5-bf7c61f9c242: menu_link_content
+    985eab65-7096-4110-a51f-cf090ff97534: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Level 3 page'
+  menu_name:
+    -
+      value: main-menu
+  link:
+    -
+      target_uuid: 985eab65-7096-4110-a51f-cf090ff97534
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  parent:
+    -
+      value: 'menu_link_content:41cdd8f1-a4c9-4233-9be5-bf7c61f9c242'
+  revision_translation_affected:
+    -
+      value: true
+  id:
+    -
+      value: 3

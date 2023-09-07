@@ -1,0 +1,80 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 6f702ecb-301b-4313-b54b-08de94f92606
+  bundle: resource
+  default_langcode: en
+  depends:
+    a269bf31-4228-450c-92e2-b9f2070ff9ac: node
+    f4530b9d-7d76-48bd-841d-878b27727002: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Resource content sample'
+  created:
+    -
+      value: 1510021239
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /resources/resource-content-sample
+      langcode: en
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  body:
+    -
+      value: |
+        <p class="lead">The&nbsp;Resource&nbsp;content type is another example of&nbsp;taxonomy (or data) driven content. Resources&nbsp;and news items have similar field sets and displays; however their data type and audiences are different. Resources&nbsp;are non-transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).</p>
+
+        <p>The Sector&nbsp;Resource<em>&nbsp;</em>content type&nbsp;is prepared for information&nbsp;or knowledge database content. The 'resource type' taxonomy allows you to sort and filter resource pages&nbsp;into groups, such as training materials or&nbsp;manuals. The resource archive allows the user to filter by issue date or type.&nbsp;</p>
+
+        <div aria-label="Information" class="note note--primary" role="note">
+        <p>This&nbsp;sample node is a node of the content type&nbsp;Resource.</p>
+        </div>
+
+        <p>{sample content}</p>
+      format: basic_html
+      summary: 'Resource/Topic pages and news items have similar fieldsets and displays; however their data type and audiences is different.'
+  field_issue_date:
+    -
+      value: '2020-03-04'
+  field_last_updated:
+    -
+      value: '2020-03-04'
+  field_related_links:
+    -
+      target_uuid: a269bf31-4228-450c-92e2-b9f2070ff9ac
+      title: 'Sector WYSIWYG - Content elements'
+      options: {  }
+    -
+      uri: 'https://www.sector.nz/documentation/sector-resource-content-type'
+      title: 'Sector Resource content type documentation'
+      options: {  }
+  field_resource_type:
+    -
+      entity: f4530b9d-7d76-48bd-841d-878b27727002
+  nid:
+    -
+      value: 21

@@ -1,0 +1,65 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 93dd2d72-4682-4690-a39a-4072edeeb69c
+  bundle: page
+  default_langcode: und
+  depends:
+    fd9a1a20-c2a0-454b-8b57-b2981e3affc2: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Sector News section entry page'
+  created:
+    -
+      value: 1418869498
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /news
+      langcode: und
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  body:
+    -
+      value: |
+        <p class="lead">Along with&nbsp;hierarchical content&nbsp;in a menu, Sector also supports data-driven content using taxonomies. The news section entry page is an example of how to transition from <em>pages</em> to&nbsp;<em>views</em>.&nbsp;</p>
+
+        <div aria-label="Information" class="note note--primary" role="note">
+        <p>In this example, a&nbsp;simple news listing is embedded into a node of the 'page' content type. A filtered news archive view is also preconfigured to act as a <a href="/news/archive">News archive</a>.</p>
+        </div>
+
+        <p>{sample content}</p>
+      format: basic_html
+      summary: ''
+  field_last_updated:
+    -
+      value: '2020-03-04'
+  field_page_variant:
+    -
+      entity: fd9a1a20-c2a0-454b-8b57-b2981e3affc2
+  nid:
+    -
+      value: 11

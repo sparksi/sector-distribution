@@ -1,0 +1,41 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 5a9df53b-46ad-4562-8823-b1b12694c723
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    4cba65b5-1c66-4a24-892f-96f31c2c4527: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: Sitemap
+  menu_name:
+    -
+      value: footer
+  link:
+    -
+      target_uuid: 4cba65b5-1c66-4a24-892f-96f31c2c4527
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  id:
+    -
+      value: 12

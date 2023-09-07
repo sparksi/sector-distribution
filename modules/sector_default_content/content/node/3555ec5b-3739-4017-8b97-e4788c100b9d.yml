@@ -1,0 +1,79 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 3555ec5b-3739-4017-8b97-e4788c100b9d
+  bundle: article
+  default_langcode: en
+  depends:
+    bc9d2764-7bb5-4d9d-9d3a-a59467e9cdcb: taxonomy_term
+    84cd5448-d4db-4887-b41c-95838b9a357c: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'News content sample '
+  created:
+    -
+      value: 1509573810
+  promote:
+    -
+      value: true
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /news/news-content-sample
+      langcode: en
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  body:
+    -
+      value: |-
+        <p class="lead">The&nbsp;News&nbsp;content type is an example of data-driven content using taxonomies. Taxonomy-driven content&nbsp;is content organised by sort and filter criteria. In a Drupal context, the sort and filter criteria can be either data&nbsp;or taxonomy based. &nbsp;</p>
+
+        <p>The Sector&nbsp;News&nbsp;content type (based on Drupal's core&nbsp;Article&nbsp;content type)&nbsp;is prepared for transient content that is most relevant at&nbsp;publication (its issue date). The 'article type' taxonomy allows you to sort and filter news into groups, such as&nbsp;media releases and&nbsp;newsletters. The news archive allows the user to filter by date.&nbsp;</p>
+
+        <div aria-label="Information" class="note note--primary" role="note">
+        <p>This sample page is a node of the News content type.</p>
+        </div>
+
+        <p>{sample content}</p>
+      format: basic_html
+      summary: ''
+  field_article_type:
+    -
+      entity: bc9d2764-7bb5-4d9d-9d3a-a59467e9cdcb
+  field_issue_date:
+    -
+      value: '2020-03-04'
+  field_last_updated:
+    -
+      value: '2020-03-04'
+  field_related_files:
+    -
+      entity: 84cd5448-d4db-4887-b41c-95838b9a357c
+  field_related_links:
+    -
+      uri: 'https://www.sector.nz/documentation/sector-news-content-type'
+      title: 'Sector News content type documentation '
+      options: {  }
+  nid:
+    -
+      value: 19

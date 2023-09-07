@@ -1,0 +1,64 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 32abb570-0e4a-400f-8278-664dbbae4843
+  bundle: promotion
+  default_langcode: en
+  depends:
+    a785ceef-9c7c-4c2a-aee7-625fd9fe01d6: taxonomy_term
+    700a4de0-1137-4449-9ed9-1b324dbebfdf: media
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'The Sector starter theme and Radix'
+  created:
+    -
+      value: 1525753212
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  body:
+    -
+      value: 'Launch your mobile-first projects with the Sector Radix starter theme - a sub-theme of Drupal Radix based on Bootstrap 4.'
+      format: teaser_display_text
+      summary: ''
+  field_featured_content:
+    -
+      uri: 'http://www.radixtheme.org/'
+      title: 'Visit the Radix website'
+      options: {  }
+  field_promotion_type:
+    -
+      entity: a785ceef-9c7c-4c2a-aee7-625fd9fe01d6
+  field_teaser:
+    -
+      entity: 700a4de0-1137-4449-9ed9-1b324dbebfdf
+  nid:
+    -
+      value: 23

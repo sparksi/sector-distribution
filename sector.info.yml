@@ -23,7 +23,6 @@ install:
 - drupal:field_ui
 - drupal:file
 - drupal:filter
-- drupal:hal
 - drupal:help
 - drupal:history
 - drupal:image
@@ -56,7 +55,6 @@ install:
 - anchor_link:anchor_link
 - antibot:antibot
 - autologout:autologout
-- better_normalizers:better_normalizers
 - block_class:block_class
 - current_page_crumb:current_page_crumb
 - components:components

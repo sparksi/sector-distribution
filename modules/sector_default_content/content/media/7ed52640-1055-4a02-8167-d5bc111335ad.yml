@@ -1,0 +1,50 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 7ed52640-1055-4a02-8167-d5bc111335ad
+  bundle: image
+  default_langcode: en
+  depends:
+    69dd3eec-364e-406e-b241-45c7c6a74445: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: sample-image-banner.jpg
+  created:
+    -
+      value: 1568781254
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /image/sample-image-banner
+      langcode: en
+      pathauto: 1
+  field_credit_or_caption:
+    -
+      value: "<p>Use the <em>credit or caption</em>&nbsp;field to add&nbsp;your copyright or credit notice.</p>\r\n"
+      format: restricted_basic_html
+  field_description:
+    -
+      value: "<p>Use the&nbsp;<em>description</em>&nbsp;field to add supporting text.</p>\r\n"
+      format: restricted_basic_html
+  field_media_image:
+    -
+      entity: 69dd3eec-364e-406e-b241-45c7c6a74445
+      alt: 'Graphic representation of a desktop computer and a hand held device'
+      title: ''
+      width: 2600
+      height: 975
+  field_title:
+    -
+      value: 'Sample image banner'
+  mid:
+    -
+      value: 8

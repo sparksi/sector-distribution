@@ -1,0 +1,30 @@
+_meta:
+  version: '1.0'
+  entity_type: block_content
+  uuid: b1f454fc-2957-4006-a154-f962b7a1b1f8
+  bundle: basic
+  default_langcode: en
+default:
+  status:
+    -
+      value: true
+  info:
+    -
+      value: 'Sector Sample Block - Sitewide promotion'
+  reusable:
+    -
+      value: true
+  revision_translation_affected:
+    -
+      value: true
+  body:
+    -
+      value: |
+        <p>This sample block is shared across sidebars of a selection of content types to promote internal or external content.</p>
+
+        <p><a class="btn btn-sm btn-primary" href="/">Read more</a></p>
+      format: basic_html
+      summary: ''
+  id:
+    -
+      value: 38

@@ -1,0 +1,54 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 700a4de0-1137-4449-9ed9-1b324dbebfdf
+  bundle: image
+  default_langcode: en
+  depends:
+    6535e1ed-3553-455c-8e1f-1b8761a0acd4: file
+    418e1b06-d479-4b5e-8876-d5564fe1a64c: taxonomy_term
+    09fda341-01a6-4a7e-a4c5-eca9219b6234: taxonomy_term
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: sample-image-landscape.jpg
+  created:
+    -
+      value: 1523479928
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /image/sample-image-landscape
+      langcode: en
+      pathauto: 1
+  field_credit_or_caption:
+    -
+      value: "<p>Use the <em>credit or caption</em>&nbsp;field to add&nbsp;your copyright or credit notice.</p>\r\n"
+      format: restricted_basic_html
+  field_description:
+    -
+      value: "<p>Use the&nbsp;<em>description</em>&nbsp;field to add supporting text.</p>\r\n"
+      format: restricted_basic_html
+  field_media_image:
+    -
+      entity: 6535e1ed-3553-455c-8e1f-1b8761a0acd4
+      alt: 'Snowy mountains shrouded in cloud with a blue sky background.'
+      title: ''
+      width: 1280
+      height: 721
+  field_tags:
+    -
+      entity: 418e1b06-d479-4b5e-8876-d5564fe1a64c
+    -
+      entity: 09fda341-01a6-4a7e-a4c5-eca9219b6234
+  field_title:
+    -
+      value: 'Sample image landscape'

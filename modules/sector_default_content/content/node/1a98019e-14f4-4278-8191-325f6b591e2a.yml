@@ -1,0 +1,77 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: 1a98019e-14f4-4278-8191-325f6b591e2a
+  bundle: page
+  default_langcode: und
+  depends:
+    c37defa1-f9c9-4576-b62c-fe07323ca436: taxonomy_term
+    700a4de0-1137-4449-9ed9-1b324dbebfdf: media
+    9498b3c0-08f9-4971-8abc-cd112fdb9099: taxonomy_term
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Section A - Section entry page'
+  created:
+    -
+      value: 1337828185
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /section
+      langcode: und
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  body:
+    -
+      value: |
+        <p class="lead">Sector's simple&nbsp;layout templates use&nbsp;sitebuilder tools&nbsp;and&nbsp;Drupal taxonomies&nbsp;to keep displays&nbsp;modular and consistent across your site.</p>
+
+        <p>The flexible Drupal content type architecture allows site builders to create a new content type&nbsp;for each design template. Using content types to distinguish between layouts can, however,&nbsp;lead to a large number of content types with the risk of&nbsp;inconsistent displays and&nbsp;hard to maintain sites.&nbsp;</p>
+
+        <p>Sector's concept of page layout variants and page content settings allows us to build&nbsp;and manage a variety of design templates for each content type. This way, content types can be used to distinguish between data types, not design requirements -&nbsp;leading to a simpler content architecture and grouping.&nbsp;&nbsp;</p>
+
+        <p>{sample content}</p>
+      format: basic_html
+      summary: ''
+  field_auto_contextual_content:
+    -
+      entity: c37defa1-f9c9-4576-b62c-fe07323ca436
+  field_banner:
+    -
+      entity: 700a4de0-1137-4449-9ed9-1b324dbebfdf
+  field_last_updated:
+    -
+      value: '2020-03-04'
+  field_page_variant:
+    -
+      entity: 9498b3c0-08f9-4971-8abc-cd112fdb9099
+  field_subtitle:
+    -
+      value: 'This sample page is a node of the ''page'' content type added to Level 1 in the main menu. It is displayed using the ''section entry page'' page variant.'
+      format: teaser_display_text
+  nid:
+    -
+      value: 8

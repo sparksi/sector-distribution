@@ -1,0 +1,27 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 69dd3eec-364e-406e-b241-45c7c6a74445
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: sample-image-banner.jpg
+  uri:
+    -
+      value: 'public://2019-09/sample-image-banner_20.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 90897
+  status:
+    -
+      value: true
+  created:
+    -
+      value: 1568782815

@@ -1,0 +1,105 @@
+_meta:
+  version: '1.0'
+  entity_type: node
+  uuid: bbc90cf0-2b5c-4d18-95c9-c579d9f07f28
+  bundle: page
+  default_langcode: und
+  depends:
+    5c37c396-6772-4884-adab-e3a420f486c0: taxonomy_term
+    fd9a1a20-c2a0-454b-8b57-b2981e3affc2: taxonomy_term
+    84cd5448-d4db-4887-b41c-95838b9a357c: media
+    d6199420-0506-470a-8084-ddaf32ed7b05: media
+    a269bf31-4228-450c-92e2-b9f2070ff9ac: node
+default:
+  revision_uid:
+    -
+      target_id: 1
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  title:
+    -
+      value: 'Sector Standard page'
+  created:
+    -
+      value: 1464736780
+  promote:
+    -
+      value: false
+  sticky:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: /section/sector-standard-page
+      langcode: und
+      pathauto: 1
+  rh_action:
+    -
+      value: bundle_default
+  rh_redirect_response:
+    -
+      value: 301
+  body:
+    -
+      value: |
+        <p class="lead">Sector supports a variety of Information Architecture principles - one is to organise your content hierarchically.&nbsp;Hierarchical content is stored in pages which&nbsp;are organised in a menu.&nbsp;</p>
+
+        <p><strong>The concept of hierarchical content&nbsp;works well with:</strong></p>
+
+
+        <ul>
+        	<li>Linear content structure and user movements (book-like content, navigating from A to B to C)</li>
+        	<li>'Layered'&nbsp;information architecture (information&nbsp;in layers, starting with an introductory top layer).</li>
+        </ul>
+
+        <p><strong>Known limitations:</strong></p>
+
+        <ul>
+        	<li>Scalability - a menu hierarchy fails if there are too many items per level, or if the weight between branches is unbalanced.</li>
+        	<li>Hierarchical content assumes the principle of 'one page, one position'. This often does not work in a web context - if the principle is broken, context is lost.</li>
+        </ul>
+
+        <p>{sample content}</p>
+      format: full_html
+      summary: ''
+  field_auto_contextual_content:
+    -
+      entity: 5c37c396-6772-4884-adab-e3a420f486c0
+  field_last_updated:
+    -
+      value: '2020-03-04'
+  field_page_variant:
+    -
+      entity: fd9a1a20-c2a0-454b-8b57-b2981e3affc2
+  field_related_files:
+    -
+      entity: 84cd5448-d4db-4887-b41c-95838b9a357c
+    -
+      entity: d6199420-0506-470a-8084-ddaf32ed7b05
+  field_related_links:
+    -
+      target_uuid: a269bf31-4228-450c-92e2-b9f2070ff9ac
+      title: 'Content elements'
+      options: {  }
+    -
+      uri: 'http://sector.nz/'
+      title: Sector.nz
+      options: {  }
+    -
+      uri: 'https://www.sector.nz/documentation/what-sector'
+      title: 'Sector online documentation'
+      options: {  }
+  field_subtitle:
+    -
+      value: 'This sample page is a node of the ''page'' content type added to ''Section A'' in the main menu. It is displayed using the ''standard page'' page variant.'
+      format: teaser_display_text
+  nid:
+    -
+      value: 6
