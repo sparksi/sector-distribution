@@ -112,6 +112,9 @@
             },
             "drupal/entity_usage": {
                 "Better tracking per entity": "https://www.drupal.org/files/issues/2020-06-16/per-node-tracking_3151920_4.patch"
+            },
+            "drupal/config_update": {
+                "Allow PHP 8.0 version in 2.x branch": "https://www.drupal.org/files/issues/2023-08-20/config_update-3352211-5.patch"
             }
         }
     },
