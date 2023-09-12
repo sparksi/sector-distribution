@@ -1,4 +1,4 @@
-uuid: 564fa5cb-cd42-413f-baa0-1422a93d6735
+uuid: 9ae6f5d1-7306-4c67-a25b-ab8d87267f5f
 langcode: en
 status: true
 dependencies:
@@ -13,12 +13,10 @@ dependencies:
 third_party_settings:
   block_class:
     classes: mt-4
-_core:
-  default_config_hash: 1hNNrdx0H2bxsQ8Kl1wwxSW-3MMTSzRV_sYUijm37RI
 id: sector_hero_minimal_subtitle
 theme: sector
 region: hero_minimal
-weight: 0
+weight: -14
 provider: null
 plugin: 'fieldblock:node'
 settings:

@@ -1,4 +1,4 @@
-uuid: f15f4a78-1729-4f43-9ce1-dcce73b5a1c0
+uuid: 76275e9c-a48b-4cd4-a802-4ed9902f1395
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
 id: sector_hero_minimal_pagetitle
 theme: sector
 region: hero_minimal
-weight: 0
+weight: -15
 provider: null
 plugin: page_title_block
 settings:

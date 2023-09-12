@@ -1,4 +1,4 @@
-uuid: 45ad6203-19b7-4d32-b8a5-7d1717bda7d5
+uuid: 81c4be00-cc54-49c6-a724-be5be163ced1
 langcode: en
 status: true
 dependencies:
@@ -13,7 +13,7 @@ dependencies:
 id: sector_hero_minimal_issue_date
 theme: sector
 region: hero_minimal
-weight: -9
+weight: -17
 provider: null
 plugin: 'fieldblock:node'
 settings:

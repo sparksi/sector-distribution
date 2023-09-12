@@ -1,22 +1,18 @@
-uuid: c6270b58-d703-456b-97fc-469ac4f89d92
+uuid: 909d0044-7e87-4286-9ced-0e7269ed2438
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_title_caption
   module:
-    - block_class
     - fieldblock
     - text
   theme:
     - sector
-third_party_settings:
-  block_class:
-    classes: mb-6
-id: sector_hero_maximal_title_caption
+id: sector_hero_minimal_title_caption
 theme: sector
-region: hero_maximal
-weight: -15
+region: hero_minimal
+weight: -16
 provider: null
 plugin: 'fieldblock:node'
 settings:
@@ -24,8 +20,9 @@ settings:
   label: 'Title Caption'
   label_display: '0'
   provider: fieldblock
-  label_from_field: true
+  label_from_field: false
   field_name: field_title_caption
-  formatter_id: text_default
-  formatter_settings: {  }
+  formatter_id: text_trimmed
+  formatter_settings:
+    trim_length: 600
 visibility: {  }
