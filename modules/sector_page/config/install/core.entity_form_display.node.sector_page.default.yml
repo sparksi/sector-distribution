@@ -15,7 +15,7 @@ dependencies:
     - field.field.node.sector_page.field_text_placement
     - field.field.node.sector_page.field_title_caption
     - node.type.sector_page
-    - workflows.workflow.sector_editorial
+  #  - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - datetime
@@ -188,12 +188,12 @@ content:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-  moderation_state:
-    type: moderation_state_default
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
+  #moderation_state:
+  #  type: moderation_state_default
+  #  weight: 10
+  #  region: content
+  #  settings: {  }
+  #  third_party_settings: {  }
   path:
     type: path
     weight: 8
