@@ -43,7 +43,7 @@
 }
 
 :is(a.link--promo--dark--arrow, .link--promo--dark--arrow:not([href]) > a) {
-  @apply text-black dark:text-white;
+  @apply text-current dark:text-white;
 
   &::after {
     @include icon.render(('icons/arrow-forward.svg'), 'fill=black');

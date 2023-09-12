@@ -7471,10 +7471,6 @@ select {
   text-align: center;
 }
 
-.font-custom-alt {
-  font-family: var(--custom-font-alternate);
-}
-
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }

@@ -1,4 +1,4 @@
-uuid: 909d0044-7e87-4286-9ced-0e7269ed2438
+uuid: a246f4da-42fd-4757-91cc-f799df400b9e
 langcode: en
 status: true
 dependencies:
@@ -22,7 +22,6 @@ settings:
   provider: fieldblock
   label_from_field: false
   field_name: field_title_caption
-  formatter_id: text_trimmed
-  formatter_settings:
-    trim_length: 600
+  formatter_id: text_default
+  formatter_settings: {  }
 visibility: {  }
