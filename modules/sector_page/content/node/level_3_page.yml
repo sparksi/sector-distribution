@@ -5,7 +5,11 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
+    8ca4bab4-4367-42ce-a640-8ff76bd83105: user
+    cb1a21ce-f835-4682-b027-34f80c86c4e8: taxonomy_term
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
+    69dbfcde-0249-4006-af2c-2d5e3d43c202: media
+    99e6cd0e-ce91-4aa8-8556-64719bb433ae: node
 default:
   revision_uid:
     -
@@ -15,7 +19,7 @@ default:
       value: true
   uid:
     -
-      target_id: 1
+      entity: 8ca4bab4-4367-42ce-a640-8ff76bd83105
   title:
     -
       value: 'Level 3 page'
@@ -36,7 +40,7 @@ default:
       value: published
   path:
     -
-      alias: /get-started/hierarchical-content-menus/level-3-page
+      alias: /get-started/hierarchical-content-in-menus/level-3-page
       langcode: en
       pathauto: 1
   body:
@@ -44,9 +48,35 @@ default:
       value: '<p class="lead">As part of this distribution we have preconfigured one branch of your menu to showcase how your readers can move through your hierarchical content. This is a Level 3 page.&nbsp;</p><p>{ sample content }</p>'
       format: sector_basic_html
       summary: ''
+  field_content_options:
+    -
+      entity: cb1a21ce-f835-4682-b027-34f80c86c4e8
   field_display_options:
     -
       entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
+  field_last_updated:
+    -
+      value: '2023-09-12'
+  field_related_documents:
+    -
+      entity: 69dbfcde-0249-4006-af2c-2d5e3d43c202
+  field_related_links:
+    -
+      uri: 'https://www.sector.nz'
+      title: 'Sector - a Drupal Distribution'
+      options:
+        href: ''
+        data-entity-type: ''
+        data-entity-uuid: ''
+        data-entity-substitution: ''
+    -
+      target_uuid: 99e6cd0e-ce91-4aa8-8556-64719bb433ae
+      title: 'Get started'
+      options:
+        href: /node/1
+        data-entity-type: node
+        data-entity-uuid: 99e6cd0e-ce91-4aa8-8556-64719bb433ae
+        data-entity-substitution: canonical
   field_text_placement:
     -
       value: text-left

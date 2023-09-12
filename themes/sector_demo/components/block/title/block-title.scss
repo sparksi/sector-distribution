@@ -1,5 +1,11 @@
 .block__title {
-    @apply text-2xl font-semibold font-custom-alt;
+    --block-title-ff: theme('fontFamily.sans');
+    --block-title-fw: theme('fontWeight.black');
+    --block-title-fs: theme('fontSize.2xl');
+
+    font-weight: var(--block-title-fw-override ,var(--block-title-fw));
+    font-family: var(--block-title-ff-override,var(--block-title-ff));
+    font-size: var(--block-title-fs-override, var(--block-title-fs));
 
     a {
         @apply text-inherit hover:text-sky-500 focus-visible:text-sky-500;

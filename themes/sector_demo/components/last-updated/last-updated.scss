@@ -1,0 +1,12 @@
+.last-updated {
+    @apply text-neutral-500;
+
+    --block-title-ff-override: theme('fontFamily.sans');
+    --block-title-fw-override: theme('fontWeight.normal');
+    --block-title-fs-override: theme('fontSize.sm');
+
+    .block__title::before {
+        content: "—";
+        @apply me-1 text-neutral-300;
+    }
+}
