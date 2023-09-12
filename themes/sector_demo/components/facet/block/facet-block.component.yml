@@ -3,6 +3,7 @@ name: Facet Block
 status: stable
 libraryDependencies:
   - core/once
+  - sector_demo/block-title
 
 props:
   type: object
