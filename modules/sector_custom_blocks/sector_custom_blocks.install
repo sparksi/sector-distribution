@@ -1,0 +1,13 @@
+
+<?php
+use Drupal\user\Entity\Role;
+
+
+function sector_custom_blocks_install() {
+  $editor_role_object = Role::load('content_editor');
+  if($editor_role_object) {
+    $editor_role_object->grantPermission('access block library');
+
+    $editor_role_object->save();
+  }
+}
