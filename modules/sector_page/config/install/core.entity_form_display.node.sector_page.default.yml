@@ -94,7 +94,7 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: wOD4a7KwLCVB7m8Pu-UbxcqucwWA5nAq8yLxeMycyWs
+  default_config_hash: ynk4cT_Onxo2tK7oO0mfGF8Iw9oagbi0TcfQrsM6eTw
 id: node.sector_page.default
 targetEntityType: node
 bundle: sector_page
@@ -112,7 +112,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -124,7 +124,7 @@ content:
     third_party_settings: {  }
   field_display_options:
     type: options_buttons
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -137,13 +137,13 @@ content:
     third_party_settings: {  }
   field_last_updated:
     type: datetime_default
-    weight: 14
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 6
+    weight: 12
     region: content
     settings:
       sidebar: true
@@ -151,14 +151,14 @@ content:
     third_party_settings: {  }
   field_related_documents:
     type: media_library_widget
-    weight: 15
+    weight: 12
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_related_links:
     type: linkit
-    weight: 16
+    weight: 13
     region: content
     settings:
       placeholder_url: ''
@@ -190,19 +190,19 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 12
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 13
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -217,7 +217,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 7
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -226,7 +226,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 11
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
