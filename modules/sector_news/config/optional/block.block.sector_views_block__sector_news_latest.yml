@@ -12,7 +12,7 @@ dependencies:
     - sector
 third_party_settings:
   block_class:
-    classes: 'mb-10 lg:mb-24 col-span-12 md:col-span-6'
+    classes: 'col-span-12 md:col-span-6'
 id: sector_views_block__sector_news_latest
 theme: sector
 region: view_group

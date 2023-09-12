@@ -7,7 +7,7 @@
 <div class="@container/list-item">
 {{ include("sector_demo:list-item-standard", {
     libraries: ['sector_demo/' ~ node.bundle|clean_class ~ '--' ~ view_mode|clean_class ],
-    title_classes: [ 'text-2xl', 'lg:text-3xl', 'font-custom-alt', 'font-semibold' ],
+    title_classes: [ 'text-2xl', 'lg:text-3xl', 'font-sans', 'font-extrabold', 'tracking-tight' ],
     title_link_attributes: title_link_attributes.setAttribute('rel', 'bookmark'),
     title_link_classes: ['hover:text-ss-primary', 'focus-visible:text-ss-primary'],
     utility_classes: [

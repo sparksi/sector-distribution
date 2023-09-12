@@ -7605,6 +7605,10 @@ select {
   line-height: 1.25;
 }
 
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
 .text-alert {
   color: var(--alert, #9a3412);
 }
