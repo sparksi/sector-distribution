@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: sector_promo_magnet
 label: 'Sector promo magnet'
-revision: 0
+revision: 1
 description: 'A simple promotional block that can be displayed in a sidebar or a grid.  '
