@@ -6,7 +6,7 @@
 .subtitle p {
   text-wrap: var(--subtitle-text-wrap, balance);
 
-  a {
+  a:not(.btn) {
     @apply underline underline-offset-4;
   }
 }
