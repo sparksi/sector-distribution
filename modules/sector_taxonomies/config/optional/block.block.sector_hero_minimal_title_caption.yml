@@ -1,14 +1,18 @@
-uuid: a246f4da-42fd-4757-91cc-f799df400b9e
+uuid: 99db01ba-d284-4177-bb3c-ecbef3bf7991
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_title_caption
   module:
+    - block_class
     - fieldblock
     - text
   theme:
     - sector
+third_party_settings:
+  block_class:
+    classes: mb-2
 id: sector_hero_minimal_title_caption
 theme: sector
 region: hero_minimal
