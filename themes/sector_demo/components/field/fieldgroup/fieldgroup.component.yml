@@ -1,16 +1,14 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
-name: File
+name: Field Group
 status: stable
-libraryDependencies:
-  - sector_demo/field
 
 props:
   type: object
   properties:
-    libraries:
-      type: array
     utility_classes:
       type: array
       title: Utility classes
+    title_attributes:
+      type: Drupal\Core\Template\Attribute
     attributes:
       type: Drupal\Core\Template\Attribute

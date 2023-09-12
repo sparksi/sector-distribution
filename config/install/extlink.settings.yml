@@ -14,7 +14,7 @@ extlink_class: ext
 extlink_label: '(link is external)'
 extlink_img_class: false
 extlink_css_exclude: .remove-ext-link-icon
-extlink_css_explicit: '.prose, .apply-ext-link-icon'
+extlink_css_explicit: '.prose, .apply-ext-link-icon, .related--links'
 extlink_mailto_class: '0'
 extlink_mailto_label: '(link sends email)'
 extlink_use_font_awesome: false

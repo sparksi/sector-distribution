@@ -37,7 +37,7 @@ third_party_settings:
       weight: 2
       format_type: html_element
       format_settings:
-        classes: ''
+        classes: 'mt-6 pt-6 space-y-5 border-t'
         show_empty_fields: false
         id: ''
         element: div
@@ -47,6 +47,8 @@ third_party_settings:
         attributes: ''
         effect: none
         speed: fast
+_core:
+  default_config_hash: CKgbb0Co1yJonSLqCCMZlQSFw-cZcdRVIr7KXXu-Bds
 id: node.sector_page.full
 targetEntityType: node
 bundle: sector_page

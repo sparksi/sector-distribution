@@ -1,16 +1,17 @@
 '$schema': 'https://git.drupalcode.org/project/drupal/-/raw/10.1.x/core/modules/sdc/src/metadata.schema.json'
-name: File
+name: Media (Document)
 status: stable
-libraryDependencies:
-  - sector_demo/field
 
 props:
   type: object
   properties:
-    libraries:
-      type: array
     utility_classes:
       type: array
       title: Utility classes
-    attributes:
-      type: Drupal\Core\Template\Attribute
+    libraries:
+      type: array
+      title: Libraries
+
+slots:
+  content:
+    title: Media content

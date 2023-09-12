@@ -1,0 +1,12 @@
+.file-field {
+
+}
+
+.file__wrapper > a {
+    @apply font-semibold text-lg;
+}
+
+.file__size {
+    @apply text-neutral-600 text-sm relative;
+    left: calc(24px + 0.5rem);
+}

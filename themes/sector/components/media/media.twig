@@ -23,7 +23,7 @@
   ]|merge(utility_classes ? utility_classes : [])
 %}
 
-<div{{ attributes.addClass(media_classes) }}>
+<{{media_element|default('div')}}{{ attributes.addClass(media_classes) }}>
   {{ title_suffix.contextual_links }}
 
   {% block content %}
@@ -31,7 +31,7 @@
       {{ content }}
     {% endif %}
   {% endblock %}
-</div>
+</{{media_element|default('div')}}>
 {% if libraries %}
   {% for library in libraries %}
     {{ attach_library(library) }}

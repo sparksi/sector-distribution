@@ -15,15 +15,16 @@
 #}
 {%
     set classes = [
-        'flex', 'items-center', 'gap-x-2'
+      'file__wrapper',
+      'flex', 'items-center', 'gap-x-2'
     ]|merge(utility_classes ? utility_classes : [])
 %}
 <span{{ attributes.addClass(classes) }}>
-<span class="material-symbols-sharp">
+<span class="file__icon material-symbols-sharp">
 download_for_offline
 </span>{{ link }}</span>
 {% if file_size %}
-  <span>({{ file_size }})</span>
+  <span class="file__size">({{ file_size }})</span>
 {% endif %}
 {% if libraries %}
   {% for library in libraries %}

@@ -1,0 +1,7 @@
+.related .field__items > :not([hidden]) ~ :not([hidden]) {--tw-space-y-reverse: 0;margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom: calc(0.25rem * var(--tw-space-y-reverse))
+}.related--links .field__item>a,.related--documents .file>a {overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-weight: 500;text-decoration-line: underline;text-underline-offset: 2px
+}.related--links .field__item>a:hover,.related--documents .file>a:hover {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
+}.related--links .field__item>a:focus-visible,.related--documents .file>a:focus-visible {--tw-text-opacity: 1;color: rgb(14 165 233 / var(--tw-text-opacity))
+}.related--links .field__item>a .extlink {vertical-align: middle
+}.related--links .field__item>a .material-symbols-sharp {margin-left: 0.25rem;margin-right: 0.25rem;font-size: 1.125rem;line-height: 1.75rem
+}
