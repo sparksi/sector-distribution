@@ -1,7 +1,7 @@
 .search-results {
 
     .view__header {
-        @apply text-2xl lg:text-3xl font-medium;
+        @apply font-custom-alt text-2xl lg:text-3xl font-medium;
 
         mark {
             @apply bg-transparent text-sky-500;
