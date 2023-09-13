@@ -1,7 +1,6 @@
 <?php
 
-
-function sector_admin_preprocess_html(&$variables) {
+function sector_admin_tools_preprocess_html(&$variables) {
     $route = \Drupal::routeMatch()->getRouteObject();
     $is_admin = \Drupal::service('router.admin_context')->isAdminRoute($route);
 
