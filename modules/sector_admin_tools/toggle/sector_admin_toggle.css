@@ -1,0 +1,32 @@
+.toggle-admin-ui {
+    position: fixed;
+    bottom: 1dvh;
+    right: 1dvh;
+    z-index: 1000;
+    text-indent: -5000em;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    appearance: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('./on.svg'), url('./off.svg') !important;
+}
+
+
+.toggle-admin-ui {
+    background-position: center center, -1000em -1000em;
+}
+
+body:is(.admin-ui-hidden) .toggle-admin-ui {
+    background-position: -1000em -1000em, center center;
+}
+
+body:is(.admin-ui-hidden) {
+    --gin-toolbar-x-offset: 0;
+
+    :is(.region--help, .contextual, .gin-secondary-toolbar, #toolbar-administration) {
+        display: none !important;
+    }
+}

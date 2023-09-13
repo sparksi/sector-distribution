@@ -1,0 +1,8 @@
+toggle:
+  css:
+    base:
+      toggle/sector_admin_toggle.css: {}
+  js:
+    toggle/sector_admin_toggle.js: { attributes: { defer: true}}
+  dependencies:
+    - core/drupal

@@ -1,0 +1,11 @@
+<?php
+
+
+function sector_admin_preprocess_html(&$variables) {
+    $route = \Drupal::routeMatch()->getRouteObject();
+    $is_admin = \Drupal::service('router.admin_context')->isAdminRoute($route);
+
+    if ($is_admin === FALSE && \Drupal::currentUser()->isAuthenticated()) {
+        $variables['#attached']['library'][] = "sector_admin_tools/toggle";
+    }
+}

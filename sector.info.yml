@@ -94,6 +94,7 @@ install:
 #  - sector:sector_utils
 #  - sector:sector_text_formats
 #  - sector:sector_wysiwyg_utils
+  - sector_admin_tools:sector_admin_tools
   - sector_tonic:sector_tonic
   - svg_image:svg_image
   - term_condition:term_condition
