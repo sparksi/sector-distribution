@@ -6,7 +6,12 @@
 .subtitle p {
   text-wrap: var(--subtitle-text-wrap, balance);
 
-  a {
+  a:not(.btn) {
     @apply underline underline-offset-4;
+  }
+
+  // I don't like these here
+  :is(.link--promo--light--arrow, .link--promo--dark--arrow) {
+    @apply text-base;
   }
 }

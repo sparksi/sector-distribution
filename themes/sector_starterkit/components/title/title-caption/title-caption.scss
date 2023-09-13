@@ -1,0 +1,7 @@
+.title-caption {
+    color: var(--title-color-override, var(--title-caption-color));
+
+    *:not(.magnet) a:not([class]) {
+        @apply underline underline-offset-4 decoration-1 hover:text-neutral-500 focus-visible:text-neutral-500;
+    }
+}

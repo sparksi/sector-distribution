@@ -1,4 +1,6 @@
-{{ include('sector_starterkit:title-caption' ) }}
-{% include 'sector_starterkit:magnet' with {
+{{ include('sector_demo:title-caption', {
+    utility_classes: [ 'title-caption' ]
+} ) }}
+{% include 'sector_demo:magnet' with {
     component: 'sector:placeholder'
  } only %}

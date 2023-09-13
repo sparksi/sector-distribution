@@ -1,5 +1,0 @@
-@container webform (min-width: 42rem) {
-    .webform>[data-component-id="sector_starterkit:status-messages"] {
-        grid-column: span 2 / span 2
-    }
-}
