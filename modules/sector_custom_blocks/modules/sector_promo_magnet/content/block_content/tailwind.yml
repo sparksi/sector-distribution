@@ -7,6 +7,9 @@ _meta:
   depends:
     af32c292-d72a-45c0-8e78-6fa671797808: media
 default:
+  revision_user:
+    -
+      target_id: 1
   status:
     -
       value: true
@@ -22,7 +25,7 @@ default:
   body:
     -
       value: '<p>Build your new frontend even faster with Sector 10 and Tailwind.</p>'
-      format: basic_html
+      format: sector_restricted_basic_html
       summary: ''
   field_custom_icon:
     -

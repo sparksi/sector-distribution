@@ -5,6 +5,9 @@ _meta:
   bundle: sector_promo_magnet
   default_langcode: en
 default:
+  revision_user:
+    -
+      target_id: 1
   status:
     -
       value: true
@@ -20,7 +23,7 @@ default:
   body:
     -
       value: '<p>Sector is built on Drupal - an open source content management system supported by a large worldwide community.</p>'
-      format: basic_html
+      format: sector_restricted_basic_html
       summary: ''
   field_icon:
     -

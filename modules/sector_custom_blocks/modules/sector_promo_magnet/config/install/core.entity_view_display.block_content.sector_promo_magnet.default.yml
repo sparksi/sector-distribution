@@ -10,9 +10,12 @@ dependencies:
     - field.field.block_content.sector_promo_magnet.field_link
     - field.field.block_content.sector_promo_magnet.field_title
   module:
+    - field_formatter_filter
     - link
     - material_icons
     - text
+_core:
+  default_config_hash: 8gEIL8_NVvtHIX3YYMYxP72_JAHIQzXA0oPD_mduQek
 id: block_content.sector_promo_magnet.default
 targetEntityType: block_content
 bundle: sector_promo_magnet
@@ -22,7 +25,9 @@ content:
     type: text_default
     label: hidden
     settings: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      field_formatter_filter:
+        format: sector_restricted_basic_html
     weight: 2
     region: content
   field_custom_icon:
