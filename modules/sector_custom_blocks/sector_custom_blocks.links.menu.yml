@@ -1,6 +1,13 @@
 sector_custom_blocks.add_page:
-  title: 'Add block'
+  title: 'Block'
   route_name: block_content.add_page
   description: 'Add custom block'
+  parent: admin_toolbar_tools.extra_links:node.add
+  weight: 1
+
+sector_custom_blocks.overview_page:
+  title: 'Blocks'
+  route_name: entity.block_content.collection
+  description: 'Blocks overview'
   parent: system.admin_content
   weight: 1
