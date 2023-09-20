@@ -1,0 +1,53 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 5f46351f-c240-4295-9af4-d0792acfc76a
+  bundle: remote_video
+  default_langcode: en
+  depends:
+    418e1b06-d479-4b5e-8876-d5564fe1a64c: taxonomy_term
+    09fda341-01a6-4a7e-a4c5-eca9219b6234: taxonomy_term
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: Sector
+  created:
+    -
+      value: 1583207335
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      alias: ''
+      langcode: en
+      pathauto: 0
+  field_credit_or_caption:
+    -
+      value: "<p>Use the&nbsp;<em>credit or caption</em>&nbsp;field to add&nbsp;your copyright or credit notice.</p>\r\n"
+      format: restricted_basic_html
+  field_description:
+    -
+      value: "<p>Use the&nbsp;<em>description</em>&nbsp;field to add supporting text.</p>\r\n"
+      format: restricted_basic_html
+  field_media_oembed_video:
+    -
+      value: 'https://www.youtube.com/watch?v=g9fb82hXRh8'
+  field_tags:
+    -
+      entity: 418e1b06-d479-4b5e-8876-d5564fe1a64c
+    -
+      entity: 09fda341-01a6-4a7e-a4c5-eca9219b6234
+  field_title:
+    -
+      value: 'Sample video'
+  field_transcript:
+    -
+      value: "<p>The video shows a logo animation. No words are spoken.</p>\r\n"
+      format: restricted_basic_html
