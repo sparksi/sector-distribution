@@ -24,7 +24,7 @@
         "drupal/captcha": "1.8",
         "drupal/components": "^3.0@beta",
         "drupal/config_update": "^2",
-        "drupal/core-recommended": "9.5.10",
+        "drupal/core-recommended": "9.5.11",
         "drupal/ctools": "3.14",
         "drupal/current_page_crumb": "1.4",
         "drupal/default_content": "2.0.0-alpha2",
