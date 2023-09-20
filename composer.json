@@ -61,7 +61,7 @@
         "drupal/views_bulk_edit": "2.8",
         "drupal/views_bulk_operations": "4.2.4",
         "drupal/views_menu_children_filter": "1.0-rc2",
-        "drupal/webform": "6.1.5",
+        "drupal/webform": "^6.2@beta",
         "drupal/wysiwyg_template": "3.0.0-rc2",
         "drupal/xmlsitemap": "1.4"
     },
