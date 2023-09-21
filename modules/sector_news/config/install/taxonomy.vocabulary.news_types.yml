@@ -1,0 +1,8 @@
+uuid: 1705641d-1185-4834-b037-f69e11ee439c
+langcode: en
+status: true
+dependencies: {  }
+name: 'News types'
+vid: news_types
+description: 'Used to sort views and searches by type. <em>Terms are redirected via rabbit-hole.<em>'
+weight: 0

@@ -1,0 +1,23 @@
+uuid: 3dc5f4bd-268d-48a7-a699-0f773e7bba0d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_links
+    - node.type.sector_news
+  module:
+    - link
+id: node.sector_news.field_related_links
+field_name: field_related_links
+entity_type: node
+bundle: sector_news
+label: 'Related Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

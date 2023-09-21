@@ -1,0 +1,22 @@
+uuid: b8c4699e-3b5b-430f-8823-be76e41ba4f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.sector_news
+id: node.sector_news.promote
+field_name: promote
+entity_type: node
+bundle: sector_news
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -8,6 +8,11 @@ dependencies:
     - field.field.node.sector_news.field_display_options
     - field.field.node.sector_news.field_image_hero
     - field.field.node.sector_news.field_issue_date
+    - field.field.node.sector_news.field_last_updated
+    - field.field.node.sector_news.field_meta_tags
+    - field.field.node.sector_news.field_new_types
+    - field.field.node.sector_news.field_related_documents
+    - field.field.node.sector_news.field_related_links
     - field.field.node.sector_news.field_text_placement
     - node.type.sector_news
   module:
@@ -19,7 +24,7 @@ third_party_settings:
     enabled: false
     allow_custom: false
 _core:
-  default_config_hash: gReFKB4kIRBwi_eaGl2UYEH-DaGOYnpVdhovnkR7F5w
+  default_config_hash: xrCJyRrxUmOeWJLAt6ewMvwjpYj42rwsKSlJ3jcW_V4
 id: node.sector_news.list_item_md
 targetEntityType: node
 bundle: sector_news
@@ -39,6 +44,11 @@ hidden:
   content_moderation_control: true
   field_display_options: true
   field_image_hero: true
+  field_last_updated: true
+  field_meta_tags: true
+  field_new_types: true
+  field_related_documents: true
+  field_related_links: true
   field_text_placement: true
   links: true
   search_api_excerpt: true
