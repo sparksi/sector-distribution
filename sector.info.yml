@@ -57,6 +57,7 @@ install:
   - block_class:block_class
   - blockgroup:blockgroup
   - ckeditor_link_styles:ckeditor_link_styles
+  - ckeditor5_embedded_content:ckeditor5_embedded_content
   - config_update:config_update
   - ctools:ctools
   - default_content:default_content
