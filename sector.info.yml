@@ -48,6 +48,8 @@ install:
   - drupal:views
   - drupal:views_ui
   - drupal:workflows
+  - drupal:xmlsitemap
+  - drupal:xmlsitemap_custom
   - actions_permissions:actions_permissions
   - admin_toolbar_links_access_filter:admin_toolbar_links_access_filter
   - admin_toolbar_tools:admin_toolbar_tools

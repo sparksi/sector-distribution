@@ -15,6 +15,7 @@ dependencies:
     - system
     - taxonomy
     - toolbar
+    - xmlsitemap
 id: content_editor
 label: 'Content editor'
 weight: -8
@@ -31,6 +32,7 @@ permissions:
   - 'create terms in tags'
   - 'create url aliases'
   - 'edit terms in tags'
+  - 'override xmlsitemap link settings'
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view latest version'
