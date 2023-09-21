@@ -1,0 +1,38 @@
+_meta:
+  version: '1.0'
+  entity_type: menu_link_content
+  uuid: 11b428c7-9487-4e19-8be0-8b545256b454
+  bundle: menu_link_content
+  default_langcode: en
+  depends:
+    9e9e3520-8d1a-4294-80ae-dac00bf57d85: node
+default:
+  enabled:
+    -
+      value: true
+  title:
+    -
+      value: 'Site map'
+  menu_name:
+    -
+      value: sector-tertiary
+  link:
+    -
+      target_uuid: 9e9e3520-8d1a-4294-80ae-dac00bf57d85
+      title: ''
+      options: {  }
+  external:
+    -
+      value: false
+  rediscover:
+    -
+      value: false
+  weight:
+    -
+      value: 0
+  expanded:
+    -
+      value: false
+  revision_translation_affected:
+    -
+      value: true
