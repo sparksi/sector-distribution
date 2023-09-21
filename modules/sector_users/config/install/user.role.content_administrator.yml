@@ -4,6 +4,7 @@ status: true
 dependencies:
   module:
     - node
+    - xmlsitemap
 _core:
   default_config_hash: XMJDy7c-fB3uGa4UdSNBo64pNqT8DyWn6y2U72wDjQk
 id: content_administrator
@@ -11,5 +12,6 @@ label: 'Content administrator'
 weight: -6
 is_admin: null
 permissions:
+  - 'administer xmlsitemap'
   - 'delete all revisions'
   - 'revert all revisions'
