@@ -52,7 +52,7 @@ function sector_install_required_modules() {
     'sector_search',
     'sector_news',
     'sector_workflow',
-  ], FALSE);
+  ], TRUE);
 
   // enable dependencies
   \Drupal::service('module_installer')->install([
