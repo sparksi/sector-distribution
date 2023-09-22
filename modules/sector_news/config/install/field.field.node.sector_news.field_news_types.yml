@@ -3,11 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_new_types
+    - field.storage.node.field_news_types
     - node.type.sector_news
     - taxonomy.vocabulary.news_types
-id: node.sector_news.field_new_types
-field_name: field_new_types
+id: node.sector_news.field_news_types
+field_name: field_news_types
 entity_type: node
 bundle: sector_news
 label: 'New types'

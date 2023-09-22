@@ -5,8 +5,8 @@ dependencies:
   module:
     - node
     - taxonomy
-id: node.field_new_types
-field_name: field_new_types
+id: node.field_news_types
+field_name: field_news_types
 entity_type: node
 type: entity_reference
 settings:

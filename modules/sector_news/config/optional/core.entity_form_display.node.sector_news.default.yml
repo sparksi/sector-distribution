@@ -9,7 +9,7 @@ dependencies:
     - field.field.node.sector_news.field_issue_date
     - field.field.node.sector_news.field_last_updated
     - field.field.node.sector_news.field_meta_tags
-    - field.field.node.sector_news.field_new_types
+    - field.field.node.sector_news.field_news_types
     - field.field.node.sector_news.field_related_documents
     - field.field.node.sector_news.field_related_links
     - field.field.node.sector_news.field_text_placement
@@ -46,7 +46,7 @@ third_party_settings:
         weight: 0
     group_metadata:
       children:
-        - field_new_types
+        - field_news_types
         - field_issue_date
         - field_last_updated
       label: Metadata
@@ -133,7 +133,7 @@ content:
       sidebar: true
       use_details: true
     third_party_settings: {  }
-  field_new_types:
+  field_news_types:
     type: options_select
     weight: 10
     region: content

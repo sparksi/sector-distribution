@@ -10,7 +10,7 @@ dependencies:
     - field.field.node.sector_news.field_issue_date
     - field.field.node.sector_news.field_last_updated
     - field.field.node.sector_news.field_meta_tags
-    - field.field.node.sector_news.field_new_types
+    - field.field.node.sector_news.field_news_types
     - field.field.node.sector_news.field_related_documents
     - field.field.node.sector_news.field_related_links
     - field.field.node.sector_news.field_text_placement
@@ -22,8 +22,6 @@ third_party_settings:
   layout_builder:
     enabled: false
     allow_custom: false
-_core:
-  default_config_hash: oHTo6AW7iV38a0pCjtSMGKUNLZDBmzLVCZjNngukEAQ
 id: node.sector_news.search_result
 targetEntityType: node
 bundle: sector_news
@@ -42,7 +40,7 @@ hidden:
   field_issue_date: true
   field_last_updated: true
   field_meta_tags: true
-  field_new_types: true
+  field_news_types: true
   field_related_documents: true
   field_related_links: true
   field_text_placement: true
