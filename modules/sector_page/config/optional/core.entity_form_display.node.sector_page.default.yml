@@ -1,19 +1,20 @@
-uuid: 255d7024-54a7-417b-96ee-0c0c552dfe74
+uuid: 283c3ce1-d164-423f-bdfb-447c97c4e269
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.sector_news.body
-    - field.field.node.sector_news.field_display_options
-    - field.field.node.sector_news.field_image_hero
-    - field.field.node.sector_news.field_issue_date
-    - field.field.node.sector_news.field_last_updated
-    - field.field.node.sector_news.field_meta_tags
-    - field.field.node.sector_news.field_new_types
-    - field.field.node.sector_news.field_related_documents
-    - field.field.node.sector_news.field_related_links
-    - field.field.node.sector_news.field_text_placement
-    - node.type.sector_news
+    - field.field.node.sector_page.body
+    - field.field.node.sector_page.field_content_options
+    - field.field.node.sector_page.field_display_options
+    - field.field.node.sector_page.field_image_hero
+    - field.field.node.sector_page.field_last_updated
+    - field.field.node.sector_page.field_meta_tags
+    - field.field.node.sector_page.field_related_documents
+    - field.field.node.sector_page.field_related_links
+    - field.field.node.sector_page.field_subtitle
+    - field.field.node.sector_page.field_text_placement
+    - field.field.node.sector_page.field_title_caption
+    - node.type.sector_page
     - workflows.workflow.sector_editorial
   module:
     - content_moderation
@@ -31,10 +32,11 @@ third_party_settings:
         - field_image_hero
         - field_display_options
         - field_text_placement
+        - field_content_options
       label: 'Display options'
       region: content
       parent_name: ''
-      weight: 12
+      weight: 3
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -44,15 +46,29 @@ third_party_settings:
         description: ''
         required_fields: true
         weight: 0
+    group_title_surrounds:
+      children:
+        - field_title_caption
+        - field_subtitle
+      label: 'Title surrounds'
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
     group_metadata:
       children:
-        - field_new_types
-        - field_issue_date
         - field_last_updated
       label: Metadata
       region: content
       parent_name: ''
-      weight: 1
+      weight: 2
       format_type: details
       format_settings:
         classes: ''
@@ -68,7 +84,7 @@ third_party_settings:
       label: 'Related content'
       region: content
       parent_name: ''
-      weight: 3
+      weight: 5
       format_type: details
       format_settings:
         classes: ''
@@ -78,15 +94,15 @@ third_party_settings:
         description: ''
         required_fields: true
 _core:
-  default_config_hash: UorlMG9DQ4tRJC84t_CbBTlMlj592NDGHNQ_dpLb7v4
-id: node.sector_news.default
+  default_config_hash: gLSPzlcvUiX84q-kGwYh_ycAnC7eFSNSBi9MwniuxYQ
+id: node.sector_page.default
 targetEntityType: node
-bundle: sector_news
+bundle: sector_page
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 2
+    weight: 4
     region: content
     settings:
       rows: 9
@@ -96,59 +112,53 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 5
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_content_options:
+    type: options_buttons
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   field_display_options:
     type: options_buttons
-    weight: 15
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }
   field_image_hero:
     type: media_library_widget
-    weight: 14
+    weight: 7
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
-  field_issue_date:
-    type: datetime_default
-    weight: 11
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_last_updated:
     type: datetime_default
-    weight: 12
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 11
+    weight: 12
     region: content
     settings:
       sidebar: true
       use_details: true
     third_party_settings: {  }
-  field_new_types:
-    type: options_select
-    weight: 10
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_related_documents:
     type: media_library_widget
-    weight: 11
+    weight: 12
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_related_links:
     type: linkit
-    weight: 12
+    weight: 13
     region: content
     settings:
       placeholder_url: ''
@@ -156,27 +166,43 @@ content:
       linkit_profile: sector_linkit
       linkit_auto_link_text: true
     third_party_settings: {  }
+  field_subtitle:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   field_text_placement:
     type: options_buttons
-    weight: 16
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_title_caption:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 9
+    weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 7
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 10
+    weight: 11
     region: content
     settings:
       display_label: true
@@ -191,7 +217,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 4
+    weight: 6
     region: content
     settings:
       match_operator: CONTAINS
@@ -200,7 +226,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 8
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }

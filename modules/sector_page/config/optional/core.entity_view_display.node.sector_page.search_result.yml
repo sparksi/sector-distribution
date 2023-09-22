@@ -22,7 +22,9 @@ dependencies:
 third_party_settings:
   layout_builder:
     enabled: false
-    allow_custom: field_last_updated
+    allow_custom: true
+_core:
+  default_config_hash: ibrmcE69zcEuV-IgrXVwvS9czZ4YoGqJBJi0ZUJHmcA
 id: node.sector_page.search_result
 targetEntityType: node
 bundle: sector_page

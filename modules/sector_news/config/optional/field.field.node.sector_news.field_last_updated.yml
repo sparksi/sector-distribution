@@ -1,0 +1,24 @@
+uuid: ef979ba3-87eb-4c0d-927d-b5b2bc44e846
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_last_updated
+    - node.type.sector_news
+  module:
+    - datetime
+id: node.sector_news.field_last_updated
+field_name: field_last_updated
+entity_type: node
+bundle: sector_news
+label: 'Last updated'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime
