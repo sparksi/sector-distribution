@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.sector_news.field_related_links
     - field.field.node.sector_news.field_text_placement
     - node.type.sector_news
-    - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - datetime
@@ -24,6 +23,7 @@ dependencies:
     - metatag
     - path
     - text
+    - sector_text_formats
 third_party_settings:
   field_group:
     group_display_options:
