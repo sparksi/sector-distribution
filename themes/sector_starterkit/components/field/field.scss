@@ -1,4 +1,12 @@
 .field {
   // content
-  --display: block;
+  --field-display: block;
+
+  display: var(--field-display);
+  gap: var(--field-gap);
+}
+
+.field--label-inline {
+  --field-display: inline-flex;
+  --field-gap: theme('space.1');
 }
