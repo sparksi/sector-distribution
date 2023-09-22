@@ -35,6 +35,14 @@ content:
       timezone_override: Pacific/Auckland
       format_type: sector_date_short
     third_party_settings: {  }
+    weight: 1
+    region: content
+  field_news_types:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
     weight: 0
     region: content
 hidden:
@@ -44,7 +52,6 @@ hidden:
   field_image_hero: true
   field_last_updated: true
   field_meta_tags: true
-  field_news_types: true
   field_related_documents: true
   field_related_links: true
   field_text_placement: true
