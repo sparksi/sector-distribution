@@ -4,6 +4,7 @@ description: Provides the default content and configuration for News content typ
 package: Sector
 core_version_requirement: ^10
 dependencies:
+  - drupal:sdc
   - sector:sector_media
   - sector:sector_taxonomies
   - sector:sector_page
