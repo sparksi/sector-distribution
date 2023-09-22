@@ -22,3 +22,7 @@ default_content:
 
   menu_link_content:
     - 0f80f161-863f-4e05-8537-828e6ca85332
+
+  taxonomy_term:
+    - ce233fb7-180a-4bf3-b499-36944d029c96
+    - fa19b417-2470-4847-881b-a0ec816a2a72
