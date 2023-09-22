@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.sector_news.field_related_links
     - field.field.node.sector_news.field_text_placement
     - node.type.sector_news
+    - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - datetime
@@ -23,7 +24,6 @@ dependencies:
     - metatag
     - path
     - text
-    - sector_text_formats
 third_party_settings:
   field_group:
     group_display_options:
@@ -34,7 +34,7 @@ third_party_settings:
       label: 'Display options'
       region: content
       parent_name: ''
-      weight: 13
+      weight: 11
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -77,8 +77,6 @@ third_party_settings:
         open: false
         description: ''
         required_fields: true
-_core:
-  default_config_hash: 3_fNVR1vzaakp9qbhUCkfbntWhy5AFtzGtUOIrI9syQ
 id: node.sector_news.default
 targetEntityType: node
 bundle: sector_news
@@ -127,7 +125,7 @@ content:
     third_party_settings: {  }
   field_meta_tags:
     type: metatag_firehose
-    weight: 12
+    weight: 10
     region: content
     settings:
       sidebar: true
@@ -164,33 +162,19 @@ content:
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 10
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 8
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
-  promote:
-    type: boolean_checkbox
-    weight: 6
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 11
-    region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
-  sticky:
-    type: boolean_checkbox
-    weight: 7
+    weight: 9
     region: content
     settings:
       display_label: true
@@ -214,8 +198,10 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 9
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  promote: true
+  sticky: true

@@ -5,7 +5,9 @@ _meta:
   bundle: sector_news
   default_langcode: en
   depends:
+    2800990a-8452-4fbf-97f1-59cafc912a91: user
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
+    fa19b417-2470-4847-881b-a0ec816a2a72: taxonomy_term
 default:
   revision_uid:
     -
@@ -15,7 +17,7 @@ default:
       value: true
   uid:
     -
-      target_id: 1
+      entity: 2800990a-8452-4fbf-97f1-59cafc912a91
   title:
     -
       value: 'News content sample with a long descriptive title'
@@ -36,7 +38,7 @@ default:
       value: published
   path:
     -
-      alias: /news/news-content-sample-long-descriptive-title
+      alias: /news/news-content-sample-with-a-long-descriptive-title
       langcode: en
       pathauto: 1
   rh_action:
@@ -59,3 +61,12 @@ default:
   field_issue_date:
     -
       value: '2023-06-21T02:34:15'
+  field_last_updated:
+    -
+      value: '2023-09-22'
+  field_news_types:
+    -
+      entity: fa19b417-2470-4847-881b-a0ec816a2a72
+  field_text_placement:
+    -
+      value: text-left
