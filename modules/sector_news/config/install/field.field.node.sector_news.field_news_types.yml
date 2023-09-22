@@ -10,7 +10,7 @@ id: node.sector_news.field_news_types
 field_name: field_news_types
 entity_type: node
 bundle: sector_news
-label: 'New types'
+label: 'News type(s)'
 description: '<a href=''/admin/structure/taxonomy/manage/news_types/overview'' target="_blank" >Add or edit terms for this taxonomy</a> (requires specific permissions).'
 required: false
 translatable: false
