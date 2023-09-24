@@ -14,6 +14,7 @@ dependencies:
     - field.field.node.sector_news.field_text_placement
     - field.field.node.sector_news.field_types
     - node.type.sector_news
+    - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - datetime
@@ -45,7 +46,7 @@ third_party_settings:
         weight: 0
     group_metadata:
       children:
-        - field_news_types
+        - field_types
         - field_issue_date
         - field_last_updated
       label: Metadata
@@ -112,13 +113,13 @@ content:
     third_party_settings: {  }
   field_issue_date:
     type: datetime_default
-    weight: 16
+    weight: 1
     region: content
     settings: {  }
     third_party_settings: {  }
   field_last_updated:
     type: datetime_default
-    weight: 17
+    weight: 2
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -132,14 +133,14 @@ content:
     third_party_settings: {  }
   field_related_documents:
     type: media_library_widget
-    weight: 0
+    weight: 1
     region: content
     settings:
       media_types: {  }
     third_party_settings: {  }
   field_related_links:
     type: linkit
-    weight: 1
+    weight: 2
     region: content
     settings:
       placeholder_url: ''
@@ -150,6 +151,12 @@ content:
   field_text_placement:
     type: options_buttons
     weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_types:
+    type: options_select
+    weight: 0
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -196,6 +203,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_types: true
   promote: true
   sticky: true

@@ -5,9 +5,9 @@ _meta:
   bundle: sector_news
   default_langcode: en
   depends:
-    2800990a-8452-4fbf-97f1-59cafc912a91: user
-    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
+    a2f8a0f1-ca25-4859-8c18-8f722bc6f01c: user
     ce233fb7-180a-4bf3-b499-36944d029c96: taxonomy_term
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
     -
@@ -17,7 +17,7 @@ default:
       value: true
   uid:
     -
-      entity: 2800990a-8452-4fbf-97f1-59cafc912a91
+      entity: a2f8a0f1-ca25-4859-8c18-8f722bc6f01c
   title:
     -
       value: 'News content sample'
@@ -50,6 +50,9 @@ default:
   rh_redirect_fallback_action:
     -
       value: bundle_default
+  field_types:
+    -
+      entity: ce233fb7-180a-4bf3-b499-36944d029c96
   body:
     -
       value: "<p class=\"lead\">The <em>News</em> content type is an example of&nbsp;taxonomy (or data)&nbsp;driven content. Taxonomy-driven content&nbsp;is content organised by sort and filter criteria. In a Drupal context, the sort and filter criteria can be either data&nbsp;or taxonomy based. &nbsp;</p><p>The Sector <em>News</em> content type (based on Drupal's core <em>Article</em> content type)&nbsp;is prepared for transient content that is most relevant at&nbsp;publication (its issue date). The 'article type' taxonomy allows you to sort and filter news into groups, such as&nbsp;media releases and&nbsp;newsletters. The news archive allows the user to filter by date.&nbsp;</p><p>This sample page is a node of the content type <em>News</em>.</p><p>{sample content}</p>"
@@ -64,9 +67,6 @@ default:
   field_last_updated:
     -
       value: '2023-09-22'
-  field_news_types:
-    -
-      entity: ce233fb7-180a-4bf3-b499-36944d029c96
   field_text_placement:
     -
       value: text-left
