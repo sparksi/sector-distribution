@@ -7,13 +7,19 @@ dependencies:
     - field.field.node.sector_resource.field_display_options
     - field.field.node.sector_resource.field_image_hero
     - field.field.node.sector_resource.field_issue_date
+    - field.field.node.sector_resource.field_meta_tags
+    - field.field.node.sector_resource.field_related_documents
+    - field.field.node.sector_resource.field_related_links
     - field.field.node.sector_resource.field_text_placement
+    - field.field.node.sector_resource.field_types
     - node.type.sector_resource
   module:
     - content_moderation
     - datetime
     - field_group
+    - linkit
     - media_library
+    - metatag
     - path
     - text
 third_party_settings:
@@ -26,7 +32,7 @@ third_party_settings:
       label: 'Display options'
       region: content
       parent_name: ''
-      weight: 14
+      weight: 12
       format_type: details_sidebar
       format_settings:
         classes: ''
@@ -36,8 +42,38 @@ third_party_settings:
         description: ''
         required_fields: true
         weight: 0
-_core:
-  default_config_hash: YEL4gESeQEzn8QKiOEcCkM-lYJDysEIkm73LQ9VCgLk
+    group_metadata:
+      children:
+        - field_types
+        - field_issue_date
+      label: Metadata
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+    group_related_content:
+      children:
+        - field_related_documents
+        - field_related_links
+      label: 'Related content'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
 id: node.sector_resource.default
 targetEntityType: node
 bundle: sector_resource
@@ -45,7 +81,7 @@ mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 9
+    weight: 2
     region: content
     settings:
       rows: 9
@@ -55,7 +91,7 @@ content:
     third_party_settings: {  }
   created:
     type: datetime_timestamp
-    weight: 3
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -74,9 +110,34 @@ content:
     third_party_settings: {  }
   field_issue_date:
     type: datetime_default
-    weight: 1
+    weight: 17
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_meta_tags:
+    type: metatag_firehose
+    weight: 13
+    region: content
+    settings:
+      sidebar: true
+      use_details: true
+    third_party_settings: {  }
+  field_related_documents:
+    type: media_library_widget
+    weight: 14
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_related_links:
+    type: linkit
+    weight: 15
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      linkit_profile: sector_linkit
+      linkit_auto_link_text: true
     third_party_settings: {  }
   field_text_placement:
     type: options_buttons
@@ -84,35 +145,41 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  field_types:
+    type: options_select
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   moderation_state:
     type: moderation_state_default
-    weight: 13
+    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
   path:
     type: path
-    weight: 6
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    weight: 4
+    weight: 6
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    weight: 8
+    weight: 10
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    weight: 5
+    weight: 7
     region: content
     settings:
       display_label: true
@@ -127,7 +194,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 2
+    weight: 4
     region: content
     settings:
       match_operator: CONTAINS
@@ -136,7 +203,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
   url_redirects:
-    weight: 7
+    weight: 9
     region: content
     settings: {  }
     third_party_settings: {  }

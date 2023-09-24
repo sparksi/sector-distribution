@@ -20,3 +20,6 @@ default_content:
 
   menu_link_content:
     - 0654d01d-264f-4520-b823-163c7cefd722
+
+  taxonomy_term:
+    - 6ac834fc-0c5d-4975-b50d-ff8378d60b60
