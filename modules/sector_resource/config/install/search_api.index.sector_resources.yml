@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_issue_date
+    - field.storage.node.field_types
     - search_api.server.sector_default
   module:
     - node
@@ -30,6 +31,15 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_issue_date
+  field_types:
+    label: 'Resource Type(s)'
+    datasource_id: 'entity:node'
+    property_path: field_types
+    type: text
+    boost: 1.2
+    dependencies:
+      config:
+        - field.storage.node.field_types
   promote:
     label: 'Promoted to front page'
     datasource_id: 'entity:node'
