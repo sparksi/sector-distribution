@@ -8,13 +8,17 @@ dependencies:
     - field.field.node.sector_resource.field_display_options
     - field.field.node.sector_resource.field_image_hero
     - field.field.node.sector_resource.field_issue_date
+    - field.field.node.sector_resource.field_meta_tags
+    - field.field.node.sector_resource.field_related_documents
+    - field.field.node.sector_resource.field_related_links
     - field.field.node.sector_resource.field_text_placement
+    - field.field.node.sector_resource.field_types
     - node.type.sector_resource
   module:
+    - datetime
+    - linkit
     - text
     - user
-_core:
-  default_config_hash: OuCBIyb0JHLIuqnDAFSb2Zf4haBXR0tnnkL0KWqM7HQ
 id: node.sector_resource.full
 targetEntityType: node
 bundle: sector_resource
@@ -25,16 +29,44 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 101
+    weight: 1
     region: content
-  links:
-    settings: {  }
+  field_issue_date:
+    type: datetime_default
+    label: inline
+    settings:
+      timezone_override: ''
+      format_type: sector_date_short
     third_party_settings: {  }
-    weight: 100
+    weight: 0
+    region: content
+  field_related_documents:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: sector_1_xs
+      link: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_related_links:
+    type: linkit
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+      linkit_profile: default
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
   field_display_options: true
   field_image_hero: true
-  field_issue_date: true
+  field_meta_tags: true
   field_text_placement: true
+  field_types: true
+  links: true
   search_api_excerpt: true

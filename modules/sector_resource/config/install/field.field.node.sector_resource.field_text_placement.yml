@@ -7,6 +7,8 @@ dependencies:
     - node.type.sector_resource
   module:
     - options
+_core:
+  default_config_hash: T87lr8HfGIqi3AucFTVrUss2nAMBIqN8kporeZiUHKA
 id: node.sector_resource.field_text_placement
 field_name: field_text_placement
 entity_type: node
@@ -17,7 +19,7 @@ required: true
 translatable: false
 default_value:
   -
-    value: text-center
+    value: text-left
 default_value_callback: ''
 settings: {  }
 field_type: list_string

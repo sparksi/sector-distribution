@@ -4,6 +4,11 @@ _meta:
   uuid: c1cbb0e6-0bbd-4ea7-b1b0-8a1f290f7bbb
   bundle: sector_resource
   default_langcode: en
+  depends:
+    89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
+    69dbfcde-0249-4006-af2c-2d5e3d43c202: media
+    d6e47575-6c1c-4414-8b1f-1ebeb85d4c1b: node
+    6ac834fc-0c5d-4975-b50d-ff8378d60b60: taxonomy_term
 default:
   revision_uid:
     -
@@ -26,6 +31,9 @@ default:
   sticky:
     -
       value: false
+  revision_translation_affected:
+    -
+      value: true
   path:
     -
       alias: /resources/resource-content-sample
@@ -45,6 +53,27 @@ default:
       value: '<p class="lead">The <em>Resource</em> content type is another example of&nbsp;taxonomy (or data) driven content. Resources&nbsp;and news items have similar fieldsets and displays; however their data type and audiences are different. Resources&nbsp;are non-transient (content remains relevant over time), while news items are transient (content becomes less relevant over time).</p><p>The Sector <em>Resource </em>content type&nbsp;is prepared for information&nbsp;or knowledge database content. The ''resource type'' taxonomy allows you to sort and filter resource pages&nbsp;into groups, such as training materials or&nbsp;manuals. The resource archive allows the user to filter by issue date or type.&nbsp;</p><p>This&nbsp;sample node is a node of the content type&nbsp;<em>Resource</em>.</p><p>{sample content}</p>'
       format: sector_basic_html
       summary: ''
+  field_display_options:
+    -
+      entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
   field_issue_date:
     -
       value: '2023-05-15T01:56:46'
+  field_related_documents:
+    -
+      entity: 69dbfcde-0249-4006-af2c-2d5e3d43c202
+  field_related_links:
+    -
+      target_uuid: d6e47575-6c1c-4414-8b1f-1ebeb85d4c1b
+      title: 'News content sample'
+      options:
+        href: 'entity:node/12'
+        data-entity-type: node
+        data-entity-uuid: d6e47575-6c1c-4414-8b1f-1ebeb85d4c1b
+        data-entity-substitution: canonical
+  field_text_placement:
+    -
+      value: text-left
+  field_types:
+    -
+      entity: 6ac834fc-0c5d-4975-b50d-ff8378d60b60
