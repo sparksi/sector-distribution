@@ -1,0 +1,8 @@
+uuid: 11786115-0545-42c7-8b39-d968d9cf809c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource types'
+vid: resource_types
+description: 'Used to sort views and searches by type. <em>Terms are redirected via rabbit-hole.<em>'
+weight: 0

@@ -13,8 +13,6 @@ third_party_settings:
     allowed_formats:
       - sector_basic_html
       - sector_full_html
-_core:
-  default_config_hash: JJUTj5f5wzGzr_OKdzlxC7ivSZUKqKLsYx2zkJu_OKA
 id: node.sector_resource.body
 field_name: body
 entity_type: node
