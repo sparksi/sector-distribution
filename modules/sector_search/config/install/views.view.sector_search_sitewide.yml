@@ -6,11 +6,9 @@ dependencies:
     - search_api.index.sector_content_sidewide
     - taxonomy.vocabulary.sector_content_settings
   content:
-    - 'taxonomy_term:sector_content_settings:a2c525ae-fb40-42ba-991f-d358a6152f8d'
+    - 'taxonomy_term:sector_content_settings:ce6a9fe6-0d6b-4ea4-afe8-7d505a7fe57b'
   module:
     - search_api
-_core:
-  default_config_hash: ak9CLqWIePs98rXXVScIWSCwkvHzPWpTyr1AAELw7XI
 id: sector_search_sitewide
 label: 'Sector › Search › Sitewide'
 module: views
@@ -419,6 +417,7 @@ display:
             'entity:node':
               sector_news: search_result
               sector_page: search_result
+              sector_resource: search_result
       query:
         type: search_api_query
         options:

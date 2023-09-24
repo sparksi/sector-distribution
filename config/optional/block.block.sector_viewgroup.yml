@@ -23,4 +23,8 @@ settings:
   label: 'View group'
   label_display: '0'
   provider: blockgroup
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
