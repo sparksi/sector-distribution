@@ -8,7 +8,11 @@ dependencies:
     - field.field.node.sector_resource.field_display_options
     - field.field.node.sector_resource.field_image_hero
     - field.field.node.sector_resource.field_issue_date
+    - field.field.node.sector_resource.field_meta_tags
+    - field.field.node.sector_resource.field_related_documents
+    - field.field.node.sector_resource.field_related_links
     - field.field.node.sector_resource.field_text_placement
+    - field.field.node.sector_resource.field_types
     - node.type.sector_resource
   module:
     - datetime
@@ -32,10 +36,21 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_types:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
 hidden:
   body: true
   field_display_options: true
   field_image_hero: true
+  field_meta_tags: true
+  field_related_documents: true
+  field_related_links: true
   field_text_placement: true
   links: true
   search_api_excerpt: true
