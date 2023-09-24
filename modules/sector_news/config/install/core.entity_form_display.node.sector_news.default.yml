@@ -14,7 +14,6 @@ dependencies:
     - field.field.node.sector_news.field_text_placement
     - field.field.node.sector_news.field_types
     - node.type.sector_news
-    - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - datetime
