@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_issue_date
-    - field.storage.node.field_news_types
+    - field.storage.node.field_types
     - search_api.server.sector_default
   module:
     - node
@@ -31,15 +31,15 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_issue_date
-  field_news_types:
-    label: 'News type(s)'
+  field_types:
+    label: 'News Type(s)'
     datasource_id: 'entity:node'
-    property_path: field_news_types
+    property_path: field_types
     type: text
     boost: 1.2
     dependencies:
       config:
-        - field.storage.node.field_news_types
+        - field.storage.node.field_types
   nid:
     label: ID
     datasource_id: 'entity:node'

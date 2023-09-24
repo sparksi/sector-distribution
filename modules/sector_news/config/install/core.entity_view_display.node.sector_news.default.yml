@@ -9,10 +9,10 @@ dependencies:
     - field.field.node.sector_news.field_issue_date
     - field.field.node.sector_news.field_last_updated
     - field.field.node.sector_news.field_meta_tags
-    - field.field.node.sector_news.field_news_types
     - field.field.node.sector_news.field_related_documents
     - field.field.node.sector_news.field_related_links
     - field.field.node.sector_news.field_text_placement
+    - field.field.node.sector_news.field_types
     - node.type.sector_news
   module:
     - datetime
@@ -21,8 +21,6 @@ dependencies:
     - options
     - text
     - user
-_core:
-  default_config_hash: wmxT9z2uAfMfyMUcEDjUOAH6oZQiShUTX1pKsGNL4O8
 id: node.sector_news.default
 targetEntityType: node
 bundle: sector_news
@@ -81,14 +79,6 @@ content:
     third_party_settings: {  }
     weight: 105
     region: content
-  field_news_types:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 108
-    region: content
   field_related_documents:
     type: entity_reference_entity_view
     label: above
@@ -123,4 +113,5 @@ content:
     weight: 100
     region: content
 hidden:
+  field_types: true
   search_api_excerpt: true

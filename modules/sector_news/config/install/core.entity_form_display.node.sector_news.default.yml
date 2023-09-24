@@ -9,11 +9,12 @@ dependencies:
     - field.field.node.sector_news.field_issue_date
     - field.field.node.sector_news.field_last_updated
     - field.field.node.sector_news.field_meta_tags
-    - field.field.node.sector_news.field_news_types
     - field.field.node.sector_news.field_related_documents
     - field.field.node.sector_news.field_related_links
     - field.field.node.sector_news.field_text_placement
+    - field.field.node.sector_news.field_types
     - node.type.sector_news
+    - workflows.workflow.sector_editorial
   module:
     - content_moderation
     - datetime
@@ -23,7 +24,6 @@ dependencies:
     - metatag
     - path
     - text
-    - sector_text_formats
 third_party_settings:
   field_group:
     group_display_options:
@@ -131,12 +131,6 @@ content:
       sidebar: true
       use_details: true
     third_party_settings: {  }
-  field_news_types:
-    type: options_select
-    weight: 15
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   field_related_documents:
     type: media_library_widget
     weight: 0
@@ -203,5 +197,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_types: true
   promote: true
   sticky: true

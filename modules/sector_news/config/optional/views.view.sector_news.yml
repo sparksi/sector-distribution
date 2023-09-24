@@ -662,27 +662,27 @@ display:
           parse_mode: terms
           min_length: 3
           fields: {  }
-        field_news_types:
-          id: field_news_types
+        field_types:
+          id: field_types
           table: search_api_index_sector_news
-          field: field_news_types
+          field: field_types
           relationship: none
           group_type: group
-          admin_label: 'Filter by type'
+          admin_label: ''
           plugin_id: search_api_term
           operator: or
           value: {  }
           group: 1
           exposed: true
           expose:
-            operator_id: field_news_types_op
+            operator_id: field_types_op
             label: 'Filter by type'
             description: ''
             use_operator: false
-            operator: field_news_types_op
+            operator: field_types_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: news_types
+            identifier: types
             required: false
             remember: false
             multiple: false
