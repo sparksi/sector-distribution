@@ -9,6 +9,9 @@ dependencies:
     - views
   theme:
     - sector
+third_party_settings:
+  block_class:
+    classes: 'mt-10 lg:mt-16'
 id: sector_views_block__sector_resource_resources_page_block
 theme: sector
 region: content

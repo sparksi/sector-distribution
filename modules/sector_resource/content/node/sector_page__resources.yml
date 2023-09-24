@@ -5,6 +5,7 @@ _meta:
   bundle: sector_page
   default_langcode: en
   depends:
+    cb1a21ce-f835-4682-b027-34f80c86c4e8: taxonomy_term
     89a93419-6690-4fb1-8758-9c5b8eb32536: taxonomy_term
 default:
   revision_uid:
@@ -48,9 +49,20 @@ default:
   rh_redirect_fallback_action:
     -
       value: bundle_default
+  body:
+    -
+      value: '<p class="lead">Next to hierarchical content in a menu tree, Sector supports taxonomy (or data) driven content. The resources section entry page is an example of how to transition from <em>pages</em> to <em>views</em>.</p><p>In this example an simple resource listing is embedded into a node of the content type page.</p><p>{Sample content}</p>'
+      format: sector_basic_html
+      summary: ''
+  field_content_options:
+    -
+      entity: cb1a21ce-f835-4682-b027-34f80c86c4e8
   field_display_options:
     -
       entity: 89a93419-6690-4fb1-8758-9c5b8eb32536
+  field_last_updated:
+    -
+      value: '2023-09-25'
   field_text_placement:
     -
       value: text-left

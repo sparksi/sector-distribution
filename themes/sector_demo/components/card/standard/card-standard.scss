@@ -4,4 +4,8 @@
 
 .card--standard {
     content: none;
+
+    .field--type-image {
+        --field-display: inline-block;
+    }
 }
