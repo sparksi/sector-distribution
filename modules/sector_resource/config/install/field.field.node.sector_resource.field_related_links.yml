@@ -1,0 +1,23 @@
+uuid: 32652a5b-c9cc-429b-a1ef-884afbea069b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_links
+    - node.type.sector_resource
+  module:
+    - link
+id: node.sector_resource.field_related_links
+field_name: field_related_links
+entity_type: node
+bundle: sector_resource
+label: 'Related Links'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

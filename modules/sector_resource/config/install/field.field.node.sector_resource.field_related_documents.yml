@@ -1,0 +1,29 @@
+uuid: fefbff69-8b7e-4d0d-8904-ebfbfb804f2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_documents
+    - media.type.document
+    - node.type.sector_resource
+id: node.sector_resource.field_related_documents
+field_name: field_related_documents
+entity_type: node
+bundle: sector_resource
+label: 'Related documents'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      document: document
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
