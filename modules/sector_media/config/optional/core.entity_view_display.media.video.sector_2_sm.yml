@@ -1,0 +1,55 @@
+uuid: 7835d8cd-0c5e-4f4a-8d44-06d0887927be
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.sector_2_sm
+    - field.field.media.video.field_audio_description
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_poster
+    - field.field.media.video.field_subtitle_track
+    - field.field.media.video.field_transcript
+    - media.type.video
+  module:
+    - file
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: media.video.sector_2_sm
+targetEntityType: media
+bundle: video
+mode: sector_2_sm
+content:
+  field_media_video_file:
+    type: file_video
+    label: hidden
+    settings:
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+      muted: false
+      width: 720
+      height: 405
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_transcript:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  created: true
+  field_audio_description: true
+  field_poster: true
+  field_subtitle_track: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
