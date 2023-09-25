@@ -1,8 +1,0 @@
-name: Select
-status: stable
-description: Select
-props:
-  type: object
-  properties:
-    attributes:
-      type: Drupal\Core\Template\Attribute

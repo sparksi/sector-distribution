@@ -1,1 +1,0 @@
-.page:where(.text-placement--text-center) .banner--minimal{--text-placement: center}.page:where(.text-placement--text-left) .banner--minimal{--text-placement: left}.page:where(.text-placement--text-right) .banner--minimal{--text-placement: right}

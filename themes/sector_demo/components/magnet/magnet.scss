@@ -1,9 +1,0 @@
-// This is more for a <p> tag that needs to have a button type look, but is more like a long pill.
-.magnet {
-  @apply inline-block rounded-full bg-opacity-0 px-4 py-2 text-base antialiased ring-1 ring-white ring-opacity-50;
-  @apply text-current;
-
-  a:not(.btn, [class*='promo']) {
-    @apply text-current;
-  }
-}

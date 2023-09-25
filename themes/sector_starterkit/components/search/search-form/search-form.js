@@ -1,1 +1,0 @@
-Drupal.behaviors.search={attach:a=>{const r=a.querySelector(".region--header.header .search__toggle");r&&r.addEventListener("click",({target:e})=>{e&&e.setAttribute("aria-expanded",e.getAttribute("aria-expanded")==="false"?"true":"false")})}};

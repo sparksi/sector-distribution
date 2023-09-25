@@ -1,7 +1,0 @@
-.badge {
-    @apply bg-zinc-200 shadow rounded px-1 py-1 leading-none;
-
-    &:is(.field) {
-        --field-display: inline-block;
-    }
-}

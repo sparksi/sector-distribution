@@ -1,7 +1,0 @@
-@mixin removeDetailsArrow {
-    list-style: none;
-
-    &::-webkit-details-marker {
-      display: none;
-    }
-  }

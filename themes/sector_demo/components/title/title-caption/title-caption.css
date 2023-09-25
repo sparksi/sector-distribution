@@ -1,1 +1,0 @@
-.title-caption{color:var(--title-color-override, var(--title-caption-color))}.title-caption *:not(.magnet) a:not([class]){text-decoration-line:underline;text-decoration-thickness:1px;text-underline-offset:4px}.title-caption *:not(.magnet) a:not([class]):hover{color:var(--primary, #0ea5e9)}.title-caption *:not(.magnet) a:not([class]):focus-visible{color:var(--primary, #0ea5e9)}
