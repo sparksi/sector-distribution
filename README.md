@@ -1,4 +1,6 @@
-# Sector - a Distribution for Drupal
+# DEPRECATED Sector - a Distribution for Drupal
+
+**Visit: [Sector Distribution on Drupal.org](https://www.drupal.org/project/sector) for the actively maintained version of this project.**
 
 [Sector](https://www.sector.nz/) is a Drupal distribution (or install profile) built and maintained by [Sparks Interactive](https://www.sparksinteractive.co.nz).
 
@@ -6,7 +8,7 @@
 
 When creating a new project with Sector, you can use our [composer project template](https://github.com/sparksi/sector-project).
 
-    composer create-project sparksinteractive/sector-project {project-name}
+    composer create-project drupal/sector_project_template sector
 
 ## Getting Started
 
